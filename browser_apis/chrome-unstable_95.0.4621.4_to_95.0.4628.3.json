@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "95.0.4621.4",
+    "to": "95.0.4628.3"
+  },
+  "browserApis": {
+    "added": [
+      "EyeDropper",
+      "EyeDropper.prototype",
+      "EyeDropper.prototype.open"
+    ],
+    "removed": []
+  }
+}

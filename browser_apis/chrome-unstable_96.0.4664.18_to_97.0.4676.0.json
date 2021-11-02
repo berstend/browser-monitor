@@ -1,0 +1,49 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "96.0.4664.18",
+    "to": "97.0.4676.0"
+  },
+  "browserApis": {
+    "added": [
+      "Array.prototype.findLast",
+      "Array.prototype.findLastIndex",
+      "Option.prototype.constructor.prototype.onslotchange",
+      "PermissionStatus.prototype.name",
+      "SVGViewElement.prototype.onslotchange",
+      "ShadowRoot.prototype.onslotchange",
+      "Uint8Array.prototype.findLast",
+      "Uint8Array.prototype.findLastIndex",
+      "WebTransport",
+      "WebTransport.prototype",
+      "WebTransport.prototype.close",
+      "WebTransport.prototype.closed",
+      "WebTransport.prototype.createBidirectionalStream",
+      "WebTransport.prototype.createUnidirectionalStream",
+      "WebTransport.prototype.datagrams",
+      "WebTransport.prototype.incomingBidirectionalStreams",
+      "WebTransport.prototype.incomingUnidirectionalStreams",
+      "WebTransport.prototype.ready",
+      "WebTransportBidirectionalStream",
+      "WebTransportBidirectionalStream.prototype",
+      "WebTransportBidirectionalStream.prototype.readable",
+      "WebTransportBidirectionalStream.prototype.writable",
+      "WebTransportDatagramDuplexStream",
+      "WebTransportDatagramDuplexStream.prototype",
+      "WebTransportDatagramDuplexStream.prototype.incomingHighWaterMark",
+      "WebTransportDatagramDuplexStream.prototype.incomingMaxAge",
+      "WebTransportDatagramDuplexStream.prototype.maxDatagramSize",
+      "WebTransportDatagramDuplexStream.prototype.outgoingHighWaterMark",
+      "WebTransportDatagramDuplexStream.prototype.outgoingMaxAge",
+      "WebTransportDatagramDuplexStream.prototype.readable",
+      "WebTransportDatagramDuplexStream.prototype.writable",
+      "WebTransportError",
+      "WebTransportError.prototype",
+      "WebTransportError.prototype.source",
+      "WebTransportError.prototype.streamErrorCode",
+      "XMLDocument.prototype.onslotchange",
+      "onslotchange"
+    ],
+    "removed": []
+  }
+}

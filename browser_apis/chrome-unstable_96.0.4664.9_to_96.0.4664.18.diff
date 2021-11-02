@@ -1,0 +1,20 @@
+--- ./browser_apis/chrome-unstable_96.0.4664.9.json	2021-11-02 02:21:35.627360334 +0000
++++ ./browser_apis/chrome-unstable_96.0.4664.18.json	2021-11-02 02:21:57.555484290 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "96.0.4664.9",
+-  "browserApiCount": 7247,
++  "version": "96.0.4664.18",
++  "browserApiCount": 7248,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -3542,6 +3542,7 @@
+     "PerformanceEventTiming",
+     "PerformanceEventTiming.prototype",
+     "PerformanceEventTiming.prototype.cancelable",
++    "PerformanceEventTiming.prototype.interactionId",
+     "PerformanceEventTiming.prototype.processingEnd",
+     "PerformanceEventTiming.prototype.processingStart",
+     "PerformanceEventTiming.prototype.target",

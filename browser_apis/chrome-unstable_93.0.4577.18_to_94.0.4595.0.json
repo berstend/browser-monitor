@@ -1,0 +1,21 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "93.0.4577.18",
+    "to": "94.0.4595.0"
+  },
+  "browserApis": {
+    "added": [
+      "DelegatedInkTrailPresenter",
+      "DelegatedInkTrailPresenter.prototype",
+      "DelegatedInkTrailPresenter.prototype.expectedImprovement",
+      "DelegatedInkTrailPresenter.prototype.presentationArea",
+      "DelegatedInkTrailPresenter.prototype.updateInkTrailStartPoint",
+      "Ink",
+      "Ink.prototype",
+      "Ink.prototype.requestPresenter",
+      "Navigator.prototype.ink"
+    ],
+    "removed": []
+  }
+}

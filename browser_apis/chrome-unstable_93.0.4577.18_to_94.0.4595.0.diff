@@ -1,0 +1,42 @@
+--- ./browser_apis/chrome-unstable_93.0.4577.18.json	2021-11-02 02:16:56.477810185 +0000
++++ ./browser_apis/chrome-unstable_94.0.4595.0.json	2021-11-02 02:17:17.457932489 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "93.0.4577.18",
+-  "browserApiCount": 7066,
++  "version": "94.0.4595.0",
++  "browserApiCount": 7075,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -984,6 +984,11 @@
+     "DelayNode",
+     "DelayNode.prototype",
+     "DelayNode.prototype.delayTime",
++    "DelegatedInkTrailPresenter",
++    "DelegatedInkTrailPresenter.prototype",
++    "DelegatedInkTrailPresenter.prototype.expectedImprovement",
++    "DelegatedInkTrailPresenter.prototype.presentationArea",
++    "DelegatedInkTrailPresenter.prototype.updateInkTrailStartPoint",
+     "DeviceMotionEvent",
+     "DeviceMotionEvent.prototype",
+     "DeviceMotionEvent.prototype.acceleration",
+@@ -2223,6 +2228,9 @@
+     "ImageData.prototype.data",
+     "ImageData.prototype.height",
+     "ImageData.prototype.width",
++    "Ink",
++    "Ink.prototype",
++    "Ink.prototype.requestPresenter",
+     "InputDeviceCapabilities",
+     "InputDeviceCapabilities.prototype",
+     "InputDeviceCapabilities.prototype.firesTouchEvents",
+@@ -2753,6 +2761,7 @@
+     "Navigator.prototype.getUserMedia",
+     "Navigator.prototype.hardwareConcurrency",
+     "Navigator.prototype.hid",
++    "Navigator.prototype.ink",
+     "Navigator.prototype.javaEnabled",
+     "Navigator.prototype.keyboard",
+     "Navigator.prototype.language",

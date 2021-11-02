@@ -1,0 +1,20 @@
+--- ./browser_apis/chrome-unstable_96.0.4651.0.json	2021-11-02 02:20:30.826996337 +0000
++++ ./browser_apis/chrome-unstable_96.0.4655.0.json	2021-11-02 02:20:52.295116793 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "96.0.4651.0",
+-  "browserApiCount": 7246,
++  "version": "96.0.4655.0",
++  "browserApiCount": 7247,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -1873,6 +1873,7 @@
+     "HTMLScriptElement.prototype.src",
+     "HTMLScriptElement.prototype.text",
+     "HTMLScriptElement.prototype.type",
++    "HTMLScriptElement.supports",
+     "HTMLSelectElement",
+     "HTMLSelectElement.prototype",
+     "HTMLSelectElement.prototype.add",

@@ -1,0 +1,36 @@
+--- ./browser_apis/chrome-unstable_97.0.4676.0.json	2021-11-02 02:22:17.307595464 +0000
++++ ./browser_apis/chrome-unstable_97.0.4682.3.json	2021-11-02 02:22:37.391708154 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "97.0.4676.0",
+-  "browserApiCount": 7285,
++  "version": "97.0.4682.3",
++  "browserApiCount": 7288,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -3323,6 +3323,7 @@
+     "Option.prototype.constructor.prototype.onresize",
+     "Option.prototype.constructor.prototype.onscroll",
+     "Option.prototype.constructor.prototype.onsearch",
++    "Option.prototype.constructor.prototype.onsecuritypolicyviolation",
+     "Option.prototype.constructor.prototype.onseeked",
+     "Option.prototype.constructor.prototype.onseeking",
+     "Option.prototype.constructor.prototype.onselect",
+@@ -4904,6 +4905,7 @@
+     "SVGViewElement.prototype.onreset",
+     "SVGViewElement.prototype.onresize",
+     "SVGViewElement.prototype.onscroll",
++    "SVGViewElement.prototype.onsecuritypolicyviolation",
+     "SVGViewElement.prototype.onseeked",
+     "SVGViewElement.prototype.onseeking",
+     "SVGViewElement.prototype.onselect",
+@@ -7086,6 +7088,7 @@
+     "onresize",
+     "onscroll",
+     "onsearch",
++    "onsecuritypolicyviolation",
+     "onseeked",
+     "onseeking",
+     "onselect",

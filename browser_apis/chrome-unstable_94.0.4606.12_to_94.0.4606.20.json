@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "94.0.4606.12",
+    "to": "94.0.4606.20"
+  },
+  "browserApis": {
+    "added": [
+      "Profiler",
+      "Profiler.prototype",
+      "Profiler.prototype.sampleInterval",
+      "Profiler.prototype.stop",
+      "Profiler.prototype.stopped"
+    ],
+    "removed": []
+  }
+}
