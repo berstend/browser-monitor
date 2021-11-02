@@ -40,7 +40,12 @@ const getBrowserApiDiffFilePath = (
 ) => `./browser_apis/${prefix}_${previousVersion}_to_${version}.diff`
 
 const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
-  for (const [i, entry] of remoteVersions.slice(0, 3).entries()) {
+  if (!isCI) {
+    remoteVersions = remoteVersions.slice(0, 3)
+  }
+  console.log(prefix, remoteVersions)
+
+  for (const [i, entry] of remoteVersions.entries()) {
     const previousVersion = i > 0 ? remoteVersions[i - 1].version : null
     const browserApiFilePath = getBrowserApiFilePath(prefix, entry.version)
     const exists = await fileExists(browserApiFilePath)
@@ -68,7 +73,31 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
         previousVersion,
         entry.version
       )
+      const previousBrowserData = require(previousBrowserApiFilePath)
+
       console.log({ previousBrowserApiFilePath, browserApiDiffFilePath })
+
+      const added = browserData.browserApis.filter(
+        (x) => !previousBrowserData.browserApis.includes(x)
+      )
+      const removed = previousBrowserData.browserApis.filter(
+        (x) => !browserData.browserApis.includes(x)
+      )
+      require("fs").writeFileSync(
+        browserApiDiffFilePath.replace(".diff", ".json"),
+        JSON.stringify(
+          {
+            browser: prefix,
+            version: { from: previousVersion, to: entry.version },
+            browserApis: {
+              added,
+              removed,
+            },
+          },
+          null,
+          2
+        )
+      )
       await exec(
         `diff -u ${previousBrowserApiFilePath} ${browserApiFilePath} > ${browserApiDiffFilePath}`
       ).catch(console.log)
