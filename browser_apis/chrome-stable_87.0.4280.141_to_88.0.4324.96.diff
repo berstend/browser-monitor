@@ -1,0 +1,55 @@
+--- ./browser_apis/chrome-stable_87.0.4280.141.json	2021-11-02 01:51:04.646630887 +0000
++++ ./browser_apis/chrome-stable_88.0.4324.96.json	2021-11-02 01:51:22.438729549 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-stable",
+-  "version": "87.0.4280.141",
+-  "browserApiCount": 6913,
++  "version": "88.0.4324.96",
++  "browserApiCount": 6909,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -311,10 +311,6 @@
+     "BarProp",
+     "BarProp.prototype",
+     "BarProp.prototype.visible",
+-    "BarcodeDetector",
+-    "BarcodeDetector.getSupportedFormats",
+-    "BarcodeDetector.prototype",
+-    "BarcodeDetector.prototype.detect",
+     "BatteryManager",
+     "BatteryManager.prototype",
+     "BatteryManager.prototype.charging",
+@@ -395,7 +391,6 @@
+     "CSS.paintWorklet",
+     "CSS.pc",
+     "CSS.percent",
+-    "CSS.prototype",
+     "CSS.pt",
+     "CSS.px",
+     "CSS.rad",
+@@ -1052,6 +1047,7 @@
+     "ElementInternals.prototype.reportValidity",
+     "ElementInternals.prototype.setFormValue",
+     "ElementInternals.prototype.setValidity",
++    "ElementInternals.prototype.shadowRoot",
+     "ElementInternals.prototype.validationMessage",
+     "ElementInternals.prototype.validity",
+     "ElementInternals.prototype.willValidate",
+@@ -2731,7 +2727,6 @@
+     "Navigator.prototype.vendorSub",
+     "Navigator.prototype.vibrate",
+     "Navigator.prototype.wakeLock",
+-    "Navigator.prototype.webdriver",
+     "Navigator.prototype.webkitGetUserMedia",
+     "Navigator.prototype.webkitPersistentStorage",
+     "Navigator.prototype.webkitTemporaryStorage",
+@@ -3767,6 +3762,7 @@
+     "RTCRtpTransceiver.prototype.receiver",
+     "RTCRtpTransceiver.prototype.sender",
+     "RTCRtpTransceiver.prototype.setCodecPreferences",
++    "RTCRtpTransceiver.prototype.stop",
+     "RTCRtpTransceiver.prototype.stopped",
+     "RTCSctpTransport",
+     "RTCSctpTransport.prototype",

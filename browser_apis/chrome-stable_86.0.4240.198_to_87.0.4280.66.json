@@ -1,0 +1,62 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "86.0.4240.198",
+    "to": "87.0.4280.66"
+  },
+  "browserApis": {
+    "added": [
+      "Atomics.waitAsync",
+      "CookieChangeEvent",
+      "CookieChangeEvent.prototype",
+      "CookieChangeEvent.prototype.changed",
+      "CookieChangeEvent.prototype.deleted",
+      "CookieStore",
+      "CookieStore.prototype",
+      "CookieStore.prototype.delete",
+      "CookieStore.prototype.get",
+      "CookieStore.prototype.getAll",
+      "CookieStore.prototype.onchange",
+      "CookieStore.prototype.set",
+      "CookieStoreManager",
+      "CookieStoreManager.prototype",
+      "CookieStoreManager.prototype.getSubscriptions",
+      "CookieStoreManager.prototype.subscribe",
+      "CookieStoreManager.prototype.unsubscribe",
+      "FontFace.prototype.ascentOverride",
+      "FontFace.prototype.descentOverride",
+      "FontFace.prototype.lineGapOverride",
+      "IdleDetector.requestPermission",
+      "Intl.Segmenter",
+      "Intl.Segmenter.prototype",
+      "Intl.Segmenter.prototype.resolvedOptions",
+      "Intl.Segmenter.prototype.segment",
+      "Intl.Segmenter.supportedLocalesOf",
+      "Navigator.prototype.scheduling",
+      "Option.prototype.constructor.prototype.ontransitioncancel",
+      "Option.prototype.constructor.prototype.ontransitionrun",
+      "Option.prototype.constructor.prototype.ontransitionstart",
+      "SVGViewElement.prototype.ontransitioncancel",
+      "SVGViewElement.prototype.ontransitionrun",
+      "SVGViewElement.prototype.ontransitionstart",
+      "Scheduling",
+      "Scheduling.prototype",
+      "Scheduling.prototype.isInputPending",
+      "ServiceWorkerRegistration.prototype.cookies",
+      "TextMetrics.prototype.fontBoundingBoxAscent",
+      "TextMetrics.prototype.fontBoundingBoxDescent",
+      "WakeLockSentinel.prototype.released",
+      "XMLDocument.prototype.ontransitioncancel",
+      "XMLDocument.prototype.ontransitionrun",
+      "XMLDocument.prototype.ontransitionstart",
+      "cookieStore",
+      "crossOriginIsolated",
+      "ontransitioncancel",
+      "ontransitionrun",
+      "ontransitionstart"
+    ],
+    "removed": [
+      "HTMLAnchorElement.prototype.hrefTranslate"
+    ]
+  }
+}

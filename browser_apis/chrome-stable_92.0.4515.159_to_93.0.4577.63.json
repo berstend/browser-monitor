@@ -1,0 +1,25 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "92.0.4515.159",
+    "to": "93.0.4577.63"
+  },
+  "browserApis": {
+    "added": [
+      "AbortSignal.abort",
+      "HTMLMetaElement.prototype.media",
+      "MediaSession.prototype.setCameraActive",
+      "MediaSession.prototype.setMicrophoneActive",
+      "NavigatorUAData.prototype.platform",
+      "NavigatorUAData.prototype.toJSON",
+      "OTPCredential",
+      "OTPCredential.prototype",
+      "OTPCredential.prototype.code",
+      "Object.hasOwn",
+      "WritableStreamDefaultController",
+      "WritableStreamDefaultController.prototype",
+      "WritableStreamDefaultController.prototype.error"
+    ],
+    "removed": []
+  }
+}

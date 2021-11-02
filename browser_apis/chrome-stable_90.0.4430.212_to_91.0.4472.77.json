@@ -1,0 +1,38 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "90.0.4430.212",
+    "to": "91.0.4472.77"
+  },
+  "browserApis": {
+    "added": [
+      "CSSCounterStyleRule",
+      "CSSCounterStyleRule.prototype",
+      "CSSCounterStyleRule.prototype.additiveSymbols",
+      "CSSCounterStyleRule.prototype.fallback",
+      "CSSCounterStyleRule.prototype.name",
+      "CSSCounterStyleRule.prototype.negative",
+      "CSSCounterStyleRule.prototype.pad",
+      "CSSCounterStyleRule.prototype.prefix",
+      "CSSCounterStyleRule.prototype.range",
+      "CSSCounterStyleRule.prototype.speakAs",
+      "CSSCounterStyleRule.prototype.suffix",
+      "CSSCounterStyleRule.prototype.symbols",
+      "CSSCounterStyleRule.prototype.system",
+      "GravitySensor",
+      "GravitySensor.prototype",
+      "HTMLTemplateElement.prototype.shadowRoot",
+      "Navigator.prototype.managed",
+      "NavigatorManagedData",
+      "NavigatorManagedData.prototype",
+      "NavigatorManagedData.prototype.getManagedConfiguration",
+      "NavigatorManagedData.prototype.onmanagedconfigurationchange",
+      "Option.prototype.constructor.prototype.getInnerHTML",
+      "ShadowRoot.prototype.getInnerHTML"
+    ],
+    "removed": [
+      "webkitSpeechRecognitionEvent.prototype.emma",
+      "webkitSpeechRecognitionEvent.prototype.interpretation"
+    ]
+  }
+}

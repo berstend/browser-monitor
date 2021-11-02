@@ -1,0 +1,21 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "87.0.4280.141",
+    "to": "88.0.4324.96"
+  },
+  "browserApis": {
+    "added": [
+      "ElementInternals.prototype.shadowRoot",
+      "RTCRtpTransceiver.prototype.stop"
+    ],
+    "removed": [
+      "BarcodeDetector",
+      "BarcodeDetector.getSupportedFormats",
+      "BarcodeDetector.prototype",
+      "BarcodeDetector.prototype.detect",
+      "CSS.prototype",
+      "Navigator.prototype.webdriver"
+    ]
+  }
+}

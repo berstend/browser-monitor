@@ -1,0 +1,24 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "91.0.4472.164",
+    "to": "92.0.4515.107"
+  },
+  "browserApis": {
+    "added": [
+      "Array.prototype.at",
+      "Crypto.prototype.randomUUID",
+      "FontFace.prototype.sizeAdjust",
+      "ImageData.prototype.colorSpace",
+      "String.prototype.at",
+      "Uint8Array.prototype.at"
+    ],
+    "removed": [
+      "Performance.prototype.measureUserAgentSpecificMemory",
+      "SharedArrayBuffer",
+      "SharedArrayBuffer.prototype",
+      "SharedArrayBuffer.prototype.byteLength",
+      "SharedArrayBuffer.prototype.slice"
+    ]
+  }
+}

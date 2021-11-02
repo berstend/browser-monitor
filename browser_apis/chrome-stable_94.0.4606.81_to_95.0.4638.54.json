@@ -1,0 +1,35 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "94.0.4606.81",
+    "to": "95.0.4638.54"
+  },
+  "browserApis": {
+    "added": [
+      "EyeDropper",
+      "EyeDropper.prototype",
+      "EyeDropper.prototype.open",
+      "URLPattern",
+      "URLPattern.prototype",
+      "URLPattern.prototype.exec",
+      "URLPattern.prototype.hash",
+      "URLPattern.prototype.hostname",
+      "URLPattern.prototype.password",
+      "URLPattern.prototype.pathname",
+      "URLPattern.prototype.port",
+      "URLPattern.prototype.protocol",
+      "URLPattern.prototype.search",
+      "URLPattern.prototype.test",
+      "URLPattern.prototype.username",
+      "WebAssembly.Exception",
+      "WebAssembly.Exception.prototype",
+      "WebAssembly.Exception.prototype.constructor",
+      "WebAssembly.Exception.prototype.getArg",
+      "WebAssembly.Exception.prototype.is",
+      "WebAssembly.Tag",
+      "WebAssembly.Tag.prototype",
+      "reportError"
+    ],
+    "removed": []
+  }
+}

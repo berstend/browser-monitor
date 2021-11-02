@@ -1,0 +1,10 @@
+--- ./browser_apis/chrome-stable_91.0.4472.77.json	2021-11-02 01:55:26.148024027 +0000
++++ ./browser_apis/chrome-stable_91.0.4472.101.json	2021-11-02 01:55:44.932147058 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "version": "91.0.4472.77",
++  "version": "91.0.4472.101",
+   "browserApiCount": 7052,
+   "browserApis": [
+     "AbortController",
