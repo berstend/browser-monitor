@@ -1,0 +1,219 @@
+[
+  {
+    "version": "97.0.4682.3",
+    "versionMajor": 97,
+    "date": "2021-10-27",
+    "browserApis": {
+      "count": 7288,
+      "added": 3,
+      "removed": 0
+    },
+    "previousVersion": "97.0.4676.0"
+  },
+  {
+    "version": "97.0.4676.0",
+    "versionMajor": 97,
+    "date": "2021-10-21",
+    "browserApis": {
+      "count": 7285,
+      "added": 37,
+      "removed": 0
+    },
+    "previousVersion": "96.0.4664.18"
+  },
+  {
+    "version": "96.0.4664.18",
+    "versionMajor": 96,
+    "date": "2021-10-20",
+    "browserApis": {
+      "count": 7248,
+      "added": 1,
+      "removed": 0
+    },
+    "previousVersion": "96.0.4664.9"
+  },
+  {
+    "version": "96.0.4664.9",
+    "versionMajor": 96,
+    "date": "2021-10-14",
+    "browserApis": {
+      "count": 7247,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "96.0.4662.6"
+  },
+  {
+    "version": "96.0.4662.6",
+    "versionMajor": 96,
+    "date": "2021-10-08",
+    "browserApis": {
+      "count": 7247,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "96.0.4655.0"
+  },
+  {
+    "version": "96.0.4655.0",
+    "versionMajor": 96,
+    "date": "2021-09-28",
+    "browserApis": {
+      "count": 7247,
+      "added": 1,
+      "removed": 0
+    },
+    "previousVersion": "96.0.4651.0"
+  },
+  {
+    "version": "96.0.4651.0",
+    "versionMajor": 96,
+    "date": "2021-09-24",
+    "browserApis": {
+      "count": 7246,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "95.0.4638.17"
+  },
+  {
+    "version": "95.0.4638.17",
+    "versionMajor": 95,
+    "date": "2021-09-21",
+    "browserApis": {
+      "count": 7246,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "95.0.4638.10"
+  },
+  {
+    "version": "95.0.4638.10",
+    "versionMajor": 95,
+    "date": "2021-09-16",
+    "browserApis": {
+      "count": 7246,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "95.0.4636.4"
+  },
+  {
+    "version": "95.0.4636.4",
+    "versionMajor": 95,
+    "date": "2021-09-09",
+    "browserApis": {
+      "count": 7246,
+      "added": 20,
+      "removed": 0
+    },
+    "previousVersion": "95.0.4628.3"
+  },
+  {
+    "version": "95.0.4628.3",
+    "versionMajor": 95,
+    "date": "2021-09-02",
+    "browserApis": {
+      "count": 7226,
+      "added": 3,
+      "removed": 0
+    },
+    "previousVersion": "95.0.4621.4"
+  },
+  {
+    "version": "95.0.4621.4",
+    "versionMajor": 95,
+    "date": "2021-08-26",
+    "browserApis": {
+      "count": 7223,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "94.0.4606.20"
+  },
+  {
+    "version": "94.0.4606.20",
+    "versionMajor": 94,
+    "date": "2021-08-25",
+    "browserApis": {
+      "count": 7223,
+      "added": 5,
+      "removed": 0
+    },
+    "previousVersion": "94.0.4606.12"
+  },
+  {
+    "version": "94.0.4606.12",
+    "versionMajor": 94,
+    "date": "2021-08-19",
+    "browserApis": {
+      "count": 7218,
+      "added": 131,
+      "removed": 0
+    },
+    "previousVersion": "94.0.4603.0"
+  },
+  {
+    "version": "94.0.4603.0",
+    "versionMajor": 94,
+    "date": "2021-08-11",
+    "browserApis": {
+      "count": 7087,
+      "added": 12,
+      "removed": 0
+    },
+    "previousVersion": "94.0.4595.0"
+  },
+  {
+    "version": "94.0.4595.0",
+    "versionMajor": 94,
+    "date": "2021-08-03",
+    "browserApis": {
+      "count": 7075,
+      "added": 9,
+      "removed": 0
+    },
+    "previousVersion": "93.0.4577.18"
+  },
+  {
+    "version": "93.0.4577.18",
+    "versionMajor": 93,
+    "date": "2021-07-29",
+    "browserApis": {
+      "count": 7066,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "93.0.4577.15"
+  },
+  {
+    "version": "93.0.4577.15",
+    "versionMajor": 93,
+    "date": "2021-07-27",
+    "browserApis": {
+      "count": 7066,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "93.0.4577.8"
+  },
+  {
+    "version": "93.0.4577.8",
+    "versionMajor": 93,
+    "date": "2021-07-21",
+    "browserApis": {
+      "count": 7066,
+      "added": 0,
+      "removed": 0
+    },
+    "previousVersion": "93.0.4573.0"
+  },
+  {
+    "version": "93.0.4573.0",
+    "versionMajor": 93,
+    "date": "2021-07-13",
+    "browserApis": {
+      "count": 7066
+    }
+  }
+]
