@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-20.04
     name: Update
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: 'latest'
-
-      - run: yarn install --frozen-lockfile
-      - run: xvfb-run --auto-servernum node update.js
-      - run: ls -lh browser_apis
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Install deps
+      run: yarn install
+    - name: Run update.js
+      run: xvfb-run --auto-servernum node update.js
+    - name: ls -lh browser_apis
+      run:  ls -lh browser_apis
