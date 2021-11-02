@@ -40,9 +40,9 @@ const getBrowserApiDiffFilePath = (
 ) => `./browser_apis/${prefix}_${previousVersion}_to_${version}.diff`
 
 const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
-  // if (!isCI) {
-  remoteVersions = remoteVersions.slice(0, 3)
-  // }
+  if (!isCI) {
+    remoteVersions = remoteVersions.slice(0, 3)
+  }
   console.log(prefix, remoteVersions)
 
   for (const [i, entry] of remoteVersions.entries()) {
@@ -176,6 +176,6 @@ async function init() {
   const remoteVersions = await fetchRemoteVersions()
   console.log(remoteVersions)
   await handleChromeEntries("chrome-stable", remoteVersions.chrome.stable)
-  // await handleChromeEntries("chrome-unstable", remoteVersions.chrome.unstable)
+  await handleChromeEntries("chrome-unstable", remoteVersions.chrome.unstable)
 }
 init()
