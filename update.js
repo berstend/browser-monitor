@@ -7,6 +7,8 @@ const got = require("got")
 
 const fileExists = async (path) => !!(await fs.stat(path).catch((e) => false))
 
+const isCI = process.env.USER === "runner"
+
 const fetchRemoteVersions = async () =>
   JSON.parse(
     (
@@ -46,7 +48,11 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
     if (exists) {
       continue
     }
-    await installChromeVersion(prefix, entry.version)
+
+    if (isCI) {
+      await installChromeVersion(prefix, entry.version)
+    }
+
     const browserData = await getBrowserData()
     require("fs").writeFileSync(
       browserApiFilePath,
@@ -75,9 +81,9 @@ async function getBrowserData() {
     headless: false,
     defaultViewport: null,
     ignoreDefaultArgs: ["--disable-component-extensions-with-background-pages"],
-    executablePath: "/usr/bin/google-chrome",
-    // executablePath:
-    //   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    executablePath: isCI
+      ? "/usr/bin/google-chrome"
+      : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     // executablePath:
     //   "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
   }
@@ -132,6 +138,7 @@ async function getBrowserData() {
   await browser.close()
   return {
     version,
+    browserApiCount: browserApis.length,
     browserApis,
   }
 }
@@ -140,5 +147,6 @@ async function init() {
   const remoteVersions = await fetchRemoteVersions()
   console.log(remoteVersions)
   await handleChromeEntries("chrome-stable", remoteVersions.chrome.stable)
+  await handleChromeEntries("chrome-unstable", remoteVersions.chrome.unstable)
 }
 init()
