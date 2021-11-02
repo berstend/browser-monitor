@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "97.0.4676.0",
+    "to": "97.0.4682.3"
+  },
+  "browserApis": {
+    "added": [
+      "Option.prototype.constructor.prototype.onsecuritypolicyviolation",
+      "SVGViewElement.prototype.onsecuritypolicyviolation",
+      "onsecuritypolicyviolation"
+    ],
+    "removed": []
+  }
+}

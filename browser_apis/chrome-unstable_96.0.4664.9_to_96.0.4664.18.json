@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "96.0.4664.9",
+    "to": "96.0.4664.18"
+  },
+  "browserApis": {
+    "added": [
+      "PerformanceEventTiming.prototype.interactionId"
+    ],
+    "removed": []
+  }
+}

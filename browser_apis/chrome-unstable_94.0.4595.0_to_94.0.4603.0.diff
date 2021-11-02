@@ -1,0 +1,52 @@
+--- ./browser_apis/chrome-unstable_94.0.4595.0.json	2021-11-02 02:17:17.457932489 +0000
++++ ./browser_apis/chrome-unstable_94.0.4603.0.json	2021-11-02 02:17:38.854054612 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "94.0.4595.0",
+-  "browserApiCount": 7075,
++  "version": "94.0.4603.0",
++  "browserApiCount": 7087,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -2774,6 +2774,7 @@
+     "Navigator.prototype.mediaSession",
+     "Navigator.prototype.mimeTypes",
+     "Navigator.prototype.onLine",
++    "Navigator.prototype.pdfViewerEnabled",
+     "Navigator.prototype.permissions",
+     "Navigator.prototype.platform",
+     "Navigator.prototype.plugins",
+@@ -2797,6 +2798,7 @@
+     "Navigator.prototype.vendor",
+     "Navigator.prototype.vendorSub",
+     "Navigator.prototype.vibrate",
++    "Navigator.prototype.virtualKeyboard",
+     "Navigator.prototype.wakeLock",
+     "Navigator.prototype.webdriver",
+     "Navigator.prototype.webkitGetUserMedia",
+@@ -3304,6 +3306,7 @@
+     "Option.prototype.constructor.prototype.title",
+     "Option.prototype.constructor.prototype.toggleAttribute",
+     "Option.prototype.constructor.prototype.translate",
++    "Option.prototype.constructor.prototype.virtualKeyboardPolicy",
+     "Option.prototype.constructor.prototype.webkitMatchesSelector",
+     "Option.prototype.constructor.prototype.webkitRequestFullScreen",
+     "Option.prototype.constructor.prototype.webkitRequestFullscreen",
+@@ -5564,6 +5567,15 @@
+     "VideoPlaybackQuality.prototype.creationTime",
+     "VideoPlaybackQuality.prototype.droppedVideoFrames",
+     "VideoPlaybackQuality.prototype.totalVideoFrames",
++    "VirtualKeyboard",
++    "VirtualKeyboard.prototype",
++    "VirtualKeyboard.prototype.boundingRect",
++    "VirtualKeyboard.prototype.hide",
++    "VirtualKeyboard.prototype.ongeometrychange",
++    "VirtualKeyboard.prototype.overlaysContent",
++    "VirtualKeyboard.prototype.show",
++    "VirtualKeyboardGeometryChangeEvent",
++    "VirtualKeyboardGeometryChangeEvent.prototype",
+     "VisualViewport",
+     "VisualViewport.prototype",
+     "VisualViewport.prototype.height",

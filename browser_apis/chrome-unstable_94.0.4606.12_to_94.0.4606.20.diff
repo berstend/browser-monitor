@@ -1,0 +1,24 @@
+--- ./browser_apis/chrome-unstable_94.0.4606.12.json	2021-11-02 02:18:00.122168185 +0000
++++ ./browser_apis/chrome-unstable_94.0.4606.20.json	2021-11-02 02:18:21.234276242 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "94.0.4606.12",
+-  "browserApiCount": 7218,
++  "version": "94.0.4606.20",
++  "browserApiCount": 7223,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -3734,6 +3734,11 @@
+     "ProcessingInstruction.prototype",
+     "ProcessingInstruction.prototype.sheet",
+     "ProcessingInstruction.prototype.target",
++    "Profiler",
++    "Profiler.prototype",
++    "Profiler.prototype.sampleInterval",
++    "Profiler.prototype.stop",
++    "Profiler.prototype.stopped",
+     "ProgressEvent",
+     "ProgressEvent.prototype",
+     "ProgressEvent.prototype.lengthComputable",
