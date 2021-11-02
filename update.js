@@ -175,7 +175,13 @@ async function getBrowserData() {
 async function init() {
   const remoteVersions = await fetchRemoteVersions()
   console.log(remoteVersions)
-  await handleChromeEntries("chrome-stable", remoteVersions.chrome.stable)
-  await handleChromeEntries("chrome-unstable", remoteVersions.chrome.unstable)
+  await handleChromeEntries(
+    "chrome-stable",
+    remoteVersions.chrome.stable.slice(-20)
+  )
+  await handleChromeEntries(
+    "chrome-unstable",
+    remoteVersions.chrome.unstable.slice(-20)
+  )
 }
 init()
