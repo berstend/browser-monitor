@@ -17,7 +17,7 @@ fi
 
 sudo apt-get remove google-chrome-stable
 sudo apt-get remove google-chrome-unstable
-wget -nv -O /tmp/chrome.deb "https://dl.google.com/linux/chrome/deb/pool/main/g/google-${BROWSER_PREFIX}/google-${BROWSER_PREFIX}${BROWSER_VERSION}-1_amd64.deb"
+wget -nv -O /tmp/chrome.deb "https://dl.google.com/linux/chrome/deb/pool/main/g/google-${BROWSER_PREFIX}/google-${BROWSER_PREFIX}_${BROWSER_VERSION}-1_amd64.deb"
 sudo apt-get install -y /tmp/chrome.deb --no-install-recommends --allow-downgrades
 rm /tmp/chrome.deb
 google-chrome --version
