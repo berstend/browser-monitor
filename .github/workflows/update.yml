@@ -16,3 +16,8 @@ jobs:
       run: xvfb-run --auto-servernum node update.js
     - name: ls -lh browser_apis
       run:  ls -lh browser_apis
+    - uses: EndBug/add-and-commit@v7
+      with:
+        message: Update browser data
+        committer_name: GitHub Actions
+        committer_email: actions@github.com
