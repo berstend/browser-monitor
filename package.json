@@ -1,0 +1,10 @@
+{
+  "name": "browser-monitor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^11.8.2",
+    "puppeteer-core": "^10.4.0"
+  }
+}

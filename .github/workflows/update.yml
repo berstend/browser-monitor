@@ -1,0 +1,17 @@
+---
+name: Update data
+
+on: [workflow_dispatch]
+
+jobs:
+  update:
+    runs-on: ubuntu-20.04
+    name: Update
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'latest'
+
+      - run: yarn install --frozen-lockfile
+      - run: xvfb-run --auto-servernum node update.js
+      - run: ls -lh browser_apis
