@@ -688,6 +688,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 97.0.4688.2 (`2021-11-02`) 
+No browser API changes.
+
+  
 #### 97.0.4682.3 (`2021-10-27`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_97.0.4676.0_to_97.0.4682.3.diff), [json](./browser_apis/chrome-unstable_97.0.4676.0_to_97.0.4682.3.json), [full list](./browser_apis/chrome-unstable_97.0.4682.3.json))
  ```diff
@@ -1371,10 +1375,6 @@ No browser API changes.
 
   
 #### 93.0.4577.8 (`2021-07-21`) 
-No browser API changes.
-
-  
-#### 93.0.4573.0 (`2021-07-13`) 
 No browser API changes.
 
   <!-- browserapis:end -->
