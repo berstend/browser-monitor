@@ -9,14 +9,27 @@ const fileExists = async (path) => !!(await fs.stat(path).catch((e) => false))
 
 const isCI = process.env.USER === "runner"
 
-const fetchRemoteVersions = async () =>
-  JSON.parse(
-    (
-      await got(
-        "https://raw.githubusercontent.com/Niek/browser-updates/main/browsers.json"
-      )
-    ).body
-  )
+const getSimpleDate = (d) => {
+  return `${d.getUTCFullYear()}-${d.getUTCMonth() + 1}-${d.getUTCDate()}`
+}
+
+const fetchRemoteVersions = async () => {
+  const get = async (channel = "") =>
+    JSON.parse(
+      (
+        await got(
+          `https://chromiumdash.appspot.com/fetch_releases?channel=${channel}&platform=Linux&num=20&offset=0`
+        )
+      ).body
+    )
+
+  return {
+    chrome: {
+      stable: await get("Stable"),
+      unstable: await get("Dev"),
+    },
+  }
+}
 
 const installChromeVersion = async (prefix = "", version = "") => {
   try {
@@ -46,7 +59,8 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
   console.log(prefix, remoteVersions)
 
   for (const [i, entry] of remoteVersions.entries()) {
-    const previousVersion = i > 0 ? remoteVersions[i - 1].version : null
+    const previousVersion = entry.previous_version
+    // const previousVersion = i > 0 ? remoteVersions[i + 1].version : null
     const browserApiFilePath = getBrowserApiFilePath(prefix, entry.version)
     const exists = await fileExists(browserApiFilePath)
     console.log({ entry, browserApiFilePath, previousVersion, exists })
@@ -179,24 +193,28 @@ async function getBrowserData() {
 function generateReleasesFile(prefix = "", entries = []) {
   const releases = entries
     .map((e) => ({
-      version: e.version,
+      ...e,
+      previousVersion: e.previous_version,
       versionMajor: parseInt(e.version.split(".")[0]),
-      date: e.updated,
+      date: getSimpleDate(new Date(e.time)),
     }))
-    .reverse()
+    // .reverse()
     .map((r) => {
       const info = require(getBrowserApiFilePath(prefix, r.version))
       return { ...r, browserApis: { count: info.browserApiCount } }
     })
   for (const [i, entry] of releases.entries()) {
-    const previousVersion = releases[i + 1]?.version
-    if (!previousVersion) {
+    // const previousVersion = releases[i + 1]?.version
+    if (!entry.previousVersion) {
       continue
     }
-    releases[i].previousVersion = previousVersion
+    console.log(entry)
+
+    releases[i].previousHashes = releases[i + 1]?.hashes
+
     const browserApiDiffFilePath = getBrowserApiDiffFilePath(
       prefix,
-      previousVersion,
+      entry.previousVersion,
       entry.version
     ).replace(".diff", ".json")
     const diff = require(browserApiDiffFilePath)
