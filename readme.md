@@ -85,19 +85,19 @@ Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_94.0.4606.81_
 ```
 
   
-#### 94.0.4606.81 (`2021-10-07`) 
+#### 94.0.4606.81 (`2021-10-7`) 
 No browser API changes.
 
   
-#### 94.0.4606.71 (`2021-09-30`) 
+#### 94.0.4606.71 (`2021-9-30`) 
 No browser API changes.
 
   
-#### 94.0.4606.61 (`2021-09-24`) 
+#### 94.0.4606.61 (`2021-9-24`) 
 No browser API changes.
 
   
-#### 94.0.4606.54 (`2021-09-21`) ⚡
+#### 94.0.4606.54 (`2021-9-21`) ⚡
 Added 157 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_93.0.4577.82_to_94.0.4606.54.diff), [json](./browser_apis/chrome-stable_93.0.4577.82_to_94.0.4606.54.json), [full list](./browser_apis/chrome-stable_94.0.4606.54.json))
  ```diff
 --- ./browser_apis/chrome-stable_93.0.4577.82.json	2021-11-02 01:58:19.828974623 +0000
@@ -379,11 +379,11 @@ Added 157 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_93.0.4577.82
 ```
 
   
-#### 93.0.4577.82 (`2021-09-13`) 
+#### 93.0.4577.82 (`2021-9-13`) 
 No browser API changes.
 
   
-#### 93.0.4577.63 (`2021-08-31`) ⚡
+#### 93.0.4577.63 (`2021-8-31`) ⚡
 Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_92.0.4515.159_to_93.0.4577.63.diff), [json](./browser_apis/chrome-stable_92.0.4515.159_to_93.0.4577.63.json), [full list](./browser_apis/chrome-stable_93.0.4577.63.json))
  ```diff
 --- ./browser_apis/chrome-stable_92.0.4515.159.json	2021-11-02 01:57:43.324772381 +0000
@@ -462,15 +462,15 @@ Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_92.0.4515.159
 ```
 
   
-#### 92.0.4515.159 (`2021-08-16`) 
+#### 92.0.4515.159 (`2021-8-16`) 
 No browser API changes.
 
   
-#### 92.0.4515.131 (`2021-08-02`) 
+#### 92.0.4515.131 (`2021-8-2`) 
 No browser API changes.
 
   
-#### 92.0.4515.107 (`2021-07-20`) ⚡
+#### 92.0.4515.107 (`2021-7-20`) ⚡
 Added 6 APIs, removed 5 (see: [diff](./browser_apis/chrome-stable_91.0.4472.164_to_92.0.4515.107.diff), [json](./browser_apis/chrome-stable_91.0.4472.164_to_92.0.4515.107.json), [full list](./browser_apis/chrome-stable_92.0.4515.107.json))
  ```diff
 --- ./browser_apis/chrome-stable_91.0.4472.164.json	2021-11-02 01:56:44.380454840 +0000
@@ -555,23 +555,23 @@ Added 6 APIs, removed 5 (see: [diff](./browser_apis/chrome-stable_91.0.4472.164_
 ```
 
   
-#### 91.0.4472.164 (`2021-07-15`) 
+#### 91.0.4472.164 (`2021-7-15`) 
 No browser API changes.
 
   
-#### 91.0.4472.114 (`2021-06-17`) 
+#### 91.0.4472.114 (`2021-6-17`) 
 No browser API changes.
 
   
-#### 91.0.4472.106 (`2021-06-14`) 
+#### 91.0.4472.106 (`2021-6-14`) 
 No browser API changes.
 
   
-#### 91.0.4472.101 (`2021-06-09`) 
+#### 91.0.4472.101 (`2021-6-9`) 
 No browser API changes.
 
   
-#### 91.0.4472.77 (`2021-05-25`) ⚡
+#### 91.0.4472.77 (`2021-5-25`) ⚡
 Added 23 APIs, removed 2 (see: [diff](./browser_apis/chrome-stable_90.0.4430.212_to_91.0.4472.77.diff), [json](./browser_apis/chrome-stable_90.0.4430.212_to_91.0.4472.77.json), [full list](./browser_apis/chrome-stable_91.0.4472.77.json))
  ```diff
 --- ./browser_apis/chrome-stable_90.0.4430.212.json	2021-11-02 01:55:05.351876008 +0000
@@ -670,25 +670,285 @@ Added 23 APIs, removed 2 (see: [diff](./browser_apis/chrome-stable_90.0.4430.212
 ```
 
   
-#### 90.0.4430.212 (`2021-05-10`) 
+#### 90.0.4430.212 (`2021-5-10`) 
 No browser API changes.
 
   
-#### 90.0.4430.93 (`2021-04-26`) 
+#### 90.0.4430.93 (`2021-4-26`) 
 No browser API changes.
 
   
-#### 90.0.4430.85 (`2021-04-20`) 
+#### 90.0.4430.85 (`2021-4-20`) 
 No browser API changes.
 
   
-#### 90.0.4430.72 (`2021-04-14`) 
-No browser API changes.
+#### 90.0.4430.72 (`2021-4-14`) ⚡
+Added 60 APIs, removed 6 (see: [diff](./browser_apis/chrome-stable_89.0.4389.128_to_90.0.4430.72.diff), [json](./browser_apis/chrome-stable_89.0.4389.128_to_90.0.4430.72.json), [full list](./browser_apis/chrome-stable_90.0.4430.72.json))
+ ```diff
+--- ./browser_apis/chrome-stable_89.0.4389.128.json	2021-11-02 01:53:51.303489361 +0000
++++ ./browser_apis/chrome-stable_90.0.4430.72.json	2021-11-02 01:54:09.451583130 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-stable",
+-  "version": "89.0.4389.128",
+-  "browserApiCount": 6977,
++  "version": "90.0.4430.72",
++  "browserApiCount": 7031,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -769,6 +769,17 @@
+     "CustomEvent.prototype",
+     "CustomEvent.prototype.detail",
+     "CustomEvent.prototype.initCustomEvent",
++    "CustomStateSet",
++    "CustomStateSet.prototype",
++    "CustomStateSet.prototype.add",
++    "CustomStateSet.prototype.clear",
++    "CustomStateSet.prototype.delete",
++    "CustomStateSet.prototype.entries",
++    "CustomStateSet.prototype.forEach",
++    "CustomStateSet.prototype.has",
++    "CustomStateSet.prototype.keys",
++    "CustomStateSet.prototype.size",
++    "CustomStateSet.prototype.values",
+     "DOMError",
+     "DOMError.prototype",
+     "DOMError.prototype.message",
+@@ -1048,6 +1059,7 @@
+     "ElementInternals.prototype.setFormValue",
+     "ElementInternals.prototype.setValidity",
+     "ElementInternals.prototype.shadowRoot",
++    "ElementInternals.prototype.states",
+     "ElementInternals.prototype.validationMessage",
+     "ElementInternals.prototype.validity",
+     "ElementInternals.prototype.willValidate",
+@@ -1152,7 +1164,6 @@
+     "FileSystemFileHandle.prototype.getFile",
+     "FileSystemWritableFileStream",
+     "FileSystemWritableFileStream.prototype",
+-    "FileSystemWritableFileStream.prototype.close",
+     "FileSystemWritableFileStream.prototype.seek",
+     "FileSystemWritableFileStream.prototype.truncate",
+     "FileSystemWritableFileStream.prototype.write",
+@@ -1822,11 +1833,13 @@
+     "HTMLSlotElement.prototype.name",
+     "HTMLSourceElement",
+     "HTMLSourceElement.prototype",
++    "HTMLSourceElement.prototype.height",
+     "HTMLSourceElement.prototype.media",
+     "HTMLSourceElement.prototype.sizes",
+     "HTMLSourceElement.prototype.src",
+     "HTMLSourceElement.prototype.srcset",
+     "HTMLSourceElement.prototype.type",
++    "HTMLSourceElement.prototype.width",
+     "HTMLSpanElement",
+     "HTMLSpanElement.prototype",
+     "HTMLStyleElement",
+@@ -2746,6 +2759,7 @@
+     "Navigator.prototype.usb",
+     "Navigator.prototype.userActivation",
+     "Navigator.prototype.userAgent",
++    "Navigator.prototype.userAgentData",
+     "Navigator.prototype.vendor",
+     "Navigator.prototype.vendorSub",
+     "Navigator.prototype.vibrate",
+@@ -2755,6 +2769,11 @@
+     "Navigator.prototype.webkitPersistentStorage",
+     "Navigator.prototype.webkitTemporaryStorage",
+     "Navigator.prototype.xr",
++    "NavigatorUAData",
++    "NavigatorUAData.prototype",
++    "NavigatorUAData.prototype.brands",
++    "NavigatorUAData.prototype.getHighEntropyValues",
++    "NavigatorUAData.prototype.mobile",
+     "NetworkInformation",
+     "NetworkInformation.prototype",
+     "NetworkInformation.prototype.downlink",
+@@ -3827,15 +3846,12 @@
+     "Range.prototype.cloneContents",
+     "Range.prototype.cloneRange",
+     "Range.prototype.collapse",
+-    "Range.prototype.collapsed",
+     "Range.prototype.commonAncestorContainer",
+     "Range.prototype.compareBoundaryPoints",
+     "Range.prototype.comparePoint",
+     "Range.prototype.createContextualFragment",
+     "Range.prototype.deleteContents",
+     "Range.prototype.detach",
+-    "Range.prototype.endContainer",
+-    "Range.prototype.endOffset",
+     "Range.prototype.expand",
+     "Range.prototype.extractContents",
+     "Range.prototype.getBoundingClientRect",
+@@ -3851,8 +3867,6 @@
+     "Range.prototype.setStart",
+     "Range.prototype.setStartAfter",
+     "Range.prototype.setStartBefore",
+-    "Range.prototype.startContainer",
+-    "Range.prototype.startOffset",
+     "Range.prototype.surroundContents",
+     "Range.prototype.toString",
+     "RangeError",
+@@ -3936,6 +3950,7 @@
+     "RegExp.prototype.exec",
+     "RegExp.prototype.flags",
+     "RegExp.prototype.global",
++    "RegExp.prototype.hasIndices",
+     "RegExp.prototype.ignoreCase",
+     "RegExp.prototype.multiline",
+     "RegExp.prototype.source",
+@@ -4691,6 +4706,7 @@
+     "SVGViewElement.prototype.onanimationiteration",
+     "SVGViewElement.prototype.onanimationstart",
+     "SVGViewElement.prototype.onauxclick",
++    "SVGViewElement.prototype.onbeforexrselect",
+     "SVGViewElement.prototype.onblur",
+     "SVGViewElement.prototype.oncancel",
+     "SVGViewElement.prototype.oncanplay",
+@@ -5001,6 +5017,7 @@
+     "StaticRange",
+     "StaticRange.prototype",
+     "StaticRange.prototype.collapsed",
++    "StaticRange.prototype.constructor",
+     "StaticRange.prototype.endContainer",
+     "StaticRange.prototype.endOffset",
+     "StaticRange.prototype.startContainer",
+@@ -5288,12 +5305,15 @@
+     "TreeWalker.prototype.whatToShow",
+     "TrustedHTML",
+     "TrustedHTML.prototype",
++    "TrustedHTML.prototype.toJSON",
+     "TrustedHTML.prototype.toString",
+     "TrustedScript",
+     "TrustedScript.prototype",
++    "TrustedScript.prototype.toJSON",
+     "TrustedScript.prototype.toString",
+     "TrustedScriptURL",
+     "TrustedScriptURL.prototype",
++    "TrustedScriptURL.prototype.toJSON",
+     "TrustedScriptURL.prototype.toString",
+     "TrustedTypePolicy",
+     "TrustedTypePolicy.prototype",
+@@ -6247,6 +6267,7 @@
+     "XMLDocument.prototype.onbeforecopy",
+     "XMLDocument.prototype.onbeforecut",
+     "XMLDocument.prototype.onbeforepaste",
++    "XMLDocument.prototype.onbeforexrselect",
+     "XMLDocument.prototype.onblur",
+     "XMLDocument.prototype.oncancel",
+     "XMLDocument.prototype.oncanplay",
+@@ -6453,14 +6474,25 @@
+     "XRBoundedReferenceSpace.prototype.constructor.prototype",
+     "XRBoundedReferenceSpace.prototype.getOffsetReferenceSpace",
+     "XRBoundedReferenceSpace.prototype.onreset",
++    "XRCPUDepthInformation",
++    "XRCPUDepthInformation.prototype",
++    "XRCPUDepthInformation.prototype.constructor",
++    "XRCPUDepthInformation.prototype.data",
++    "XRCPUDepthInformation.prototype.getDepthInMeters",
++    "XRCPUDepthInformation.prototype.height",
++    "XRCPUDepthInformation.prototype.normDepthBufferFromNormView",
++    "XRCPUDepthInformation.prototype.rawValueToMeters",
++    "XRCPUDepthInformation.prototype.width",
+     "XRDOMOverlayState",
+     "XRDOMOverlayState.prototype",
+     "XRDOMOverlayState.prototype.type",
+     "XRFrame",
+     "XRFrame.prototype",
+     "XRFrame.prototype.createAnchor",
++    "XRFrame.prototype.getDepthInformation",
+     "XRFrame.prototype.getHitTestResults",
+     "XRFrame.prototype.getHitTestResultsForTransientInput",
++    "XRFrame.prototype.getLightEstimate",
+     "XRFrame.prototype.getPose",
+     "XRFrame.prototype.getViewerPose",
+     "XRFrame.prototype.session",
+@@ -6494,6 +6526,15 @@
+     "XRInputSourcesChangeEvent.prototype.session",
+     "XRLayer",
+     "XRLayer.prototype",
++    "XRLightEstimate",
++    "XRLightEstimate.prototype",
++    "XRLightEstimate.prototype.primaryLightDirection",
++    "XRLightEstimate.prototype.primaryLightIntensity",
++    "XRLightEstimate.prototype.sphericalHarmonicsCoefficients",
++    "XRLightProbe",
++    "XRLightProbe.prototype",
++    "XRLightProbe.prototype.onreflectionchange",
++    "XRLightProbe.prototype.probeSpace",
+     "XRPose",
+     "XRPose.prototype",
+     "XRPose.prototype.emulatedPosition",
+@@ -6522,6 +6563,8 @@
+     "XRSession",
+     "XRSession.prototype",
+     "XRSession.prototype.cancelAnimationFrame",
++    "XRSession.prototype.depthDataFormat",
++    "XRSession.prototype.depthUsage",
+     "XRSession.prototype.domOverlayState",
+     "XRSession.prototype.end",
+     "XRSession.prototype.environmentBlendMode",
+@@ -6536,10 +6579,12 @@
+     "XRSession.prototype.onsqueezeend",
+     "XRSession.prototype.onsqueezestart",
+     "XRSession.prototype.onvisibilitychange",
++    "XRSession.prototype.preferredReflectionFormat",
+     "XRSession.prototype.renderState",
+     "XRSession.prototype.requestAnimationFrame",
+     "XRSession.prototype.requestHitTestSource",
+     "XRSession.prototype.requestHitTestSourceForTransientInput",
++    "XRSession.prototype.requestLightProbe",
+     "XRSession.prototype.requestReferenceSpace",
+     "XRSession.prototype.updateRenderState",
+     "XRSession.prototype.visibilityState",
+@@ -6564,6 +6609,8 @@
+     "XRView.prototype.eye",
+     "XRView.prototype.isFirstPersonObserver",
+     "XRView.prototype.projectionMatrix",
++    "XRView.prototype.recommendedViewportScale",
++    "XRView.prototype.requestViewportScale",
+     "XRView.prototype.transform",
+     "XRViewerPose",
+     "XRViewerPose.prototype",
+@@ -6576,6 +6623,11 @@
+     "XRViewport.prototype.y",
+     "XRWebGLBinding",
+     "XRWebGLBinding.prototype",
++    "XRWebGLBinding.prototype.getDepthInformation",
++    "XRWebGLBinding.prototype.getReflectionCubeMap",
++    "XRWebGLDepthInformation",
++    "XRWebGLDepthInformation.prototype",
++    "XRWebGLDepthInformation.prototype.texture",
+     "XRWebGLLayer",
+     "XRWebGLLayer.getNativeFramebufferScaleFactor",
+     "XRWebGLLayer.prototype",
+@@ -6707,6 +6759,7 @@
+     "onbeforeinstallprompt",
+     "onbeforeprint",
+     "onbeforeunload",
++    "onbeforexrselect",
+     "onblur",
+     "oncancel",
+     "oncanplay",
+@@ -6808,6 +6861,7 @@
+     "openDatabase",
+     "opener",
+     "origin",
++    "originAgentCluster",
+     "outerHeight",
+     "outerWidth",
+     "pageXOffset",
+```
 
   
 ### chrome-unstable
   
-#### 97.0.4688.2 (`2021-11-02`) 
+#### 97.0.4692.8 (`2021-11-9`) 
+No browser API changes.
+
+  
+#### 97.0.4688.2 (`2021-11-2`) 
 No browser API changes.
 
   
@@ -882,11 +1142,11 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_96.0.4664.9_
 No browser API changes.
 
   
-#### 96.0.4662.6 (`2021-10-08`) 
+#### 96.0.4662.6 (`2021-10-8`) 
 No browser API changes.
 
   
-#### 96.0.4655.0 (`2021-09-28`) ⚡
+#### 96.0.4655.0 (`2021-9-28`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_96.0.4651.0_to_96.0.4655.0.diff), [json](./browser_apis/chrome-unstable_96.0.4651.0_to_96.0.4655.0.json), [full list](./browser_apis/chrome-unstable_96.0.4655.0.json))
  ```diff
 --- ./browser_apis/chrome-unstable_96.0.4651.0.json	2021-11-02 02:20:30.826996337 +0000
@@ -912,19 +1172,19 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_96.0.4651.0_
 ```
 
   
-#### 96.0.4651.0 (`2021-09-24`) 
+#### 96.0.4651.0 (`2021-9-24`) 
 No browser API changes.
 
   
-#### 95.0.4638.17 (`2021-09-21`) 
+#### 95.0.4638.17 (`2021-9-21`) 
 No browser API changes.
 
   
-#### 95.0.4638.10 (`2021-09-16`) 
+#### 95.0.4638.10 (`2021-9-16`) 
 No browser API changes.
 
   
-#### 95.0.4636.4 (`2021-09-09`) ⚡
+#### 95.0.4636.4 (`2021-9-9`) ⚡
 Added 20 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_95.0.4628.3_to_95.0.4636.4.diff), [json](./browser_apis/chrome-unstable_95.0.4628.3_to_95.0.4636.4.json), [full list](./browser_apis/chrome-unstable_95.0.4636.4.json))
  ```diff
 --- ./browser_apis/chrome-unstable_95.0.4628.3.json	2021-11-02 02:19:04.178500721 +0000
@@ -990,7 +1250,7 @@ Added 20 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_95.0.4628.3
 ```
 
   
-#### 95.0.4628.3 (`2021-09-02`) ⚡
+#### 95.0.4628.3 (`2021-9-2`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_95.0.4621.4_to_95.0.4628.3.diff), [json](./browser_apis/chrome-unstable_95.0.4621.4_to_95.0.4628.3.json), [full list](./browser_apis/chrome-unstable_95.0.4628.3.json))
  ```diff
 --- ./browser_apis/chrome-unstable_95.0.4621.4.json	2021-11-02 02:18:43.046374697 +0000
@@ -1018,11 +1278,11 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_95.0.4621.4_
 ```
 
   
-#### 95.0.4621.4 (`2021-08-26`) 
+#### 95.0.4621.4 (`2021-8-26`) 
 No browser API changes.
 
   
-#### 94.0.4606.20 (`2021-08-25`) ⚡
+#### 94.0.4606.20 (`2021-8-25`) ⚡
 Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_94.0.4606.12_to_94.0.4606.20.diff), [json](./browser_apis/chrome-unstable_94.0.4606.12_to_94.0.4606.20.json), [full list](./browser_apis/chrome-unstable_94.0.4606.20.json))
  ```diff
 --- ./browser_apis/chrome-unstable_94.0.4606.12.json	2021-11-02 02:18:00.122168185 +0000
@@ -1052,7 +1312,7 @@ Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_94.0.4606.12
 ```
 
   
-#### 94.0.4606.12 (`2021-08-19`) ⚡
+#### 94.0.4606.12 (`2021-8-19`) ⚡
 Added 131 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_94.0.4603.0_to_94.0.4606.12.diff), [json](./browser_apis/chrome-unstable_94.0.4603.0_to_94.0.4606.12.json), [full list](./browser_apis/chrome-unstable_94.0.4606.12.json))
  ```diff
 --- ./browser_apis/chrome-unstable_94.0.4603.0.json	2021-11-02 02:17:38.854054612 +0000
@@ -1260,7 +1520,7 @@ Added 131 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_94.0.4603.
 ```
 
   
-#### 94.0.4603.0 (`2021-08-11`) ⚡
+#### 94.0.4603.0 (`2021-8-11`) ⚡
 Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_94.0.4595.0_to_94.0.4603.0.diff), [json](./browser_apis/chrome-unstable_94.0.4595.0_to_94.0.4603.0.json), [full list](./browser_apis/chrome-unstable_94.0.4603.0.json))
  ```diff
 --- ./browser_apis/chrome-unstable_94.0.4595.0.json	2021-11-02 02:17:17.457932489 +0000
@@ -1318,7 +1578,7 @@ Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_94.0.4595.0
 ```
 
   
-#### 94.0.4595.0 (`2021-08-03`) ⚡
+#### 94.0.4595.0 (`2021-8-3`) ⚡
 Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_93.0.4577.18_to_94.0.4595.0.diff), [json](./browser_apis/chrome-unstable_93.0.4577.18_to_94.0.4595.0.json), [full list](./browser_apis/chrome-unstable_94.0.4595.0.json))
  ```diff
 --- ./browser_apis/chrome-unstable_93.0.4577.18.json	2021-11-02 02:16:56.477810185 +0000
@@ -1366,15 +1626,11 @@ Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_93.0.4577.18
 ```
 
   
-#### 93.0.4577.18 (`2021-07-29`) 
+#### 93.0.4577.18 (`2021-7-29`) 
 No browser API changes.
 
   
-#### 93.0.4577.15 (`2021-07-27`) 
-No browser API changes.
-
-  
-#### 93.0.4577.8 (`2021-07-21`) 
+#### 93.0.4577.15 (`2021-7-27`) 
 No browser API changes.
 
   <!-- browserapis:end -->
