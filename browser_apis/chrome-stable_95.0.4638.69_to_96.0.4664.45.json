@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "95.0.4638.69",
+    "to": "96.0.4664.45"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLScriptElement.supports",
+      "PerformanceEventTiming.prototype.interactionId"
+    ],
+    "removed": []
+  }
+}

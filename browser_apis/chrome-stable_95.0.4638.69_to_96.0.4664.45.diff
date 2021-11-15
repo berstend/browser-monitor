@@ -1,0 +1,28 @@
+--- ./browser_apis/chrome-stable_95.0.4638.69.json	2021-11-15 12:27:25.541564043 +0000
++++ ./browser_apis/chrome-stable_96.0.4664.45.json	2021-11-15 12:28:06.338085291 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-stable",
+-  "version": "95.0.4638.69",
+-  "browserApiCount": 7246,
++  "version": "96.0.4664.45",
++  "browserApiCount": 7248,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -1873,6 +1873,7 @@
+     "HTMLScriptElement.prototype.src",
+     "HTMLScriptElement.prototype.text",
+     "HTMLScriptElement.prototype.type",
++    "HTMLScriptElement.supports",
+     "HTMLSelectElement",
+     "HTMLSelectElement.prototype",
+     "HTMLSelectElement.prototype.add",
+@@ -3541,6 +3542,7 @@
+     "PerformanceEventTiming",
+     "PerformanceEventTiming.prototype",
+     "PerformanceEventTiming.prototype.cancelable",
++    "PerformanceEventTiming.prototype.interactionId",
+     "PerformanceEventTiming.prototype.processingEnd",
+     "PerformanceEventTiming.prototype.processingStart",
+     "PerformanceEventTiming.prototype.target",
