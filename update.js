@@ -34,10 +34,10 @@ const fetchRemoteVersions = async () => {
 const installChromeVersion = async (prefix = "", version = "") => {
   console.log("installChromeVersion", prefix, version)
   try {
-    await exec(
+    const resp = await exec(
       `BROWSER_PREFIX=${prefix} BROWSER_VERSION=${version} bash install_chrome.sh`
     )
-    console.log("installChromeVersion - success")
+    console.log("installChromeVersion - success", resp)
     return true
   } catch (err) {
     console.log("installChromeVersion - error", err)
@@ -58,7 +58,7 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
   if (!isCI) {
     remoteVersions = remoteVersions.slice(0, 3)
   }
-  console.log("handleChromeEntries", prefix, remoteVersions)
+  console.log("handleChromeEntries", prefix, remoteVersions.length)
 
   for (const [i, entry] of remoteVersions.entries()) {
     const previousVersion = entry.previous_version
@@ -287,9 +287,10 @@ function updateMarkdown(md = "") {
 }
 
 async function init() {
-  console.log("Start")
+  console.log("Start", { isCI })
   const remoteVersions = await fetchRemoteVersions()
-  console.log("remoteVersions", remoteVersions)
+  console.log("remoteVersions - stable", remoteVersions.chrome.stable.map(x => x.version))
+  console.log("remoteVersions - unstable", remoteVersions.chrome.unstable.map(x => x.version))
 
   const chromeData = [
     // Only mind the most recent 20 entries
