@@ -32,13 +32,15 @@ const fetchRemoteVersions = async () => {
 }
 
 const installChromeVersion = async (prefix = "", version = "") => {
+  console.log("installChromeVersion", prefix, version)
   try {
     await exec(
       `BROWSER_PREFIX=${prefix} BROWSER_VERSION=${version} bash install_chrome.sh`
     )
+    console.log("installChromeVersion - success")
     return true
   } catch (err) {
-    console.log(err)
+    console.log("installChromeVersion - error", err)
     return false
   }
 }
@@ -56,7 +58,7 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
   if (!isCI) {
     remoteVersions = remoteVersions.slice(0, 3)
   }
-  console.log(prefix, remoteVersions)
+  console.log("handleChromeEntries", prefix, remoteVersions)
 
   for (const [i, entry] of remoteVersions.entries()) {
     const previousVersion = entry.previous_version
@@ -65,14 +67,18 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
     const exists = await fileExists(browserApiFilePath)
     console.log({ entry, browserApiFilePath, previousVersion, exists })
     if (exists) {
+      console.log(" - entry exists already")
       continue
     }
+    console.log(" - entry does not yet exist")
 
     if (isCI) {
       await installChromeVersion(prefix, entry.version)
     }
 
+
     const browserData = await getBrowserData()
+    console.log(" - writing")
     require("fs").writeFileSync(
       browserApiFilePath,
       JSON.stringify(
@@ -116,14 +122,17 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
           2
         )
       )
+      console.log(" - exec diff")
       await exec(
         `diff -u ${previousBrowserApiFilePath} ${browserApiFilePath} > ${browserApiDiffFilePath}`
       ).catch(console.log)
+      console.log(" - exec diff: finished")
     }
   }
 }
 
 async function getBrowserData() {
+  console.log("getBrowserData")
   const launchOptions = {
     headless: false,
     defaultViewport: null,
@@ -135,9 +144,12 @@ async function getBrowserData() {
     //   "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
   }
 
+  console.log("getBrowserData - launching")
   const browser = await puppeteer.launch(launchOptions)
   const page = await browser.newPage()
+  console.log("getBrowserData - navigating")
   await page.goto("https://example.com") // secure origin
+  console.log("getBrowserData - evaluating")
   const browserApis = await page.evaluate(() => {
     function getBrowserAPIs() {
       const apis = []
@@ -178,11 +190,14 @@ async function getBrowserData() {
     return getBrowserAPIs()
   })
   const userAgent = await page.evaluate(() => navigator.userAgent)
+  console.log("getBrowserData - regex")
   const version = /\(KHTML, like Gecko\) Chrome\/(?<ver>.*) Safari\//gm.exec(
     userAgent
   )?.groups?.ver
   console.log(version, browserApis.length)
+  console.log("getBrowserData - closing")
   await browser.close()
+  console.log("getBrowserData - finished", version, browserApis.length)
   return {
     version,
     browserApiCount: browserApis.length,
@@ -274,7 +289,7 @@ function updateMarkdown(md = "") {
 async function init() {
   console.log("Start")
   const remoteVersions = await fetchRemoteVersions()
-  console.log(remoteVersions)
+  console.log("remoteVersions", remoteVersions)
 
   const chromeData = [
     // Only mind the most recent 20 entries
@@ -284,11 +299,13 @@ async function init() {
   let md = ""
   for (const [prefix, versions] of chromeData) {
     await handleChromeEntries(prefix, versions)
+    console.log("generate releases")
     const releases = generateReleasesFile(prefix, versions)
-    console.log(releases)
+    console.log("releases", releases)
     md += generateMarkdown(prefix, releases)
   }
   if (md) {
+    console.log("updateMarkdown")
     updateMarkdown(md)
   }
 
