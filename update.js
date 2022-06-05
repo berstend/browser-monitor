@@ -18,7 +18,7 @@ const fetchRemoteVersions = async () => {
     JSON.parse(
       (
         await got(
-          `https://chromiumdash.appspot.com/fetch_releases?channel=${channel}&platform=Linux&num=20&offset=0`
+          `https://chromiumdash.appspot.com/fetch_releases?channel=${channel}&platform=Linux&num=50&offset=0`
         )
       ).body
     )
@@ -55,37 +55,45 @@ const getBrowserApiDiffFilePath = (
 ) => `./browser_apis/${prefix}_${previousVersion}_to_${version}.diff`
 
 const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
-  if (!isCI) {
-    remoteVersions = remoteVersions.slice(0, 3)
-  }
+  // if (!isCI) {
+  //   remoteVersions = remoteVersions.slice(0, 3)
+  // }
   console.log("handleChromeEntries", prefix, remoteVersions.length)
 
-  for (const [i, entry] of remoteVersions.entries().reverse()) {
+  const list = [...remoteVersions.entries()].reverse()
+
+  console.log(list)
+
+  for (const [i, entry] of list) {
     const previousVersion = entry.previous_version
     // const previousVersion = i > 0 ? remoteVersions[i + 1].version : null
     const browserApiFilePath = getBrowserApiFilePath(prefix, entry.version)
     const exists = await fileExists(browserApiFilePath)
     console.log({ entry, browserApiFilePath, previousVersion, exists })
+
+    let browserData
+
     if (exists) {
-      console.log(" - entry exists already")
-      continue
-    }
-    console.log(" - entry does not yet exist")
+      console.log(" - entry exists already", browserApiFilePath)
+      browserData = require(browserApiFilePath)
+    } else {
+      console.log(" - entry does not yet exist", browserApiFilePath)
+      if (isCI) {
+        await installChromeVersion(prefix, entry.version)
+      }
 
-    if (isCI) {
-      await installChromeVersion(prefix, entry.version)
-    }
-
-    const browserData = await getBrowserData()
-    console.log(" - writing")
-    require("fs").writeFileSync(
-      browserApiFilePath,
-      JSON.stringify(
-        { browser: prefix, date: entry.updated, ...browserData },
-        null,
-        2
+      browserData = await getBrowserData()
+      console.log(" - writing")
+      require("fs").writeFileSync(
+        browserApiFilePath,
+        JSON.stringify(
+          { browser: prefix, date: entry.updated, ...browserData },
+          null,
+          2
+        )
       )
-    )
+    }
+
     if (previousVersion) {
       const previousBrowserApiFilePath = getBrowserApiFilePath(
         prefix,
@@ -96,6 +104,19 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
         previousVersion,
         entry.version
       )
+
+      const hasPreviousBrowserData = await fileExists(
+        previousBrowserApiFilePath
+      )
+
+      if (!hasPreviousBrowserData) {
+        console.warn(
+          "Previous browser data not found",
+          previousBrowserApiFilePath
+        )
+        continue
+      }
+
       const previousBrowserData = require(previousBrowserApiFilePath)
 
       console.log({ previousBrowserApiFilePath, browserApiDiffFilePath })
@@ -204,7 +225,7 @@ async function getBrowserData() {
   }
 }
 
-function generateReleasesFile(prefix = "", entries = []) {
+async function generateReleasesFile(prefix = "", entries = []) {
   const releases = entries
     .map((e) => ({
       ...e,
@@ -231,9 +252,13 @@ function generateReleasesFile(prefix = "", entries = []) {
       entry.previousVersion,
       entry.version
     ).replace(".diff", ".json")
-    const diff = require(browserApiDiffFilePath)
-    releases[i].browserApis.added = diff.browserApis.added.length
-    releases[i].browserApis.removed = diff.browserApis.removed.length
+
+    const hasDiffData = await fileExists(browserApiDiffFilePath)
+    if (hasDiffData) {
+      const diff = require(browserApiDiffFilePath)
+      releases[i].browserApis.added = diff.browserApis.added.length
+      releases[i].browserApis.removed = diff.browserApis.removed.length
+    }
   }
   require("fs").writeFileSync(
     `./${prefix}-releases.json`,
@@ -299,14 +324,14 @@ async function init() {
 
   const chromeData = [
     // Only mind the most recent 20 entries
-    ["chrome-stable", remoteVersions.chrome.stable.slice(-20)],
-    ["chrome-unstable", remoteVersions.chrome.unstable.slice(-20)],
+    ["chrome-stable", remoteVersions.chrome.stable.slice(-50)],
+    ["chrome-unstable", remoteVersions.chrome.unstable.slice(-50)],
   ]
   let md = ""
   for (const [prefix, versions] of chromeData) {
     await handleChromeEntries(prefix, versions)
     console.log("generate releases")
-    const releases = generateReleasesFile(prefix, versions)
+    const releases = await generateReleasesFile(prefix, versions)
     console.log("releases", releases)
     md += generateMarkdown(prefix, releases)
   }
