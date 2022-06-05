@@ -2,25 +2,25 @@
 name: Update data
 
 on:
-    workflow_dispatch:
-    schedule:
-      - cron:  '0 */12 * * *' # https://crontab.guru/every-12-hours
+  workflow_dispatch:
+  # schedule:
+  #   - cron:  '0 */12 * * *' # https://crontab.guru/every-12-hours
 
 jobs:
   update:
     runs-on: ubuntu-20.04
     name: Update
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
-    - name: Install deps
-      run: yarn install
-    - name: Run update.js
-      run: xvfb-run --auto-servernum node update.js
-    - name: ls -lh browser_apis
-      run:  ls -lh browser_apis
-    - uses: EndBug/add-and-commit@v7
-      with:
-        message: Update browser data
-        committer_name: GitHub Actions
-        committer_email: actions@github.com
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Install deps
+        run: yarn install
+      - name: Run update.js
+        run: xvfb-run --auto-servernum node update.js
+      - name: ls -lh browser_apis
+        run: ls -lh browser_apis
+      - uses: EndBug/add-and-commit@v7
+        with:
+          message: Update browser data
+          committer_name: GitHub Actions
+          committer_email: actions@github.com

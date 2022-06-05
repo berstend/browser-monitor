@@ -60,7 +60,7 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
   }
   console.log("handleChromeEntries", prefix, remoteVersions.length)
 
-  for (const [i, entry] of remoteVersions.entries()) {
+  for (const [i, entry] of remoteVersions.entries().reverse()) {
     const previousVersion = entry.previous_version
     // const previousVersion = i > 0 ? remoteVersions[i + 1].version : null
     const browserApiFilePath = getBrowserApiFilePath(prefix, entry.version)
@@ -75,7 +75,6 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
     if (isCI) {
       await installChromeVersion(prefix, entry.version)
     }
-
 
     const browserData = await getBrowserData()
     console.log(" - writing")
@@ -289,8 +288,14 @@ function updateMarkdown(md = "") {
 async function init() {
   console.log("Start", { isCI })
   const remoteVersions = await fetchRemoteVersions()
-  console.log("remoteVersions - stable", remoteVersions.chrome.stable.map(x => x.version))
-  console.log("remoteVersions - unstable", remoteVersions.chrome.unstable.map(x => x.version))
+  console.log(
+    "remoteVersions - stable",
+    remoteVersions.chrome.stable.map((x) => x.version)
+  )
+  console.log(
+    "remoteVersions - unstable",
+    remoteVersions.chrome.unstable.map((x) => x.version)
+  )
 
   const chromeData = [
     // Only mind the most recent 20 entries
