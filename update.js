@@ -18,7 +18,7 @@ const fetchRemoteVersions = async () => {
     JSON.parse(
       (
         await got(
-          `https://chromiumdash.appspot.com/fetch_releases?channel=${channel}&platform=Linux&num=50&offset=0`
+          `https://chromiumdash.appspot.com/fetch_releases?channel=${channel}&platform=Linux&num=30&offset=0`
         )
       ).body
     )
