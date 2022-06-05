@@ -1,0 +1,29 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "100.0.4896.12",
+    "to": "100.0.4896.20"
+  },
+  "browserApis": {
+    "added": [
+      "Screen.prototype.isExtended",
+      "Screen.prototype.onchange",
+      "ScreenDetailed",
+      "ScreenDetailed.prototype",
+      "ScreenDetailed.prototype.devicePixelRatio",
+      "ScreenDetailed.prototype.isInternal",
+      "ScreenDetailed.prototype.isPrimary",
+      "ScreenDetailed.prototype.label",
+      "ScreenDetailed.prototype.left",
+      "ScreenDetailed.prototype.top",
+      "ScreenDetails",
+      "ScreenDetails.prototype",
+      "ScreenDetails.prototype.currentScreen",
+      "ScreenDetails.prototype.oncurrentscreenchange",
+      "ScreenDetails.prototype.onscreenschange",
+      "ScreenDetails.prototype.screens",
+      "getScreenDetails"
+    ],
+    "removed": []
+  }
+}

@@ -1,0 +1,51 @@
+--- ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-05 18:49:06.614320093 +0000
++++ ./browser_apis/chrome-unstable_103.0.5042.0.json	2022-06-05 18:49:28.782416498 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "103.0.5028.0",
+-  "browserApiCount": 7450,
++  "version": "103.0.5042.0",
++  "browserApiCount": 7455,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -14,6 +14,7 @@
+     "AbortSignal.prototype.onabort",
+     "AbortSignal.prototype.reason",
+     "AbortSignal.prototype.throwIfAborted",
++    "AbortSignal.timeout",
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+     "AbsoluteOrientationSensor.prototype.constructor",
+@@ -781,9 +782,6 @@
+     "CanvasRenderingContext2D.prototype.transform",
+     "CanvasRenderingContext2D.prototype.translate",
+     "CanvasRenderingContext2D.prototype.wordSpacing",
+-    "CaptureHandleChangeEvent",
+-    "CaptureHandleChangeEvent.prototype",
+-    "CaptureHandleChangeEvent.prototype.captureHandle",
+     "ChannelMergerNode",
+     "ChannelMergerNode.prototype",
+     "ChannelSplitterNode",
+@@ -2546,6 +2544,12 @@
+     "LargestContentfulPaint.prototype.size",
+     "LargestContentfulPaint.prototype.toJSON",
+     "LargestContentfulPaint.prototype.url",
++    "LaunchParams",
++    "LaunchParams.prototype",
++    "LaunchParams.prototype.files",
++    "LaunchQueue",
++    "LaunchQueue.prototype",
++    "LaunchQueue.prototype.setConsumer",
+     "LayoutShift",
+     "LayoutShift.prototype",
+     "LayoutShift.prototype.hadRecentInput",
+@@ -7150,6 +7154,7 @@
+     "isFinite",
+     "isNaN",
+     "isSecureContext",
++    "launchQueue",
+     "length",
+     "localStorage",
+     "location",

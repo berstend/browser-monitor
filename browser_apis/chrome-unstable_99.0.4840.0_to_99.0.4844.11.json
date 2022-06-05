@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "99.0.4840.0",
+    "to": "99.0.4844.11"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "Navigator.prototype.windowControlsOverlay",
+      "WindowControlsOverlay",
+      "WindowControlsOverlay.prototype",
+      "WindowControlsOverlay.prototype.getTitlebarAreaRect",
+      "WindowControlsOverlay.prototype.ongeometrychange",
+      "WindowControlsOverlay.prototype.visible",
+      "WindowControlsOverlayGeometryChangeEvent",
+      "WindowControlsOverlayGeometryChangeEvent.prototype",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.visible"
+    ]
+  }
+}

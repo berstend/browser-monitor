@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "103.0.5060.13",
+    "to": "103.0.5060.24"
+  },
+  "browserApis": {
+    "added": [
+      "FontData",
+      "FontData.prototype",
+      "FontData.prototype.blob",
+      "FontData.prototype.family",
+      "FontData.prototype.fullName",
+      "FontData.prototype.postscriptName",
+      "FontData.prototype.style",
+      "queryLocalFonts"
+    ],
+    "removed": []
+  }
+}

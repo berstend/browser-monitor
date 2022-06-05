@@ -1,0 +1,28 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "98.0.4750.0",
+    "to": "98.0.4758.9"
+  },
+  "browserApis": {
+    "added": [
+      "Navigator.prototype.windowControlsOverlay",
+      "WindowControlsOverlay",
+      "WindowControlsOverlay.prototype",
+      "WindowControlsOverlay.prototype.getTitlebarAreaRect",
+      "WindowControlsOverlay.prototype.ongeometrychange",
+      "WindowControlsOverlay.prototype.visible",
+      "WindowControlsOverlayGeometryChangeEvent",
+      "WindowControlsOverlayGeometryChangeEvent.prototype",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
+      "WritableStreamDefaultController.prototype.signal"
+    ],
+    "removed": [
+      "BarcodeDetector",
+      "BarcodeDetector.getSupportedFormats",
+      "BarcodeDetector.prototype",
+      "BarcodeDetector.prototype.detect"
+    ]
+  }
+}

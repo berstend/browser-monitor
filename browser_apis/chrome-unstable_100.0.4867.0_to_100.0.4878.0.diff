@@ -1,0 +1,24 @@
+--- ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-05 18:43:28.936536813 +0000
++++ ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-05 18:43:54.356730082 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "100.0.4867.0",
+-  "browserApiCount": 7340,
++  "version": "100.0.4878.0",
++  "browserApiCount": 7345,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -487,6 +487,11 @@
+     "CSSLayerStatementRule",
+     "CSSLayerStatementRule.prototype",
+     "CSSLayerStatementRule.prototype.nameList",
++    "CSSMathClamp",
++    "CSSMathClamp.prototype",
++    "CSSMathClamp.prototype.lower",
++    "CSSMathClamp.prototype.upper",
++    "CSSMathClamp.prototype.value",
+     "CSSMathInvert",
+     "CSSMathInvert.prototype",
+     "CSSMathInvert.prototype.value",

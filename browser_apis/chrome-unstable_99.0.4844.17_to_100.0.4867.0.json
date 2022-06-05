@@ -1,0 +1,48 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "99.0.4844.17",
+    "to": "100.0.4867.0"
+  },
+  "browserApis": {
+    "added": [
+      "CanvasCaptureMediaStreamTrack.prototype.applyConstraints",
+      "CanvasCaptureMediaStreamTrack.prototype.clone",
+      "CanvasCaptureMediaStreamTrack.prototype.constructor",
+      "CanvasCaptureMediaStreamTrack.prototype.contentHint",
+      "CanvasCaptureMediaStreamTrack.prototype.enabled",
+      "CanvasCaptureMediaStreamTrack.prototype.getCapabilities",
+      "CanvasCaptureMediaStreamTrack.prototype.getConstraints",
+      "CanvasCaptureMediaStreamTrack.prototype.getSettings",
+      "CanvasCaptureMediaStreamTrack.prototype.id",
+      "CanvasCaptureMediaStreamTrack.prototype.kind",
+      "CanvasCaptureMediaStreamTrack.prototype.label",
+      "CanvasCaptureMediaStreamTrack.prototype.muted",
+      "CanvasCaptureMediaStreamTrack.prototype.onended",
+      "CanvasCaptureMediaStreamTrack.prototype.onmute",
+      "CanvasCaptureMediaStreamTrack.prototype.onunmute",
+      "CanvasCaptureMediaStreamTrack.prototype.readyState",
+      "CanvasCaptureMediaStreamTrack.prototype.stop"
+    ],
+    "removed": [
+      "MediaStreamTrack",
+      "MediaStreamTrack.prototype",
+      "MediaStreamTrack.prototype.applyConstraints",
+      "MediaStreamTrack.prototype.clone",
+      "MediaStreamTrack.prototype.contentHint",
+      "MediaStreamTrack.prototype.enabled",
+      "MediaStreamTrack.prototype.getCapabilities",
+      "MediaStreamTrack.prototype.getConstraints",
+      "MediaStreamTrack.prototype.getSettings",
+      "MediaStreamTrack.prototype.id",
+      "MediaStreamTrack.prototype.kind",
+      "MediaStreamTrack.prototype.label",
+      "MediaStreamTrack.prototype.muted",
+      "MediaStreamTrack.prototype.onended",
+      "MediaStreamTrack.prototype.onmute",
+      "MediaStreamTrack.prototype.onunmute",
+      "MediaStreamTrack.prototype.readyState",
+      "MediaStreamTrack.prototype.stop"
+    ]
+  }
+}

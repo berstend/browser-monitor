@@ -1,0 +1,25 @@
+--- ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-05 18:46:19.149514838 +0000
++++ ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-05 18:46:40.189659492 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "101.0.4947.0",
+-  "browserApiCount": 7368,
++  "version": "101.0.4951.7",
++  "browserApiCount": 7374,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -460,6 +460,12 @@
+     "CSSFontFaceRule",
+     "CSSFontFaceRule.prototype",
+     "CSSFontFaceRule.prototype.style",
++    "CSSFontPaletteValuesRule",
++    "CSSFontPaletteValuesRule.prototype",
++    "CSSFontPaletteValuesRule.prototype.basePalette",
++    "CSSFontPaletteValuesRule.prototype.fontFamily",
++    "CSSFontPaletteValuesRule.prototype.name",
++    "CSSFontPaletteValuesRule.prototype.overrideColors",
+     "CSSImageValue",
+     "CSSImageValue.prototype",
+     "CSSImportRule",

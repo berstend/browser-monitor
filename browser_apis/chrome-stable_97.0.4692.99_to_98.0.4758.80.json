@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "97.0.4692.99",
+    "to": "98.0.4758.80"
+  },
+  "browserApis": {
+    "added": [
+      "AbortSignal.prototype.reason",
+      "PublicKeyCredential.prototype.authenticatorAttachment",
+      "WritableStreamDefaultController.prototype.signal",
+      "structuredClone"
+    ],
+    "removed": []
+  }
+}

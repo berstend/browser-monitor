@@ -1,0 +1,36 @@
+--- ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-05 18:47:01.029756588 +0000
++++ ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-05 18:47:21.473870540 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "101.0.4951.15",
+-  "browserApiCount": 7375,
++  "version": "102.0.4972.0",
++  "browserApiCount": 7378,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -1131,6 +1131,7 @@
+     "ElementInternals.prototype.ariaExpanded",
+     "ElementInternals.prototype.ariaHasPopup",
+     "ElementInternals.prototype.ariaHidden",
++    "ElementInternals.prototype.ariaInvalid",
+     "ElementInternals.prototype.ariaKeyShortcuts",
+     "ElementInternals.prototype.ariaLabel",
+     "ElementInternals.prototype.ariaLevel",
+@@ -3181,6 +3182,7 @@
+     "Option.prototype.constructor.prototype.ariaExpanded",
+     "Option.prototype.constructor.prototype.ariaHasPopup",
+     "Option.prototype.constructor.prototype.ariaHidden",
++    "Option.prototype.constructor.prototype.ariaInvalid",
+     "Option.prototype.constructor.prototype.ariaKeyShortcuts",
+     "Option.prototype.constructor.prototype.ariaLabel",
+     "Option.prototype.constructor.prototype.ariaLevel",
+@@ -3287,6 +3289,7 @@
+     "Option.prototype.constructor.prototype.hasPointerCapture",
+     "Option.prototype.constructor.prototype.hidden",
+     "Option.prototype.constructor.prototype.id",
++    "Option.prototype.constructor.prototype.inert",
+     "Option.prototype.constructor.prototype.innerHTML",
+     "Option.prototype.constructor.prototype.innerText",
+     "Option.prototype.constructor.prototype.inputMode",

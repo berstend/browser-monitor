@@ -1,0 +1,28 @@
+--- ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-05 18:43:54.356730082 +0000
++++ ./browser_apis/chrome-unstable_100.0.4892.0.json	2022-06-05 18:44:20.400916975 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "100.0.4878.0",
+-  "browserApiCount": 7345,
++  "version": "100.0.4892.0",
++  "browserApiCount": 7347,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -13,6 +13,7 @@
+     "AbortSignal.prototype.aborted",
+     "AbortSignal.prototype.onabort",
+     "AbortSignal.prototype.reason",
++    "AbortSignal.prototype.throwIfAborted",
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+     "AbsoluteOrientationSensor.prototype.constructor",
+@@ -1397,6 +1398,7 @@
+     "HIDDevice.prototype",
+     "HIDDevice.prototype.close",
+     "HIDDevice.prototype.collections",
++    "HIDDevice.prototype.forget",
+     "HIDDevice.prototype.oninputreport",
+     "HIDDevice.prototype.open",
+     "HIDDevice.prototype.opened",

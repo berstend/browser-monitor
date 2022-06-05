@@ -1,0 +1,44 @@
+--- ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-05 18:50:33.338691571 +0000
++++ ./browser_apis/chrome-unstable_104.0.5083.0.json	2022-06-05 18:50:54.742767313 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "103.0.5060.24",
+-  "browserApiCount": 7463,
++  "version": "104.0.5083.0",
++  "browserApiCount": 7467,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -6068,6 +6068,7 @@
+     "WebGL2RenderingContext.prototype.drawElements",
+     "WebGL2RenderingContext.prototype.drawElementsInstanced",
+     "WebGL2RenderingContext.prototype.drawRangeElements",
++    "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
+     "WebGL2RenderingContext.prototype.drawingBufferHeight",
+     "WebGL2RenderingContext.prototype.drawingBufferWidth",
+     "WebGL2RenderingContext.prototype.enable",
+@@ -6200,6 +6201,7 @@
+     "WebGL2RenderingContext.prototype.uniformMatrix4fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix4x2fv",
+     "WebGL2RenderingContext.prototype.uniformMatrix4x3fv",
++    "WebGL2RenderingContext.prototype.unpackColorSpace",
+     "WebGL2RenderingContext.prototype.useProgram",
+     "WebGL2RenderingContext.prototype.validateProgram",
+     "WebGL2RenderingContext.prototype.vertexAttrib1f",
+@@ -6286,6 +6288,7 @@
+     "WebGLRenderingContext.prototype.disableVertexAttribArray",
+     "WebGLRenderingContext.prototype.drawArrays",
+     "WebGLRenderingContext.prototype.drawElements",
++    "WebGLRenderingContext.prototype.drawingBufferColorSpace",
+     "WebGLRenderingContext.prototype.drawingBufferHeight",
+     "WebGLRenderingContext.prototype.drawingBufferWidth",
+     "WebGLRenderingContext.prototype.enable",
+@@ -6367,6 +6370,7 @@
+     "WebGLRenderingContext.prototype.uniformMatrix2fv",
+     "WebGLRenderingContext.prototype.uniformMatrix3fv",
+     "WebGLRenderingContext.prototype.uniformMatrix4fv",
++    "WebGLRenderingContext.prototype.unpackColorSpace",
+     "WebGLRenderingContext.prototype.useProgram",
+     "WebGLRenderingContext.prototype.validateProgram",
+     "WebGLRenderingContext.prototype.vertexAttrib1f",

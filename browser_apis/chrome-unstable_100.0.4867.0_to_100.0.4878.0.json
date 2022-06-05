@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "100.0.4867.0",
+    "to": "100.0.4878.0"
+  },
+  "browserApis": {
+    "added": [
+      "CSSMathClamp",
+      "CSSMathClamp.prototype",
+      "CSSMathClamp.prototype.lower",
+      "CSSMathClamp.prototype.upper",
+      "CSSMathClamp.prototype.value"
+    ],
+    "removed": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "103.0.5028.0",
+    "to": "103.0.5042.0"
+  },
+  "browserApis": {
+    "added": [
+      "AbortSignal.timeout",
+      "LaunchParams",
+      "LaunchParams.prototype",
+      "LaunchParams.prototype.files",
+      "LaunchQueue",
+      "LaunchQueue.prototype",
+      "LaunchQueue.prototype.setConsumer",
+      "launchQueue"
+    ],
+    "removed": [
+      "CaptureHandleChangeEvent",
+      "CaptureHandleChangeEvent.prototype",
+      "CaptureHandleChangeEvent.prototype.captureHandle"
+    ]
+  }
+}

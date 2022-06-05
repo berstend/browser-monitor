@@ -1,0 +1,18 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "101.0.4947.0",
+    "to": "101.0.4951.7"
+  },
+  "browserApis": {
+    "added": [
+      "CSSFontPaletteValuesRule",
+      "CSSFontPaletteValuesRule.prototype",
+      "CSSFontPaletteValuesRule.prototype.basePalette",
+      "CSSFontPaletteValuesRule.prototype.fontFamily",
+      "CSSFontPaletteValuesRule.prototype.name",
+      "CSSFontPaletteValuesRule.prototype.overrideColors"
+    ],
+    "removed": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "101.0.4951.7",
+    "to": "101.0.4951.15"
+  },
+  "browserApis": {
+    "added": [
+      "MediaCapabilities.prototype.encodingInfo"
+    ],
+    "removed": []
+  }
+}

@@ -1,0 +1,10 @@
+--- ./browser_apis/chrome-unstable_103.0.5042.0.json	2022-06-05 18:49:28.782416498 +0000
++++ ./browser_apis/chrome-unstable_103.0.5056.0.json	2022-06-05 18:49:49.434512528 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "103.0.5042.0",
++  "version": "103.0.5056.0",
+   "browserApiCount": 7455,
+   "browserApis": [
+     "AbortController",

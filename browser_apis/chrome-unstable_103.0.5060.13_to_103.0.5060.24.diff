@@ -1,0 +1,34 @@
+--- ./browser_apis/chrome-unstable_103.0.5060.13.json	2022-06-05 18:50:10.894600004 +0000
++++ ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-05 18:50:33.338691571 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "103.0.5060.13",
+-  "browserApiCount": 7455,
++  "version": "103.0.5060.24",
++  "browserApiCount": 7463,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -1306,6 +1306,13 @@
+     "FocusEvent",
+     "FocusEvent.prototype",
+     "FocusEvent.prototype.relatedTarget",
++    "FontData",
++    "FontData.prototype",
++    "FontData.prototype.blob",
++    "FontData.prototype.family",
++    "FontData.prototype.fullName",
++    "FontData.prototype.postscriptName",
++    "FontData.prototype.style",
+     "FontFace",
+     "FontFace.prototype",
+     "FontFace.prototype.ascentOverride",
+@@ -7295,6 +7302,7 @@
+     "postMessage",
+     "print",
+     "prompt",
++    "queryLocalFonts",
+     "queueMicrotask",
+     "releaseEvents",
+     "reportError",

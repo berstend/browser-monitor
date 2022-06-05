@@ -1,0 +1,44 @@
+--- ./browser_apis/chrome-stable_97.0.4692.99.json	2022-06-05 18:35:31.137662387 +0000
++++ ./browser_apis/chrome-stable_98.0.4758.80.json	2022-06-05 18:35:54.657785559 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-stable",
+-  "version": "97.0.4692.99",
+-  "browserApiCount": 7288,
++  "version": "98.0.4758.80",
++  "browserApiCount": 7292,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -12,6 +12,7 @@
+     "AbortSignal.prototype",
+     "AbortSignal.prototype.aborted",
+     "AbortSignal.prototype.onabort",
++    "AbortSignal.prototype.reason",
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+     "AbsoluteOrientationSensor.prototype.constructor",
+@@ -3774,6 +3775,7 @@
+     "PublicKeyCredential",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
+     "PublicKeyCredential.prototype",
++    "PublicKeyCredential.prototype.authenticatorAttachment",
+     "PublicKeyCredential.prototype.getClientExtensionResults",
+     "PublicKeyCredential.prototype.rawId",
+     "PublicKeyCredential.prototype.response",
+@@ -6421,6 +6423,7 @@
+     "WritableStreamDefaultController",
+     "WritableStreamDefaultController.prototype",
+     "WritableStreamDefaultController.prototype.error",
++    "WritableStreamDefaultController.prototype.signal",
+     "WritableStreamDefaultWriter",
+     "WritableStreamDefaultWriter.prototype",
+     "WritableStreamDefaultWriter.prototype.abort",
+@@ -7159,6 +7162,7 @@
+     "status",
+     "statusbar",
+     "stop",
++    "structuredClone",
+     "styleMedia",
+     "toolbar",
+     "top",

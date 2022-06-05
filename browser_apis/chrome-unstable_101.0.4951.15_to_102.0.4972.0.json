@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "101.0.4951.15",
+    "to": "102.0.4972.0"
+  },
+  "browserApis": {
+    "added": [
+      "ElementInternals.prototype.ariaInvalid",
+      "Option.prototype.constructor.prototype.ariaInvalid",
+      "Option.prototype.constructor.prototype.inert"
+    ],
+    "removed": []
+  }
+}

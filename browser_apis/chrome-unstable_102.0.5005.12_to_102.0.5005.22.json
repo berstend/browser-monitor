@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "102.0.5005.12",
+    "to": "102.0.5005.22"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLLinkElement.prototype.fetchPriority",
+      "HTMLScriptElement.prototype.fetchPriority",
+      "Image.prototype.fetchPriority"
+    ],
+    "removed": [
+      "HTMLLinkElement.prototype.fetchpriority",
+      "HTMLScriptElement.prototype.fetchpriority",
+      "Image.prototype.fetchpriority"
+    ]
+  }
+}

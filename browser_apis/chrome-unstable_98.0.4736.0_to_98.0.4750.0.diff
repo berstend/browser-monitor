@@ -1,0 +1,23 @@
+--- ./browser_apis/chrome-unstable_98.0.4736.0.json	2022-06-05 18:34:00.133329232 +0000
++++ ./browser_apis/chrome-unstable_98.0.4750.0.json	2022-06-05 18:40:46.987739522 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "98.0.4736.0",
+-  "browserApiCount": 7291,
++  "version": "98.0.4750.0",
++  "browserApiCount": 7295,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -348,6 +348,10 @@
+     "BarProp",
+     "BarProp.prototype",
+     "BarProp.prototype.visible",
++    "BarcodeDetector",
++    "BarcodeDetector.getSupportedFormats",
++    "BarcodeDetector.prototype",
++    "BarcodeDetector.prototype.detect",
+     "BatteryManager",
+     "BatteryManager.prototype",
+     "BatteryManager.prototype.charging",

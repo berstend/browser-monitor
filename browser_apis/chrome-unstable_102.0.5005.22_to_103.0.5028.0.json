@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "102.0.5005.22",
+    "to": "103.0.5028.0"
+  },
+  "browserApis": {
+    "added": [
+      "ElementInternals.prototype.role",
+      "FileSystemFileHandle.prototype.move",
+      "Option.prototype.constructor.prototype.role",
+      "SerialPort.prototype.forget"
+    ],
+    "removed": []
+  }
+}

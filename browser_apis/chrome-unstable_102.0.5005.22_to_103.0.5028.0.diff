@@ -1,0 +1,44 @@
+--- ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-05 18:48:45.646225598 +0000
++++ ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-05 18:49:06.614320093 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "102.0.5005.22",
+-  "browserApiCount": 7446,
++  "version": "103.0.5028.0",
++  "browserApiCount": 7450,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -1167,6 +1167,7 @@
+     "ElementInternals.prototype.form",
+     "ElementInternals.prototype.labels",
+     "ElementInternals.prototype.reportValidity",
++    "ElementInternals.prototype.role",
+     "ElementInternals.prototype.setFormValue",
+     "ElementInternals.prototype.setValidity",
+     "ElementInternals.prototype.shadowRoot",
+@@ -1290,6 +1291,7 @@
+     "FileSystemFileHandle.prototype",
+     "FileSystemFileHandle.prototype.createWritable",
+     "FileSystemFileHandle.prototype.getFile",
++    "FileSystemFileHandle.prototype.move",
+     "FileSystemWritableFileStream",
+     "FileSystemWritableFileStream.prototype",
+     "FileSystemWritableFileStream.prototype.seek",
+@@ -3491,6 +3493,7 @@
+     "Option.prototype.constructor.prototype.replaceWith",
+     "Option.prototype.constructor.prototype.requestFullscreen",
+     "Option.prototype.constructor.prototype.requestPointerLock",
++    "Option.prototype.constructor.prototype.role",
+     "Option.prototype.constructor.prototype.scroll",
+     "Option.prototype.constructor.prototype.scrollBy",
+     "Option.prototype.constructor.prototype.scrollHeight",
+@@ -5165,6 +5168,7 @@
+     "SerialPort",
+     "SerialPort.prototype",
+     "SerialPort.prototype.close",
++    "SerialPort.prototype.forget",
+     "SerialPort.prototype.getInfo",
+     "SerialPort.prototype.getSignals",
+     "SerialPort.prototype.onconnect",

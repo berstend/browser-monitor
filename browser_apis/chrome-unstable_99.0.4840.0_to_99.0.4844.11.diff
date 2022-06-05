@@ -1,0 +1,36 @@
+--- ./browser_apis/chrome-unstable_99.0.4840.0.json	2022-06-05 18:41:59.268077768 +0000
++++ ./browser_apis/chrome-unstable_99.0.4844.11.json	2022-06-05 18:42:20.096165118 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "99.0.4840.0",
+-  "browserApiCount": 7351,
++  "version": "99.0.4844.11",
++  "browserApiCount": 7341,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -2913,7 +2913,6 @@
+     "Navigator.prototype.webkitGetUserMedia",
+     "Navigator.prototype.webkitPersistentStorage",
+     "Navigator.prototype.webkitTemporaryStorage",
+-    "Navigator.prototype.windowControlsOverlay",
+     "Navigator.prototype.xr",
+     "NavigatorManagedData",
+     "NavigatorManagedData.prototype",
+@@ -6454,15 +6453,6 @@
+     "WheelEvent.prototype.y",
+     "Window",
+     "Window.prototype",
+-    "WindowControlsOverlay",
+-    "WindowControlsOverlay.prototype",
+-    "WindowControlsOverlay.prototype.getTitlebarAreaRect",
+-    "WindowControlsOverlay.prototype.ongeometrychange",
+-    "WindowControlsOverlay.prototype.visible",
+-    "WindowControlsOverlayGeometryChangeEvent",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
+-    "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
+     "Worker",
+     "Worker.prototype",
+     "Worker.prototype.onerror",

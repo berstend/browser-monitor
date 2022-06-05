@@ -1,0 +1,37 @@
+--- ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-05 18:48:24.306154688 +0000
++++ ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-05 18:48:45.646225598 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "102.0.5005.12",
++  "version": "102.0.5005.22",
+   "browserApiCount": 7446,
+   "browserApis": [
+     "AbortController",
+@@ -1778,7 +1778,7 @@
+     "HTMLLinkElement.prototype.charset",
+     "HTMLLinkElement.prototype.crossOrigin",
+     "HTMLLinkElement.prototype.disabled",
+-    "HTMLLinkElement.prototype.fetchpriority",
++    "HTMLLinkElement.prototype.fetchPriority",
+     "HTMLLinkElement.prototype.href",
+     "HTMLLinkElement.prototype.hreflang",
+     "HTMLLinkElement.prototype.imageSizes",
+@@ -1927,7 +1927,7 @@
+     "HTMLScriptElement.prototype.crossOrigin",
+     "HTMLScriptElement.prototype.defer",
+     "HTMLScriptElement.prototype.event",
+-    "HTMLScriptElement.prototype.fetchpriority",
++    "HTMLScriptElement.prototype.fetchPriority",
+     "HTMLScriptElement.prototype.htmlFor",
+     "HTMLScriptElement.prototype.integrity",
+     "HTMLScriptElement.prototype.noModule",
+@@ -2300,7 +2300,7 @@
+     "Image.prototype.currentSrc",
+     "Image.prototype.decode",
+     "Image.prototype.decoding",
+-    "Image.prototype.fetchpriority",
++    "Image.prototype.fetchPriority",
+     "Image.prototype.height",
+     "Image.prototype.hspace",
+     "Image.prototype.isMap",

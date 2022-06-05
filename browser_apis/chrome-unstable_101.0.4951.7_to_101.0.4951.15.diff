@@ -1,0 +1,20 @@
+--- ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-05 18:46:40.189659492 +0000
++++ ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-05 18:47:01.029756588 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "101.0.4951.7",
+-  "browserApiCount": 7374,
++  "version": "101.0.4951.15",
++  "browserApiCount": 7375,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -2660,6 +2660,7 @@
+     "MediaCapabilities",
+     "MediaCapabilities.prototype",
+     "MediaCapabilities.prototype.decodingInfo",
++    "MediaCapabilities.prototype.encodingInfo",
+     "MediaDevices",
+     "MediaDevices.prototype",
+     "MediaDevices.prototype.enumerateDevices",

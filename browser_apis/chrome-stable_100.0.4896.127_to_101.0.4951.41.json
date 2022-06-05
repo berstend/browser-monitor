@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "100.0.4896.127",
+    "to": "101.0.4951.41"
+  },
+  "browserApis": {
+    "added": [
+      "CSSFontPaletteValuesRule",
+      "CSSFontPaletteValuesRule.prototype",
+      "CSSFontPaletteValuesRule.prototype.basePalette",
+      "CSSFontPaletteValuesRule.prototype.fontFamily",
+      "CSSFontPaletteValuesRule.prototype.name",
+      "CSSFontPaletteValuesRule.prototype.overrideColors",
+      "HTMLLinkElement.prototype.fetchpriority",
+      "HTMLScriptElement.prototype.fetchpriority",
+      "Image.prototype.fetchpriority",
+      "MediaCapabilities.prototype.encodingInfo",
+      "USBDevice.prototype.forget"
+    ],
+    "removed": []
+  }
+}

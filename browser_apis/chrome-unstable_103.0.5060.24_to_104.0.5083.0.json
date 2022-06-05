@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "103.0.5060.24",
+    "to": "104.0.5083.0"
+  },
+  "browserApis": {
+    "added": [
+      "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
+      "WebGL2RenderingContext.prototype.unpackColorSpace",
+      "WebGLRenderingContext.prototype.drawingBufferColorSpace",
+      "WebGLRenderingContext.prototype.unpackColorSpace"
+    ],
+    "removed": []
+  }
+}

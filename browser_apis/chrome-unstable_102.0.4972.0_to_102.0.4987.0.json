@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "102.0.4972.0",
+    "to": "102.0.4987.0"
+  },
+  "browserApis": {
+    "added": [
+      "CanvasCaptureMediaStreamTrack.prototype.getCaptureHandle",
+      "CanvasCaptureMediaStreamTrack.prototype.oncapturehandlechange",
+      "CaptureHandleChangeEvent",
+      "CaptureHandleChangeEvent.prototype",
+      "CaptureHandleChangeEvent.prototype.captureHandle",
+      "MediaDevices.prototype.setCaptureHandleConfig",
+      "Option.prototype.constructor.prototype.onbeforematch",
+      "SVGViewElement.prototype.onbeforematch",
+      "XMLDocument.prototype.onbeforematch",
+      "onbeforematch"
+    ],
+    "removed": []
+  }
+}
