@@ -12,8 +12,8 @@ No browser API changes.
 #### 102.0.5005.61 (`2022-5-24`) ⚡
 Added 79 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_101.0.4951.64_to_102.0.5005.61.diff), [json](./browser_apis/chrome-stable_101.0.4951.64_to_102.0.5005.61.json), [full list](./browser_apis/chrome-stable_102.0.5005.61.json))
  ```diff
---- ./browser_apis/chrome-stable_101.0.4951.64.json	2022-06-16 01:17:08.132960797 +0000
-+++ ./browser_apis/chrome-stable_102.0.5005.61.json	2022-06-16 01:17:08.132960797 +0000
+--- ./browser_apis/chrome-stable_101.0.4951.64.json	2022-06-16 12:29:07.883514568 +0000
++++ ./browser_apis/chrome-stable_102.0.5005.61.json	2022-06-16 12:29:07.887514747 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -258,8 +258,8 @@ No browser API changes.
 #### 101.0.4951.41 (`2022-4-26`) ⚡
 Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_100.0.4896.127_to_101.0.4951.41.diff), [json](./browser_apis/chrome-stable_100.0.4896.127_to_101.0.4951.41.json), [full list](./browser_apis/chrome-stable_101.0.4951.41.json))
  ```diff
---- ./browser_apis/chrome-stable_100.0.4896.127.json	2022-06-16 01:17:08.128960764 +0000
-+++ ./browser_apis/chrome-stable_101.0.4951.41.json	2022-06-16 01:17:08.132960797 +0000
+--- ./browser_apis/chrome-stable_100.0.4896.127.json	2022-06-16 12:29:07.883514568 +0000
++++ ./browser_apis/chrome-stable_101.0.4951.41.json	2022-06-16 12:29:07.883514568 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -341,8 +341,8 @@ No browser API changes.
 #### 100.0.4896.60 (`2022-3-29`) ⚡
 Added 41 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_99.0.4844.84_to_100.0.4896.60.diff), [json](./browser_apis/chrome-stable_99.0.4844.84_to_100.0.4896.60.json), [full list](./browser_apis/chrome-stable_100.0.4896.60.json))
  ```diff
---- ./browser_apis/chrome-stable_99.0.4844.84.json	2022-06-16 01:17:08.152960966 +0000
-+++ ./browser_apis/chrome-stable_100.0.4896.60.json	2022-06-16 01:17:08.128960764 +0000
+--- ./browser_apis/chrome-stable_99.0.4844.84.json	2022-06-16 12:29:07.919516175 +0000
++++ ./browser_apis/chrome-stable_100.0.4896.60.json	2022-06-16 12:29:07.883514568 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -484,8 +484,8 @@ No browser API changes.
 #### 99.0.4844.51 (`2022-3-1`) ⚡
 Added 49 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_98.0.4758.102_to_99.0.4844.51.diff), [json](./browser_apis/chrome-stable_98.0.4758.102_to_99.0.4844.51.json), [full list](./browser_apis/chrome-stable_99.0.4844.51.json))
  ```diff
---- ./browser_apis/chrome-stable_98.0.4758.102.json	2022-06-16 01:17:08.152960966 +0000
-+++ ./browser_apis/chrome-stable_99.0.4844.51.json	2022-06-16 01:17:08.152960966 +0000
+--- ./browser_apis/chrome-stable_98.0.4758.102.json	2022-06-16 12:29:07.915515996 +0000
++++ ./browser_apis/chrome-stable_99.0.4844.51.json	2022-06-16 12:29:07.919516175 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -738,8 +738,8 @@ No browser API changes.
 #### 98.0.4758.80 (`2022-2-1`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_97.0.4692.99_to_98.0.4758.80.diff), [json](./browser_apis/chrome-stable_97.0.4692.99_to_98.0.4758.80.json), [full list](./browser_apis/chrome-stable_98.0.4758.80.json))
  ```diff
---- ./browser_apis/chrome-stable_97.0.4692.99.json	2022-06-16 01:17:08.152960966 +0000
-+++ ./browser_apis/chrome-stable_98.0.4758.80.json	2022-06-16 01:17:08.152960966 +0000
+--- ./browser_apis/chrome-stable_97.0.4692.99.json	2022-06-16 12:29:07.915515996 +0000
++++ ./browser_apis/chrome-stable_98.0.4758.80.json	2022-06-16 12:29:07.919516175 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -792,8 +792,8 @@ No browser API changes.
 #### 97.0.4692.71 (`2022-1-4`) ⚡
 Added 40 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_96.0.4664.110_to_97.0.4692.71.diff), [json](./browser_apis/chrome-stable_96.0.4664.110_to_97.0.4692.71.json), [full list](./browser_apis/chrome-stable_97.0.4692.71.json))
  ```diff
---- ./browser_apis/chrome-stable_96.0.4664.110.json	2022-06-16 01:17:08.148960932 +0000
-+++ ./browser_apis/chrome-stable_97.0.4692.71.json	2022-06-16 01:17:08.152960966 +0000
+--- ./browser_apis/chrome-stable_96.0.4664.110.json	2022-06-16 12:29:07.915515996 +0000
++++ ./browser_apis/chrome-stable_97.0.4692.71.json	2022-06-16 12:29:07.915515996 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -936,8 +936,8 @@ No browser API changes.
 #### 96.0.4664.45 (`2021-11-15`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_95.0.4638.69_to_96.0.4664.45.diff), [json](./browser_apis/chrome-stable_95.0.4638.69_to_96.0.4664.45.json), [full list](./browser_apis/chrome-stable_96.0.4664.45.json))
  ```diff
---- ./browser_apis/chrome-stable_95.0.4638.69.json	2022-06-16 01:17:08.148960932 +0000
-+++ ./browser_apis/chrome-stable_96.0.4664.45.json	2022-06-16 01:17:08.148960932 +0000
+--- ./browser_apis/chrome-stable_95.0.4638.69.json	2022-06-16 12:29:07.907515639 +0000
++++ ./browser_apis/chrome-stable_96.0.4664.45.json	2022-06-16 12:29:07.915515996 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -974,8 +974,8 @@ No browser API changes.
 #### 95.0.4638.54 (`2021-10-19`) ⚡
 Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_94.0.4606.81_to_95.0.4638.54.diff), [json](./browser_apis/chrome-stable_94.0.4606.81_to_95.0.4638.54.json), [full list](./browser_apis/chrome-stable_95.0.4638.54.json))
  ```diff
---- ./browser_apis/chrome-stable_94.0.4606.81.json	2022-06-16 01:17:08.148960932 +0000
-+++ ./browser_apis/chrome-stable_95.0.4638.54.json	2022-06-16 01:17:08.148960932 +0000
+--- ./browser_apis/chrome-stable_94.0.4606.81.json	2022-06-16 12:29:07.903515461 +0000
++++ ./browser_apis/chrome-stable_95.0.4638.54.json	2022-06-16 12:29:07.907515639 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -1062,8 +1062,8 @@ No browser API changes.
 #### 94.0.4606.54 (`2021-9-21`) ⚡
 Added 157 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_93.0.4577.82_to_94.0.4606.54.diff), [json](./browser_apis/chrome-stable_93.0.4577.82_to_94.0.4606.54.json), [full list](./browser_apis/chrome-stable_94.0.4606.54.json))
  ```diff
---- ./browser_apis/chrome-stable_93.0.4577.82.json	2022-06-16 01:17:08.148960932 +0000
-+++ ./browser_apis/chrome-stable_94.0.4606.54.json	2022-06-16 01:17:08.148960932 +0000
+--- ./browser_apis/chrome-stable_93.0.4577.82.json	2022-06-16 12:29:07.903515461 +0000
++++ ./browser_apis/chrome-stable_94.0.4606.54.json	2022-06-16 12:29:07.903515461 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -1348,8 +1348,8 @@ No browser API changes.
 #### 93.0.4577.63 (`2021-8-31`) ⚡
 Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_92.0.4515.159_to_93.0.4577.63.diff), [json](./browser_apis/chrome-stable_92.0.4515.159_to_93.0.4577.63.json), [full list](./browser_apis/chrome-stable_93.0.4577.63.json))
  ```diff
---- ./browser_apis/chrome-stable_92.0.4515.159.json	2022-06-16 01:17:08.144960898 +0000
-+++ ./browser_apis/chrome-stable_93.0.4577.63.json	2022-06-16 01:17:08.144960898 +0000
+--- ./browser_apis/chrome-stable_92.0.4515.159.json	2022-06-16 12:29:07.903515461 +0000
++++ ./browser_apis/chrome-stable_93.0.4577.63.json	2022-06-16 12:29:07.903515461 +0000
 @@ -1,13 +1,14 @@
  {
    "browser": "chrome-stable",
@@ -1445,8 +1445,8 @@ No browser API changes.
 #### 104.0.5083.0 (`2022-5-26`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_103.0.5060.24_to_104.0.5083.0.diff), [json](./browser_apis/chrome-unstable_103.0.5060.24_to_104.0.5083.0.json), [full list](./browser_apis/chrome-unstable_104.0.5083.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-16 01:17:08.164961067 +0000
-+++ ./browser_apis/chrome-unstable_104.0.5083.0.json	2022-06-16 01:17:08.164961067 +0000
+--- ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-16 12:29:07.931516710 +0000
++++ ./browser_apis/chrome-unstable_104.0.5083.0.json	2022-06-16 12:29:07.931516710 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1495,8 +1495,8 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_103.0.5060.2
 #### 103.0.5060.24 (`2022-5-25`) ⚡
 Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_103.0.5060.13_to_103.0.5060.24.diff), [json](./browser_apis/chrome-unstable_103.0.5060.13_to_103.0.5060.24.json), [full list](./browser_apis/chrome-unstable_103.0.5060.24.json))
  ```diff
---- ./browser_apis/chrome-unstable_103.0.5060.13.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-16 01:17:08.164961067 +0000
+--- ./browser_apis/chrome-unstable_103.0.5060.13.json	2022-06-16 12:29:07.931516710 +0000
++++ ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-16 12:29:07.931516710 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1543,8 +1543,8 @@ No browser API changes.
 #### 103.0.5042.0 (`2022-5-5`) ⚡
 Added 8 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_103.0.5028.0_to_103.0.5042.0.diff), [json](./browser_apis/chrome-unstable_103.0.5028.0_to_103.0.5042.0.json), [full list](./browser_apis/chrome-unstable_103.0.5042.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_103.0.5042.0.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-16 12:29:07.927516532 +0000
++++ ./browser_apis/chrome-unstable_103.0.5042.0.json	2022-06-16 12:29:07.927516532 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1600,8 +1600,8 @@ Added 8 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_103.0.5028.0
 #### 103.0.5028.0 (`2022-4-28`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.22_to_103.0.5028.0.diff), [json](./browser_apis/chrome-unstable_102.0.5005.22_to_103.0.5028.0.json), [full list](./browser_apis/chrome-unstable_103.0.5028.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-16 12:29:07.927516532 +0000
++++ ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-16 12:29:07.927516532 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1650,8 +1650,8 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.2
 #### 102.0.5005.22 (`2022-4-26`) ⚡
 Added 3 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.12_to_102.0.5005.22.diff), [json](./browser_apis/chrome-unstable_102.0.5005.12_to_102.0.5005.22.json), [full list](./browser_apis/chrome-unstable_102.0.5005.22.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-16 12:29:07.927516532 +0000
++++ ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-16 12:29:07.927516532 +0000
 @@ -1,6 +1,6 @@
  {
    "browser": "chrome-unstable",
@@ -1693,8 +1693,8 @@ Added 3 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.1
 #### 102.0.5005.12 (`2022-4-21`) ⚡
 Added 58 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.4997.0_to_102.0.5005.12.diff), [json](./browser_apis/chrome-unstable_102.0.4997.0_to_102.0.5005.12.json), [full list](./browser_apis/chrome-unstable_102.0.5005.12.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.4997.0.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_102.0.4997.0.json	2022-06-16 12:29:07.927516532 +0000
++++ ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-16 12:29:07.927516532 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1800,8 +1800,8 @@ No browser API changes.
 #### 102.0.4987.0 (`2022-4-7`) ⚡
 Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.4972.0_to_102.0.4987.0.diff), [json](./browser_apis/chrome-unstable_102.0.4972.0_to_102.0.4987.0.json), [full list](./browser_apis/chrome-unstable_102.0.4987.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_102.0.4987.0.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-16 12:29:07.927516532 +0000
++++ ./browser_apis/chrome-unstable_102.0.4987.0.json	2022-06-16 12:29:07.927516532 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1883,8 +1883,8 @@ Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.4972.
 #### 102.0.4972.0 (`2022-3-31`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.15_to_102.0.4972.0.diff), [json](./browser_apis/chrome-unstable_101.0.4951.15_to_102.0.4972.0.json), [full list](./browser_apis/chrome-unstable_102.0.4972.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-16 12:29:07.923516353 +0000
++++ ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-16 12:29:07.927516532 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1925,8 +1925,8 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.1
 #### 101.0.4951.15 (`2022-3-29`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.7_to_101.0.4951.15.diff), [json](./browser_apis/chrome-unstable_101.0.4951.7_to_101.0.4951.15.json), [full list](./browser_apis/chrome-unstable_101.0.4951.15.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-16 01:17:08.160961033 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-16 12:29:07.923516353 +0000
++++ ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-16 12:29:07.923516353 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1951,8 +1951,8 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.7
 #### 101.0.4951.7 (`2022-3-23`) ⚡
 Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4947.0_to_101.0.4951.7.diff), [json](./browser_apis/chrome-unstable_101.0.4947.0_to_101.0.4951.7.json), [full list](./browser_apis/chrome-unstable_101.0.4951.7.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-16 01:17:08.156961000 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-16 01:17:08.160961033 +0000
+--- ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-16 12:29:07.923516353 +0000
++++ ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-16 12:29:07.923516353 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1982,8 +1982,8 @@ Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4947.0
 #### 101.0.4947.0 (`2022-3-18`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4929.5_to_101.0.4947.0.diff), [json](./browser_apis/chrome-unstable_101.0.4929.5_to_101.0.4947.0.json), [full list](./browser_apis/chrome-unstable_101.0.4947.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4929.5.json	2022-06-16 01:17:08.156961000 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-16 01:17:08.156961000 +0000
+--- ./browser_apis/chrome-unstable_101.0.4929.5.json	2022-06-16 12:29:07.923516353 +0000
++++ ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-16 12:29:07.923516353 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2028,8 +2028,8 @@ No browser API changes.
 #### 101.0.4919.0 (`2022-3-3`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4896.20_to_101.0.4919.0.diff), [json](./browser_apis/chrome-unstable_100.0.4896.20_to_101.0.4919.0.json), [full list](./browser_apis/chrome-unstable_101.0.4919.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-16 01:17:08.156961000 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4919.0.json	2022-06-16 01:17:08.156961000 +0000
+--- ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-16 12:29:07.923516353 +0000
++++ ./browser_apis/chrome-unstable_101.0.4919.0.json	2022-06-16 12:29:07.923516353 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2054,8 +2054,8 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4896.2
 #### 100.0.4896.20 (`2022-3-2`) ⚡
 Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4896.12_to_100.0.4896.20.diff), [json](./browser_apis/chrome-unstable_100.0.4896.12_to_100.0.4896.20.json), [full list](./browser_apis/chrome-unstable_100.0.4896.20.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4896.12.json	2022-06-16 01:17:08.156961000 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-16 01:17:08.156961000 +0000
+--- ./browser_apis/chrome-unstable_100.0.4896.12.json	2022-06-16 12:29:07.923516353 +0000
++++ ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-16 12:29:07.923516353 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2110,8 +2110,8 @@ No browser API changes.
 #### 100.0.4892.0 (`2022-2-17`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4878.0_to_100.0.4892.0.diff), [json](./browser_apis/chrome-unstable_100.0.4878.0_to_100.0.4892.0.json), [full list](./browser_apis/chrome-unstable_100.0.4892.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-16 01:17:08.156961000 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4892.0.json	2022-06-16 01:17:08.156961000 +0000
+--- ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-16 12:29:07.919516175 +0000
++++ ./browser_apis/chrome-unstable_100.0.4892.0.json	2022-06-16 12:29:07.919516175 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2144,8 +2144,8 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4878.0
 #### 100.0.4878.0 (`2022-2-10`) ⚡
 Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4867.0_to_100.0.4878.0.diff), [json](./browser_apis/chrome-unstable_100.0.4867.0_to_100.0.4878.0.json), [full list](./browser_apis/chrome-unstable_100.0.4878.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-16 01:17:08.152960966 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-16 01:17:08.156961000 +0000
+--- ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-16 12:29:07.919516175 +0000
++++ ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-16 12:29:07.919516175 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2174,8 +2174,8 @@ Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4867.0
 #### 100.0.4867.0 (`2022-2-4`) ⚡
 Added 17 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_99.0.4844.17_to_100.0.4867.0.diff), [json](./browser_apis/chrome-unstable_99.0.4844.17_to_100.0.4867.0.json), [full list](./browser_apis/chrome-unstable_100.0.4867.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_99.0.4844.17.json	2022-06-16 01:17:08.176961168 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-16 01:17:08.152960966 +0000
+--- ./browser_apis/chrome-unstable_99.0.4844.17.json	2022-06-16 12:29:07.947517424 +0000
++++ ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-16 12:29:07.919516175 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2251,8 +2251,8 @@ No browser API changes.
 #### 99.0.4844.11 (`2022-1-28`) ⚡
 Added 0 APIs, removed 10 (see: [diff](./browser_apis/chrome-unstable_99.0.4840.0_to_99.0.4844.11.diff), [json](./browser_apis/chrome-unstable_99.0.4840.0_to_99.0.4844.11.json), [full list](./browser_apis/chrome-unstable_99.0.4844.11.json))
  ```diff
---- ./browser_apis/chrome-unstable_99.0.4840.0.json	2022-06-16 01:17:08.172961134 +0000
-+++ ./browser_apis/chrome-unstable_99.0.4844.11.json	2022-06-16 01:17:08.172961134 +0000
+--- ./browser_apis/chrome-unstable_99.0.4840.0.json	2022-06-16 12:29:07.947517424 +0000
++++ ./browser_apis/chrome-unstable_99.0.4844.11.json	2022-06-16 12:29:07.947517424 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2297,8 +2297,8 @@ No browser API changes.
 #### 99.0.4818.0 (`2022-1-11`) ⚡
 Added 49 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_98.0.4758.9_to_99.0.4818.0.diff), [json](./browser_apis/chrome-unstable_98.0.4758.9_to_99.0.4818.0.json), [full list](./browser_apis/chrome-unstable_99.0.4818.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_98.0.4758.9.json	2022-06-16 01:17:08.172961134 +0000
-+++ ./browser_apis/chrome-unstable_99.0.4818.0.json	2022-06-16 01:17:08.172961134 +0000
+--- ./browser_apis/chrome-unstable_98.0.4758.9.json	2022-06-16 12:29:07.943517245 +0000
++++ ./browser_apis/chrome-unstable_99.0.4818.0.json	2022-06-16 12:29:07.943517245 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2547,8 +2547,8 @@ Added 49 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_98.0.4758.9
 #### 98.0.4758.9 (`2021-12-16`) ⚡
 Added 11 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_98.0.4750.0_to_98.0.4758.9.diff), [json](./browser_apis/chrome-unstable_98.0.4750.0_to_98.0.4758.9.json), [full list](./browser_apis/chrome-unstable_98.0.4758.9.json))
  ```diff
---- ./browser_apis/chrome-unstable_98.0.4750.0.json	2022-06-16 01:17:08.172961134 +0000
-+++ ./browser_apis/chrome-unstable_98.0.4758.9.json	2022-06-16 01:17:08.172961134 +0000
+--- ./browser_apis/chrome-unstable_98.0.4750.0.json	2022-06-16 12:29:07.943517245 +0000
++++ ./browser_apis/chrome-unstable_98.0.4758.9.json	2022-06-16 12:29:07.943517245 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2608,8 +2608,8 @@ Added 11 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_98.0.4750.0
 #### 98.0.4750.0 (`2021-12-7`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_98.0.4736.0_to_98.0.4750.0.diff), [json](./browser_apis/chrome-unstable_98.0.4736.0_to_98.0.4750.0.json), [full list](./browser_apis/chrome-unstable_98.0.4750.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_98.0.4736.0.json	2022-06-16 01:17:08.172961134 +0000
-+++ ./browser_apis/chrome-unstable_98.0.4750.0.json	2022-06-16 01:17:08.172961134 +0000
+--- ./browser_apis/chrome-unstable_98.0.4736.0.json	2022-06-16 12:29:07.943517245 +0000
++++ ./browser_apis/chrome-unstable_98.0.4750.0.json	2022-06-16 12:29:07.943517245 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
