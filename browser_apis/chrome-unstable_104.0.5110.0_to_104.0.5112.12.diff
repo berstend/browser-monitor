@@ -1,0 +1,40 @@
+--- ./browser_apis/chrome-unstable_104.0.5110.0.json	2022-06-18 01:15:53.350665921 +0000
++++ ./browser_apis/chrome-unstable_104.0.5112.12.json	2022-06-18 01:16:40.605823138 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "104.0.5110.0",
+-  "browserApiCount": 7467,
++  "version": "104.0.5112.12",
++  "browserApiCount": 7472,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -403,6 +403,9 @@
+     "BroadcastChannel.prototype.onmessage",
+     "BroadcastChannel.prototype.onmessageerror",
+     "BroadcastChannel.prototype.postMessage",
++    "BrowserCaptureMediaStreamTrack",
++    "BrowserCaptureMediaStreamTrack.prototype",
++    "BrowserCaptureMediaStreamTrack.prototype.cropTo",
+     "ByteLengthQueuingStrategy",
+     "ByteLengthQueuingStrategy.prototype",
+     "ByteLengthQueuingStrategy.prototype.highWaterMark",
+@@ -851,6 +854,9 @@
+     "CredentialsContainer.prototype.get",
+     "CredentialsContainer.prototype.preventSilentAccess",
+     "CredentialsContainer.prototype.store",
++    "CropTarget",
++    "CropTarget.fromElement",
++    "CropTarget.prototype",
+     "Crypto",
+     "Crypto.prototype",
+     "Crypto.prototype.getRandomValues",
+@@ -6532,7 +6538,6 @@
+     "WheelEvent.prototype.constructor.prototype.eventPhase",
+     "WheelEvent.prototype.constructor.prototype.initEvent",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
+-    "WheelEvent.prototype.constructor.prototype.path",
+     "WheelEvent.prototype.constructor.prototype.preventDefault",
+     "WheelEvent.prototype.constructor.prototype.returnValue",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",

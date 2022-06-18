@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "104.0.5110.0",
+    "to": "104.0.5112.12"
+  },
+  "browserApis": {
+    "added": [
+      "BrowserCaptureMediaStreamTrack",
+      "BrowserCaptureMediaStreamTrack.prototype",
+      "BrowserCaptureMediaStreamTrack.prototype.cropTo",
+      "CropTarget",
+      "CropTarget.fromElement",
+      "CropTarget.prototype"
+    ],
+    "removed": [
+      "WheelEvent.prototype.constructor.prototype.path"
+    ]
+  }
+}
