@@ -1,0 +1,24 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "102.0.5005.115",
+    "to": "103.0.5060.53"
+  },
+  "browserApis": {
+    "added": [
+      "AbortSignal.timeout",
+      "ElementInternals.prototype.role",
+      "FontData",
+      "FontData.prototype",
+      "FontData.prototype.blob",
+      "FontData.prototype.family",
+      "FontData.prototype.fullName",
+      "FontData.prototype.postscriptName",
+      "FontData.prototype.style",
+      "Option.prototype.constructor.prototype.role",
+      "SerialPort.prototype.forget",
+      "queryLocalFonts"
+    ],
+    "removed": []
+  }
+}
