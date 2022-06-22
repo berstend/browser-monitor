@@ -16,6 +16,7 @@ if [ -z "${BROWSER_VERSION}" ]; then
 fi
 
 # Disable all variations, see https://support.google.com/chrome/a/answer/9805991
+mkdir -p /etc/opt/chrome/policies/managed
 echo '{"ChromeVariations": 2}' > /etc/opt/chrome/policies/managed/disable-variations.json
 
 sudo apt-get remove google-chrome-stable; echo ""
