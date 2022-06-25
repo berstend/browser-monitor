@@ -1,0 +1,37 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "104.0.5112.20",
+    "to": "105.0.5137.4"
+  },
+  "browserApis": {
+    "added": [
+      "CSS.cqb",
+      "CSS.cqh",
+      "CSS.cqi",
+      "CSS.cqmax",
+      "CSS.cqmin",
+      "CSS.cqw",
+      "CSSContainerRule",
+      "CSSContainerRule.prototype",
+      "HTMLFormElement.prototype.rel",
+      "HTMLFormElement.prototype.relList",
+      "HTMLLinkElement.prototype.blocking",
+      "HTMLScriptElement.prototype.blocking",
+      "HTMLStyleElement.prototype.blocking",
+      "Navigator.prototype.windowControlsOverlay",
+      "WindowControlsOverlay",
+      "WindowControlsOverlay.prototype",
+      "WindowControlsOverlay.prototype.getTitlebarAreaRect",
+      "WindowControlsOverlay.prototype.ongeometrychange",
+      "WindowControlsOverlay.prototype.visible",
+      "WindowControlsOverlayGeometryChangeEvent",
+      "WindowControlsOverlayGeometryChangeEvent.prototype",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
+      "WindowControlsOverlayGeometryChangeEvent.prototype.visible"
+    ],
+    "removed": [
+      "WebAssembly.Exception.prototype.constructor"
+    ]
+  }
+}

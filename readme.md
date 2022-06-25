@@ -8,8 +8,8 @@
 #### 103.0.5060.53 (`2022-6-21`) ⚡
 Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_102.0.5005.115_to_103.0.5060.53.diff), [json](./browser_apis/chrome-stable_102.0.5005.115_to_103.0.5060.53.json), [full list](./browser_apis/chrome-stable_103.0.5060.53.json))
  ```diff
---- ./browser_apis/chrome-stable_102.0.5005.115.json	2022-06-24 12:30:43.554167492 +0000
-+++ ./browser_apis/chrome-stable_103.0.5060.53.json	2022-06-24 12:30:43.554167492 +0000
+--- ./browser_apis/chrome-stable_102.0.5005.115.json	2022-06-25 01:18:02.744468972 +0000
++++ ./browser_apis/chrome-stable_103.0.5060.53.json	2022-06-25 01:18:02.744468972 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -84,8 +84,8 @@ No browser API changes.
 #### 102.0.5005.61 (`2022-5-24`) ⚡
 Added 79 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_101.0.4951.64_to_102.0.5005.61.diff), [json](./browser_apis/chrome-stable_101.0.4951.64_to_102.0.5005.61.json), [full list](./browser_apis/chrome-stable_102.0.5005.61.json))
  ```diff
---- ./browser_apis/chrome-stable_101.0.4951.64.json	2022-06-24 12:30:43.550167434 +0000
-+++ ./browser_apis/chrome-stable_102.0.5005.61.json	2022-06-24 12:30:43.554167492 +0000
+--- ./browser_apis/chrome-stable_101.0.4951.64.json	2022-06-25 01:18:02.744468972 +0000
++++ ./browser_apis/chrome-stable_102.0.5005.61.json	2022-06-25 01:18:02.744468972 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -330,8 +330,8 @@ No browser API changes.
 #### 101.0.4951.41 (`2022-4-26`) ⚡
 Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_100.0.4896.127_to_101.0.4951.41.diff), [json](./browser_apis/chrome-stable_100.0.4896.127_to_101.0.4951.41.json), [full list](./browser_apis/chrome-stable_101.0.4951.41.json))
  ```diff
---- ./browser_apis/chrome-stable_100.0.4896.127.json	2022-06-24 12:30:43.550167434 +0000
-+++ ./browser_apis/chrome-stable_101.0.4951.41.json	2022-06-24 12:30:43.550167434 +0000
+--- ./browser_apis/chrome-stable_100.0.4896.127.json	2022-06-25 01:18:02.740468972 +0000
++++ ./browser_apis/chrome-stable_101.0.4951.41.json	2022-06-25 01:18:02.744468972 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -413,8 +413,8 @@ No browser API changes.
 #### 100.0.4896.60 (`2022-3-29`) ⚡
 Added 41 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_99.0.4844.84_to_100.0.4896.60.diff), [json](./browser_apis/chrome-stable_99.0.4844.84_to_100.0.4896.60.json), [full list](./browser_apis/chrome-stable_100.0.4896.60.json))
  ```diff
---- ./browser_apis/chrome-stable_99.0.4844.84.json	2022-06-24 12:30:43.574167785 +0000
-+++ ./browser_apis/chrome-stable_100.0.4896.60.json	2022-06-24 12:30:43.550167434 +0000
+--- ./browser_apis/chrome-stable_99.0.4844.84.json	2022-06-25 01:18:02.764468974 +0000
++++ ./browser_apis/chrome-stable_100.0.4896.60.json	2022-06-25 01:18:02.740468972 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -556,8 +556,8 @@ No browser API changes.
 #### 99.0.4844.51 (`2022-3-1`) ⚡
 Added 49 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_98.0.4758.102_to_99.0.4844.51.diff), [json](./browser_apis/chrome-stable_98.0.4758.102_to_99.0.4844.51.json), [full list](./browser_apis/chrome-stable_99.0.4844.51.json))
  ```diff
---- ./browser_apis/chrome-stable_98.0.4758.102.json	2022-06-24 12:30:43.570167726 +0000
-+++ ./browser_apis/chrome-stable_99.0.4844.51.json	2022-06-24 12:30:43.574167785 +0000
+--- ./browser_apis/chrome-stable_98.0.4758.102.json	2022-06-25 01:18:02.764468974 +0000
++++ ./browser_apis/chrome-stable_99.0.4844.51.json	2022-06-25 01:18:02.764468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -810,8 +810,8 @@ No browser API changes.
 #### 98.0.4758.80 (`2022-2-1`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_97.0.4692.99_to_98.0.4758.80.diff), [json](./browser_apis/chrome-stable_97.0.4692.99_to_98.0.4758.80.json), [full list](./browser_apis/chrome-stable_98.0.4758.80.json))
  ```diff
---- ./browser_apis/chrome-stable_97.0.4692.99.json	2022-06-24 12:30:43.570167726 +0000
-+++ ./browser_apis/chrome-stable_98.0.4758.80.json	2022-06-24 12:30:43.570167726 +0000
+--- ./browser_apis/chrome-stable_97.0.4692.99.json	2022-06-25 01:18:02.764468974 +0000
++++ ./browser_apis/chrome-stable_98.0.4758.80.json	2022-06-25 01:18:02.764468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -864,8 +864,8 @@ No browser API changes.
 #### 97.0.4692.71 (`2022-1-4`) ⚡
 Added 40 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_96.0.4664.110_to_97.0.4692.71.diff), [json](./browser_apis/chrome-stable_96.0.4664.110_to_97.0.4692.71.json), [full list](./browser_apis/chrome-stable_97.0.4692.71.json))
  ```diff
---- ./browser_apis/chrome-stable_96.0.4664.110.json	2022-06-24 12:30:43.570167726 +0000
-+++ ./browser_apis/chrome-stable_97.0.4692.71.json	2022-06-24 12:30:43.570167726 +0000
+--- ./browser_apis/chrome-stable_96.0.4664.110.json	2022-06-25 01:18:02.760468974 +0000
++++ ./browser_apis/chrome-stable_97.0.4692.71.json	2022-06-25 01:18:02.764468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -1008,8 +1008,8 @@ No browser API changes.
 #### 96.0.4664.45 (`2021-11-15`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_95.0.4638.69_to_96.0.4664.45.diff), [json](./browser_apis/chrome-stable_95.0.4638.69_to_96.0.4664.45.json), [full list](./browser_apis/chrome-stable_96.0.4664.45.json))
  ```diff
---- ./browser_apis/chrome-stable_95.0.4638.69.json	2022-06-24 12:30:43.570167726 +0000
-+++ ./browser_apis/chrome-stable_96.0.4664.45.json	2022-06-24 12:30:43.570167726 +0000
+--- ./browser_apis/chrome-stable_95.0.4638.69.json	2022-06-25 01:18:02.760468974 +0000
++++ ./browser_apis/chrome-stable_96.0.4664.45.json	2022-06-25 01:18:02.760468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -1046,8 +1046,8 @@ No browser API changes.
 #### 95.0.4638.54 (`2021-10-19`) ⚡
 Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_94.0.4606.81_to_95.0.4638.54.diff), [json](./browser_apis/chrome-stable_94.0.4606.81_to_95.0.4638.54.json), [full list](./browser_apis/chrome-stable_95.0.4638.54.json))
  ```diff
---- ./browser_apis/chrome-stable_94.0.4606.81.json	2022-06-24 12:30:43.570167726 +0000
-+++ ./browser_apis/chrome-stable_95.0.4638.54.json	2022-06-24 12:30:43.570167726 +0000
+--- ./browser_apis/chrome-stable_94.0.4606.81.json	2022-06-25 01:18:02.760468974 +0000
++++ ./browser_apis/chrome-stable_95.0.4638.54.json	2022-06-25 01:18:02.760468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -1134,8 +1134,8 @@ No browser API changes.
 #### 94.0.4606.54 (`2021-9-21`) ⚡
 Added 157 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_93.0.4577.82_to_94.0.4606.54.diff), [json](./browser_apis/chrome-stable_93.0.4577.82_to_94.0.4606.54.json), [full list](./browser_apis/chrome-stable_94.0.4606.54.json))
  ```diff
---- ./browser_apis/chrome-stable_93.0.4577.82.json	2022-06-24 12:30:43.566167668 +0000
-+++ ./browser_apis/chrome-stable_94.0.4606.54.json	2022-06-24 12:30:43.566167668 +0000
+--- ./browser_apis/chrome-stable_93.0.4577.82.json	2022-06-25 01:18:02.760468974 +0000
++++ ./browser_apis/chrome-stable_94.0.4606.54.json	2022-06-25 01:18:02.760468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-stable",
@@ -1420,8 +1420,8 @@ No browser API changes.
 #### 93.0.4577.63 (`2021-8-31`) ⚡
 Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_92.0.4515.159_to_93.0.4577.63.diff), [json](./browser_apis/chrome-stable_92.0.4515.159_to_93.0.4577.63.json), [full list](./browser_apis/chrome-stable_93.0.4577.63.json))
  ```diff
---- ./browser_apis/chrome-stable_92.0.4515.159.json	2022-06-24 12:30:43.566167668 +0000
-+++ ./browser_apis/chrome-stable_93.0.4577.63.json	2022-06-24 12:30:43.566167668 +0000
+--- ./browser_apis/chrome-stable_92.0.4515.159.json	2022-06-25 01:18:02.756468973 +0000
++++ ./browser_apis/chrome-stable_93.0.4577.63.json	2022-06-25 01:18:02.756468973 +0000
 @@ -1,13 +1,14 @@
  {
    "browser": "chrome-stable",
@@ -1502,6 +1502,111 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 105.0.5137.4 (`2022-6-24`) ⚡
+Added 23 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_104.0.5112.20_to_105.0.5137.4.diff), [json](./browser_apis/chrome-unstable_104.0.5112.20_to_105.0.5137.4.json), [full list](./browser_apis/chrome-unstable_105.0.5137.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_104.0.5112.20.json	2022-06-25 01:18:02.776468975 +0000
++++ ./browser_apis/chrome-unstable_105.0.5137.4.json	2022-06-25 01:18:59.076476772 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "104.0.5112.20",
+-  "browserApiCount": 7472,
++  "version": "105.0.0.0",
++  "browserApiCount": 7494,
+   "browserApis": [
+     "AbortController",
+     "AbortController.prototype",
+@@ -417,6 +417,12 @@
+     "CSS.Q",
+     "CSS.ch",
+     "CSS.cm",
++    "CSS.cqb",
++    "CSS.cqh",
++    "CSS.cqi",
++    "CSS.cqmax",
++    "CSS.cqmin",
++    "CSS.cqw",
+     "CSS.deg",
+     "CSS.dpcm",
+     "CSS.dpi",
+@@ -449,6 +455,8 @@
+     "CSSAnimation",
+     "CSSAnimation.prototype",
+     "CSSAnimation.prototype.animationName",
++    "CSSContainerRule",
++    "CSSContainerRule.prototype",
+     "CSSCounterStyleRule",
+     "CSSCounterStyleRule.prototype",
+     "CSSCounterStyleRule.prototype.additiveSymbols",
+@@ -1631,6 +1639,8 @@
+     "HTMLFormElement.prototype.method",
+     "HTMLFormElement.prototype.name",
+     "HTMLFormElement.prototype.noValidate",
++    "HTMLFormElement.prototype.rel",
++    "HTMLFormElement.prototype.relList",
+     "HTMLFormElement.prototype.reportValidity",
+     "HTMLFormElement.prototype.requestSubmit",
+     "HTMLFormElement.prototype.reset",
+@@ -1788,6 +1798,7 @@
+     "HTMLLinkElement",
+     "HTMLLinkElement.prototype",
+     "HTMLLinkElement.prototype.as",
++    "HTMLLinkElement.prototype.blocking",
+     "HTMLLinkElement.prototype.charset",
+     "HTMLLinkElement.prototype.crossOrigin",
+     "HTMLLinkElement.prototype.disabled",
+@@ -1936,6 +1947,7 @@
+     "HTMLScriptElement",
+     "HTMLScriptElement.prototype",
+     "HTMLScriptElement.prototype.async",
++    "HTMLScriptElement.prototype.blocking",
+     "HTMLScriptElement.prototype.charset",
+     "HTMLScriptElement.prototype.crossOrigin",
+     "HTMLScriptElement.prototype.defer",
+@@ -1994,6 +2006,7 @@
+     "HTMLSpanElement.prototype",
+     "HTMLStyleElement",
+     "HTMLStyleElement.prototype",
++    "HTMLStyleElement.prototype.blocking",
+     "HTMLStyleElement.prototype.disabled",
+     "HTMLStyleElement.prototype.media",
+     "HTMLStyleElement.prototype.sheet",
+@@ -3012,6 +3025,7 @@
+     "Navigator.prototype.webkitGetUserMedia",
+     "Navigator.prototype.webkitPersistentStorage",
+     "Navigator.prototype.webkitTemporaryStorage",
++    "Navigator.prototype.windowControlsOverlay",
+     "Navigator.prototype.xr",
+     "NavigatorManagedData",
+     "NavigatorManagedData.prototype",
+@@ -5959,7 +5973,6 @@
+     "WebAssembly.CompileError.prototype",
+     "WebAssembly.Exception",
+     "WebAssembly.Exception.prototype",
+-    "WebAssembly.Exception.prototype.constructor",
+     "WebAssembly.Exception.prototype.getArg",
+     "WebAssembly.Exception.prototype.is",
+     "WebAssembly.Global",
+@@ -6578,6 +6591,15 @@
+     "WheelEvent.prototype.y",
+     "Window",
+     "Window.prototype",
++    "WindowControlsOverlay",
++    "WindowControlsOverlay.prototype",
++    "WindowControlsOverlay.prototype.getTitlebarAreaRect",
++    "WindowControlsOverlay.prototype.ongeometrychange",
++    "WindowControlsOverlay.prototype.visible",
++    "WindowControlsOverlayGeometryChangeEvent",
++    "WindowControlsOverlayGeometryChangeEvent.prototype",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
+     "Worker",
+     "Worker.prototype",
+     "Worker.prototype.onerror",
+```
+
+  
 #### 104.0.5112.20 (`2022-6-22`) 
 No browser API changes.
 
@@ -1509,8 +1614,8 @@ No browser API changes.
 #### 104.0.5112.12 (`2022-6-17`) ⚡
 Added 6 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_104.0.5110.0_to_104.0.5112.12.diff), [json](./browser_apis/chrome-unstable_104.0.5110.0_to_104.0.5112.12.json), [full list](./browser_apis/chrome-unstable_104.0.5112.12.json))
  ```diff
---- ./browser_apis/chrome-unstable_104.0.5110.0.json	2022-06-24 12:30:43.582167902 +0000
-+++ ./browser_apis/chrome-unstable_104.0.5112.12.json	2022-06-24 12:30:43.582167902 +0000
+--- ./browser_apis/chrome-unstable_104.0.5110.0.json	2022-06-25 01:18:02.772468975 +0000
++++ ./browser_apis/chrome-unstable_104.0.5112.12.json	2022-06-25 01:18:02.776468975 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1563,8 +1668,8 @@ No browser API changes.
 #### 104.0.5083.0 (`2022-5-26`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_103.0.5060.24_to_104.0.5083.0.diff), [json](./browser_apis/chrome-unstable_103.0.5060.24_to_104.0.5083.0.json), [full list](./browser_apis/chrome-unstable_104.0.5083.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-24 12:30:43.582167902 +0000
-+++ ./browser_apis/chrome-unstable_104.0.5083.0.json	2022-06-24 12:30:43.582167902 +0000
+--- ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-25 01:18:02.772468975 +0000
++++ ./browser_apis/chrome-unstable_104.0.5083.0.json	2022-06-25 01:18:02.772468975 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1613,8 +1718,8 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_103.0.5060.2
 #### 103.0.5060.24 (`2022-5-25`) ⚡
 Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_103.0.5060.13_to_103.0.5060.24.diff), [json](./browser_apis/chrome-unstable_103.0.5060.13_to_103.0.5060.24.json), [full list](./browser_apis/chrome-unstable_103.0.5060.24.json))
  ```diff
---- ./browser_apis/chrome-unstable_103.0.5060.13.json	2022-06-24 12:30:43.582167902 +0000
-+++ ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-24 12:30:43.582167902 +0000
+--- ./browser_apis/chrome-unstable_103.0.5060.13.json	2022-06-25 01:18:02.772468975 +0000
++++ ./browser_apis/chrome-unstable_103.0.5060.24.json	2022-06-25 01:18:02.772468975 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1661,8 +1766,8 @@ No browser API changes.
 #### 103.0.5042.0 (`2022-5-5`) ⚡
 Added 8 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_103.0.5028.0_to_103.0.5042.0.diff), [json](./browser_apis/chrome-unstable_103.0.5028.0_to_103.0.5042.0.json), [full list](./browser_apis/chrome-unstable_103.0.5042.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_103.0.5042.0.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-25 01:18:02.772468975 +0000
++++ ./browser_apis/chrome-unstable_103.0.5042.0.json	2022-06-25 01:18:02.772468975 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1718,8 +1823,8 @@ Added 8 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_103.0.5028.0
 #### 103.0.5028.0 (`2022-4-28`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.22_to_103.0.5028.0.diff), [json](./browser_apis/chrome-unstable_102.0.5005.22_to_103.0.5028.0.json), [full list](./browser_apis/chrome-unstable_103.0.5028.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-25 01:18:02.772468975 +0000
++++ ./browser_apis/chrome-unstable_103.0.5028.0.json	2022-06-25 01:18:02.772468975 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1768,8 +1873,8 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.2
 #### 102.0.5005.22 (`2022-4-26`) ⚡
 Added 3 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.12_to_102.0.5005.22.diff), [json](./browser_apis/chrome-unstable_102.0.5005.12_to_102.0.5005.22.json), [full list](./browser_apis/chrome-unstable_102.0.5005.22.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_102.0.5005.22.json	2022-06-25 01:18:02.772468975 +0000
 @@ -1,6 +1,6 @@
  {
    "browser": "chrome-unstable",
@@ -1811,8 +1916,8 @@ Added 3 APIs, removed 3 (see: [diff](./browser_apis/chrome-unstable_102.0.5005.1
 #### 102.0.5005.12 (`2022-4-21`) ⚡
 Added 58 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.4997.0_to_102.0.5005.12.diff), [json](./browser_apis/chrome-unstable_102.0.4997.0_to_102.0.5005.12.json), [full list](./browser_apis/chrome-unstable_102.0.5005.12.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.4997.0.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_102.0.4997.0.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_102.0.5005.12.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -1918,8 +2023,8 @@ No browser API changes.
 #### 102.0.4987.0 (`2022-4-7`) ⚡
 Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.4972.0_to_102.0.4987.0.diff), [json](./browser_apis/chrome-unstable_102.0.4972.0_to_102.0.4987.0.json), [full list](./browser_apis/chrome-unstable_102.0.4987.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_102.0.4987.0.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_102.0.4987.0.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2001,8 +2106,8 @@ Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_102.0.4972.
 #### 102.0.4972.0 (`2022-3-31`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.15_to_102.0.4972.0.diff), [json](./browser_apis/chrome-unstable_101.0.4951.15_to_102.0.4972.0.json), [full list](./browser_apis/chrome-unstable_102.0.4972.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_102.0.4972.0.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2043,8 +2148,8 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.1
 #### 101.0.4951.15 (`2022-3-29`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.7_to_101.0.4951.15.diff), [json](./browser_apis/chrome-unstable_101.0.4951.7_to_101.0.4951.15.json), [full list](./browser_apis/chrome-unstable_101.0.4951.15.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_101.0.4951.15.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2069,8 +2174,8 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4951.7
 #### 101.0.4951.7 (`2022-3-23`) ⚡
 Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4947.0_to_101.0.4951.7.diff), [json](./browser_apis/chrome-unstable_101.0.4947.0_to_101.0.4951.7.json), [full list](./browser_apis/chrome-unstable_101.0.4951.7.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-24 12:30:43.578167843 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_101.0.4951.7.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2100,8 +2205,8 @@ Added 6 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4947.0
 #### 101.0.4947.0 (`2022-3-18`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_101.0.4929.5_to_101.0.4947.0.diff), [json](./browser_apis/chrome-unstable_101.0.4929.5_to_101.0.4947.0.json), [full list](./browser_apis/chrome-unstable_101.0.4947.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_101.0.4929.5.json	2022-06-24 12:30:43.574167785 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-24 12:30:43.578167843 +0000
+--- ./browser_apis/chrome-unstable_101.0.4929.5.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_101.0.4947.0.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2146,8 +2251,8 @@ No browser API changes.
 #### 101.0.4919.0 (`2022-3-3`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4896.20_to_101.0.4919.0.diff), [json](./browser_apis/chrome-unstable_100.0.4896.20_to_101.0.4919.0.json), [full list](./browser_apis/chrome-unstable_101.0.4919.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-24 12:30:43.574167785 +0000
-+++ ./browser_apis/chrome-unstable_101.0.4919.0.json	2022-06-24 12:30:43.574167785 +0000
+--- ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_101.0.4919.0.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2172,8 +2277,8 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4896.2
 #### 100.0.4896.20 (`2022-3-2`) ⚡
 Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4896.12_to_100.0.4896.20.diff), [json](./browser_apis/chrome-unstable_100.0.4896.12_to_100.0.4896.20.json), [full list](./browser_apis/chrome-unstable_100.0.4896.20.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4896.12.json	2022-06-24 12:30:43.574167785 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-24 12:30:43.574167785 +0000
+--- ./browser_apis/chrome-unstable_100.0.4896.12.json	2022-06-25 01:18:02.768468974 +0000
++++ ./browser_apis/chrome-unstable_100.0.4896.20.json	2022-06-25 01:18:02.768468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2228,8 +2333,8 @@ No browser API changes.
 #### 100.0.4892.0 (`2022-2-17`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4878.0_to_100.0.4892.0.diff), [json](./browser_apis/chrome-unstable_100.0.4878.0_to_100.0.4892.0.json), [full list](./browser_apis/chrome-unstable_100.0.4892.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-24 12:30:43.574167785 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4892.0.json	2022-06-24 12:30:43.574167785 +0000
+--- ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-25 01:18:02.764468974 +0000
++++ ./browser_apis/chrome-unstable_100.0.4892.0.json	2022-06-25 01:18:02.764468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2262,8 +2367,8 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4878.0
 #### 100.0.4878.0 (`2022-2-10`) ⚡
 Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4867.0_to_100.0.4878.0.diff), [json](./browser_apis/chrome-unstable_100.0.4867.0_to_100.0.4878.0.json), [full list](./browser_apis/chrome-unstable_100.0.4878.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-24 12:30:43.574167785 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-24 12:30:43.574167785 +0000
+--- ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-25 01:18:02.764468974 +0000
++++ ./browser_apis/chrome-unstable_100.0.4878.0.json	2022-06-25 01:18:02.764468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2292,8 +2397,8 @@ Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_100.0.4867.0
 #### 100.0.4867.0 (`2022-2-4`) ⚡
 Added 17 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_99.0.4844.17_to_100.0.4867.0.diff), [json](./browser_apis/chrome-unstable_99.0.4844.17_to_100.0.4867.0.json), [full list](./browser_apis/chrome-unstable_100.0.4867.0.json))
  ```diff
---- ./browser_apis/chrome-unstable_99.0.4844.17.json	2022-06-24 12:30:43.594168077 +0000
-+++ ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-24 12:30:43.574167785 +0000
+--- ./browser_apis/chrome-unstable_99.0.4844.17.json	2022-06-25 01:18:02.784468976 +0000
++++ ./browser_apis/chrome-unstable_100.0.4867.0.json	2022-06-25 01:18:02.764468974 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2369,8 +2474,8 @@ No browser API changes.
 #### 99.0.4844.11 (`2022-1-28`) ⚡
 Added 0 APIs, removed 10 (see: [diff](./browser_apis/chrome-unstable_99.0.4840.0_to_99.0.4844.11.diff), [json](./browser_apis/chrome-unstable_99.0.4840.0_to_99.0.4844.11.json), [full list](./browser_apis/chrome-unstable_99.0.4844.11.json))
  ```diff
---- ./browser_apis/chrome-unstable_99.0.4840.0.json	2022-06-24 12:30:43.594168077 +0000
-+++ ./browser_apis/chrome-unstable_99.0.4844.11.json	2022-06-24 12:30:43.594168077 +0000
+--- ./browser_apis/chrome-unstable_99.0.4840.0.json	2022-06-25 01:18:02.784468976 +0000
++++ ./browser_apis/chrome-unstable_99.0.4844.11.json	2022-06-25 01:18:02.784468976 +0000
 @@ -1,7 +1,7 @@
  {
    "browser": "chrome-unstable",
@@ -2410,255 +2515,5 @@ Added 0 APIs, removed 10 (see: [diff](./browser_apis/chrome-unstable_99.0.4840.0
   
 #### 99.0.4840.0 (`2022-1-21`) 
 No browser API changes.
-
-  
-#### 99.0.4818.0 (`2022-1-11`) ⚡
-Added 49 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_98.0.4758.9_to_99.0.4818.0.diff), [json](./browser_apis/chrome-unstable_98.0.4758.9_to_99.0.4818.0.json), [full list](./browser_apis/chrome-unstable_99.0.4818.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_98.0.4758.9.json	2022-06-24 12:30:43.594168077 +0000
-+++ ./browser_apis/chrome-unstable_99.0.4818.0.json	2022-06-24 12:30:43.594168077 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
--  "version": "98.0.4758.9",
--  "browserApiCount": 7302,
-+  "version": "99.0.4818.0",
-+  "browserApiCount": 7351,
-   "browserApis": [
-     "AbortController",
-     "AbortController.prototype",
-@@ -464,6 +464,7 @@
-     "CSSImportRule",
-     "CSSImportRule.prototype",
-     "CSSImportRule.prototype.href",
-+    "CSSImportRule.prototype.layerName",
-     "CSSImportRule.prototype.media",
-     "CSSImportRule.prototype.styleSheet",
-     "CSSKeyframeRule",
-@@ -480,6 +481,12 @@
-     "CSSKeywordValue",
-     "CSSKeywordValue.prototype",
-     "CSSKeywordValue.prototype.value",
-+    "CSSLayerBlockRule",
-+    "CSSLayerBlockRule.prototype",
-+    "CSSLayerBlockRule.prototype.name",
-+    "CSSLayerStatementRule",
-+    "CSSLayerStatementRule.prototype",
-+    "CSSLayerStatementRule.prototype.nameList",
-     "CSSMathInvert",
-     "CSSMathInvert.prototype",
-     "CSSMathInvert.prototype.value",
-@@ -660,6 +667,8 @@
-     "CanvasCaptureMediaStreamTrack.prototype",
-     "CanvasCaptureMediaStreamTrack.prototype.canvas",
-     "CanvasCaptureMediaStreamTrack.prototype.requestFrame",
-+    "CanvasFilter",
-+    "CanvasFilter.prototype",
-     "CanvasGradient",
-     "CanvasGradient.prototype",
-     "CanvasGradient.prototype.addColorStop",
-@@ -676,6 +685,7 @@
-     "CanvasRenderingContext2D.prototype.clearRect",
-     "CanvasRenderingContext2D.prototype.clip",
-     "CanvasRenderingContext2D.prototype.closePath",
-+    "CanvasRenderingContext2D.prototype.createConicGradient",
-     "CanvasRenderingContext2D.prototype.createImageData",
-     "CanvasRenderingContext2D.prototype.createLinearGradient",
-     "CanvasRenderingContext2D.prototype.createPattern",
-@@ -690,6 +700,9 @@
-     "CanvasRenderingContext2D.prototype.fillText",
-     "CanvasRenderingContext2D.prototype.filter",
-     "CanvasRenderingContext2D.prototype.font",
-+    "CanvasRenderingContext2D.prototype.fontKerning",
-+    "CanvasRenderingContext2D.prototype.fontStretch",
-+    "CanvasRenderingContext2D.prototype.fontVariantCaps",
-     "CanvasRenderingContext2D.prototype.getContextAttributes",
-     "CanvasRenderingContext2D.prototype.getImageData",
-     "CanvasRenderingContext2D.prototype.getLineDash",
-@@ -698,8 +711,10 @@
-     "CanvasRenderingContext2D.prototype.globalCompositeOperation",
-     "CanvasRenderingContext2D.prototype.imageSmoothingEnabled",
-     "CanvasRenderingContext2D.prototype.imageSmoothingQuality",
-+    "CanvasRenderingContext2D.prototype.isContextLost",
-     "CanvasRenderingContext2D.prototype.isPointInPath",
-     "CanvasRenderingContext2D.prototype.isPointInStroke",
-+    "CanvasRenderingContext2D.prototype.letterSpacing",
-     "CanvasRenderingContext2D.prototype.lineCap",
-     "CanvasRenderingContext2D.prototype.lineDashOffset",
-     "CanvasRenderingContext2D.prototype.lineJoin",
-@@ -711,9 +726,11 @@
-     "CanvasRenderingContext2D.prototype.putImageData",
-     "CanvasRenderingContext2D.prototype.quadraticCurveTo",
-     "CanvasRenderingContext2D.prototype.rect",
-+    "CanvasRenderingContext2D.prototype.reset",
-     "CanvasRenderingContext2D.prototype.resetTransform",
-     "CanvasRenderingContext2D.prototype.restore",
-     "CanvasRenderingContext2D.prototype.rotate",
-+    "CanvasRenderingContext2D.prototype.roundRect",
-     "CanvasRenderingContext2D.prototype.save",
-     "CanvasRenderingContext2D.prototype.scale",
-     "CanvasRenderingContext2D.prototype.setLineDash",
-@@ -728,8 +745,10 @@
-     "CanvasRenderingContext2D.prototype.strokeText",
-     "CanvasRenderingContext2D.prototype.textAlign",
-     "CanvasRenderingContext2D.prototype.textBaseline",
-+    "CanvasRenderingContext2D.prototype.textRendering",
-     "CanvasRenderingContext2D.prototype.transform",
-     "CanvasRenderingContext2D.prototype.translate",
-+    "CanvasRenderingContext2D.prototype.wordSpacing",
-     "ChannelMergerNode",
-     "ChannelMergerNode.prototype",
-     "ChannelSplitterNode",
-@@ -1686,6 +1705,7 @@
-     "HTMLInputElement.prototype.setCustomValidity",
-     "HTMLInputElement.prototype.setRangeText",
-     "HTMLInputElement.prototype.setSelectionRange",
-+    "HTMLInputElement.prototype.showPicker",
-     "HTMLInputElement.prototype.size",
-     "HTMLInputElement.prototype.src",
-     "HTMLInputElement.prototype.step",
-@@ -2381,17 +2401,24 @@
-     "Intl.Locale.prototype",
-     "Intl.Locale.prototype.baseName",
-     "Intl.Locale.prototype.calendar",
-+    "Intl.Locale.prototype.calendars",
-     "Intl.Locale.prototype.caseFirst",
-     "Intl.Locale.prototype.collation",
-+    "Intl.Locale.prototype.collations",
-     "Intl.Locale.prototype.hourCycle",
-+    "Intl.Locale.prototype.hourCycles",
-     "Intl.Locale.prototype.language",
-     "Intl.Locale.prototype.maximize",
-     "Intl.Locale.prototype.minimize",
-     "Intl.Locale.prototype.numberingSystem",
-+    "Intl.Locale.prototype.numberingSystems",
-     "Intl.Locale.prototype.numeric",
-     "Intl.Locale.prototype.region",
-     "Intl.Locale.prototype.script",
-+    "Intl.Locale.prototype.textInfo",
-+    "Intl.Locale.prototype.timeZones",
-     "Intl.Locale.prototype.toString",
-+    "Intl.Locale.prototype.weekInfo",
-     "Intl.NumberFormat",
-     "Intl.NumberFormat.prototype",
-     "Intl.NumberFormat.prototype.format",
-@@ -2415,6 +2442,7 @@
-     "Intl.Segmenter.prototype.segment",
-     "Intl.Segmenter.supportedLocalesOf",
-     "Intl.getCanonicalLocales",
-+    "Intl.supportedValuesOf",
-     "Intl.v8BreakIterator",
-     "Intl.v8BreakIterator.prototype",
-     "Intl.v8BreakIterator.prototype.adoptText",
-@@ -3041,6 +3069,8 @@
-     "OffscreenCanvas.prototype.convertToBlob",
-     "OffscreenCanvas.prototype.getContext",
-     "OffscreenCanvas.prototype.height",
-+    "OffscreenCanvas.prototype.oncontextlost",
-+    "OffscreenCanvas.prototype.oncontextrestored",
-     "OffscreenCanvas.prototype.transferToImageBitmap",
-     "OffscreenCanvas.prototype.width",
-     "OffscreenCanvasRenderingContext2D",
-@@ -3053,6 +3083,7 @@
-     "OffscreenCanvasRenderingContext2D.prototype.clearRect",
-     "OffscreenCanvasRenderingContext2D.prototype.clip",
-     "OffscreenCanvasRenderingContext2D.prototype.closePath",
-+    "OffscreenCanvasRenderingContext2D.prototype.createConicGradient",
-     "OffscreenCanvasRenderingContext2D.prototype.createImageData",
-     "OffscreenCanvasRenderingContext2D.prototype.createLinearGradient",
-     "OffscreenCanvasRenderingContext2D.prototype.createPattern",
-@@ -3066,6 +3097,9 @@
-     "OffscreenCanvasRenderingContext2D.prototype.fillText",
-     "OffscreenCanvasRenderingContext2D.prototype.filter",
-     "OffscreenCanvasRenderingContext2D.prototype.font",
-+    "OffscreenCanvasRenderingContext2D.prototype.fontKerning",
-+    "OffscreenCanvasRenderingContext2D.prototype.fontStretch",
-+    "OffscreenCanvasRenderingContext2D.prototype.fontVariantCaps",
-     "OffscreenCanvasRenderingContext2D.prototype.getImageData",
-     "OffscreenCanvasRenderingContext2D.prototype.getLineDash",
-     "OffscreenCanvasRenderingContext2D.prototype.getTransform",
-@@ -3073,8 +3107,10 @@
-     "OffscreenCanvasRenderingContext2D.prototype.globalCompositeOperation",
-     "OffscreenCanvasRenderingContext2D.prototype.imageSmoothingEnabled",
-     "OffscreenCanvasRenderingContext2D.prototype.imageSmoothingQuality",
-+    "OffscreenCanvasRenderingContext2D.prototype.isContextLost",
-     "OffscreenCanvasRenderingContext2D.prototype.isPointInPath",
-     "OffscreenCanvasRenderingContext2D.prototype.isPointInStroke",
-+    "OffscreenCanvasRenderingContext2D.prototype.letterSpacing",
-     "OffscreenCanvasRenderingContext2D.prototype.lineCap",
-     "OffscreenCanvasRenderingContext2D.prototype.lineDashOffset",
-     "OffscreenCanvasRenderingContext2D.prototype.lineJoin",
-@@ -3086,9 +3122,11 @@
-     "OffscreenCanvasRenderingContext2D.prototype.putImageData",
-     "OffscreenCanvasRenderingContext2D.prototype.quadraticCurveTo",
-     "OffscreenCanvasRenderingContext2D.prototype.rect",
-+    "OffscreenCanvasRenderingContext2D.prototype.reset",
-     "OffscreenCanvasRenderingContext2D.prototype.resetTransform",
-     "OffscreenCanvasRenderingContext2D.prototype.restore",
-     "OffscreenCanvasRenderingContext2D.prototype.rotate",
-+    "OffscreenCanvasRenderingContext2D.prototype.roundRect",
-     "OffscreenCanvasRenderingContext2D.prototype.save",
-     "OffscreenCanvasRenderingContext2D.prototype.scale",
-     "OffscreenCanvasRenderingContext2D.prototype.setLineDash",
-@@ -3103,8 +3141,10 @@
-     "OffscreenCanvasRenderingContext2D.prototype.strokeText",
-     "OffscreenCanvasRenderingContext2D.prototype.textAlign",
-     "OffscreenCanvasRenderingContext2D.prototype.textBaseline",
-+    "OffscreenCanvasRenderingContext2D.prototype.textRendering",
-     "OffscreenCanvasRenderingContext2D.prototype.transform",
-     "OffscreenCanvasRenderingContext2D.prototype.translate",
-+    "OffscreenCanvasRenderingContext2D.prototype.wordSpacing",
-     "Option",
-     "Option.prototype",
-     "Option.prototype.constructor",
-@@ -3267,7 +3307,9 @@
-     "Option.prototype.constructor.prototype.onchange",
-     "Option.prototype.constructor.prototype.onclick",
-     "Option.prototype.constructor.prototype.onclose",
-+    "Option.prototype.constructor.prototype.oncontextlost",
-     "Option.prototype.constructor.prototype.oncontextmenu",
-+    "Option.prototype.constructor.prototype.oncontextrestored",
-     "Option.prototype.constructor.prototype.oncopy",
-     "Option.prototype.constructor.prototype.oncuechange",
-     "Option.prototype.constructor.prototype.oncut",
-@@ -3455,6 +3497,7 @@
-     "Path2D.prototype.moveTo",
-     "Path2D.prototype.quadraticCurveTo",
-     "Path2D.prototype.rect",
-+    "Path2D.prototype.roundRect",
-     "PaymentAddress",
-     "PaymentAddress.prototype",
-     "PaymentAddress.prototype.addressLine",
-@@ -4853,7 +4896,9 @@
-     "SVGViewElement.prototype.onchange",
-     "SVGViewElement.prototype.onclick",
-     "SVGViewElement.prototype.onclose",
-+    "SVGViewElement.prototype.oncontextlost",
-     "SVGViewElement.prototype.oncontextmenu",
-+    "SVGViewElement.prototype.oncontextrestored",
-     "SVGViewElement.prototype.oncopy",
-     "SVGViewElement.prototype.oncuechange",
-     "SVGViewElement.prototype.oncut",
-@@ -6542,7 +6587,9 @@
-     "XMLDocument.prototype.onchange",
-     "XMLDocument.prototype.onclick",
-     "XMLDocument.prototype.onclose",
-+    "XMLDocument.prototype.oncontextlost",
-     "XMLDocument.prototype.oncontextmenu",
-+    "XMLDocument.prototype.oncontextrestored",
-     "XMLDocument.prototype.oncopy",
-     "XMLDocument.prototype.oncuechange",
-     "XMLDocument.prototype.oncut",
-@@ -7035,7 +7082,9 @@
-     "onchange",
-     "onclick",
-     "onclose",
-+    "oncontextlost",
-     "oncontextmenu",
-+    "oncontextrestored",
-     "oncuechange",
-     "ondblclick",
-     "ondevicemotion",
-```
 
   <!-- browserapis:end -->
