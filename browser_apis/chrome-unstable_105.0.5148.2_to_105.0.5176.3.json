@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "105.0.5148.2",
+    "to": "105.0.5176.3"
+  },
+  "browserApis": {
+    "added": [
+      "Option.prototype.constructor.prototype.checkVisibility",
+      "Response.json"
+    ],
+    "removed": [
+      "HTMLFormElement.prototype.rel",
+      "HTMLFormElement.prototype.relList"
+    ]
+  }
+}

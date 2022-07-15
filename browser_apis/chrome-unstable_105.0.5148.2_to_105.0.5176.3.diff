@@ -1,0 +1,27 @@
+--- ./browser_apis/chrome-unstable_105.0.5148.2.json	2022-07-15 01:45:41.509122353 +0000
++++ ./browser_apis/chrome-unstable_105.0.5176.3.json	2022-07-15 01:46:31.981777878 +0000
+@@ -1639,8 +1639,6 @@
+     "HTMLFormElement.prototype.method",
+     "HTMLFormElement.prototype.name",
+     "HTMLFormElement.prototype.noValidate",
+-    "HTMLFormElement.prototype.rel",
+-    "HTMLFormElement.prototype.relList",
+     "HTMLFormElement.prototype.reportValidity",
+     "HTMLFormElement.prototype.requestSubmit",
+     "HTMLFormElement.prototype.reset",
+@@ -3313,6 +3311,7 @@
+     "Option.prototype.constructor.prototype.autofocus",
+     "Option.prototype.constructor.prototype.before",
+     "Option.prototype.constructor.prototype.blur",
++    "Option.prototype.constructor.prototype.checkVisibility",
+     "Option.prototype.constructor.prototype.childElementCount",
+     "Option.prototype.constructor.prototype.children",
+     "Option.prototype.constructor.prototype.classList",
+@@ -4314,6 +4313,7 @@
+     "ResizeObserverSize.prototype.inlineSize",
+     "Response",
+     "Response.error",
++    "Response.json",
+     "Response.prototype",
+     "Response.prototype.arrayBuffer",
+     "Response.prototype.blob",
