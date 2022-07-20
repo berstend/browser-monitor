@@ -1,0 +1,10 @@
+--- ./browser_apis/chrome-stable_103.0.5060.114.json	2022-07-20 01:22:26.397041319 +0000
++++ ./browser_apis/chrome-stable_103.0.5060.134.json	2022-07-20 01:22:53.509640821 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "version": "103.0.5060.114",
++  "version": "103.0.5060.134",
+   "browserApiCount": 7463,
+   "browserApis": [
+     "AbortController",
