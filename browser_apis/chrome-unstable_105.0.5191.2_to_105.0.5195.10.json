@@ -1,0 +1,21 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "105.0.5191.2",
+    "to": "105.0.5195.10"
+  },
+  "browserApis": {
+    "added": [
+      "NavigateEvent.prototype.canIntercept",
+      "NavigateEvent.prototype.intercept",
+      "NavigateEvent.prototype.scroll",
+      "TransformStreamDefaultController",
+      "TransformStreamDefaultController.prototype",
+      "TransformStreamDefaultController.prototype.desiredSize",
+      "TransformStreamDefaultController.prototype.enqueue",
+      "TransformStreamDefaultController.prototype.error",
+      "TransformStreamDefaultController.prototype.terminate"
+    ],
+    "removed": []
+  }
+}
