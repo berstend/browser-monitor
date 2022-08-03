@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "103.0.5060.134",
+    "to": "104.0.5112.79"
+  },
+  "browserApis": {
+    "added": [
+      "BrowserCaptureMediaStreamTrack",
+      "BrowserCaptureMediaStreamTrack.prototype",
+      "BrowserCaptureMediaStreamTrack.prototype.cropTo",
+      "CropTarget",
+      "CropTarget.fromElement",
+      "CropTarget.prototype",
+      "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
+      "WebGL2RenderingContext.prototype.unpackColorSpace",
+      "WebGLRenderingContext.prototype.drawingBufferColorSpace",
+      "WebGLRenderingContext.prototype.unpackColorSpace"
+    ],
+    "removed": []
+  }
+}
