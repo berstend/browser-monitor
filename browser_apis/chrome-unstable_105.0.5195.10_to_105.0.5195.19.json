@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "105.0.5195.10",
+    "to": "105.0.5195.19"
+  },
+  "browserApis": {
+    "added": [
+      "MediaSource.canConstructInDedicatedWorker",
+      "MediaSource.prototype.handle",
+      "MediaSourceHandle",
+      "MediaSourceHandle.prototype"
+    ],
+    "removed": []
+  }
+}

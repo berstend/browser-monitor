@@ -1,0 +1,36 @@
+--- ./browser_apis/chrome-unstable_105.0.5195.10.json	2022-08-04 01:34:50.973045422 +0000
++++ ./browser_apis/chrome-unstable_105.0.5195.19.json	2022-08-04 01:35:26.073757299 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+   "version": "105.0.0.0",
+-  "browserApiCount": 7537,
++  "browserApiCount": 7541,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2821,6 +2821,7 @@
+     "MediaSession.prototype.setMicrophoneActive",
+     "MediaSession.prototype.setPositionState",
+     "MediaSource",
++    "MediaSource.canConstructInDedicatedWorker",
+     "MediaSource.isTypeSupported",
+     "MediaSource.prototype",
+     "MediaSource.prototype.activeSourceBuffers",
+@@ -2828,6 +2829,7 @@
+     "MediaSource.prototype.clearLiveSeekableRange",
+     "MediaSource.prototype.duration",
+     "MediaSource.prototype.endOfStream",
++    "MediaSource.prototype.handle",
+     "MediaSource.prototype.onsourceclose",
+     "MediaSource.prototype.onsourceended",
+     "MediaSource.prototype.onsourceopen",
+@@ -2835,6 +2837,8 @@
+     "MediaSource.prototype.removeSourceBuffer",
+     "MediaSource.prototype.setLiveSeekableRange",
+     "MediaSource.prototype.sourceBuffers",
++    "MediaSourceHandle",
++    "MediaSourceHandle.prototype",
+     "MediaStreamAudioDestinationNode",
+     "MediaStreamAudioDestinationNode.prototype",
+     "MediaStreamAudioDestinationNode.prototype.stream",
