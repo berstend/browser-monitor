@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "105.0.5195.19",
+    "to": "106.0.5216.6"
+  },
+  "browserApis": {
+    "added": [
+      "Intl.NumberFormat.prototype.formatRange",
+      "Intl.NumberFormat.prototype.formatRangeToParts",
+      "Intl.PluralRules.prototype.selectRange"
+    ],
+    "removed": []
+  }
+}
