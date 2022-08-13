@@ -1,0 +1,27 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "106.0.5216.6",
+    "to": "106.0.5231.2"
+  },
+  "browserApis": {
+    "added": [
+      "AudioDecoder.prototype.ondequeue",
+      "AudioEncoder.prototype.ondequeue",
+      "VideoDecoder.prototype.ondequeue",
+      "VideoEncoder.prototype.ondequeue",
+      "console.createTask"
+    ],
+    "removed": [
+      "chrome.runtime",
+      "chrome.runtime.OnInstalledReason",
+      "chrome.runtime.OnRestartRequiredReason",
+      "chrome.runtime.PlatformArch",
+      "chrome.runtime.PlatformNaclArch",
+      "chrome.runtime.PlatformOs",
+      "chrome.runtime.RequestUpdateCheckStatus",
+      "chrome.runtime.connect",
+      "chrome.runtime.sendMessage"
+    ]
+  }
+}
