@@ -1,0 +1,19 @@
+--- ./browser_apis/chrome-unstable_106.0.5245.0.json	2022-08-26 01:46:57.533204613 +0000
++++ ./browser_apis/chrome-unstable_106.0.5249.12.json	2022-08-26 01:47:29.973706834 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+   "version": "106.0.0.0",
+-  "browserApiCount": 7540,
++  "browserApiCount": 7541,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -5021,6 +5021,7 @@
+     "SVGUseElement.prototype.y",
+     "SVGViewElement",
+     "SVGViewElement.prototype",
++    "SVGViewElement.prototype.attributeStyleMap",
+     "SVGViewElement.prototype.autofocus",
+     "SVGViewElement.prototype.blur",
+     "SVGViewElement.prototype.className",

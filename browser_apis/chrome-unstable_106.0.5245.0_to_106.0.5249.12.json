@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "106.0.5245.0",
+    "to": "106.0.5249.12"
+  },
+  "browserApis": {
+    "added": [
+      "SVGViewElement.prototype.attributeStyleMap"
+    ],
+    "removed": []
+  }
+}
