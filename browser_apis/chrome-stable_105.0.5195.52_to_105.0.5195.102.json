@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "105.0.5195.52",
+    "to": "105.0.5195.102"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "MediaSource.canConstructInDedicatedWorker",
+      "MediaSource.prototype.handle",
+      "MediaSourceHandle",
+      "MediaSourceHandle.prototype"
+    ]
+  }
+}
