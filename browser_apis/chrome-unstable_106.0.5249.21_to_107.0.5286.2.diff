@@ -1,0 +1,20 @@
+--- ./browser_apis/chrome-unstable_106.0.5249.21.json	2022-09-09 01:52:06.443492938 +0000
++++ ./browser_apis/chrome-unstable_107.0.5286.2.json	2022-09-09 01:52:42.928169628 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "106.0.0.0",
+-  "browserApiCount": 7541,
++  "version": "107.0.0.0",
++  "browserApiCount": 7542,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3793,6 +3793,7 @@
+     "PerformanceResourceTiming.prototype.nextHopProtocol",
+     "PerformanceResourceTiming.prototype.redirectEnd",
+     "PerformanceResourceTiming.prototype.redirectStart",
++    "PerformanceResourceTiming.prototype.renderBlockingStatus",
+     "PerformanceResourceTiming.prototype.requestStart",
+     "PerformanceResourceTiming.prototype.responseEnd",
+     "PerformanceResourceTiming.prototype.responseStart",

@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "106.0.5249.21",
+    "to": "107.0.5286.2"
+  },
+  "browserApis": {
+    "added": [
+      "PerformanceResourceTiming.prototype.renderBlockingStatus"
+    ],
+    "removed": []
+  }
+}
