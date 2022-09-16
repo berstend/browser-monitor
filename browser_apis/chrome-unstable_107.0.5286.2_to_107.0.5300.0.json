@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "107.0.5286.2",
+    "to": "107.0.5300.0"
+  },
+  "browserApis": {
+    "added": [
+      "ElementInternals.prototype.ariaBrailleLabel",
+      "ElementInternals.prototype.ariaBrailleRoleDescription",
+      "Option.prototype.constructor.prototype.ariaBrailleLabel",
+      "Option.prototype.constructor.prototype.ariaBrailleRoleDescription"
+    ],
+    "removed": []
+  }
+}
