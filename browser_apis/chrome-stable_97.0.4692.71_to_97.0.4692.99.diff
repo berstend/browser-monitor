@@ -1,5 +1,5 @@
---- ./browser_apis/chrome-stable_97.0.4692.71.json	2022-09-16 12:31:40.691412016 +0000
-+++ ./browser_apis/chrome-stable_97.0.4692.99.json	2022-09-16 12:31:40.691412016 +0000
+--- ./browser_apis/chrome-stable_97.0.4692.71.json	2022-09-17 01:39:36.613881152 +0000
++++ ./browser_apis/chrome-stable_97.0.4692.99.json	2022-09-17 01:39:36.613881152 +0000
 @@ -1,6 +1,6 @@
  {
    "browser": "chrome-stable",
