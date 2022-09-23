@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "107.0.5300.0",
+    "to": "107.0.5304.10"
+  },
+  "browserApis": {
+    "added": [
+      "XRCamera",
+      "XRCamera.prototype",
+      "XRCamera.prototype.height",
+      "XRCamera.prototype.width",
+      "XRView.prototype.camera",
+      "XRWebGLBinding.prototype.getCameraImage"
+    ],
+    "removed": [
+      "MediaSource.canConstructInDedicatedWorker",
+      "MediaSource.prototype.handle",
+      "MediaSourceHandle",
+      "MediaSourceHandle.prototype"
+    ]
+  }
+}
