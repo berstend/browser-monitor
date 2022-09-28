@@ -1,14 +1,13 @@
---- ./browser_apis/chrome-unstable_106.0.5216.6.json	2022-09-28 01:46:54.647520047 +0000
-+++ ./browser_apis/chrome-unstable_106.0.5231.2.json	2022-09-28 01:46:54.647520047 +0000
-@@ -1,7 +1,7 @@
+--- ./browser_apis/chrome-stable_105.0.5195.125.json	2022-09-28 01:46:54.615519928 +0000
++++ ./browser_apis/chrome-stable_106.0.5249.61.json	2022-09-28 01:47:21.931637884 +0000
+@@ -1,6 +1,6 @@
  {
-   "browser": "chrome-unstable",
-   "version": "106.0.0.0",
--  "browserApiCount": 7544,
-+  "browserApiCount": 7540,
+   "browser": "chrome-stable",
+-  "version": "105.0.0.0",
++  "version": "106.0.0.0",
+   "browserApiCount": 7538,
    "browserApis": [
      "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
 @@ -234,6 +234,7 @@
      "AudioDecoder.prototype.decode",
      "AudioDecoder.prototype.decodeQueueSize",
@@ -25,7 +24,32 @@
      "AudioEncoder.prototype.reset",
      "AudioEncoder.prototype.state",
      "AudioListener",
-@@ -5926,6 +5928,7 @@
+@@ -2500,6 +2502,8 @@
+     "Intl.NumberFormat",
+     "Intl.NumberFormat.prototype",
+     "Intl.NumberFormat.prototype.format",
++    "Intl.NumberFormat.prototype.formatRange",
++    "Intl.NumberFormat.prototype.formatRangeToParts",
+     "Intl.NumberFormat.prototype.formatToParts",
+     "Intl.NumberFormat.prototype.resolvedOptions",
+     "Intl.NumberFormat.supportedLocalesOf",
+@@ -2507,6 +2511,7 @@
+     "Intl.PluralRules.prototype",
+     "Intl.PluralRules.prototype.resolvedOptions",
+     "Intl.PluralRules.prototype.select",
++    "Intl.PluralRules.prototype.selectRange",
+     "Intl.PluralRules.supportedLocalesOf",
+     "Intl.RelativeTimeFormat",
+     "Intl.RelativeTimeFormat.prototype",
+@@ -5012,6 +5017,7 @@
+     "SVGUseElement.prototype.y",
+     "SVGViewElement",
+     "SVGViewElement.prototype",
++    "SVGViewElement.prototype.attributeStyleMap",
+     "SVGViewElement.prototype.autofocus",
+     "SVGViewElement.prototype.blur",
+     "SVGViewElement.prototype.className",
+@@ -5919,6 +5925,7 @@
      "VideoDecoder.prototype.decode",
      "VideoDecoder.prototype.decodeQueueSize",
      "VideoDecoder.prototype.flush",
@@ -33,7 +57,7 @@
      "VideoDecoder.prototype.reset",
      "VideoDecoder.prototype.state",
      "VideoEncoder",
-@@ -5936,6 +5939,7 @@
+@@ -5929,6 +5936,7 @@
      "VideoEncoder.prototype.encode",
      "VideoEncoder.prototype.encodeQueueSize",
      "VideoEncoder.prototype.flush",
@@ -41,7 +65,7 @@
      "VideoEncoder.prototype.reset",
      "VideoEncoder.prototype.state",
      "VideoFrame",
-@@ -7169,15 +7173,6 @@
+@@ -7163,15 +7171,6 @@
      "chrome.csi.prototype",
      "chrome.loadTimes",
      "chrome.loadTimes.prototype",
@@ -57,7 +81,7 @@
      "clearInterval",
      "clearTimeout",
      "clientInformation",
-@@ -7190,6 +7185,7 @@
+@@ -7184,6 +7183,7 @@
      "console.context",
      "console.count",
      "console.countReset",

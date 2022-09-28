@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "105.0.5195.125",
+    "to": "106.0.5249.61"
+  },
+  "browserApis": {
+    "added": [
+      "AudioDecoder.prototype.ondequeue",
+      "AudioEncoder.prototype.ondequeue",
+      "Intl.NumberFormat.prototype.formatRange",
+      "Intl.NumberFormat.prototype.formatRangeToParts",
+      "Intl.PluralRules.prototype.selectRange",
+      "SVGViewElement.prototype.attributeStyleMap",
+      "VideoDecoder.prototype.ondequeue",
+      "VideoEncoder.prototype.ondequeue",
+      "console.createTask"
+    ],
+    "removed": [
+      "chrome.runtime",
+      "chrome.runtime.OnInstalledReason",
+      "chrome.runtime.OnRestartRequiredReason",
+      "chrome.runtime.PlatformArch",
+      "chrome.runtime.PlatformNaclArch",
+      "chrome.runtime.PlatformOs",
+      "chrome.runtime.RequestUpdateCheckStatus",
+      "chrome.runtime.connect",
+      "chrome.runtime.sendMessage"
+    ]
+  }
+}
