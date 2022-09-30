@@ -1,0 +1,49 @@
+--- ./browser_apis/chrome-unstable_107.0.5304.18.json	2022-09-30 02:09:00.152592000 +0000
++++ ./browser_apis/chrome-unstable_108.0.5327.0.json	2022-09-30 02:09:32.896563450 +0000
+@@ -1,7 +1,7 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "107.0.0.0",
+-  "browserApiCount": 7548,
++  "version": "108.0.0.0",
++  "browserApiCount": 7551,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -90,6 +90,8 @@
+     "Array.prototype.flat",
+     "Array.prototype.flatMap",
+     "Array.prototype.forEach",
++    "Array.prototype.group",
++    "Array.prototype.groupToMap",
+     "Array.prototype.includes",
+     "Array.prototype.indexOf",
+     "Array.prototype.join",
+@@ -1632,6 +1634,8 @@
+     "HTMLFormElement.prototype.method",
+     "HTMLFormElement.prototype.name",
+     "HTMLFormElement.prototype.noValidate",
++    "HTMLFormElement.prototype.rel",
++    "HTMLFormElement.prototype.relList",
+     "HTMLFormElement.prototype.reportValidity",
+     "HTMLFormElement.prototype.requestSubmit",
+     "HTMLFormElement.prototype.reset",
+@@ -2931,10 +2935,8 @@
+     "NavigateEvent.prototype.info",
+     "NavigateEvent.prototype.intercept",
+     "NavigateEvent.prototype.navigationType",
+-    "NavigateEvent.prototype.restoreScroll",
+     "NavigateEvent.prototype.scroll",
+     "NavigateEvent.prototype.signal",
+-    "NavigateEvent.prototype.transitionWhile",
+     "NavigateEvent.prototype.userInitiated",
+     "Navigation",
+     "Navigation.prototype",
+@@ -3961,6 +3963,7 @@
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
++    "PublicKeyCredential.isConditionalMediationAvailable",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
+     "PublicKeyCredential.prototype",
+     "PublicKeyCredential.prototype.authenticatorAttachment",

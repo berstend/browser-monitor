@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "107.0.5304.18",
+    "to": "108.0.5327.0"
+  },
+  "browserApis": {
+    "added": [
+      "Array.prototype.group",
+      "Array.prototype.groupToMap",
+      "HTMLFormElement.prototype.rel",
+      "HTMLFormElement.prototype.relList",
+      "PublicKeyCredential.isConditionalMediationAvailable"
+    ],
+    "removed": [
+      "NavigateEvent.prototype.restoreScroll",
+      "NavigateEvent.prototype.transitionWhile"
+    ]
+  }
+}
