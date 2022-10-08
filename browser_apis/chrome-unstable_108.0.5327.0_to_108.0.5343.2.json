@@ -1,0 +1,28 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "108.0.5327.0",
+    "to": "108.0.5343.2"
+  },
+  "browserApis": {
+    "added": [
+      "ContentVisibilityAutoStateChangedEvent",
+      "ContentVisibilityAutoStateChangedEvent.prototype",
+      "ContentVisibilityAutoStateChangedEvent.prototype.skipped",
+      "MediaSource.canConstructInDedicatedWorker",
+      "MediaSourceHandle",
+      "MediaSourceHandle.prototype",
+      "Option.prototype.constructor.prototype.oncontentvisibilityautostatechanged",
+      "PerformanceNavigationTiming.prototype.activationStart",
+      "SVGViewElement.prototype.oncontentvisibilityautostatechanged",
+      "XMLDocument.prototype.oncontentvisibilityautostatechanged",
+      "XMLDocument.prototype.onprerenderingchange",
+      "XMLDocument.prototype.prerendering",
+      "oncontentvisibilityautostatechanged"
+    ],
+    "removed": [
+      "defaultStatus",
+      "defaultstatus"
+    ]
+  }
+}
