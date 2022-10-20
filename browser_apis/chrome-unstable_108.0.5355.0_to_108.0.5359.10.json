@@ -1,0 +1,35 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "108.0.5355.0",
+    "to": "108.0.5359.10"
+  },
+  "browserApis": {
+    "added": [
+      "CSS.dvb",
+      "CSS.dvh",
+      "CSS.dvi",
+      "CSS.dvmax",
+      "CSS.dvmin",
+      "CSS.dvw",
+      "CSS.lvb",
+      "CSS.lvh",
+      "CSS.lvi",
+      "CSS.lvmax",
+      "CSS.lvmin",
+      "CSS.lvw",
+      "CSS.svb",
+      "CSS.svh",
+      "CSS.svi",
+      "CSS.svmax",
+      "CSS.svmin",
+      "CSS.svw",
+      "CSS.vb",
+      "CSS.vi",
+      "IdentityCredential",
+      "IdentityCredential.prototype",
+      "IdentityCredential.prototype.token"
+    ],
+    "removed": []
+  }
+}
