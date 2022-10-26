@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "106.0.5249.119",
+    "to": "107.0.5304.68"
+  },
+  "browserApis": {
+    "added": [
+      "ElementInternals.prototype.ariaBrailleLabel",
+      "ElementInternals.prototype.ariaBrailleRoleDescription",
+      "Option.prototype.constructor.prototype.ariaBrailleLabel",
+      "Option.prototype.constructor.prototype.ariaBrailleRoleDescription",
+      "PerformanceResourceTiming.prototype.renderBlockingStatus",
+      "XRCamera",
+      "XRCamera.prototype",
+      "XRCamera.prototype.height",
+      "XRCamera.prototype.width",
+      "XRView.prototype.camera",
+      "XRWebGLBinding.prototype.getCameraImage"
+    ],
+    "removed": []
+  }
+}
