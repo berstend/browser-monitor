@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "108.0.5359.19",
+    "to": "109.0.5384.0"
+  },
+  "browserApis": {
+    "added": [
+      "PerformanceResourceTiming.prototype.responseStatus"
+    ],
+    "removed": []
+  }
+}
