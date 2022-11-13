@@ -1,5 +1,5 @@
---- ./browser_apis/chrome-unstable_105.0.5148.2.json	2022-11-12 12:27:29.828345198 +0000
-+++ ./browser_apis/chrome-unstable_105.0.5176.3.json	2022-11-12 12:27:29.828345198 +0000
+--- ./browser_apis/chrome-unstable_105.0.5148.2.json	2022-11-13 01:21:11.117459552 +0000
++++ ./browser_apis/chrome-unstable_105.0.5176.3.json	2022-11-13 01:21:11.117459552 +0000
 @@ -1639,8 +1639,6 @@
      "HTMLFormElement.prototype.method",
      "HTMLFormElement.prototype.name",
