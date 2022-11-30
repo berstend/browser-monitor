@@ -1,0 +1,56 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "107.0.5304.121",
+    "to": "108.0.5359.71"
+  },
+  "browserApis": {
+    "added": [
+      "CSS.dvb",
+      "CSS.dvh",
+      "CSS.dvi",
+      "CSS.dvmax",
+      "CSS.dvmin",
+      "CSS.dvw",
+      "CSS.lvb",
+      "CSS.lvh",
+      "CSS.lvi",
+      "CSS.lvmax",
+      "CSS.lvmin",
+      "CSS.lvw",
+      "CSS.svb",
+      "CSS.svh",
+      "CSS.svi",
+      "CSS.svmax",
+      "CSS.svmin",
+      "CSS.svw",
+      "CSS.vb",
+      "CSS.vi",
+      "ContentVisibilityAutoStateChangeEvent",
+      "ContentVisibilityAutoStateChangeEvent.prototype",
+      "ContentVisibilityAutoStateChangeEvent.prototype.skipped",
+      "HTMLFormElement.prototype.rel",
+      "HTMLFormElement.prototype.relList",
+      "IdentityCredential",
+      "IdentityCredential.prototype",
+      "IdentityCredential.prototype.token",
+      "MediaSource.canConstructInDedicatedWorker",
+      "MediaSourceHandle",
+      "MediaSourceHandle.prototype",
+      "Option.prototype.constructor.prototype.oncontentvisibilityautostatechange",
+      "PerformanceNavigationTiming.prototype.activationStart",
+      "PublicKeyCredential.isConditionalMediationAvailable",
+      "SVGViewElement.prototype.oncontentvisibilityautostatechange",
+      "XMLDocument.prototype.oncontentvisibilityautostatechange",
+      "XMLDocument.prototype.onprerenderingchange",
+      "XMLDocument.prototype.prerendering",
+      "oncontentvisibilityautostatechange"
+    ],
+    "removed": [
+      "NavigateEvent.prototype.restoreScroll",
+      "NavigateEvent.prototype.transitionWhile",
+      "defaultStatus",
+      "defaultstatus"
+    ]
+  }
+}

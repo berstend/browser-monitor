@@ -1,25 +1,88 @@
---- ./browser_apis/chrome-unstable_108.0.5327.0.json	2022-11-30 01:11:11.032872794 +0000
-+++ ./browser_apis/chrome-unstable_108.0.5343.2.json	2022-11-30 01:11:11.032872794 +0000
+--- ./browser_apis/chrome-stable_107.0.5304.121.json	2022-11-30 01:11:10.992870039 +0000
++++ ./browser_apis/chrome-stable_108.0.5359.71.json	2022-11-30 01:11:43.479128362 +0000
 @@ -1,7 +1,7 @@
  {
-   "browser": "chrome-unstable",
-   "version": "108.0.0.0",
--  "browserApiCount": 7551,
-+  "browserApiCount": 7562,
+   "browser": "chrome-stable",
+-  "version": "107.0.0.0",
+-  "browserApiCount": 7549,
++  "version": "108.0.0.0",
++  "browserApiCount": 7584,
    "browserApis": [
      "AbsoluteOrientationSensor",
      "AbsoluteOrientationSensor.prototype",
-@@ -821,6 +821,9 @@
+@@ -417,6 +417,12 @@
+     "CSS.dpcm",
+     "CSS.dpi",
+     "CSS.dppx",
++    "CSS.dvb",
++    "CSS.dvh",
++    "CSS.dvi",
++    "CSS.dvmax",
++    "CSS.dvmin",
++    "CSS.dvw",
+     "CSS.em",
+     "CSS.escape",
+     "CSS.ex",
+@@ -425,6 +431,12 @@
+     "CSS.highlights",
+     "CSS.in",
+     "CSS.kHz",
++    "CSS.lvb",
++    "CSS.lvh",
++    "CSS.lvi",
++    "CSS.lvmax",
++    "CSS.lvmin",
++    "CSS.lvw",
+     "CSS.mm",
+     "CSS.ms",
+     "CSS.number",
+@@ -438,8 +450,16 @@
+     "CSS.rem",
+     "CSS.s",
+     "CSS.supports",
++    "CSS.svb",
++    "CSS.svh",
++    "CSS.svi",
++    "CSS.svmax",
++    "CSS.svmin",
++    "CSS.svw",
+     "CSS.turn",
++    "CSS.vb",
+     "CSS.vh",
++    "CSS.vi",
+     "CSS.vmax",
+     "CSS.vmin",
+     "CSS.vw",
+@@ -819,6 +839,9 @@
      "ConstantSourceNode",
      "ConstantSourceNode.prototype",
      "ConstantSourceNode.prototype.offset",
-+    "ContentVisibilityAutoStateChangedEvent",
-+    "ContentVisibilityAutoStateChangedEvent.prototype",
-+    "ContentVisibilityAutoStateChangedEvent.prototype.skipped",
++    "ContentVisibilityAutoStateChangeEvent",
++    "ContentVisibilityAutoStateChangeEvent.prototype",
++    "ContentVisibilityAutoStateChangeEvent.prototype.skipped",
      "ConvolverNode",
      "ConvolverNode.prototype",
      "ConvolverNode.prototype.buffer",
-@@ -2832,6 +2835,7 @@
+@@ -1632,6 +1655,8 @@
+     "HTMLFormElement.prototype.method",
+     "HTMLFormElement.prototype.name",
+     "HTMLFormElement.prototype.noValidate",
++    "HTMLFormElement.prototype.rel",
++    "HTMLFormElement.prototype.relList",
+     "HTMLFormElement.prototype.reportValidity",
+     "HTMLFormElement.prototype.requestSubmit",
+     "HTMLFormElement.prototype.reset",
+@@ -2320,6 +2345,9 @@
+     "IIRFilterNode",
+     "IIRFilterNode.prototype",
+     "IIRFilterNode.prototype.getFrequencyResponse",
++    "IdentityCredential",
++    "IdentityCredential.prototype",
++    "IdentityCredential.prototype.token",
+     "IdleDeadline",
+     "IdleDeadline.prototype",
+     "IdleDeadline.prototype.didTimeout",
+@@ -2828,6 +2856,7 @@
      "MediaSession.prototype.setMicrophoneActive",
      "MediaSession.prototype.setPositionState",
      "MediaSource",
@@ -27,7 +90,7 @@
      "MediaSource.isTypeSupported",
      "MediaSource.prototype",
      "MediaSource.prototype.activeSourceBuffers",
-@@ -2846,6 +2850,8 @@
+@@ -2842,6 +2871,8 @@
      "MediaSource.prototype.removeSourceBuffer",
      "MediaSource.prototype.setLiveSeekableRange",
      "MediaSource.prototype.sourceBuffers",
@@ -36,15 +99,26 @@
      "MediaStreamAudioDestinationNode",
      "MediaStreamAudioDestinationNode.prototype",
      "MediaStreamAudioDestinationNode.prototype.stream",
-@@ -3450,6 +3456,7 @@
+@@ -2931,10 +2962,8 @@
+     "NavigateEvent.prototype.info",
+     "NavigateEvent.prototype.intercept",
+     "NavigateEvent.prototype.navigationType",
+-    "NavigateEvent.prototype.restoreScroll",
+     "NavigateEvent.prototype.scroll",
+     "NavigateEvent.prototype.signal",
+-    "NavigateEvent.prototype.transitionWhile",
+     "NavigateEvent.prototype.userInitiated",
+     "Navigation",
+     "Navigation.prototype",
+@@ -3448,6 +3477,7 @@
      "Option.prototype.constructor.prototype.onchange",
      "Option.prototype.constructor.prototype.onclick",
      "Option.prototype.constructor.prototype.onclose",
-+    "Option.prototype.constructor.prototype.oncontentvisibilityautostatechanged",
++    "Option.prototype.constructor.prototype.oncontentvisibilityautostatechange",
      "Option.prototype.constructor.prototype.oncontextlost",
      "Option.prototype.constructor.prototype.oncontextmenu",
      "Option.prototype.constructor.prototype.oncontextrestored",
-@@ -3758,6 +3765,7 @@
+@@ -3756,6 +3786,7 @@
      "PerformanceNavigation.prototype.type",
      "PerformanceNavigationTiming",
      "PerformanceNavigationTiming.prototype",
@@ -52,23 +126,31 @@
      "PerformanceNavigationTiming.prototype.domComplete",
      "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
      "PerformanceNavigationTiming.prototype.domContentLoadedEventStart",
-@@ -5048,6 +5056,7 @@
+@@ -3961,6 +3992,7 @@
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
++    "PublicKeyCredential.isConditionalMediationAvailable",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
+     "PublicKeyCredential.prototype",
+     "PublicKeyCredential.prototype.authenticatorAttachment",
+@@ -5045,6 +5077,7 @@
      "SVGViewElement.prototype.onchange",
      "SVGViewElement.prototype.onclick",
      "SVGViewElement.prototype.onclose",
-+    "SVGViewElement.prototype.oncontentvisibilityautostatechanged",
++    "SVGViewElement.prototype.oncontentvisibilityautostatechange",
      "SVGViewElement.prototype.oncontextlost",
      "SVGViewElement.prototype.oncontextmenu",
      "SVGViewElement.prototype.oncontextrestored",
-@@ -6783,6 +6792,7 @@
+@@ -6781,6 +6814,7 @@
      "XMLDocument.prototype.onchange",
      "XMLDocument.prototype.onclick",
      "XMLDocument.prototype.onclose",
-+    "XMLDocument.prototype.oncontentvisibilityautostatechanged",
++    "XMLDocument.prototype.oncontentvisibilityautostatechange",
      "XMLDocument.prototype.oncontextlost",
      "XMLDocument.prototype.oncontextmenu",
      "XMLDocument.prototype.oncontextrestored",
-@@ -6840,6 +6850,7 @@
+@@ -6838,6 +6872,7 @@
      "XMLDocument.prototype.onpointerover",
      "XMLDocument.prototype.onpointerrawupdate",
      "XMLDocument.prototype.onpointerup",
@@ -76,7 +158,7 @@
      "XMLDocument.prototype.onprogress",
      "XMLDocument.prototype.onratechange",
      "XMLDocument.prototype.onreadystatechange",
-@@ -6880,6 +6891,7 @@
+@@ -6878,6 +6913,7 @@
      "XMLDocument.prototype.plugins",
      "XMLDocument.prototype.pointerLockElement",
      "XMLDocument.prototype.prepend",
@@ -84,7 +166,7 @@
      "XMLDocument.prototype.queryCommandEnabled",
      "XMLDocument.prototype.queryCommandIndeterm",
      "XMLDocument.prototype.queryCommandState",
-@@ -7223,8 +7235,6 @@
+@@ -7221,8 +7257,6 @@
      "customElements",
      "decodeURI",
      "decodeURIComponent",
@@ -93,11 +175,11 @@
      "devicePixelRatio",
      "document",
      "encodeURI",
-@@ -7281,6 +7291,7 @@
+@@ -7279,6 +7313,7 @@
      "onchange",
      "onclick",
      "onclose",
-+    "oncontentvisibilityautostatechanged",
++    "oncontentvisibilityautostatechange",
      "oncontextlost",
      "oncontextmenu",
      "oncontextrestored",
