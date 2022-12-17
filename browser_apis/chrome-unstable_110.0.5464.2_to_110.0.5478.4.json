@@ -1,0 +1,59 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "110.0.5464.2",
+    "to": "110.0.5478.4"
+  },
+  "browserApis": {
+    "added": [
+      "AudioContext.prototype.onsinkchange",
+      "AudioContext.prototype.setSinkId",
+      "AudioContext.prototype.sinkId",
+      "AudioSinkInfo",
+      "AudioSinkInfo.prototype",
+      "AudioSinkInfo.prototype.type",
+      "HTMLIFrameElement.prototype.credentialless",
+      "MediaStreamTrackGenerator.prototype.applyConstraints",
+      "MediaStreamTrackGenerator.prototype.clone",
+      "MediaStreamTrackGenerator.prototype.constructor",
+      "MediaStreamTrackGenerator.prototype.contentHint",
+      "MediaStreamTrackGenerator.prototype.enabled",
+      "MediaStreamTrackGenerator.prototype.getCapabilities",
+      "MediaStreamTrackGenerator.prototype.getCaptureHandle",
+      "MediaStreamTrackGenerator.prototype.getConstraints",
+      "MediaStreamTrackGenerator.prototype.getSettings",
+      "MediaStreamTrackGenerator.prototype.id",
+      "MediaStreamTrackGenerator.prototype.kind",
+      "MediaStreamTrackGenerator.prototype.label",
+      "MediaStreamTrackGenerator.prototype.muted",
+      "MediaStreamTrackGenerator.prototype.oncapturehandlechange",
+      "MediaStreamTrackGenerator.prototype.onended",
+      "MediaStreamTrackGenerator.prototype.onmute",
+      "MediaStreamTrackGenerator.prototype.onunmute",
+      "MediaStreamTrackGenerator.prototype.readyState",
+      "MediaStreamTrackGenerator.prototype.stop",
+      "credentialless"
+    ],
+    "removed": [
+      "CanvasCaptureMediaStreamTrack.prototype.applyConstraints",
+      "CanvasCaptureMediaStreamTrack.prototype.clone",
+      "CanvasCaptureMediaStreamTrack.prototype.constructor",
+      "CanvasCaptureMediaStreamTrack.prototype.contentHint",
+      "CanvasCaptureMediaStreamTrack.prototype.enabled",
+      "CanvasCaptureMediaStreamTrack.prototype.getCapabilities",
+      "CanvasCaptureMediaStreamTrack.prototype.getCaptureHandle",
+      "CanvasCaptureMediaStreamTrack.prototype.getConstraints",
+      "CanvasCaptureMediaStreamTrack.prototype.getSettings",
+      "CanvasCaptureMediaStreamTrack.prototype.id",
+      "CanvasCaptureMediaStreamTrack.prototype.kind",
+      "CanvasCaptureMediaStreamTrack.prototype.label",
+      "CanvasCaptureMediaStreamTrack.prototype.muted",
+      "CanvasCaptureMediaStreamTrack.prototype.oncapturehandlechange",
+      "CanvasCaptureMediaStreamTrack.prototype.onended",
+      "CanvasCaptureMediaStreamTrack.prototype.onmute",
+      "CanvasCaptureMediaStreamTrack.prototype.onunmute",
+      "CanvasCaptureMediaStreamTrack.prototype.readyState",
+      "CanvasCaptureMediaStreamTrack.prototype.stop"
+    ]
+  }
+}

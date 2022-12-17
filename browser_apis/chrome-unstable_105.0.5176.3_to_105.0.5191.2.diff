@@ -1,5 +1,5 @@
---- ./browser_apis/chrome-unstable_105.0.5176.3.json	2022-12-16 12:22:53.534212221 +0000
-+++ ./browser_apis/chrome-unstable_105.0.5191.2.json	2022-12-16 12:22:53.538212134 +0000
+--- ./browser_apis/chrome-unstable_105.0.5176.3.json	2022-12-17 01:01:03.667738647 +0000
++++ ./browser_apis/chrome-unstable_105.0.5191.2.json	2022-12-17 01:01:03.667738647 +0000
 @@ -1,20 +1,8 @@
  {
    "browser": "chrome-unstable",
