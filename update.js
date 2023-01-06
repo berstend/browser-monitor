@@ -1,3 +1,4 @@
+// @ts-check
 const fs = require("fs/promises")
 const util = require("util")
 const exec = util.promisify(require("child_process").exec)
@@ -11,6 +12,18 @@ const isCI = process.env.USER === "runner"
 
 const getSimpleDate = (d) => {
   return `${d.getUTCFullYear()}-${d.getUTCMonth() + 1}-${d.getUTCDate()}`
+}
+
+// https://stackoverflow.com/a/22429679
+const hashMini = (str) => {
+  const json = `${JSON.stringify(str)}`
+  let i,
+    len,
+    hash = 0x811c9dc5
+  for (i = 0, len = json.length; i < len; i++) {
+    hash = (Math.imul(31, hash) + json.charCodeAt(i)) | 0
+  }
+  return ("0000000" + (hash >>> 0).toString(16)).substr(-8)
 }
 
 const fetchRemoteVersions = async () => {
@@ -45,6 +58,21 @@ const installChromeVersion = async (prefix = "", version = "") => {
   }
 }
 
+const getCDPFilePath = (prefix = "", version = "") =>
+  `./cdp/${prefix}_${version}.json`
+
+const getCDPDiffFilePath = (prefix = "", previousVersion = "", version = "") =>
+  `./cdp/${prefix}_${previousVersion}_to_${version}.diff`
+
+const getCDPProtocolFilePath = (prefix = "", version = "") =>
+  `./cdp/${prefix}_${version}.protocol.json`
+
+const getCDPProtocolDiffFilePath = (
+  prefix = "",
+  previousVersion = "",
+  version = ""
+) => `./cdp/${prefix}_${previousVersion}_to_${version}.protocol.diff`
+
 const getBrowserApiFilePath = (prefix = "", version = "") =>
   `./browser_apis/${prefix}_${version}.json`
 
@@ -55,9 +83,6 @@ const getBrowserApiDiffFilePath = (
 ) => `./browser_apis/${prefix}_${previousVersion}_to_${version}.diff`
 
 const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
-  // if (!isCI) {
-  //   remoteVersions = remoteVersions.slice(0, 3)
-  // }
   console.log("handleChromeEntries", prefix, remoteVersions.length)
 
   const list = [...remoteVersions.entries()].reverse()
@@ -67,31 +92,117 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
   for (const [i, entry] of list) {
     const previousVersion = entry.previous_version
     // const previousVersion = i > 0 ? remoteVersions[i + 1].version : null
+
     const browserApiFilePath = getBrowserApiFilePath(prefix, entry.version)
-    const exists = await fileExists(browserApiFilePath)
-    console.log({ entry, browserApiFilePath, previousVersion, exists })
+    const cdpFilePath = getCDPFilePath(prefix, entry.version)
+    const browserApiExists = await fileExists(browserApiFilePath)
+    const cdpExists = await fileExists(cdpFilePath)
+    console.log({
+      entry,
+      browserApiFilePath,
+      previousVersion,
+      browserApiExists,
+      cdpExists,
+    })
 
-    let browserData
+    let browserApiData, cdpData
 
-    if (exists) {
-      console.log(" - entry exists already", browserApiFilePath)
-      browserData = require(browserApiFilePath)
-    } else {
-      console.log(" - entry does not yet exist", browserApiFilePath)
+    if (browserApiExists) {
+      console.log(" - browserApiData exists already", browserApiFilePath)
+      browserApiData = require(browserApiFilePath)
+    }
+    if (cdpExists) {
+      console.log(" - cdpData exists already", cdpFilePath)
+      cdpData = require(cdpFilePath)
+    }
+
+    const needsData = !browserApiExists || !cdpExists
+    if (needsData) {
+      console.log("Needs data", { browserApiExists, cdpExists })
+
       if (isCI) {
         await installChromeVersion(prefix, entry.version)
       }
 
-      browserData = await getBrowserData()
-      console.log(" - writing")
-      require("fs").writeFileSync(
-        browserApiFilePath,
-        JSON.stringify(
-          { browser: prefix, date: entry.updated, ...browserData },
-          null,
-          2
+      const fullBrowserData = await getBrowserData()
+
+      if (!browserApiExists) {
+        browserApiData = {
+          browser: prefix,
+          date: entry.updated,
+          ...fullBrowserData.browserApis,
+        }
+        console.log(" - writing:", browserApiFilePath)
+        require("fs").writeFileSync(
+          browserApiFilePath,
+          JSON.stringify(browserApiData, null, 2)
         )
-      )
+      }
+      if (!cdpExists) {
+        const {
+          protocolHash,
+          commandsCount,
+          commandsHash,
+          eventsCount,
+          eventsHash,
+          commands,
+          events,
+          protocol,
+        } = fullBrowserData.cdp
+
+        cdpData = {
+          browser: prefix,
+          version: fullBrowserData.version,
+          date: entry.updated,
+          protocolHash,
+          commandsCount,
+          commandsHash,
+          eventsCount,
+          eventsHash,
+          commands,
+          events,
+        }
+        console.log(" - writing:", cdpFilePath)
+        require("fs").writeFileSync(
+          cdpFilePath,
+          JSON.stringify(cdpData, null, 2)
+        )
+        const cdpProtocolFilePath = getCDPProtocolFilePath(
+          prefix,
+          entry.version
+        )
+        console.log(" - writing:", cdpProtocolFilePath)
+        require("fs").writeFileSync(
+          cdpProtocolFilePath,
+          JSON.stringify(protocol, null, 2)
+        )
+      }
+    }
+
+    if (previousVersion) {
+      await (async function () {
+        const filePath = getCDPProtocolFilePath(prefix, entry.version)
+        const previousFilePath = getCDPProtocolFilePath(prefix, previousVersion)
+        const diffFilePath = getCDPProtocolDiffFilePath(
+          prefix,
+          previousVersion,
+          entry.version
+        )
+        const hasPreviousFile = await fileExists(previousFilePath)
+        if (!hasPreviousFile) {
+          console.log("Previous file not found:", previousFilePath)
+          return
+        }
+        if (await fileExists(diffFilePath)) {
+          console.log("Diff already exists:", diffFilePath)
+          return
+        }
+        console.log(" - exec diff")
+        await exec(
+          `diff -u ${previousFilePath} ${filePath} > ${diffFilePath}`
+        ).catch(console.log)
+        console.log(" - exec diff: finished", diffFilePath)
+      })()
     }
 
     if (previousVersion) {
@@ -117,15 +228,20 @@ const handleChromeEntries = async (prefix = "", remoteVersions = []) => {
         continue
       }
 
+      if (await fileExists(browserApiDiffFilePath)) {
+        console.log("Diff already exists:", browserApiDiffFilePath)
+        continue
+      }
+
       const previousBrowserData = require(previousBrowserApiFilePath)
 
       console.log({ previousBrowserApiFilePath, browserApiDiffFilePath })
 
-      const added = browserData.browserApis.filter(
+      const added = browserApiData.browserApis.filter(
         (x) => !previousBrowserData.browserApis.includes(x)
       )
       const removed = previousBrowserData.browserApis.filter(
-        (x) => !browserData.browserApis.includes(x)
+        (x) => !browserApiData.browserApis.includes(x)
       )
       require("fs").writeFileSync(
         browserApiDiffFilePath.replace(".diff", ".json"),
@@ -157,6 +273,7 @@ async function getBrowserData() {
     headless: false,
     defaultViewport: null,
     ignoreDefaultArgs: ["--disable-component-extensions-with-background-pages"],
+    args: ["--remote-debugging-port=9222"],
     executablePath: isCI
       ? "/usr/bin/google-chrome"
       : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -215,13 +332,20 @@ async function getBrowserData() {
     userAgent
   )?.groups?.ver
   console.log(version, browserApis.length)
+
+  const cdpJSON = await got("http://localhost:9222/json/protocol/").json()
+  const cdp = parseCDPJSON(cdpJSON)
+
   console.log("getBrowserData - closing")
   await browser.close()
   console.log("getBrowserData - finished", version, browserApis.length)
   return {
     version,
-    browserApiCount: browserApis.length,
-    browserApis,
+    browserApis: {
+      browserApiCount: browserApis.length,
+      browserApis,
+    },
+    cdp,
   }
 }
 
@@ -235,8 +359,19 @@ async function generateReleasesFile(prefix = "", entries = []) {
     }))
     // .reverse()
     .map((r) => {
-      const info = require(getBrowserApiFilePath(prefix, r.version))
-      return { ...r, browserApis: { count: info.browserApiCount } }
+      const apiData = require(getBrowserApiFilePath(prefix, r.version))
+      const cdpData = require(getCDPFilePath(prefix, r.version))
+      return {
+        ...r,
+        browserApis: { count: apiData.browserApiCount },
+        cdp: {
+          protocolHash: cdpData.protocolHash,
+          commandsCount: cdpData.commandsCount,
+          commandsHash: cdpData.commandsHash,
+          eventsCount: cdpData.eventsCount,
+          eventsHash: cdpData.eventsHash,
+        },
+      }
     })
   for (const [i, entry] of releases.entries()) {
     // const previousVersion = releases[i + 1]?.version
@@ -322,14 +457,21 @@ async function init() {
     remoteVersions.chrome.unstable.map((x) => x.version)
   )
 
+  let versionNum = 50
+  if (process.env.LIMIT_VERSIONS) {
+    versionNum = parseInt(process.env.LIMIT_VERSIONS)
+    console.log("Limiting version count", process.env.LIMIT_VERSIONS)
+  }
+
   const chromeData = [
     // Only mind the most recent 20 entries
-    ["chrome-stable", remoteVersions.chrome.stable.slice(-50)],
-    ["chrome-unstable", remoteVersions.chrome.unstable.slice(-50)],
+    ["chrome-stable", remoteVersions.chrome.stable.slice(versionNum * -1)],
+    ["chrome-unstable", remoteVersions.chrome.unstable.slice(versionNum * -1)],
   ]
   let md = ""
   for (const [prefix, versions] of chromeData) {
     await handleChromeEntries(prefix, versions)
+
     console.log("generate releases")
     const releases = await generateReleasesFile(prefix, versions)
     console.log("releases", releases)
@@ -341,6 +483,39 @@ async function init() {
   }
 
   console.log("Finish")
+}
+
+function parseCDPJSON(protocol) {
+  const flattenEntries = (domain) => (entry) => {
+    const params = [...(entry.parameters || []).map((param) => param.name)]
+    return params.length
+      ? `${domain.domain}.${entry.name}(${params.join(",")})`
+      : `${domain.domain}.${entry.name}`
+  }
+
+  const commands = protocol.domains.flatMap((domain) =>
+    (domain.commands || []).flatMap(flattenEntries(domain))
+  )
+  const commandsCount = commands.length
+  const commandsHash = hashMini(commands)
+  const events = protocol.domains.flatMap((domain) =>
+    (domain.events || []).flatMap(flattenEntries(domain))
+  )
+  const eventsCount = events.length
+  const eventsHash = hashMini(events)
+
+  const protocolHash = hashMini(protocol)
+
+  return {
+    protocolHash,
+    commandsCount,
+    commandsHash,
+    eventsCount,
+    eventsHash,
+    commands,
+    events,
+    protocol,
+  }
 }
 
 init()
