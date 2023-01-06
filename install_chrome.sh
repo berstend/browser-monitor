@@ -15,6 +15,10 @@ if [ -z "${BROWSER_VERSION}" ]; then
   exit 1
 fi
 
+# Disable all variations, see https://support.google.com/chrome/a/answer/9805991
+mkdir -p /etc/opt/chrome/policies/managed
+echo '{"ChromeVariations": 2}' > /etc/opt/chrome/policies/managed/disable-variations.json
+
 sudo apt-get remove google-chrome-stable; echo ""
 sudo apt-get remove google-chrome-unstable; echo ""
 wget -nv -O /tmp/chrome.deb "https://dl.google.com/linux/chrome/deb/pool/main/g/google-${BROWSER_PREFIX}/google-${BROWSER_PREFIX}_${BROWSER_VERSION}-1_amd64.deb"
