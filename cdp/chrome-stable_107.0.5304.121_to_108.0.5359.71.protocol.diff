@@ -1,0 +1,271 @@
+--- ./cdp/chrome-stable_107.0.5304.121.protocol.json	2023-01-06 17:24:10.535741568 +0000
++++ ./cdp/chrome-stable_108.0.5359.71.protocol.json	2023-01-06 17:24:32.491885420 +0000
+@@ -1577,18 +1577,17 @@
+             "HostCandidateAttributeGetter",
+             "IdentityInCanMakePaymentEvent",
+             "InsecurePrivateNetworkSubresourceRequest",
+-            "LegacyConstraintGoogIPv6",
+             "LocalCSSFileExtensionRejected",
+             "MediaSourceAbortRemove",
+             "MediaSourceDurationTruncatingBuffered",
+-            "NavigateEventRestoreScroll",
+-            "NavigateEventTransitionWhile",
+             "NoSysexWebMIDIWithoutPermission",
+             "NotificationInsecureOrigin",
+             "NotificationPermissionRequestedIframe",
+             "ObsoleteWebRtcCipherSuite",
+             "OpenWebDatabaseInsecureContext",
+             "OverflowVisibleOnReplacedElement",
++            "PaymentInstruments",
++            "PaymentRequestCSPViolation",
+             "PersistentQuotaType",
+             "PictureSourceSrc",
+             "PrefixedCancelAnimationFrame",
+@@ -11352,6 +11351,22 @@
+           ]
+         },
+         {
++          "id": "AlternateProtocolUsage",
++          "description": "The reason why Chrome uses a specific transport protocol for HTTP semantics.",
++          "experimental": true,
++          "type": "string",
++          "enum": [
++            "alternativeJobWonWithoutRace",
++            "alternativeJobWonRace",
++            "mainJobWonRace",
++            "mappingMissing",
++            "broken",
++            "dnsAlpnH3JobWonWithoutRace",
++            "dnsAlpnH3JobWonRace",
++            "unspecifiedReason"
++          ]
++        },
++        {
+           "id": "Response",
+           "description": "HTTP response data.",
+           "type": "object",
+@@ -11477,6 +11492,13 @@
+               "type": "string"
+             },
+             {
++              "name": "alternateProtocolUsage",
++              "description": "The reason why Chrome uses a specific transport protocol for HTTP semantics.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "AlternateProtocolUsage"
++            },
++            {
+               "name": "securityState",
+               "description": "Security state of the request resource.",
+               "$ref": "Security.SecurityState"
+@@ -15231,6 +15253,7 @@
+             "ch-downlink",
+             "ch-ect",
+             "ch-prefers-color-scheme",
++            "ch-prefers-reduced-motion",
+             "ch-rtt",
+             "ch-save-data",
+             "ch-ua",
+@@ -15257,7 +15280,6 @@
+             "encrypted-media",
+             "execution-while-out-of-viewport",
+             "execution-while-not-rendered",
+-            "federated-credentials",
+             "focus-without-user-activation",
+             "fullscreen",
+             "frobulate",
+@@ -15265,6 +15287,7 @@
+             "geolocation",
+             "gyroscope",
+             "hid",
++            "identity-credentials-get",
+             "idle-detection",
+             "interest-cohort",
+             "join-ad-interest-group",
+@@ -16328,13 +16351,15 @@
+             "AudioOutputDeviceRequested",
+             "MixedContent",
+             "TriggerBackgrounded",
+-            "EmbedderTriggeredAndSameOriginRedirected",
+             "EmbedderTriggeredAndCrossOriginRedirected",
+             "MemoryLimitExceeded",
+             "FailToGetMemoryUsage",
+             "DataSaverEnabled",
+             "HasEffectiveUrl",
+-            "ActivatedBeforeStarted"
++            "ActivatedBeforeStarted",
++            "InactivePageRestriction",
++            "StartFailed",
++            "TimeoutBackgrounded"
+           ]
+         }
+       ],
+@@ -16618,7 +16643,7 @@
+         },
+         {
+           "name": "getCookies",
+-          "description": "Returns all browser cookies. Depending on the backend support, will return detailed cookie\ninformation in the `cookies` field.",
++          "description": "Returns all browser cookies for the page and all of its subframes. Depending\non the backend support, will return detailed cookie information in the\n`cookies` field.",
+           "experimental": true,
+           "deprecated": true,
+           "redirect": "Network",
+@@ -19904,6 +19929,13 @@
+               "experimental": true,
+               "optional": true,
+               "$ref": "Browser.BrowserContextID"
++            },
++            {
++              "name": "subtype",
++              "description": "Provides additional details for specific target types. For example, for\nthe type of \"page\", this may be set to \"portal\" or \"prerender\".",
++              "experimental": true,
++              "optional": true,
++              "type": "string"
+             }
+           ]
+         },
+@@ -21213,6 +21245,13 @@
+               "name": "networkId",
+               "description": "If the intercepted request had a corresponding Network.requestWillBeSent event fired for it,\nthen this networkId will be the same as the requestId present in the requestWillBeSent event.",
+               "optional": true,
++              "$ref": "Network.RequestId"
++            },
++            {
++              "name": "redirectedRequestId",
++              "description": "If the request is due to a redirect response from the server, the id of the request that\nhas caused the redirect.",
++              "experimental": true,
++              "optional": true,
+               "$ref": "RequestId"
+             }
+           ]
+@@ -23844,6 +23883,18 @@
+               "description": "Average sample interval in bytes. Poisson distribution is used for the intervals. The\ndefault value is 32768 bytes.",
+               "optional": true,
+               "type": "number"
++            },
++            {
++              "name": "includeObjectsCollectedByMajorGC",
++              "description": "By default, the sampling heap profiler reports only objects which are\nstill alive when the profile is returned via getSamplingProfile or\nstopSampling, which is useful for determining what functions contribute\nthe most to steady-state memory usage. This flag instructs the sampling\nheap profiler to also include information about objects discarded by\nmajor GC, which will show which functions cause large temporary memory\nusage or long GC pauses.",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
++              "name": "includeObjectsCollectedByMinorGC",
++              "description": "By default, the sampling heap profiler reports only objects which are\nstill alive when the profile is returned via getSamplingProfile or\nstopSampling, which is useful for determining what functions contribute\nthe most to steady-state memory usage. This flag instructs the sampling\nheap profiler to also include information about objects discarded by\nminor GC, which is useful when tuning a latency-sensitive application\nfor minimal GC activity.",
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -24176,66 +24227,6 @@
+               }
+             }
+           ]
+-        },
+-        {
+-          "id": "TypeObject",
+-          "description": "Describes a type collected during runtime.",
+-          "experimental": true,
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "name",
+-              "description": "Name of a type collected with type profiling.",
+-              "type": "string"
+-            }
+-          ]
+-        },
+-        {
+-          "id": "TypeProfileEntry",
+-          "description": "Source offset and types for a parameter or return value.",
+-          "experimental": true,
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "offset",
+-              "description": "Source offset of the parameter or end of function for return values.",
+-              "type": "integer"
+-            },
+-            {
+-              "name": "types",
+-              "description": "The types for this parameter or return value.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "TypeObject"
+-              }
+-            }
+-          ]
+-        },
+-        {
+-          "id": "ScriptTypeProfile",
+-          "description": "Type profile data collected during runtime for a JavaScript script.",
+-          "experimental": true,
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "scriptId",
+-              "description": "JavaScript script id.",
+-              "$ref": "Runtime.ScriptId"
+-            },
+-            {
+-              "name": "url",
+-              "description": "JavaScript script name or url.",
+-              "type": "string"
+-            },
+-            {
+-              "name": "entries",
+-              "description": "Type profile entries for parameters and return values of the functions in the script.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "TypeProfileEntry"
+-              }
+-            }
+-          ]
+         }
+       ],
+       "commands": [
+@@ -24305,11 +24296,6 @@
+           ]
+         },
+         {
+-          "name": "startTypeProfile",
+-          "description": "Enable type profile.",
+-          "experimental": true
+-        },
+-        {
+           "name": "stop",
+           "returns": [
+             {
+@@ -24324,11 +24310,6 @@
+           "description": "Disable precise code coverage. Disabling releases unnecessary execution count records and allows\nexecuting optimized code."
+         },
+         {
+-          "name": "stopTypeProfile",
+-          "description": "Disable type profile. Disabling releases type profile data collected so far.",
+-          "experimental": true
+-        },
+-        {
+           "name": "takePreciseCoverage",
+           "description": "Collect coverage data for the current isolate, and resets execution counters. Precise code\ncoverage needs to have started.",
+           "returns": [
+@@ -24346,21 +24327,6 @@
+               "type": "number"
+             }
+           ]
+-        },
+-        {
+-          "name": "takeTypeProfile",
+-          "description": "Collect type profile.",
+-          "experimental": true,
+-          "returns": [
+-            {
+-              "name": "result",
+-              "description": "Type profile for all scripts since startTypeProfile() was turned on.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "ScriptTypeProfile"
+-              }
+-            }
+-          ]
+         }
+       ],
+       "events": [

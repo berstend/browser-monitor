@@ -1,0 +1,74 @@
+--- ./cdp/chrome-unstable_110.0.5449.0.protocol.json	2023-01-06 17:36:35.512895470 +0000
++++ ./cdp/chrome-unstable_110.0.5464.2.protocol.json	2023-01-06 17:36:59.605054774 +0000
+@@ -2182,7 +2182,8 @@
+           "type": "string",
+           "enum": [
+             "granted",
+-            "denied"
++            "denied",
++            "prompt"
+           ]
+         },
+         {
+@@ -16293,6 +16294,7 @@
+             "InjectedStyleSheet",
+             "KeepaliveRequest",
+             "Dummy",
++            "AuthorizationHeader",
+             "ContentSecurityHandler",
+             "ContentWebAuthenticationAPI",
+             "ContentFileChooser",
+@@ -19192,6 +19194,7 @@
+             "join",
+             "leave",
+             "update",
++            "loaded",
+             "bid",
+             "win"
+           ]
+@@ -21195,7 +21198,7 @@
+         },
+         {
+           "name": "dataCollected",
+-          "description": "Contains an bucket of collected trace events. When tracing is stopped collected events will be\nsend as a sequence of dataCollected events followed by tracingComplete event.",
++          "description": "Contains a bucket of collected trace events. When tracing is stopped collected events will be\nsent as a sequence of dataCollected events followed by tracingComplete event.",
+           "parameters": [
+             {
+               "name": "value",
+@@ -22467,6 +22470,36 @@
+             }
+           ]
+         }
++      ],
++      "events": [
++        {
++          "name": "credentialAdded",
++          "description": "Triggered when a credential is added to an authenticator.",
++          "parameters": [
++            {
++              "name": "authenticatorId",
++              "$ref": "AuthenticatorId"
++            },
++            {
++              "name": "credential",
++              "$ref": "Credential"
++            }
++          ]
++        },
++        {
++          "name": "credentialAsserted",
++          "description": "Triggered when a credential is used in a webauthn assertion.",
++          "parameters": [
++            {
++              "name": "authenticatorId",
++              "$ref": "AuthenticatorId"
++            },
++            {
++              "name": "credential",
++              "$ref": "Credential"
++            }
++          ]
++        }
+       ]
+     },
+     {

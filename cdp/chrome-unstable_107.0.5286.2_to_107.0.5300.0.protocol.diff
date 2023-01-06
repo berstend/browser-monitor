@@ -1,0 +1,30 @@
+--- ./cdp/chrome-unstable_107.0.5286.2.protocol.json	2023-01-06 17:30:54.070625280 +0000
++++ ./cdp/chrome-unstable_107.0.5300.0.protocol.json	2023-01-06 17:31:20.098772920 +0000
+@@ -1448,6 +1448,7 @@
+           "type": "string",
+           "enum": [
+             "PermissionPolicyDisabled",
++            "PermissionPolicyNotDelegated",
+             "UntrustworthyReportingOrigin",
+             "InsecureContext",
+             "InvalidHeader",
+@@ -6204,7 +6205,7 @@
+             },
+             {
+               "name": "previousNodeId",
+-              "description": "If of the previous siblint.",
++              "description": "Id of the previous sibling.",
+               "$ref": "NodeId"
+             },
+             {
+@@ -17901,8 +17902,8 @@
+               "$ref": "PrerenderFinalStatus"
+             },
+             {
+-              "name": "reasonDetails",
+-              "description": "This is used to give users more information about the cancellation details,\nand this will be formatted for display.",
++              "name": "disallowedApiMethod",
++              "description": "This is used to give users more information about the name of the API call\nthat is incompatible with prerender and has caused the cancellation of the attempt",
+               "optional": true,
+               "type": "string"
+             }

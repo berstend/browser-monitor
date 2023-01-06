@@ -1,0 +1,53 @@
+--- ./cdp/chrome-unstable_105.0.5191.2.protocol.json	2023-01-06 17:27:41.337328298 +0000
++++ ./cdp/chrome-unstable_105.0.5195.10.protocol.json	2023-01-06 17:28:05.853472880 +0000
+@@ -282,6 +282,12 @@
+               "$ref": "AXValue"
+             },
+             {
++              "name": "chromeRole",
++              "description": "This `Node`'s Chrome raw role.",
++              "optional": true,
++              "$ref": "AXValue"
++            },
++            {
+               "name": "name",
+               "description": "The accessible name for this `Node`.",
+               "optional": true,
+@@ -1571,11 +1577,14 @@
+             "LocalCSSFileExtensionRejected",
+             "MediaSourceAbortRemove",
+             "MediaSourceDurationTruncatingBuffered",
++            "NavigateEventRestoreScroll",
++            "NavigateEventTransitionWhile",
+             "NoSysexWebMIDIWithoutPermission",
+             "NotificationInsecureOrigin",
+             "NotificationPermissionRequestedIframe",
+             "ObsoleteWebRtcCipherSuite",
+             "OpenWebDatabaseInsecureContext",
++            "OverflowVisibleOnReplacedElement",
+             "PictureSourceSrc",
+             "PrefixedCancelAnimationFrame",
+             "PrefixedRequestAnimationFrame",
+@@ -19107,6 +19116,22 @@
+               "type": "string"
+             },
+             {
++              "name": "storageTypes",
++              "description": "Comma separated list of StorageType to clear.",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "name": "clearDataForStorageKey",
++          "description": "Clears storage for storage key.",
++          "parameters": [
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "type": "string"
++            },
++            {
+               "name": "storageTypes",
+               "description": "Comma separated list of StorageType to clear.",
+               "type": "string"

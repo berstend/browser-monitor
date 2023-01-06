@@ -1,0 +1,32 @@
+--- ./cdp/chrome-unstable_110.0.5478.4.protocol.json	2023-01-06 17:37:23.733214730 +0000
++++ ./cdp/chrome-unstable_110.0.5481.24.protocol.json	2023-01-06 17:37:45.897362334 +0000
+@@ -1534,7 +1534,8 @@
+           "id": "GenericIssueErrorType",
+           "type": "string",
+           "enum": [
+-            "CrossOriginPortalPostMessageError"
++            "CrossOriginPortalPostMessageError",
++            "FormLabelForNameError"
+           ]
+         },
+         {
+@@ -1551,6 +1552,11 @@
+               "name": "frameId",
+               "optional": true,
+               "$ref": "Page.FrameId"
++            },
++            {
++              "name": "violatingNodeId",
++              "optional": true,
++              "$ref": "DOM.BackendNodeId"
+             }
+           ]
+         },
+@@ -13932,6 +13938,7 @@
+                 "ResourceExhausted",
+                 "AlreadyExists",
+                 "Unavailable",
++                "Unauthorized",
+                 "BadResponse",
+                 "InternalError",
+                 "UnknownError",

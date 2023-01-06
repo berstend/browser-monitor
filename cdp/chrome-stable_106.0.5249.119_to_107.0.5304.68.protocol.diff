@@ -1,0 +1,52 @@
+--- ./cdp/chrome-stable_106.0.5249.119.protocol.json	2023-01-06 17:22:44.191180978 +0000
++++ ./cdp/chrome-stable_107.0.5304.68.protocol.json	2023-01-06 17:23:06.859331573 +0000
+@@ -1658,7 +1658,7 @@
+           "description": "Represents the failure reason when a federated authentication reason fails.\nShould be updated alongside RequestIdTokenStatus in\nthird_party/blink/public/mojom/devtools/inspector_issue.mojom to include\nall cases except for success.",
+           "type": "string",
+           "enum": [
+-            "ApprovalDeclined",
++            "ShouldEmbargo",
+             "TooManyRequests",
+             "ManifestListHttpNotFound",
+             "ManifestListNoResponse",
+@@ -1682,7 +1682,8 @@
+             "IdTokenInvalidResponse",
+             "IdTokenInvalidRequest",
+             "ErrorIdToken",
+-            "Canceled"
++            "Canceled",
++            "RpPageNotVisible"
+           ]
+         },
+         {
+@@ -6204,7 +6205,7 @@
+             },
+             {
+               "name": "previousNodeId",
+-              "description": "If of the previous siblint.",
++              "description": "Id of the previous sibling.",
+               "$ref": "NodeId"
+             },
+             {
+@@ -16331,7 +16332,9 @@
+             "EmbedderTriggeredAndCrossOriginRedirected",
+             "MemoryLimitExceeded",
+             "FailToGetMemoryUsage",
+-            "DataSaverEnabled"
++            "DataSaverEnabled",
++            "HasEffectiveUrl",
++            "ActivatedBeforeStarted"
+           ]
+         }
+       ],
+@@ -17900,8 +17903,8 @@
+               "$ref": "PrerenderFinalStatus"
+             },
+             {
+-              "name": "reasonDetails",
+-              "description": "This is used to give users more information about the cancellation details,\nand this will be formatted for display.",
++              "name": "disallowedApiMethod",
++              "description": "This is used to give users more information about the name of the API call\nthat is incompatible with prerender and has caused the cancellation of the attempt",
+               "optional": true,
+               "type": "string"
+             }

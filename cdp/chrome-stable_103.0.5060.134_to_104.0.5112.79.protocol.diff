@@ -1,0 +1,289 @@
+--- ./cdp/chrome-stable_103.0.5060.134.protocol.json	2023-01-06 17:19:28.265878838 +0000
++++ ./cdp/chrome-stable_104.0.5112.79.protocol.json	2023-01-06 17:19:49.666021700 +0000
+@@ -1447,7 +1447,7 @@
+         },
+         {
+           "id": "AttributionReportingIssueDetails",
+-          "description": "Details for issues around \"Attribution Reporting API\" usage.\nExplainer: https://github.com/WICG/conversion-measurement-api",
++          "description": "Details for issues around \"Attribution Reporting API\" usage.\nExplainer: https://github.com/WICG/attribution-reporting-api",
+           "type": "object",
+           "properties": [
+             {
+@@ -1557,7 +1557,6 @@
+             "CrossOriginWindowAlert",
+             "CrossOriginWindowConfirm",
+             "CSSSelectorInternalMediaControlsOverlayCastButton",
+-            "CustomCursorIntersectsViewport",
+             "DeprecationExample",
+             "DocumentDomainSettingWithoutOriginAgentClusterHeader",
+             "EventPath",
+@@ -1565,18 +1564,17 @@
+             "GeolocationInsecureOriginDeprecatedNotRemoved",
+             "GetUserMediaInsecureOrigin",
+             "HostCandidateAttributeGetter",
++            "IdentityInCanMakePaymentEvent",
+             "InsecurePrivateNetworkSubresourceRequest",
+             "LegacyConstraintGoogIPv6",
+             "LocalCSSFileExtensionRejected",
+-            "MediaElementAudioSourceNode",
+             "MediaSourceAbortRemove",
+             "MediaSourceDurationTruncatingBuffered",
+             "NoSysexWebMIDIWithoutPermission",
+             "NotificationInsecureOrigin",
+             "NotificationPermissionRequestedIframe",
+             "ObsoleteWebRtcCipherSuite",
+-            "PaymentRequestBasicCard",
+-            "PaymentRequestShowWithoutGesture",
++            "OpenWebDatabaseInsecureContext",
+             "PictureSourceSrc",
+             "PrefixedCancelAnimationFrame",
+             "PrefixedRequestAnimationFrame",
+@@ -1594,7 +1592,6 @@
+             "RTCPeerConnectionComplexPlanBSdpUsingDefaultSdpSemantics",
+             "RTCPeerConnectionSdpSemanticsPlanB",
+             "RtcpMuxPolicyNegotiate",
+-            "RTPDataChannel",
+             "SharedArrayBufferConstructedWithoutIsolation",
+             "TextToSpeech_DisallowedByAutoplay",
+             "V8SharedArrayBufferConstructedInExtensionWithoutIsolation",
+@@ -2693,6 +2690,12 @@
+               "$ref": "DOM.PseudoType"
+             },
+             {
++              "name": "pseudoIdentifier",
++              "description": "Pseudo element custom ident.",
++              "optional": true,
++              "type": "string"
++            },
++            {
+               "name": "matches",
+               "description": "Matches of CSS rules applicable to the pseudo style.",
+               "type": "array",
+@@ -3446,6 +3449,11 @@
+               "type": "string"
+             },
+             {
++              "name": "fontDisplay",
++              "description": "The font-display.",
++              "type": "string"
++            },
++            {
+               "name": "unicodeRange",
+               "description": "The unicode-range.",
+               "type": "string"
+@@ -4737,6 +4745,12 @@
+               "$ref": "PseudoType"
+             },
+             {
++              "name": "pseudoIdentifier",
++              "description": "Pseudo element identifier for this node. Only present if there is a\nvalid pseudoType.",
++              "optional": true,
++              "type": "string"
++            },
++            {
+               "name": "shadowRootType",
+               "description": "Shadow root type.",
+               "optional": true,
+@@ -4804,6 +4818,11 @@
+               "name": "compatibilityMode",
+               "optional": true,
+               "$ref": "CompatibilityMode"
++            },
++            {
++              "name": "assignedSlot",
++              "optional": true,
++              "$ref": "BackendNode"
+             }
+           ]
+         },
+@@ -7075,6 +7094,12 @@
+               "$ref": "RareStringData"
+             },
+             {
++              "name": "pseudoIdentifier",
++              "description": "Pseudo element identifier for this node. Only present if there is a\nvalid pseudoType.",
++              "optional": true,
++              "$ref": "RareStringData"
++            },
++            {
+               "name": "isClickable",
+               "description": "Whether this DOM node responds to mouse clicks. This includes nodes that have had click\nevent listeners attached via JavaScript as well as anchor tags that naturally navigate when\nclicked.",
+               "optional": true,
+@@ -7469,21 +7494,6 @@
+               "type": "string"
+             }
+           ]
+-        },
+-        {
+-          "name": "getStorageKeyForFrame",
+-          "parameters": [
+-            {
+-              "name": "frameId",
+-              "$ref": "Page.FrameId"
+-            }
+-          ],
+-          "returns": [
+-            {
+-              "name": "storageKey",
+-              "$ref": "SerializedStorageKey"
+-            }
+-          ]
+         }
+       ],
+       "events": [
+@@ -8319,6 +8329,17 @@
+           ]
+         },
+         {
++          "name": "setHardwareConcurrencyOverride",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "hardwareConcurrency",
++              "description": "Hardware concurrency to report",
++              "type": "integer"
++            }
++          ]
++        },
++        {
+           "name": "setUserAgentOverride",
+           "description": "Allows overriding user agent with the given string.",
+           "parameters": [
+@@ -12070,9 +12091,10 @@
+           "enum": [
+             "SameOrigin",
+             "SameOriginAllowPopups",
++            "RestrictProperties",
+             "UnsafeNone",
+             "SameOriginPlusCoep",
+-            "SameOriginAllowPopupsPlusCoep"
++            "RestrictPropertiesPlusCoep"
+           ]
+         },
+         {
+@@ -14965,6 +14987,24 @@
+           ]
+         },
+         {
++          "id": "AdScriptId",
++          "description": "Identifies the bottom-most script which caused the frame to be labelled\nas an ad.",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "scriptId",
++              "description": "Script Id of the bottom-most script which caused the frame to be labelled\nas an ad.",
++              "$ref": "Runtime.ScriptId"
++            },
++            {
++              "name": "debuggerId",
++              "description": "Id of adScriptId's debugger.",
++              "$ref": "Runtime.UniqueDebuggerId"
++            }
++          ]
++        },
++        {
+           "id": "SecureContextType",
+           "description": "Indicates whether the frame is a secure context and why it is the case.",
+           "experimental": true,
+@@ -15008,6 +15048,7 @@
+             "ambient-light-sensor",
+             "attribution-reporting",
+             "autoplay",
++            "bluetooth",
+             "browsing-topics",
+             "camera",
+             "ch-dpr",
+@@ -15992,7 +16033,6 @@
+             "ContentMediaDevicesDispatcherHost",
+             "ContentWebBluetooth",
+             "ContentWebUSB",
+-            "ContentMediaSession",
+             "ContentMediaSessionService",
+             "ContentScreenReader",
+             "EmbedderPopupBlockerTabHelper",
+@@ -17336,6 +17376,13 @@
+               "description": "JavaScript stack trace of when frame was attached, only set if frame initiated from script.",
+               "optional": true,
+               "$ref": "Runtime.StackTrace"
++            },
++            {
++              "name": "adScriptId",
++              "description": "Identifies the bottom-most script which caused the frame to be labelled\nas an ad. Only sent if frame is labelled as an ad and id is available.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "AdScriptId"
+             }
+           ]
+         },
+@@ -18930,6 +18977,22 @@
+       ],
+       "commands": [
+         {
++          "name": "getStorageKeyForFrame",
++          "description": "Returns a storage key given a frame id.",
++          "parameters": [
++            {
++              "name": "frameId",
++              "$ref": "Page.FrameId"
++            }
++          ],
++          "returns": [
++            {
++              "name": "storageKey",
++              "$ref": "SerializedStorageKey"
++            }
++          ]
++        },
++        {
+           "name": "clearDataForOrigin",
+           "description": "Clears storage for origin.",
+           "parameters": [
+@@ -22453,19 +22516,29 @@
+         },
+         {
+           "name": "restartFrame",
+-          "description": "Restarts particular call frame from the beginning.",
+-          "deprecated": true,
++          "description": "Restarts particular call frame from the beginning. The old, deprecated\nbehavior of `restartFrame` is to stay paused and allow further CDP commands\nafter a restart was scheduled. This can cause problems with restarting, so\nwe now continue execution immediatly after it has been scheduled until we\nreach the beginning of the restarted frame.\n\nTo stay back-wards compatible, `restartFrame` now expects a `mode`\nparameter to be present. If the `mode` parameter is missing, `restartFrame`\nerrors out.\n\nThe various return values are deprecated and `callFrames` is always empty.\nUse the call frames from the `Debugger#paused` events instead, that fires\nonce V8 pauses at the beginning of the restarted function.",
+           "parameters": [
+             {
+               "name": "callFrameId",
+               "description": "Call frame identifier to evaluate on.",
+               "$ref": "CallFrameId"
++            },
++            {
++              "name": "mode",
++              "description": "The `mode` parameter must be present and set to 'StepInto', otherwise\n`restartFrame` will error out.",
++              "experimental": true,
++              "optional": true,
++              "type": "string",
++              "enum": [
++                "StepInto"
++              ]
+             }
+           ],
+           "returns": [
+             {
+               "name": "callFrames",
+               "description": "New stack trace.",
++              "deprecated": true,
+               "type": "array",
+               "items": {
+                 "$ref": "CallFrame"
+@@ -22474,13 +22547,14 @@
+             {
+               "name": "asyncStackTrace",
+               "description": "Async stack trace, if any.",
++              "deprecated": true,
+               "optional": true,
+               "$ref": "Runtime.StackTrace"
+             },
+             {
+               "name": "asyncStackTraceId",
+               "description": "Async stack trace, if any.",
+-              "experimental": true,
++              "deprecated": true,
+               "optional": true,
+               "$ref": "Runtime.StackTraceId"
+             }

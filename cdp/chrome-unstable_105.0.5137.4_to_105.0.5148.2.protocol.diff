@@ -1,0 +1,48 @@
+--- ./cdp/chrome-unstable_105.0.5137.4.protocol.json	2023-01-06 17:26:30.048801169 +0000
++++ ./cdp/chrome-unstable_105.0.5148.2.protocol.json	2023-01-06 17:26:53.484975976 +0000
+@@ -4043,6 +4043,32 @@
+           ]
+         },
+         {
++          "name": "setScopeText",
++          "description": "Modifies the expression of a scope at-rule.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "styleSheetId",
++              "$ref": "StyleSheetId"
++            },
++            {
++              "name": "range",
++              "$ref": "SourceRange"
++            },
++            {
++              "name": "text",
++              "type": "string"
++            }
++          ],
++          "returns": [
++            {
++              "name": "scope",
++              "description": "The resulting CSS Scope rule after modification.",
++              "$ref": "CSSScope"
++            }
++          ]
++        },
++        {
+           "name": "setRuleSelector",
+           "description": "Modifies the rule selector.",
+           "parameters": [
+@@ -20277,6 +20303,12 @@
+               ]
+             },
+             {
++              "name": "traceBufferSizeInKb",
++              "description": "Size of the trace buffer in kilobytes. If not specified or zero is passed, a default value\nof 200 MB would be used.",
++              "optional": true,
++              "type": "number"
++            },
++            {
+               "name": "enableSampling",
+               "description": "Turns on JavaScript stack sampling.",
+               "optional": true,

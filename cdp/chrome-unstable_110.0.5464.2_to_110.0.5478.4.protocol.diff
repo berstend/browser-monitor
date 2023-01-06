@@ -1,0 +1,75 @@
+--- ./cdp/chrome-unstable_110.0.5464.2.protocol.json	2023-01-06 17:36:59.605054774 +0000
++++ ./cdp/chrome-unstable_110.0.5478.4.protocol.json	2023-01-06 17:37:23.733214730 +0000
+@@ -1660,14 +1660,14 @@
+           "enum": [
+             "ShouldEmbargo",
+             "TooManyRequests",
+-            "ManifestListHttpNotFound",
+-            "ManifestListNoResponse",
+-            "ManifestListInvalidResponse",
+-            "ManifestNotInManifestList",
+-            "ManifestListTooBig",
+-            "ManifestHttpNotFound",
+-            "ManifestNoResponse",
+-            "ManifestInvalidResponse",
++            "WellKnownHttpNotFound",
++            "WellKnownNoResponse",
++            "WellKnownInvalidResponse",
++            "ConfigNotInWellKnown",
++            "WellKnownTooBig",
++            "ConfigHttpNotFound",
++            "ConfigNoResponse",
++            "ConfigInvalidResponse",
+             "ClientMetadataHttpNotFound",
+             "ClientMetadataNoResponse",
+             "ClientMetadataInvalidResponse",
+@@ -8060,7 +8060,6 @@
+           "type": "string",
+           "enum": [
+             "avif",
+-            "jxl",
+             "webp"
+           ]
+         }
+@@ -15372,6 +15371,7 @@
+             "serial",
+             "shared-autofill",
+             "shared-storage",
++            "smart-card",
+             "storage-access",
+             "sync-xhr",
+             "trust-token-redemption",
+@@ -16432,7 +16432,9 @@
+             "SameSiteCrossOriginNavigation",
+             "SameSiteCrossOriginRedirectNotOptIn",
+             "SameSiteCrossOriginNavigationNotOptIn",
+-            "ActivationNavigationParameterMismatch"
++            "ActivationNavigationParameterMismatch",
++            "ActivatedInBackground",
++            "EmbedderHostDisallowed"
+           ]
+         }
+       ],
+@@ -20251,6 +20253,22 @@
+             }
+           ]
+         },
++        {
++          "name": "getFeatureState",
++          "description": "Returns information about the feature state.",
++          "parameters": [
++            {
++              "name": "featureState",
++              "type": "string"
++            }
++          ],
++          "returns": [
++            {
++              "name": "featureEnabled",
++              "type": "boolean"
++            }
++          ]
++        },
+         {
+           "name": "getProcessInfo",
+           "description": "Returns information about all running processes.",

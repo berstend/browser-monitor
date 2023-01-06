@@ -1,0 +1,129 @@
+--- ./cdp/chrome-unstable_108.0.5343.2.protocol.json	2023-01-06 17:32:57.215453294 +0000
++++ ./cdp/chrome-unstable_108.0.5355.0.protocol.json	2023-01-06 17:33:21.007611013 +0000
+@@ -21245,6 +21245,13 @@
+               "name": "networkId",
+               "description": "If the intercepted request had a corresponding Network.requestWillBeSent event fired for it,\nthen this networkId will be the same as the requestId present in the requestWillBeSent event.",
+               "optional": true,
++              "$ref": "Network.RequestId"
++            },
++            {
++              "name": "redirectedRequestId",
++              "description": "If the request is due to a redirect response from the server, the id of the request that\nhas caused the redirect.",
++              "experimental": true,
++              "optional": true,
+               "$ref": "RequestId"
+             }
+           ]
+@@ -24220,66 +24227,6 @@
+               }
+             }
+           ]
+-        },
+-        {
+-          "id": "TypeObject",
+-          "description": "Describes a type collected during runtime.",
+-          "experimental": true,
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "name",
+-              "description": "Name of a type collected with type profiling.",
+-              "type": "string"
+-            }
+-          ]
+-        },
+-        {
+-          "id": "TypeProfileEntry",
+-          "description": "Source offset and types for a parameter or return value.",
+-          "experimental": true,
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "offset",
+-              "description": "Source offset of the parameter or end of function for return values.",
+-              "type": "integer"
+-            },
+-            {
+-              "name": "types",
+-              "description": "The types for this parameter or return value.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "TypeObject"
+-              }
+-            }
+-          ]
+-        },
+-        {
+-          "id": "ScriptTypeProfile",
+-          "description": "Type profile data collected during runtime for a JavaScript script.",
+-          "experimental": true,
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "scriptId",
+-              "description": "JavaScript script id.",
+-              "$ref": "Runtime.ScriptId"
+-            },
+-            {
+-              "name": "url",
+-              "description": "JavaScript script name or url.",
+-              "type": "string"
+-            },
+-            {
+-              "name": "entries",
+-              "description": "Type profile entries for parameters and return values of the functions in the script.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "TypeProfileEntry"
+-              }
+-            }
+-          ]
+         }
+       ],
+       "commands": [
+@@ -24349,11 +24296,6 @@
+           ]
+         },
+         {
+-          "name": "startTypeProfile",
+-          "description": "Enable type profile.",
+-          "experimental": true
+-        },
+-        {
+           "name": "stop",
+           "returns": [
+             {
+@@ -24368,11 +24310,6 @@
+           "description": "Disable precise code coverage. Disabling releases unnecessary execution count records and allows\nexecuting optimized code."
+         },
+         {
+-          "name": "stopTypeProfile",
+-          "description": "Disable type profile. Disabling releases type profile data collected so far.",
+-          "experimental": true
+-        },
+-        {
+           "name": "takePreciseCoverage",
+           "description": "Collect coverage data for the current isolate, and resets execution counters. Precise code\ncoverage needs to have started.",
+           "returns": [
+@@ -24390,21 +24327,6 @@
+               "type": "number"
+             }
+           ]
+-        },
+-        {
+-          "name": "takeTypeProfile",
+-          "description": "Collect type profile.",
+-          "experimental": true,
+-          "returns": [
+-            {
+-              "name": "result",
+-              "description": "Type profile for all scripts since startTypeProfile() was turned on.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "ScriptTypeProfile"
+-              }
+-            }
+-          ]
+         }
+       ],
+       "events": [

@@ -1,0 +1,11 @@
+--- ./cdp/chrome-unstable_106.0.5245.0.protocol.json	2023-01-06 17:29:41.586137560 +0000
++++ ./cdp/chrome-unstable_106.0.5249.12.protocol.json	2023-01-06 17:30:05.306300509 +0000
+@@ -15280,7 +15280,7 @@
+             "serial",
+             "shared-autofill",
+             "shared-storage",
+-            "storage-access-api",
++            "storage-access",
+             "sync-xhr",
+             "trust-token-redemption",
+             "unload",

@@ -1,0 +1,31 @@
+--- ./cdp/chrome-unstable_106.0.5249.21.protocol.json	2023-01-06 17:30:28.878461789 +0000
++++ ./cdp/chrome-unstable_107.0.5286.2.protocol.json	2023-01-06 17:30:54.070625280 +0000
+@@ -1657,7 +1657,7 @@
+           "description": "Represents the failure reason when a federated authentication reason fails.\nShould be updated alongside RequestIdTokenStatus in\nthird_party/blink/public/mojom/devtools/inspector_issue.mojom to include\nall cases except for success.",
+           "type": "string",
+           "enum": [
+-            "ApprovalDeclined",
++            "ShouldEmbargo",
+             "TooManyRequests",
+             "ManifestListHttpNotFound",
+             "ManifestListNoResponse",
+@@ -1681,7 +1681,8 @@
+             "IdTokenInvalidResponse",
+             "IdTokenInvalidRequest",
+             "ErrorIdToken",
+-            "Canceled"
++            "Canceled",
++            "RpPageNotVisible"
+           ]
+         },
+         {
+@@ -16330,7 +16331,8 @@
+             "EmbedderTriggeredAndCrossOriginRedirected",
+             "MemoryLimitExceeded",
+             "FailToGetMemoryUsage",
+-            "DataSaverEnabled"
++            "DataSaverEnabled",
++            "HasEffectiveUrl"
+           ]
+         }
+       ],

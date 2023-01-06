@@ -1,0 +1,31 @@
+--- ./cdp/chrome-unstable_106.0.5231.2.protocol.json	2023-01-06 17:29:17.885970611 +0000
++++ ./cdp/chrome-unstable_106.0.5245.0.protocol.json	2023-01-06 17:29:41.586137560 +0000
+@@ -3167,6 +3167,16 @@
+               "description": "The entire property range in the enclosing style declaration (if available).",
+               "optional": true,
+               "$ref": "SourceRange"
++            },
++            {
++              "name": "longhandProperties",
++              "description": "Parsed longhand components of this property if it is a shorthand.\nThis field will be empty if the given property is not a shorthand.",
++              "experimental": true,
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "CSSProperty"
++              }
+             }
+           ]
+         },
+@@ -16318,9 +16328,9 @@
+             "TriggerBackgrounded",
+             "EmbedderTriggeredAndSameOriginRedirected",
+             "EmbedderTriggeredAndCrossOriginRedirected",
+-            "EmbedderTriggeredAndDestroyed",
+             "MemoryLimitExceeded",
+-            "FailToGetMemoryUsage"
++            "FailToGetMemoryUsage",
++            "DataSaverEnabled"
+           ]
+         }
+       ],

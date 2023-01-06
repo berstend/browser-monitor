@@ -1,0 +1,51 @@
+--- ./cdp/chrome-unstable_106.0.5216.6.protocol.json	2023-01-06 17:28:54.333793311 +0000
++++ ./cdp/chrome-unstable_106.0.5231.2.protocol.json	2023-01-06 17:29:17.885970611 +0000
+@@ -1453,7 +1453,10 @@
+             "InvalidHeader",
+             "InvalidRegisterTriggerHeader",
+             "InvalidEligibleHeader",
+-            "TooManyConcurrentRequests"
++            "TooManyConcurrentRequests",
++            "SourceAndTriggerHeaders",
++            "SourceIgnored",
++            "TriggerIgnored"
+           ]
+         },
+         {
+@@ -1667,7 +1670,6 @@
+             "ClientMetadataHttpNotFound",
+             "ClientMetadataNoResponse",
+             "ClientMetadataInvalidResponse",
+-            "ClientMetadataMissingPrivacyPolicyUrl",
+             "DisabledInSettings",
+             "ErrorFetchingSignin",
+             "InvalidSigninResponse",
+@@ -15271,6 +15273,7 @@
+             "storage-access-api",
+             "sync-xhr",
+             "trust-token-redemption",
++            "unload",
+             "usb",
+             "vertical-scroll",
+             "web-share",
+@@ -17870,6 +17873,7 @@
+         {
+           "name": "prerenderAttemptCompleted",
+           "description": "Fired when a prerender attempt is completed.",
++          "experimental": true,
+           "parameters": [
+             {
+               "name": "initiatingFrameId",
+@@ -17883,6 +17887,12 @@
+             {
+               "name": "finalStatus",
+               "$ref": "PrerenderFinalStatus"
++            },
++            {
++              "name": "reasonDetails",
++              "description": "This is used to give users more information about the cancellation details,\nand this will be formatted for display.",
++              "optional": true,
++              "type": "string"
+             }
+           ]
+         },

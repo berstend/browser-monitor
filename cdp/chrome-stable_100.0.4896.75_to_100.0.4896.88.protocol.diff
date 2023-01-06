@@ -1,0 +1,10 @@
+--- ./cdp/chrome-stable_100.0.4896.75.protocol.json	2023-01-06 17:15:53.804420290 +0000
++++ ./cdp/chrome-stable_100.0.4896.88.protocol.json	2023-01-06 17:16:18.936607501 +0000
+@@ -15733,6 +15733,7 @@
+             "NoResponseHead",
+             "Unknown",
+             "ActivationNavigationsDisallowedForBug1234857",
++            "ErrorDocument",
+             "WebSocket",
+             "WebTransport",
+             "WebRTC",

@@ -1,0 +1,96 @@
+--- ./cdp/chrome-unstable_108.0.5327.0.protocol.json	2023-01-06 17:32:32.571290557 +0000
++++ ./cdp/chrome-unstable_108.0.5343.2.protocol.json	2023-01-06 17:32:57.215453294 +0000
+@@ -11351,6 +11351,22 @@
+           ]
+         },
+         {
++          "id": "AlternateProtocolUsage",
++          "description": "The reason why Chrome uses a specific transport protocol for HTTP semantics.",
++          "experimental": true,
++          "type": "string",
++          "enum": [
++            "alternativeJobWonWithoutRace",
++            "alternativeJobWonRace",
++            "mainJobWonRace",
++            "mappingMissing",
++            "broken",
++            "dnsAlpnH3JobWonWithoutRace",
++            "dnsAlpnH3JobWonRace",
++            "unspecifiedReason"
++          ]
++        },
++        {
+           "id": "Response",
+           "description": "HTTP response data.",
+           "type": "object",
+@@ -11476,6 +11492,13 @@
+               "type": "string"
+             },
+             {
++              "name": "alternateProtocolUsage",
++              "description": "The reason why Chrome uses a specific transport protocol for HTTP semantics.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "AlternateProtocolUsage"
++            },
++            {
+               "name": "securityState",
+               "description": "Security state of the request resource.",
+               "$ref": "Security.SecurityState"
+@@ -15230,6 +15253,7 @@
+             "ch-downlink",
+             "ch-ect",
+             "ch-prefers-color-scheme",
++            "ch-prefers-reduced-motion",
+             "ch-rtt",
+             "ch-save-data",
+             "ch-ua",
+@@ -15256,7 +15280,6 @@
+             "encrypted-media",
+             "execution-while-out-of-viewport",
+             "execution-while-not-rendered",
+-            "federated-credentials",
+             "focus-without-user-activation",
+             "fullscreen",
+             "frobulate",
+@@ -15264,6 +15287,7 @@
+             "geolocation",
+             "gyroscope",
+             "hid",
++            "identity-credentials-get",
+             "idle-detection",
+             "interest-cohort",
+             "join-ad-interest-group",
+@@ -16334,7 +16358,8 @@
+             "HasEffectiveUrl",
+             "ActivatedBeforeStarted",
+             "InactivePageRestriction",
+-            "StartFailed"
++            "StartFailed",
++            "TimeoutBackgrounded"
+           ]
+         }
+       ],
+@@ -16618,7 +16643,7 @@
+         },
+         {
+           "name": "getCookies",
+-          "description": "Returns all browser cookies. Depending on the backend support, will return detailed cookie\ninformation in the `cookies` field.",
++          "description": "Returns all browser cookies for the page and all of its subframes. Depending\non the backend support, will return detailed cookie information in the\n`cookies` field.",
+           "experimental": true,
+           "deprecated": true,
+           "redirect": "Network",
+@@ -19904,6 +19929,13 @@
+               "experimental": true,
+               "optional": true,
+               "$ref": "Browser.BrowserContextID"
++            },
++            {
++              "name": "subtype",
++              "description": "Provides additional details for specific target types. For example, for\nthe type of \"page\", this may be set to \"portal\" or \"prerender\".",
++              "experimental": true,
++              "optional": true,
++              "type": "string"
+             }
+           ]
+         },

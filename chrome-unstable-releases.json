@@ -25,6 +25,13 @@
       "added": 1,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "c135d76b",
+      "commandsCount": 544,
+      "commandsHash": "cb11c807",
+      "eventsCount": 175,
+      "eventsHash": "78fd263b"
+    },
     "previousHashes": {
       "angle": "4a4ae726c449b719fc3d2ff258c0cded8adb07bd",
       "chromium": "a6c7124878de3fc9602a49d7e2a2d7aa752e8980",
@@ -61,6 +68,13 @@
       "count": 7768,
       "added": 27,
       "removed": 19
+    },
+    "cdp": {
+      "protocolHash": "31da1d20",
+      "commandsCount": 544,
+      "commandsHash": "cb11c807",
+      "eventsCount": 175,
+      "eventsHash": "78fd263b"
     },
     "previousHashes": {
       "angle": "dad69cc70e0284438a0126c703300da9328ef74b",
@@ -99,6 +113,13 @@
       "added": 0,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "b73ea0ae",
+      "commandsCount": 543,
+      "commandsHash": "6ef2fe8b",
+      "eventsCount": 175,
+      "eventsHash": "78fd263b"
+    },
     "previousHashes": {
       "angle": "541cdcbf094fd900f085d14cb896f11240393f0c",
       "chromium": "7bd91fd3e508edb3a40450766475e9f7d903127e",
@@ -135,6 +156,13 @@
       "count": 7760,
       "added": 68,
       "removed": 1
+    },
+    "cdp": {
+      "protocolHash": "8ef5a17d",
+      "commandsCount": 543,
+      "commandsHash": "6ef2fe8b",
+      "eventsCount": 173,
+      "eventsHash": "cba3eeca"
     },
     "previousHashes": {
       "angle": "92a0efdfb244eb3fefe56ae469581e70e07f9ed5",
@@ -173,6 +201,13 @@
       "added": 0,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "f73a77e1",
+      "commandsCount": 541,
+      "commandsHash": "7dafe34a",
+      "eventsCount": 173,
+      "eventsHash": "1c6a9a44"
+    },
     "previousHashes": {
       "angle": "92a0efdfb244eb3fefe56ae469581e70e07f9ed5",
       "chromium": "44d98d5c18ecae9804451d0504b76c0ab05ccd4b",
@@ -209,6 +244,13 @@
       "count": 7693,
       "added": 8,
       "removed": 8
+    },
+    "cdp": {
+      "protocolHash": "f73a77e1",
+      "commandsCount": 541,
+      "commandsHash": "7dafe34a",
+      "eventsCount": 173,
+      "eventsHash": "1c6a9a44"
     },
     "previousHashes": {
       "angle": "fbf2d2f36442b768600e7de23468068f9cb6165d",
@@ -247,6 +289,13 @@
       "added": 109,
       "removed": 2
     },
+    "cdp": {
+      "protocolHash": "9e13f68a",
+      "commandsCount": 541,
+      "commandsHash": "7dafe34a",
+      "eventsCount": 173,
+      "eventsHash": "1c6a9a44"
+    },
     "previousHashes": {
       "angle": "31a090ca17d7db450e9e1a8074a3ccde6c81e995",
       "chromium": "aa3ce52456002758b4372ecc88b01a467c7e183c",
@@ -283,6 +332,13 @@
       "count": 7586,
       "added": 0,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "df60b109",
+      "commandsCount": 538,
+      "commandsHash": "821f9e96",
+      "eventsCount": 174,
+      "eventsHash": "c9b67c9a"
     },
     "previousHashes": {
       "angle": "9b9d8032c104bcf76a00431f687287e3e5d1017a",
@@ -321,6 +377,13 @@
       "added": 1,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "f5ea75b8",
+      "commandsCount": 536,
+      "commandsHash": "5bd21508",
+      "eventsCount": 173,
+      "eventsHash": "c1ef7e7c"
+    },
     "previousHashes": {
       "angle": "96bbc80b87000005dbec2a8034e37deec91538a3",
       "chromium": "a0e5bd711e1f447d66ccaf812e605788794414c4",
@@ -357,6 +420,13 @@
       "count": 7585,
       "added": 0,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "d9489a8c",
+      "commandsCount": 533,
+      "commandsHash": "d223dec7",
+      "eventsCount": 173,
+      "eventsHash": "75a2f3f9"
     },
     "previousHashes": {
       "angle": "96bbc80b87000005dbec2a8034e37deec91538a3",
@@ -395,6 +465,13 @@
       "added": 23,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "d9489a8c",
+      "commandsCount": 533,
+      "commandsHash": "d223dec7",
+      "eventsCount": 173,
+      "eventsHash": "75a2f3f9"
+    },
     "previousHashes": {
       "angle": "6eff905c7c38044deb74e16a479eae796ed4f46d",
       "chromium": "6bf2ddf6fab8f91079d1c1a56ad91001712708fb",
@@ -431,6 +508,13 @@
       "count": 7562,
       "added": 0,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "d9489a8c",
+      "commandsCount": 533,
+      "commandsHash": "d223dec7",
+      "eventsCount": 173,
+      "eventsHash": "75a2f3f9"
     },
     "previousHashes": {
       "angle": "d8489db5bc7ebda25581c4fcb1dd12577f95840b",
@@ -469,6 +553,13 @@
       "added": 13,
       "removed": 2
     },
+    "cdp": {
+      "protocolHash": "1115cdb9",
+      "commandsCount": 536,
+      "commandsHash": "b7734890",
+      "eventsCount": 173,
+      "eventsHash": "476d5c3c"
+    },
     "previousHashes": {
       "angle": "f65554d9554a87fb7a816029daca9ed7093dadfa",
       "chromium": "45c4073a84d16e238d83118212c5c6e2b2031a9f",
@@ -505,6 +596,13 @@
       "count": 7551,
       "added": 5,
       "removed": 2
+    },
+    "cdp": {
+      "protocolHash": "5b8b42e0",
+      "commandsCount": 536,
+      "commandsHash": "b7734890",
+      "eventsCount": 173,
+      "eventsHash": "476d5c3c"
     },
     "previousHashes": {
       "angle": "8c62c5bd06c154893e81c442659aee67e4c6ad0c",
@@ -543,6 +641,13 @@
       "added": 0,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "a6d61494",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "476d5c3c"
+    },
     "previousHashes": {
       "angle": "8c62c5bd06c154893e81c442659aee67e4c6ad0c",
       "chromium": "350ac85ffb2bb0404a625026b55e2dd3d1b67b82",
@@ -579,6 +684,13 @@
       "count": 7548,
       "added": 6,
       "removed": 4
+    },
+    "cdp": {
+      "protocolHash": "a6d61494",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "476d5c3c"
     },
     "previousHashes": {
       "angle": "d375547ced52fc3aee7a29828a838980e43c75ce",
@@ -617,6 +729,13 @@
       "added": 4,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "e47d824b",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "476d5c3c"
+    },
     "previousHashes": {
       "angle": "c2ad74e4e519b05568713dfdd256c504fbf64501",
       "chromium": "c56df426c44f666d562b55f49188128b6b17607a",
@@ -653,6 +772,13 @@
       "count": 7542,
       "added": 1,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "3deb4077",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "bd8ae51f"
     },
     "previousHashes": {
       "angle": "428b6788d71120c833f029aa4e24903fa811f77b",
@@ -691,6 +817,13 @@
       "added": 0,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "23bc9eee",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "bd8ae51f"
+    },
     "previousHashes": {
       "angle": "428b6788d71120c833f029aa4e24903fa811f77b",
       "chromium": "7de2361b6a9000c4c5a79c0d2c9dc9b244185f75",
@@ -727,6 +860,13 @@
       "count": 7541,
       "added": 1,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "23bc9eee",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "bd8ae51f"
     },
     "previousHashes": {
       "angle": "6ee6fac97f2a1c651439299cc1d76a2a70c961fe",
@@ -765,6 +905,13 @@
       "added": 0,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "a0eec37b",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "bd8ae51f"
+    },
     "previousHashes": {
       "angle": "2c35135180285c722687620d9d7caa4e2bba6a03",
       "chromium": "f916392fc58427600be6782c65cb94a3bf77b13f",
@@ -801,6 +948,13 @@
       "count": 7540,
       "added": 5,
       "removed": 9
+    },
+    "cdp": {
+      "protocolHash": "8db6ef00",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "bd8ae51f"
     },
     "previousHashes": {
       "angle": "f62b4b9408e76f8c292fba6c10ddc94480de4f0d",
@@ -839,6 +993,13 @@
       "added": 3,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "fe0ab23b",
+      "commandsCount": 536,
+      "commandsHash": "f633f56c",
+      "eventsCount": 173,
+      "eventsHash": "f7ddb6d1"
+    },
     "previousHashes": {
       "angle": "d0fe12db855d057ecca7fc1f0fa9e37f1d9a40f2",
       "chromium": "8e0cbddc8eeae678fd23a763c1d724f55cf0ed9c",
@@ -875,6 +1036,13 @@
       "count": 7541,
       "added": 4,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "d3ff51e2",
+      "commandsCount": 534,
+      "commandsHash": "3624c4b0",
+      "eventsCount": 173,
+      "eventsHash": "59299507"
     },
     "previousHashes": {
       "angle": "d0fe12db855d057ecca7fc1f0fa9e37f1d9a40f2",
@@ -913,6 +1081,13 @@
       "added": 9,
       "removed": 0
     },
+    "cdp": {
+      "protocolHash": "d3ff51e2",
+      "commandsCount": 534,
+      "commandsHash": "3624c4b0",
+      "eventsCount": 173,
+      "eventsHash": "59299507"
+    },
     "previousHashes": {
       "angle": "b47603e0448d6cedd5d56b8ca4a2658702fcdfb1",
       "chromium": "ddd2043c027c2b5b02f4fb61655c1269a34ed5a0",
@@ -949,6 +1124,13 @@
       "count": 7528,
       "added": 46,
       "removed": 12
+    },
+    "cdp": {
+      "protocolHash": "f980ea41",
+      "commandsCount": 533,
+      "commandsHash": "10f1f41a",
+      "eventsCount": 173,
+      "eventsHash": "59299507"
     },
     "previousHashes": {
       "angle": "61e01483252d668c02c41eff5cc8dc4d84bb811f",
@@ -987,6 +1169,13 @@
       "added": 2,
       "removed": 2
     },
+    "cdp": {
+      "protocolHash": "dc71316c",
+      "commandsCount": 531,
+      "commandsHash": "83baee63",
+      "eventsCount": 173,
+      "eventsHash": "59299507"
+    },
     "previousHashes": {
       "angle": "f86904290e1154bf72689987e78e735069d760e1",
       "chromium": "586795e2a98dde5aa9b3f134e8d0a71fcc35efaf",
@@ -1023,6 +1212,13 @@
       "count": 7494,
       "added": 0,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "e0c2f44e",
+      "commandsCount": 531,
+      "commandsHash": "83baee63",
+      "eventsCount": 173,
+      "eventsHash": "59299507"
     },
     "previousHashes": {
       "angle": "dfbdc35133b373e25b1ff4553dc378de67dee863",
@@ -1061,6 +1257,13 @@
       "added": 23,
       "removed": 1
     },
+    "cdp": {
+      "protocolHash": "3f3f3936",
+      "commandsCount": 530,
+      "commandsHash": "e18a7273",
+      "eventsCount": 173,
+      "eventsHash": "59299507"
+    },
     "previousHashes": {
       "angle": "4e37ec8c021e5739e720d2847ac814f8eef296a6",
       "chromium": "72b273c668adc6e6fd74b01572d87dc52c5a0788",
@@ -1097,6 +1300,13 @@
       "count": 7472,
       "added": 0,
       "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "3eefd1f9",
+      "commandsCount": 529,
+      "commandsHash": "7fc4f3d7",
+      "eventsCount": 172,
+      "eventsHash": "d7552461"
     }
   }
 ]

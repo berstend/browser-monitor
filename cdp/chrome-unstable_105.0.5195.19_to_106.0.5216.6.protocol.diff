@@ -1,0 +1,343 @@
+--- ./cdp/chrome-unstable_105.0.5195.19.protocol.json	2023-01-06 17:28:29.793623711 +0000
++++ ./cdp/chrome-unstable_106.0.5216.6.protocol.json	2023-01-06 17:28:54.333793311 +0000
+@@ -991,7 +991,8 @@
+             "ExcludeSameSiteLax",
+             "ExcludeSameSiteStrict",
+             "ExcludeInvalidSameParty",
+-            "ExcludeSamePartyCrossPartyContext"
++            "ExcludeSamePartyCrossPartyContext",
++            "ExcludeDomainNonASCII"
+           ]
+         },
+         {
+@@ -1006,7 +1007,8 @@
+             "WarnSameSiteStrictCrossDowngradeLax",
+             "WarnSameSiteLaxCrossDowngradeStrict",
+             "WarnSameSiteLaxCrossDowngradeLax",
+-            "WarnAttributeValueExceedsMaxSize"
++            "WarnAttributeValueExceedsMaxSize",
++            "WarnDomainNonASCII"
+           ]
+         },
+         {
+@@ -1446,9 +1448,12 @@
+           "type": "string",
+           "enum": [
+             "PermissionPolicyDisabled",
+-            "AttributionSourceUntrustworthyOrigin",
+-            "AttributionUntrustworthyOrigin",
+-            "InvalidHeader"
++            "UntrustworthyReportingOrigin",
++            "InsecureContext",
++            "InvalidHeader",
++            "InvalidRegisterTriggerHeader",
++            "InvalidEligibleHeader",
++            "TooManyConcurrentRequests"
+           ]
+         },
+         {
+@@ -1461,11 +1466,6 @@
+               "$ref": "AttributionReportingIssueType"
+             },
+             {
+-              "name": "frame",
+-              "optional": true,
+-              "$ref": "AffectedFrame"
+-            },
+-            {
+               "name": "request",
+               "optional": true,
+               "$ref": "AffectedRequest"
+@@ -1585,6 +1585,7 @@
+             "ObsoleteWebRtcCipherSuite",
+             "OpenWebDatabaseInsecureContext",
+             "OverflowVisibleOnReplacedElement",
++            "PersistentQuotaType",
+             "PictureSourceSrc",
+             "PrefixedCancelAnimationFrame",
+             "PrefixedRequestAnimationFrame",
+@@ -8897,7 +8898,14 @@
+           "parameters": [
+             {
+               "name": "securityOrigin",
+-              "description": "Security origin.",
++              "description": "At least and at most one of securityOrigin, storageKey must be specified.\nSecurity origin.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "optional": true,
+               "type": "string"
+             },
+             {
+@@ -8918,7 +8926,14 @@
+           "parameters": [
+             {
+               "name": "securityOrigin",
+-              "description": "Security origin.",
++              "description": "At least and at most one of securityOrigin, storageKey must be specified.\nSecurity origin.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "optional": true,
+               "type": "string"
+             },
+             {
+@@ -8934,6 +8949,14 @@
+           "parameters": [
+             {
+               "name": "securityOrigin",
++              "description": "At least and at most one of securityOrigin, storageKey must be specified.\nSecurity origin.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "optional": true,
+               "type": "string"
+             },
+             {
+@@ -8965,7 +8988,14 @@
+           "parameters": [
+             {
+               "name": "securityOrigin",
+-              "description": "Security origin.",
++              "description": "At least and at most one of securityOrigin, storageKey must be specified.\nSecurity origin.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "optional": true,
+               "type": "string"
+             },
+             {
+@@ -9022,7 +9052,14 @@
+           "parameters": [
+             {
+               "name": "securityOrigin",
+-              "description": "Security origin.",
++              "description": "At least and at most one of securityOrigin, storageKey must be specified.\nSecurity origin.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "optional": true,
+               "type": "string"
+             },
+             {
+@@ -9055,7 +9092,14 @@
+           "parameters": [
+             {
+               "name": "securityOrigin",
+-              "description": "Security origin.",
++              "description": "At least and at most one of securityOrigin, storageKey must be specified.\nSecurity origin.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "optional": true,
+               "type": "string"
+             },
+             {
+@@ -9078,7 +9122,14 @@
+           "parameters": [
+             {
+               "name": "securityOrigin",
+-              "description": "Security origin.",
++              "description": "At least and at most one of securityOrigin, storageKey must be specified.\nSecurity origin.",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "optional": true,
+               "type": "string"
+             }
+           ],
+@@ -16264,7 +16315,9 @@
+             "TriggerBackgrounded",
+             "EmbedderTriggeredAndSameOriginRedirected",
+             "EmbedderTriggeredAndCrossOriginRedirected",
+-            "EmbedderTriggeredAndDestroyed"
++            "EmbedderTriggeredAndDestroyed",
++            "MemoryLimitExceeded",
++            "FailToGetMemoryUsage"
+           ]
+         }
+       ],
+@@ -19269,6 +19322,17 @@
+           ]
+         },
+         {
++          "name": "trackIndexedDBForStorageKey",
++          "description": "Registers storage key to be notified when an update occurs to its IndexedDB.",
++          "parameters": [
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "name": "untrackCacheStorageForOrigin",
+           "description": "Unregisters origin from receiving notifications for cache storage.",
+           "parameters": [
+@@ -19291,6 +19355,17 @@
+           ]
+         },
+         {
++          "name": "untrackIndexedDBForStorageKey",
++          "description": "Unregisters storage key from receiving notifications for IndexedDB.",
++          "parameters": [
++            {
++              "name": "storageKey",
++              "description": "Storage key.",
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "name": "getTrustTokens",
+           "description": "Returns the number of stored Trust Tokens per issuer for the\ncurrent browsing context.",
+           "experimental": true,
+@@ -19393,6 +19468,11 @@
+               "type": "string"
+             },
+             {
++              "name": "storageKey",
++              "description": "Storage key to update.",
++              "type": "string"
++            },
++            {
+               "name": "databaseName",
+               "description": "Database to update.",
+               "type": "string"
+@@ -19412,6 +19492,11 @@
+               "name": "origin",
+               "description": "Origin to update.",
+               "type": "string"
++            },
++            {
++              "name": "storageKey",
++              "description": "Storage key to update.",
++              "type": "string"
+             }
+           ]
+         },
+@@ -19799,6 +19884,35 @@
+           ]
+         },
+         {
++          "id": "FilterEntry",
++          "description": "A filter used by target query/discovery/auto-attach operations.",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "exclude",
++              "description": "If set, causes exclusion of mathcing targets from the list.",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
++              "name": "type",
++              "description": "If not present, matches any type.",
++              "optional": true,
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "id": "TargetFilter",
++          "description": "The entries in TargetFilter are matched sequentially against targets and\nthe first entry that matches determines if the target is included or not,\ndepending on the value of `exclude` field in the entry.\nIf filter is not specified, the one assumed is\n[{type: \"browser\", exclude: true}, {type: \"tab\", exclude: true}, {}]\n(i.e. include everything but `browser` and `tab`).",
++          "experimental": true,
++          "type": "array",
++          "items": {
++            "$ref": "FilterEntry"
++          }
++        },
++        {
+           "id": "RemoteLocation",
+           "experimental": true,
+           "type": "object",
+@@ -20058,6 +20172,15 @@
+         {
+           "name": "getTargets",
+           "description": "Retrieves a list of available targets.",
++          "parameters": [
++            {
++              "name": "filter",
++              "description": "Only targets matching filter will be reported. If filter is not specified\nand target discovery is currently enabled, a filter used for target discovery\nis used for consistency.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "TargetFilter"
++            }
++          ],
+           "returns": [
+             {
+               "name": "targetInfos",
+@@ -20113,6 +20236,13 @@
+               "description": "Enables \"flat\" access to the session via specifying sessionId attribute in the commands.\nWe plan to make this the default, deprecate non-flattened mode,\nand eventually retire it. See crbug.com/991325.",
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "filter",
++              "description": "Only targets matching filter will be attached.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "TargetFilter"
+             }
+           ]
+         },
+@@ -20129,6 +20259,13 @@
+               "name": "waitForDebuggerOnStart",
+               "description": "Whether to pause new targets when attaching to them. Use `Runtime.runIfWaitingForDebugger`\nto run paused targets.",
+               "type": "boolean"
++            },
++            {
++              "name": "filter",
++              "description": "Only targets matching filter will be attached.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "TargetFilter"
+             }
+           ]
+         },
+@@ -20140,6 +20277,13 @@
+               "name": "discover",
+               "description": "Whether to discover available targets.",
+               "type": "boolean"
++            },
++            {
++              "name": "filter",
++              "description": "Only targets matching filter will be attached. If `discover` is false,\n`filter` must be omitted or empty.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "TargetFilter"
+             }
+           ]
+         },
+@@ -22635,7 +22779,7 @@
+             },
+             {
+               "name": "functionBodyOffsets",
+-              "description": "The offsets of all function bodies plus one additional entry pointing\none by past the end of the last function.",
++              "description": "The offsets of all function bodies, in the format [start1, end1,\nstart2, end2, ...] where all ends are exclusive.",
+               "type": "array",
+               "items": {
+                 "type": "integer"
