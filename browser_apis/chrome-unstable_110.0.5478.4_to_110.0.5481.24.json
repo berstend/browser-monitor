@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "110.0.5478.4",
+    "to": "110.0.5481.24"
+  },
+  "browserApis": {
+    "added": [
+      "FileSystemDirectoryHandle.prototype.remove"
+    ],
+    "removed": []
+  }
+}
