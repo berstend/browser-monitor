@@ -1,0 +1,9 @@
+--- ./browser_apis/chrome-unstable_110.0.5481.24.json	2023-01-12 01:06:42.368955572 +0000
++++ ./browser_apis/chrome-unstable_110.0.5481.30.json	2023-01-12 01:07:06.612756926 +0000
+@@ -1,6 +1,5 @@
+ {
+   "browser": "chrome-unstable",
+-  "version": "110.0.0.0",
+   "browserApiCount": 7769,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
