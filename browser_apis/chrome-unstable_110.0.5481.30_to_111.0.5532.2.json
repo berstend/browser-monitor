@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "110.0.5481.30",
+    "to": "111.0.5532.2"
+  },
+  "browserApis": {
+    "added": [
+      "ArrayBuffer.prototype.maxByteLength",
+      "ArrayBuffer.prototype.resizable",
+      "ArrayBuffer.prototype.resize",
+      "XRSession.prototype.enabledFeatures"
+    ],
+    "removed": []
+  }
+}

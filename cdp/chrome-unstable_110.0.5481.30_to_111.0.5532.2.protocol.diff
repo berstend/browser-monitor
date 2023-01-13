@@ -1,0 +1,132 @@
+--- ./cdp/chrome-unstable_110.0.5481.30.protocol.json	2023-01-13 01:06:59.500082388 +0000
++++ ./cdp/chrome-unstable_111.0.5532.2.protocol.json	2023-01-13 01:07:34.944570549 +0000
+@@ -1669,6 +1669,7 @@
+             "WellKnownHttpNotFound",
+             "WellKnownNoResponse",
+             "WellKnownInvalidResponse",
++            "WellKnownListEmpty",
+             "ConfigNotInWellKnown",
+             "WellKnownTooBig",
+             "ConfigHttpNotFound",
+@@ -1683,6 +1684,7 @@
+             "AccountsHttpNotFound",
+             "AccountsNoResponse",
+             "AccountsInvalidResponse",
++            "AccountsListEmpty",
+             "IdTokenHttpNotFound",
+             "IdTokenNoResponse",
+             "IdTokenInvalidResponse",
+@@ -2175,6 +2177,7 @@
+             "protectedMediaIdentifier",
+             "sensors",
+             "storageAccess",
++            "topLevelStorageAccess",
+             "videoCapture",
+             "videoCapturePanTiltZoom",
+             "wakeLockScreen",
+@@ -12789,7 +12792,8 @@
+         },
+         {
+           "name": "getAllCookies",
+-          "description": "Returns all browser cookies. Depending on the backend support, will return detailed cookie\ninformation in the `cookies` field.",
++          "description": "Returns all browser cookies. Depending on the backend support, will return detailed cookie\ninformation in the `cookies` field.\nDeprecated. Use Storage.getCookies instead.",
++          "deprecated": true,
+           "returns": [
+             {
+               "name": "cookies",
+@@ -15372,12 +15376,14 @@
+             "otp-credentials",
+             "payment",
+             "picture-in-picture",
++            "private-aggregation",
+             "publickey-credentials-get",
+             "run-ad-auction",
+             "screen-wake-lock",
+             "serial",
+             "shared-autofill",
+             "shared-storage",
++            "shared-storage-select-url",
+             "smart-card",
+             "storage-access",
+             "sync-xhr",
+@@ -16300,6 +16306,7 @@
+             "InjectedJavascript",
+             "InjectedStyleSheet",
+             "KeepaliveRequest",
++            "IndexedDBEvent",
+             "Dummy",
+             "AuthorizationHeader",
+             "ContentSecurityHandler",
+@@ -16441,7 +16448,10 @@
+             "SameSiteCrossOriginNavigationNotOptIn",
+             "ActivationNavigationParameterMismatch",
+             "ActivatedInBackground",
+-            "EmbedderHostDisallowed"
++            "EmbedderHostDisallowed",
++            "ActivationNavigationDestroyedBeforeSuccess",
++            "TabClosedByUserGesture",
++            "TabClosedWithoutUserGesture"
+           ]
+         }
+       ],
+@@ -19836,6 +19846,17 @@
+           ]
+         },
+         {
++          "name": "resetSharedStorageBudget",
++          "description": "Resets the budget for `ownerOrigin` by clearing all budget withdrawals.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "ownerOrigin",
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "name": "setSharedStorageTracking",
+           "description": "Enables/disables issuing of sharedStorageAccessed events.",
+           "experimental": true,
+@@ -20592,6 +20613,13 @@
+               "description": "Whether to create the target in background or foreground (chrome-only,\nfalse by default).",
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "forTab",
++              "description": "Whether to create the target of type \"tab\".",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ],
+           "returns": [
+@@ -25684,6 +25712,13 @@
+               "type": "boolean"
+             },
+             {
++              "name": "uniqueContextId",
++              "description": "An alternative way to specify the execution context to call function on.\nCompared to contextId that may be reused across processes, this is guaranteed to be\nsystem-unique, so it can be used to prevent accidental function call\nin context different than intended (e.g. as a result of navigation across process\nboundaries).\nThis is mutually exclusive with `executionContextId`.",
++              "experimental": true,
++              "optional": true,
++              "type": "string"
++            },
++            {
+               "name": "generateWebDriverValue",
+               "description": "Whether the result should contain `webDriverValue`, serialized according to\nhttps://w3c.github.io/webdriver-bidi. This is mutually exclusive with `returnByValue`, but\nresulting `objectId` is still provided.",
+               "experimental": true,
+@@ -26343,7 +26378,14 @@
+             {
+               "name": "executionContextId",
+               "description": "Id of the destroyed context",
++              "deprecated": true,
+               "$ref": "ExecutionContextId"
++            },
++            {
++              "name": "executionContextUniqueId",
++              "description": "Unique Id of the destroyed context",
++              "experimental": true,
++              "type": "string"
+             }
+           ]
+         },

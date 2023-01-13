@@ -1527,6 +1527,40 @@ Added 41 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_99.0.4844.84
   
 ### chrome-unstable
   
+#### 111.0.5532.2 (`2023-1-12`) ⚡
+Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_110.0.5481.30_to_111.0.5532.2.diff), [json](./browser_apis/chrome-unstable_110.0.5481.30_to_111.0.5532.2.json), [full list](./browser_apis/chrome-unstable_111.0.5532.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_110.0.5481.30.json	2023-01-13 01:06:59.416081258 +0000
++++ ./browser_apis/chrome-unstable_111.0.5532.2.json	2023-01-13 01:07:34.936570431 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7769,
++  "browserApiCount": 7773,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -117,6 +117,9 @@
+     "ArrayBuffer.isView",
+     "ArrayBuffer.prototype",
+     "ArrayBuffer.prototype.byteLength",
++    "ArrayBuffer.prototype.maxByteLength",
++    "ArrayBuffer.prototype.resizable",
++    "ArrayBuffer.prototype.resize",
+     "ArrayBuffer.prototype.slice",
+     "Atomics",
+     "Atomics.add",
+@@ -7299,6 +7302,7 @@
+     "XRSession.prototype.depthDataFormat",
+     "XRSession.prototype.depthUsage",
+     "XRSession.prototype.domOverlayState",
++    "XRSession.prototype.enabledFeatures",
+     "XRSession.prototype.end",
+     "XRSession.prototype.environmentBlendMode",
+     "XRSession.prototype.inputSources",
+```
+
+  
 #### 110.0.5481.30 (`2023-1-11`) 
 No browser API changes.
 
@@ -2875,110 +2909,5 @@ Added 2 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_105.0.5148.2
   
 #### 105.0.5148.2 (`2022-6-30`) 
 No browser API changes.
-
-  
-#### 105.0.5137.4 (`2022-6-24`) ⚡
-Added 23 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_104.0.5112.20_to_105.0.5137.4.diff), [json](./browser_apis/chrome-unstable_104.0.5112.20_to_105.0.5137.4.json), [full list](./browser_apis/chrome-unstable_105.0.5137.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_104.0.5112.20.json	2023-01-06 17:09:06.264548112 +0000
-+++ ./browser_apis/chrome-unstable_105.0.5137.4.json	2023-01-06 17:09:06.264548112 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
--  "version": "104.0.5112.20",
--  "browserApiCount": 7472,
-+  "version": "105.0.0.0",
-+  "browserApiCount": 7494,
-   "browserApis": [
-     "AbortController",
-     "AbortController.prototype",
-@@ -417,6 +417,12 @@
-     "CSS.Q",
-     "CSS.ch",
-     "CSS.cm",
-+    "CSS.cqb",
-+    "CSS.cqh",
-+    "CSS.cqi",
-+    "CSS.cqmax",
-+    "CSS.cqmin",
-+    "CSS.cqw",
-     "CSS.deg",
-     "CSS.dpcm",
-     "CSS.dpi",
-@@ -449,6 +455,8 @@
-     "CSSAnimation",
-     "CSSAnimation.prototype",
-     "CSSAnimation.prototype.animationName",
-+    "CSSContainerRule",
-+    "CSSContainerRule.prototype",
-     "CSSCounterStyleRule",
-     "CSSCounterStyleRule.prototype",
-     "CSSCounterStyleRule.prototype.additiveSymbols",
-@@ -1631,6 +1639,8 @@
-     "HTMLFormElement.prototype.method",
-     "HTMLFormElement.prototype.name",
-     "HTMLFormElement.prototype.noValidate",
-+    "HTMLFormElement.prototype.rel",
-+    "HTMLFormElement.prototype.relList",
-     "HTMLFormElement.prototype.reportValidity",
-     "HTMLFormElement.prototype.requestSubmit",
-     "HTMLFormElement.prototype.reset",
-@@ -1788,6 +1798,7 @@
-     "HTMLLinkElement",
-     "HTMLLinkElement.prototype",
-     "HTMLLinkElement.prototype.as",
-+    "HTMLLinkElement.prototype.blocking",
-     "HTMLLinkElement.prototype.charset",
-     "HTMLLinkElement.prototype.crossOrigin",
-     "HTMLLinkElement.prototype.disabled",
-@@ -1936,6 +1947,7 @@
-     "HTMLScriptElement",
-     "HTMLScriptElement.prototype",
-     "HTMLScriptElement.prototype.async",
-+    "HTMLScriptElement.prototype.blocking",
-     "HTMLScriptElement.prototype.charset",
-     "HTMLScriptElement.prototype.crossOrigin",
-     "HTMLScriptElement.prototype.defer",
-@@ -1994,6 +2006,7 @@
-     "HTMLSpanElement.prototype",
-     "HTMLStyleElement",
-     "HTMLStyleElement.prototype",
-+    "HTMLStyleElement.prototype.blocking",
-     "HTMLStyleElement.prototype.disabled",
-     "HTMLStyleElement.prototype.media",
-     "HTMLStyleElement.prototype.sheet",
-@@ -3012,6 +3025,7 @@
-     "Navigator.prototype.webkitGetUserMedia",
-     "Navigator.prototype.webkitPersistentStorage",
-     "Navigator.prototype.webkitTemporaryStorage",
-+    "Navigator.prototype.windowControlsOverlay",
-     "Navigator.prototype.xr",
-     "NavigatorManagedData",
-     "NavigatorManagedData.prototype",
-@@ -5959,7 +5973,6 @@
-     "WebAssembly.CompileError.prototype",
-     "WebAssembly.Exception",
-     "WebAssembly.Exception.prototype",
--    "WebAssembly.Exception.prototype.constructor",
-     "WebAssembly.Exception.prototype.getArg",
-     "WebAssembly.Exception.prototype.is",
-     "WebAssembly.Global",
-@@ -6578,6 +6591,15 @@
-     "WheelEvent.prototype.y",
-     "Window",
-     "Window.prototype",
-+    "WindowControlsOverlay",
-+    "WindowControlsOverlay.prototype",
-+    "WindowControlsOverlay.prototype.getTitlebarAreaRect",
-+    "WindowControlsOverlay.prototype.ongeometrychange",
-+    "WindowControlsOverlay.prototype.visible",
-+    "WindowControlsOverlayGeometryChangeEvent",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
-+    "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
-     "Worker",
-     "Worker.prototype",
-     "Worker.prototype.onerror",
-```
 
   <!-- browserapis:end -->
