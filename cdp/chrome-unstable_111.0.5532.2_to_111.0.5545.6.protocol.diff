@@ -1,0 +1,37 @@
+--- ./cdp/chrome-unstable_111.0.5532.2.protocol.json	2023-01-20 12:26:15.231299427 +0000
++++ ./cdp/chrome-unstable_111.0.5545.6.protocol.json	2023-01-20 12:26:41.021053209 +0000
+@@ -1535,7 +1535,9 @@
+           "type": "string",
+           "enum": [
+             "CrossOriginPortalPostMessageError",
+-            "FormLabelForNameError"
++            "FormLabelForNameError",
++            "FormDuplicateIdForInputError",
++            "FormInputWithNoLabelError"
+           ]
+         },
+         {
+@@ -8010,6 +8012,7 @@
+           "properties": [
+             {
+               "name": "brands",
++              "description": "Brands appearing in Sec-CH-UA.",
+               "optional": true,
+               "type": "array",
+               "items": {
+@@ -8018,6 +8021,7 @@
+             },
+             {
+               "name": "fullVersionList",
++              "description": "Brands appearing in Sec-CH-UA-Full-Version-List.",
+               "optional": true,
+               "type": "array",
+               "items": {
+@@ -15392,6 +15396,7 @@
+             "usb",
+             "vertical-scroll",
+             "web-share",
++            "window-management",
+             "window-placement",
+             "xr-spatial-tracking"
+           ]
