@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 109.0.5414.119 (`2023-1-24`) 
+No browser API changes.
+
+  
 #### 109.0.5414.74 (`2023-1-10`) ⚡
 Added 110 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_108.0.5359.124_to_109.0.5414.74.diff), [json](./browser_apis/chrome-stable_108.0.5359.124_to_109.0.5414.74.json), [full list](./browser_apis/chrome-stable_109.0.5414.74.json))
  ```diff
@@ -1392,137 +1396,6 @@ No browser API changes.
   
 #### 100.0.4896.75 (`2022-4-4`) 
 No browser API changes.
-
-  
-#### 100.0.4896.60 (`2022-3-29`) ⚡
-Added 41 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_99.0.4844.84_to_100.0.4896.60.diff), [json](./browser_apis/chrome-stable_99.0.4844.84_to_100.0.4896.60.json), [full list](./browser_apis/chrome-stable_100.0.4896.60.json))
- ```diff
---- ./browser_apis/chrome-stable_99.0.4844.84.json	2023-01-06 17:09:06.252548098 +0000
-+++ ./browser_apis/chrome-stable_100.0.4896.60.json	2023-01-06 17:09:06.204548043 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-stable",
--  "version": "99.0.4844.84",
--  "browserApiCount": 7341,
-+  "version": "100.0.4896.60",
-+  "browserApiCount": 7364,
-   "browserApis": [
-     "AbortController",
-     "AbortController.prototype",
-@@ -13,6 +13,7 @@
-     "AbortSignal.prototype.aborted",
-     "AbortSignal.prototype.onabort",
-     "AbortSignal.prototype.reason",
-+    "AbortSignal.prototype.throwIfAborted",
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-     "AbsoluteOrientationSensor.prototype.constructor",
-@@ -487,6 +488,11 @@
-     "CSSLayerStatementRule",
-     "CSSLayerStatementRule.prototype",
-     "CSSLayerStatementRule.prototype.nameList",
-+    "CSSMathClamp",
-+    "CSSMathClamp.prototype",
-+    "CSSMathClamp.prototype.lower",
-+    "CSSMathClamp.prototype.upper",
-+    "CSSMathClamp.prototype.value",
-     "CSSMathInvert",
-     "CSSMathInvert.prototype",
-     "CSSMathInvert.prototype.value",
-@@ -665,8 +671,25 @@
-     "CacheStorage.prototype.open",
-     "CanvasCaptureMediaStreamTrack",
-     "CanvasCaptureMediaStreamTrack.prototype",
-+    "CanvasCaptureMediaStreamTrack.prototype.applyConstraints",
-     "CanvasCaptureMediaStreamTrack.prototype.canvas",
-+    "CanvasCaptureMediaStreamTrack.prototype.clone",
-+    "CanvasCaptureMediaStreamTrack.prototype.constructor",
-+    "CanvasCaptureMediaStreamTrack.prototype.contentHint",
-+    "CanvasCaptureMediaStreamTrack.prototype.enabled",
-+    "CanvasCaptureMediaStreamTrack.prototype.getCapabilities",
-+    "CanvasCaptureMediaStreamTrack.prototype.getConstraints",
-+    "CanvasCaptureMediaStreamTrack.prototype.getSettings",
-+    "CanvasCaptureMediaStreamTrack.prototype.id",
-+    "CanvasCaptureMediaStreamTrack.prototype.kind",
-+    "CanvasCaptureMediaStreamTrack.prototype.label",
-+    "CanvasCaptureMediaStreamTrack.prototype.muted",
-+    "CanvasCaptureMediaStreamTrack.prototype.onended",
-+    "CanvasCaptureMediaStreamTrack.prototype.onmute",
-+    "CanvasCaptureMediaStreamTrack.prototype.onunmute",
-+    "CanvasCaptureMediaStreamTrack.prototype.readyState",
-     "CanvasCaptureMediaStreamTrack.prototype.requestFrame",
-+    "CanvasCaptureMediaStreamTrack.prototype.stop",
-     "CanvasFilter",
-     "CanvasFilter.prototype",
-     "CanvasGradient",
-@@ -1375,6 +1398,7 @@
-     "HIDDevice.prototype",
-     "HIDDevice.prototype.close",
-     "HIDDevice.prototype.collections",
-+    "HIDDevice.prototype.forget",
-     "HIDDevice.prototype.oninputreport",
-     "HIDDevice.prototype.open",
-     "HIDDevice.prototype.opened",
-@@ -2758,24 +2782,6 @@
-     "MediaStreamEvent",
-     "MediaStreamEvent.prototype",
-     "MediaStreamEvent.prototype.stream",
--    "MediaStreamTrack",
--    "MediaStreamTrack.prototype",
--    "MediaStreamTrack.prototype.applyConstraints",
--    "MediaStreamTrack.prototype.clone",
--    "MediaStreamTrack.prototype.contentHint",
--    "MediaStreamTrack.prototype.enabled",
--    "MediaStreamTrack.prototype.getCapabilities",
--    "MediaStreamTrack.prototype.getConstraints",
--    "MediaStreamTrack.prototype.getSettings",
--    "MediaStreamTrack.prototype.id",
--    "MediaStreamTrack.prototype.kind",
--    "MediaStreamTrack.prototype.label",
--    "MediaStreamTrack.prototype.muted",
--    "MediaStreamTrack.prototype.onended",
--    "MediaStreamTrack.prototype.onmute",
--    "MediaStreamTrack.prototype.onunmute",
--    "MediaStreamTrack.prototype.readyState",
--    "MediaStreamTrack.prototype.stop",
-     "MediaStreamTrackEvent",
-     "MediaStreamTrackEvent.prototype",
-     "MediaStreamTrackEvent.prototype.track",
-@@ -4996,9 +5002,25 @@
-     "Screen.prototype.availWidth",
-     "Screen.prototype.colorDepth",
-     "Screen.prototype.height",
-+    "Screen.prototype.isExtended",
-+    "Screen.prototype.onchange",
-     "Screen.prototype.orientation",
-     "Screen.prototype.pixelDepth",
-     "Screen.prototype.width",
-+    "ScreenDetailed",
-+    "ScreenDetailed.prototype",
-+    "ScreenDetailed.prototype.devicePixelRatio",
-+    "ScreenDetailed.prototype.isInternal",
-+    "ScreenDetailed.prototype.isPrimary",
-+    "ScreenDetailed.prototype.label",
-+    "ScreenDetailed.prototype.left",
-+    "ScreenDetailed.prototype.top",
-+    "ScreenDetails",
-+    "ScreenDetails.prototype",
-+    "ScreenDetails.prototype.currentScreen",
-+    "ScreenDetails.prototype.oncurrentscreenchange",
-+    "ScreenDetails.prototype.onscreenschange",
-+    "ScreenDetails.prototype.screens",
-     "ScreenOrientation",
-     "ScreenOrientation.prototype",
-     "ScreenOrientation.prototype.angle",
-@@ -7035,6 +7057,7 @@
-     "frameElement",
-     "frames",
-     "getComputedStyle",
-+    "getScreenDetails",
-     "getSelection",
-     "history",
-     "indexedDB",
-```
 
   
 ### chrome-unstable
