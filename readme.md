@@ -1400,6 +1400,95 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 111.0.5562.0 (`2023-1-27`) ⚡
+Added 12 APIs, removed 9 (see: [diff](./browser_apis/chrome-unstable_111.0.5545.6_to_111.0.5562.0.diff), [json](./browser_apis/chrome-unstable_111.0.5545.6_to_111.0.5562.0.json), [full list](./browser_apis/chrome-unstable_111.0.5562.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_111.0.5545.6.json	2023-01-28 01:06:33.649085568 +0000
++++ ./browser_apis/chrome-unstable_111.0.5562.0.json	2023-01-28 01:07:42.501113061 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7773,
++  "browserApiCount": 7776,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -494,6 +494,8 @@
+     "CSSAnimation.prototype.animationName",
+     "CSSContainerRule",
+     "CSSContainerRule.prototype",
++    "CSSContainerRule.prototype.containerName",
++    "CSSContainerRule.prototype.containerQuery",
+     "CSSCounterStyleRule",
+     "CSSCounterStyleRule.prototype",
+     "CSSCounterStyleRule.prototype.additiveSymbols",
+@@ -2146,6 +2148,7 @@
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
+     "HTMLTemplateElement.prototype.shadowRoot",
++    "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+     "HTMLTextAreaElement.prototype.autocomplete",
+@@ -3859,18 +3862,9 @@
+     "PaymentAddress.prototype.region",
+     "PaymentAddress.prototype.sortingCode",
+     "PaymentAddress.prototype.toJSON",
+-    "PaymentInstruments",
+-    "PaymentInstruments.prototype",
+-    "PaymentInstruments.prototype.clear",
+-    "PaymentInstruments.prototype.delete",
+-    "PaymentInstruments.prototype.get",
+-    "PaymentInstruments.prototype.has",
+-    "PaymentInstruments.prototype.keys",
+-    "PaymentInstruments.prototype.set",
+     "PaymentManager",
+     "PaymentManager.prototype",
+     "PaymentManager.prototype.enableDelegations",
+-    "PaymentManager.prototype.instruments",
+     "PaymentManager.prototype.userHint",
+     "PaymentMethodChangeEvent",
+     "PaymentMethodChangeEvent.prototype",
+@@ -5641,6 +5635,7 @@
+     "String.prototype.fontsize",
+     "String.prototype.includes",
+     "String.prototype.indexOf",
++    "String.prototype.isWellFormed",
+     "String.prototype.italics",
+     "String.prototype.lastIndexOf",
+     "String.prototype.link",
+@@ -5668,6 +5663,7 @@
+     "String.prototype.toLowerCase",
+     "String.prototype.toString",
+     "String.prototype.toUpperCase",
++    "String.prototype.toWellFormed",
+     "String.prototype.trim",
+     "String.prototype.trimEnd",
+     "String.prototype.trimStart",
+@@ -6187,6 +6183,12 @@
+     "VideoPlaybackQuality.prototype.creationTime",
+     "VideoPlaybackQuality.prototype.droppedVideoFrames",
+     "VideoPlaybackQuality.prototype.totalVideoFrames",
++    "ViewTransition",
++    "ViewTransition.prototype",
++    "ViewTransition.prototype.finished",
++    "ViewTransition.prototype.ready",
++    "ViewTransition.prototype.skipTransition",
++    "ViewTransition.prototype.updateCallbackDone",
+     "VirtualKeyboard",
+     "VirtualKeyboard.prototype",
+     "VirtualKeyboard.prototype.boundingRect",
+@@ -7115,6 +7117,7 @@
+     "XMLDocument.prototype.rootElement",
+     "XMLDocument.prototype.scripts",
+     "XMLDocument.prototype.scrollingElement",
++    "XMLDocument.prototype.startViewTransition",
+     "XMLDocument.prototype.styleSheets",
+     "XMLDocument.prototype.timeline",
+     "XMLDocument.prototype.title",
+```
+
+  
 #### 111.0.5545.6 (`2023-1-20`) 
 No browser API changes.
 
@@ -2748,39 +2837,6 @@ Added 46 APIs, removed 12 (see: [diff](./browser_apis/chrome-unstable_105.0.5176
      "onbeforeinstallprompt",
      "onbeforematch",
      "onbeforeprint",
-```
-
-  
-#### 105.0.5176.3 (`2022-7-14`) ⚡
-Added 2 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_105.0.5148.2_to_105.0.5176.3.diff), [json](./browser_apis/chrome-unstable_105.0.5148.2_to_105.0.5176.3.json), [full list](./browser_apis/chrome-unstable_105.0.5176.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_105.0.5148.2.json	2023-01-06 17:09:06.264548112 +0000
-+++ ./browser_apis/chrome-unstable_105.0.5176.3.json	2023-01-06 17:09:06.264548112 +0000
-@@ -1639,8 +1639,6 @@
-     "HTMLFormElement.prototype.method",
-     "HTMLFormElement.prototype.name",
-     "HTMLFormElement.prototype.noValidate",
--    "HTMLFormElement.prototype.rel",
--    "HTMLFormElement.prototype.relList",
-     "HTMLFormElement.prototype.reportValidity",
-     "HTMLFormElement.prototype.requestSubmit",
-     "HTMLFormElement.prototype.reset",
-@@ -3313,6 +3311,7 @@
-     "Option.prototype.constructor.prototype.autofocus",
-     "Option.prototype.constructor.prototype.before",
-     "Option.prototype.constructor.prototype.blur",
-+    "Option.prototype.constructor.prototype.checkVisibility",
-     "Option.prototype.constructor.prototype.childElementCount",
-     "Option.prototype.constructor.prototype.children",
-     "Option.prototype.constructor.prototype.classList",
-@@ -4314,6 +4313,7 @@
-     "ResizeObserverSize.prototype.inlineSize",
-     "Response",
-     "Response.error",
-+    "Response.json",
-     "Response.prototype",
-     "Response.prototype.arrayBuffer",
-     "Response.prototype.blob",
 ```
 
   <!-- browserapis:end -->

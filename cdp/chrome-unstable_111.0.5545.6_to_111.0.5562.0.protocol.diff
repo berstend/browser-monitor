@@ -1,0 +1,79 @@
+--- ./cdp/chrome-unstable_111.0.5545.6.protocol.json	2023-01-28 01:06:33.729085601 +0000
++++ ./cdp/chrome-unstable_111.0.5562.0.protocol.json	2023-01-28 01:07:42.509113064 +0000
+@@ -1537,7 +1537,9 @@
+             "CrossOriginPortalPostMessageError",
+             "FormLabelForNameError",
+             "FormDuplicateIdForInputError",
+-            "FormInputWithNoLabelError"
++            "FormInputWithNoLabelError",
++            "FormAutocompleteAttributeEmptyError",
++            "FormEmptyIdAndNameAttributesForInputError"
+           ]
+         },
+         {
+@@ -1592,6 +1594,7 @@
+             "NoSysexWebMIDIWithoutPermission",
+             "NotificationInsecureOrigin",
+             "NotificationPermissionRequestedIframe",
++            "ObsoleteCreateImageBitmapImageOrientationNone",
+             "ObsoleteWebRtcCipherSuite",
+             "OpenWebDatabaseInsecureContext",
+             "OverflowVisibleOnReplacedElement",
+@@ -2495,7 +2498,7 @@
+             },
+             {
+               "name": "delta",
+-              "description": "If true, retrieve delta since last call.",
++              "description": "If true, retrieve delta since last delta call.",
+               "optional": true,
+               "type": "boolean"
+             }
+@@ -2523,7 +2526,7 @@
+             },
+             {
+               "name": "delta",
+-              "description": "If true, retrieve delta since last call.",
++              "description": "If true, retrieve delta since last delta call.",
+               "optional": true,
+               "type": "boolean"
+             }
+@@ -11387,12 +11390,12 @@
+           "type": "object",
+           "properties": [
+             {
+-              "name": "type",
++              "name": "operation",
+               "$ref": "TrustTokenOperationType"
+             },
+             {
+               "name": "refreshPolicy",
+-              "description": "Only set for \"token-redemption\" type and determine whether\nto request a fresh SRR or use a still valid cached SRR.",
++              "description": "Only set for \"token-redemption\" operation and determine whether\nto request a fresh SRR or use a still valid cached SRR.",
+               "type": "string",
+               "enum": [
+                 "UseCached",
+@@ -16456,7 +16459,10 @@
+             "EmbedderHostDisallowed",
+             "ActivationNavigationDestroyedBeforeSuccess",
+             "TabClosedByUserGesture",
+-            "TabClosedWithoutUserGesture"
++            "TabClosedWithoutUserGesture",
++            "PrimaryMainFrameRendererProcessCrashed",
++            "PrimaryMainFrameRendererProcessKilled",
++            "ActivationFramePolicyNotCompatible"
+           ]
+         }
+       ],
+@@ -22295,6 +22301,12 @@
+               "optional": true,
+               "type": "boolean"
+             },
++            {
++              "name": "hasPrf",
++              "description": "If set to true, the authenticator will support the prf extension.\nhttps://w3c.github.io/webauthn/#prf-extension\nDefaults to false.",
++              "optional": true,
++              "type": "boolean"
++            },
+             {
+               "name": "automaticPresenceSimulation",
+               "description": "If set to true, tests of user presence will succeed immediately.\nOtherwise, they will not be resolved. Defaults to true.",
