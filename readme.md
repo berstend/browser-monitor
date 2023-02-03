@@ -1400,6 +1400,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 111.0.5563.8 (`2023-2-2`) 
+No browser API changes.
+
+  
 #### 111.0.5562.0 (`2023-1-27`) ⚡
 Added 12 APIs, removed 9 (see: [diff](./browser_apis/chrome-unstable_111.0.5545.6_to_111.0.5562.0.diff), [json](./browser_apis/chrome-unstable_111.0.5545.6_to_111.0.5562.0.json), [full list](./browser_apis/chrome-unstable_111.0.5562.0.json))
  ```diff
@@ -2683,160 +2687,6 @@ Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_105.0.5191.2
      "TransitionEvent",
      "TransitionEvent.prototype",
      "TransitionEvent.prototype.elapsedTime",
-```
-
-  
-#### 105.0.5191.2 (`2022-7-22`) ⚡
-Added 46 APIs, removed 12 (see: [diff](./browser_apis/chrome-unstable_105.0.5176.3_to_105.0.5191.2.diff), [json](./browser_apis/chrome-unstable_105.0.5176.3_to_105.0.5191.2.json), [full list](./browser_apis/chrome-unstable_105.0.5191.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_105.0.5176.3.json	2023-01-06 17:09:06.264548112 +0000
-+++ ./browser_apis/chrome-unstable_105.0.5191.2.json	2023-01-06 17:09:06.268548117 +0000
-@@ -1,20 +1,8 @@
- {
-   "browser": "chrome-unstable",
-   "version": "105.0.0.0",
--  "browserApiCount": 7494,
-+  "browserApiCount": 7528,
-   "browserApis": [
--    "AbortController",
--    "AbortController.prototype",
--    "AbortController.prototype.abort",
--    "AbortController.prototype.signal",
--    "AbortSignal",
--    "AbortSignal.abort",
--    "AbortSignal.prototype",
--    "AbortSignal.prototype.aborted",
--    "AbortSignal.prototype.onabort",
--    "AbortSignal.prototype.reason",
--    "AbortSignal.prototype.throwIfAborted",
--    "AbortSignal.timeout",
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-     "AbsoluteOrientationSensor.prototype.constructor",
-@@ -432,6 +420,7 @@
-     "CSS.ex",
-     "CSS.fr",
-     "CSS.grad",
-+    "CSS.highlights",
-     "CSS.in",
-     "CSS.kHz",
-     "CSS.mm",
-@@ -2178,6 +2167,31 @@
-     "Headers.prototype.keys",
-     "Headers.prototype.set",
-     "Headers.prototype.values",
-+    "Highlight",
-+    "Highlight.prototype",
-+    "Highlight.prototype.add",
-+    "Highlight.prototype.clear",
-+    "Highlight.prototype.delete",
-+    "Highlight.prototype.entries",
-+    "Highlight.prototype.forEach",
-+    "Highlight.prototype.has",
-+    "Highlight.prototype.keys",
-+    "Highlight.prototype.priority",
-+    "Highlight.prototype.size",
-+    "Highlight.prototype.type",
-+    "Highlight.prototype.values",
-+    "HighlightRegistry",
-+    "HighlightRegistry.prototype",
-+    "HighlightRegistry.prototype.clear",
-+    "HighlightRegistry.prototype.delete",
-+    "HighlightRegistry.prototype.entries",
-+    "HighlightRegistry.prototype.forEach",
-+    "HighlightRegistry.prototype.get",
-+    "HighlightRegistry.prototype.has",
-+    "HighlightRegistry.prototype.keys",
-+    "HighlightRegistry.prototype.set",
-+    "HighlightRegistry.prototype.size",
-+    "HighlightRegistry.prototype.values",
-     "History",
-     "History.prototype",
-     "History.prototype.back",
-@@ -3411,6 +3425,7 @@
-     "Option.prototype.constructor.prototype.onauxclick",
-     "Option.prototype.constructor.prototype.onbeforecopy",
-     "Option.prototype.constructor.prototype.onbeforecut",
-+    "Option.prototype.constructor.prototype.onbeforeinput",
-     "Option.prototype.constructor.prototype.onbeforematch",
-     "Option.prototype.constructor.prototype.onbeforepaste",
-     "Option.prototype.constructor.prototype.onbeforexrselect",
-@@ -3537,6 +3552,7 @@
-     "Option.prototype.constructor.prototype.setAttributeNS",
-     "Option.prototype.constructor.prototype.setAttributeNode",
-     "Option.prototype.constructor.prototype.setAttributeNodeNS",
-+    "Option.prototype.constructor.prototype.setHTML",
-     "Option.prototype.constructor.prototype.setPointerCapture",
-     "Option.prototype.constructor.prototype.shadowRoot",
-     "Option.prototype.constructor.prototype.slot",
-@@ -4276,6 +4292,7 @@
-     "Request.prototype",
-     "Request.prototype.arrayBuffer",
-     "Request.prototype.blob",
-+    "Request.prototype.body",
-     "Request.prototype.bodyUsed",
-     "Request.prototype.cache",
-     "Request.prototype.clone",
-@@ -5004,6 +5021,7 @@
-     "SVGViewElement.prototype.onanimationiteration",
-     "SVGViewElement.prototype.onanimationstart",
-     "SVGViewElement.prototype.onauxclick",
-+    "SVGViewElement.prototype.onbeforeinput",
-     "SVGViewElement.prototype.onbeforematch",
-     "SVGViewElement.prototype.onbeforexrselect",
-     "SVGViewElement.prototype.onblur",
-@@ -5100,6 +5118,10 @@
-     "SVGViewElement.prototype.viewBox",
-     "SVGViewElement.prototype.viewportElement",
-     "SVGViewElement.prototype.zoomAndPan",
-+    "Sanitizer",
-+    "Sanitizer.getDefaultConfiguration",
-+    "Sanitizer.prototype",
-+    "Sanitizer.prototype.getConfiguration",
-     "Scheduler",
-     "Scheduler.prototype",
-     "Scheduler.prototype.postTask",
-@@ -5492,14 +5514,24 @@
-     "TaskAttributionTiming.prototype.toJSON",
-     "TaskController",
-     "TaskController.prototype",
-+    "TaskController.prototype.abort",
-+    "TaskController.prototype.constructor",
-     "TaskController.prototype.setPriority",
-+    "TaskController.prototype.signal",
-     "TaskPriorityChangeEvent",
-     "TaskPriorityChangeEvent.prototype",
-     "TaskPriorityChangeEvent.prototype.previousPriority",
-     "TaskSignal",
-     "TaskSignal.prototype",
-+    "TaskSignal.prototype.aborted",
-+    "TaskSignal.prototype.constructor",
-+    "TaskSignal.prototype.constructor.abort",
-+    "TaskSignal.prototype.constructor.timeout",
-+    "TaskSignal.prototype.onabort",
-     "TaskSignal.prototype.onprioritychange",
-     "TaskSignal.prototype.priority",
-+    "TaskSignal.prototype.reason",
-+    "TaskSignal.prototype.throwIfAborted",
-     "Text",
-     "Text.prototype",
-     "Text.prototype.after",
-@@ -6715,6 +6747,7 @@
-     "XMLDocument.prototype.onauxclick",
-     "XMLDocument.prototype.onbeforecopy",
-     "XMLDocument.prototype.onbeforecut",
-+    "XMLDocument.prototype.onbeforeinput",
-     "XMLDocument.prototype.onbeforematch",
-     "XMLDocument.prototype.onbeforepaste",
-     "XMLDocument.prototype.onbeforexrselect",
-@@ -7212,6 +7245,7 @@
-     "onanimationstart",
-     "onappinstalled",
-     "onauxclick",
-+    "onbeforeinput",
-     "onbeforeinstallprompt",
-     "onbeforematch",
-     "onbeforeprint",
 ```
 
   <!-- browserapis:end -->
