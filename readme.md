@@ -1655,6 +1655,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 111.0.5563.19 (`2023-2-8`) 
+No browser API changes.
+
+  
 #### 111.0.5563.8 (`2023-2-2`) 
 No browser API changes.
 
@@ -2894,54 +2898,6 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_105.0.5195.1
      "MediaStreamAudioDestinationNode",
      "MediaStreamAudioDestinationNode.prototype",
      "MediaStreamAudioDestinationNode.prototype.stream",
-```
-
-  
-#### 105.0.5195.10 (`2022-7-28`) ⚡
-Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_105.0.5191.2_to_105.0.5195.10.diff), [json](./browser_apis/chrome-unstable_105.0.5191.2_to_105.0.5195.10.json), [full list](./browser_apis/chrome-unstable_105.0.5195.10.json))
- ```diff
---- ./browser_apis/chrome-unstable_105.0.5191.2.json	2023-01-06 17:09:06.268548117 +0000
-+++ ./browser_apis/chrome-unstable_105.0.5195.10.json	2023-01-06 17:09:06.268548117 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "105.0.0.0",
--  "browserApiCount": 7528,
-+  "browserApiCount": 7537,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2915,14 +2915,17 @@
-     "NamedNodeMap.prototype.setNamedItemNS",
-     "NavigateEvent",
-     "NavigateEvent.prototype",
-+    "NavigateEvent.prototype.canIntercept",
-     "NavigateEvent.prototype.canTransition",
-     "NavigateEvent.prototype.destination",
-     "NavigateEvent.prototype.downloadRequest",
-     "NavigateEvent.prototype.formData",
-     "NavigateEvent.prototype.hashChange",
-     "NavigateEvent.prototype.info",
-+    "NavigateEvent.prototype.intercept",
-     "NavigateEvent.prototype.navigationType",
-     "NavigateEvent.prototype.restoreScroll",
-+    "NavigateEvent.prototype.scroll",
-     "NavigateEvent.prototype.signal",
-     "NavigateEvent.prototype.transitionWhile",
-     "NavigateEvent.prototype.userInitiated",
-@@ -5649,6 +5652,12 @@
-     "TransformStream.prototype",
-     "TransformStream.prototype.readable",
-     "TransformStream.prototype.writable",
-+    "TransformStreamDefaultController",
-+    "TransformStreamDefaultController.prototype",
-+    "TransformStreamDefaultController.prototype.desiredSize",
-+    "TransformStreamDefaultController.prototype.enqueue",
-+    "TransformStreamDefaultController.prototype.error",
-+    "TransformStreamDefaultController.prototype.terminate",
-     "TransitionEvent",
-     "TransitionEvent.prototype",
-     "TransitionEvent.prototype.elapsedTime",
 ```
 
   <!-- browserapis:end -->
