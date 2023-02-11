@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "111.0.5563.19",
+    "to": "112.0.5582.0"
+  },
+  "browserApis": {
+    "added": [
+      "CSSStyleRule.prototype.cssRules",
+      "CSSStyleRule.prototype.deleteRule",
+      "CSSStyleRule.prototype.insertRule",
+      "RegExp.prototype.unicodeSets"
+    ],
+    "removed": []
+  }
+}

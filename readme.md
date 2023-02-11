@@ -1655,6 +1655,40 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 112.0.5582.0 (`2023-2-10`) ⚡
+Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_111.0.5563.19_to_112.0.5582.0.diff), [json](./browser_apis/chrome-unstable_111.0.5563.19_to_112.0.5582.0.json), [full list](./browser_apis/chrome-unstable_112.0.5582.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_111.0.5563.19.json	2023-02-11 01:02:32.057981667 +0000
++++ ./browser_apis/chrome-unstable_112.0.5582.0.json	2023-02-11 01:03:01.609998655 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7776,
++  "browserApiCount": 7780,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -640,6 +640,9 @@
+     "CSSStyleDeclaration.prototype.setProperty",
+     "CSSStyleRule",
+     "CSSStyleRule.prototype",
++    "CSSStyleRule.prototype.cssRules",
++    "CSSStyleRule.prototype.deleteRule",
++    "CSSStyleRule.prototype.insertRule",
+     "CSSStyleRule.prototype.selectorText",
+     "CSSStyleRule.prototype.style",
+     "CSSStyleRule.prototype.styleMap",
+@@ -4486,6 +4489,7 @@
+     "RegExp.prototype.test",
+     "RegExp.prototype.toString",
+     "RegExp.prototype.unicode",
++    "RegExp.prototype.unicodeSets",
+     "RegExp.rightContext",
+     "RelativeOrientationSensor",
+     "RelativeOrientationSensor.prototype",
+```
+
+  
 #### 111.0.5563.19 (`2023-2-8`) 
 No browser API changes.
 
@@ -2856,48 +2890,6 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_105.0.5195.1
      "Intl.PluralRules.supportedLocalesOf",
      "Intl.RelativeTimeFormat",
      "Intl.RelativeTimeFormat.prototype",
-```
-
-  
-#### 105.0.5195.19 (`2022-8-3`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_105.0.5195.10_to_105.0.5195.19.diff), [json](./browser_apis/chrome-unstable_105.0.5195.10_to_105.0.5195.19.json), [full list](./browser_apis/chrome-unstable_105.0.5195.19.json))
- ```diff
---- ./browser_apis/chrome-unstable_105.0.5195.10.json	2023-01-06 17:09:06.268548117 +0000
-+++ ./browser_apis/chrome-unstable_105.0.5195.19.json	2023-01-06 17:09:06.268548117 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "105.0.0.0",
--  "browserApiCount": 7537,
-+  "browserApiCount": 7541,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2821,6 +2821,7 @@
-     "MediaSession.prototype.setMicrophoneActive",
-     "MediaSession.prototype.setPositionState",
-     "MediaSource",
-+    "MediaSource.canConstructInDedicatedWorker",
-     "MediaSource.isTypeSupported",
-     "MediaSource.prototype",
-     "MediaSource.prototype.activeSourceBuffers",
-@@ -2828,6 +2829,7 @@
-     "MediaSource.prototype.clearLiveSeekableRange",
-     "MediaSource.prototype.duration",
-     "MediaSource.prototype.endOfStream",
-+    "MediaSource.prototype.handle",
-     "MediaSource.prototype.onsourceclose",
-     "MediaSource.prototype.onsourceended",
-     "MediaSource.prototype.onsourceopen",
-@@ -2835,6 +2837,8 @@
-     "MediaSource.prototype.removeSourceBuffer",
-     "MediaSource.prototype.setLiveSeekableRange",
-     "MediaSource.prototype.sourceBuffers",
-+    "MediaSourceHandle",
-+    "MediaSourceHandle.prototype",
-     "MediaStreamAudioDestinationNode",
-     "MediaStreamAudioDestinationNode.prototype",
-     "MediaStreamAudioDestinationNode.prototype.stream",
 ```
 
   <!-- browserapis:end -->

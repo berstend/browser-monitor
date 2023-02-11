@@ -1,0 +1,28 @@
+--- ./browser_apis/chrome-unstable_111.0.5563.19.json	2023-02-11 01:02:32.057981667 +0000
++++ ./browser_apis/chrome-unstable_112.0.5582.0.json	2023-02-11 01:03:01.609998655 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7776,
++  "browserApiCount": 7780,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -640,6 +640,9 @@
+     "CSSStyleDeclaration.prototype.setProperty",
+     "CSSStyleRule",
+     "CSSStyleRule.prototype",
++    "CSSStyleRule.prototype.cssRules",
++    "CSSStyleRule.prototype.deleteRule",
++    "CSSStyleRule.prototype.insertRule",
+     "CSSStyleRule.prototype.selectorText",
+     "CSSStyleRule.prototype.style",
+     "CSSStyleRule.prototype.styleMap",
+@@ -4486,6 +4489,7 @@
+     "RegExp.prototype.test",
+     "RegExp.prototype.toString",
+     "RegExp.prototype.unicode",
++    "RegExp.prototype.unicodeSets",
+     "RegExp.rightContext",
+     "RelativeOrientationSensor",
+     "RelativeOrientationSensor.prototype",

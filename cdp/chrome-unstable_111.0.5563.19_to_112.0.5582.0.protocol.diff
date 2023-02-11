@@ -1,0 +1,108 @@
+--- ./cdp/chrome-unstable_111.0.5563.19.protocol.json	2023-02-11 01:02:32.141981222 +0000
++++ ./cdp/chrome-unstable_112.0.5582.0.protocol.json	2023-02-11 01:03:01.617998680 +0000
+@@ -1539,7 +1539,11 @@
+             "FormDuplicateIdForInputError",
+             "FormInputWithNoLabelError",
+             "FormAutocompleteAttributeEmptyError",
+-            "FormEmptyIdAndNameAttributesForInputError"
++            "FormEmptyIdAndNameAttributesForInputError",
++            "FormAriaLabelledByToNonExistingId",
++            "FormInputAssignedAutocompleteValueToIdOrNameAttributeError",
++            "FormLabelHasNeitherForNorNestedInput",
++            "FormLabelForMatchesNonExistingIdError"
+           ]
+         },
+         {
+@@ -16216,6 +16220,18 @@
+           ]
+         },
+         {
++          "id": "AutoResponseMode",
++          "description": "Enum of possible auto-reponse for permisison / prompt dialogs.",
++          "experimental": true,
++          "type": "string",
++          "enum": [
++            "none",
++            "autoAccept",
++            "autoReject",
++            "autoOptOut"
++          ]
++        },
++        {
+           "id": "NavigationType",
+           "description": "The type of a frameNavigated event.",
+           "experimental": true,
+@@ -16475,7 +16491,11 @@
+             "TabClosedWithoutUserGesture",
+             "PrimaryMainFrameRendererProcessCrashed",
+             "PrimaryMainFrameRendererProcessKilled",
+-            "ActivationFramePolicyNotCompatible"
++            "ActivationFramePolicyNotCompatible",
++            "PreloadingDisabled",
++            "BatterySaverEnabled",
++            "ActivatedDuringMainFrameNavigation",
++            "PreloadingUnsupportedByWebContents"
+           ]
+         }
+       ],
+@@ -16736,7 +16756,9 @@
+         },
+         {
+           "name": "getManifestIcons",
++          "description": "Deprecated because it's not guaranteed that the returned icon is in fact the one used for PWA installation.",
+           "experimental": true,
++          "deprecated": true,
+           "returns": [
+             {
+               "name": "primaryIcon",
+@@ -17625,13 +17647,18 @@
+           "parameters": [
+             {
+               "name": "mode",
+-              "type": "string",
+-              "enum": [
+-                "none",
+-                "autoAccept",
+-                "autoReject",
+-                "autoOptOut"
+-              ]
++              "$ref": "AutoResponseMode"
++            }
++          ]
++        },
++        {
++          "name": "setRPHRegistrationMode",
++          "description": "Extensions for Custom Handlers API:\nhttps://html.spec.whatwg.org/multipage/system-state.html#rph-automation",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "mode",
++              "$ref": "AutoResponseMode"
+             }
+           ]
+         },
+@@ -19731,24 +19758,6 @@
+             }
+           ]
+         },
+-        {
+-          "name": "clearTrustTokens",
+-          "description": "Removes all Trust Tokens issued by the provided issuerOrigin.\nLeaves other stored data, including the issuer's Redemption Records, intact.",
+-          "experimental": true,
+-          "parameters": [
+-            {
+-              "name": "issuerOrigin",
+-              "type": "string"
+-            }
+-          ],
+-          "returns": [
+-            {
+-              "name": "didDeleteTokens",
+-              "description": "True if any tokens were deleted, false otherwise.",
+-              "type": "boolean"
+-            }
+-          ]
+-        },
+         {
+           "name": "getInterestGroupDetails",
+           "description": "Gets details for a named interest group.",
