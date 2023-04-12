@@ -274,6 +274,7 @@ async function getBrowserData() {
     defaultViewport: null,
     ignoreDefaultArgs: ["--disable-component-extensions-with-background-pages"],
     args: ["--remote-debugging-port=9222"],
+    dumpio: true,
     executablePath: isCI
       ? "/usr/bin/google-chrome"
       : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
