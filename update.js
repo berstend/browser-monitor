@@ -273,8 +273,7 @@ async function getBrowserData() {
     headless: false,
     defaultViewport: null,
     ignoreDefaultArgs: ["--disable-component-extensions-with-background-pages"],
-    args: ["--remote-debugging-port=9222"],
-    dumpio: true,
+    args: ["--remote-debugging-port=9222", "--disable-gpu"],
     executablePath: isCI
       ? "/usr/bin/google-chrome"
       : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -327,11 +326,23 @@ async function getBrowserData() {
     }
     return getBrowserAPIs()
   })
-  const userAgent = await page.evaluate(() => navigator.userAgent)
-  console.log("getBrowserData - regex")
-  const version = /\(KHTML, like Gecko\) Chrome\/(?<ver>.*) Safari\//gm.exec(
-    userAgent
-  )?.groups?.ver
+  console.log("getBrowserData - version")
+  const version = await page.evaluate(async () => {
+    return await navigator.userAgentData
+      .getHighEntropyValues(["fullVersionList"])
+      .then((values) => {
+        const chromeVersion = values.fullVersionList.find(
+          (entry) => entry.brand === "Google Chrome"
+        )
+        return chromeVersion?.version
+      })
+  })
+
+  // const userAgent = await page.evaluate(() => navigator.userAgent)
+  // console.log("getBrowserData - regex")
+  // const version = /\(KHTML, like Gecko\) Chrome\/(?<ver>.*) Safari\//gm.exec(
+  //   userAgent
+  // )?.groups?.ver
   console.log(version, browserApis.length)
 
   const cdpJSON = await got("http://localhost:9222/json/protocol/").json()
