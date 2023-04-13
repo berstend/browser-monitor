@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_113.0.5653.0.json	2023-04-13 09:10:39.055358588 +0000
++++ ./browser_apis/chrome-unstable_113.0.5668.0.json	2023-04-13 09:11:00.787446258 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7983,
++  "browserApiCount": 7984,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2459,6 +2459,7 @@
+     "Headers.prototype.entries",
+     "Headers.prototype.forEach",
+     "Headers.prototype.get",
++    "Headers.prototype.getSetCookie",
+     "Headers.prototype.has",
+     "Headers.prototype.keys",
+     "Headers.prototype.set",

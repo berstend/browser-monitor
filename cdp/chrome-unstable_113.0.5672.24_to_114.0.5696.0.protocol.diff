@@ -1,0 +1,89 @@
+--- ./cdp/chrome-unstable_113.0.5672.24.protocol.json	2023-04-13 09:11:42.255627015 +0000
++++ ./cdp/chrome-unstable_114.0.5696.0.protocol.json	2023-04-13 09:12:01.947710701 +0000
+@@ -1570,6 +1570,11 @@
+               "name": "violatingNodeId",
+               "optional": true,
+               "$ref": "DOM.BackendNodeId"
++            },
++            {
++              "name": "violatingNodeAttribute",
++              "optional": true,
++              "type": "string"
+             }
+           ]
+         },
+@@ -3532,6 +3537,48 @@
+           ]
+         },
+         {
++          "id": "CSSTryRule",
++          "description": "CSS try rule representation.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "styleSheetId",
++              "description": "The css style sheet identifier (absent for user agent stylesheet and user-specified\nstylesheet rules) this rule came from.",
++              "optional": true,
++              "$ref": "StyleSheetId"
++            },
++            {
++              "name": "origin",
++              "description": "Parent stylesheet's origin.",
++              "$ref": "StyleSheetOrigin"
++            },
++            {
++              "name": "style",
++              "description": "Associated style declaration.",
++              "$ref": "CSSStyle"
++            }
++          ]
++        },
++        {
++          "id": "CSSPositionFallbackRule",
++          "description": "CSS position-fallback rule representation.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "name",
++              "$ref": "Value"
++            },
++            {
++              "name": "tryRules",
++              "description": "List of keyframes.",
++              "type": "array",
++              "items": {
++                "$ref": "CSSTryRule"
++              }
++            }
++          ]
++        },
++        {
+           "id": "CSSKeyframesRule",
+           "description": "CSS keyframes rule representation.",
+           "type": "object",
+@@ -3841,6 +3888,15 @@
+               }
+             },
+             {
++              "name": "cssPositionFallbackRules",
++              "description": "A list of CSS position fallbacks matching this node.",
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "CSSPositionFallbackRule"
++              }
++            },
++            {
+               "name": "parentLayoutNodeId",
+               "description": "Id of the first parent element that does not have display: contents.",
+               "experimental": true,
+@@ -24529,7 +24585,8 @@
+                 "OOM",
+                 "other",
+                 "promiseRejection",
+-                "XHR"
++                "XHR",
++                "step"
+               ]
+             },
+             {

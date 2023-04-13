@@ -1,0 +1,90 @@
+--- ./cdp/chrome-unstable_113.0.5653.0.protocol.json	2023-04-13 09:10:39.067358639 +0000
++++ ./cdp/chrome-unstable_113.0.5668.0.protocol.json	2023-04-13 09:11:00.795446291 +0000
+@@ -1547,7 +1547,8 @@
+             "FormAriaLabelledByToNonExistingId",
+             "FormInputAssignedAutocompleteValueToIdOrNameAttributeError",
+             "FormLabelHasNeitherForNorNestedInput",
+-            "FormLabelForMatchesNonExistingIdError"
++            "FormLabelForMatchesNonExistingIdError",
++            "FormInputHasWrongButWellIntendedAutocompleteValueError"
+           ]
+         },
+         {
+@@ -2895,6 +2896,16 @@
+               "$ref": "SelectorList"
+             },
+             {
++              "name": "nestingSelectors",
++              "description": "Array of selectors from ancestor style rules, sorted by distance from the current rule.",
++              "experimental": true,
++              "optional": true,
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            },
++            {
+               "name": "origin",
+               "description": "Parent stylesheet's origin.",
+               "$ref": "StyleSheetOrigin"
+@@ -22903,11 +22914,10 @@
+             "InactivePageRestriction",
+             "StartFailed",
+             "TimeoutBackgrounded",
+-            "CrossSiteRedirect",
+-            "CrossSiteNavigation",
+-            "SameSiteCrossOriginRedirect",
+-            "SameSiteCrossOriginRedirectNotOptIn",
+-            "SameSiteCrossOriginNavigationNotOptIn",
++            "CrossSiteRedirectInInitialNavigation",
++            "CrossSiteNavigationInInitialNavigation",
++            "SameSiteCrossOriginRedirectNotOptInInInitialNavigation",
++            "SameSiteCrossOriginNavigationNotOptInInInitialNavigation",
+             "ActivationNavigationParameterMismatch",
+             "ActivatedInBackground",
+             "EmbedderHostDisallowed",
+@@ -22920,7 +22930,11 @@
+             "PreloadingDisabled",
+             "BatterySaverEnabled",
+             "ActivatedDuringMainFrameNavigation",
+-            "PreloadingUnsupportedByWebContents"
++            "PreloadingUnsupportedByWebContents",
++            "CrossSiteRedirectInMainFrameNavigation",
++            "CrossSiteNavigationInMainFrameNavigation",
++            "SameSiteCrossOriginRedirectNotOptInInMainFrameNavigation",
++            "SameSiteCrossOriginNavigationNotOptInInMainFrameNavigation"
+           ]
+         },
+         {
+@@ -23030,9 +23044,13 @@
+         },
+         {
+           "name": "preloadingAttemptSourcesUpdated",
+-          "description": "Send a list of sources for all preloading attempts.",
++          "description": "Send a list of sources for all preloading attempts in a document.",
+           "parameters": [
+             {
++              "name": "loaderId",
++              "$ref": "Network.LoaderId"
++            },
++            {
+               "name": "preloadingAttemptSources",
+               "type": "array",
+               "items": {
+@@ -23128,7 +23146,15 @@
+       ],
+       "commands": [
+         {
+-          "name": "enable"
++          "name": "enable",
++          "parameters": [
++            {
++              "name": "disableRejectionDelay",
++              "description": "Allows callers to disable the promise rejection delay that would\nnormally happen, if this is unimportant to what's being tested.\n(step 4 of https://fedidcg.github.io/FedCM/#browser-api-rp-sign-in)",
++              "optional": true,
++              "type": "boolean"
++            }
++          ]
+         },
+         {
+           "name": "disable"

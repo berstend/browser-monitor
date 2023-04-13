@@ -1,0 +1,226 @@
+--- ./cdp/chrome-unstable_113.0.5668.0.protocol.json	2023-04-13 09:11:00.795446291 +0000
++++ ./cdp/chrome-unstable_113.0.5672.12.protocol.json	2023-04-13 09:11:21.643534729 +0000
+@@ -19084,6 +19084,7 @@
+             "cache_storage",
+             "interest_groups",
+             "shared_storage",
++            "storage_buckets",
+             "all",
+             "other"
+           ]
+@@ -19362,6 +19363,53 @@
+               "type": "boolean"
+             }
+           ]
++        },
++        {
++          "id": "StorageBucketsDurability",
++          "type": "string",
++          "enum": [
++            "relaxed",
++            "strict"
++          ]
++        },
++        {
++          "id": "StorageBucketInfo",
++          "type": "object",
++          "properties": [
++            {
++              "name": "storageKey",
++              "$ref": "SerializedStorageKey"
++            },
++            {
++              "name": "id",
++              "type": "string"
++            },
++            {
++              "name": "name",
++              "type": "string"
++            },
++            {
++              "name": "isDefault",
++              "type": "boolean"
++            },
++            {
++              "name": "expiration",
++              "$ref": "Network.TimeSinceEpoch"
++            },
++            {
++              "name": "quota",
++              "description": "Storage quota (bytes).",
++              "type": "number"
++            },
++            {
++              "name": "persistent",
++              "type": "boolean"
++            },
++            {
++              "name": "durability",
++              "$ref": "StorageBucketsDurability"
++            }
++          ]
+         }
+       ],
+       "commands": [
+@@ -19782,6 +19830,36 @@
+               "type": "boolean"
+             }
+           ]
++        },
++        {
++          "name": "setStorageBucketTracking",
++          "description": "Set tracking for a storage key's buckets.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "storageKey",
++              "type": "string"
++            },
++            {
++              "name": "enable",
++              "type": "boolean"
++            }
++          ]
++        },
++        {
++          "name": "deleteStorageBucket",
++          "description": "Deletes the Storage Bucket with the given storage key and bucket name.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "storageKey",
++              "type": "string"
++            },
++            {
++              "name": "bucketName",
++              "type": "string"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -19916,6 +19994,24 @@
+               "$ref": "SharedStorageAccessParams"
+             }
+           ]
++        },
++        {
++          "name": "storageBucketCreatedOrUpdated",
++          "parameters": [
++            {
++              "name": "bucket",
++              "$ref": "StorageBucketInfo"
++            }
++          ]
++        },
++        {
++          "name": "storageBucketDeleted",
++          "parameters": [
++            {
++              "name": "bucketId",
++              "type": "string"
++            }
++          ]
+         }
+       ]
+     },
+@@ -22802,10 +22898,31 @@
+               "name": "sourceText",
+               "description": "Source text of JSON representing the rule set. If it comes from\n<script> tag, it is the textContent of the node. Note that it is\na JSON for valid case.\n\nSee also:\n- https://wicg.github.io/nav-speculation/speculation-rules.html\n- https://github.com/WICG/nav-speculation/blob/main/triggers.md",
+               "type": "string"
++            },
++            {
++              "name": "errorType",
++              "description": "Error information\n`errorMessage` is null iff `errorType` is null.",
++              "optional": true,
++              "$ref": "RuleSetErrorType"
++            },
++            {
++              "name": "errorMessage",
++              "description": "TODO(https://crbug.com/1425354): Replace this property with structured error.",
++              "deprecated": true,
++              "optional": true,
++              "type": "string"
+             }
+           ]
+         },
+         {
++          "id": "RuleSetErrorType",
++          "type": "string",
++          "enum": [
++            "SourceIsNotJsonObject",
++            "InvalidRulesSkipped"
++          ]
++        },
++        {
+           "id": "SpeculationAction",
+           "description": "The type of preloading attempted. It corresponds to\nmojom::SpeculationAction (although PrefetchWithSubresources is omitted as it\nisn't being used by clients).",
+           "type": "string",
+@@ -22984,6 +23101,10 @@
+           "description": "Fired when a prerender attempt is completed.",
+           "parameters": [
+             {
++              "name": "key",
++              "$ref": "PreloadingAttemptKey"
++            },
++            {
+               "name": "initiatingFrameId",
+               "description": "The frame id of the frame initiating prerendering.",
+               "$ref": "Page.FrameId"
+@@ -23009,6 +23130,10 @@
+           "description": "Fired when a prefetch attempt is updated.",
+           "parameters": [
+             {
++              "name": "key",
++              "$ref": "PreloadingAttemptKey"
++            },
++            {
+               "name": "initiatingFrameId",
+               "description": "The frame id of the frame initiating prefetch.",
+               "$ref": "Page.FrameId"
+@@ -23028,6 +23153,10 @@
+           "description": "Fired when a prerender attempt is updated.",
+           "parameters": [
+             {
++              "name": "key",
++              "$ref": "PreloadingAttemptKey"
++            },
++            {
+               "name": "initiatingFrameId",
+               "description": "The frame id of the frame initiating prerender.",
+               "$ref": "Page.FrameId"
+@@ -23140,6 +23269,16 @@
+               "items": {
+                 "$ref": "Account"
+               }
++            },
++            {
++              "name": "title",
++              "description": "These exist primarily so that the caller can verify the\nRP context was used appropriately.",
++              "type": "string"
++            },
++            {
++              "name": "subtitle",
++              "optional": true,
++              "type": "string"
+             }
+           ]
+         }
+@@ -23178,8 +23317,17 @@
+             {
+               "name": "dialogId",
+               "type": "string"
++            },
++            {
++              "name": "triggerCooldown",
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
++        },
++        {
++          "name": "resetCooldown",
++          "description": "Resets the cooldown time, if any, to allow the next FedCM call to show\na dialog even if one was recently dismissed by the user."
+         }
+       ]
+     },

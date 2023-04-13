@@ -1,0 +1,55 @@
+--- ./cdp/chrome-unstable_112.0.5596.2.protocol.json	2023-04-13 09:07:20.714867312 +0000
++++ ./cdp/chrome-unstable_112.0.5615.12.protocol.json	2023-04-13 09:09:36.763092940 +0000
+@@ -1543,7 +1543,8 @@
+             "FormAriaLabelledByToNonExistingId",
+             "FormInputAssignedAutocompleteValueToIdOrNameAttributeError",
+             "FormLabelHasNeitherForNorNestedInput",
+-            "FormLabelForMatchesNonExistingIdError"
++            "FormLabelForMatchesNonExistingIdError",
++            "FormHasPasswordFieldWithoutUsernameFieldError"
+           ]
+         },
+         {
+@@ -16438,10 +16439,11 @@
+           ]
+         },
+         {
+-          "id": "PrefetchStatus",
+-          "description": "List of Prefetch status, which refers to PreloadingTriggeringOutcome.",
++          "id": "PreloadingStatus",
++          "description": "Preloading status values, see also PreloadingTriggeringOutcome. This\nstatus is shared by prefetchStatusUpdated and prerenderStatusUpdated.",
+           "type": "string",
+           "enum": [
++            "Pending",
+             "Running",
+             "Ready",
+             "Success",
+@@ -18064,7 +18066,27 @@
+             },
+             {
+               "name": "status",
+-              "$ref": "PrefetchStatus"
++              "$ref": "PreloadingStatus"
++            }
++          ]
++        },
++        {
++          "name": "prerenderStatusUpdated",
++          "description": "TODO(crbug/1384419): Create a dedicated domain for preloading.\nFired when a prerender attempt is updated.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "initiatingFrameId",
++              "description": "The frame id of the frame initiating prerender.",
++              "$ref": "FrameId"
++            },
++            {
++              "name": "prerenderingUrl",
++              "type": "string"
++            },
++            {
++              "name": "status",
++              "$ref": "PreloadingStatus"
+             }
+           ]
+         },

@@ -5,6 +5,159 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 112.0.5615.49 (`2023-4-4`) ⚡
+Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_111.0.5563.146_to_112.0.5615.49.diff), [json](./browser_apis/chrome-stable_111.0.5563.146_to_112.0.5615.49.json), [full list](./browser_apis/chrome-stable_112.0.5615.49.json))
+ ```diff
+--- ./browser_apis/chrome-stable_111.0.5563.146.json	2023-04-13 09:08:46.814887976 +0000
++++ ./browser_apis/chrome-stable_112.0.5615.49.json	2023-04-13 09:09:15.255003645 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 7716,
++  "browserApiCount": 7720,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -626,6 +626,9 @@
+     "CSSStyleDeclaration.prototype.setProperty",
+     "CSSStyleRule",
+     "CSSStyleRule.prototype",
++    "CSSStyleRule.prototype.cssRules",
++    "CSSStyleRule.prototype.deleteRule",
++    "CSSStyleRule.prototype.insertRule",
+     "CSSStyleRule.prototype.selectorText",
+     "CSSStyleRule.prototype.style",
+     "CSSStyleRule.prototype.styleMap",
+@@ -4435,6 +4438,7 @@
+     "RegExp.prototype.test",
+     "RegExp.prototype.toString",
+     "RegExp.prototype.unicode",
++    "RegExp.prototype.unicodeSets",
+     "RegExp.rightContext",
+     "RelativeOrientationSensor",
+     "RelativeOrientationSensor.prototype",
+```
+
+  
+#### 111.0.5563.146 (`2023-3-27`) 
+No browser API changes.
+
+  
+#### 111.0.5563.110 (`2023-3-21`) 
+No browser API changes.
+
+  
+#### 111.0.5563.64 (`2023-3-7`) ⚡
+Added 16 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_110.0.5481.177_to_111.0.5563.64.diff), [json](./browser_apis/chrome-stable_110.0.5481.177_to_111.0.5563.64.json), [full list](./browser_apis/chrome-stable_111.0.5563.64.json))
+ ```diff
+--- ./browser_apis/chrome-stable_110.0.5481.177.json	2023-04-13 09:07:51.546664727 +0000
++++ ./browser_apis/chrome-stable_111.0.5563.64.json	2023-04-13 09:08:09.846735082 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 7709,
++  "browserApiCount": 7716,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -117,6 +117,9 @@
+     "ArrayBuffer.isView",
+     "ArrayBuffer.prototype",
+     "ArrayBuffer.prototype.byteLength",
++    "ArrayBuffer.prototype.maxByteLength",
++    "ArrayBuffer.prototype.resizable",
++    "ArrayBuffer.prototype.resize",
+     "ArrayBuffer.prototype.slice",
+     "Atomics",
+     "Atomics.add",
+@@ -477,6 +480,8 @@
+     "CSSAnimation.prototype.animationName",
+     "CSSContainerRule",
+     "CSSContainerRule.prototype",
++    "CSSContainerRule.prototype.containerName",
++    "CSSContainerRule.prototype.containerQuery",
+     "CSSCounterStyleRule",
+     "CSSCounterStyleRule.prototype",
+     "CSSCounterStyleRule.prototype.additiveSymbols",
+@@ -2100,6 +2105,7 @@
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
+     "HTMLTemplateElement.prototype.shadowRoot",
++    "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+     "HTMLTextAreaElement.prototype.autocomplete",
+@@ -3805,18 +3811,9 @@
+     "PaymentAddress.prototype.region",
+     "PaymentAddress.prototype.sortingCode",
+     "PaymentAddress.prototype.toJSON",
+-    "PaymentInstruments",
+-    "PaymentInstruments.prototype",
+-    "PaymentInstruments.prototype.clear",
+-    "PaymentInstruments.prototype.delete",
+-    "PaymentInstruments.prototype.get",
+-    "PaymentInstruments.prototype.has",
+-    "PaymentInstruments.prototype.keys",
+-    "PaymentInstruments.prototype.set",
+     "PaymentManager",
+     "PaymentManager.prototype",
+     "PaymentManager.prototype.enableDelegations",
+-    "PaymentManager.prototype.instruments",
+     "PaymentManager.prototype.userHint",
+     "PaymentMethodChangeEvent",
+     "PaymentMethodChangeEvent.prototype",
+@@ -5578,6 +5575,7 @@
+     "String.prototype.fontsize",
+     "String.prototype.includes",
+     "String.prototype.indexOf",
++    "String.prototype.isWellFormed",
+     "String.prototype.italics",
+     "String.prototype.lastIndexOf",
+     "String.prototype.link",
+@@ -5605,6 +5603,7 @@
+     "String.prototype.toLowerCase",
+     "String.prototype.toString",
+     "String.prototype.toUpperCase",
++    "String.prototype.toWellFormed",
+     "String.prototype.trim",
+     "String.prototype.trimEnd",
+     "String.prototype.trimStart",
+@@ -6124,6 +6123,12 @@
+     "VideoPlaybackQuality.prototype.creationTime",
+     "VideoPlaybackQuality.prototype.droppedVideoFrames",
+     "VideoPlaybackQuality.prototype.totalVideoFrames",
++    "ViewTransition",
++    "ViewTransition.prototype",
++    "ViewTransition.prototype.finished",
++    "ViewTransition.prototype.ready",
++    "ViewTransition.prototype.skipTransition",
++    "ViewTransition.prototype.updateCallbackDone",
+     "VirtualKeyboard",
+     "VirtualKeyboard.prototype",
+     "VirtualKeyboard.prototype.boundingRect",
+@@ -7052,6 +7057,7 @@
+     "XMLDocument.prototype.rootElement",
+     "XMLDocument.prototype.scripts",
+     "XMLDocument.prototype.scrollingElement",
++    "XMLDocument.prototype.startViewTransition",
+     "XMLDocument.prototype.styleSheets",
+     "XMLDocument.prototype.timeline",
+     "XMLDocument.prototype.title",
+@@ -7239,6 +7245,7 @@
+     "XRSession.prototype.depthDataFormat",
+     "XRSession.prototype.depthUsage",
+     "XRSession.prototype.domOverlayState",
++    "XRSession.prototype.enabledFeatures",
+     "XRSession.prototype.end",
+     "XRSession.prototype.environmentBlendMode",
+     "XRSession.prototype.inputSources",
+```
+
+  
+#### 110.0.5481.177 (`2023-2-22`) 
+No browser API changes.
+
+  
 #### 110.0.5481.100 (`2023-2-14`) ⚡
 Added 0 APIs, removed 60 (see: [diff](./browser_apis/chrome-stable_110.0.5481.96_to_110.0.5481.100.diff), [json](./browser_apis/chrome-stable_110.0.5481.96_to_110.0.5481.100.json), [full list](./browser_apis/chrome-stable_110.0.5481.100.json))
  ```diff
@@ -1446,328 +1599,526 @@ Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_102.0.5005.11
 ```
 
   
-#### 102.0.5005.115 (`2022-6-9`) 
-No browser API changes.
-
+### chrome-unstable
   
-#### 102.0.5005.61 (`2022-5-24`) ⚡
-Added 79 APIs, removed 3 (see: [diff](./browser_apis/chrome-stable_101.0.4951.64_to_102.0.5005.61.diff), [json](./browser_apis/chrome-stable_101.0.4951.64_to_102.0.5005.61.json), [full list](./browser_apis/chrome-stable_102.0.5005.61.json))
+#### 114.0.5696.0 (`2023-4-6`) ⚡
+Added 22 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5672.24_to_114.0.5696.0.diff), [json](./browser_apis/chrome-unstable_113.0.5672.24_to_114.0.5696.0.json), [full list](./browser_apis/chrome-unstable_114.0.5696.0.json))
  ```diff
---- ./browser_apis/chrome-stable_101.0.4951.64.json	2023-01-06 17:09:06.204548043 +0000
-+++ ./browser_apis/chrome-stable_102.0.5005.61.json	2023-01-06 17:09:06.204548043 +0000
-@@ -1,7 +1,7 @@
+--- ./browser_apis/chrome-unstable_113.0.5672.24.json	2023-04-13 09:11:42.243626955 +0000
++++ ./browser_apis/chrome-unstable_114.0.5696.0.json	2023-04-13 09:12:01.931710633 +0000
+@@ -1,6 +1,6 @@
  {
-   "browser": "chrome-stable",
--  "version": "101.0.4951.64",
--  "browserApiCount": 7375,
-+  "version": "102.0.5005.61",
-+  "browserApiCount": 7451,
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7984,
++  "browserApiCount": 8006,
    "browserApis": [
-     "AbortController",
-     "AbortController.prototype",
-@@ -222,6 +222,7 @@
-     "AudioContext.prototype.createMediaStreamDestination",
-     "AudioContext.prototype.createMediaStreamSource",
-     "AudioContext.prototype.getOutputTimestamp",
-+    "AudioContext.prototype.outputLatency",
-     "AudioContext.prototype.resume",
-     "AudioContext.prototype.suspend",
-     "AudioData",
-@@ -684,12 +685,14 @@
-     "CanvasCaptureMediaStreamTrack.prototype.contentHint",
-     "CanvasCaptureMediaStreamTrack.prototype.enabled",
-     "CanvasCaptureMediaStreamTrack.prototype.getCapabilities",
-+    "CanvasCaptureMediaStreamTrack.prototype.getCaptureHandle",
-     "CanvasCaptureMediaStreamTrack.prototype.getConstraints",
-     "CanvasCaptureMediaStreamTrack.prototype.getSettings",
-     "CanvasCaptureMediaStreamTrack.prototype.id",
-     "CanvasCaptureMediaStreamTrack.prototype.kind",
-     "CanvasCaptureMediaStreamTrack.prototype.label",
-     "CanvasCaptureMediaStreamTrack.prototype.muted",
-+    "CanvasCaptureMediaStreamTrack.prototype.oncapturehandlechange",
-     "CanvasCaptureMediaStreamTrack.prototype.onended",
-     "CanvasCaptureMediaStreamTrack.prototype.onmute",
-     "CanvasCaptureMediaStreamTrack.prototype.onunmute",
-@@ -1131,6 +1134,7 @@
-     "ElementInternals.prototype.ariaExpanded",
-     "ElementInternals.prototype.ariaHasPopup",
-     "ElementInternals.prototype.ariaHidden",
-+    "ElementInternals.prototype.ariaInvalid",
-     "ElementInternals.prototype.ariaKeyShortcuts",
-     "ElementInternals.prototype.ariaLabel",
-     "ElementInternals.prototype.ariaLevel",
-@@ -1283,6 +1287,7 @@
-     "FileSystemFileHandle.prototype",
-     "FileSystemFileHandle.prototype.createWritable",
-     "FileSystemFileHandle.prototype.getFile",
-+    "FileSystemFileHandle.prototype.move",
-     "FileSystemWritableFileStream",
-     "FileSystemWritableFileStream.prototype",
-     "FileSystemWritableFileStream.prototype.seek",
-@@ -1771,7 +1776,7 @@
-     "HTMLLinkElement.prototype.charset",
-     "HTMLLinkElement.prototype.crossOrigin",
-     "HTMLLinkElement.prototype.disabled",
--    "HTMLLinkElement.prototype.fetchpriority",
-+    "HTMLLinkElement.prototype.fetchPriority",
-     "HTMLLinkElement.prototype.href",
-     "HTMLLinkElement.prototype.hreflang",
-     "HTMLLinkElement.prototype.imageSizes",
-@@ -1920,7 +1925,7 @@
-     "HTMLScriptElement.prototype.crossOrigin",
-     "HTMLScriptElement.prototype.defer",
-     "HTMLScriptElement.prototype.event",
--    "HTMLScriptElement.prototype.fetchpriority",
-+    "HTMLScriptElement.prototype.fetchPriority",
-     "HTMLScriptElement.prototype.htmlFor",
-     "HTMLScriptElement.prototype.integrity",
-     "HTMLScriptElement.prototype.noModule",
-@@ -2293,7 +2298,7 @@
-     "Image.prototype.currentSrc",
-     "Image.prototype.decode",
-     "Image.prototype.decoding",
--    "Image.prototype.fetchpriority",
-+    "Image.prototype.fetchPriority",
-     "Image.prototype.height",
-     "Image.prototype.hspace",
-     "Image.prototype.isMap",
-@@ -2537,6 +2542,12 @@
-     "LargestContentfulPaint.prototype.size",
-     "LargestContentfulPaint.prototype.toJSON",
-     "LargestContentfulPaint.prototype.url",
-+    "LaunchParams",
-+    "LaunchParams.prototype",
-+    "LaunchParams.prototype.files",
-+    "LaunchQueue",
-+    "LaunchQueue.prototype",
-+    "LaunchQueue.prototype.setConsumer",
-     "LayoutShift",
-     "LayoutShift.prototype",
-     "LayoutShift.prototype.hadRecentInput",
-@@ -2668,6 +2679,7 @@
-     "MediaDevices.prototype.getSupportedConstraints",
-     "MediaDevices.prototype.getUserMedia",
-     "MediaDevices.prototype.ondevicechange",
-+    "MediaDevices.prototype.setCaptureHandleConfig",
-     "MediaElementAudioSourceNode",
-     "MediaElementAudioSourceNode.prototype",
-     "MediaElementAudioSourceNode.prototype.mediaElement",
-@@ -2861,12 +2873,68 @@
-     "NamedNodeMap.prototype.removeNamedItemNS",
-     "NamedNodeMap.prototype.setNamedItem",
-     "NamedNodeMap.prototype.setNamedItemNS",
-+    "NavigateEvent",
-+    "NavigateEvent.prototype",
-+    "NavigateEvent.prototype.canTransition",
-+    "NavigateEvent.prototype.destination",
-+    "NavigateEvent.prototype.downloadRequest",
-+    "NavigateEvent.prototype.formData",
-+    "NavigateEvent.prototype.hashChange",
-+    "NavigateEvent.prototype.info",
-+    "NavigateEvent.prototype.navigationType",
-+    "NavigateEvent.prototype.restoreScroll",
-+    "NavigateEvent.prototype.signal",
-+    "NavigateEvent.prototype.transitionWhile",
-+    "NavigateEvent.prototype.userInitiated",
-+    "Navigation",
-+    "Navigation.prototype",
-+    "Navigation.prototype.back",
-+    "Navigation.prototype.canGoBack",
-+    "Navigation.prototype.canGoForward",
-+    "Navigation.prototype.currentEntry",
-+    "Navigation.prototype.entries",
-+    "Navigation.prototype.forward",
-+    "Navigation.prototype.navigate",
-+    "Navigation.prototype.oncurrententrychange",
-+    "Navigation.prototype.onnavigate",
-+    "Navigation.prototype.onnavigateerror",
-+    "Navigation.prototype.onnavigatesuccess",
-+    "Navigation.prototype.reload",
-+    "Navigation.prototype.transition",
-+    "Navigation.prototype.traverseTo",
-+    "Navigation.prototype.updateCurrentEntry",
-+    "NavigationCurrentEntryChangeEvent",
-+    "NavigationCurrentEntryChangeEvent.prototype",
-+    "NavigationCurrentEntryChangeEvent.prototype.from",
-+    "NavigationCurrentEntryChangeEvent.prototype.navigationType",
-+    "NavigationDestination",
-+    "NavigationDestination.prototype",
-+    "NavigationDestination.prototype.getState",
-+    "NavigationDestination.prototype.id",
-+    "NavigationDestination.prototype.index",
-+    "NavigationDestination.prototype.key",
-+    "NavigationDestination.prototype.sameDocument",
-+    "NavigationDestination.prototype.url",
-+    "NavigationHistoryEntry",
-+    "NavigationHistoryEntry.prototype",
-+    "NavigationHistoryEntry.prototype.getState",
-+    "NavigationHistoryEntry.prototype.id",
-+    "NavigationHistoryEntry.prototype.index",
-+    "NavigationHistoryEntry.prototype.key",
-+    "NavigationHistoryEntry.prototype.ondispose",
-+    "NavigationHistoryEntry.prototype.sameDocument",
-+    "NavigationHistoryEntry.prototype.url",
-     "NavigationPreloadManager",
-     "NavigationPreloadManager.prototype",
-     "NavigationPreloadManager.prototype.disable",
-     "NavigationPreloadManager.prototype.enable",
-     "NavigationPreloadManager.prototype.getState",
-     "NavigationPreloadManager.prototype.setHeaderValue",
-+    "NavigationTransition",
-+    "NavigationTransition.prototype",
-+    "NavigationTransition.prototype.finished",
-+    "NavigationTransition.prototype.from",
-+    "NavigationTransition.prototype.navigationType",
-     "Navigator",
-     "Navigator.prototype",
-     "Navigator.prototype.appCodeName",
-@@ -3181,6 +3249,7 @@
-     "Option.prototype.constructor.prototype.ariaExpanded",
-     "Option.prototype.constructor.prototype.ariaHasPopup",
-     "Option.prototype.constructor.prototype.ariaHidden",
-+    "Option.prototype.constructor.prototype.ariaInvalid",
-     "Option.prototype.constructor.prototype.ariaKeyShortcuts",
-     "Option.prototype.constructor.prototype.ariaLabel",
-     "Option.prototype.constructor.prototype.ariaLevel",
-@@ -3287,6 +3356,7 @@
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -117,10 +117,13 @@
+     "ArrayBuffer.isView",
+     "ArrayBuffer.prototype",
+     "ArrayBuffer.prototype.byteLength",
++    "ArrayBuffer.prototype.detached",
+     "ArrayBuffer.prototype.maxByteLength",
+     "ArrayBuffer.prototype.resizable",
+     "ArrayBuffer.prototype.resize",
+     "ArrayBuffer.prototype.slice",
++    "ArrayBuffer.prototype.transfer",
++    "ArrayBuffer.prototype.transferToFixedLength",
+     "Atomics",
+     "Atomics.add",
+     "Atomics.and",
+@@ -1834,6 +1837,8 @@
+     "HTMLButtonElement.prototype.formTarget",
+     "HTMLButtonElement.prototype.labels",
+     "HTMLButtonElement.prototype.name",
++    "HTMLButtonElement.prototype.popoverTargetAction",
++    "HTMLButtonElement.prototype.popoverTargetElement",
+     "HTMLButtonElement.prototype.reportValidity",
+     "HTMLButtonElement.prototype.setCustomValidity",
+     "HTMLButtonElement.prototype.type",
+@@ -2037,6 +2042,8 @@
+     "HTMLInputElement.prototype.name",
+     "HTMLInputElement.prototype.pattern",
+     "HTMLInputElement.prototype.placeholder",
++    "HTMLInputElement.prototype.popoverTargetAction",
++    "HTMLInputElement.prototype.popoverTargetElement",
+     "HTMLInputElement.prototype.readOnly",
+     "HTMLInputElement.prototype.reportValidity",
+     "HTMLInputElement.prototype.required",
+@@ -2834,7 +2841,9 @@
+     "Intl.v8BreakIterator.prototype.resolvedOptions",
+     "Intl.v8BreakIterator.supportedLocalesOf",
+     "JSON",
++    "JSON.isRawJSON",
+     "JSON.parse",
++    "JSON.rawJSON",
+     "JSON.stringify",
+     "Keyboard",
+     "Keyboard.prototype",
+@@ -3027,6 +3036,7 @@
+     "MathMLElement.prototype.onauxclick",
+     "MathMLElement.prototype.onbeforeinput",
+     "MathMLElement.prototype.onbeforematch",
++    "MathMLElement.prototype.onbeforetoggle",
+     "MathMLElement.prototype.onbeforexrselect",
+     "MathMLElement.prototype.onblur",
+     "MathMLElement.prototype.oncancel",
+@@ -3833,6 +3843,7 @@
+     "Option.prototype.constructor.prototype.hasAttributes",
      "Option.prototype.constructor.prototype.hasPointerCapture",
      "Option.prototype.constructor.prototype.hidden",
++    "Option.prototype.constructor.prototype.hidePopover",
      "Option.prototype.constructor.prototype.id",
-+    "Option.prototype.constructor.prototype.inert",
+     "Option.prototype.constructor.prototype.inert",
      "Option.prototype.constructor.prototype.innerHTML",
-     "Option.prototype.constructor.prototype.innerText",
-     "Option.prototype.constructor.prototype.inputMode",
-@@ -3313,6 +3383,7 @@
-     "Option.prototype.constructor.prototype.onauxclick",
-     "Option.prototype.constructor.prototype.onbeforecopy",
-     "Option.prototype.constructor.prototype.onbeforecut",
-+    "Option.prototype.constructor.prototype.onbeforematch",
+@@ -3864,6 +3875,7 @@
+     "Option.prototype.constructor.prototype.onbeforeinput",
+     "Option.prototype.constructor.prototype.onbeforematch",
      "Option.prototype.constructor.prototype.onbeforepaste",
++    "Option.prototype.constructor.prototype.onbeforetoggle",
      "Option.prototype.constructor.prototype.onbeforexrselect",
      "Option.prototype.constructor.prototype.onblur",
-@@ -4903,6 +4974,7 @@
-     "SVGViewElement.prototype.onanimationiteration",
-     "SVGViewElement.prototype.onanimationstart",
+     "Option.prototype.constructor.prototype.oncancel",
+@@ -3961,6 +3973,7 @@
+     "Option.prototype.constructor.prototype.outerHTML",
+     "Option.prototype.constructor.prototype.outerText",
+     "Option.prototype.constructor.prototype.part",
++    "Option.prototype.constructor.prototype.popover",
+     "Option.prototype.constructor.prototype.prefix",
+     "Option.prototype.constructor.prototype.prepend",
+     "Option.prototype.constructor.prototype.previousElementSibling",
+@@ -3992,6 +4005,7 @@
+     "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
++    "Option.prototype.constructor.prototype.showPopover",
+     "Option.prototype.constructor.prototype.slot",
+     "Option.prototype.constructor.prototype.spellcheck",
+     "Option.prototype.constructor.prototype.style",
+@@ -3999,6 +4013,7 @@
+     "Option.prototype.constructor.prototype.tagName",
+     "Option.prototype.constructor.prototype.title",
+     "Option.prototype.constructor.prototype.toggleAttribute",
++    "Option.prototype.constructor.prototype.togglePopover",
+     "Option.prototype.constructor.prototype.translate",
+     "Option.prototype.constructor.prototype.virtualKeyboardPolicy",
+     "Option.prototype.constructor.prototype.webkitMatchesSelector",
+@@ -5455,6 +5470,7 @@
      "SVGViewElement.prototype.onauxclick",
-+    "SVGViewElement.prototype.onbeforematch",
+     "SVGViewElement.prototype.onbeforeinput",
+     "SVGViewElement.prototype.onbeforematch",
++    "SVGViewElement.prototype.onbeforetoggle",
      "SVGViewElement.prototype.onbeforexrselect",
      "SVGViewElement.prototype.onblur",
      "SVGViewElement.prototype.oncancel",
-@@ -6601,6 +6673,7 @@
-     "XMLDocument.prototype.onauxclick",
-     "XMLDocument.prototype.onbeforecopy",
-     "XMLDocument.prototype.onbeforecut",
-+    "XMLDocument.prototype.onbeforematch",
+@@ -6050,6 +6066,10 @@
+     "TimeRanges.prototype.end",
+     "TimeRanges.prototype.length",
+     "TimeRanges.prototype.start",
++    "ToggleEvent",
++    "ToggleEvent.prototype",
++    "ToggleEvent.prototype.newState",
++    "ToggleEvent.prototype.oldState",
+     "Touch",
+     "Touch.prototype",
+     "Touch.prototype.clientX",
+@@ -7203,6 +7223,7 @@
+     "XMLDocument.prototype.onbeforeinput",
+     "XMLDocument.prototype.onbeforematch",
      "XMLDocument.prototype.onbeforepaste",
++    "XMLDocument.prototype.onbeforetoggle",
      "XMLDocument.prototype.onbeforexrselect",
      "XMLDocument.prototype.onblur",
-@@ -7077,6 +7150,7 @@
-     "isFinite",
-     "isNaN",
-     "isSecureContext",
-+    "launchQueue",
-     "length",
-     "localStorage",
-     "location",
-@@ -7086,6 +7160,7 @@
-     "moveBy",
-     "moveTo",
-     "name",
-+    "navigation",
-     "navigator",
-     "offscreenBuffering",
-     "onabort",
-@@ -7096,6 +7171,7 @@
-     "onappinstalled",
-     "onauxclick",
+     "XMLDocument.prototype.oncancel",
+@@ -7704,6 +7725,7 @@
      "onbeforeinstallprompt",
-+    "onbeforematch",
+     "onbeforematch",
      "onbeforeprint",
++    "onbeforetoggle",
      "onbeforeunload",
      "onbeforexrselect",
+     "onblur",
 ```
 
   
-#### 101.0.4951.64 (`2022-5-10`) 
+#### 113.0.5672.24 (`2023-4-4`) 
 No browser API changes.
 
   
-#### 101.0.4951.54 (`2022-5-2`) 
+#### 113.0.5672.12 (`2023-3-30`) 
 No browser API changes.
 
   
-#### 101.0.4951.41 (`2022-4-26`) ⚡
-Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_100.0.4896.127_to_101.0.4951.41.diff), [json](./browser_apis/chrome-stable_100.0.4896.127_to_101.0.4951.41.json), [full list](./browser_apis/chrome-stable_101.0.4951.41.json))
+#### 113.0.5668.0 (`2023-3-24`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5653.0_to_113.0.5668.0.diff), [json](./browser_apis/chrome-unstable_113.0.5653.0_to_113.0.5668.0.json), [full list](./browser_apis/chrome-unstable_113.0.5668.0.json))
  ```diff
---- ./browser_apis/chrome-stable_100.0.4896.127.json	2023-01-06 17:09:06.200548038 +0000
-+++ ./browser_apis/chrome-stable_101.0.4951.41.json	2023-01-06 17:09:06.204548043 +0000
-@@ -1,7 +1,7 @@
+--- ./browser_apis/chrome-unstable_113.0.5653.0.json	2023-04-13 09:10:39.055358588 +0000
++++ ./browser_apis/chrome-unstable_113.0.5668.0.json	2023-04-13 09:11:00.787446258 +0000
+@@ -1,6 +1,6 @@
  {
-   "browser": "chrome-stable",
--  "version": "100.0.4896.127",
--  "browserApiCount": 7364,
-+  "version": "101.0.4951.41",
-+  "browserApiCount": 7375,
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7983,
++  "browserApiCount": 7984,
    "browserApis": [
-     "AbortController",
-     "AbortController.prototype",
-@@ -460,6 +460,12 @@
-     "CSSFontFaceRule",
-     "CSSFontFaceRule.prototype",
-     "CSSFontFaceRule.prototype.style",
-+    "CSSFontPaletteValuesRule",
-+    "CSSFontPaletteValuesRule.prototype",
-+    "CSSFontPaletteValuesRule.prototype.basePalette",
-+    "CSSFontPaletteValuesRule.prototype.fontFamily",
-+    "CSSFontPaletteValuesRule.prototype.name",
-+    "CSSFontPaletteValuesRule.prototype.overrideColors",
-     "CSSImageValue",
-     "CSSImageValue.prototype",
-     "CSSImportRule",
-@@ -1765,6 +1771,7 @@
-     "HTMLLinkElement.prototype.charset",
-     "HTMLLinkElement.prototype.crossOrigin",
-     "HTMLLinkElement.prototype.disabled",
-+    "HTMLLinkElement.prototype.fetchpriority",
-     "HTMLLinkElement.prototype.href",
-     "HTMLLinkElement.prototype.hreflang",
-     "HTMLLinkElement.prototype.imageSizes",
-@@ -1913,6 +1920,7 @@
-     "HTMLScriptElement.prototype.crossOrigin",
-     "HTMLScriptElement.prototype.defer",
-     "HTMLScriptElement.prototype.event",
-+    "HTMLScriptElement.prototype.fetchpriority",
-     "HTMLScriptElement.prototype.htmlFor",
-     "HTMLScriptElement.prototype.integrity",
-     "HTMLScriptElement.prototype.noModule",
-@@ -2285,6 +2293,7 @@
-     "Image.prototype.currentSrc",
-     "Image.prototype.decode",
-     "Image.prototype.decoding",
-+    "Image.prototype.fetchpriority",
-     "Image.prototype.height",
-     "Image.prototype.hspace",
-     "Image.prototype.isMap",
-@@ -2651,6 +2660,7 @@
-     "MediaCapabilities",
-     "MediaCapabilities.prototype",
-     "MediaCapabilities.prototype.decodingInfo",
-+    "MediaCapabilities.prototype.encodingInfo",
-     "MediaDevices",
-     "MediaDevices.prototype",
-     "MediaDevices.prototype.enumerateDevices",
-@@ -5619,6 +5629,7 @@
-     "USBDevice.prototype.deviceVersionMajor",
-     "USBDevice.prototype.deviceVersionMinor",
-     "USBDevice.prototype.deviceVersionSubminor",
-+    "USBDevice.prototype.forget",
-     "USBDevice.prototype.isochronousTransferIn",
-     "USBDevice.prototype.isochronousTransferOut",
-     "USBDevice.prototype.manufacturerName",
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2459,6 +2459,7 @@
+     "Headers.prototype.entries",
+     "Headers.prototype.forEach",
+     "Headers.prototype.get",
++    "Headers.prototype.getSetCookie",
+     "Headers.prototype.has",
+     "Headers.prototype.keys",
+     "Headers.prototype.set",
 ```
 
   
-### chrome-unstable
+#### 113.0.5653.0 (`2023-3-16`) ⚡
+Added 266 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5638.0_to_113.0.5653.0.diff), [json](./browser_apis/chrome-unstable_113.0.5638.0_to_113.0.5653.0.json), [full list](./browser_apis/chrome-unstable_113.0.5653.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_113.0.5638.0.json	2023-04-13 09:10:18.355267823 +0000
++++ ./browser_apis/chrome-unstable_113.0.5653.0.json	2023-04-13 09:10:39.055358588 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7717,
++  "browserApiCount": 7983,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1380,6 +1380,271 @@
+     "FormDataEvent.prototype.formData",
+     "FragmentDirective",
+     "FragmentDirective.prototype",
++    "GPU",
++    "GPU.prototype",
++    "GPU.prototype.getPreferredCanvasFormat",
++    "GPU.prototype.requestAdapter",
++    "GPUAdapter",
++    "GPUAdapter.prototype",
++    "GPUAdapter.prototype.features",
++    "GPUAdapter.prototype.isFallbackAdapter",
++    "GPUAdapter.prototype.limits",
++    "GPUAdapter.prototype.requestAdapterInfo",
++    "GPUAdapter.prototype.requestDevice",
++    "GPUAdapterInfo",
++    "GPUAdapterInfo.prototype",
++    "GPUAdapterInfo.prototype.architecture",
++    "GPUAdapterInfo.prototype.description",
++    "GPUAdapterInfo.prototype.device",
++    "GPUAdapterInfo.prototype.vendor",
++    "GPUBindGroup",
++    "GPUBindGroup.prototype",
++    "GPUBindGroup.prototype.label",
++    "GPUBindGroupLayout",
++    "GPUBindGroupLayout.prototype",
++    "GPUBindGroupLayout.prototype.label",
++    "GPUBuffer",
++    "GPUBuffer.prototype",
++    "GPUBuffer.prototype.destroy",
++    "GPUBuffer.prototype.getMappedRange",
++    "GPUBuffer.prototype.label",
++    "GPUBuffer.prototype.mapAsync",
++    "GPUBuffer.prototype.mapState",
++    "GPUBuffer.prototype.size",
++    "GPUBuffer.prototype.unmap",
++    "GPUBuffer.prototype.usage",
++    "GPUBufferUsage",
++    "GPUCanvasContext",
++    "GPUCanvasContext.prototype",
++    "GPUCanvasContext.prototype.canvas",
++    "GPUCanvasContext.prototype.configure",
++    "GPUCanvasContext.prototype.getCurrentTexture",
++    "GPUCanvasContext.prototype.unconfigure",
++    "GPUColorWrite",
++    "GPUCommandBuffer",
++    "GPUCommandBuffer.prototype",
++    "GPUCommandBuffer.prototype.label",
++    "GPUCommandEncoder",
++    "GPUCommandEncoder.prototype",
++    "GPUCommandEncoder.prototype.beginComputePass",
++    "GPUCommandEncoder.prototype.beginRenderPass",
++    "GPUCommandEncoder.prototype.clearBuffer",
++    "GPUCommandEncoder.prototype.copyBufferToBuffer",
++    "GPUCommandEncoder.prototype.copyBufferToTexture",
++    "GPUCommandEncoder.prototype.copyTextureToBuffer",
++    "GPUCommandEncoder.prototype.copyTextureToTexture",
++    "GPUCommandEncoder.prototype.finish",
++    "GPUCommandEncoder.prototype.insertDebugMarker",
++    "GPUCommandEncoder.prototype.label",
++    "GPUCommandEncoder.prototype.popDebugGroup",
++    "GPUCommandEncoder.prototype.pushDebugGroup",
++    "GPUCommandEncoder.prototype.resolveQuerySet",
++    "GPUCommandEncoder.prototype.writeTimestamp",
++    "GPUCompilationInfo",
++    "GPUCompilationInfo.prototype",
++    "GPUCompilationInfo.prototype.messages",
++    "GPUCompilationMessage",
++    "GPUCompilationMessage.prototype",
++    "GPUCompilationMessage.prototype.length",
++    "GPUCompilationMessage.prototype.lineNum",
++    "GPUCompilationMessage.prototype.linePos",
++    "GPUCompilationMessage.prototype.message",
++    "GPUCompilationMessage.prototype.offset",
++    "GPUCompilationMessage.prototype.type",
++    "GPUComputePassEncoder",
++    "GPUComputePassEncoder.prototype",
++    "GPUComputePassEncoder.prototype.dispatchWorkgroups",
++    "GPUComputePassEncoder.prototype.dispatchWorkgroupsIndirect",
++    "GPUComputePassEncoder.prototype.end",
++    "GPUComputePassEncoder.prototype.insertDebugMarker",
++    "GPUComputePassEncoder.prototype.label",
++    "GPUComputePassEncoder.prototype.popDebugGroup",
++    "GPUComputePassEncoder.prototype.pushDebugGroup",
++    "GPUComputePassEncoder.prototype.setBindGroup",
++    "GPUComputePassEncoder.prototype.setPipeline",
++    "GPUComputePassEncoder.prototype.writeTimestamp",
++    "GPUComputePipeline",
++    "GPUComputePipeline.prototype",
++    "GPUComputePipeline.prototype.getBindGroupLayout",
++    "GPUComputePipeline.prototype.label",
++    "GPUDevice",
++    "GPUDevice.prototype",
++    "GPUDevice.prototype.createBindGroup",
++    "GPUDevice.prototype.createBindGroupLayout",
++    "GPUDevice.prototype.createBuffer",
++    "GPUDevice.prototype.createCommandEncoder",
++    "GPUDevice.prototype.createComputePipeline",
++    "GPUDevice.prototype.createComputePipelineAsync",
++    "GPUDevice.prototype.createPipelineLayout",
++    "GPUDevice.prototype.createQuerySet",
++    "GPUDevice.prototype.createRenderBundleEncoder",
++    "GPUDevice.prototype.createRenderPipeline",
++    "GPUDevice.prototype.createRenderPipelineAsync",
++    "GPUDevice.prototype.createSampler",
++    "GPUDevice.prototype.createShaderModule",
++    "GPUDevice.prototype.createTexture",
++    "GPUDevice.prototype.destroy",
++    "GPUDevice.prototype.features",
++    "GPUDevice.prototype.importExternalTexture",
++    "GPUDevice.prototype.label",
++    "GPUDevice.prototype.limits",
++    "GPUDevice.prototype.lost",
++    "GPUDevice.prototype.onuncapturederror",
++    "GPUDevice.prototype.popErrorScope",
++    "GPUDevice.prototype.pushErrorScope",
++    "GPUDevice.prototype.queue",
++    "GPUDeviceLostInfo",
++    "GPUDeviceLostInfo.prototype",
++    "GPUDeviceLostInfo.prototype.message",
++    "GPUDeviceLostInfo.prototype.reason",
++    "GPUError",
++    "GPUError.prototype",
++    "GPUError.prototype.message",
++    "GPUExternalTexture",
++    "GPUExternalTexture.prototype",
++    "GPUExternalTexture.prototype.label",
++    "GPUInternalError",
++    "GPUInternalError.prototype",
++    "GPUMapMode",
++    "GPUOutOfMemoryError",
++    "GPUOutOfMemoryError.prototype",
++    "GPUPipelineError",
++    "GPUPipelineError.prototype",
++    "GPUPipelineError.prototype.reason",
++    "GPUPipelineLayout",
++    "GPUPipelineLayout.prototype",
++    "GPUPipelineLayout.prototype.label",
++    "GPUQuerySet",
++    "GPUQuerySet.prototype",
++    "GPUQuerySet.prototype.count",
++    "GPUQuerySet.prototype.destroy",
++    "GPUQuerySet.prototype.label",
++    "GPUQuerySet.prototype.type",
++    "GPUQueue",
++    "GPUQueue.prototype",
++    "GPUQueue.prototype.copyExternalImageToTexture",
++    "GPUQueue.prototype.label",
++    "GPUQueue.prototype.onSubmittedWorkDone",
++    "GPUQueue.prototype.submit",
++    "GPUQueue.prototype.writeBuffer",
++    "GPUQueue.prototype.writeTexture",
++    "GPURenderBundle",
++    "GPURenderBundle.prototype",
++    "GPURenderBundle.prototype.label",
++    "GPURenderBundleEncoder",
++    "GPURenderBundleEncoder.prototype",
++    "GPURenderBundleEncoder.prototype.draw",
++    "GPURenderBundleEncoder.prototype.drawIndexed",
++    "GPURenderBundleEncoder.prototype.drawIndexedIndirect",
++    "GPURenderBundleEncoder.prototype.drawIndirect",
++    "GPURenderBundleEncoder.prototype.finish",
++    "GPURenderBundleEncoder.prototype.insertDebugMarker",
++    "GPURenderBundleEncoder.prototype.label",
++    "GPURenderBundleEncoder.prototype.popDebugGroup",
++    "GPURenderBundleEncoder.prototype.pushDebugGroup",
++    "GPURenderBundleEncoder.prototype.setBindGroup",
++    "GPURenderBundleEncoder.prototype.setIndexBuffer",
++    "GPURenderBundleEncoder.prototype.setPipeline",
++    "GPURenderBundleEncoder.prototype.setVertexBuffer",
++    "GPURenderPassEncoder",
++    "GPURenderPassEncoder.prototype",
++    "GPURenderPassEncoder.prototype.beginOcclusionQuery",
++    "GPURenderPassEncoder.prototype.draw",
++    "GPURenderPassEncoder.prototype.drawIndexed",
++    "GPURenderPassEncoder.prototype.drawIndexedIndirect",
++    "GPURenderPassEncoder.prototype.drawIndirect",
++    "GPURenderPassEncoder.prototype.end",
++    "GPURenderPassEncoder.prototype.endOcclusionQuery",
++    "GPURenderPassEncoder.prototype.executeBundles",
++    "GPURenderPassEncoder.prototype.insertDebugMarker",
++    "GPURenderPassEncoder.prototype.label",
++    "GPURenderPassEncoder.prototype.popDebugGroup",
++    "GPURenderPassEncoder.prototype.pushDebugGroup",
++    "GPURenderPassEncoder.prototype.setBindGroup",
++    "GPURenderPassEncoder.prototype.setBlendConstant",
++    "GPURenderPassEncoder.prototype.setIndexBuffer",
++    "GPURenderPassEncoder.prototype.setPipeline",
++    "GPURenderPassEncoder.prototype.setScissorRect",
++    "GPURenderPassEncoder.prototype.setStencilReference",
++    "GPURenderPassEncoder.prototype.setVertexBuffer",
++    "GPURenderPassEncoder.prototype.setViewport",
++    "GPURenderPassEncoder.prototype.writeTimestamp",
++    "GPURenderPipeline",
++    "GPURenderPipeline.prototype",
++    "GPURenderPipeline.prototype.getBindGroupLayout",
++    "GPURenderPipeline.prototype.label",
++    "GPUSampler",
++    "GPUSampler.prototype",
++    "GPUSampler.prototype.label",
++    "GPUShaderModule",
++    "GPUShaderModule.prototype",
++    "GPUShaderModule.prototype.getCompilationInfo",
++    "GPUShaderModule.prototype.label",
++    "GPUShaderStage",
++    "GPUSupportedFeatures",
++    "GPUSupportedFeatures.prototype",
++    "GPUSupportedFeatures.prototype.entries",
++    "GPUSupportedFeatures.prototype.forEach",
++    "GPUSupportedFeatures.prototype.has",
++    "GPUSupportedFeatures.prototype.keys",
++    "GPUSupportedFeatures.prototype.size",
++    "GPUSupportedFeatures.prototype.values",
++    "GPUSupportedLimits",
++    "GPUSupportedLimits.prototype",
++    "GPUSupportedLimits.prototype.maxBindGroups",
++    "GPUSupportedLimits.prototype.maxBindingsPerBindGroup",
++    "GPUSupportedLimits.prototype.maxBufferSize",
++    "GPUSupportedLimits.prototype.maxColorAttachmentBytesPerSample",
++    "GPUSupportedLimits.prototype.maxColorAttachments",
++    "GPUSupportedLimits.prototype.maxComputeInvocationsPerWorkgroup",
++    "GPUSupportedLimits.prototype.maxComputeWorkgroupSizeX",
++    "GPUSupportedLimits.prototype.maxComputeWorkgroupSizeY",
++    "GPUSupportedLimits.prototype.maxComputeWorkgroupSizeZ",
++    "GPUSupportedLimits.prototype.maxComputeWorkgroupStorageSize",
++    "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
++    "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
++    "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
++    "GPUSupportedLimits.prototype.maxFragmentCombinedOutputResources",
++    "GPUSupportedLimits.prototype.maxInterStageShaderComponents",
++    "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
++    "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
++    "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
++    "GPUSupportedLimits.prototype.maxStorageBufferBindingSize",
++    "GPUSupportedLimits.prototype.maxStorageBuffersPerShaderStage",
++    "GPUSupportedLimits.prototype.maxStorageTexturesPerShaderStage",
++    "GPUSupportedLimits.prototype.maxTextureArrayLayers",
++    "GPUSupportedLimits.prototype.maxTextureDimension1D",
++    "GPUSupportedLimits.prototype.maxTextureDimension2D",
++    "GPUSupportedLimits.prototype.maxTextureDimension3D",
++    "GPUSupportedLimits.prototype.maxUniformBufferBindingSize",
++    "GPUSupportedLimits.prototype.maxUniformBuffersPerShaderStage",
++    "GPUSupportedLimits.prototype.maxVertexAttributes",
++    "GPUSupportedLimits.prototype.maxVertexBufferArrayStride",
++    "GPUSupportedLimits.prototype.maxVertexBuffers",
++    "GPUSupportedLimits.prototype.minStorageBufferOffsetAlignment",
++    "GPUSupportedLimits.prototype.minUniformBufferOffsetAlignment",
++    "GPUTexture",
++    "GPUTexture.prototype",
++    "GPUTexture.prototype.createView",
++    "GPUTexture.prototype.depthOrArrayLayers",
++    "GPUTexture.prototype.destroy",
++    "GPUTexture.prototype.dimension",
++    "GPUTexture.prototype.format",
++    "GPUTexture.prototype.height",
++    "GPUTexture.prototype.label",
++    "GPUTexture.prototype.mipLevelCount",
++    "GPUTexture.prototype.sampleCount",
++    "GPUTexture.prototype.usage",
++    "GPUTexture.prototype.width",
++    "GPUTextureUsage",
++    "GPUTextureView",
++    "GPUTextureView.prototype",
++    "GPUTextureView.prototype.label",
++    "GPUUncapturedErrorEvent",
++    "GPUUncapturedErrorEvent.prototype",
++    "GPUUncapturedErrorEvent.prototype.error",
++    "GPUValidationError",
++    "GPUValidationError.prototype",
+     "GainNode",
+     "GainNode.prototype",
+     "GainNode.prototype.gain",
+@@ -3159,6 +3424,7 @@
+     "Navigator.prototype.getGamepads",
+     "Navigator.prototype.getInstalledRelatedApps",
+     "Navigator.prototype.getUserMedia",
++    "Navigator.prototype.gpu",
+     "Navigator.prototype.hardwareConcurrency",
+     "Navigator.prototype.hid",
+     "Navigator.prototype.ink",
+```
+
+  
+#### 113.0.5638.0 (`2023-3-9`) ⚡
+Added 1 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_112.0.5615.20_to_113.0.5638.0.diff), [json](./browser_apis/chrome-unstable_112.0.5615.20_to_113.0.5638.0.json), [full list](./browser_apis/chrome-unstable_113.0.5638.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_112.0.5615.20.json	2023-04-13 09:09:57.531179757 +0000
++++ ./browser_apis/chrome-unstable_113.0.5638.0.json	2023-04-13 09:10:18.355267823 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 7720,
++  "browserApiCount": 7717,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -720,8 +720,6 @@
+     "CanvasCaptureMediaStreamTrack.prototype",
+     "CanvasCaptureMediaStreamTrack.prototype.canvas",
+     "CanvasCaptureMediaStreamTrack.prototype.requestFrame",
+-    "CanvasFilter",
+-    "CanvasFilter.prototype",
+     "CanvasGradient",
+     "CanvasGradient.prototype",
+     "CanvasGradient.prototype.addColorStop",
+@@ -3760,8 +3758,6 @@
+     "OverconstrainedError",
+     "OverconstrainedError.prototype",
+     "OverconstrainedError.prototype.constraint",
+-    "OverconstrainedError.prototype.message",
+-    "OverconstrainedError.prototype.name",
+     "PageTransitionEvent",
+     "PageTransitionEvent.prototype",
+     "PageTransitionEvent.prototype.persisted",
+@@ -5902,6 +5898,7 @@
+     "URLSearchParams.prototype.has",
+     "URLSearchParams.prototype.keys",
+     "URLSearchParams.prototype.set",
++    "URLSearchParams.prototype.size",
+     "URLSearchParams.prototype.sort",
+     "URLSearchParams.prototype.toString",
+     "URLSearchParams.prototype.values",
+```
+
+  
+#### 112.0.5615.20 (`2023-3-8`) 
+No browser API changes.
+
+  
+#### 112.0.5615.12 (`2023-3-2`) 
+No browser API changes.
+
   
 #### 112.0.5596.2 (`2023-2-17`) ⚡
 Added 0 APIs, removed 60 (see: [diff](./browser_apis/chrome-unstable_112.0.5582.0_to_112.0.5596.2.diff), [json](./browser_apis/chrome-unstable_112.0.5582.0_to_112.0.5596.2.json), [full list](./browser_apis/chrome-unstable_112.0.5596.2.json))
@@ -2847,246 +3198,6 @@ Added 5 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_107.0.5304.1
      "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
      "PublicKeyCredential.prototype",
      "PublicKeyCredential.prototype.authenticatorAttachment",
-```
-
-  
-#### 107.0.5304.18 (`2022-9-28`) 
-No browser API changes.
-
-  
-#### 107.0.5304.10 (`2022-9-22`) ⚡
-Added 6 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_107.0.5300.0_to_107.0.5304.10.diff), [json](./browser_apis/chrome-unstable_107.0.5300.0_to_107.0.5304.10.json), [full list](./browser_apis/chrome-unstable_107.0.5304.10.json))
- ```diff
---- ./browser_apis/chrome-unstable_107.0.5300.0.json	2023-01-06 17:09:06.272548121 +0000
-+++ ./browser_apis/chrome-unstable_107.0.5304.10.json	2023-01-06 17:09:06.272548121 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "107.0.0.0",
--  "browserApiCount": 7546,
-+  "browserApiCount": 7548,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2828,7 +2828,6 @@
-     "MediaSession.prototype.setMicrophoneActive",
-     "MediaSession.prototype.setPositionState",
-     "MediaSource",
--    "MediaSource.canConstructInDedicatedWorker",
-     "MediaSource.isTypeSupported",
-     "MediaSource.prototype",
-     "MediaSource.prototype.activeSourceBuffers",
-@@ -2836,7 +2835,6 @@
-     "MediaSource.prototype.clearLiveSeekableRange",
-     "MediaSource.prototype.duration",
-     "MediaSource.prototype.endOfStream",
--    "MediaSource.prototype.handle",
-     "MediaSource.prototype.onsourceclose",
-     "MediaSource.prototype.onsourceended",
-     "MediaSource.prototype.onsourceopen",
-@@ -2844,8 +2842,6 @@
-     "MediaSource.prototype.removeSourceBuffer",
-     "MediaSource.prototype.setLiveSeekableRange",
-     "MediaSource.prototype.sourceBuffers",
--    "MediaSourceHandle",
--    "MediaSourceHandle.prototype",
-     "MediaStreamAudioDestinationNode",
-     "MediaStreamAudioDestinationNode.prototype",
-     "MediaStreamAudioDestinationNode.prototype.stream",
-@@ -6995,6 +6991,10 @@
-     "XRCPUDepthInformation.prototype.normDepthBufferFromNormView",
-     "XRCPUDepthInformation.prototype.rawValueToMeters",
-     "XRCPUDepthInformation.prototype.width",
-+    "XRCamera",
-+    "XRCamera.prototype",
-+    "XRCamera.prototype.height",
-+    "XRCamera.prototype.width",
-     "XRDOMOverlayState",
-     "XRDOMOverlayState.prototype",
-     "XRDOMOverlayState.prototype.type",
-@@ -7118,6 +7118,7 @@
-     "XRTransientInputHitTestSource.prototype.cancel",
-     "XRView",
-     "XRView.prototype",
-+    "XRView.prototype.camera",
-     "XRView.prototype.eye",
-     "XRView.prototype.isFirstPersonObserver",
-     "XRView.prototype.projectionMatrix",
-@@ -7135,6 +7136,7 @@
-     "XRViewport.prototype.y",
-     "XRWebGLBinding",
-     "XRWebGLBinding.prototype",
-+    "XRWebGLBinding.prototype.getCameraImage",
-     "XRWebGLBinding.prototype.getDepthInformation",
-     "XRWebGLBinding.prototype.getReflectionCubeMap",
-     "XRWebGLDepthInformation",
-```
-
-  
-#### 107.0.5300.0 (`2022-9-15`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_107.0.5286.2_to_107.0.5300.0.diff), [json](./browser_apis/chrome-unstable_107.0.5286.2_to_107.0.5300.0.json), [full list](./browser_apis/chrome-unstable_107.0.5300.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_107.0.5286.2.json	2023-01-06 17:09:06.268548117 +0000
-+++ ./browser_apis/chrome-unstable_107.0.5300.0.json	2023-01-06 17:09:06.272548121 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "107.0.0.0",
--  "browserApiCount": 7542,
-+  "browserApiCount": 7546,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1129,6 +1129,8 @@
-     "ElementInternals.prototype",
-     "ElementInternals.prototype.ariaAtomic",
-     "ElementInternals.prototype.ariaAutoComplete",
-+    "ElementInternals.prototype.ariaBrailleLabel",
-+    "ElementInternals.prototype.ariaBrailleRoleDescription",
-     "ElementInternals.prototype.ariaBusy",
-     "ElementInternals.prototype.ariaChecked",
-     "ElementInternals.prototype.ariaColCount",
-@@ -3291,6 +3293,8 @@
-     "Option.prototype.constructor.prototype.append",
-     "Option.prototype.constructor.prototype.ariaAtomic",
-     "Option.prototype.constructor.prototype.ariaAutoComplete",
-+    "Option.prototype.constructor.prototype.ariaBrailleLabel",
-+    "Option.prototype.constructor.prototype.ariaBrailleRoleDescription",
-     "Option.prototype.constructor.prototype.ariaBusy",
-     "Option.prototype.constructor.prototype.ariaChecked",
-     "Option.prototype.constructor.prototype.ariaColCount",
-```
-
-  
-#### 107.0.5286.2 (`2022-9-8`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_106.0.5249.21_to_107.0.5286.2.diff), [json](./browser_apis/chrome-unstable_106.0.5249.21_to_107.0.5286.2.json), [full list](./browser_apis/chrome-unstable_107.0.5286.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_106.0.5249.21.json	2023-01-06 17:09:06.268548117 +0000
-+++ ./browser_apis/chrome-unstable_107.0.5286.2.json	2023-01-06 17:09:06.268548117 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
--  "version": "106.0.0.0",
--  "browserApiCount": 7541,
-+  "version": "107.0.0.0",
-+  "browserApiCount": 7542,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3793,6 +3793,7 @@
-     "PerformanceResourceTiming.prototype.nextHopProtocol",
-     "PerformanceResourceTiming.prototype.redirectEnd",
-     "PerformanceResourceTiming.prototype.redirectStart",
-+    "PerformanceResourceTiming.prototype.renderBlockingStatus",
-     "PerformanceResourceTiming.prototype.requestStart",
-     "PerformanceResourceTiming.prototype.responseEnd",
-     "PerformanceResourceTiming.prototype.responseStart",
-```
-
-  
-#### 106.0.5249.21 (`2022-9-1`) 
-No browser API changes.
-
-  
-#### 106.0.5249.12 (`2022-8-25`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_106.0.5245.0_to_106.0.5249.12.diff), [json](./browser_apis/chrome-unstable_106.0.5245.0_to_106.0.5249.12.json), [full list](./browser_apis/chrome-unstable_106.0.5249.12.json))
- ```diff
---- ./browser_apis/chrome-unstable_106.0.5245.0.json	2023-01-06 17:09:06.268548117 +0000
-+++ ./browser_apis/chrome-unstable_106.0.5249.12.json	2023-01-06 17:09:06.268548117 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "106.0.0.0",
--  "browserApiCount": 7540,
-+  "browserApiCount": 7541,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -5021,6 +5021,7 @@
-     "SVGUseElement.prototype.y",
-     "SVGViewElement",
-     "SVGViewElement.prototype",
-+    "SVGViewElement.prototype.attributeStyleMap",
-     "SVGViewElement.prototype.autofocus",
-     "SVGViewElement.prototype.blur",
-     "SVGViewElement.prototype.className",
-```
-
-  
-#### 106.0.5245.0 (`2022-8-18`) 
-No browser API changes.
-
-  
-#### 106.0.5231.2 (`2022-8-12`) ⚡
-Added 5 APIs, removed 9 (see: [diff](./browser_apis/chrome-unstable_106.0.5216.6_to_106.0.5231.2.diff), [json](./browser_apis/chrome-unstable_106.0.5216.6_to_106.0.5231.2.json), [full list](./browser_apis/chrome-unstable_106.0.5231.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_106.0.5216.6.json	2023-01-06 17:09:06.268548117 +0000
-+++ ./browser_apis/chrome-unstable_106.0.5231.2.json	2023-01-06 17:09:06.268548117 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "106.0.0.0",
--  "browserApiCount": 7544,
-+  "browserApiCount": 7540,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -234,6 +234,7 @@
-     "AudioDecoder.prototype.decode",
-     "AudioDecoder.prototype.decodeQueueSize",
-     "AudioDecoder.prototype.flush",
-+    "AudioDecoder.prototype.ondequeue",
-     "AudioDecoder.prototype.reset",
-     "AudioDecoder.prototype.state",
-     "AudioDestinationNode",
-@@ -247,6 +248,7 @@
-     "AudioEncoder.prototype.encode",
-     "AudioEncoder.prototype.encodeQueueSize",
-     "AudioEncoder.prototype.flush",
-+    "AudioEncoder.prototype.ondequeue",
-     "AudioEncoder.prototype.reset",
-     "AudioEncoder.prototype.state",
-     "AudioListener",
-@@ -5926,6 +5928,7 @@
-     "VideoDecoder.prototype.decode",
-     "VideoDecoder.prototype.decodeQueueSize",
-     "VideoDecoder.prototype.flush",
-+    "VideoDecoder.prototype.ondequeue",
-     "VideoDecoder.prototype.reset",
-     "VideoDecoder.prototype.state",
-     "VideoEncoder",
-@@ -5936,6 +5939,7 @@
-     "VideoEncoder.prototype.encode",
-     "VideoEncoder.prototype.encodeQueueSize",
-     "VideoEncoder.prototype.flush",
-+    "VideoEncoder.prototype.ondequeue",
-     "VideoEncoder.prototype.reset",
-     "VideoEncoder.prototype.state",
-     "VideoFrame",
-@@ -7169,15 +7173,6 @@
-     "chrome.csi.prototype",
-     "chrome.loadTimes",
-     "chrome.loadTimes.prototype",
--    "chrome.runtime",
--    "chrome.runtime.OnInstalledReason",
--    "chrome.runtime.OnRestartRequiredReason",
--    "chrome.runtime.PlatformArch",
--    "chrome.runtime.PlatformNaclArch",
--    "chrome.runtime.PlatformOs",
--    "chrome.runtime.RequestUpdateCheckStatus",
--    "chrome.runtime.connect",
--    "chrome.runtime.sendMessage",
-     "clearInterval",
-     "clearTimeout",
-     "clientInformation",
-@@ -7190,6 +7185,7 @@
-     "console.context",
-     "console.count",
-     "console.countReset",
-+    "console.createTask",
-     "console.debug",
-     "console.dir",
-     "console.dirxml",
 ```
 
   <!-- browserapis:end -->

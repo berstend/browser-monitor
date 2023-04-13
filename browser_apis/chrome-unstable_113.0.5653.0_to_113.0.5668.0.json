@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "113.0.5653.0",
+    "to": "113.0.5668.0"
+  },
+  "browserApis": {
+    "added": [
+      "Headers.prototype.getSetCookie"
+    ],
+    "removed": []
+  }
+}

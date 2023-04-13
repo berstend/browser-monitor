@@ -1,0 +1,18 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "112.0.5615.20",
+    "to": "113.0.5638.0"
+  },
+  "browserApis": {
+    "added": [
+      "URLSearchParams.prototype.size"
+    ],
+    "removed": [
+      "CanvasFilter",
+      "CanvasFilter.prototype",
+      "OverconstrainedError.prototype.message",
+      "OverconstrainedError.prototype.name"
+    ]
+  }
+}

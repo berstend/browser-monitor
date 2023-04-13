@@ -1,0 +1,34 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "113.0.5672.24",
+    "to": "114.0.5696.0"
+  },
+  "browserApis": {
+    "added": [
+      "ArrayBuffer.prototype.detached",
+      "ArrayBuffer.prototype.transfer",
+      "ArrayBuffer.prototype.transferToFixedLength",
+      "HTMLButtonElement.prototype.popoverTargetAction",
+      "HTMLButtonElement.prototype.popoverTargetElement",
+      "HTMLInputElement.prototype.popoverTargetAction",
+      "HTMLInputElement.prototype.popoverTargetElement",
+      "JSON.isRawJSON",
+      "JSON.rawJSON",
+      "MathMLElement.prototype.onbeforetoggle",
+      "Option.prototype.constructor.prototype.hidePopover",
+      "Option.prototype.constructor.prototype.onbeforetoggle",
+      "Option.prototype.constructor.prototype.popover",
+      "Option.prototype.constructor.prototype.showPopover",
+      "Option.prototype.constructor.prototype.togglePopover",
+      "SVGViewElement.prototype.onbeforetoggle",
+      "ToggleEvent",
+      "ToggleEvent.prototype",
+      "ToggleEvent.prototype.newState",
+      "ToggleEvent.prototype.oldState",
+      "XMLDocument.prototype.onbeforetoggle",
+      "onbeforetoggle"
+    ],
+    "removed": []
+  }
+}

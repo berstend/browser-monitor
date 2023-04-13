@@ -1,0 +1,38 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "110.0.5481.177",
+    "to": "111.0.5563.64"
+  },
+  "browserApis": {
+    "added": [
+      "ArrayBuffer.prototype.maxByteLength",
+      "ArrayBuffer.prototype.resizable",
+      "ArrayBuffer.prototype.resize",
+      "CSSContainerRule.prototype.containerName",
+      "CSSContainerRule.prototype.containerQuery",
+      "HTMLTemplateElement.prototype.shadowRootMode",
+      "String.prototype.isWellFormed",
+      "String.prototype.toWellFormed",
+      "ViewTransition",
+      "ViewTransition.prototype",
+      "ViewTransition.prototype.finished",
+      "ViewTransition.prototype.ready",
+      "ViewTransition.prototype.skipTransition",
+      "ViewTransition.prototype.updateCallbackDone",
+      "XMLDocument.prototype.startViewTransition",
+      "XRSession.prototype.enabledFeatures"
+    ],
+    "removed": [
+      "PaymentInstruments",
+      "PaymentInstruments.prototype",
+      "PaymentInstruments.prototype.clear",
+      "PaymentInstruments.prototype.delete",
+      "PaymentInstruments.prototype.get",
+      "PaymentInstruments.prototype.has",
+      "PaymentInstruments.prototype.keys",
+      "PaymentInstruments.prototype.set",
+      "PaymentManager.prototype.instruments"
+    ]
+  }
+}
