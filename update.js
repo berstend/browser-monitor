@@ -344,8 +344,9 @@ async function getBrowserData() {
   //   userAgent
   // )?.groups?.ver
   console.log(version, browserApis.length)
+  console.log(" - wsEndpoint", browser.wsEndpoint())
 
-  const cdpJSON = await got("http://localhost:9222/json/protocol/").json()
+  const cdpJSON = await got("http://127.0.0.1:9222/json/protocol/").json()
   const cdp = parseCDPJSON(cdpJSON)
 
   console.log("getBrowserData - closing")
