@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 112.0.5615.121 (`2023-4-14`) 
+No browser API changes.
+
+  
 #### 112.0.5615.49 (`2023-4-4`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_111.0.5563.146_to_112.0.5615.49.diff), [json](./browser_apis/chrome-stable_111.0.5563.146_to_112.0.5615.49.json), [full list](./browser_apis/chrome-stable_112.0.5615.49.json))
  ```diff
@@ -1525,78 +1529,6 @@ No browser API changes.
   
 #### 103.0.5060.114 (`2022-7-4`) 
 No browser API changes.
-
-  
-#### 103.0.5060.53 (`2022-6-21`) ⚡
-Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_102.0.5005.115_to_103.0.5060.53.diff), [json](./browser_apis/chrome-stable_102.0.5005.115_to_103.0.5060.53.json), [full list](./browser_apis/chrome-stable_103.0.5060.53.json))
- ```diff
---- ./browser_apis/chrome-stable_102.0.5005.115.json	2023-01-06 17:09:06.204548043 +0000
-+++ ./browser_apis/chrome-stable_103.0.5060.53.json	2023-01-06 17:09:06.208548048 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-stable",
--  "version": "102.0.5005.115",
--  "browserApiCount": 7451,
-+  "version": "103.0.5060.53",
-+  "browserApiCount": 7463,
-   "browserApis": [
-     "AbortController",
-     "AbortController.prototype",
-@@ -14,6 +14,7 @@
-     "AbortSignal.prototype.onabort",
-     "AbortSignal.prototype.reason",
-     "AbortSignal.prototype.throwIfAborted",
-+    "AbortSignal.timeout",
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-     "AbsoluteOrientationSensor.prototype.constructor",
-@@ -1164,6 +1165,7 @@
-     "ElementInternals.prototype.form",
-     "ElementInternals.prototype.labels",
-     "ElementInternals.prototype.reportValidity",
-+    "ElementInternals.prototype.role",
-     "ElementInternals.prototype.setFormValue",
-     "ElementInternals.prototype.setValidity",
-     "ElementInternals.prototype.shadowRoot",
-@@ -1304,6 +1306,13 @@
-     "FocusEvent",
-     "FocusEvent.prototype",
-     "FocusEvent.prototype.relatedTarget",
-+    "FontData",
-+    "FontData.prototype",
-+    "FontData.prototype.blob",
-+    "FontData.prototype.family",
-+    "FontData.prototype.fullName",
-+    "FontData.prototype.postscriptName",
-+    "FontData.prototype.style",
-     "FontFace",
-     "FontFace.prototype",
-     "FontFace.prototype.ascentOverride",
-@@ -3495,6 +3504,7 @@
-     "Option.prototype.constructor.prototype.replaceWith",
-     "Option.prototype.constructor.prototype.requestFullscreen",
-     "Option.prototype.constructor.prototype.requestPointerLock",
-+    "Option.prototype.constructor.prototype.role",
-     "Option.prototype.constructor.prototype.scroll",
-     "Option.prototype.constructor.prototype.scrollBy",
-     "Option.prototype.constructor.prototype.scrollHeight",
-@@ -5169,6 +5179,7 @@
-     "SerialPort",
-     "SerialPort.prototype",
-     "SerialPort.prototype.close",
-+    "SerialPort.prototype.forget",
-     "SerialPort.prototype.getInfo",
-     "SerialPort.prototype.getSignals",
-     "SerialPort.prototype.onconnect",
-@@ -7291,6 +7302,7 @@
-     "postMessage",
-     "print",
-     "prompt",
-+    "queryLocalFonts",
-     "queueMicrotask",
-     "releaseEvents",
-     "reportError",
-```
 
   
 ### chrome-unstable
