@@ -1533,6 +1533,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 114.0.5720.4 (`2023-4-20`) 
+No browser API changes.
+
+  
 #### 114.0.5696.0 (`2023-4-6`) ⚡
 Added 22 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5672.24_to_114.0.5696.0.diff), [json](./browser_apis/chrome-unstable_113.0.5672.24_to_114.0.5696.0.json), [full list](./browser_apis/chrome-unstable_114.0.5696.0.json))
  ```diff
@@ -3075,61 +3079,6 @@ Added 13 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_108.0.5327.
      "oncontextlost",
      "oncontextmenu",
      "oncontextrestored",
-```
-
-  
-#### 108.0.5327.0 (`2022-9-29`) ⚡
-Added 5 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_107.0.5304.18_to_108.0.5327.0.diff), [json](./browser_apis/chrome-unstable_107.0.5304.18_to_108.0.5327.0.json), [full list](./browser_apis/chrome-unstable_108.0.5327.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_107.0.5304.18.json	2023-01-06 17:09:06.272548121 +0000
-+++ ./browser_apis/chrome-unstable_108.0.5327.0.json	2023-01-06 17:09:06.272548121 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
--  "version": "107.0.0.0",
--  "browserApiCount": 7548,
-+  "version": "108.0.0.0",
-+  "browserApiCount": 7551,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -90,6 +90,8 @@
-     "Array.prototype.flat",
-     "Array.prototype.flatMap",
-     "Array.prototype.forEach",
-+    "Array.prototype.group",
-+    "Array.prototype.groupToMap",
-     "Array.prototype.includes",
-     "Array.prototype.indexOf",
-     "Array.prototype.join",
-@@ -1632,6 +1634,8 @@
-     "HTMLFormElement.prototype.method",
-     "HTMLFormElement.prototype.name",
-     "HTMLFormElement.prototype.noValidate",
-+    "HTMLFormElement.prototype.rel",
-+    "HTMLFormElement.prototype.relList",
-     "HTMLFormElement.prototype.reportValidity",
-     "HTMLFormElement.prototype.requestSubmit",
-     "HTMLFormElement.prototype.reset",
-@@ -2931,10 +2935,8 @@
-     "NavigateEvent.prototype.info",
-     "NavigateEvent.prototype.intercept",
-     "NavigateEvent.prototype.navigationType",
--    "NavigateEvent.prototype.restoreScroll",
-     "NavigateEvent.prototype.scroll",
-     "NavigateEvent.prototype.signal",
--    "NavigateEvent.prototype.transitionWhile",
-     "NavigateEvent.prototype.userInitiated",
-     "Navigation",
-     "Navigation.prototype",
-@@ -3961,6 +3963,7 @@
-     "Proxy",
-     "Proxy.revocable",
-     "PublicKeyCredential",
-+    "PublicKeyCredential.isConditionalMediationAvailable",
-     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
-     "PublicKeyCredential.prototype",
-     "PublicKeyCredential.prototype.authenticatorAttachment",
 ```
 
   <!-- browserapis:end -->
