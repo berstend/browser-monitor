@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "114.0.5720.4",
+    "to": "114.0.5735.6"
+  },
+  "browserApis": {
+    "added": [
+      "MathMLElement.prototype.onscrollend",
+      "Option.prototype.constructor.prototype.onscrollend",
+      "SVGViewElement.prototype.onscrollend",
+      "XMLDocument.prototype.onscrollend",
+      "onscrollend"
+    ],
+    "removed": [
+      "GPUSupportedLimits.prototype.maxFragmentCombinedOutputResources"
+    ]
+  }
+}

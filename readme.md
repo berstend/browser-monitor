@@ -1533,6 +1533,70 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 114.0.5735.6 (`2023-4-27`) ⚡
+Added 5 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_114.0.5720.4_to_114.0.5735.6.diff), [json](./browser_apis/chrome-unstable_114.0.5720.4_to_114.0.5735.6.json), [full list](./browser_apis/chrome-unstable_114.0.5735.6.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_114.0.5720.4.json	2023-04-28 01:03:14.259813956 +0000
++++ ./browser_apis/chrome-unstable_114.0.5735.6.json	2023-04-28 01:03:42.601765964 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8006,
++  "browserApiCount": 8010,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1607,7 +1607,6 @@
+     "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
+     "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
+     "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
+-    "GPUSupportedLimits.prototype.maxFragmentCombinedOutputResources",
+     "GPUSupportedLimits.prototype.maxInterStageShaderComponents",
+     "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
+     "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
+@@ -3103,6 +3102,7 @@
+     "MathMLElement.prototype.onreset",
+     "MathMLElement.prototype.onresize",
+     "MathMLElement.prototype.onscroll",
++    "MathMLElement.prototype.onscrollend",
+     "MathMLElement.prototype.onsecuritypolicyviolation",
+     "MathMLElement.prototype.onseeked",
+     "MathMLElement.prototype.onseeking",
+@@ -3944,6 +3944,7 @@
+     "Option.prototype.constructor.prototype.onreset",
+     "Option.prototype.constructor.prototype.onresize",
+     "Option.prototype.constructor.prototype.onscroll",
++    "Option.prototype.constructor.prototype.onscrollend",
+     "Option.prototype.constructor.prototype.onsearch",
+     "Option.prototype.constructor.prototype.onsecuritypolicyviolation",
+     "Option.prototype.constructor.prototype.onseeked",
+@@ -5537,6 +5538,7 @@
+     "SVGViewElement.prototype.onreset",
+     "SVGViewElement.prototype.onresize",
+     "SVGViewElement.prototype.onscroll",
++    "SVGViewElement.prototype.onscrollend",
+     "SVGViewElement.prototype.onsecuritypolicyviolation",
+     "SVGViewElement.prototype.onseeked",
+     "SVGViewElement.prototype.onseeking",
+@@ -7298,6 +7300,7 @@
+     "XMLDocument.prototype.onresize",
+     "XMLDocument.prototype.onresume",
+     "XMLDocument.prototype.onscroll",
++    "XMLDocument.prototype.onscrollend",
+     "XMLDocument.prototype.onsearch",
+     "XMLDocument.prototype.onsecuritypolicyviolation",
+     "XMLDocument.prototype.onseeked",
+@@ -7803,6 +7806,7 @@
+     "onreset",
+     "onresize",
+     "onscroll",
++    "onscrollend",
+     "onsearch",
+     "onsecuritypolicyviolation",
+     "onseeked",
+```
+
+  
 #### 114.0.5720.4 (`2023-4-20`) 
 No browser API changes.
 
@@ -2971,114 +3035,5 @@ Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_108.0.5355.
   
 #### 108.0.5355.0 (`2022-10-13`) 
 No browser API changes.
-
-  
-#### 108.0.5343.2 (`2022-10-7`) ⚡
-Added 13 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_108.0.5327.0_to_108.0.5343.2.diff), [json](./browser_apis/chrome-unstable_108.0.5327.0_to_108.0.5343.2.json), [full list](./browser_apis/chrome-unstable_108.0.5343.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_108.0.5327.0.json	2023-01-06 17:09:06.272548121 +0000
-+++ ./browser_apis/chrome-unstable_108.0.5343.2.json	2023-01-06 17:09:06.272548121 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "108.0.0.0",
--  "browserApiCount": 7551,
-+  "browserApiCount": 7562,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -821,6 +821,9 @@
-     "ConstantSourceNode",
-     "ConstantSourceNode.prototype",
-     "ConstantSourceNode.prototype.offset",
-+    "ContentVisibilityAutoStateChangedEvent",
-+    "ContentVisibilityAutoStateChangedEvent.prototype",
-+    "ContentVisibilityAutoStateChangedEvent.prototype.skipped",
-     "ConvolverNode",
-     "ConvolverNode.prototype",
-     "ConvolverNode.prototype.buffer",
-@@ -2832,6 +2835,7 @@
-     "MediaSession.prototype.setMicrophoneActive",
-     "MediaSession.prototype.setPositionState",
-     "MediaSource",
-+    "MediaSource.canConstructInDedicatedWorker",
-     "MediaSource.isTypeSupported",
-     "MediaSource.prototype",
-     "MediaSource.prototype.activeSourceBuffers",
-@@ -2846,6 +2850,8 @@
-     "MediaSource.prototype.removeSourceBuffer",
-     "MediaSource.prototype.setLiveSeekableRange",
-     "MediaSource.prototype.sourceBuffers",
-+    "MediaSourceHandle",
-+    "MediaSourceHandle.prototype",
-     "MediaStreamAudioDestinationNode",
-     "MediaStreamAudioDestinationNode.prototype",
-     "MediaStreamAudioDestinationNode.prototype.stream",
-@@ -3450,6 +3456,7 @@
-     "Option.prototype.constructor.prototype.onchange",
-     "Option.prototype.constructor.prototype.onclick",
-     "Option.prototype.constructor.prototype.onclose",
-+    "Option.prototype.constructor.prototype.oncontentvisibilityautostatechanged",
-     "Option.prototype.constructor.prototype.oncontextlost",
-     "Option.prototype.constructor.prototype.oncontextmenu",
-     "Option.prototype.constructor.prototype.oncontextrestored",
-@@ -3758,6 +3765,7 @@
-     "PerformanceNavigation.prototype.type",
-     "PerformanceNavigationTiming",
-     "PerformanceNavigationTiming.prototype",
-+    "PerformanceNavigationTiming.prototype.activationStart",
-     "PerformanceNavigationTiming.prototype.domComplete",
-     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
-     "PerformanceNavigationTiming.prototype.domContentLoadedEventStart",
-@@ -5048,6 +5056,7 @@
-     "SVGViewElement.prototype.onchange",
-     "SVGViewElement.prototype.onclick",
-     "SVGViewElement.prototype.onclose",
-+    "SVGViewElement.prototype.oncontentvisibilityautostatechanged",
-     "SVGViewElement.prototype.oncontextlost",
-     "SVGViewElement.prototype.oncontextmenu",
-     "SVGViewElement.prototype.oncontextrestored",
-@@ -6783,6 +6792,7 @@
-     "XMLDocument.prototype.onchange",
-     "XMLDocument.prototype.onclick",
-     "XMLDocument.prototype.onclose",
-+    "XMLDocument.prototype.oncontentvisibilityautostatechanged",
-     "XMLDocument.prototype.oncontextlost",
-     "XMLDocument.prototype.oncontextmenu",
-     "XMLDocument.prototype.oncontextrestored",
-@@ -6840,6 +6850,7 @@
-     "XMLDocument.prototype.onpointerover",
-     "XMLDocument.prototype.onpointerrawupdate",
-     "XMLDocument.prototype.onpointerup",
-+    "XMLDocument.prototype.onprerenderingchange",
-     "XMLDocument.prototype.onprogress",
-     "XMLDocument.prototype.onratechange",
-     "XMLDocument.prototype.onreadystatechange",
-@@ -6880,6 +6891,7 @@
-     "XMLDocument.prototype.plugins",
-     "XMLDocument.prototype.pointerLockElement",
-     "XMLDocument.prototype.prepend",
-+    "XMLDocument.prototype.prerendering",
-     "XMLDocument.prototype.queryCommandEnabled",
-     "XMLDocument.prototype.queryCommandIndeterm",
-     "XMLDocument.prototype.queryCommandState",
-@@ -7223,8 +7235,6 @@
-     "customElements",
-     "decodeURI",
-     "decodeURIComponent",
--    "defaultStatus",
--    "defaultstatus",
-     "devicePixelRatio",
-     "document",
-     "encodeURI",
-@@ -7281,6 +7291,7 @@
-     "onchange",
-     "onclick",
-     "onclose",
-+    "oncontentvisibilityautostatechanged",
-     "oncontextlost",
-     "oncontextmenu",
-     "oncontextrestored",
-```
 
   <!-- browserapis:end -->

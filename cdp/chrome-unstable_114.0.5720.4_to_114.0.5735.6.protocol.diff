@@ -1,0 +1,147 @@
+--- ./cdp/chrome-unstable_114.0.5720.4.protocol.json	2023-04-28 01:03:14.367831169 +0000
++++ ./cdp/chrome-unstable_114.0.5735.6.protocol.json	2023-04-28 01:03:42.617766815 +0000
+@@ -1461,7 +1461,8 @@
+             "OsTriggerIgnored",
+             "InvalidRegisterOsSourceHeader",
+             "InvalidRegisterOsTriggerHeader",
+-            "WebAndOsHeaders"
++            "WebAndOsHeaders",
++            "NoWebOrOsSupport"
+           ]
+         },
+         {
+@@ -1641,14 +1642,17 @@
+             "WellKnownNoResponse",
+             "WellKnownInvalidResponse",
+             "WellKnownListEmpty",
++            "WellKnownInvalidContentType",
+             "ConfigNotInWellKnown",
+             "WellKnownTooBig",
+             "ConfigHttpNotFound",
+             "ConfigNoResponse",
+             "ConfigInvalidResponse",
++            "ConfigInvalidContentType",
+             "ClientMetadataHttpNotFound",
+             "ClientMetadataNoResponse",
+             "ClientMetadataInvalidResponse",
++            "ClientMetadataInvalidContentType",
+             "DisabledInSettings",
+             "ErrorFetchingSignin",
+             "InvalidSigninResponse",
+@@ -1656,10 +1660,12 @@
+             "AccountsNoResponse",
+             "AccountsInvalidResponse",
+             "AccountsListEmpty",
++            "AccountsInvalidContentType",
+             "IdTokenHttpNotFound",
+             "IdTokenNoResponse",
+             "IdTokenInvalidResponse",
+             "IdTokenInvalidRequest",
++            "IdTokenInvalidContentType",
+             "ErrorIdToken",
+             "Canceled",
+             "RpPageNotVisible"
+@@ -15437,6 +15443,8 @@
+             "payment",
+             "picture-in-picture",
+             "private-aggregation",
++            "private-state-token-issuance",
++            "private-state-token-redemption",
+             "publickey-credentials-get",
+             "run-ad-auction",
+             "screen-wake-lock",
+@@ -15447,7 +15455,6 @@
+             "smart-card",
+             "storage-access",
+             "sync-xhr",
+-            "trust-token-redemption",
+             "unload",
+             "usb",
+             "vertical-scroll",
+@@ -19942,6 +19949,20 @@
+               "type": "string"
+             }
+           ]
++        },
++        {
++          "name": "runBounceTrackingMitigations",
++          "description": "Deletes state for sites identified as potential bounce trackers, immediately.",
++          "experimental": true,
++          "returns": [
++            {
++              "name": "deletedSites",
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -23133,7 +23154,20 @@
+             "CrossSiteRedirectInMainFrameNavigation",
+             "CrossSiteNavigationInMainFrameNavigation",
+             "SameSiteCrossOriginRedirectNotOptInInMainFrameNavigation",
+-            "SameSiteCrossOriginNavigationNotOptInInMainFrameNavigation"
++            "SameSiteCrossOriginNavigationNotOptInInMainFrameNavigation",
++            "MemoryPressureOnTrigger",
++            "MemoryPressureAfterTriggered"
++          ]
++        },
++        {
++          "id": "PreloadEnabledState",
++          "type": "string",
++          "enum": [
++            "Enabled",
++            "DisabledByDataSaver",
++            "DisabledByBatterySaver",
++            "DisabledByPreference",
++            "NotSupported"
+           ]
+         },
+         {
+@@ -23208,6 +23242,16 @@
+           ]
+         },
+         {
++          "name": "preloadEnabledStateUpdated",
++          "description": "Fired when a preload enabled state is updated.",
++          "parameters": [
++            {
++              "name": "state",
++              "$ref": "PreloadEnabledState"
++            }
++          ]
++        },
++        {
+           "name": "prefetchStatusUpdated",
+           "description": "Fired when a prefetch attempt is updated.",
+           "parameters": [
+@@ -24703,7 +24747,7 @@
+             },
+             {
+               "name": "executionContextAuxData",
+-              "description": "Embedder-specific auxiliary data.",
++              "description": "Embedder-specific auxiliary data likely matching {isDefault: boolean, type: 'default'|'isolated'|'worker', frameId: string}",
+               "optional": true,
+               "type": "object"
+             },
+@@ -24807,7 +24851,7 @@
+             },
+             {
+               "name": "executionContextAuxData",
+-              "description": "Embedder-specific auxiliary data.",
++              "description": "Embedder-specific auxiliary data likely matching {isDefault: boolean, type: 'default'|'isolated'|'worker', frameId: string}",
+               "optional": true,
+               "type": "object"
+             },
+@@ -26077,7 +26121,7 @@
+             },
+             {
+               "name": "auxData",
+-              "description": "Embedder-specific auxiliary data.",
++              "description": "Embedder-specific auxiliary data likely matching {isDefault: boolean, type: 'default'|'isolated'|'worker', frameId: string}",
+               "optional": true,
+               "type": "object"
+             }
