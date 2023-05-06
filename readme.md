@@ -1858,6 +1858,31 @@ Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_103.0.5060.13
   
 ### chrome-unstable
   
+#### 115.0.5750.0 (`2023-5-5`) ⚡
+Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_114.0.5735.6_to_115.0.5750.0.diff), [json](./browser_apis/chrome-unstable_114.0.5735.6_to_115.0.5750.0.json), [full list](./browser_apis/chrome-unstable_115.0.5750.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_114.0.5735.6.json	2023-05-06 00:57:25.284446659 +0000
++++ ./browser_apis/chrome-unstable_115.0.5750.0.json	2023-05-06 00:58:30.497127555 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8010,
++  "browserApiCount": 8012,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -6428,6 +6428,8 @@
+     "VirtualKeyboard.prototype.show",
+     "VirtualKeyboardGeometryChangeEvent",
+     "VirtualKeyboardGeometryChangeEvent.prototype",
++    "VisibilityStateEntry",
++    "VisibilityStateEntry.prototype",
+     "VisualViewport",
+     "VisualViewport.prototype",
+     "VisualViewport.prototype.height",
+```
+
+  
 #### 114.0.5735.6 (`2023-4-27`) ⚡
 Added 5 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_114.0.5720.4_to_114.0.5735.6.diff), [json](./browser_apis/chrome-unstable_114.0.5720.4_to_114.0.5735.6.json), [full list](./browser_apis/chrome-unstable_114.0.5735.6.json))
  ```diff
@@ -3356,9 +3381,5 @@ Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_108.0.5355.
      "IdleDeadline.prototype",
      "IdleDeadline.prototype.didTimeout",
 ```
-
-  
-#### 108.0.5355.0 (`2022-10-13`) 
-No browser API changes.
 
   <!-- browserapis:end -->

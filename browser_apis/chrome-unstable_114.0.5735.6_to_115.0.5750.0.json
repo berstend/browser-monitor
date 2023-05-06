@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "114.0.5735.6",
+    "to": "115.0.5750.0"
+  },
+  "browserApis": {
+    "added": [
+      "VisibilityStateEntry",
+      "VisibilityStateEntry.prototype"
+    ],
+    "removed": []
+  }
+}
