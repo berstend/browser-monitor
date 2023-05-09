@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 113.0.5672.92 (`2023-5-8`) 
+No browser API changes.
+
+  
 #### 113.0.5672.63 (`2023-5-2`) ⚡
 Added 267 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_112.0.5615.165_to_113.0.5672.63.diff), [json](./browser_apis/chrome-stable_112.0.5615.165_to_113.0.5672.63.json), [full list](./browser_apis/chrome-stable_113.0.5672.63.json))
  ```diff
@@ -1784,76 +1788,6 @@ Added 82 APIs, removed 13 (see: [diff](./browser_apis/chrome-stable_104.0.5112.1
   
 #### 104.0.5112.101 (`2022-8-16`) 
 No browser API changes.
-
-  
-#### 104.0.5112.79 (`2022-8-2`) ⚡
-Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_103.0.5060.134_to_104.0.5112.79.diff), [json](./browser_apis/chrome-stable_103.0.5060.134_to_104.0.5112.79.json), [full list](./browser_apis/chrome-stable_104.0.5112.79.json))
- ```diff
---- ./browser_apis/chrome-stable_103.0.5060.134.json	2023-01-06 17:09:06.208548048 +0000
-+++ ./browser_apis/chrome-stable_104.0.5112.79.json	2023-01-06 17:09:06.208548048 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-stable",
--  "version": "103.0.5060.134",
--  "browserApiCount": 7463,
-+  "version": "104.0.5112.79",
-+  "browserApiCount": 7473,
-   "browserApis": [
-     "AbortController",
-     "AbortController.prototype",
-@@ -403,6 +403,9 @@
-     "BroadcastChannel.prototype.onmessage",
-     "BroadcastChannel.prototype.onmessageerror",
-     "BroadcastChannel.prototype.postMessage",
-+    "BrowserCaptureMediaStreamTrack",
-+    "BrowserCaptureMediaStreamTrack.prototype",
-+    "BrowserCaptureMediaStreamTrack.prototype.cropTo",
-     "ByteLengthQueuingStrategy",
-     "ByteLengthQueuingStrategy.prototype",
-     "ByteLengthQueuingStrategy.prototype.highWaterMark",
-@@ -851,6 +854,9 @@
-     "CredentialsContainer.prototype.get",
-     "CredentialsContainer.prototype.preventSilentAccess",
-     "CredentialsContainer.prototype.store",
-+    "CropTarget",
-+    "CropTarget.fromElement",
-+    "CropTarget.prototype",
-     "Crypto",
-     "Crypto.prototype",
-     "Crypto.prototype.getRandomValues",
-@@ -6068,6 +6074,7 @@
-     "WebGL2RenderingContext.prototype.drawElements",
-     "WebGL2RenderingContext.prototype.drawElementsInstanced",
-     "WebGL2RenderingContext.prototype.drawRangeElements",
-+    "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
-     "WebGL2RenderingContext.prototype.drawingBufferHeight",
-     "WebGL2RenderingContext.prototype.drawingBufferWidth",
-     "WebGL2RenderingContext.prototype.enable",
-@@ -6200,6 +6207,7 @@
-     "WebGL2RenderingContext.prototype.uniformMatrix4fv",
-     "WebGL2RenderingContext.prototype.uniformMatrix4x2fv",
-     "WebGL2RenderingContext.prototype.uniformMatrix4x3fv",
-+    "WebGL2RenderingContext.prototype.unpackColorSpace",
-     "WebGL2RenderingContext.prototype.useProgram",
-     "WebGL2RenderingContext.prototype.validateProgram",
-     "WebGL2RenderingContext.prototype.vertexAttrib1f",
-@@ -6286,6 +6294,7 @@
-     "WebGLRenderingContext.prototype.disableVertexAttribArray",
-     "WebGLRenderingContext.prototype.drawArrays",
-     "WebGLRenderingContext.prototype.drawElements",
-+    "WebGLRenderingContext.prototype.drawingBufferColorSpace",
-     "WebGLRenderingContext.prototype.drawingBufferHeight",
-     "WebGLRenderingContext.prototype.drawingBufferWidth",
-     "WebGLRenderingContext.prototype.enable",
-@@ -6367,6 +6376,7 @@
-     "WebGLRenderingContext.prototype.uniformMatrix2fv",
-     "WebGLRenderingContext.prototype.uniformMatrix3fv",
-     "WebGLRenderingContext.prototype.uniformMatrix4fv",
-+    "WebGLRenderingContext.prototype.unpackColorSpace",
-     "WebGLRenderingContext.prototype.useProgram",
-     "WebGLRenderingContext.prototype.validateProgram",
-     "WebGLRenderingContext.prototype.vertexAttrib1f",
-```
 
   
 ### chrome-unstable
