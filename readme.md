@@ -1792,6 +1792,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 115.0.5762.4 (`2023-5-11`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5750.0_to_115.0.5762.4.diff), [json](./browser_apis/chrome-unstable_115.0.5750.0_to_115.0.5762.4.json), [full list](./browser_apis/chrome-unstable_115.0.5762.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_115.0.5750.0.json	2023-05-12 01:02:12.997626591 +0000
++++ ./browser_apis/chrome-unstable_115.0.5762.4.json	2023-05-12 01:02:44.902211585 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8012,
++  "browserApiCount": 8013,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -6491,6 +6491,7 @@
+     "WebAssembly.Instance",
+     "WebAssembly.Instance.prototype",
+     "WebAssembly.Instance.prototype.exports",
++    "WebAssembly.JSTag",
+     "WebAssembly.LinkError",
+     "WebAssembly.LinkError.prototype",
+     "WebAssembly.Memory",
+```
+
+  
 #### 115.0.5750.0 (`2023-5-5`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_114.0.5735.6_to_115.0.5750.0.diff), [json](./browser_apis/chrome-unstable_114.0.5735.6_to_115.0.5750.0.json), [full list](./browser_apis/chrome-unstable_115.0.5750.0.json))
  ```diff
@@ -3245,75 +3269,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_108.0.5359.1
   
 #### 108.0.5359.19 (`2022-10-26`) 
 No browser API changes.
-
-  
-#### 108.0.5359.10 (`2022-10-19`) ⚡
-Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_108.0.5355.0_to_108.0.5359.10.diff), [json](./browser_apis/chrome-unstable_108.0.5355.0_to_108.0.5359.10.json), [full list](./browser_apis/chrome-unstable_108.0.5359.10.json))
- ```diff
---- ./browser_apis/chrome-unstable_108.0.5355.0.json	2023-01-06 17:09:06.272548121 +0000
-+++ ./browser_apis/chrome-unstable_108.0.5359.10.json	2023-01-06 17:09:06.272548121 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "108.0.0.0",
--  "browserApiCount": 7562,
-+  "browserApiCount": 7585,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -419,6 +419,12 @@
-     "CSS.dpcm",
-     "CSS.dpi",
-     "CSS.dppx",
-+    "CSS.dvb",
-+    "CSS.dvh",
-+    "CSS.dvi",
-+    "CSS.dvmax",
-+    "CSS.dvmin",
-+    "CSS.dvw",
-     "CSS.em",
-     "CSS.escape",
-     "CSS.ex",
-@@ -427,6 +433,12 @@
-     "CSS.highlights",
-     "CSS.in",
-     "CSS.kHz",
-+    "CSS.lvb",
-+    "CSS.lvh",
-+    "CSS.lvi",
-+    "CSS.lvmax",
-+    "CSS.lvmin",
-+    "CSS.lvw",
-     "CSS.mm",
-     "CSS.ms",
-     "CSS.number",
-@@ -440,8 +452,16 @@
-     "CSS.rem",
-     "CSS.s",
-     "CSS.supports",
-+    "CSS.svb",
-+    "CSS.svh",
-+    "CSS.svi",
-+    "CSS.svmax",
-+    "CSS.svmin",
-+    "CSS.svw",
-     "CSS.turn",
-+    "CSS.vb",
-     "CSS.vh",
-+    "CSS.vi",
-     "CSS.vmax",
-     "CSS.vmin",
-     "CSS.vw",
-@@ -2327,6 +2347,9 @@
-     "IIRFilterNode",
-     "IIRFilterNode.prototype",
-     "IIRFilterNode.prototype.getFrequencyResponse",
-+    "IdentityCredential",
-+    "IdentityCredential.prototype",
-+    "IdentityCredential.prototype.token",
-     "IdleDeadline",
-     "IdleDeadline.prototype",
-     "IdleDeadline.prototype.didTimeout",
-```
 
   <!-- browserapis:end -->

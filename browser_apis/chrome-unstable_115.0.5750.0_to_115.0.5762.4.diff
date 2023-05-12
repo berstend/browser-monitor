@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_115.0.5750.0.json	2023-05-12 01:02:12.997626591 +0000
++++ ./browser_apis/chrome-unstable_115.0.5762.4.json	2023-05-12 01:02:44.902211585 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8012,
++  "browserApiCount": 8013,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -6491,6 +6491,7 @@
+     "WebAssembly.Instance",
+     "WebAssembly.Instance.prototype",
+     "WebAssembly.Instance.prototype.exports",
++    "WebAssembly.JSTag",
+     "WebAssembly.LinkError",
+     "WebAssembly.LinkError.prototype",
+     "WebAssembly.Memory",

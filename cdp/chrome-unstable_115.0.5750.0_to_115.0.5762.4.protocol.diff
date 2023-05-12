@@ -1,0 +1,167 @@
+--- ./cdp/chrome-unstable_115.0.5750.0.protocol.json	2023-05-12 01:02:13.117628607 +0000
++++ ./cdp/chrome-unstable_115.0.5762.4.protocol.json	2023-05-12 01:02:44.914211747 +0000
+@@ -1331,47 +1331,6 @@
+           ]
+         },
+         {
+-          "id": "TwaQualityEnforcementViolationType",
+-          "type": "string",
+-          "enum": [
+-            "kHttpError",
+-            "kUnavailableOffline",
+-            "kDigitalAssetLinks"
+-          ]
+-        },
+-        {
+-          "id": "TrustedWebActivityIssueDetails",
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "url",
+-              "description": "The url that triggers the violation.",
+-              "type": "string"
+-            },
+-            {
+-              "name": "violationType",
+-              "$ref": "TwaQualityEnforcementViolationType"
+-            },
+-            {
+-              "name": "httpStatusCode",
+-              "optional": true,
+-              "type": "integer"
+-            },
+-            {
+-              "name": "packageName",
+-              "description": "The package name of the Trusted Web Activity client app. This field is\nonly used when violation type is kDigitalAssetLinks.",
+-              "optional": true,
+-              "type": "string"
+-            },
+-            {
+-              "name": "signature",
+-              "description": "The signature of the Trusted Web Activity client app. This field is only\nused when violation type is kDigitalAssetLinks.",
+-              "optional": true,
+-              "type": "string"
+-            }
+-          ]
+-        },
+-        {
+           "id": "LowTextContrastIssueDetails",
+           "type": "object",
+           "properties": [
+@@ -1696,7 +1655,6 @@
+             "HeavyAdIssue",
+             "ContentSecurityPolicyIssue",
+             "SharedArrayBufferIssue",
+-            "TrustedWebActivityIssue",
+             "LowTextContrastIssue",
+             "CorsIssue",
+             "AttributionReportingIssue",
+@@ -1745,11 +1703,6 @@
+               "$ref": "SharedArrayBufferIssueDetails"
+             },
+             {
+-              "name": "twaQualityEnforcementDetails",
+-              "optional": true,
+-              "$ref": "TrustedWebActivityIssueDetails"
+-            },
+-            {
+               "name": "lowTextContrastIssueDetails",
+               "optional": true,
+               "$ref": "LowTextContrastIssueDetails"
+@@ -25742,8 +25695,30 @@
+           "type": "string"
+         },
+         {
++          "id": "SerializationOptions",
++          "description": "Represents options for serialization. Overrides `generatePreview`, `returnByValue` and\n`generateWebDriverValue`.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "serialization",
++              "type": "string",
++              "enum": [
++                "deep",
++                "json",
++                "idOnly"
++              ]
++            },
++            {
++              "name": "maxDepth",
++              "description": "Deep serialization depth. Default is full depth. Respected only in `deep` serialization mode.",
++              "optional": true,
++              "type": "integer"
++            }
++          ]
++        },
++        {
+           "id": "DeepSerializedValue",
+-          "description": "Represents the value serialiazed by the WebDriver BiDi specification\nhttps://goo.gle/browser-automation-deepserialization.",
++          "description": "Represents deep serialized value.",
+           "type": "object",
+           "properties": [
+             {
+@@ -25876,7 +25851,14 @@
+             },
+             {
+               "name": "webDriverValue",
+-              "description": "WebDriver BiDi representation of the value.",
++              "description": "Deprecated. Use `deepSerializedValue` instead. WebDriver BiDi representation of the value.",
++              "deprecated": true,
++              "optional": true,
++              "$ref": "DeepSerializedValue"
++            },
++            {
++              "name": "deepSerializedValue",
++              "description": "Deep serialized value.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "DeepSerializedValue"
+@@ -26493,7 +26475,7 @@
+             },
+             {
+               "name": "returnByValue",
+-              "description": "Whether the result is expected to be a JSON object which should be sent by value.",
++              "description": "Whether the result is expected to be a JSON object which should be sent by value.\nCan be overriden by `serializationOptions`.",
+               "optional": true,
+               "type": "boolean"
+             },
+@@ -26544,10 +26526,17 @@
+             },
+             {
+               "name": "generateWebDriverValue",
+-              "description": "Whether the result should contain `webDriverValue`, serialized according to\nhttps://goo.gle/browser-automation-deepserialization. This is mutually\nexclusive with `returnByValue`, but resulting `objectId` is still provided.",
+-              "experimental": true,
++              "description": "Deprecated. Use `serializationOptions: {serialization:\"deep\"}` instead.\nWhether the result should contain `webDriverValue`, serialized according to\nhttps://w3c.github.io/webdriver-bidi. This is mutually exclusive with `returnByValue`, but\nresulting `objectId` is still provided.",
++              "deprecated": true,
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "serializationOptions",
++              "description": "Specifies the result serialization. If provided, overrides\n`returnByValue` and `generateWebDriverValue`.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "SerializationOptions"
+             }
+           ],
+           "returns": [
+@@ -26719,10 +26708,17 @@
+             },
+             {
+               "name": "generateWebDriverValue",
+-              "description": "Whether the result should be serialized according to https://goo.gle/browser-automation-deepserialization.",
+-              "experimental": true,
++              "description": "Deprecated. Use `serializationOptions: {serialization:\"deep\"}` instead.\nWhether the result should contain `webDriverValue`, serialized\naccording to\nhttps://w3c.github.io/webdriver-bidi. This is mutually exclusive with `returnByValue`, but\nresulting `objectId` is still provided.",
++              "deprecated": true,
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "serializationOptions",
++              "description": "Specifies the result serialization. If provided, overrides\n`returnByValue` and `generateWebDriverValue`.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "SerializationOptions"
+             }
+           ],
+           "returns": [

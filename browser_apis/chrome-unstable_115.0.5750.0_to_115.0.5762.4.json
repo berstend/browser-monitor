@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "115.0.5750.0",
+    "to": "115.0.5762.4"
+  },
+  "browserApis": {
+    "added": [
+      "WebAssembly.JSTag"
+    ],
+    "removed": []
+  }
+}
