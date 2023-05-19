@@ -1,0 +1,26 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "115.0.5762.4",
+    "to": "115.0.5773.4"
+  },
+  "browserApis": {
+    "added": [
+      "Animation.prototype.rangeEnd",
+      "Animation.prototype.rangeStart",
+      "AnimationTimeline.prototype.duration",
+      "AnimationTimeline.prototype.getCurrentTime",
+      "PerformanceResourceTiming.prototype.firstInterimResponseStart",
+      "ScrollTimeline",
+      "ScrollTimeline.prototype",
+      "ScrollTimeline.prototype.axis",
+      "ScrollTimeline.prototype.source",
+      "ViewTimeline",
+      "ViewTimeline.prototype",
+      "ViewTimeline.prototype.endOffset",
+      "ViewTimeline.prototype.startOffset",
+      "ViewTimeline.prototype.subject"
+    ],
+    "removed": []
+  }
+}

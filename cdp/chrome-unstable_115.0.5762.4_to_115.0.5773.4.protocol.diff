@@ -1,0 +1,126 @@
+--- ./cdp/chrome-unstable_115.0.5762.4.protocol.json	2023-05-19 01:02:54.541622877 +0000
++++ ./cdp/chrome-unstable_115.0.5773.4.protocol.json	2023-05-19 01:03:34.381378622 +0000
+@@ -1852,6 +1852,19 @@
+               "type": "boolean"
+             }
+           ]
++        },
++        {
++          "name": "checkFormsIssues",
++          "description": "Runs the form issues check for the target page. Found issues are reported\nusing Audits.issueAdded event.",
++          "returns": [
++            {
++              "name": "formIssues",
++              "type": "array",
++              "items": {
++                "$ref": "GenericIssueDetails"
++              }
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -1914,6 +1927,12 @@
+               "$ref": "DOM.BackendNodeId"
+             },
+             {
++              "name": "frameId",
++              "description": "Identifies the frame that field belongs to.",
++              "optional": true,
++              "$ref": "Page.FrameId"
++            },
++            {
+               "name": "card",
+               "description": "Credit card information to fill out the form. Credit card data is not saved.",
+               "$ref": "CreditCard"
+@@ -23236,7 +23255,10 @@
+             "SameSiteCrossOriginRedirectNotOptInInMainFrameNavigation",
+             "SameSiteCrossOriginNavigationNotOptInInMainFrameNavigation",
+             "MemoryPressureOnTrigger",
+-            "MemoryPressureAfterTriggered"
++            "MemoryPressureAfterTriggered",
++            "SpeculationRuleRemoved",
++            "TriggerPageNavigated",
++            "OtherPrerenderedPageActivated"
+           ]
+         },
+         {
+@@ -23262,6 +23284,40 @@
+             "Failure",
+             "NotSupported"
+           ]
++        },
++        {
++          "id": "PrefetchStatus",
++          "description": "TODO(https://crbug.com/1384419): revisit the list of PrefetchStatus and\nfilter out the ones that aren't necessary to the developers.",
++          "type": "string",
++          "enum": [
++            "PrefetchAllowed",
++            "PrefetchFailedIneligibleRedirect",
++            "PrefetchFailedInvalidRedirect",
++            "PrefetchFailedMIMENotSupported",
++            "PrefetchFailedNetError",
++            "PrefetchFailedNon2XX",
++            "PrefetchFailedPerPageLimitExceeded",
++            "PrefetchHeldback",
++            "PrefetchIneligibleRetryAfter",
++            "PrefetchIsPrivacyDecoy",
++            "PrefetchIsStale",
++            "PrefetchNotEligibleBrowserContextOffTheRecord",
++            "PrefetchNotEligibleDataSaverEnabled",
++            "PrefetchNotEligibleExistingProxy",
++            "PrefetchNotEligibleHostIsNonUnique",
++            "PrefetchNotEligibleNonDefaultStoragePartition",
++            "PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy",
++            "PrefetchNotEligibleSchemeIsNotHttps",
++            "PrefetchNotEligibleUserHasCookies",
++            "PrefetchNotEligibleUserHasServiceWorker",
++            "PrefetchNotFinishedInTime",
++            "PrefetchNotStarted",
++            "PrefetchNotUsedCookiesChanged",
++            "PrefetchProxyNotAvailable",
++            "PrefetchResponseUsed",
++            "PrefetchSuccessfulButNotUsed",
++            "PrefetchNotUsedProbeFailed"
++          ]
+         }
+       ],
+       "commands": [
+@@ -23351,6 +23407,10 @@
+             {
+               "name": "status",
+               "$ref": "PreloadingStatus"
++            },
++            {
++              "name": "prefetchStatus",
++              "$ref": "PrefetchStatus"
+             }
+           ]
+         },
+@@ -23411,6 +23471,15 @@
+           ]
+         },
+         {
++          "id": "DialogType",
++          "description": "Whether the dialog shown is an account chooser or an auto re-authentication dialog.",
++          "type": "string",
++          "enum": [
++            "AccountChooser",
++            "AutoReauthn"
++          ]
++        },
++        {
+           "id": "Account",
+           "description": "Corresponds to IdentityRequestAccount",
+           "type": "object",
+@@ -23470,6 +23539,10 @@
+               "type": "string"
+             },
+             {
++              "name": "dialogType",
++              "$ref": "DialogType"
++            },
++            {
+               "name": "accounts",
+               "type": "array",
+               "items": {

@@ -1792,6 +1792,71 @@ Added 82 APIs, removed 13 (see: [diff](./browser_apis/chrome-stable_104.0.5112.1
   
 ### chrome-unstable
   
+#### 115.0.5773.4 (`2023-5-18`) ⚡
+Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5762.4_to_115.0.5773.4.diff), [json](./browser_apis/chrome-unstable_115.0.5762.4_to_115.0.5773.4.json), [full list](./browser_apis/chrome-unstable_115.0.5773.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_115.0.5762.4.json	2023-05-19 01:02:54.381623790 +0000
++++ ./browser_apis/chrome-unstable_115.0.5773.4.json	2023-05-19 01:03:34.361378753 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8013,
++  "browserApiCount": 8027,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -52,6 +52,8 @@
+     "Animation.prototype.play",
+     "Animation.prototype.playState",
+     "Animation.prototype.playbackRate",
++    "Animation.prototype.rangeEnd",
++    "Animation.prototype.rangeStart",
+     "Animation.prototype.ready",
+     "Animation.prototype.replaceState",
+     "Animation.prototype.reverse",
+@@ -70,6 +72,8 @@
+     "AnimationTimeline",
+     "AnimationTimeline.prototype",
+     "AnimationTimeline.prototype.currentTime",
++    "AnimationTimeline.prototype.duration",
++    "AnimationTimeline.prototype.getCurrentTime",
+     "Array",
+     "Array.from",
+     "Array.isArray",
+@@ -4220,6 +4224,7 @@
+     "PerformanceResourceTiming.prototype.domainLookupStart",
+     "PerformanceResourceTiming.prototype.encodedBodySize",
+     "PerformanceResourceTiming.prototype.fetchStart",
++    "PerformanceResourceTiming.prototype.firstInterimResponseStart",
+     "PerformanceResourceTiming.prototype.initiatorType",
+     "PerformanceResourceTiming.prototype.nextHopProtocol",
+     "PerformanceResourceTiming.prototype.redirectEnd",
+@@ -5617,6 +5622,10 @@
+     "ScriptProcessorNode.prototype",
+     "ScriptProcessorNode.prototype.bufferSize",
+     "ScriptProcessorNode.prototype.onaudioprocess",
++    "ScrollTimeline",
++    "ScrollTimeline.prototype",
++    "ScrollTimeline.prototype.axis",
++    "ScrollTimeline.prototype.source",
+     "SecurityPolicyViolationEvent",
+     "SecurityPolicyViolationEvent.prototype",
+     "SecurityPolicyViolationEvent.prototype.blockedURI",
+@@ -6413,6 +6422,11 @@
+     "VideoPlaybackQuality.prototype.creationTime",
+     "VideoPlaybackQuality.prototype.droppedVideoFrames",
+     "VideoPlaybackQuality.prototype.totalVideoFrames",
++    "ViewTimeline",
++    "ViewTimeline.prototype",
++    "ViewTimeline.prototype.endOffset",
++    "ViewTimeline.prototype.startOffset",
++    "ViewTimeline.prototype.subject",
+     "ViewTransition",
+     "ViewTransition.prototype",
+     "ViewTransition.prototype.finished",
+```
+
+  
 #### 115.0.5762.4 (`2023-5-11`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5750.0_to_115.0.5762.4.diff), [json](./browser_apis/chrome-unstable_115.0.5750.0_to_115.0.5762.4.json), [full list](./browser_apis/chrome-unstable_115.0.5762.4.json))
  ```diff
@@ -3265,9 +3330,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_108.0.5359.1
      "PerformanceResourceTiming.prototype.serverTiming",
      "PerformanceResourceTiming.prototype.toJSON",
 ```
-
-  
-#### 108.0.5359.19 (`2022-10-26`) 
-No browser API changes.
 
   <!-- browserapis:end -->
