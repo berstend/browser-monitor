@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "115.0.5773.4",
+    "to": "115.0.5790.3"
+  },
+  "browserApis": {
+    "added": [
+      "GPU.prototype.wgslLanguageFeatures",
+      "WGSLLanguageFeatures",
+      "WGSLLanguageFeatures.prototype",
+      "WGSLLanguageFeatures.prototype.entries",
+      "WGSLLanguageFeatures.prototype.forEach",
+      "WGSLLanguageFeatures.prototype.has",
+      "WGSLLanguageFeatures.prototype.keys",
+      "WGSLLanguageFeatures.prototype.size",
+      "WGSLLanguageFeatures.prototype.values"
+    ],
+    "removed": [
+      "AnimationTimeline.prototype.getCurrentTime"
+    ]
+  }
+}

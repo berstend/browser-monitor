@@ -1792,6 +1792,53 @@ Added 82 APIs, removed 13 (see: [diff](./browser_apis/chrome-stable_104.0.5112.1
   
 ### chrome-unstable
   
+#### 115.0.5790.3 (`2023-5-25`) ⚡
+Added 9 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_115.0.5773.4_to_115.0.5790.3.diff), [json](./browser_apis/chrome-unstable_115.0.5773.4_to_115.0.5790.3.json), [full list](./browser_apis/chrome-unstable_115.0.5790.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_115.0.5773.4.json	2023-05-26 01:02:17.604443991 +0000
++++ ./browser_apis/chrome-unstable_115.0.5790.3.json	2023-05-26 01:02:57.664830239 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8027,
++  "browserApiCount": 8035,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -73,7 +73,6 @@
+     "AnimationTimeline.prototype",
+     "AnimationTimeline.prototype.currentTime",
+     "AnimationTimeline.prototype.duration",
+-    "AnimationTimeline.prototype.getCurrentTime",
+     "Array",
+     "Array.from",
+     "Array.isArray",
+@@ -1391,6 +1390,7 @@
+     "GPU.prototype",
+     "GPU.prototype.getPreferredCanvasFormat",
+     "GPU.prototype.requestAdapter",
++    "GPU.prototype.wgslLanguageFeatures",
+     "GPUAdapter",
+     "GPUAdapter.prototype",
+     "GPUAdapter.prototype.features",
+@@ -6455,6 +6455,14 @@
+     "VisualViewport.prototype.pageTop",
+     "VisualViewport.prototype.scale",
+     "VisualViewport.prototype.width",
++    "WGSLLanguageFeatures",
++    "WGSLLanguageFeatures.prototype",
++    "WGSLLanguageFeatures.prototype.entries",
++    "WGSLLanguageFeatures.prototype.forEach",
++    "WGSLLanguageFeatures.prototype.has",
++    "WGSLLanguageFeatures.prototype.keys",
++    "WGSLLanguageFeatures.prototype.size",
++    "WGSLLanguageFeatures.prototype.values",
+     "WakeLock",
+     "WakeLock.prototype",
+     "WakeLock.prototype.request",
+```
+
+  
 #### 115.0.5773.4 (`2023-5-18`) ⚡
 Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5762.4_to_115.0.5773.4.diff), [json](./browser_apis/chrome-unstable_115.0.5762.4_to_115.0.5773.4.json), [full list](./browser_apis/chrome-unstable_115.0.5773.4.json))
  ```diff
@@ -3304,31 +3351,5 @@ Added 109 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_109.0.5396
   
 #### 109.0.5396.2 (`2022-11-3`) 
 No browser API changes.
-
-  
-#### 109.0.5384.0 (`2022-10-28`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_108.0.5359.19_to_109.0.5384.0.diff), [json](./browser_apis/chrome-unstable_108.0.5359.19_to_109.0.5384.0.json), [full list](./browser_apis/chrome-unstable_109.0.5384.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_108.0.5359.19.json	2023-01-06 17:09:06.272548121 +0000
-+++ ./browser_apis/chrome-unstable_109.0.5384.0.json	2023-01-06 17:09:06.276548126 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
--  "version": "108.0.0.0",
--  "browserApiCount": 7585,
-+  "version": "109.0.0.0",
-+  "browserApiCount": 7586,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3830,6 +3830,7 @@
-     "PerformanceResourceTiming.prototype.requestStart",
-     "PerformanceResourceTiming.prototype.responseEnd",
-     "PerformanceResourceTiming.prototype.responseStart",
-+    "PerformanceResourceTiming.prototype.responseStatus",
-     "PerformanceResourceTiming.prototype.secureConnectionStart",
-     "PerformanceResourceTiming.prototype.serverTiming",
-     "PerformanceResourceTiming.prototype.toJSON",
-```
 
   <!-- browserapis:end -->

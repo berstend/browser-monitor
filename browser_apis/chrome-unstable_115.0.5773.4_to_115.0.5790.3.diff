@@ -1,0 +1,41 @@
+--- ./browser_apis/chrome-unstable_115.0.5773.4.json	2023-05-26 01:02:17.604443991 +0000
++++ ./browser_apis/chrome-unstable_115.0.5790.3.json	2023-05-26 01:02:57.664830239 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8027,
++  "browserApiCount": 8035,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -73,7 +73,6 @@
+     "AnimationTimeline.prototype",
+     "AnimationTimeline.prototype.currentTime",
+     "AnimationTimeline.prototype.duration",
+-    "AnimationTimeline.prototype.getCurrentTime",
+     "Array",
+     "Array.from",
+     "Array.isArray",
+@@ -1391,6 +1390,7 @@
+     "GPU.prototype",
+     "GPU.prototype.getPreferredCanvasFormat",
+     "GPU.prototype.requestAdapter",
++    "GPU.prototype.wgslLanguageFeatures",
+     "GPUAdapter",
+     "GPUAdapter.prototype",
+     "GPUAdapter.prototype.features",
+@@ -6455,6 +6455,14 @@
+     "VisualViewport.prototype.pageTop",
+     "VisualViewport.prototype.scale",
+     "VisualViewport.prototype.width",
++    "WGSLLanguageFeatures",
++    "WGSLLanguageFeatures.prototype",
++    "WGSLLanguageFeatures.prototype.entries",
++    "WGSLLanguageFeatures.prototype.forEach",
++    "WGSLLanguageFeatures.prototype.has",
++    "WGSLLanguageFeatures.prototype.keys",
++    "WGSLLanguageFeatures.prototype.size",
++    "WGSLLanguageFeatures.prototype.values",
+     "WakeLock",
+     "WakeLock.prototype",
+     "WakeLock.prototype.request",
