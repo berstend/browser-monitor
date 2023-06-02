@@ -1668,6 +1668,10 @@ Added 0 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_105.0.5195.52_
   
 ### chrome-unstable
   
+#### 116.0.5803.2 (`2023-6-1`) 
+No browser API changes.
+
+  
 #### 115.0.5790.3 (`2023-5-25`) ⚡
 Added 9 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_115.0.5773.4_to_115.0.5790.3.diff), [json](./browser_apis/chrome-unstable_115.0.5773.4_to_115.0.5790.3.json), [full list](./browser_apis/chrome-unstable_115.0.5790.3.json))
  ```diff
@@ -3223,9 +3227,5 @@ Added 109 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_109.0.5396
      "MediaCapabilities.prototype",
      "MediaCapabilities.prototype.decodingInfo",
 ```
-
-  
-#### 109.0.5396.2 (`2022-11-3`) 
-No browser API changes.
 
   <!-- browserapis:end -->

@@ -1,0 +1,61 @@
+--- ./cdp/chrome-unstable_115.0.5790.3.protocol.json	2023-06-02 01:12:33.476112660 +0000
++++ ./cdp/chrome-unstable_116.0.5803.2.protocol.json	2023-06-02 01:13:06.448760752 +0000
+@@ -11200,6 +11200,12 @@
+               "type": "number"
+             },
+             {
++              "name": "receiveHeadersStart",
++              "description": "Started receiving response headers.",
++              "experimental": true,
++              "type": "number"
++            },
++            {
+               "name": "receiveHeadersEnd",
+               "description": "Finished receiving response headers.",
+               "type": "number"
+@@ -17800,6 +17806,17 @@
+               "type": "boolean"
+             }
+           ]
++        },
++        {
++          "name": "setPrerenderingAllowed",
++          "description": "Enable/disable prerendering manually.\n\nThis command is a short-term solution for https://crbug.com/1440085.\nSee https://docs.google.com/document/d/12HVmFxYj5Jc-eJr5OmWsa2bqTJsbgGLKI6ZIyx0_wpA\nfor more details.\n\nTODO(https://crbug.com/1440085): Remove this once Puppeteer supports tab targets.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "isAllowed",
++              "type": "boolean"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -23321,7 +23338,8 @@
+             "SameSiteCrossOriginRedirectNotOptInInMainFrameNavigation",
+             "SameSiteCrossOriginNavigationNotOptInInMainFrameNavigation",
+             "MemoryPressureOnTrigger",
+-            "MemoryPressureAfterTriggered"
++            "MemoryPressureAfterTriggered",
++            "PrerenderingDisabledByDevTools"
+           ]
+         },
+         {
+@@ -26665,7 +26683,7 @@
+             },
+             {
+               "name": "serializationOptions",
+-              "description": "Specifies the result serialization. If provided, overrides\n`returnByValue` and `generateWebDriverValue`.",
++              "description": "Specifies the result serialization. If provided, overrides\n`generatePreview`, `returnByValue` and `generateWebDriverValue`.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "SerializationOptions"
+@@ -26847,7 +26865,7 @@
+             },
+             {
+               "name": "serializationOptions",
+-              "description": "Specifies the result serialization. If provided, overrides\n`returnByValue` and `generateWebDriverValue`.",
++              "description": "Specifies the result serialization. If provided, overrides\n`generatePreview`, `returnByValue` and `generateWebDriverValue`.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "SerializationOptions"
