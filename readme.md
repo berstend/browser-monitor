@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 114.0.5735.106 (`2023-6-5`) 
+No browser API changes.
+
+  
 #### 114.0.5735.90 (`2023-5-30`) ⚡
 Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_113.0.5672.126_to_114.0.5735.90.diff), [json](./browser_apis/chrome-stable_113.0.5672.126_to_114.0.5735.90.json), [full list](./browser_apis/chrome-stable_114.0.5735.90.json))
  ```diff
@@ -1622,48 +1626,6 @@ Added 9 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_105.0.5195.125
   
 #### 105.0.5195.125 (`2022-9-13`) 
 No browser API changes.
-
-  
-#### 105.0.5195.102 (`2022-9-2`) ⚡
-Added 0 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_105.0.5195.52_to_105.0.5195.102.diff), [json](./browser_apis/chrome-stable_105.0.5195.52_to_105.0.5195.102.json), [full list](./browser_apis/chrome-stable_105.0.5195.102.json))
- ```diff
---- ./browser_apis/chrome-stable_105.0.5195.52.json	2023-01-06 17:09:06.216548057 +0000
-+++ ./browser_apis/chrome-stable_105.0.5195.102.json	2023-01-06 17:09:06.216548057 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-stable",
-   "version": "105.0.0.0",
--  "browserApiCount": 7542,
-+  "browserApiCount": 7538,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2821,7 +2821,6 @@
-     "MediaSession.prototype.setMicrophoneActive",
-     "MediaSession.prototype.setPositionState",
-     "MediaSource",
--    "MediaSource.canConstructInDedicatedWorker",
-     "MediaSource.isTypeSupported",
-     "MediaSource.prototype",
-     "MediaSource.prototype.activeSourceBuffers",
-@@ -2829,7 +2828,6 @@
-     "MediaSource.prototype.clearLiveSeekableRange",
-     "MediaSource.prototype.duration",
-     "MediaSource.prototype.endOfStream",
--    "MediaSource.prototype.handle",
-     "MediaSource.prototype.onsourceclose",
-     "MediaSource.prototype.onsourceended",
-     "MediaSource.prototype.onsourceopen",
-@@ -2837,8 +2835,6 @@
-     "MediaSource.prototype.removeSourceBuffer",
-     "MediaSource.prototype.setLiveSeekableRange",
-     "MediaSource.prototype.sourceBuffers",
--    "MediaSourceHandle",
--    "MediaSourceHandle.prototype",
-     "MediaStreamAudioDestinationNode",
-     "MediaStreamAudioDestinationNode.prototype",
-     "MediaStreamAudioDestinationNode.prototype.stream",
-```
 
   
 ### chrome-unstable
