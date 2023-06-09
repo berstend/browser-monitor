@@ -1,0 +1,23 @@
+--- ./browser_apis/chrome-unstable_116.0.5803.2.json	2023-06-09 01:13:41.063492501 +0000
++++ ./browser_apis/chrome-unstable_116.0.5817.0.json	2023-06-09 01:14:27.484683856 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8035,
++  "browserApiCount": 8037,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -5984,10 +5984,12 @@
+     "TaskPriorityChangeEvent.prototype",
+     "TaskPriorityChangeEvent.prototype.previousPriority",
+     "TaskSignal",
++    "TaskSignal.any",
+     "TaskSignal.prototype",
+     "TaskSignal.prototype.aborted",
+     "TaskSignal.prototype.constructor",
+     "TaskSignal.prototype.constructor.abort",
++    "TaskSignal.prototype.constructor.any",
+     "TaskSignal.prototype.constructor.timeout",
+     "TaskSignal.prototype.onabort",
+     "TaskSignal.prototype.onprioritychange",

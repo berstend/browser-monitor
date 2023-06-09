@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "116.0.5803.2",
+    "to": "116.0.5817.0"
+  },
+  "browserApis": {
+    "added": [
+      "TaskSignal.any",
+      "TaskSignal.prototype.constructor.any"
+    ],
+    "removed": []
+  }
+}

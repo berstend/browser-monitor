@@ -1,0 +1,163 @@
+--- ./cdp/chrome-unstable_116.0.5803.2.protocol.json	2023-06-09 01:13:41.187495690 +0000
++++ ./cdp/chrome-unstable_116.0.5817.0.protocol.json	2023-06-09 01:14:27.496684166 +0000
+@@ -1627,7 +1627,8 @@
+             "ErrorIdToken",
+             "Canceled",
+             "RpPageNotVisible",
+-            "SilentMediationFailure"
++            "SilentMediationFailure",
++            "ThirdPartyCookiesBlocked"
+           ]
+         },
+         {
+@@ -1646,6 +1647,53 @@
+           ]
+         },
+         {
++          "id": "FailedRequestInfo",
++          "type": "object",
++          "properties": [
++            {
++              "name": "url",
++              "description": "The URL that failed to load.",
++              "type": "string"
++            },
++            {
++              "name": "failureMessage",
++              "description": "The failure message for the failed request.",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "id": "StyleSheetLoadingIssueReason",
++          "type": "string",
++          "enum": [
++            "LateImportRule",
++            "RequestFailed"
++          ]
++        },
++        {
++          "id": "StylesheetLoadingIssueDetails",
++          "description": "This issue warns when a referenced stylesheet couldn't be loaded.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "sourceCodeLocation",
++              "description": "Source code position that referenced the failing stylesheet.",
++              "$ref": "SourceCodeLocation"
++            },
++            {
++              "name": "styleSheetLoadingIssueReason",
++              "description": "Reason why the stylesheet couldn't be loaded.",
++              "$ref": "StyleSheetLoadingIssueReason"
++            },
++            {
++              "name": "failedRequestInfo",
++              "description": "Contains additional info when the failure was due to a request.",
++              "optional": true,
++              "$ref": "FailedRequestInfo"
++            }
++          ]
++        },
++        {
+           "id": "InspectorIssueCode",
+           "description": "A unique identifier for the type of issue. Each type may use one of the\noptional fields in InspectorIssueDetails to convey more specific\ninformation about the kind of issue.",
+           "type": "string",
+@@ -1665,7 +1713,8 @@
+             "DeprecationIssue",
+             "ClientHintIssue",
+             "FederatedAuthRequestIssue",
+-            "BounceTrackingIssue"
++            "BounceTrackingIssue",
++            "StylesheetLoadingIssue"
+           ]
+         },
+         {
+@@ -1752,6 +1801,11 @@
+               "name": "bounceTrackingIssueDetails",
+               "optional": true,
+               "$ref": "BounceTrackingIssueDetails"
++            },
++            {
++              "name": "stylesheetLoadingIssueDetails",
++              "optional": true,
++              "$ref": "StylesheetLoadingIssueDetails"
+             }
+           ]
+         },
+@@ -8737,7 +8791,7 @@
+             },
+             {
+               "name": "quality",
+-              "description": "Compression quality from range [0..100] (jpeg only).",
++              "description": "Compression quality from range [0..100] (jpeg and webp only).",
+               "optional": true,
+               "type": "integer"
+             },
+@@ -12608,6 +12662,34 @@
+           ]
+         },
+         {
++          "id": "ContentSecurityPolicySource",
++          "experimental": true,
++          "type": "string",
++          "enum": [
++            "HTTP",
++            "Meta"
++          ]
++        },
++        {
++          "id": "ContentSecurityPolicyStatus",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "effectiveDirectives",
++              "type": "string"
++            },
++            {
++              "name": "isEnforced",
++              "type": "boolean"
++            },
++            {
++              "name": "source",
++              "$ref": "ContentSecurityPolicySource"
++            }
++          ]
++        },
++        {
+           "id": "SecurityIsolationStatus",
+           "experimental": true,
+           "type": "object",
+@@ -12621,6 +12703,14 @@
+               "name": "coep",
+               "optional": true,
+               "$ref": "CrossOriginEmbedderPolicyStatus"
++            },
++            {
++              "name": "csp",
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "ContentSecurityPolicyStatus"
++              }
+             }
+           ]
+         },
+@@ -16474,6 +16564,7 @@
+             "ActivationNavigationsDisallowedForBug1234857",
+             "ErrorDocument",
+             "FencedFramesEmbedder",
++            "CookieDisabled",
+             "WebSocket",
+             "WebTransport",
+             "WebRTC",
+@@ -16520,6 +16611,7 @@
+             "IndexedDBEvent",
+             "Dummy",
+             "AuthorizationHeader",
++            "WebSerial",
+             "ContentSecurityHandler",
+             "ContentWebAuthenticationAPI",
+             "ContentFileChooser",
