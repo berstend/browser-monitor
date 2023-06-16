@@ -1630,6 +1630,30 @@ Added 9 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_105.0.5195.125
   
 ### chrome-unstable
   
+#### 116.0.5829.0 (`2023-6-15`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5817.0_to_116.0.5829.0.diff), [json](./browser_apis/chrome-unstable_116.0.5817.0_to_116.0.5829.0.json), [full list](./browser_apis/chrome-unstable_116.0.5829.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_116.0.5817.0.json	2023-06-16 01:09:02.431426859 +0000
++++ ./browser_apis/chrome-unstable_116.0.5829.0.json	2023-06-16 01:09:46.943909338 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8037,
++  "browserApiCount": 8038,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4191,6 +4191,7 @@
+     "PerformanceNavigationTiming",
+     "PerformanceNavigationTiming.prototype",
+     "PerformanceNavigationTiming.prototype.activationStart",
++    "PerformanceNavigationTiming.prototype.criticalCHRestart",
+     "PerformanceNavigationTiming.prototype.domComplete",
+     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
+     "PerformanceNavigationTiming.prototype.domContentLoadedEventStart",
+```
+
+  
 #### 116.0.5817.0 (`2023-6-8`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5803.2_to_116.0.5817.0.diff), [json](./browser_apis/chrome-unstable_116.0.5803.2_to_116.0.5817.0.json), [full list](./browser_apis/chrome-unstable_116.0.5817.0.json))
  ```diff
@@ -3003,71 +3027,5 @@ Added 68 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_109.0.5414.
   
 #### 109.0.5414.25 (`2022-11-30`) 
 No browser API changes.
-
-  
-#### 109.0.5414.10 (`2022-11-17`) ⚡
-Added 8 APIs, removed 8 (see: [diff](./browser_apis/chrome-unstable_109.0.5410.0_to_109.0.5414.10.diff), [json](./browser_apis/chrome-unstable_109.0.5410.0_to_109.0.5414.10.json), [full list](./browser_apis/chrome-unstable_109.0.5414.10.json))
- ```diff
---- ./browser_apis/chrome-unstable_109.0.5410.0.json	2023-01-06 17:09:06.276548126 +0000
-+++ ./browser_apis/chrome-unstable_109.0.5414.10.json	2023-01-06 17:09:06.276548126 +0000
-@@ -842,9 +842,9 @@
-     "ConstantSourceNode",
-     "ConstantSourceNode.prototype",
-     "ConstantSourceNode.prototype.offset",
--    "ContentVisibilityAutoStateChangedEvent",
--    "ContentVisibilityAutoStateChangedEvent.prototype",
--    "ContentVisibilityAutoStateChangedEvent.prototype.skipped",
-+    "ContentVisibilityAutoStateChangeEvent",
-+    "ContentVisibilityAutoStateChangeEvent.prototype",
-+    "ContentVisibilityAutoStateChangeEvent.prototype.skipped",
-     "ConvolverNode",
-     "ConvolverNode.prototype",
-     "ConvolverNode.prototype.buffer",
-@@ -2769,7 +2769,7 @@
-     "MathMLElement.prototype.onchange",
-     "MathMLElement.prototype.onclick",
-     "MathMLElement.prototype.onclose",
--    "MathMLElement.prototype.oncontentvisibilityautostatechanged",
-+    "MathMLElement.prototype.oncontentvisibilityautostatechange",
-     "MathMLElement.prototype.oncontextlost",
-     "MathMLElement.prototype.oncontextmenu",
-     "MathMLElement.prototype.oncontextrestored",
-@@ -3586,7 +3586,7 @@
-     "Option.prototype.constructor.prototype.onchange",
-     "Option.prototype.constructor.prototype.onclick",
-     "Option.prototype.constructor.prototype.onclose",
--    "Option.prototype.constructor.prototype.oncontentvisibilityautostatechanged",
-+    "Option.prototype.constructor.prototype.oncontentvisibilityautostatechange",
-     "Option.prototype.constructor.prototype.oncontextlost",
-     "Option.prototype.constructor.prototype.oncontextmenu",
-     "Option.prototype.constructor.prototype.oncontextrestored",
-@@ -5187,7 +5187,7 @@
-     "SVGViewElement.prototype.onchange",
-     "SVGViewElement.prototype.onclick",
-     "SVGViewElement.prototype.onclose",
--    "SVGViewElement.prototype.oncontentvisibilityautostatechanged",
-+    "SVGViewElement.prototype.oncontentvisibilityautostatechange",
-     "SVGViewElement.prototype.oncontextlost",
-     "SVGViewElement.prototype.oncontextmenu",
-     "SVGViewElement.prototype.oncontextrestored",
-@@ -6923,7 +6923,7 @@
-     "XMLDocument.prototype.onchange",
-     "XMLDocument.prototype.onclick",
-     "XMLDocument.prototype.onclose",
--    "XMLDocument.prototype.oncontentvisibilityautostatechanged",
-+    "XMLDocument.prototype.oncontentvisibilityautostatechange",
-     "XMLDocument.prototype.oncontextlost",
-     "XMLDocument.prototype.oncontextmenu",
-     "XMLDocument.prototype.oncontextrestored",
-@@ -7422,7 +7422,7 @@
-     "onchange",
-     "onclick",
-     "onclose",
--    "oncontentvisibilityautostatechanged",
-+    "oncontentvisibilityautostatechange",
-     "oncontextlost",
-     "oncontextmenu",
-     "oncontextrestored",
-```
 
   <!-- browserapis:end -->

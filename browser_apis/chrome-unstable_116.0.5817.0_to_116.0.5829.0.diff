@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_116.0.5817.0.json	2023-06-16 01:09:02.431426859 +0000
++++ ./browser_apis/chrome-unstable_116.0.5829.0.json	2023-06-16 01:09:46.943909338 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8037,
++  "browserApiCount": 8038,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4191,6 +4191,7 @@
+     "PerformanceNavigationTiming",
+     "PerformanceNavigationTiming.prototype",
+     "PerformanceNavigationTiming.prototype.activationStart",
++    "PerformanceNavigationTiming.prototype.criticalCHRestart",
+     "PerformanceNavigationTiming.prototype.domComplete",
+     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
+     "PerformanceNavigationTiming.prototype.domContentLoadedEventStart",
