@@ -1630,6 +1630,55 @@ Added 9 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_105.0.5195.125
   
 ### chrome-unstable
   
+#### 116.0.5845.4 (`2023-6-23`) ⚡
+Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5829.0_to_116.0.5845.4.diff), [json](./browser_apis/chrome-unstable_116.0.5829.0_to_116.0.5845.4.json), [full list](./browser_apis/chrome-unstable_116.0.5845.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_116.0.5829.0.json	2023-06-24 01:17:22.324924025 +0000
++++ ./browser_apis/chrome-unstable_116.0.5845.4.json	2023-06-24 01:18:02.145126518 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8038,
++  "browserApiCount": 8050,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1131,6 +1131,14 @@
+     "DeviceOrientationEvent.prototype.alpha",
+     "DeviceOrientationEvent.prototype.beta",
+     "DeviceOrientationEvent.prototype.gamma",
++    "DocumentPictureInPicture",
++    "DocumentPictureInPicture.prototype",
++    "DocumentPictureInPicture.prototype.onenter",
++    "DocumentPictureInPicture.prototype.requestWindow",
++    "DocumentPictureInPicture.prototype.window",
++    "DocumentPictureInPictureEvent",
++    "DocumentPictureInPictureEvent.prototype",
++    "DocumentPictureInPictureEvent.prototype.window",
+     "DocumentTimeline",
+     "DocumentTimeline.prototype",
+     "DocumentType",
+@@ -2626,6 +2634,9 @@
+     "IdentityCredential",
+     "IdentityCredential.prototype",
+     "IdentityCredential.prototype.token",
++    "IdentityProvider",
++    "IdentityProvider.getUserInfo",
++    "IdentityProvider.prototype",
+     "IdleDeadline",
+     "IdleDeadline.prototype",
+     "IdleDeadline.prototype.didTimeout",
+@@ -7711,6 +7722,7 @@
+     "decodeURIComponent",
+     "devicePixelRatio",
+     "document",
++    "documentPictureInPicture",
+     "encodeURI",
+     "encodeURIComponent",
+     "escape",
+```
+
+  
 #### 116.0.5829.0 (`2023-6-15`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5817.0_to_116.0.5829.0.diff), [json](./browser_apis/chrome-unstable_116.0.5817.0_to_116.0.5829.0.json), [full list](./browser_apis/chrome-unstable_116.0.5829.0.json))
  ```diff
@@ -3023,9 +3072,5 @@ Added 68 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_109.0.5414.
      "webkitURL.createObjectURL",
      "webkitURL.prototype",
 ```
-
-  
-#### 109.0.5414.25 (`2022-11-30`) 
-No browser API changes.
 
   <!-- browserapis:end -->

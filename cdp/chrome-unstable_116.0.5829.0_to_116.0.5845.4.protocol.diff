@@ -1,0 +1,78 @@
+--- ./cdp/chrome-unstable_116.0.5829.0.protocol.json	2023-06-24 01:17:22.488924457 +0000
++++ ./cdp/chrome-unstable_116.0.5845.4.protocol.json	2023-06-24 01:18:02.161126601 +0000
+@@ -2006,6 +2006,36 @@
+               "type": "string"
+             }
+           ]
++        },
++        {
++          "id": "AddressField",
++          "type": "object",
++          "properties": [
++            {
++              "name": "name",
++              "description": "address field name, for example GIVEN_NAME.",
++              "type": "string"
++            },
++            {
++              "name": "value",
++              "description": "address field name, for example Jon Doe.",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "id": "Address",
++          "type": "object",
++          "properties": [
++            {
++              "name": "fields",
++              "description": "fields and values defining a test address.",
++              "type": "array",
++              "items": {
++                "$ref": "AddressField"
++              }
++            }
++          ]
+         }
+       ],
+       "commands": [
+@@ -2030,6 +2060,19 @@
+               "$ref": "CreditCard"
+             }
+           ]
++        },
++        {
++          "name": "setAddresses",
++          "description": "Set addresses so that developers can verify their forms implementation.",
++          "parameters": [
++            {
++              "name": "addresses",
++              "type": "array",
++              "items": {
++                "$ref": "Address"
++              }
++            }
++          ]
+         }
+       ]
+     },
+@@ -16601,6 +16644,7 @@
+             "ErrorDocument",
+             "FencedFramesEmbedder",
+             "CookieDisabled",
++            "HTTPAuthRequired",
+             "WebSocket",
+             "WebTransport",
+             "WebRTC",
+@@ -16647,7 +16691,9 @@
+             "IndexedDBEvent",
+             "Dummy",
+             "JsNetworkRequestReceivedCacheControlNoStoreResource",
+-            "WebSerial",
++            "WebRTCSticky",
++            "WebTransportSticky",
++            "WebSocketSticky",
+             "ContentSecurityHandler",
+             "ContentWebAuthenticationAPI",
+             "ContentFileChooser",
