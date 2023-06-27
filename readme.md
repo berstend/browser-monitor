@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 114.0.5735.198 (`2023-6-26`) 
+No browser API changes.
+
+  
 #### 114.0.5735.133 (`2023-6-13`) 
 No browser API changes.
 
@@ -1529,103 +1533,6 @@ No browser API changes.
   
 #### 106.0.5249.91 (`2022-9-30`) 
 No browser API changes.
-
-  
-#### 106.0.5249.61 (`2022-9-27`) ⚡
-Added 9 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_105.0.5195.125_to_106.0.5249.61.diff), [json](./browser_apis/chrome-stable_105.0.5195.125_to_106.0.5249.61.json), [full list](./browser_apis/chrome-stable_106.0.5249.61.json))
- ```diff
---- ./browser_apis/chrome-stable_105.0.5195.125.json	2023-01-06 17:09:06.216548057 +0000
-+++ ./browser_apis/chrome-stable_106.0.5249.61.json	2023-01-06 17:09:06.216548057 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "version": "105.0.0.0",
-+  "version": "106.0.0.0",
-   "browserApiCount": 7538,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-@@ -234,6 +234,7 @@
-     "AudioDecoder.prototype.decode",
-     "AudioDecoder.prototype.decodeQueueSize",
-     "AudioDecoder.prototype.flush",
-+    "AudioDecoder.prototype.ondequeue",
-     "AudioDecoder.prototype.reset",
-     "AudioDecoder.prototype.state",
-     "AudioDestinationNode",
-@@ -247,6 +248,7 @@
-     "AudioEncoder.prototype.encode",
-     "AudioEncoder.prototype.encodeQueueSize",
-     "AudioEncoder.prototype.flush",
-+    "AudioEncoder.prototype.ondequeue",
-     "AudioEncoder.prototype.reset",
-     "AudioEncoder.prototype.state",
-     "AudioListener",
-@@ -2500,6 +2502,8 @@
-     "Intl.NumberFormat",
-     "Intl.NumberFormat.prototype",
-     "Intl.NumberFormat.prototype.format",
-+    "Intl.NumberFormat.prototype.formatRange",
-+    "Intl.NumberFormat.prototype.formatRangeToParts",
-     "Intl.NumberFormat.prototype.formatToParts",
-     "Intl.NumberFormat.prototype.resolvedOptions",
-     "Intl.NumberFormat.supportedLocalesOf",
-@@ -2507,6 +2511,7 @@
-     "Intl.PluralRules.prototype",
-     "Intl.PluralRules.prototype.resolvedOptions",
-     "Intl.PluralRules.prototype.select",
-+    "Intl.PluralRules.prototype.selectRange",
-     "Intl.PluralRules.supportedLocalesOf",
-     "Intl.RelativeTimeFormat",
-     "Intl.RelativeTimeFormat.prototype",
-@@ -5012,6 +5017,7 @@
-     "SVGUseElement.prototype.y",
-     "SVGViewElement",
-     "SVGViewElement.prototype",
-+    "SVGViewElement.prototype.attributeStyleMap",
-     "SVGViewElement.prototype.autofocus",
-     "SVGViewElement.prototype.blur",
-     "SVGViewElement.prototype.className",
-@@ -5919,6 +5925,7 @@
-     "VideoDecoder.prototype.decode",
-     "VideoDecoder.prototype.decodeQueueSize",
-     "VideoDecoder.prototype.flush",
-+    "VideoDecoder.prototype.ondequeue",
-     "VideoDecoder.prototype.reset",
-     "VideoDecoder.prototype.state",
-     "VideoEncoder",
-@@ -5929,6 +5936,7 @@
-     "VideoEncoder.prototype.encode",
-     "VideoEncoder.prototype.encodeQueueSize",
-     "VideoEncoder.prototype.flush",
-+    "VideoEncoder.prototype.ondequeue",
-     "VideoEncoder.prototype.reset",
-     "VideoEncoder.prototype.state",
-     "VideoFrame",
-@@ -7163,15 +7171,6 @@
-     "chrome.csi.prototype",
-     "chrome.loadTimes",
-     "chrome.loadTimes.prototype",
--    "chrome.runtime",
--    "chrome.runtime.OnInstalledReason",
--    "chrome.runtime.OnRestartRequiredReason",
--    "chrome.runtime.PlatformArch",
--    "chrome.runtime.PlatformNaclArch",
--    "chrome.runtime.PlatformOs",
--    "chrome.runtime.RequestUpdateCheckStatus",
--    "chrome.runtime.connect",
--    "chrome.runtime.sendMessage",
-     "clearInterval",
-     "clearTimeout",
-     "clientInformation",
-@@ -7184,6 +7183,7 @@
-     "console.context",
-     "console.count",
-     "console.countReset",
-+    "console.createTask",
-     "console.debug",
-     "console.dir",
-     "console.dirxml",
-```
 
   
 ### chrome-unstable
