@@ -1537,6 +1537,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 116.0.5845.32 (`2023-7-13`) 
+No browser API changes.
+
+  
 #### 116.0.5845.14 (`2023-6-30`) 
 No browser API changes.
 
@@ -2818,9 +2822,5 @@ Added 27 APIs, removed 19 (see: [diff](./browser_apis/chrome-unstable_110.0.5464
      "crypto",
      "customElements",
 ```
-
-  
-#### 110.0.5464.2 (`2022-12-9`) 
-No browser API changes.
 
   <!-- browserapis:end -->
