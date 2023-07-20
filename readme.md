@@ -1637,6 +1637,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 116.0.5845.42 (`2023-7-19`) 
+No browser API changes.
+
+  
 #### 116.0.5845.32 (`2023-7-13`) 
 No browser API changes.
 
@@ -2812,115 +2816,6 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_110.0.5478.4
      "FileSystemDirectoryHandle.prototype.removeEntry",
      "FileSystemDirectoryHandle.prototype.requestPermission",
      "FileSystemDirectoryHandle.prototype.resolve",
-```
-
-  
-#### 110.0.5478.4 (`2022-12-16`) ⚡
-Added 27 APIs, removed 19 (see: [diff](./browser_apis/chrome-unstable_110.0.5464.2_to_110.0.5478.4.diff), [json](./browser_apis/chrome-unstable_110.0.5464.2_to_110.0.5478.4.json), [full list](./browser_apis/chrome-unstable_110.0.5478.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_110.0.5464.2.json	2023-01-06 17:09:06.276548126 +0000
-+++ ./browser_apis/chrome-unstable_110.0.5478.4.json	2023-01-06 17:09:06.276548126 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "110.0.0.0",
--  "browserApiCount": 7760,
-+  "browserApiCount": 7768,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -215,8 +215,11 @@
-     "AudioContext.prototype.createMediaStreamDestination",
-     "AudioContext.prototype.createMediaStreamSource",
-     "AudioContext.prototype.getOutputTimestamp",
-+    "AudioContext.prototype.onsinkchange",
-     "AudioContext.prototype.outputLatency",
-     "AudioContext.prototype.resume",
-+    "AudioContext.prototype.setSinkId",
-+    "AudioContext.prototype.sinkId",
-     "AudioContext.prototype.suspend",
-     "AudioData",
-     "AudioData.prototype",
-@@ -296,6 +299,9 @@
-     "AudioProcessingEvent.prototype.inputBuffer",
-     "AudioProcessingEvent.prototype.outputBuffer",
-     "AudioProcessingEvent.prototype.playbackTime",
-+    "AudioSinkInfo",
-+    "AudioSinkInfo.prototype",
-+    "AudioSinkInfo.prototype.type",
-     "AudioWorklet",
-     "AudioWorklet.prototype",
-     "AudioWorklet.prototype.addModule",
-@@ -719,27 +725,8 @@
-     "CacheStorage.prototype.open",
-     "CanvasCaptureMediaStreamTrack",
-     "CanvasCaptureMediaStreamTrack.prototype",
--    "CanvasCaptureMediaStreamTrack.prototype.applyConstraints",
-     "CanvasCaptureMediaStreamTrack.prototype.canvas",
--    "CanvasCaptureMediaStreamTrack.prototype.clone",
--    "CanvasCaptureMediaStreamTrack.prototype.constructor",
--    "CanvasCaptureMediaStreamTrack.prototype.contentHint",
--    "CanvasCaptureMediaStreamTrack.prototype.enabled",
--    "CanvasCaptureMediaStreamTrack.prototype.getCapabilities",
--    "CanvasCaptureMediaStreamTrack.prototype.getCaptureHandle",
--    "CanvasCaptureMediaStreamTrack.prototype.getConstraints",
--    "CanvasCaptureMediaStreamTrack.prototype.getSettings",
--    "CanvasCaptureMediaStreamTrack.prototype.id",
--    "CanvasCaptureMediaStreamTrack.prototype.kind",
--    "CanvasCaptureMediaStreamTrack.prototype.label",
--    "CanvasCaptureMediaStreamTrack.prototype.muted",
--    "CanvasCaptureMediaStreamTrack.prototype.oncapturehandlechange",
--    "CanvasCaptureMediaStreamTrack.prototype.onended",
--    "CanvasCaptureMediaStreamTrack.prototype.onmute",
--    "CanvasCaptureMediaStreamTrack.prototype.onunmute",
--    "CanvasCaptureMediaStreamTrack.prototype.readyState",
-     "CanvasCaptureMediaStreamTrack.prototype.requestFrame",
--    "CanvasCaptureMediaStreamTrack.prototype.stop",
-     "CanvasFilter",
-     "CanvasFilter.prototype",
-     "CanvasGradient",
-@@ -1773,6 +1760,7 @@
-     "HTMLIFrameElement.prototype.allowPaymentRequest",
-     "HTMLIFrameElement.prototype.contentDocument",
-     "HTMLIFrameElement.prototype.contentWindow",
-+    "HTMLIFrameElement.prototype.credentialless",
-     "HTMLIFrameElement.prototype.csp",
-     "HTMLIFrameElement.prototype.featurePolicy",
-     "HTMLIFrameElement.prototype.frameBorder",
-@@ -3052,6 +3040,25 @@
-     "MediaStreamTrackEvent.prototype.track",
-     "MediaStreamTrackGenerator",
-     "MediaStreamTrackGenerator.prototype",
-+    "MediaStreamTrackGenerator.prototype.applyConstraints",
-+    "MediaStreamTrackGenerator.prototype.clone",
-+    "MediaStreamTrackGenerator.prototype.constructor",
-+    "MediaStreamTrackGenerator.prototype.contentHint",
-+    "MediaStreamTrackGenerator.prototype.enabled",
-+    "MediaStreamTrackGenerator.prototype.getCapabilities",
-+    "MediaStreamTrackGenerator.prototype.getCaptureHandle",
-+    "MediaStreamTrackGenerator.prototype.getConstraints",
-+    "MediaStreamTrackGenerator.prototype.getSettings",
-+    "MediaStreamTrackGenerator.prototype.id",
-+    "MediaStreamTrackGenerator.prototype.kind",
-+    "MediaStreamTrackGenerator.prototype.label",
-+    "MediaStreamTrackGenerator.prototype.muted",
-+    "MediaStreamTrackGenerator.prototype.oncapturehandlechange",
-+    "MediaStreamTrackGenerator.prototype.onended",
-+    "MediaStreamTrackGenerator.prototype.onmute",
-+    "MediaStreamTrackGenerator.prototype.onunmute",
-+    "MediaStreamTrackGenerator.prototype.readyState",
-+    "MediaStreamTrackGenerator.prototype.stop",
-     "MediaStreamTrackGenerator.prototype.writable",
-     "MediaStreamTrackProcessor",
-     "MediaStreamTrackProcessor.prototype",
-@@ -7429,6 +7436,7 @@
-     "console.warn",
-     "cookieStore",
-     "createImageBitmap",
-+    "credentialless",
-     "crossOriginIsolated",
-     "crypto",
-     "customElements",
 ```
 
   <!-- browserapis:end -->
