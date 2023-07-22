@@ -1637,6 +1637,69 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 117.0.5897.3 (`2023-7-21`) ⚡
+Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5845.42_to_117.0.5897.3.diff), [json](./browser_apis/chrome-unstable_116.0.5845.42_to_117.0.5897.3.json), [full list](./browser_apis/chrome-unstable_117.0.5897.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_116.0.5845.42.json	2023-07-22 01:06:52.650740792 +0000
++++ ./browser_apis/chrome-unstable_117.0.5897.3.json	2023-07-22 01:07:51.500154810 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8050,
++  "browserApiCount": 8058,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -619,6 +619,8 @@
+     "CSSSkewY",
+     "CSSSkewY.prototype",
+     "CSSSkewY.prototype.ay",
++    "CSSStartingStyleRule",
++    "CSSStartingStyleRule.prototype",
+     "CSSStyleDeclaration",
+     "CSSStyleDeclaration.prototype",
+     "CSSStyleDeclaration.prototype.cssFloat",
+@@ -2988,6 +2990,7 @@
+     "MIDIOutputMap.prototype.size",
+     "MIDIOutputMap.prototype.values",
+     "Map",
++    "Map.groupBy",
+     "Map.prototype",
+     "Map.prototype.clear",
+     "Map.prototype.delete",
+@@ -3582,6 +3585,7 @@
+     "Object.getOwnPropertyNames",
+     "Object.getOwnPropertySymbols",
+     "Object.getPrototypeOf",
++    "Object.groupBy",
+     "Object.hasOwn",
+     "Object.is",
+     "Object.isExtensible",
+@@ -4232,6 +4236,7 @@
+     "PerformanceResourceTiming.prototype.connectEnd",
+     "PerformanceResourceTiming.prototype.connectStart",
+     "PerformanceResourceTiming.prototype.decodedBodySize",
++    "PerformanceResourceTiming.prototype.deliveryType",
+     "PerformanceResourceTiming.prototype.domainLookupEnd",
+     "PerformanceResourceTiming.prototype.domainLookupStart",
+     "PerformanceResourceTiming.prototype.encodedBodySize",
+@@ -4578,10 +4583,13 @@
+     "RTCRtpTransceiver.prototype",
+     "RTCRtpTransceiver.prototype.currentDirection",
+     "RTCRtpTransceiver.prototype.direction",
++    "RTCRtpTransceiver.prototype.getHeaderExtensionsToNegotiate",
++    "RTCRtpTransceiver.prototype.getNegotiatedHeaderExtensions",
+     "RTCRtpTransceiver.prototype.mid",
+     "RTCRtpTransceiver.prototype.receiver",
+     "RTCRtpTransceiver.prototype.sender",
+     "RTCRtpTransceiver.prototype.setCodecPreferences",
++    "RTCRtpTransceiver.prototype.setHeaderExtensionsToNegotiate",
+     "RTCRtpTransceiver.prototype.stop",
+     "RTCRtpTransceiver.prototype.stopped",
+     "RTCSctpTransport",
+```
+
+  
 #### 116.0.5845.42 (`2023-7-19`) 
 No browser API changes.
 
@@ -2792,30 +2855,5 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_110.0.5481.3
   
 #### 110.0.5481.30 (`2023-1-11`) 
 No browser API changes.
-
-  
-#### 110.0.5481.24 (`2023-1-5`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_110.0.5478.4_to_110.0.5481.24.diff), [json](./browser_apis/chrome-unstable_110.0.5478.4_to_110.0.5481.24.json), [full list](./browser_apis/chrome-unstable_110.0.5481.24.json))
- ```diff
---- ./browser_apis/chrome-unstable_110.0.5478.4.json	2023-01-06 17:09:06.276548126 +0000
-+++ ./browser_apis/chrome-unstable_110.0.5481.24.json	2023-01-06 17:09:06.280548131 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-unstable",
-   "version": "110.0.0.0",
--  "browserApiCount": 7768,
-+  "browserApiCount": 7769,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1348,6 +1348,7 @@
-     "FileSystemDirectoryHandle.prototype.kind",
-     "FileSystemDirectoryHandle.prototype.name",
-     "FileSystemDirectoryHandle.prototype.queryPermission",
-+    "FileSystemDirectoryHandle.prototype.remove",
-     "FileSystemDirectoryHandle.prototype.removeEntry",
-     "FileSystemDirectoryHandle.prototype.requestPermission",
-     "FileSystemDirectoryHandle.prototype.resolve",
-```
 
   <!-- browserapis:end -->

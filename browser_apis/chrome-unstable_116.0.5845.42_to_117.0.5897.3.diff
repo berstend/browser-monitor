@@ -1,0 +1,57 @@
+--- ./browser_apis/chrome-unstable_116.0.5845.42.json	2023-07-22 01:06:52.650740792 +0000
++++ ./browser_apis/chrome-unstable_117.0.5897.3.json	2023-07-22 01:07:51.500154810 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8050,
++  "browserApiCount": 8058,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -619,6 +619,8 @@
+     "CSSSkewY",
+     "CSSSkewY.prototype",
+     "CSSSkewY.prototype.ay",
++    "CSSStartingStyleRule",
++    "CSSStartingStyleRule.prototype",
+     "CSSStyleDeclaration",
+     "CSSStyleDeclaration.prototype",
+     "CSSStyleDeclaration.prototype.cssFloat",
+@@ -2988,6 +2990,7 @@
+     "MIDIOutputMap.prototype.size",
+     "MIDIOutputMap.prototype.values",
+     "Map",
++    "Map.groupBy",
+     "Map.prototype",
+     "Map.prototype.clear",
+     "Map.prototype.delete",
+@@ -3582,6 +3585,7 @@
+     "Object.getOwnPropertyNames",
+     "Object.getOwnPropertySymbols",
+     "Object.getPrototypeOf",
++    "Object.groupBy",
+     "Object.hasOwn",
+     "Object.is",
+     "Object.isExtensible",
+@@ -4232,6 +4236,7 @@
+     "PerformanceResourceTiming.prototype.connectEnd",
+     "PerformanceResourceTiming.prototype.connectStart",
+     "PerformanceResourceTiming.prototype.decodedBodySize",
++    "PerformanceResourceTiming.prototype.deliveryType",
+     "PerformanceResourceTiming.prototype.domainLookupEnd",
+     "PerformanceResourceTiming.prototype.domainLookupStart",
+     "PerformanceResourceTiming.prototype.encodedBodySize",
+@@ -4578,10 +4583,13 @@
+     "RTCRtpTransceiver.prototype",
+     "RTCRtpTransceiver.prototype.currentDirection",
+     "RTCRtpTransceiver.prototype.direction",
++    "RTCRtpTransceiver.prototype.getHeaderExtensionsToNegotiate",
++    "RTCRtpTransceiver.prototype.getNegotiatedHeaderExtensions",
+     "RTCRtpTransceiver.prototype.mid",
+     "RTCRtpTransceiver.prototype.receiver",
+     "RTCRtpTransceiver.prototype.sender",
+     "RTCRtpTransceiver.prototype.setCodecPreferences",
++    "RTCRtpTransceiver.prototype.setHeaderExtensionsToNegotiate",
+     "RTCRtpTransceiver.prototype.stop",
+     "RTCRtpTransceiver.prototype.stopped",
+     "RTCSctpTransport",
