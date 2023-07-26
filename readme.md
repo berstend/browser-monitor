@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 115.0.5790.110 (`2023-7-25`) 
+No browser API changes.
+
+  
 #### 115.0.5790.102 (`2023-7-21`) 
 No browser API changes.
 
@@ -1629,10 +1633,6 @@ Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_106.0.5249.11
      "XRWebGLBinding.prototype.getReflectionCubeMap",
      "XRWebGLDepthInformation",
 ```
-
-  
-#### 106.0.5249.119 (`2022-10-11`) 
-No browser API changes.
 
   
 ### chrome-unstable
