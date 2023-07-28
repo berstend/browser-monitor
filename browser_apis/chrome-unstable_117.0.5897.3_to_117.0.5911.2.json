@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "117.0.5897.3",
+    "to": "117.0.5911.2"
+  },
+  "browserApis": {
+    "added": [
+      "CustomElementRegistry.prototype.getName",
+      "HTMLIFrameElement.prototype.privateToken",
+      "Iterator",
+      "Iterator.from",
+      "Iterator.prototype",
+      "Iterator.prototype.drop",
+      "Iterator.prototype.every",
+      "Iterator.prototype.filter",
+      "Iterator.prototype.find",
+      "Iterator.prototype.flatMap",
+      "Iterator.prototype.forEach",
+      "Iterator.prototype.map",
+      "Iterator.prototype.reduce",
+      "Iterator.prototype.some",
+      "Iterator.prototype.take",
+      "Iterator.prototype.toArray",
+      "XMLDocument.prototype.hasPrivateToken",
+      "XMLDocument.prototype.hasRedemptionRecord",
+      "XMLHttpRequest.prototype.setPrivateToken"
+    ],
+    "removed": []
+  }
+}
