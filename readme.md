@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 115.0.5790.170 (`2023-8-2`) 
+No browser API changes.
+
+  
 #### 115.0.5790.110 (`2023-7-25`) 
 No browser API changes.
 
@@ -1562,77 +1566,6 @@ No browser API changes.
   
 #### 107.0.5304.87 (`2022-10-27`) 
 No browser API changes.
-
-  
-#### 107.0.5304.68 (`2022-10-25`) ⚡
-Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_106.0.5249.119_to_107.0.5304.68.diff), [json](./browser_apis/chrome-stable_106.0.5249.119_to_107.0.5304.68.json), [full list](./browser_apis/chrome-stable_107.0.5304.68.json))
- ```diff
---- ./browser_apis/chrome-stable_106.0.5249.119.json	2023-01-06 17:09:06.216548057 +0000
-+++ ./browser_apis/chrome-stable_107.0.5304.68.json	2023-01-06 17:09:06.220548061 +0000
-@@ -1,7 +1,7 @@
- {
-   "browser": "chrome-stable",
--  "version": "106.0.0.0",
--  "browserApiCount": 7538,
-+  "version": "107.0.0.0",
-+  "browserApiCount": 7549,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1129,6 +1129,8 @@
-     "ElementInternals.prototype",
-     "ElementInternals.prototype.ariaAtomic",
-     "ElementInternals.prototype.ariaAutoComplete",
-+    "ElementInternals.prototype.ariaBrailleLabel",
-+    "ElementInternals.prototype.ariaBrailleRoleDescription",
-     "ElementInternals.prototype.ariaBusy",
-     "ElementInternals.prototype.ariaChecked",
-     "ElementInternals.prototype.ariaColCount",
-@@ -3287,6 +3289,8 @@
-     "Option.prototype.constructor.prototype.append",
-     "Option.prototype.constructor.prototype.ariaAtomic",
-     "Option.prototype.constructor.prototype.ariaAutoComplete",
-+    "Option.prototype.constructor.prototype.ariaBrailleLabel",
-+    "Option.prototype.constructor.prototype.ariaBrailleRoleDescription",
-     "Option.prototype.constructor.prototype.ariaBusy",
-     "Option.prototype.constructor.prototype.ariaChecked",
-     "Option.prototype.constructor.prototype.ariaColCount",
-@@ -3789,6 +3793,7 @@
-     "PerformanceResourceTiming.prototype.nextHopProtocol",
-     "PerformanceResourceTiming.prototype.redirectEnd",
-     "PerformanceResourceTiming.prototype.redirectStart",
-+    "PerformanceResourceTiming.prototype.renderBlockingStatus",
-     "PerformanceResourceTiming.prototype.requestStart",
-     "PerformanceResourceTiming.prototype.responseEnd",
-     "PerformanceResourceTiming.prototype.responseStart",
-@@ -6987,6 +6992,10 @@
-     "XRCPUDepthInformation.prototype.normDepthBufferFromNormView",
-     "XRCPUDepthInformation.prototype.rawValueToMeters",
-     "XRCPUDepthInformation.prototype.width",
-+    "XRCamera",
-+    "XRCamera.prototype",
-+    "XRCamera.prototype.height",
-+    "XRCamera.prototype.width",
-     "XRDOMOverlayState",
-     "XRDOMOverlayState.prototype",
-     "XRDOMOverlayState.prototype.type",
-@@ -7110,6 +7119,7 @@
-     "XRTransientInputHitTestSource.prototype.cancel",
-     "XRView",
-     "XRView.prototype",
-+    "XRView.prototype.camera",
-     "XRView.prototype.eye",
-     "XRView.prototype.isFirstPersonObserver",
-     "XRView.prototype.projectionMatrix",
-@@ -7127,6 +7137,7 @@
-     "XRViewport.prototype.y",
-     "XRWebGLBinding",
-     "XRWebGLBinding.prototype",
-+    "XRWebGLBinding.prototype.getCameraImage",
-     "XRWebGLBinding.prototype.getDepthInformation",
-     "XRWebGLBinding.prototype.getReflectionCubeMap",
-     "XRWebGLDepthInformation",
-```
 
   
 ### chrome-unstable
