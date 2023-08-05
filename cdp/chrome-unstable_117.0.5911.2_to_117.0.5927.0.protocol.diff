@@ -1,0 +1,12 @@
+--- ./cdp/chrome-unstable_117.0.5911.2.protocol.json	2023-08-05 01:01:03.901577694 +0000
++++ ./cdp/chrome-unstable_117.0.5927.0.protocol.json	2023-08-05 01:01:35.229799906 +0000
+@@ -12210,7 +12210,8 @@
+             "SchemefulSameSiteUnspecifiedTreatedAsLax",
+             "SamePartyFromCrossPartyContext",
+             "SamePartyConflictsWithOtherAttributes",
+-            "NameValuePairExceedsMaxSize"
++            "NameValuePairExceedsMaxSize",
++            "DisallowedCharacter"
+           ]
+         },
+         {

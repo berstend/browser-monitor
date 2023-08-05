@@ -1,0 +1,11 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "117.0.5911.2",
+    "to": "117.0.5927.0"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": []
+  }
+}

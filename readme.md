@@ -1570,6 +1570,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 117.0.5927.0 (`2023-8-4`) 
+No browser API changes.
+
+  
 #### 117.0.5911.2 (`2023-7-27`) ⚡
 Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_117.0.5897.3_to_117.0.5911.2.diff), [json](./browser_apis/chrome-unstable_117.0.5897.3_to_117.0.5911.2.json), [full list](./browser_apis/chrome-unstable_117.0.5911.2.json))
  ```diff
@@ -2820,39 +2824,5 @@ Added 12 APIs, removed 9 (see: [diff](./browser_apis/chrome-unstable_111.0.5545.
   
 #### 111.0.5545.6 (`2023-1-20`) 
 No browser API changes.
-
-  
-#### 111.0.5532.2 (`2023-1-12`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_110.0.5481.30_to_111.0.5532.2.diff), [json](./browser_apis/chrome-unstable_110.0.5481.30_to_111.0.5532.2.json), [full list](./browser_apis/chrome-unstable_111.0.5532.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_110.0.5481.30.json	2023-01-13 01:06:59.416081258 +0000
-+++ ./browser_apis/chrome-unstable_111.0.5532.2.json	2023-01-13 01:07:34.936570431 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 7769,
-+  "browserApiCount": 7773,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -117,6 +117,9 @@
-     "ArrayBuffer.isView",
-     "ArrayBuffer.prototype",
-     "ArrayBuffer.prototype.byteLength",
-+    "ArrayBuffer.prototype.maxByteLength",
-+    "ArrayBuffer.prototype.resizable",
-+    "ArrayBuffer.prototype.resize",
-     "ArrayBuffer.prototype.slice",
-     "Atomics",
-     "Atomics.add",
-@@ -7299,6 +7302,7 @@
-     "XRSession.prototype.depthDataFormat",
-     "XRSession.prototype.depthUsage",
-     "XRSession.prototype.domOverlayState",
-+    "XRSession.prototype.enabledFeatures",
-     "XRSession.prototype.end",
-     "XRSession.prototype.environmentBlendMode",
-     "XRSession.prototype.inputSources",
-```
 
   <!-- browserapis:end -->
