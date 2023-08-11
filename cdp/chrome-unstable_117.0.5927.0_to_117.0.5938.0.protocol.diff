@@ -1,0 +1,26 @@
+--- ./cdp/chrome-unstable_117.0.5927.0.protocol.json	2023-08-11 00:50:39.799467729 +0000
++++ ./cdp/chrome-unstable_117.0.5938.0.protocol.json	2023-08-11 00:51:12.349836683 +0000
+@@ -17446,6 +17446,13 @@
+                 "ReturnAsBase64",
+                 "ReturnAsStream"
+               ]
++            },
++            {
++              "name": "generateTaggedPDF",
++              "description": "Whether or not to generate tagged (accessible) PDF. Defaults to embedder choice.",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ],
+           "returns": [
+@@ -20016,7 +20023,8 @@
+             "destinationReportingLimitReached",
+             "destinationGlobalLimitReached",
+             "destinationBothLimitsReached",
+-            "reportingOriginsPerSiteLimitReached"
++            "reportingOriginsPerSiteLimitReached",
++            "exceedsMaxChannelCapacity"
+           ]
+         }
+       ],

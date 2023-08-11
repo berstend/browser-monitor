@@ -1570,6 +1570,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 117.0.5938.0 (`2023-8-10`) 
+No browser API changes.
+
+  
 #### 117.0.5927.0 (`2023-8-4`) 
 No browser API changes.
 
@@ -2820,9 +2824,5 @@ Added 12 APIs, removed 9 (see: [diff](./browser_apis/chrome-unstable_111.0.5545.
      "XMLDocument.prototype.timeline",
      "XMLDocument.prototype.title",
 ```
-
-  
-#### 111.0.5545.6 (`2023-1-20`) 
-No browser API changes.
 
   <!-- browserapis:end -->
