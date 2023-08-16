@@ -1,0 +1,27 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "115.0.5790.170",
+    "to": "116.0.5845.96"
+  },
+  "browserApis": {
+    "added": [
+      "DocumentPictureInPicture",
+      "DocumentPictureInPicture.prototype",
+      "DocumentPictureInPicture.prototype.onenter",
+      "DocumentPictureInPicture.prototype.requestWindow",
+      "DocumentPictureInPicture.prototype.window",
+      "DocumentPictureInPictureEvent",
+      "DocumentPictureInPictureEvent.prototype",
+      "DocumentPictureInPictureEvent.prototype.window",
+      "IdentityProvider",
+      "IdentityProvider.getUserInfo",
+      "IdentityProvider.prototype",
+      "PerformanceNavigationTiming.prototype.criticalCHRestart",
+      "TaskSignal.any",
+      "TaskSignal.prototype.constructor.any",
+      "documentPictureInPicture"
+    ],
+    "removed": []
+  }
+}
