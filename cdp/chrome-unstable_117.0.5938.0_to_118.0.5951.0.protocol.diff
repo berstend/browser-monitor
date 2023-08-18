@@ -1,0 +1,106 @@
+--- ./cdp/chrome-unstable_117.0.5938.0.protocol.json	2023-08-18 00:50:48.975776917 +0000
++++ ./cdp/chrome-unstable_118.0.5951.0.protocol.json	2023-08-18 00:51:21.316126293 +0000
+@@ -993,7 +993,8 @@
+             "ExcludeInvalidSameParty",
+             "ExcludeSamePartyCrossPartyContext",
+             "ExcludeDomainNonASCII",
+-            "ExcludeThirdPartyCookieBlockedInFirstPartySet"
++            "ExcludeThirdPartyCookieBlockedInFirstPartySet",
++            "ExcludeThirdPartyPhaseout"
+           ]
+         },
+         {
+@@ -3867,6 +3868,58 @@
+           ]
+         },
+         {
++          "id": "CSSPropertyRegistration",
++          "description": "Representation of a custom property registration through CSS.registerProperty",
++          "type": "object",
++          "properties": [
++            {
++              "name": "propertyName",
++              "type": "string"
++            },
++            {
++              "name": "initialValue",
++              "optional": true,
++              "$ref": "Value"
++            },
++            {
++              "name": "inherits",
++              "type": "boolean"
++            },
++            {
++              "name": "syntax",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "id": "CSSPropertyRule",
++          "description": "CSS property at-rule representation.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "styleSheetId",
++              "description": "The css style sheet identifier (absent for user agent stylesheet and user-specified\nstylesheet rules) this rule came from.",
++              "optional": true,
++              "$ref": "StyleSheetId"
++            },
++            {
++              "name": "origin",
++              "description": "Parent stylesheet's origin.",
++              "$ref": "StyleSheetOrigin"
++            },
++            {
++              "name": "propertyName",
++              "description": "Associated property name.",
++              "$ref": "Value"
++            },
++            {
++              "name": "style",
++              "description": "Associated style declaration.",
++              "$ref": "CSSStyle"
++            }
++          ]
++        },
++        {
+           "id": "CSSKeyframeRule",
+           "description": "CSS keyframe rule representation.",
+           "type": "object",
+@@ -4165,6 +4218,24 @@
+               }
+             },
+             {
++              "name": "cssPropertyRules",
++              "description": "A list of CSS at-property rules matching this node.",
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "CSSPropertyRule"
++              }
++            },
++            {
++              "name": "cssPropertyRegistrations",
++              "description": "A list of CSS property registrations matching this node.",
++              "optional": true,
++              "type": "array",
++              "items": {
++                "$ref": "CSSPropertyRegistration"
++              }
++            },
++            {
+               "name": "parentLayoutNodeId",
+               "description": "Id of the first parent element that does not have display: contents.",
+               "experimental": true,
+@@ -23988,7 +24059,8 @@
+           "type": "string",
+           "enum": [
+             "AccountChooser",
+-            "AutoReauthn"
++            "AutoReauthn",
++            "ConfirmIdpSignin"
+           ]
+         },
+         {
