@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "118.0.5951.0",
+    "to": "118.0.5966.0"
+  },
+  "browserApis": {
+    "added": [
+      "CSSScopeRule",
+      "CSSScopeRule.prototype",
+      "CSSScopeRule.prototype.end",
+      "CSSScopeRule.prototype.start"
+    ],
+    "removed": []
+  }
+}

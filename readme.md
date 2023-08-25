@@ -1636,6 +1636,33 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 118.0.5966.0 (`2023-8-24`) ⚡
+Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5951.0_to_118.0.5966.0.diff), [json](./browser_apis/chrome-unstable_118.0.5951.0_to_118.0.5966.0.json), [full list](./browser_apis/chrome-unstable_118.0.5966.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_118.0.5951.0.json	2023-08-25 00:52:16.435773570 +0000
++++ ./browser_apis/chrome-unstable_118.0.5966.0.json	2023-08-25 00:52:47.585614544 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8077,
++  "browserApiCount": 8081,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -609,6 +609,10 @@
+     "CSSScale.prototype.x",
+     "CSSScale.prototype.y",
+     "CSSScale.prototype.z",
++    "CSSScopeRule",
++    "CSSScopeRule.prototype",
++    "CSSScopeRule.prototype.end",
++    "CSSScopeRule.prototype.start",
+     "CSSSkew",
+     "CSSSkew.prototype",
+     "CSSSkew.prototype.ax",
+```
+
+  
 #### 118.0.5951.0 (`2023-8-17`) 
 No browser API changes.
 
@@ -2800,10 +2827,6 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_111.0.5563.1
 
   
 #### 111.0.5563.19 (`2023-2-8`) 
-No browser API changes.
-
-  
-#### 111.0.5563.8 (`2023-2-2`) 
 No browser API changes.
 
   <!-- browserapis:end -->
