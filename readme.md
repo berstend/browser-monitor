@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 116.0.5845.140 (`2023-8-29`) 
+No browser API changes.
+
+  
 #### 116.0.5845.110 (`2023-8-22`) 
 No browser API changes.
 
@@ -1628,10 +1632,6 @@ Added 39 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_107.0.5304.12
      "oncontextmenu",
      "oncontextrestored",
 ```
-
-  
-#### 107.0.5304.121 (`2022-11-24`) 
-No browser API changes.
 
   
 ### chrome-unstable
