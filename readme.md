@@ -1636,6 +1636,50 @@ Added 39 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_107.0.5304.12
   
 ### chrome-unstable
   
+#### 118.0.5979.0 (`2023-8-31`) ⚡
+Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5966.0_to_118.0.5979.0.diff), [json](./browser_apis/chrome-unstable_118.0.5966.0_to_118.0.5979.0.json), [full list](./browser_apis/chrome-unstable_118.0.5979.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_118.0.5966.0.json	2023-09-01 00:55:51.293611015 +0000
++++ ./browser_apis/chrome-unstable_118.0.5979.0.json	2023-09-01 00:56:25.665843969 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8081,
++  "browserApiCount": 8086,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3400,6 +3400,7 @@
+     "NavigateEvent.prototype.destination",
+     "NavigateEvent.prototype.downloadRequest",
+     "NavigateEvent.prototype.formData",
++    "NavigateEvent.prototype.hasUAVisualTransition",
+     "NavigateEvent.prototype.hashChange",
+     "NavigateEvent.prototype.info",
+     "NavigateEvent.prototype.intercept",
+@@ -4361,6 +4362,7 @@
+     "PointerEvent.prototype.width",
+     "PopStateEvent",
+     "PopStateEvent.prototype",
++    "PopStateEvent.prototype.hasUAVisualTransition",
+     "PopStateEvent.prototype.state",
+     "Presentation",
+     "Presentation.prototype",
+@@ -6088,8 +6090,11 @@
+     "TextMetrics.prototype.actualBoundingBoxDescent",
+     "TextMetrics.prototype.actualBoundingBoxLeft",
+     "TextMetrics.prototype.actualBoundingBoxRight",
++    "TextMetrics.prototype.alphabeticBaseline",
+     "TextMetrics.prototype.fontBoundingBoxAscent",
+     "TextMetrics.prototype.fontBoundingBoxDescent",
++    "TextMetrics.prototype.hangingBaseline",
++    "TextMetrics.prototype.ideographicBaseline",
+     "TextMetrics.prototype.width",
+     "TextTrack",
+     "TextTrack.prototype",
+```
+
+  
 #### 118.0.5966.0 (`2023-8-24`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5951.0_to_118.0.5966.0.diff), [json](./browser_apis/chrome-unstable_118.0.5951.0_to_118.0.5966.0.json), [full list](./browser_apis/chrome-unstable_118.0.5966.0.json))
  ```diff
@@ -2824,9 +2868,5 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_111.0.5563.1
      "RelativeOrientationSensor",
      "RelativeOrientationSensor.prototype",
 ```
-
-  
-#### 111.0.5563.19 (`2023-2-8`) 
-No browser API changes.
 
   <!-- browserapis:end -->

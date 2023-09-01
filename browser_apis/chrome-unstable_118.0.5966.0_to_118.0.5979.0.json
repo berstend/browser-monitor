@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "118.0.5966.0",
+    "to": "118.0.5979.0"
+  },
+  "browserApis": {
+    "added": [
+      "NavigateEvent.prototype.hasUAVisualTransition",
+      "PopStateEvent.prototype.hasUAVisualTransition",
+      "TextMetrics.prototype.alphabeticBaseline",
+      "TextMetrics.prototype.hangingBaseline",
+      "TextMetrics.prototype.ideographicBaseline"
+    ],
+    "removed": []
+  }
+}
