@@ -1,0 +1,47 @@
+--- ./cdp/chrome-unstable_118.0.5979.0.protocol.json	2023-09-08 00:52:08.644677097 +0000
++++ ./cdp/chrome-unstable_118.0.5993.3.protocol.json	2023-09-08 00:52:44.769025252 +0000
+@@ -20109,6 +20109,26 @@
+           ]
+         },
+         {
++          "id": "AttributionReportingEventReportWindows",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "start",
++              "description": "duration in seconds",
++              "type": "integer"
++            },
++            {
++              "name": "ends",
++              "description": "duration in seconds",
++              "type": "array",
++              "items": {
++                "type": "integer"
++              }
++            }
++          ]
++        },
++        {
+           "id": "AttributionReportingSourceRegistration",
+           "experimental": true,
+           "type": "object",
+@@ -20125,11 +20145,16 @@
+             },
+             {
+               "name": "eventReportWindow",
+-              "description": "duration in seconds",
++              "description": "eventReportWindow and eventReportWindows are mutually exclusive\nduration in seconds",
+               "optional": true,
+               "type": "integer"
+             },
+             {
++              "name": "eventReportWindows",
++              "optional": true,
++              "$ref": "AttributionReportingEventReportWindows"
++            },
++            {
+               "name": "aggregatableReportWindow",
+               "description": "duration in seconds",
+               "optional": true,

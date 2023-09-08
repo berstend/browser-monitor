@@ -1449,6 +1449,71 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 118.0.5993.3 (`2023-9-7`) ⚡
+Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5979.0_to_118.0.5993.3.diff), [json](./browser_apis/chrome-unstable_118.0.5979.0_to_118.0.5993.3.json), [full list](./browser_apis/chrome-unstable_118.0.5993.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_118.0.5979.0.json	2023-09-08 00:52:08.436675387 +0000
++++ ./browser_apis/chrome-unstable_118.0.5993.3.json	2023-09-08 00:52:44.757025099 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8086,
++  "browserApiCount": 8096,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -423,6 +423,7 @@
+     "CSS",
+     "CSS.Hz",
+     "CSS.Q",
++    "CSS.cap",
+     "CSS.ch",
+     "CSS.cm",
+     "CSS.cqb",
+@@ -447,8 +448,10 @@
+     "CSS.fr",
+     "CSS.grad",
+     "CSS.highlights",
++    "CSS.ic",
+     "CSS.in",
+     "CSS.kHz",
++    "CSS.lh",
+     "CSS.lvb",
+     "CSS.lvh",
+     "CSS.lvi",
+@@ -464,8 +467,13 @@
+     "CSS.pt",
+     "CSS.px",
+     "CSS.rad",
++    "CSS.rcap",
++    "CSS.rch",
+     "CSS.registerProperty",
+     "CSS.rem",
++    "CSS.rex",
++    "CSS.ric",
++    "CSS.rlh",
+     "CSS.s",
+     "CSS.supports",
+     "CSS.svb",
+@@ -481,6 +489,7 @@
+     "CSS.vmax",
+     "CSS.vmin",
+     "CSS.vw",
++    "CSS.x",
+     "CSSAnimation",
+     "CSSAnimation.prototype",
+     "CSSAnimation.prototype.animationName",
+@@ -5170,6 +5179,7 @@
+     "SVGGElement.prototype",
+     "SVGImageElement",
+     "SVGImageElement.prototype",
++    "SVGImageElement.prototype.crossOrigin",
+     "SVGImageElement.prototype.decode",
+     "SVGImageElement.prototype.decoding",
+     "SVGImageElement.prototype.height",
+```
+
+  
 #### 118.0.5979.0 (`2023-8-31`) ⚡
 Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5966.0_to_118.0.5979.0.diff), [json](./browser_apis/chrome-unstable_118.0.5966.0_to_118.0.5979.0.json), [full list](./browser_apis/chrome-unstable_118.0.5979.0.json))
  ```diff
@@ -2646,40 +2711,6 @@ Added 0 APIs, removed 60 (see: [diff](./browser_apis/chrome-unstable_112.0.5582.
      "ReportingObserver",
      "ReportingObserver.prototype",
      "ReportingObserver.prototype.disconnect",
-```
-
-  
-#### 112.0.5582.0 (`2023-2-10`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_111.0.5563.19_to_112.0.5582.0.diff), [json](./browser_apis/chrome-unstable_111.0.5563.19_to_112.0.5582.0.json), [full list](./browser_apis/chrome-unstable_112.0.5582.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_111.0.5563.19.json	2023-02-11 01:02:32.057981667 +0000
-+++ ./browser_apis/chrome-unstable_112.0.5582.0.json	2023-02-11 01:03:01.609998655 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 7776,
-+  "browserApiCount": 7780,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -640,6 +640,9 @@
-     "CSSStyleDeclaration.prototype.setProperty",
-     "CSSStyleRule",
-     "CSSStyleRule.prototype",
-+    "CSSStyleRule.prototype.cssRules",
-+    "CSSStyleRule.prototype.deleteRule",
-+    "CSSStyleRule.prototype.insertRule",
-     "CSSStyleRule.prototype.selectorText",
-     "CSSStyleRule.prototype.style",
-     "CSSStyleRule.prototype.styleMap",
-@@ -4486,6 +4489,7 @@
-     "RegExp.prototype.test",
-     "RegExp.prototype.toString",
-     "RegExp.prototype.unicode",
-+    "RegExp.prototype.unicodeSets",
-     "RegExp.rightContext",
-     "RelativeOrientationSensor",
-     "RelativeOrientationSensor.prototype",
 ```
 
   <!-- browserapis:end -->

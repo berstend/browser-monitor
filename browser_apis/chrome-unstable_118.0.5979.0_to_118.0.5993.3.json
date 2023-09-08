@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "118.0.5979.0",
+    "to": "118.0.5993.3"
+  },
+  "browserApis": {
+    "added": [
+      "CSS.cap",
+      "CSS.ic",
+      "CSS.lh",
+      "CSS.rcap",
+      "CSS.rch",
+      "CSS.rex",
+      "CSS.ric",
+      "CSS.rlh",
+      "CSS.x",
+      "SVGImageElement.prototype.crossOrigin"
+    ],
+    "removed": []
+  }
+}
