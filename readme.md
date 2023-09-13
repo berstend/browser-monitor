@@ -5,6 +5,123 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 117.0.5938.62 (`2023-9-12`) ⚡
+Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_116.0.5845.187_to_117.0.5938.62.diff), [json](./browser_apis/chrome-stable_116.0.5845.187_to_117.0.5938.62.json), [full list](./browser_apis/chrome-stable_117.0.5938.62.json))
+ ```diff
+--- ./browser_apis/chrome-stable_116.0.5845.187.json	2023-09-13 00:53:38.223013824 +0000
++++ ./browser_apis/chrome-stable_117.0.5938.62.json	2023-09-13 00:54:14.567333753 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8050,
++  "browserApiCount": 8077,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -619,6 +619,8 @@
+     "CSSSkewY",
+     "CSSSkewY.prototype",
+     "CSSSkewY.prototype.ay",
++    "CSSStartingStyleRule",
++    "CSSStartingStyleRule.prototype",
+     "CSSStyleDeclaration",
+     "CSSStyleDeclaration.prototype",
+     "CSSStyleDeclaration.prototype.cssFloat",
+@@ -899,6 +901,7 @@
+     "CustomElementRegistry.prototype",
+     "CustomElementRegistry.prototype.define",
+     "CustomElementRegistry.prototype.get",
++    "CustomElementRegistry.prototype.getName",
+     "CustomElementRegistry.prototype.upgrade",
+     "CustomElementRegistry.prototype.whenDefined",
+     "CustomEvent",
+@@ -2015,6 +2018,7 @@
+     "HTMLIFrameElement.prototype.marginHeight",
+     "HTMLIFrameElement.prototype.marginWidth",
+     "HTMLIFrameElement.prototype.name",
++    "HTMLIFrameElement.prototype.privateToken",
+     "HTMLIFrameElement.prototype.referrerPolicy",
+     "HTMLIFrameElement.prototype.sandbox",
+     "HTMLIFrameElement.prototype.scrolling",
+@@ -2854,6 +2858,20 @@
+     "Intl.v8BreakIterator.prototype.next",
+     "Intl.v8BreakIterator.prototype.resolvedOptions",
+     "Intl.v8BreakIterator.supportedLocalesOf",
++    "Iterator",
++    "Iterator.from",
++    "Iterator.prototype",
++    "Iterator.prototype.drop",
++    "Iterator.prototype.every",
++    "Iterator.prototype.filter",
++    "Iterator.prototype.find",
++    "Iterator.prototype.flatMap",
++    "Iterator.prototype.forEach",
++    "Iterator.prototype.map",
++    "Iterator.prototype.reduce",
++    "Iterator.prototype.some",
++    "Iterator.prototype.take",
++    "Iterator.prototype.toArray",
+     "JSON",
+     "JSON.isRawJSON",
+     "JSON.parse",
+@@ -2988,6 +3006,7 @@
+     "MIDIOutputMap.prototype.size",
+     "MIDIOutputMap.prototype.values",
+     "Map",
++    "Map.groupBy",
+     "Map.prototype",
+     "Map.prototype.clear",
+     "Map.prototype.delete",
+@@ -3582,6 +3601,7 @@
+     "Object.getOwnPropertyNames",
+     "Object.getOwnPropertySymbols",
+     "Object.getPrototypeOf",
++    "Object.groupBy",
+     "Object.hasOwn",
+     "Object.is",
+     "Object.isExtensible",
+@@ -4232,6 +4252,7 @@
+     "PerformanceResourceTiming.prototype.connectEnd",
+     "PerformanceResourceTiming.prototype.connectStart",
+     "PerformanceResourceTiming.prototype.decodedBodySize",
++    "PerformanceResourceTiming.prototype.deliveryType",
+     "PerformanceResourceTiming.prototype.domainLookupEnd",
+     "PerformanceResourceTiming.prototype.domainLookupStart",
+     "PerformanceResourceTiming.prototype.encodedBodySize",
+@@ -4578,10 +4599,13 @@
+     "RTCRtpTransceiver.prototype",
+     "RTCRtpTransceiver.prototype.currentDirection",
+     "RTCRtpTransceiver.prototype.direction",
++    "RTCRtpTransceiver.prototype.getHeaderExtensionsToNegotiate",
++    "RTCRtpTransceiver.prototype.getNegotiatedHeaderExtensions",
+     "RTCRtpTransceiver.prototype.mid",
+     "RTCRtpTransceiver.prototype.receiver",
+     "RTCRtpTransceiver.prototype.sender",
+     "RTCRtpTransceiver.prototype.setCodecPreferences",
++    "RTCRtpTransceiver.prototype.setHeaderExtensionsToNegotiate",
+     "RTCRtpTransceiver.prototype.stop",
+     "RTCRtpTransceiver.prototype.stopped",
+     "RTCSctpTransport",
+@@ -7244,6 +7268,8 @@
+     "XMLDocument.prototype.getElementsByTagNameNS",
+     "XMLDocument.prototype.getSelection",
+     "XMLDocument.prototype.hasFocus",
++    "XMLDocument.prototype.hasPrivateToken",
++    "XMLDocument.prototype.hasRedemptionRecord",
+     "XMLDocument.prototype.head",
+     "XMLDocument.prototype.hidden",
+     "XMLDocument.prototype.images",
+@@ -7423,6 +7449,7 @@
+     "XMLHttpRequest.prototype.responseURL",
+     "XMLHttpRequest.prototype.responseXML",
+     "XMLHttpRequest.prototype.send",
++    "XMLHttpRequest.prototype.setPrivateToken",
+     "XMLHttpRequest.prototype.setRequestHeader",
+     "XMLHttpRequest.prototype.status",
+     "XMLHttpRequest.prototype.statusText",
+```
+
+  
 #### 116.0.5845.187 (`2023-9-11`) 
 No browser API changes.
 
@@ -1440,10 +1557,6 @@ Added 110 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_108.0.5359.1
 
   
 #### 108.0.5359.124 (`2022-12-13`) 
-No browser API changes.
-
-  
-#### 108.0.5359.98 (`2022-12-7`) 
 No browser API changes.
 
   

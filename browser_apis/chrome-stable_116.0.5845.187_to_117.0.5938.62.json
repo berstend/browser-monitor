@@ -1,0 +1,39 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "116.0.5845.187",
+    "to": "117.0.5938.62"
+  },
+  "browserApis": {
+    "added": [
+      "CSSStartingStyleRule",
+      "CSSStartingStyleRule.prototype",
+      "CustomElementRegistry.prototype.getName",
+      "HTMLIFrameElement.prototype.privateToken",
+      "Iterator",
+      "Iterator.from",
+      "Iterator.prototype",
+      "Iterator.prototype.drop",
+      "Iterator.prototype.every",
+      "Iterator.prototype.filter",
+      "Iterator.prototype.find",
+      "Iterator.prototype.flatMap",
+      "Iterator.prototype.forEach",
+      "Iterator.prototype.map",
+      "Iterator.prototype.reduce",
+      "Iterator.prototype.some",
+      "Iterator.prototype.take",
+      "Iterator.prototype.toArray",
+      "Map.groupBy",
+      "Object.groupBy",
+      "PerformanceResourceTiming.prototype.deliveryType",
+      "RTCRtpTransceiver.prototype.getHeaderExtensionsToNegotiate",
+      "RTCRtpTransceiver.prototype.getNegotiatedHeaderExtensions",
+      "RTCRtpTransceiver.prototype.setHeaderExtensionsToNegotiate",
+      "XMLDocument.prototype.hasPrivateToken",
+      "XMLDocument.prototype.hasRedemptionRecord",
+      "XMLHttpRequest.prototype.setPrivateToken"
+    ],
+    "removed": []
+  }
+}
