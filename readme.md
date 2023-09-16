@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 117.0.5938.88 (`2023-9-15`) 
+No browser API changes.
+
+  
 #### 117.0.5938.62 (`2023-9-12`) ⚡
 Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_116.0.5845.187_to_117.0.5938.62.diff), [json](./browser_apis/chrome-stable_116.0.5845.187_to_117.0.5938.62.json), [full list](./browser_apis/chrome-stable_117.0.5938.62.json))
  ```diff
@@ -1554,10 +1558,6 @@ Added 110 APIs, removed 1 (see: [diff](./browser_apis/chrome-stable_108.0.5359.1
      "WheelEvent.prototype.constructor.prototype.returnValue",
      "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
 ```
-
-  
-#### 108.0.5359.124 (`2022-12-13`) 
-No browser API changes.
 
   
 ### chrome-unstable
