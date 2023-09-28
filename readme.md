@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 117.0.5938.132 (`2023-9-27`) 
+No browser API changes.
+
+  
 #### 117.0.5938.92 (`2023-9-21`) 
 No browser API changes.
 
@@ -1402,10 +1406,6 @@ Added 96 APIs, removed 20 (see: [diff](./browser_apis/chrome-stable_109.0.5414.1
      "webkitURL.createObjectURL",
      "webkitURL.prototype",
 ```
-
-  
-#### 109.0.5414.119 (`2023-1-24`) 
-No browser API changes.
 
   
 ### chrome-unstable
