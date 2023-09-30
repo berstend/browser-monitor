@@ -1410,6 +1410,84 @@ Added 96 APIs, removed 20 (see: [diff](./browser_apis/chrome-stable_109.0.5414.1
   
 ### chrome-unstable
   
+#### 119.0.6034.6 (`2023-9-29`) ⚡
+Added 5 APIs, removed 15 (see: [diff](./browser_apis/chrome-unstable_118.0.5993.11_to_119.0.6034.6.diff), [json](./browser_apis/chrome-unstable_118.0.5993.11_to_119.0.6034.6.json), [full list](./browser_apis/chrome-unstable_119.0.6034.6.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_118.0.5993.11.json	2023-09-30 00:52:18.001052249 +0000
++++ ./browser_apis/chrome-unstable_119.0.6034.6.json	2023-09-30 00:52:56.305658649 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8096,
++  "browserApiCount": 8086,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2871,20 +2871,6 @@
+     "Intl.v8BreakIterator.prototype.next",
+     "Intl.v8BreakIterator.prototype.resolvedOptions",
+     "Intl.v8BreakIterator.supportedLocalesOf",
+-    "Iterator",
+-    "Iterator.from",
+-    "Iterator.prototype",
+-    "Iterator.prototype.drop",
+-    "Iterator.prototype.every",
+-    "Iterator.prototype.filter",
+-    "Iterator.prototype.find",
+-    "Iterator.prototype.flatMap",
+-    "Iterator.prototype.forEach",
+-    "Iterator.prototype.map",
+-    "Iterator.prototype.reduce",
+-    "Iterator.prototype.some",
+-    "Iterator.prototype.take",
+-    "Iterator.prototype.toArray",
+     "JSON",
+     "JSON.isRawJSON",
+     "JSON.parse",
+@@ -4439,6 +4425,7 @@
+     "Promise.race",
+     "Promise.reject",
+     "Promise.resolve",
++    "Promise.withResolvers",
+     "PromiseRejectionEvent",
+     "PromiseRejectionEvent.prototype",
+     "PromiseRejectionEvent.prototype.promise",
+@@ -4925,6 +4912,7 @@
+     "SVGClipPathElement",
+     "SVGClipPathElement.prototype",
+     "SVGClipPathElement.prototype.clipPathUnits",
++    "SVGClipPathElement.prototype.transform",
+     "SVGDefsElement",
+     "SVGDefsElement.prototype",
+     "SVGDescElement",
+@@ -7289,6 +7277,7 @@
+     "XMLDocument.prototype.hasFocus",
+     "XMLDocument.prototype.hasPrivateToken",
+     "XMLDocument.prototype.hasRedemptionRecord",
++    "XMLDocument.prototype.hasStorageAccess",
+     "XMLDocument.prototype.head",
+     "XMLDocument.prototype.hidden",
+     "XMLDocument.prototype.images",
+@@ -7430,6 +7419,8 @@
+     "XMLDocument.prototype.referrer",
+     "XMLDocument.prototype.releaseEvents",
+     "XMLDocument.prototype.replaceChildren",
++    "XMLDocument.prototype.requestStorageAccess",
++    "XMLDocument.prototype.requestStorageAccessFor",
+     "XMLDocument.prototype.rootElement",
+     "XMLDocument.prototype.scripts",
+     "XMLDocument.prototype.scrollingElement",
+@@ -7921,7 +7912,6 @@
+     "onwebkittransitionend",
+     "onwheel",
+     "open",
+-    "openDatabase",
+     "opener",
+     "origin",
+     "originAgentCluster",
+```
+
+  
 #### 118.0.5993.11 (`2023-9-13`) 
 No browser API changes.
 
@@ -2554,10 +2632,6 @@ Added 1 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_112.0.5615.2
 
   
 #### 112.0.5615.20 (`2023-3-8`) 
-No browser API changes.
-
-  
-#### 112.0.5615.12 (`2023-3-2`) 
 No browser API changes.
 
   <!-- browserapis:end -->

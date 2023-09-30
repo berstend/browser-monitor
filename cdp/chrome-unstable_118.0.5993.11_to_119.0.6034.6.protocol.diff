@@ -1,0 +1,177 @@
+--- ./cdp/chrome-unstable_118.0.5993.11.protocol.json	2023-09-30 00:52:18.221052794 +0000
++++ ./cdp/chrome-unstable_119.0.6034.6.protocol.json	2023-09-30 00:52:56.317658704 +0000
+@@ -1735,6 +1735,39 @@
+           ]
+         },
+         {
++          "id": "PropertyRuleIssueReason",
++          "type": "string",
++          "enum": [
++            "InvalidSyntax",
++            "InvalidInitialValue",
++            "InvalidInherits",
++            "InvalidName"
++          ]
++        },
++        {
++          "id": "PropertyRuleIssueDetails",
++          "description": "This issue warns about errors in property rules that lead to property\nregistrations being ignored.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "sourceCodeLocation",
++              "description": "Source code position of the property rule.",
++              "$ref": "SourceCodeLocation"
++            },
++            {
++              "name": "propertyRuleIssueReason",
++              "description": "Reason why the property rule was discarded.",
++              "$ref": "PropertyRuleIssueReason"
++            },
++            {
++              "name": "propertyValue",
++              "description": "The value of the property rule property that failed to parse",
++              "optional": true,
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "id": "InspectorIssueCode",
+           "description": "A unique identifier for the type of issue. Each type may use one of the\noptional fields in InspectorIssueDetails to convey more specific\ninformation about the kind of issue.",
+           "type": "string",
+@@ -1756,7 +1789,8 @@
+             "FederatedAuthRequestIssue",
+             "BounceTrackingIssue",
+             "StylesheetLoadingIssue",
+-            "FederatedAuthUserInfoRequestIssue"
++            "FederatedAuthUserInfoRequestIssue",
++            "PropertyRuleIssue"
+           ]
+         },
+         {
+@@ -1851,6 +1885,11 @@
+               "$ref": "StylesheetLoadingIssueDetails"
+             },
+             {
++              "name": "propertyRuleIssueDetails",
++              "optional": true,
++              "$ref": "PropertyRuleIssueDetails"
++            },
++            {
+               "name": "federatedAuthUserInfoRequestIssueDetails",
+               "optional": true,
+               "$ref": "FederatedAuthUserInfoRequestIssueDetails"
+@@ -4463,6 +4502,31 @@
+           ]
+         },
+         {
++          "name": "setPropertyRulePropertyName",
++          "description": "Modifies the property rule property name.",
++          "parameters": [
++            {
++              "name": "styleSheetId",
++              "$ref": "StyleSheetId"
++            },
++            {
++              "name": "range",
++              "$ref": "SourceRange"
++            },
++            {
++              "name": "propertyName",
++              "type": "string"
++            }
++          ],
++          "returns": [
++            {
++              "name": "propertyName",
++              "description": "The resulting key text after modification.",
++              "$ref": "Value"
++            }
++          ]
++        },
++        {
+           "name": "setKeyframeKey",
+           "description": "Modifies the keyframe rule key text.",
+           "parameters": [
+@@ -12372,6 +12436,7 @@
+             "SameSiteUnspecifiedTreatedAsLax",
+             "SameSiteNoneInsecure",
+             "UserPreferences",
++            "ThirdPartyPhaseout",
+             "ThirdPartyBlockedInFirstPartySet",
+             "SyntaxError",
+             "SchemeNotSupported",
+@@ -12385,7 +12450,8 @@
+             "SamePartyFromCrossPartyContext",
+             "SamePartyConflictsWithOtherAttributes",
+             "NameValuePairExceedsMaxSize",
+-            "DisallowedCharacter"
++            "DisallowedCharacter",
++            "NoCookieContent"
+           ]
+         },
+         {
+@@ -12402,6 +12468,7 @@
+             "SameSiteUnspecifiedTreatedAsLax",
+             "SameSiteNoneInsecure",
+             "UserPreferences",
++            "ThirdPartyPhaseout",
+             "ThirdPartyBlockedInFirstPartySet",
+             "UnknownError",
+             "SchemefulSameSiteStrict",
+@@ -19764,7 +19831,9 @@
+             "update",
+             "loaded",
+             "bid",
+-            "win"
++            "win",
++            "additionalBid",
++            "additionalBidWin"
+           ]
+         },
+         {
+@@ -23911,7 +23980,6 @@
+             "NavigationBadHttpStatus",
+             "ClientCertRequested",
+             "NavigationRequestNetworkError",
+-            "MaxNumOfRunningPrerendersExceeded",
+             "CancelAllHostsForTesting",
+             "DidFailLoad",
+             "Stop",
+@@ -23923,9 +23991,8 @@
+             "MixedContent",
+             "TriggerBackgrounded",
+             "MemoryLimitExceeded",
+-            "FailToGetMemoryUsage",
+             "DataSaverEnabled",
+-            "HasEffectiveUrl",
++            "TriggerUrlHasEffectiveUrl",
+             "ActivatedBeforeStarted",
+             "InactivePageRestriction",
+             "StartFailed",
+@@ -23956,7 +24023,13 @@
+             "PrerenderingDisabledByDevTools",
+             "ResourceLoadBlockedByClient",
+             "SpeculationRuleRemoved",
+-            "ActivatedWithAuxiliaryBrowsingContexts"
++            "ActivatedWithAuxiliaryBrowsingContexts",
++            "MaxNumOfRunningEagerPrerendersExceeded",
++            "MaxNumOfRunningNonEagerPrerendersExceeded",
++            "MaxNumOfRunningEmbedderPrerendersExceeded",
++            "PrerenderingUrlHasEffectiveUrl",
++            "RedirectedPrerenderingUrlHasEffectiveUrl",
++            "ActivationUrlHasEffectiveUrl"
+           ]
+         },
+         {
+@@ -26549,7 +26622,8 @@
+                 "typedarray",
+                 "arraybuffer",
+                 "node",
+-                "window"
++                "window",
++                "generator"
+               ]
+             },
+             {
