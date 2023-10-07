@@ -1155,6 +1155,41 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 119.0.6045.10 (`2023-10-6`) ⚡
+Added 0 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_119.0.6034.6_to_119.0.6045.10.diff), [json](./browser_apis/chrome-unstable_119.0.6034.6_to_119.0.6045.10.json), [full list](./browser_apis/chrome-unstable_119.0.6045.10.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_119.0.6034.6.json	2023-10-07 00:52:52.662830127 +0000
++++ ./browser_apis/chrome-unstable_119.0.6045.10.json	2023-10-07 00:53:26.443156798 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8086,
++  "browserApiCount": 8081,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4038,7 +4038,6 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
+-    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+     "Option.prototype.constructor.prototype.showPopover",
+@@ -5614,10 +5613,6 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
+-    "Sanitizer",
+-    "Sanitizer.getDefaultConfiguration",
+-    "Sanitizer.prototype",
+-    "Sanitizer.prototype.getConfiguration",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+```
+
+  
 #### 119.0.6034.6 (`2023-9-29`) ⚡
 Added 5 APIs, removed 15 (see: [diff](./browser_apis/chrome-unstable_118.0.5993.11_to_119.0.6034.6.diff), [json](./browser_apis/chrome-unstable_118.0.5993.11_to_119.0.6034.6.json), [full list](./browser_apis/chrome-unstable_119.0.6034.6.json))
  ```diff
@@ -2374,9 +2409,5 @@ Added 1 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_112.0.5615.2
      "URLSearchParams.prototype.toString",
      "URLSearchParams.prototype.values",
 ```
-
-  
-#### 112.0.5615.20 (`2023-3-8`) 
-No browser API changes.
 
   <!-- browserapis:end -->

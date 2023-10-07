@@ -1,0 +1,178 @@
+--- ./cdp/chrome-unstable_119.0.6034.6.protocol.json	2023-10-07 00:52:52.870832127 +0000
++++ ./cdp/chrome-unstable_119.0.6045.10.protocol.json	2023-10-07 00:53:26.467157027 +0000
+@@ -19833,7 +19833,8 @@
+             "bid",
+             "win",
+             "additionalBid",
+-            "additionalBidWin"
++            "additionalBidWin",
++            "clear"
+           ]
+         },
+         {
+@@ -19842,7 +19843,7 @@
+           "type": "object",
+           "properties": [
+             {
+-              "name": "renderUrl",
++              "name": "renderURL",
+               "type": "string"
+             },
+             {
+@@ -19874,22 +19875,22 @@
+               "type": "string"
+             },
+             {
+-              "name": "biddingUrl",
++              "name": "biddingLogicURL",
+               "optional": true,
+               "type": "string"
+             },
+             {
+-              "name": "biddingWasmHelperUrl",
++              "name": "biddingWasmHelperURL",
+               "optional": true,
+               "type": "string"
+             },
+             {
+-              "name": "updateUrl",
++              "name": "updateURL",
+               "optional": true,
+               "type": "string"
+             },
+             {
+-              "name": "trustedBiddingSignalsUrl",
++              "name": "trustedBiddingSignalsURL",
+               "optional": true,
+               "type": "string"
+             },
+@@ -23968,7 +23969,6 @@
+             "LowEndDevice",
+             "InvalidSchemeRedirect",
+             "InvalidSchemeNavigation",
+-            "InProgressNavigation",
+             "NavigationRequestBlockedByCsp",
+             "MainFrameNavigation",
+             "MojoBinderPolicy",
+@@ -24112,35 +24112,6 @@
+           ]
+         },
+         {
+-          "name": "prerenderAttemptCompleted",
+-          "description": "Fired when a prerender attempt is completed.",
+-          "parameters": [
+-            {
+-              "name": "key",
+-              "$ref": "PreloadingAttemptKey"
+-            },
+-            {
+-              "name": "initiatingFrameId",
+-              "description": "The frame id of the frame initiating prerendering.",
+-              "$ref": "Page.FrameId"
+-            },
+-            {
+-              "name": "prerenderingUrl",
+-              "type": "string"
+-            },
+-            {
+-              "name": "finalStatus",
+-              "$ref": "PrerenderFinalStatus"
+-            },
+-            {
+-              "name": "disallowedApiMethod",
+-              "description": "This is used to give users more information about the name of the API call\nthat is incompatible with prerender and has caused the cancellation of the attempt",
+-              "optional": true,
+-              "type": "string"
+-            }
+-          ]
+-        },
+-        {
+           "name": "preloadEnabledStateUpdated",
+           "description": "Fired when a preload enabled state is updated.",
+           "parameters": [
+@@ -24262,7 +24233,7 @@
+           "enum": [
+             "AccountChooser",
+             "AutoReauthn",
+-            "ConfirmIdpSignin"
++            "ConfirmIdpLogin"
+           ]
+         },
+         {
+@@ -24295,7 +24266,7 @@
+               "type": "string"
+             },
+             {
+-              "name": "idpSigninUrl",
++              "name": "idpLoginUrl",
+               "type": "string"
+             },
+             {
+@@ -24377,8 +24348,8 @@
+           ]
+         },
+         {
+-          "name": "confirmIdpSignin",
+-          "description": "Only valid if the dialog type is ConfirmIdpSignin. Acts as if the user had\nclicked the continue button.",
++          "name": "confirmIdpLogin",
++          "description": "Only valid if the dialog type is ConfirmIdpLogin. Acts as if the user had\nclicked the continue button.",
+           "parameters": [
+             {
+               "name": "dialogId",
+@@ -26565,7 +26536,7 @@
+         },
+         {
+           "id": "SerializationOptions",
+-          "description": "Represents options for serialization. Overrides `generatePreview`, `returnByValue` and\n`generateWebDriverValue`.",
++          "description": "Represents options for serialization. Overrides `generatePreview` and `returnByValue`.",
+           "type": "object",
+           "properties": [
+             {
+@@ -26726,13 +26697,6 @@
+               "type": "string"
+             },
+             {
+-              "name": "webDriverValue",
+-              "description": "Deprecated. Use `deepSerializedValue` instead. WebDriver BiDi representation of the value.",
+-              "deprecated": true,
+-              "optional": true,
+-              "$ref": "DeepSerializedValue"
+-            },
+-            {
+               "name": "deepSerializedValue",
+               "description": "Deep serialized value.",
+               "experimental": true,
+@@ -27401,15 +27365,8 @@
+               "type": "string"
+             },
+             {
+-              "name": "generateWebDriverValue",
+-              "description": "Deprecated. Use `serializationOptions: {serialization:\"deep\"}` instead.\nWhether the result should contain `webDriverValue`, serialized according to\nhttps://w3c.github.io/webdriver-bidi. This is mutually exclusive with `returnByValue`, but\nresulting `objectId` is still provided.",
+-              "deprecated": true,
+-              "optional": true,
+-              "type": "boolean"
+-            },
+-            {
+               "name": "serializationOptions",
+-              "description": "Specifies the result serialization. If provided, overrides\n`generatePreview`, `returnByValue` and `generateWebDriverValue`.",
++              "description": "Specifies the result serialization. If provided, overrides\n`generatePreview` and `returnByValue`.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "SerializationOptions"
+@@ -27583,15 +27540,8 @@
+               "type": "string"
+             },
+             {
+-              "name": "generateWebDriverValue",
+-              "description": "Deprecated. Use `serializationOptions: {serialization:\"deep\"}` instead.\nWhether the result should contain `webDriverValue`, serialized\naccording to\nhttps://w3c.github.io/webdriver-bidi. This is mutually exclusive with `returnByValue`, but\nresulting `objectId` is still provided.",
+-              "deprecated": true,
+-              "optional": true,
+-              "type": "boolean"
+-            },
+-            {
+               "name": "serializationOptions",
+-              "description": "Specifies the result serialization. If provided, overrides\n`generatePreview`, `returnByValue` and `generateWebDriverValue`.",
++              "description": "Specifies the result serialization. If provided, overrides\n`generatePreview` and `returnByValue`.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "SerializationOptions"

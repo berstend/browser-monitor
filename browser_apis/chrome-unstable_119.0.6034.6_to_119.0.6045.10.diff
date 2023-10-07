@@ -1,0 +1,29 @@
+--- ./browser_apis/chrome-unstable_119.0.6034.6.json	2023-10-07 00:52:52.662830127 +0000
++++ ./browser_apis/chrome-unstable_119.0.6045.10.json	2023-10-07 00:53:26.443156798 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8086,
++  "browserApiCount": 8081,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4038,7 +4038,6 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
+-    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+     "Option.prototype.constructor.prototype.showPopover",
+@@ -5614,10 +5613,6 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
+-    "Sanitizer",
+-    "Sanitizer.getDefaultConfiguration",
+-    "Sanitizer.prototype",
+-    "Sanitizer.prototype.getConfiguration",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",

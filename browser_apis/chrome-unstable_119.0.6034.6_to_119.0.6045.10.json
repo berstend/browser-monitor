@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "119.0.6034.6",
+    "to": "119.0.6045.10"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "Option.prototype.constructor.prototype.setHTML",
+      "Sanitizer",
+      "Sanitizer.getDefaultConfiguration",
+      "Sanitizer.prototype",
+      "Sanitizer.prototype.getConfiguration"
+    ]
+  }
+}
