@@ -1155,6 +1155,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 120.0.6051.2 (`2023-10-9`) 
+No browser API changes.
+
+  
 #### 119.0.6045.10 (`2023-10-6`) ⚡
 Added 0 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_119.0.6034.6_to_119.0.6045.10.diff), [json](./browser_apis/chrome-unstable_119.0.6034.6_to_119.0.6045.10.json), [full list](./browser_apis/chrome-unstable_119.0.6045.10.json))
  ```diff
@@ -2366,48 +2370,6 @@ Added 266 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5638
      "Navigator.prototype.hardwareConcurrency",
      "Navigator.prototype.hid",
      "Navigator.prototype.ink",
-```
-
-  
-#### 113.0.5638.0 (`2023-3-9`) ⚡
-Added 1 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_112.0.5615.20_to_113.0.5638.0.diff), [json](./browser_apis/chrome-unstable_112.0.5615.20_to_113.0.5638.0.json), [full list](./browser_apis/chrome-unstable_113.0.5638.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_112.0.5615.20.json	2023-04-13 09:09:57.531179757 +0000
-+++ ./browser_apis/chrome-unstable_113.0.5638.0.json	2023-04-13 09:10:18.355267823 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 7720,
-+  "browserApiCount": 7717,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -720,8 +720,6 @@
-     "CanvasCaptureMediaStreamTrack.prototype",
-     "CanvasCaptureMediaStreamTrack.prototype.canvas",
-     "CanvasCaptureMediaStreamTrack.prototype.requestFrame",
--    "CanvasFilter",
--    "CanvasFilter.prototype",
-     "CanvasGradient",
-     "CanvasGradient.prototype",
-     "CanvasGradient.prototype.addColorStop",
-@@ -3760,8 +3758,6 @@
-     "OverconstrainedError",
-     "OverconstrainedError.prototype",
-     "OverconstrainedError.prototype.constraint",
--    "OverconstrainedError.prototype.message",
--    "OverconstrainedError.prototype.name",
-     "PageTransitionEvent",
-     "PageTransitionEvent.prototype",
-     "PageTransitionEvent.prototype.persisted",
-@@ -5902,6 +5898,7 @@
-     "URLSearchParams.prototype.has",
-     "URLSearchParams.prototype.keys",
-     "URLSearchParams.prototype.set",
-+    "URLSearchParams.prototype.size",
-     "URLSearchParams.prototype.sort",
-     "URLSearchParams.prototype.toString",
-     "URLSearchParams.prototype.values",
 ```
 
   <!-- browserapis:end -->
