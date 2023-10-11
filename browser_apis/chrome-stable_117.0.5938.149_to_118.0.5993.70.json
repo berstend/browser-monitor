@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "117.0.5938.149",
+    "to": "118.0.5993.70"
+  },
+  "browserApis": {
+    "added": [
+      "CSS.cap",
+      "CSS.ic",
+      "CSS.lh",
+      "CSS.rcap",
+      "CSS.rch",
+      "CSS.rex",
+      "CSS.ric",
+      "CSS.rlh",
+      "CSS.x",
+      "CSSScopeRule",
+      "CSSScopeRule.prototype",
+      "CSSScopeRule.prototype.end",
+      "CSSScopeRule.prototype.start",
+      "NavigateEvent.prototype.hasUAVisualTransition",
+      "PopStateEvent.prototype.hasUAVisualTransition",
+      "SVGImageElement.prototype.crossOrigin",
+      "TextMetrics.prototype.alphabeticBaseline",
+      "TextMetrics.prototype.hangingBaseline",
+      "TextMetrics.prototype.ideographicBaseline"
+    ],
+    "removed": []
+  }
+}

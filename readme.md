@@ -5,6 +5,110 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 118.0.5993.70 (`2023-10-10`) ⚡
+Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_117.0.5938.149_to_118.0.5993.70.diff), [json](./browser_apis/chrome-stable_117.0.5938.149_to_118.0.5993.70.json), [full list](./browser_apis/chrome-stable_118.0.5993.70.json))
+ ```diff
+--- ./browser_apis/chrome-stable_117.0.5938.149.json	2023-10-11 00:53:24.445651698 +0000
++++ ./browser_apis/chrome-stable_118.0.5993.70.json	2023-10-11 00:54:05.722112302 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8077,
++  "browserApiCount": 8096,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -423,6 +423,7 @@
+     "CSS",
+     "CSS.Hz",
+     "CSS.Q",
++    "CSS.cap",
+     "CSS.ch",
+     "CSS.cm",
+     "CSS.cqb",
+@@ -447,8 +448,10 @@
+     "CSS.fr",
+     "CSS.grad",
+     "CSS.highlights",
++    "CSS.ic",
+     "CSS.in",
+     "CSS.kHz",
++    "CSS.lh",
+     "CSS.lvb",
+     "CSS.lvh",
+     "CSS.lvi",
+@@ -464,8 +467,13 @@
+     "CSS.pt",
+     "CSS.px",
+     "CSS.rad",
++    "CSS.rcap",
++    "CSS.rch",
+     "CSS.registerProperty",
+     "CSS.rem",
++    "CSS.rex",
++    "CSS.ric",
++    "CSS.rlh",
+     "CSS.s",
+     "CSS.supports",
+     "CSS.svb",
+@@ -481,6 +489,7 @@
+     "CSS.vmax",
+     "CSS.vmin",
+     "CSS.vw",
++    "CSS.x",
+     "CSSAnimation",
+     "CSSAnimation.prototype",
+     "CSSAnimation.prototype.animationName",
+@@ -609,6 +618,10 @@
+     "CSSScale.prototype.x",
+     "CSSScale.prototype.y",
+     "CSSScale.prototype.z",
++    "CSSScopeRule",
++    "CSSScopeRule.prototype",
++    "CSSScopeRule.prototype.end",
++    "CSSScopeRule.prototype.start",
+     "CSSSkew",
+     "CSSSkew.prototype",
+     "CSSSkew.prototype.ax",
+@@ -3396,6 +3409,7 @@
+     "NavigateEvent.prototype.destination",
+     "NavigateEvent.prototype.downloadRequest",
+     "NavigateEvent.prototype.formData",
++    "NavigateEvent.prototype.hasUAVisualTransition",
+     "NavigateEvent.prototype.hashChange",
+     "NavigateEvent.prototype.info",
+     "NavigateEvent.prototype.intercept",
+@@ -4357,6 +4371,7 @@
+     "PointerEvent.prototype.width",
+     "PopStateEvent",
+     "PopStateEvent.prototype",
++    "PopStateEvent.prototype.hasUAVisualTransition",
+     "PopStateEvent.prototype.state",
+     "Presentation",
+     "Presentation.prototype",
+@@ -5164,6 +5179,7 @@
+     "SVGGElement.prototype",
+     "SVGImageElement",
+     "SVGImageElement.prototype",
++    "SVGImageElement.prototype.crossOrigin",
+     "SVGImageElement.prototype.decode",
+     "SVGImageElement.prototype.decoding",
+     "SVGImageElement.prototype.height",
+@@ -6084,8 +6100,11 @@
+     "TextMetrics.prototype.actualBoundingBoxDescent",
+     "TextMetrics.prototype.actualBoundingBoxLeft",
+     "TextMetrics.prototype.actualBoundingBoxRight",
++    "TextMetrics.prototype.alphabeticBaseline",
+     "TextMetrics.prototype.fontBoundingBoxAscent",
+     "TextMetrics.prototype.fontBoundingBoxDescent",
++    "TextMetrics.prototype.hangingBaseline",
++    "TextMetrics.prototype.ideographicBaseline",
+     "TextMetrics.prototype.width",
+     "TextTrack",
+     "TextTrack.prototype",
+```
+
+  
 #### 117.0.5938.149 (`2023-10-4`) 
 No browser API changes.
 
@@ -1147,10 +1251,6 @@ Added 0 APIs, removed 60 (see: [diff](./browser_apis/chrome-stable_110.0.5481.96
      "ReportingObserver.prototype",
      "ReportingObserver.prototype.disconnect",
 ```
-
-  
-#### 110.0.5481.96 (`2023-2-13`) 
-No browser API changes.
 
   
 ### chrome-unstable
