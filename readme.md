@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 118.0.5993.88 (`2023-10-17`) 
+No browser API changes.
+
+  
 #### 118.0.5993.70 (`2023-10-10`) ⚡
 Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_117.0.5938.149_to_118.0.5993.70.diff), [json](./browser_apis/chrome-stable_117.0.5938.149_to_118.0.5993.70.json), [full list](./browser_apis/chrome-stable_118.0.5993.70.json))
  ```diff
@@ -1133,124 +1137,6 @@ Added 16 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_110.0.5481.17
   
 #### 110.0.5481.177 (`2023-2-22`) 
 No browser API changes.
-
-  
-#### 110.0.5481.100 (`2023-2-14`) ⚡
-Added 0 APIs, removed 60 (see: [diff](./browser_apis/chrome-stable_110.0.5481.96_to_110.0.5481.100.diff), [json](./browser_apis/chrome-stable_110.0.5481.96_to_110.0.5481.100.json), [full list](./browser_apis/chrome-stable_110.0.5481.100.json))
- ```diff
---- ./browser_apis/chrome-stable_110.0.5481.96.json	2023-02-15 01:09:07.180690561 +0000
-+++ ./browser_apis/chrome-stable_110.0.5481.100.json	2023-02-15 01:09:38.779226338 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 7769,
-+  "browserApiCount": 7709,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -411,20 +411,6 @@
-     "ByteLengthQueuingStrategy.prototype.size",
-     "CDATASection",
-     "CDATASection.prototype",
--    "CSPViolationReportBody",
--    "CSPViolationReportBody.prototype",
--    "CSPViolationReportBody.prototype.blockedURL",
--    "CSPViolationReportBody.prototype.columnNumber",
--    "CSPViolationReportBody.prototype.disposition",
--    "CSPViolationReportBody.prototype.documentURL",
--    "CSPViolationReportBody.prototype.effectiveDirective",
--    "CSPViolationReportBody.prototype.lineNumber",
--    "CSPViolationReportBody.prototype.originalPolicy",
--    "CSPViolationReportBody.prototype.referrer",
--    "CSPViolationReportBody.prototype.sample",
--    "CSPViolationReportBody.prototype.sourceFile",
--    "CSPViolationReportBody.prototype.statusCode",
--    "CSPViolationReportBody.prototype.toJSON",
-     "CSS",
-     "CSS.Hz",
-     "CSS.Q",
-@@ -869,17 +855,6 @@
-     "CookieStoreManager.prototype.getSubscriptions",
-     "CookieStoreManager.prototype.subscribe",
-     "CookieStoreManager.prototype.unsubscribe",
--    "CoopAccessViolationReportBody",
--    "CoopAccessViolationReportBody.prototype",
--    "CoopAccessViolationReportBody.prototype.columnNumber",
--    "CoopAccessViolationReportBody.prototype.lineNumber",
--    "CoopAccessViolationReportBody.prototype.openeeURL",
--    "CoopAccessViolationReportBody.prototype.openerURL",
--    "CoopAccessViolationReportBody.prototype.otherDocumentURL",
--    "CoopAccessViolationReportBody.prototype.property",
--    "CoopAccessViolationReportBody.prototype.sourceFile",
--    "CoopAccessViolationReportBody.prototype.toJSON",
--    "CoopAccessViolationReportBody.prototype.type",
-     "CountQueuingStrategy",
-     "CountQueuingStrategy.prototype",
-     "CountQueuingStrategy.prototype.highWaterMark",
-@@ -1122,15 +1097,6 @@
-     "DelegatedInkTrailPresenter.prototype.expectedImprovement",
-     "DelegatedInkTrailPresenter.prototype.presentationArea",
-     "DelegatedInkTrailPresenter.prototype.updateInkTrailStartPoint",
--    "DeprecationReportBody",
--    "DeprecationReportBody.prototype",
--    "DeprecationReportBody.prototype.anticipatedRemoval",
--    "DeprecationReportBody.prototype.columnNumber",
--    "DeprecationReportBody.prototype.id",
--    "DeprecationReportBody.prototype.lineNumber",
--    "DeprecationReportBody.prototype.message",
--    "DeprecationReportBody.prototype.sourceFile",
--    "DeprecationReportBody.prototype.toJSON",
-     "DeviceMotionEvent",
-     "DeviceMotionEvent.prototype",
-     "DeviceMotionEvent.prototype.acceleration",
-@@ -1153,15 +1119,6 @@
-     "DeviceOrientationEvent.prototype.alpha",
-     "DeviceOrientationEvent.prototype.beta",
-     "DeviceOrientationEvent.prototype.gamma",
--    "DocumentPolicyViolationReportBody",
--    "DocumentPolicyViolationReportBody.prototype",
--    "DocumentPolicyViolationReportBody.prototype.columnNumber",
--    "DocumentPolicyViolationReportBody.prototype.disposition",
--    "DocumentPolicyViolationReportBody.prototype.featureId",
--    "DocumentPolicyViolationReportBody.prototype.lineNumber",
--    "DocumentPolicyViolationReportBody.prototype.message",
--    "DocumentPolicyViolationReportBody.prototype.sourceFile",
--    "DocumentPolicyViolationReportBody.prototype.toJSON",
-     "DocumentTimeline",
-     "DocumentTimeline.prototype",
-     "DocumentType",
-@@ -2520,14 +2477,6 @@
-     "IntersectionObserverEntry.prototype.rootBounds",
-     "IntersectionObserverEntry.prototype.target",
-     "IntersectionObserverEntry.prototype.time",
--    "InterventionReportBody",
--    "InterventionReportBody.prototype",
--    "InterventionReportBody.prototype.columnNumber",
--    "InterventionReportBody.prototype.id",
--    "InterventionReportBody.prototype.lineNumber",
--    "InterventionReportBody.prototype.message",
--    "InterventionReportBody.prototype.sourceFile",
--    "InterventionReportBody.prototype.toJSON",
-     "Intl",
-     "Intl.Collator",
-     "Intl.Collator.prototype",
-@@ -4501,15 +4450,6 @@
-     "RemotePlayback.prototype.prompt",
-     "RemotePlayback.prototype.state",
-     "RemotePlayback.prototype.watchAvailability",
--    "Report",
--    "Report.prototype",
--    "Report.prototype.body",
--    "Report.prototype.toJSON",
--    "Report.prototype.type",
--    "Report.prototype.url",
--    "ReportBody",
--    "ReportBody.prototype",
--    "ReportBody.prototype.toJSON",
-     "ReportingObserver",
-     "ReportingObserver.prototype",
-     "ReportingObserver.prototype.disconnect",
-```
 
   
 ### chrome-unstable
