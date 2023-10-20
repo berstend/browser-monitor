@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "120.0.6062.2",
+    "to": "120.0.6073.0"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLDetailsElement.prototype.name"
+    ],
+    "removed": []
+  }
+}

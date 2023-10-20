@@ -1,0 +1,50 @@
+--- ./cdp/chrome-unstable_120.0.6062.2.protocol.json	2023-10-20 00:53:40.211752698 +0000
++++ ./cdp/chrome-unstable_120.0.6073.0.protocol.json	2023-10-20 00:54:13.684163838 +0000
+@@ -15279,6 +15279,28 @@
+           ]
+         },
+         {
++          "id": "WindowControlsOverlayConfig",
++          "description": "Configuration for Window Controls Overlay",
++          "type": "object",
++          "properties": [
++            {
++              "name": "showCSS",
++              "description": "Whether the title bar CSS should be shown when emulating the Window Controls Overlay.",
++              "type": "boolean"
++            },
++            {
++              "name": "selectedPlatform",
++              "description": "Seleted platforms to show the overlay.",
++              "type": "string"
++            },
++            {
++              "name": "themeColor",
++              "description": "The theme color defined in app manifest.",
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "id": "ContainerQueryHighlightConfig",
+           "type": "object",
+           "properties": [
+@@ -15812,6 +15834,18 @@
+               }
+             }
+           ]
++        },
++        {
++          "name": "setShowWindowControlsOverlay",
++          "description": "Show Window Controls Overlay for PWA",
++          "parameters": [
++            {
++              "name": "windowControlsOverlayConfig",
++              "description": "Window Controls Overlay data, null means hide Window Controls Overlay",
++              "optional": true,
++              "$ref": "WindowControlsOverlayConfig"
++            }
++          ]
+         }
+       ],
+       "events": [

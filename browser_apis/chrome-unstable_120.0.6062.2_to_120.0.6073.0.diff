@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_120.0.6062.2.json	2023-10-20 00:53:40.039750838 +0000
++++ ./browser_apis/chrome-unstable_120.0.6073.0.json	2023-10-20 00:54:13.672163709 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8081,
++  "browserApiCount": 8082,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1893,6 +1893,7 @@
+     "HTMLDataListElement.prototype.options",
+     "HTMLDetailsElement",
+     "HTMLDetailsElement.prototype",
++    "HTMLDetailsElement.prototype.name",
+     "HTMLDetailsElement.prototype.open",
+     "HTMLDialogElement",
+     "HTMLDialogElement.prototype",

@@ -1141,6 +1141,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 120.0.6073.0 (`2023-10-19`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6062.2_to_120.0.6073.0.diff), [json](./browser_apis/chrome-unstable_120.0.6062.2_to_120.0.6073.0.json), [full list](./browser_apis/chrome-unstable_120.0.6073.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_120.0.6062.2.json	2023-10-20 00:53:40.039750838 +0000
++++ ./browser_apis/chrome-unstable_120.0.6073.0.json	2023-10-20 00:54:13.672163709 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8081,
++  "browserApiCount": 8082,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1893,6 +1893,7 @@
+     "HTMLDataListElement.prototype.options",
+     "HTMLDetailsElement",
+     "HTMLDetailsElement.prototype",
++    "HTMLDetailsElement.prototype.name",
+     "HTMLDetailsElement.prototype.open",
+     "HTMLDialogElement",
+     "HTMLDialogElement.prototype",
+```
+
+  
 #### 120.0.6062.2 (`2023-10-13`) 
 No browser API changes.
 
@@ -2041,29 +2065,5 @@ No browser API changes.
   
 #### 113.0.5672.12 (`2023-3-30`) 
 No browser API changes.
-
-  
-#### 113.0.5668.0 (`2023-3-24`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5653.0_to_113.0.5668.0.diff), [json](./browser_apis/chrome-unstable_113.0.5653.0_to_113.0.5668.0.json), [full list](./browser_apis/chrome-unstable_113.0.5668.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_113.0.5653.0.json	2023-04-13 09:10:39.055358588 +0000
-+++ ./browser_apis/chrome-unstable_113.0.5668.0.json	2023-04-13 09:11:00.787446258 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 7983,
-+  "browserApiCount": 7984,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2459,6 +2459,7 @@
-     "Headers.prototype.entries",
-     "Headers.prototype.forEach",
-     "Headers.prototype.get",
-+    "Headers.prototype.getSetCookie",
-     "Headers.prototype.has",
-     "Headers.prototype.keys",
-     "Headers.prototype.set",
-```
 
   <!-- browserapis:end -->
