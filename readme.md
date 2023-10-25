@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 118.0.5993.117 (`2023-10-24`) 
+No browser API changes.
+
+  
 #### 118.0.5993.88 (`2023-10-17`) 
 No browser API changes.
 
@@ -1133,10 +1137,6 @@ Added 16 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_110.0.5481.17
      "XRSession.prototype.environmentBlendMode",
      "XRSession.prototype.inputSources",
 ```
-
-  
-#### 110.0.5481.177 (`2023-2-22`) 
-No browser API changes.
 
   
 ### chrome-unstable
