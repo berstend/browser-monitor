@@ -1141,6 +1141,57 @@ Added 16 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_110.0.5481.17
   
 ### chrome-unstable
   
+#### 120.0.6090.0 (`2023-10-27`) ⚡
+Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6073.0_to_120.0.6090.0.diff), [json](./browser_apis/chrome-unstable_120.0.6073.0_to_120.0.6090.0.json), [full list](./browser_apis/chrome-unstable_120.0.6090.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_120.0.6073.0.json	2023-10-28 00:51:51.832888962 +0000
++++ ./browser_apis/chrome-unstable_120.0.6090.0.json	2023-10-28 00:52:45.533484297 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8082,
++  "browserApiCount": 8091,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2775,6 +2775,7 @@
+     "IntersectionObserver.prototype.observe",
+     "IntersectionObserver.prototype.root",
+     "IntersectionObserver.prototype.rootMargin",
++    "IntersectionObserver.prototype.scrollMargin",
+     "IntersectionObserver.prototype.takeRecords",
+     "IntersectionObserver.prototype.thresholds",
+     "IntersectionObserver.prototype.trackVisibility",
+@@ -3324,11 +3325,18 @@
+     "MediaStreamTrackGenerator.prototype.onmute",
+     "MediaStreamTrackGenerator.prototype.onunmute",
+     "MediaStreamTrackGenerator.prototype.readyState",
++    "MediaStreamTrackGenerator.prototype.stats",
+     "MediaStreamTrackGenerator.prototype.stop",
+     "MediaStreamTrackGenerator.prototype.writable",
+     "MediaStreamTrackProcessor",
+     "MediaStreamTrackProcessor.prototype",
+     "MediaStreamTrackProcessor.prototype.readable",
++    "MediaStreamTrackVideoStats",
++    "MediaStreamTrackVideoStats.prototype",
++    "MediaStreamTrackVideoStats.prototype.deliveredFrames",
++    "MediaStreamTrackVideoStats.prototype.discardedFrames",
++    "MediaStreamTrackVideoStats.prototype.toJSON",
++    "MediaStreamTrackVideoStats.prototype.totalFrames",
+     "MessageChannel",
+     "MessageChannel.prototype",
+     "MessageChannel.prototype.port1",
+@@ -8066,6 +8074,7 @@
+     "webkitSpeechRecognitionEvent.prototype.resultIndex",
+     "webkitSpeechRecognitionEvent.prototype.results",
+     "webkitURL",
++    "webkitURL.canParse",
+     "webkitURL.createObjectURL",
+     "webkitURL.prototype",
+     "webkitURL.prototype.hash",
+```
+
+  
 #### 120.0.6073.0 (`2023-10-19`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6062.2_to_120.0.6073.0.diff), [json](./browser_apis/chrome-unstable_120.0.6062.2_to_120.0.6073.0.json), [full list](./browser_apis/chrome-unstable_120.0.6073.0.json))
  ```diff
@@ -2060,10 +2111,6 @@ Added 22 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5672.
 
   
 #### 113.0.5672.24 (`2023-4-4`) 
-No browser API changes.
-
-  
-#### 113.0.5672.12 (`2023-3-30`) 
 No browser API changes.
 
   <!-- browserapis:end -->

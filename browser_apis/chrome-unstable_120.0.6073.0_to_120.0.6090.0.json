@@ -1,0 +1,21 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "120.0.6073.0",
+    "to": "120.0.6090.0"
+  },
+  "browserApis": {
+    "added": [
+      "IntersectionObserver.prototype.scrollMargin",
+      "MediaStreamTrackGenerator.prototype.stats",
+      "MediaStreamTrackVideoStats",
+      "MediaStreamTrackVideoStats.prototype",
+      "MediaStreamTrackVideoStats.prototype.deliveredFrames",
+      "MediaStreamTrackVideoStats.prototype.discardedFrames",
+      "MediaStreamTrackVideoStats.prototype.toJSON",
+      "MediaStreamTrackVideoStats.prototype.totalFrames",
+      "webkitURL.canParse"
+    ],
+    "removed": []
+  }
+}
