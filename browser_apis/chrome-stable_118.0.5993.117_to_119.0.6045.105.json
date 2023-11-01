@@ -1,0 +1,38 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "118.0.5993.117",
+    "to": "119.0.6045.105"
+  },
+  "browserApis": {
+    "added": [
+      "Promise.withResolvers",
+      "SVGClipPathElement.prototype.transform",
+      "XMLDocument.prototype.hasStorageAccess",
+      "XMLDocument.prototype.requestStorageAccess",
+      "XMLDocument.prototype.requestStorageAccessFor"
+    ],
+    "removed": [
+      "Iterator",
+      "Iterator.from",
+      "Iterator.prototype",
+      "Iterator.prototype.drop",
+      "Iterator.prototype.every",
+      "Iterator.prototype.filter",
+      "Iterator.prototype.find",
+      "Iterator.prototype.flatMap",
+      "Iterator.prototype.forEach",
+      "Iterator.prototype.map",
+      "Iterator.prototype.reduce",
+      "Iterator.prototype.some",
+      "Iterator.prototype.take",
+      "Iterator.prototype.toArray",
+      "Option.prototype.constructor.prototype.setHTML",
+      "Sanitizer",
+      "Sanitizer.getDefaultConfiguration",
+      "Sanitizer.prototype",
+      "Sanitizer.prototype.getConfiguration",
+      "openDatabase"
+    ]
+  }
+}

@@ -5,6 +5,103 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 119.0.6045.105 (`2023-10-31`) ⚡
+Added 5 APIs, removed 20 (see: [diff](./browser_apis/chrome-stable_118.0.5993.117_to_119.0.6045.105.diff), [json](./browser_apis/chrome-stable_118.0.5993.117_to_119.0.6045.105.json), [full list](./browser_apis/chrome-stable_119.0.6045.105.json))
+ ```diff
+--- ./browser_apis/chrome-stable_118.0.5993.117.json	2023-11-01 00:57:15.461347865 +0000
++++ ./browser_apis/chrome-stable_119.0.6045.105.json	2023-11-01 00:57:58.773619831 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8096,
++  "browserApiCount": 8081,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2871,20 +2871,6 @@
+     "Intl.v8BreakIterator.prototype.next",
+     "Intl.v8BreakIterator.prototype.resolvedOptions",
+     "Intl.v8BreakIterator.supportedLocalesOf",
+-    "Iterator",
+-    "Iterator.from",
+-    "Iterator.prototype",
+-    "Iterator.prototype.drop",
+-    "Iterator.prototype.every",
+-    "Iterator.prototype.filter",
+-    "Iterator.prototype.find",
+-    "Iterator.prototype.flatMap",
+-    "Iterator.prototype.forEach",
+-    "Iterator.prototype.map",
+-    "Iterator.prototype.reduce",
+-    "Iterator.prototype.some",
+-    "Iterator.prototype.take",
+-    "Iterator.prototype.toArray",
+     "JSON",
+     "JSON.isRawJSON",
+     "JSON.parse",
+@@ -4052,7 +4038,6 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
+-    "Option.prototype.constructor.prototype.setHTML",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+     "Option.prototype.constructor.prototype.showPopover",
+@@ -4439,6 +4424,7 @@
+     "Promise.race",
+     "Promise.reject",
+     "Promise.resolve",
++    "Promise.withResolvers",
+     "PromiseRejectionEvent",
+     "PromiseRejectionEvent.prototype",
+     "PromiseRejectionEvent.prototype.promise",
+@@ -4925,6 +4911,7 @@
+     "SVGClipPathElement",
+     "SVGClipPathElement.prototype",
+     "SVGClipPathElement.prototype.clipPathUnits",
++    "SVGClipPathElement.prototype.transform",
+     "SVGDefsElement",
+     "SVGDefsElement.prototype",
+     "SVGDescElement",
+@@ -5626,10 +5613,6 @@
+     "SVGViewElement.prototype.viewBox",
+     "SVGViewElement.prototype.viewportElement",
+     "SVGViewElement.prototype.zoomAndPan",
+-    "Sanitizer",
+-    "Sanitizer.getDefaultConfiguration",
+-    "Sanitizer.prototype",
+-    "Sanitizer.prototype.getConfiguration",
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
+@@ -7289,6 +7272,7 @@
+     "XMLDocument.prototype.hasFocus",
+     "XMLDocument.prototype.hasPrivateToken",
+     "XMLDocument.prototype.hasRedemptionRecord",
++    "XMLDocument.prototype.hasStorageAccess",
+     "XMLDocument.prototype.head",
+     "XMLDocument.prototype.hidden",
+     "XMLDocument.prototype.images",
+@@ -7430,6 +7414,8 @@
+     "XMLDocument.prototype.referrer",
+     "XMLDocument.prototype.releaseEvents",
+     "XMLDocument.prototype.replaceChildren",
++    "XMLDocument.prototype.requestStorageAccess",
++    "XMLDocument.prototype.requestStorageAccessFor",
+     "XMLDocument.prototype.rootElement",
+     "XMLDocument.prototype.scripts",
+     "XMLDocument.prototype.scrollingElement",
+@@ -7921,7 +7907,6 @@
+     "onwebkittransitionend",
+     "onwheel",
+     "open",
+-    "openDatabase",
+     "opener",
+     "origin",
+     "originAgentCluster",
+```
+
+  
 #### 118.0.5993.117 (`2023-10-24`) 
 No browser API changes.
 
@@ -1030,113 +1127,6 @@ No browser API changes.
   
 #### 111.0.5563.110 (`2023-3-21`) 
 No browser API changes.
-
-  
-#### 111.0.5563.64 (`2023-3-7`) ⚡
-Added 16 APIs, removed 9 (see: [diff](./browser_apis/chrome-stable_110.0.5481.177_to_111.0.5563.64.diff), [json](./browser_apis/chrome-stable_110.0.5481.177_to_111.0.5563.64.json), [full list](./browser_apis/chrome-stable_111.0.5563.64.json))
- ```diff
---- ./browser_apis/chrome-stable_110.0.5481.177.json	2023-04-13 09:07:51.546664727 +0000
-+++ ./browser_apis/chrome-stable_111.0.5563.64.json	2023-04-13 09:08:09.846735082 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 7709,
-+  "browserApiCount": 7716,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -117,6 +117,9 @@
-     "ArrayBuffer.isView",
-     "ArrayBuffer.prototype",
-     "ArrayBuffer.prototype.byteLength",
-+    "ArrayBuffer.prototype.maxByteLength",
-+    "ArrayBuffer.prototype.resizable",
-+    "ArrayBuffer.prototype.resize",
-     "ArrayBuffer.prototype.slice",
-     "Atomics",
-     "Atomics.add",
-@@ -477,6 +480,8 @@
-     "CSSAnimation.prototype.animationName",
-     "CSSContainerRule",
-     "CSSContainerRule.prototype",
-+    "CSSContainerRule.prototype.containerName",
-+    "CSSContainerRule.prototype.containerQuery",
-     "CSSCounterStyleRule",
-     "CSSCounterStyleRule.prototype",
-     "CSSCounterStyleRule.prototype.additiveSymbols",
-@@ -2100,6 +2105,7 @@
-     "HTMLTemplateElement.prototype",
-     "HTMLTemplateElement.prototype.content",
-     "HTMLTemplateElement.prototype.shadowRoot",
-+    "HTMLTemplateElement.prototype.shadowRootMode",
-     "HTMLTextAreaElement",
-     "HTMLTextAreaElement.prototype",
-     "HTMLTextAreaElement.prototype.autocomplete",
-@@ -3805,18 +3811,9 @@
-     "PaymentAddress.prototype.region",
-     "PaymentAddress.prototype.sortingCode",
-     "PaymentAddress.prototype.toJSON",
--    "PaymentInstruments",
--    "PaymentInstruments.prototype",
--    "PaymentInstruments.prototype.clear",
--    "PaymentInstruments.prototype.delete",
--    "PaymentInstruments.prototype.get",
--    "PaymentInstruments.prototype.has",
--    "PaymentInstruments.prototype.keys",
--    "PaymentInstruments.prototype.set",
-     "PaymentManager",
-     "PaymentManager.prototype",
-     "PaymentManager.prototype.enableDelegations",
--    "PaymentManager.prototype.instruments",
-     "PaymentManager.prototype.userHint",
-     "PaymentMethodChangeEvent",
-     "PaymentMethodChangeEvent.prototype",
-@@ -5578,6 +5575,7 @@
-     "String.prototype.fontsize",
-     "String.prototype.includes",
-     "String.prototype.indexOf",
-+    "String.prototype.isWellFormed",
-     "String.prototype.italics",
-     "String.prototype.lastIndexOf",
-     "String.prototype.link",
-@@ -5605,6 +5603,7 @@
-     "String.prototype.toLowerCase",
-     "String.prototype.toString",
-     "String.prototype.toUpperCase",
-+    "String.prototype.toWellFormed",
-     "String.prototype.trim",
-     "String.prototype.trimEnd",
-     "String.prototype.trimStart",
-@@ -6124,6 +6123,12 @@
-     "VideoPlaybackQuality.prototype.creationTime",
-     "VideoPlaybackQuality.prototype.droppedVideoFrames",
-     "VideoPlaybackQuality.prototype.totalVideoFrames",
-+    "ViewTransition",
-+    "ViewTransition.prototype",
-+    "ViewTransition.prototype.finished",
-+    "ViewTransition.prototype.ready",
-+    "ViewTransition.prototype.skipTransition",
-+    "ViewTransition.prototype.updateCallbackDone",
-     "VirtualKeyboard",
-     "VirtualKeyboard.prototype",
-     "VirtualKeyboard.prototype.boundingRect",
-@@ -7052,6 +7057,7 @@
-     "XMLDocument.prototype.rootElement",
-     "XMLDocument.prototype.scripts",
-     "XMLDocument.prototype.scrollingElement",
-+    "XMLDocument.prototype.startViewTransition",
-     "XMLDocument.prototype.styleSheets",
-     "XMLDocument.prototype.timeline",
-     "XMLDocument.prototype.title",
-@@ -7239,6 +7245,7 @@
-     "XRSession.prototype.depthDataFormat",
-     "XRSession.prototype.depthUsage",
-     "XRSession.prototype.domOverlayState",
-+    "XRSession.prototype.enabledFeatures",
-     "XRSession.prototype.end",
-     "XRSession.prototype.environmentBlendMode",
-     "XRSession.prototype.inputSources",
-```
 
   
 ### chrome-unstable
