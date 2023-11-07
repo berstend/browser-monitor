@@ -1131,6 +1131,83 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 121.0.6103.3 (`2023-11-6`) ⚡
+Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6090.0_to_121.0.6103.3.diff), [json](./browser_apis/chrome-unstable_120.0.6090.0_to_121.0.6103.3.json), [full list](./browser_apis/chrome-unstable_121.0.6103.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_120.0.6090.0.json	2023-11-07 00:55:14.420956545 +0000
++++ ./browser_apis/chrome-unstable_121.0.6103.3.json	2023-11-07 00:55:35.876980694 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8091,
++  "browserApiCount": 8110,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -841,11 +841,19 @@
+     "ClipboardItem.prototype",
+     "ClipboardItem.prototype.getType",
+     "ClipboardItem.prototype.types",
++    "ClipboardItem.supports",
+     "CloseEvent",
+     "CloseEvent.prototype",
+     "CloseEvent.prototype.code",
+     "CloseEvent.prototype.reason",
+     "CloseEvent.prototype.wasClean",
++    "CloseWatcher",
++    "CloseWatcher.prototype",
++    "CloseWatcher.prototype.close",
++    "CloseWatcher.prototype.destroy",
++    "CloseWatcher.prototype.oncancel",
++    "CloseWatcher.prototype.onclose",
++    "CloseWatcher.prototype.requestClose",
+     "Comment",
+     "Comment.prototype",
+     "CompositionEvent",
+@@ -1623,6 +1631,7 @@
+     "GPUSupportedLimits",
+     "GPUSupportedLimits.prototype",
+     "GPUSupportedLimits.prototype.maxBindGroups",
++    "GPUSupportedLimits.prototype.maxBindGroupsPlusVertexBuffers",
+     "GPUSupportedLimits.prototype.maxBindingsPerBindGroup",
+     "GPUSupportedLimits.prototype.maxBufferSize",
+     "GPUSupportedLimits.prototype.maxColorAttachmentBytesPerSample",
+@@ -2651,8 +2660,14 @@
+     "IIRFilterNode.prototype.getFrequencyResponse",
+     "IdentityCredential",
+     "IdentityCredential.prototype",
++    "IdentityCredential.prototype.isAutoSelected",
+     "IdentityCredential.prototype.token",
++    "IdentityCredentialError",
++    "IdentityCredentialError.prototype",
++    "IdentityCredentialError.prototype.code",
++    "IdentityCredentialError.prototype.url",
+     "IdentityProvider",
++    "IdentityProvider.close",
+     "IdentityProvider.getUserInfo",
+     "IdentityProvider.prototype",
+     "IdleDeadline",
+@@ -3487,6 +3502,7 @@
+     "Navigator.prototype.language",
+     "Navigator.prototype.languages",
+     "Navigator.prototype.locks",
++    "Navigator.prototype.login",
+     "Navigator.prototype.managed",
+     "Navigator.prototype.maxTouchPoints",
+     "Navigator.prototype.mediaCapabilities",
+@@ -3526,6 +3542,9 @@
+     "Navigator.prototype.webkitTemporaryStorage",
+     "Navigator.prototype.windowControlsOverlay",
+     "Navigator.prototype.xr",
++    "NavigatorLogin",
++    "NavigatorLogin.prototype",
++    "NavigatorLogin.prototype.setStatus",
+     "NavigatorManagedData",
+     "NavigatorManagedData.prototype",
+     "NavigatorManagedData.prototype.getManagedConfiguration",
+```
+
+  
 #### 120.0.6090.0 (`2023-10-27`) ⚡
 Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6073.0_to_120.0.6090.0.diff), [json](./browser_apis/chrome-unstable_120.0.6073.0_to_120.0.6090.0.json), [full list](./browser_apis/chrome-unstable_120.0.6090.0.json))
  ```diff
@@ -2098,9 +2175,5 @@ Added 22 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_113.0.5672.
      "onbeforexrselect",
      "onblur",
 ```
-
-  
-#### 113.0.5672.24 (`2023-4-4`) 
-No browser API changes.
 
   <!-- browserapis:end -->

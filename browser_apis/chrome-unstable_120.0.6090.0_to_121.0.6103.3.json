@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "120.0.6090.0",
+    "to": "121.0.6103.3"
+  },
+  "browserApis": {
+    "added": [
+      "ClipboardItem.supports",
+      "CloseWatcher",
+      "CloseWatcher.prototype",
+      "CloseWatcher.prototype.close",
+      "CloseWatcher.prototype.destroy",
+      "CloseWatcher.prototype.oncancel",
+      "CloseWatcher.prototype.onclose",
+      "CloseWatcher.prototype.requestClose",
+      "GPUSupportedLimits.prototype.maxBindGroupsPlusVertexBuffers",
+      "IdentityCredential.prototype.isAutoSelected",
+      "IdentityCredentialError",
+      "IdentityCredentialError.prototype",
+      "IdentityCredentialError.prototype.code",
+      "IdentityCredentialError.prototype.url",
+      "IdentityProvider.close",
+      "Navigator.prototype.login",
+      "NavigatorLogin",
+      "NavigatorLogin.prototype",
+      "NavigatorLogin.prototype.setStatus"
+    ],
+    "removed": []
+  }
+}
