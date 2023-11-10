@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "121.0.6103.3",
+    "to": "121.0.6115.2"
+  },
+  "browserApis": {
+    "added": [
+      "Array.fromAsync"
+    ],
+    "removed": []
+  }
+}

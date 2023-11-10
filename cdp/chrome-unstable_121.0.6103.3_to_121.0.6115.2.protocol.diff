@@ -1,0 +1,68 @@
+--- ./cdp/chrome-unstable_121.0.6103.3.protocol.json	2023-11-10 00:54:43.048260423 +0000
++++ ./cdp/chrome-unstable_121.0.6115.2.protocol.json	2023-11-10 00:55:17.588649100 +0000
+@@ -1647,6 +1647,8 @@
+             "IdTokenHttpNotFound",
+             "IdTokenNoResponse",
+             "IdTokenInvalidResponse",
++            "IdTokenIdpErrorResponse",
++            "IdTokenCrossSiteIdpErrorResponse",
+             "IdTokenInvalidRequest",
+             "IdTokenInvalidContentType",
+             "ErrorIdToken",
+@@ -2517,7 +2519,7 @@
+         },
+         {
+           "id": "PermissionDescriptor",
+-          "description": "Definition of PermissionDescriptor defined in the Permissions API:\nhttps://w3c.github.io/permissions/#dictdef-permissiondescriptor.",
++          "description": "Definition of PermissionDescriptor defined in the Permissions API:\nhttps://w3c.github.io/permissions/#dom-permissiondescriptor.",
+           "experimental": true,
+           "type": "object",
+           "properties": [
+@@ -16263,6 +16265,7 @@
+             "unload",
+             "usb",
+             "vertical-scroll",
++            "web-printing",
+             "web-share",
+             "window-management",
+             "window-placement",
+@@ -20465,6 +20468,25 @@
+           ]
+         },
+         {
++          "id": "AttributionReportingTriggerSpec",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "triggerData",
++              "description": "number instead of integer because not all uint32 can be represented by\nint",
++              "type": "array",
++              "items": {
++                "type": "number"
++              }
++            },
++            {
++              "name": "eventReportWindows",
++              "$ref": "AttributionReportingEventReportWindows"
++            }
++          ]
++        },
++        {
+           "id": "AttributionReportingTriggerDataMatching",
+           "experimental": true,
+           "type": "string",
+@@ -20488,8 +20510,11 @@
+               "type": "integer"
+             },
+             {
+-              "name": "eventReportWindows",
+-              "$ref": "AttributionReportingEventReportWindows"
++              "name": "triggerSpecs",
++              "type": "array",
++              "items": {
++                "$ref": "AttributionReportingTriggerSpec"
++              }
+             },
+             {
+               "name": "aggregatableReportWindow",
