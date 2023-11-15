@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 119.0.6045.159 (`2023-11-14`) 
+No browser API changes.
+
+  
 #### 119.0.6045.123 (`2023-11-7`) 
 No browser API changes.
 
@@ -1123,10 +1127,6 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_111.0.5563.146
      "RelativeOrientationSensor",
      "RelativeOrientationSensor.prototype",
 ```
-
-  
-#### 111.0.5563.146 (`2023-3-27`) 
-No browser API changes.
 
   
 ### chrome-unstable
