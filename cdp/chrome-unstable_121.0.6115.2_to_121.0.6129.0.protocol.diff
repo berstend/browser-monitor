@@ -1,0 +1,110 @@
+--- ./cdp/chrome-unstable_121.0.6115.2.protocol.json	2023-11-17 00:56:47.712453296 +0000
++++ ./cdp/chrome-unstable_121.0.6129.0.protocol.json	2023-11-17 00:57:07.116307319 +0000
+@@ -4058,6 +4058,34 @@
+           ]
+         },
+         {
++          "id": "CSSFontPaletteValuesRule",
++          "description": "CSS font-palette-values rule representation.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "styleSheetId",
++              "description": "The css style sheet identifier (absent for user agent stylesheet and user-specified\nstylesheet rules) this rule came from.",
++              "optional": true,
++              "$ref": "StyleSheetId"
++            },
++            {
++              "name": "origin",
++              "description": "Parent stylesheet's origin.",
++              "$ref": "StyleSheetOrigin"
++            },
++            {
++              "name": "fontPaletteName",
++              "description": "Associated font palette name.",
++              "$ref": "Value"
++            },
++            {
++              "name": "style",
++              "description": "Associated style declaration.",
++              "$ref": "CSSStyle"
++            }
++          ]
++        },
++        {
+           "id": "CSSPropertyRule",
+           "description": "CSS property at-rule representation.",
+           "type": "object",
+@@ -4402,6 +4430,12 @@
+               }
+             },
+             {
++              "name": "cssFontPaletteValuesRule",
++              "description": "A font-palette-values rule matching this node.",
++              "optional": true,
++              "$ref": "CSSFontPaletteValuesRule"
++            },
++            {
+               "name": "parentLayoutNodeId",
+               "description": "Id of the first parent element that does not have display: contents.",
+               "experimental": true,
+@@ -9272,7 +9306,7 @@
+             },
+             {
+               "name": "acceptLanguage",
+-              "description": "Browser langugage to emulate.",
++              "description": "Browser language to emulate.",
+               "optional": true,
+               "type": "string"
+             },
+@@ -14020,7 +14054,7 @@
+             },
+             {
+               "name": "acceptLanguage",
+-              "description": "Browser langugage to emulate.",
++              "description": "Browser language to emulate.",
+               "optional": true,
+               "type": "string"
+             },
+@@ -24551,7 +24585,7 @@
+         },
+         {
+           "id": "DialogType",
+-          "description": "Whether the dialog shown is an account chooser or an auto re-authentication dialog.",
++          "description": "The types of FedCM dialogs.",
+           "type": "string",
+           "enum": [
+             "AccountChooser",
+@@ -24560,6 +24594,14 @@
+           ]
+         },
+         {
++          "id": "DialogButton",
++          "description": "The buttons on the FedCM dialog.",
++          "type": "string",
++          "enum": [
++            "ConfirmIdpLoginContinue"
++          ]
++        },
++        {
+           "id": "Account",
+           "description": "Corresponds to IdentityRequestAccount",
+           "type": "object",
+@@ -24671,12 +24713,15 @@
+           ]
+         },
+         {
+-          "name": "confirmIdpLogin",
+-          "description": "Only valid if the dialog type is ConfirmIdpLogin. Acts as if the user had\nclicked the continue button.",
++          "name": "clickDialogButton",
+           "parameters": [
+             {
+               "name": "dialogId",
+               "type": "string"
++            },
++            {
++              "name": "dialogButton",
++              "$ref": "DialogButton"
+             }
+           ]
+         },
