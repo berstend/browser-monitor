@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 119.0.6045.199 (`2023-11-28`) 
+No browser API changes.
+
+  
 #### 119.0.6045.159 (`2023-11-14`) 
 No browser API changes.
 
@@ -1093,40 +1097,6 @@ No browser API changes.
   
 #### 112.0.5615.121 (`2023-4-14`) 
 No browser API changes.
-
-  
-#### 112.0.5615.49 (`2023-4-4`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_111.0.5563.146_to_112.0.5615.49.diff), [json](./browser_apis/chrome-stable_111.0.5563.146_to_112.0.5615.49.json), [full list](./browser_apis/chrome-stable_112.0.5615.49.json))
- ```diff
---- ./browser_apis/chrome-stable_111.0.5563.146.json	2023-04-13 09:08:46.814887976 +0000
-+++ ./browser_apis/chrome-stable_112.0.5615.49.json	2023-04-13 09:09:15.255003645 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 7716,
-+  "browserApiCount": 7720,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -626,6 +626,9 @@
-     "CSSStyleDeclaration.prototype.setProperty",
-     "CSSStyleRule",
-     "CSSStyleRule.prototype",
-+    "CSSStyleRule.prototype.cssRules",
-+    "CSSStyleRule.prototype.deleteRule",
-+    "CSSStyleRule.prototype.insertRule",
-     "CSSStyleRule.prototype.selectorText",
-     "CSSStyleRule.prototype.style",
-     "CSSStyleRule.prototype.styleMap",
-@@ -4435,6 +4438,7 @@
-     "RegExp.prototype.test",
-     "RegExp.prototype.toString",
-     "RegExp.prototype.unicode",
-+    "RegExp.prototype.unicodeSets",
-     "RegExp.rightContext",
-     "RelativeOrientationSensor",
-     "RelativeOrientationSensor.prototype",
-```
 
   
 ### chrome-unstable
