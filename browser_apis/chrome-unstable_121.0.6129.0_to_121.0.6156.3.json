@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "121.0.6129.0",
+    "to": "121.0.6156.3"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLSelectElement.prototype.showPicker",
+      "SpeechSynthesis",
+      "SpeechSynthesis.prototype",
+      "SpeechSynthesis.prototype.cancel",
+      "SpeechSynthesis.prototype.getVoices",
+      "SpeechSynthesis.prototype.onvoiceschanged",
+      "SpeechSynthesis.prototype.pause",
+      "SpeechSynthesis.prototype.paused",
+      "SpeechSynthesis.prototype.pending",
+      "SpeechSynthesis.prototype.resume",
+      "SpeechSynthesis.prototype.speak",
+      "SpeechSynthesis.prototype.speaking",
+      "SpeechSynthesisVoice",
+      "SpeechSynthesisVoice.prototype",
+      "SpeechSynthesisVoice.prototype.default",
+      "SpeechSynthesisVoice.prototype.lang",
+      "SpeechSynthesisVoice.prototype.localService",
+      "SpeechSynthesisVoice.prototype.name",
+      "SpeechSynthesisVoice.prototype.voiceURI"
+    ],
+    "removed": []
+  }
+}

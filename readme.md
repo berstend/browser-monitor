@@ -1101,6 +1101,62 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 121.0.6156.3 (`2023-12-1`) ⚡
+Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_121.0.6129.0_to_121.0.6156.3.diff), [json](./browser_apis/chrome-unstable_121.0.6129.0_to_121.0.6156.3.json), [full list](./browser_apis/chrome-unstable_121.0.6156.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_121.0.6129.0.json	2023-12-02 00:55:15.258713966 +0000
++++ ./browser_apis/chrome-unstable_121.0.6156.3.json	2023-12-02 00:55:45.386568123 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8149,
++  "browserApiCount": 8168,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2330,6 +2330,7 @@
+     "HTMLSelectElement.prototype.selectedIndex",
+     "HTMLSelectElement.prototype.selectedOptions",
+     "HTMLSelectElement.prototype.setCustomValidity",
++    "HTMLSelectElement.prototype.showPicker",
+     "HTMLSelectElement.prototype.size",
+     "HTMLSelectElement.prototype.type",
+     "HTMLSelectElement.prototype.validationMessage",
+@@ -5879,6 +5880,17 @@
+     "SourceBufferList.prototype.length",
+     "SourceBufferList.prototype.onaddsourcebuffer",
+     "SourceBufferList.prototype.onremovesourcebuffer",
++    "SpeechSynthesis",
++    "SpeechSynthesis.prototype",
++    "SpeechSynthesis.prototype.cancel",
++    "SpeechSynthesis.prototype.getVoices",
++    "SpeechSynthesis.prototype.onvoiceschanged",
++    "SpeechSynthesis.prototype.pause",
++    "SpeechSynthesis.prototype.paused",
++    "SpeechSynthesis.prototype.pending",
++    "SpeechSynthesis.prototype.resume",
++    "SpeechSynthesis.prototype.speak",
++    "SpeechSynthesis.prototype.speaking",
+     "SpeechSynthesisErrorEvent",
+     "SpeechSynthesisErrorEvent.prototype",
+     "SpeechSynthesisErrorEvent.prototype.charIndex",
+@@ -5903,6 +5915,13 @@
+     "SpeechSynthesisUtterance.prototype.text",
+     "SpeechSynthesisUtterance.prototype.voice",
+     "SpeechSynthesisUtterance.prototype.volume",
++    "SpeechSynthesisVoice",
++    "SpeechSynthesisVoice.prototype",
++    "SpeechSynthesisVoice.prototype.default",
++    "SpeechSynthesisVoice.prototype.lang",
++    "SpeechSynthesisVoice.prototype.localService",
++    "SpeechSynthesisVoice.prototype.name",
++    "SpeechSynthesisVoice.prototype.voiceURI",
+     "StaticRange",
+     "StaticRange.prototype",
+     "StaticRange.prototype.collapsed",
+```
+
+  
 #### 121.0.6129.0 (`2023-11-16`) ⚡
 Added 68 APIs, removed 30 (see: [diff](./browser_apis/chrome-unstable_121.0.6115.2_to_121.0.6129.0.diff), [json](./browser_apis/chrome-unstable_121.0.6115.2_to_121.0.6129.0.json), [full list](./browser_apis/chrome-unstable_121.0.6129.0.json))
  ```diff
@@ -2144,70 +2200,6 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_114.0.5735.6
      "VisualViewport",
      "VisualViewport.prototype",
      "VisualViewport.prototype.height",
-```
-
-  
-#### 114.0.5735.6 (`2023-4-27`) ⚡
-Added 5 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_114.0.5720.4_to_114.0.5735.6.diff), [json](./browser_apis/chrome-unstable_114.0.5720.4_to_114.0.5735.6.json), [full list](./browser_apis/chrome-unstable_114.0.5735.6.json))
- ```diff
---- ./browser_apis/chrome-unstable_114.0.5720.4.json	2023-04-28 01:03:14.259813956 +0000
-+++ ./browser_apis/chrome-unstable_114.0.5735.6.json	2023-04-28 01:03:42.601765964 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8006,
-+  "browserApiCount": 8010,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1607,7 +1607,6 @@
-     "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
-     "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
-     "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
--    "GPUSupportedLimits.prototype.maxFragmentCombinedOutputResources",
-     "GPUSupportedLimits.prototype.maxInterStageShaderComponents",
-     "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
-     "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
-@@ -3103,6 +3102,7 @@
-     "MathMLElement.prototype.onreset",
-     "MathMLElement.prototype.onresize",
-     "MathMLElement.prototype.onscroll",
-+    "MathMLElement.prototype.onscrollend",
-     "MathMLElement.prototype.onsecuritypolicyviolation",
-     "MathMLElement.prototype.onseeked",
-     "MathMLElement.prototype.onseeking",
-@@ -3944,6 +3944,7 @@
-     "Option.prototype.constructor.prototype.onreset",
-     "Option.prototype.constructor.prototype.onresize",
-     "Option.prototype.constructor.prototype.onscroll",
-+    "Option.prototype.constructor.prototype.onscrollend",
-     "Option.prototype.constructor.prototype.onsearch",
-     "Option.prototype.constructor.prototype.onsecuritypolicyviolation",
-     "Option.prototype.constructor.prototype.onseeked",
-@@ -5537,6 +5538,7 @@
-     "SVGViewElement.prototype.onreset",
-     "SVGViewElement.prototype.onresize",
-     "SVGViewElement.prototype.onscroll",
-+    "SVGViewElement.prototype.onscrollend",
-     "SVGViewElement.prototype.onsecuritypolicyviolation",
-     "SVGViewElement.prototype.onseeked",
-     "SVGViewElement.prototype.onseeking",
-@@ -7298,6 +7300,7 @@
-     "XMLDocument.prototype.onresize",
-     "XMLDocument.prototype.onresume",
-     "XMLDocument.prototype.onscroll",
-+    "XMLDocument.prototype.onscrollend",
-     "XMLDocument.prototype.onsearch",
-     "XMLDocument.prototype.onsecuritypolicyviolation",
-     "XMLDocument.prototype.onseeked",
-@@ -7803,6 +7806,7 @@
-     "onreset",
-     "onresize",
-     "onscroll",
-+    "onscrollend",
-     "onsearch",
-     "onsecuritypolicyviolation",
-     "onseeked",
 ```
 
   <!-- browserapis:end -->

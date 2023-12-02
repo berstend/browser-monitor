@@ -1,0 +1,113 @@
+--- ./cdp/chrome-unstable_121.0.6129.0.protocol.json	2023-12-02 00:55:15.370713390 +0000
++++ ./cdp/chrome-unstable_121.0.6156.3.protocol.json	2023-12-02 00:55:45.398568071 +0000
+@@ -3867,6 +3867,11 @@
+               "type": "string"
+             },
+             {
++              "name": "postScriptName",
++              "description": "Font's PostScript name reported by platform.",
++              "type": "string"
++            },
++            {
+               "name": "isCustomFont",
+               "description": "Indicates if the font was downloaded or resolved locally.",
+               "type": "boolean"
+@@ -12258,6 +12263,17 @@
+           ]
+         },
+         {
++          "id": "ServiceWorkerRouterInfo",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "ruleIdMatched",
++              "type": "integer"
++            }
++          ]
++        },
++        {
+           "id": "Response",
+           "description": "HTTP response data.",
+           "type": "object",
+@@ -12348,6 +12364,13 @@
+               "type": "boolean"
+             },
+             {
++              "name": "serviceWorkerRouterInfo",
++              "description": "Infomation about how Service Worker Static Router was used.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "ServiceWorkerRouterInfo"
++            },
++            {
+               "name": "encodedDataLength",
+               "description": "Total number of bytes received for this request so far.",
+               "type": "number"
+@@ -12620,6 +12643,7 @@
+               "name": "sameParty",
+               "description": "True if cookie is SameParty.",
+               "experimental": true,
++              "deprecated": true,
+               "type": "boolean"
+             },
+             {
+@@ -17675,23 +17699,6 @@
+           ]
+         },
+         {
+-          "name": "getCookies",
+-          "description": "Returns all browser cookies for the page and all of its subframes. Depending\non the backend support, will return detailed cookie information in the\n`cookies` field.",
+-          "experimental": true,
+-          "deprecated": true,
+-          "redirect": "Network",
+-          "returns": [
+-            {
+-              "name": "cookies",
+-              "description": "Array of cookie objects.",
+-              "type": "array",
+-              "items": {
+-                "$ref": "Network.Cookie"
+-              }
+-            }
+-          ]
+-        },
+-        {
+           "name": "getFrameTree",
+           "description": "Returns present frame tree structure.",
+           "returns": [
+@@ -17993,6 +18000,13 @@
+               "experimental": true,
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "generateDocumentOutline",
++              "description": "Whether or not to embed the document outline into the PDF.",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ],
+           "returns": [
+@@ -24590,7 +24604,8 @@
+           "enum": [
+             "AccountChooser",
+             "AutoReauthn",
+-            "ConfirmIdpLogin"
++            "ConfirmIdpLogin",
++            "Error"
+           ]
+         },
+         {
+@@ -24598,7 +24613,9 @@
+           "description": "The buttons on the FedCM dialog.",
+           "type": "string",
+           "enum": [
+-            "ConfirmIdpLoginContinue"
++            "ConfirmIdpLoginContinue",
++            "ErrorGotIt",
++            "ErrorMoreDetails"
+           ]
+         },
+         {
