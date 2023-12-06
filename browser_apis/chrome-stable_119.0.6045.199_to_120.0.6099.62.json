@@ -1,0 +1,40 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "119.0.6045.199",
+    "to": "120.0.6099.62"
+  },
+  "browserApis": {
+    "added": [
+      "CloseWatcher",
+      "CloseWatcher.prototype",
+      "CloseWatcher.prototype.close",
+      "CloseWatcher.prototype.destroy",
+      "CloseWatcher.prototype.oncancel",
+      "CloseWatcher.prototype.onclose",
+      "CloseWatcher.prototype.requestClose",
+      "GPUSupportedLimits.prototype.maxBindGroupsPlusVertexBuffers",
+      "HTMLDetailsElement.prototype.name",
+      "IdentityCredential.prototype.isAutoSelected",
+      "IdentityCredentialError",
+      "IdentityCredentialError.prototype",
+      "IdentityCredentialError.prototype.code",
+      "IdentityCredentialError.prototype.url",
+      "IdentityProvider.close",
+      "IntersectionObserver.prototype.scrollMargin",
+      "MediaStreamTrackGenerator.prototype.stats",
+      "MediaStreamTrackVideoStats",
+      "MediaStreamTrackVideoStats.prototype",
+      "MediaStreamTrackVideoStats.prototype.deliveredFrames",
+      "MediaStreamTrackVideoStats.prototype.discardedFrames",
+      "MediaStreamTrackVideoStats.prototype.toJSON",
+      "MediaStreamTrackVideoStats.prototype.totalFrames",
+      "Navigator.prototype.login",
+      "NavigatorLogin",
+      "NavigatorLogin.prototype",
+      "NavigatorLogin.prototype.setStatus",
+      "webkitURL.canParse"
+    ],
+    "removed": []
+  }
+}

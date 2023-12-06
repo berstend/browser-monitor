@@ -5,6 +5,120 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 120.0.6099.62 (`2023-12-5`) ⚡
+Added 28 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_119.0.6045.199_to_120.0.6099.62.diff), [json](./browser_apis/chrome-stable_119.0.6045.199_to_120.0.6099.62.json), [full list](./browser_apis/chrome-stable_120.0.6099.62.json))
+ ```diff
+--- ./browser_apis/chrome-stable_119.0.6045.199.json	2023-12-06 00:57:33.070155123 +0000
++++ ./browser_apis/chrome-stable_120.0.6099.62.json	2023-12-06 00:57:51.038185011 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8081,
++  "browserApiCount": 8109,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -846,6 +846,13 @@
+     "CloseEvent.prototype.code",
+     "CloseEvent.prototype.reason",
+     "CloseEvent.prototype.wasClean",
++    "CloseWatcher",
++    "CloseWatcher.prototype",
++    "CloseWatcher.prototype.close",
++    "CloseWatcher.prototype.destroy",
++    "CloseWatcher.prototype.oncancel",
++    "CloseWatcher.prototype.onclose",
++    "CloseWatcher.prototype.requestClose",
+     "Comment",
+     "Comment.prototype",
+     "CompositionEvent",
+@@ -1623,6 +1630,7 @@
+     "GPUSupportedLimits",
+     "GPUSupportedLimits.prototype",
+     "GPUSupportedLimits.prototype.maxBindGroups",
++    "GPUSupportedLimits.prototype.maxBindGroupsPlusVertexBuffers",
+     "GPUSupportedLimits.prototype.maxBindingsPerBindGroup",
+     "GPUSupportedLimits.prototype.maxBufferSize",
+     "GPUSupportedLimits.prototype.maxColorAttachmentBytesPerSample",
+@@ -1893,6 +1901,7 @@
+     "HTMLDataListElement.prototype.options",
+     "HTMLDetailsElement",
+     "HTMLDetailsElement.prototype",
++    "HTMLDetailsElement.prototype.name",
+     "HTMLDetailsElement.prototype.open",
+     "HTMLDialogElement",
+     "HTMLDialogElement.prototype",
+@@ -2650,8 +2659,14 @@
+     "IIRFilterNode.prototype.getFrequencyResponse",
+     "IdentityCredential",
+     "IdentityCredential.prototype",
++    "IdentityCredential.prototype.isAutoSelected",
+     "IdentityCredential.prototype.token",
++    "IdentityCredentialError",
++    "IdentityCredentialError.prototype",
++    "IdentityCredentialError.prototype.code",
++    "IdentityCredentialError.prototype.url",
+     "IdentityProvider",
++    "IdentityProvider.close",
+     "IdentityProvider.getUserInfo",
+     "IdentityProvider.prototype",
+     "IdleDeadline",
+@@ -2774,6 +2789,7 @@
+     "IntersectionObserver.prototype.observe",
+     "IntersectionObserver.prototype.root",
+     "IntersectionObserver.prototype.rootMargin",
++    "IntersectionObserver.prototype.scrollMargin",
+     "IntersectionObserver.prototype.takeRecords",
+     "IntersectionObserver.prototype.thresholds",
+     "IntersectionObserver.prototype.trackVisibility",
+@@ -3323,11 +3339,18 @@
+     "MediaStreamTrackGenerator.prototype.onmute",
+     "MediaStreamTrackGenerator.prototype.onunmute",
+     "MediaStreamTrackGenerator.prototype.readyState",
++    "MediaStreamTrackGenerator.prototype.stats",
+     "MediaStreamTrackGenerator.prototype.stop",
+     "MediaStreamTrackGenerator.prototype.writable",
+     "MediaStreamTrackProcessor",
+     "MediaStreamTrackProcessor.prototype",
+     "MediaStreamTrackProcessor.prototype.readable",
++    "MediaStreamTrackVideoStats",
++    "MediaStreamTrackVideoStats.prototype",
++    "MediaStreamTrackVideoStats.prototype.deliveredFrames",
++    "MediaStreamTrackVideoStats.prototype.discardedFrames",
++    "MediaStreamTrackVideoStats.prototype.toJSON",
++    "MediaStreamTrackVideoStats.prototype.totalFrames",
+     "MessageChannel",
+     "MessageChannel.prototype",
+     "MessageChannel.prototype.port1",
+@@ -3478,6 +3501,7 @@
+     "Navigator.prototype.language",
+     "Navigator.prototype.languages",
+     "Navigator.prototype.locks",
++    "Navigator.prototype.login",
+     "Navigator.prototype.managed",
+     "Navigator.prototype.maxTouchPoints",
+     "Navigator.prototype.mediaCapabilities",
+@@ -3517,6 +3541,9 @@
+     "Navigator.prototype.webkitTemporaryStorage",
+     "Navigator.prototype.windowControlsOverlay",
+     "Navigator.prototype.xr",
++    "NavigatorLogin",
++    "NavigatorLogin.prototype",
++    "NavigatorLogin.prototype.setStatus",
+     "NavigatorManagedData",
+     "NavigatorManagedData.prototype",
+     "NavigatorManagedData.prototype.getManagedConfiguration",
+@@ -8065,6 +8092,7 @@
+     "webkitSpeechRecognitionEvent.prototype.resultIndex",
+     "webkitSpeechRecognitionEvent.prototype.results",
+     "webkitURL",
++    "webkitURL.canParse",
+     "webkitURL.createObjectURL",
+     "webkitURL.prototype",
+     "webkitURL.prototype.hash",
+```
+
+  
 #### 119.0.6045.199 (`2023-11-28`) 
 No browser API changes.
 
@@ -1092,10 +1206,6 @@ Added 267 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_112.0.5615.1
 
   
 #### 112.0.5615.165 (`2023-4-19`) 
-No browser API changes.
-
-  
-#### 112.0.5615.121 (`2023-4-14`) 
 No browser API changes.
 
   
