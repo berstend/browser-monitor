@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_121.0.6156.3.json	2023-12-09 00:55:40.766811927 +0000
++++ ./browser_apis/chrome-unstable_122.0.6170.3.json	2023-12-09 00:55:59.382898134 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8168,
++  "browserApiCount": 8167,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1500,7 +1500,6 @@
+     "GPUCommandEncoder.prototype.popDebugGroup",
+     "GPUCommandEncoder.prototype.pushDebugGroup",
+     "GPUCommandEncoder.prototype.resolveQuerySet",
+-    "GPUCommandEncoder.prototype.writeTimestamp",
+     "GPUCompilationInfo",
+     "GPUCompilationInfo.prototype",
+     "GPUCompilationInfo.prototype.messages",

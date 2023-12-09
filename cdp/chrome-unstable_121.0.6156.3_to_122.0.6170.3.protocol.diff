@@ -1,0 +1,100 @@
+--- ./cdp/chrome-unstable_121.0.6156.3.protocol.json	2023-12-09 00:55:40.878812373 +0000
++++ ./cdp/chrome-unstable_122.0.6170.3.protocol.json	2023-12-09 00:55:59.390898176 +0000
+@@ -1109,6 +1109,7 @@
+             "Script",
+             "ServiceWorker",
+             "SharedWorker",
++            "SpeculationRules",
+             "Stylesheet",
+             "Track",
+             "Video",
+@@ -8572,6 +8573,21 @@
+           ]
+         },
+         {
++          "id": "DevicePosture",
++          "type": "object",
++          "properties": [
++            {
++              "name": "type",
++              "description": "Current posture of the device",
++              "type": "string",
++              "enum": [
++                "continuous",
++                "folded"
++              ]
++            }
++          ]
++        },
++        {
+           "id": "MediaFeature",
+           "type": "object",
+           "properties": [
+@@ -8958,6 +8974,13 @@
+               "experimental": true,
+               "optional": true,
+               "$ref": "DisplayFeature"
++            },
++            {
++              "name": "devicePosture",
++              "description": "If set, the posture of a foldable device. If not set the posture is set\nto continuous.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "DevicePosture"
+             }
+           ]
+         },
+@@ -16322,6 +16345,7 @@
+             "sync-xhr",
+             "unload",
+             "usb",
++            "usb-unrestricted",
+             "vertical-scroll",
+             "web-printing",
+             "web-share",
+@@ -23616,6 +23640,18 @@
+               "description": "Sets whether User Verification succeeds or fails for an authenticator.\nDefaults to false.",
+               "optional": true,
+               "type": "boolean"
++            },
++            {
++              "name": "defaultBackupEligibility",
++              "description": "Credentials created by this authenticator will have the backup\neligibility (BE) flag set to this value. Defaults to false.\nhttps://w3c.github.io/webauthn/#sctn-credential-backup",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
++              "name": "defaultBackupState",
++              "description": "Credentials created by this authenticator will have the backup state\n(BS) flag set to this value. Defaults to false.\nhttps://w3c.github.io/webauthn/#sctn-credential-backup",
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -24399,7 +24435,8 @@
+             "PrefetchFailedNetError",
+             "PrefetchFailedNon2XX",
+             "PrefetchFailedPerPageLimitExceeded",
+-            "PrefetchEvicted",
++            "PrefetchEvictedAfterCandidateRemoved",
++            "PrefetchEvictedForNewerPrefetch",
+             "PrefetchHeldback",
+             "PrefetchIneligibleRetryAfter",
+             "PrefetchIsPrivacyDecoy",
+@@ -24699,6 +24736,16 @@
+               "type": "string"
+             }
+           ]
++        },
++        {
++          "name": "dialogClosed",
++          "description": "Triggered when a dialog is closed, either by user action, JS abort,\nor a command below.",
++          "parameters": [
++            {
++              "name": "dialogId",
++              "type": "string"
++            }
++          ]
+         }
+       ],
+       "commands": [

@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "121.0.6156.3",
+    "to": "122.0.6170.3"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "GPUCommandEncoder.prototype.writeTimestamp"
+    ]
+  }
+}

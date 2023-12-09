@@ -1211,6 +1211,30 @@ Added 267 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_112.0.5615.1
   
 ### chrome-unstable
   
+#### 122.0.6170.3 (`2023-12-8`) ⚡
+Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_121.0.6156.3_to_122.0.6170.3.diff), [json](./browser_apis/chrome-unstable_121.0.6156.3_to_122.0.6170.3.json), [full list](./browser_apis/chrome-unstable_122.0.6170.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_121.0.6156.3.json	2023-12-09 00:55:40.766811927 +0000
++++ ./browser_apis/chrome-unstable_122.0.6170.3.json	2023-12-09 00:55:59.382898134 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8168,
++  "browserApiCount": 8167,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1500,7 +1500,6 @@
+     "GPUCommandEncoder.prototype.popDebugGroup",
+     "GPUCommandEncoder.prototype.pushDebugGroup",
+     "GPUCommandEncoder.prototype.resolveQuerySet",
+-    "GPUCommandEncoder.prototype.writeTimestamp",
+     "GPUCompilationInfo",
+     "GPUCompilationInfo.prototype",
+     "GPUCompilationInfo.prototype.messages",
+```
+
+  
 #### 121.0.6156.3 (`2023-12-1`) ⚡
 Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_121.0.6129.0_to_121.0.6156.3.diff), [json](./browser_apis/chrome-unstable_121.0.6129.0_to_121.0.6156.3.json), [full list](./browser_apis/chrome-unstable_121.0.6156.3.json))
  ```diff
@@ -2285,31 +2309,6 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5750.0
      "WebAssembly.LinkError",
      "WebAssembly.LinkError.prototype",
      "WebAssembly.Memory",
-```
-
-  
-#### 115.0.5750.0 (`2023-5-5`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_114.0.5735.6_to_115.0.5750.0.diff), [json](./browser_apis/chrome-unstable_114.0.5735.6_to_115.0.5750.0.json), [full list](./browser_apis/chrome-unstable_115.0.5750.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_114.0.5735.6.json	2023-05-06 00:57:25.284446659 +0000
-+++ ./browser_apis/chrome-unstable_115.0.5750.0.json	2023-05-06 00:58:30.497127555 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8010,
-+  "browserApiCount": 8012,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -6428,6 +6428,8 @@
-     "VirtualKeyboard.prototype.show",
-     "VirtualKeyboardGeometryChangeEvent",
-     "VirtualKeyboardGeometryChangeEvent.prototype",
-+    "VisibilityStateEntry",
-+    "VisibilityStateEntry.prototype",
-     "VisualViewport",
-     "VisualViewport.prototype",
-     "VisualViewport.prototype.height",
 ```
 
   <!-- browserapis:end -->
