@@ -1211,6 +1211,10 @@ Added 267 APIs, removed 4 (see: [diff](./browser_apis/chrome-stable_112.0.5615.1
   
 ### chrome-unstable
   
+#### 122.0.6170.5 (`2023-12-11`) 
+No browser API changes.
+
+  
 #### 122.0.6170.3 (`2023-12-8`) ⚡
 Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_121.0.6156.3_to_122.0.6170.3.diff), [json](./browser_apis/chrome-unstable_121.0.6156.3_to_122.0.6170.3.json), [full list](./browser_apis/chrome-unstable_122.0.6170.3.json))
  ```diff
@@ -2285,30 +2289,6 @@ Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5762.
      "ViewTransition",
      "ViewTransition.prototype",
      "ViewTransition.prototype.finished",
-```
-
-  
-#### 115.0.5762.4 (`2023-5-11`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5750.0_to_115.0.5762.4.diff), [json](./browser_apis/chrome-unstable_115.0.5750.0_to_115.0.5762.4.json), [full list](./browser_apis/chrome-unstable_115.0.5762.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_115.0.5750.0.json	2023-05-12 01:02:12.997626591 +0000
-+++ ./browser_apis/chrome-unstable_115.0.5762.4.json	2023-05-12 01:02:44.902211585 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8012,
-+  "browserApiCount": 8013,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -6491,6 +6491,7 @@
-     "WebAssembly.Instance",
-     "WebAssembly.Instance.prototype",
-     "WebAssembly.Instance.prototype.exports",
-+    "WebAssembly.JSTag",
-     "WebAssembly.LinkError",
-     "WebAssembly.LinkError.prototype",
-     "WebAssembly.Memory",
 ```
 
   <!-- browserapis:end -->
