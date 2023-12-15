@@ -1,0 +1,26 @@
+--- ./browser_apis/chrome-unstable_122.0.6170.5.json	2023-12-15 00:57:48.155735726 +0000
++++ ./browser_apis/chrome-unstable_122.0.6182.0.json	2023-12-15 00:58:07.811719749 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8167,
++  "browserApiCount": 8169,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1382,6 +1382,7 @@
+     "FileSystemFileHandle.prototype.move",
+     "FileSystemWritableFileStream",
+     "FileSystemWritableFileStream.prototype",
++    "FileSystemWritableFileStream.prototype.mode",
+     "FileSystemWritableFileStream.prototype.seek",
+     "FileSystemWritableFileStream.prototype.truncate",
+     "FileSystemWritableFileStream.prototype.write",
+@@ -6301,6 +6302,7 @@
+     "URLPattern",
+     "URLPattern.prototype",
+     "URLPattern.prototype.exec",
++    "URLPattern.prototype.hasRegExpGroups",
+     "URLPattern.prototype.hash",
+     "URLPattern.prototype.hostname",
+     "URLPattern.prototype.password",

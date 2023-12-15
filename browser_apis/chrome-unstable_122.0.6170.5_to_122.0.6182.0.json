@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "122.0.6170.5",
+    "to": "122.0.6182.0"
+  },
+  "browserApis": {
+    "added": [
+      "FileSystemWritableFileStream.prototype.mode",
+      "URLPattern.prototype.hasRegExpGroups"
+    ],
+    "removed": []
+  }
+}

@@ -886,6 +886,38 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 122.0.6182.0 (`2023-12-14`) ⚡
+Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6170.5_to_122.0.6182.0.diff), [json](./browser_apis/chrome-unstable_122.0.6170.5_to_122.0.6182.0.json), [full list](./browser_apis/chrome-unstable_122.0.6182.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_122.0.6170.5.json	2023-12-15 00:57:48.155735726 +0000
++++ ./browser_apis/chrome-unstable_122.0.6182.0.json	2023-12-15 00:58:07.811719749 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8167,
++  "browserApiCount": 8169,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1382,6 +1382,7 @@
+     "FileSystemFileHandle.prototype.move",
+     "FileSystemWritableFileStream",
+     "FileSystemWritableFileStream.prototype",
++    "FileSystemWritableFileStream.prototype.mode",
+     "FileSystemWritableFileStream.prototype.seek",
+     "FileSystemWritableFileStream.prototype.truncate",
+     "FileSystemWritableFileStream.prototype.write",
+@@ -6301,6 +6302,7 @@
+     "URLPattern",
+     "URLPattern.prototype",
+     "URLPattern.prototype.exec",
++    "URLPattern.prototype.hasRegExpGroups",
+     "URLPattern.prototype.hash",
+     "URLPattern.prototype.hostname",
+     "URLPattern.prototype.password",
+```
+
+  
 #### 122.0.6170.5 (`2023-12-11`) 
 No browser API changes.
 
@@ -1899,71 +1931,6 @@ Added 9 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_115.0.5773.4
      "WakeLock",
      "WakeLock.prototype",
      "WakeLock.prototype.request",
-```
-
-  
-#### 115.0.5773.4 (`2023-5-18`) ⚡
-Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_115.0.5762.4_to_115.0.5773.4.diff), [json](./browser_apis/chrome-unstable_115.0.5762.4_to_115.0.5773.4.json), [full list](./browser_apis/chrome-unstable_115.0.5773.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_115.0.5762.4.json	2023-05-19 01:02:54.381623790 +0000
-+++ ./browser_apis/chrome-unstable_115.0.5773.4.json	2023-05-19 01:03:34.361378753 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8013,
-+  "browserApiCount": 8027,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -52,6 +52,8 @@
-     "Animation.prototype.play",
-     "Animation.prototype.playState",
-     "Animation.prototype.playbackRate",
-+    "Animation.prototype.rangeEnd",
-+    "Animation.prototype.rangeStart",
-     "Animation.prototype.ready",
-     "Animation.prototype.replaceState",
-     "Animation.prototype.reverse",
-@@ -70,6 +72,8 @@
-     "AnimationTimeline",
-     "AnimationTimeline.prototype",
-     "AnimationTimeline.prototype.currentTime",
-+    "AnimationTimeline.prototype.duration",
-+    "AnimationTimeline.prototype.getCurrentTime",
-     "Array",
-     "Array.from",
-     "Array.isArray",
-@@ -4220,6 +4224,7 @@
-     "PerformanceResourceTiming.prototype.domainLookupStart",
-     "PerformanceResourceTiming.prototype.encodedBodySize",
-     "PerformanceResourceTiming.prototype.fetchStart",
-+    "PerformanceResourceTiming.prototype.firstInterimResponseStart",
-     "PerformanceResourceTiming.prototype.initiatorType",
-     "PerformanceResourceTiming.prototype.nextHopProtocol",
-     "PerformanceResourceTiming.prototype.redirectEnd",
-@@ -5617,6 +5622,10 @@
-     "ScriptProcessorNode.prototype",
-     "ScriptProcessorNode.prototype.bufferSize",
-     "ScriptProcessorNode.prototype.onaudioprocess",
-+    "ScrollTimeline",
-+    "ScrollTimeline.prototype",
-+    "ScrollTimeline.prototype.axis",
-+    "ScrollTimeline.prototype.source",
-     "SecurityPolicyViolationEvent",
-     "SecurityPolicyViolationEvent.prototype",
-     "SecurityPolicyViolationEvent.prototype.blockedURI",
-@@ -6413,6 +6422,11 @@
-     "VideoPlaybackQuality.prototype.creationTime",
-     "VideoPlaybackQuality.prototype.droppedVideoFrames",
-     "VideoPlaybackQuality.prototype.totalVideoFrames",
-+    "ViewTimeline",
-+    "ViewTimeline.prototype",
-+    "ViewTimeline.prototype.endOffset",
-+    "ViewTimeline.prototype.startOffset",
-+    "ViewTimeline.prototype.subject",
-     "ViewTransition",
-     "ViewTransition.prototype",
-     "ViewTransition.prototype.finished",
 ```
 
   <!-- browserapis:end -->
