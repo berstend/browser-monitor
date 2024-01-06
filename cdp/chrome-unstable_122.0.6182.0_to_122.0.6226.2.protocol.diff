@@ -1,0 +1,38 @@
+--- ./cdp/chrome-unstable_122.0.6182.0.protocol.json	2024-01-06 00:55:55.065917624 +0000
++++ ./cdp/chrome-unstable_122.0.6226.2.protocol.json	2024-01-06 00:56:15.313829811 +0000
+@@ -2183,6 +2183,11 @@
+               "name": "fillingStrategy",
+               "description": "The filling strategy",
+               "$ref": "FillingStrategy"
++            },
++            {
++              "name": "fieldId",
++              "description": "The form field's DOM node",
++              "$ref": "DOM.BackendNodeId"
+             }
+           ]
+         }
+@@ -16375,6 +16380,7 @@
+             "private-aggregation",
+             "private-state-token-issuance",
+             "private-state-token-redemption",
++            "publickey-credentials-create",
+             "publickey-credentials-get",
+             "run-ad-auction",
+             "screen-wake-lock",
+@@ -16384,6 +16390,7 @@
+             "shared-storage-select-url",
+             "smart-card",
+             "storage-access",
++            "sub-apps",
+             "sync-xhr",
+             "unload",
+             "usb",
+@@ -17326,6 +17333,7 @@
+             "WebTransportSticky",
+             "WebSocketSticky",
+             "SmartCard",
++            "LiveMediaStreamTrack",
+             "ContentSecurityHandler",
+             "ContentWebAuthenticationAPI",
+             "ContentFileChooser",

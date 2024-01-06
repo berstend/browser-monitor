@@ -886,6 +886,44 @@ Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_113.0.5672.12
   
 ### chrome-unstable
   
+#### 122.0.6226.2 (`2024-1-5`) ⚡
+Added 1 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_122.0.6182.0_to_122.0.6226.2.diff), [json](./browser_apis/chrome-unstable_122.0.6182.0_to_122.0.6226.2.json), [full list](./browser_apis/chrome-unstable_122.0.6226.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_122.0.6182.0.json	2024-01-06 00:55:54.949918177 +0000
++++ ./browser_apis/chrome-unstable_122.0.6226.2.json	2024-01-06 00:56:15.305829843 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8169,
++  "browserApiCount": 8163,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -848,13 +848,6 @@
+     "CloseEvent.prototype.code",
+     "CloseEvent.prototype.reason",
+     "CloseEvent.prototype.wasClean",
+-    "CloseWatcher",
+-    "CloseWatcher.prototype",
+-    "CloseWatcher.prototype.close",
+-    "CloseWatcher.prototype.destroy",
+-    "CloseWatcher.prototype.oncancel",
+-    "CloseWatcher.prototype.onclose",
+-    "CloseWatcher.prototype.requestClose",
+     "Comment",
+     "Comment.prototype",
+     "CompositionEvent",
+@@ -2046,6 +2039,7 @@
+     "HTMLHtmlElement.prototype.version",
+     "HTMLIFrameElement",
+     "HTMLIFrameElement.prototype",
++    "HTMLIFrameElement.prototype.adAuctionHeaders",
+     "HTMLIFrameElement.prototype.align",
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
+```
+
+  
 #### 122.0.6182.0 (`2023-12-14`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6170.5_to_122.0.6182.0.diff), [json](./browser_apis/chrome-unstable_122.0.6170.5_to_122.0.6182.0.json), [full list](./browser_apis/chrome-unstable_122.0.6182.0.json))
  ```diff
@@ -1885,52 +1923,5 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5803.2
   
 #### 116.0.5803.2 (`2023-6-1`) 
 No browser API changes.
-
-  
-#### 115.0.5790.3 (`2023-5-25`) ⚡
-Added 9 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_115.0.5773.4_to_115.0.5790.3.diff), [json](./browser_apis/chrome-unstable_115.0.5773.4_to_115.0.5790.3.json), [full list](./browser_apis/chrome-unstable_115.0.5790.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_115.0.5773.4.json	2023-05-26 01:02:17.604443991 +0000
-+++ ./browser_apis/chrome-unstable_115.0.5790.3.json	2023-05-26 01:02:57.664830239 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8027,
-+  "browserApiCount": 8035,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -73,7 +73,6 @@
-     "AnimationTimeline.prototype",
-     "AnimationTimeline.prototype.currentTime",
-     "AnimationTimeline.prototype.duration",
--    "AnimationTimeline.prototype.getCurrentTime",
-     "Array",
-     "Array.from",
-     "Array.isArray",
-@@ -1391,6 +1390,7 @@
-     "GPU.prototype",
-     "GPU.prototype.getPreferredCanvasFormat",
-     "GPU.prototype.requestAdapter",
-+    "GPU.prototype.wgslLanguageFeatures",
-     "GPUAdapter",
-     "GPUAdapter.prototype",
-     "GPUAdapter.prototype.features",
-@@ -6455,6 +6455,14 @@
-     "VisualViewport.prototype.pageTop",
-     "VisualViewport.prototype.scale",
-     "VisualViewport.prototype.width",
-+    "WGSLLanguageFeatures",
-+    "WGSLLanguageFeatures.prototype",
-+    "WGSLLanguageFeatures.prototype.entries",
-+    "WGSLLanguageFeatures.prototype.forEach",
-+    "WGSLLanguageFeatures.prototype.has",
-+    "WGSLLanguageFeatures.prototype.keys",
-+    "WGSLLanguageFeatures.prototype.size",
-+    "WGSLLanguageFeatures.prototype.values",
-     "WakeLock",
-     "WakeLock.prototype",
-     "WakeLock.prototype.request",
-```
 
   <!-- browserapis:end -->

@@ -1,0 +1,21 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "122.0.6182.0",
+    "to": "122.0.6226.2"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLIFrameElement.prototype.adAuctionHeaders"
+    ],
+    "removed": [
+      "CloseWatcher",
+      "CloseWatcher.prototype",
+      "CloseWatcher.prototype.close",
+      "CloseWatcher.prototype.destroy",
+      "CloseWatcher.prototype.oncancel",
+      "CloseWatcher.prototype.onclose",
+      "CloseWatcher.prototype.requestClose"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+--- ./browser_apis/chrome-unstable_122.0.6182.0.json	2024-01-06 00:55:54.949918177 +0000
++++ ./browser_apis/chrome-unstable_122.0.6226.2.json	2024-01-06 00:56:15.305829843 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8169,
++  "browserApiCount": 8163,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -848,13 +848,6 @@
+     "CloseEvent.prototype.code",
+     "CloseEvent.prototype.reason",
+     "CloseEvent.prototype.wasClean",
+-    "CloseWatcher",
+-    "CloseWatcher.prototype",
+-    "CloseWatcher.prototype.close",
+-    "CloseWatcher.prototype.destroy",
+-    "CloseWatcher.prototype.oncancel",
+-    "CloseWatcher.prototype.onclose",
+-    "CloseWatcher.prototype.requestClose",
+     "Comment",
+     "Comment.prototype",
+     "CompositionEvent",
+@@ -2046,6 +2039,7 @@
+     "HTMLHtmlElement.prototype.version",
+     "HTMLIFrameElement",
+     "HTMLIFrameElement.prototype",
++    "HTMLIFrameElement.prototype.adAuctionHeaders",
+     "HTMLIFrameElement.prototype.align",
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
