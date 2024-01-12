@@ -709,6 +709,64 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 122.0.6238.2 (`2024-1-11`) ⚡
+Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6226.2_to_122.0.6238.2.diff), [json](./browser_apis/chrome-unstable_122.0.6226.2_to_122.0.6238.2.json), [full list](./browser_apis/chrome-unstable_122.0.6238.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_122.0.6226.2.json	2024-01-12 00:58:19.096227133 +0000
++++ ./browser_apis/chrome-unstable_122.0.6238.2.json	2024-01-12 00:58:46.580315693 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8163,
++  "browserApiCount": 8182,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2905,6 +2905,21 @@
+     "Intl.v8BreakIterator.prototype.next",
+     "Intl.v8BreakIterator.prototype.resolvedOptions",
+     "Intl.v8BreakIterator.supportedLocalesOf",
++    "Iterator",
++    "Iterator.from",
++    "Iterator.prototype",
++    "Iterator.prototype.constructor",
++    "Iterator.prototype.drop",
++    "Iterator.prototype.every",
++    "Iterator.prototype.filter",
++    "Iterator.prototype.find",
++    "Iterator.prototype.flatMap",
++    "Iterator.prototype.forEach",
++    "Iterator.prototype.map",
++    "Iterator.prototype.reduce",
++    "Iterator.prototype.some",
++    "Iterator.prototype.take",
++    "Iterator.prototype.toArray",
+     "JSON",
+     "JSON.isRawJSON",
+     "JSON.parse",
+@@ -6741,7 +6756,9 @@
+     "WebGL2RenderingContext.prototype.drawElementsInstanced",
+     "WebGL2RenderingContext.prototype.drawRangeElements",
+     "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
++    "WebGL2RenderingContext.prototype.drawingBufferFormat",
+     "WebGL2RenderingContext.prototype.drawingBufferHeight",
++    "WebGL2RenderingContext.prototype.drawingBufferStorage",
+     "WebGL2RenderingContext.prototype.drawingBufferWidth",
+     "WebGL2RenderingContext.prototype.enable",
+     "WebGL2RenderingContext.prototype.enableVertexAttribArray",
+@@ -6961,7 +6978,9 @@
+     "WebGLRenderingContext.prototype.drawArrays",
+     "WebGLRenderingContext.prototype.drawElements",
+     "WebGLRenderingContext.prototype.drawingBufferColorSpace",
++    "WebGLRenderingContext.prototype.drawingBufferFormat",
+     "WebGLRenderingContext.prototype.drawingBufferHeight",
++    "WebGLRenderingContext.prototype.drawingBufferStorage",
+     "WebGLRenderingContext.prototype.drawingBufferWidth",
+     "WebGLRenderingContext.prototype.enable",
+     "WebGLRenderingContext.prototype.enableVertexAttribArray",
+```
+
+  
 #### 122.0.6226.2 (`2024-1-5`) ⚡
 Added 1 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_122.0.6182.0_to_122.0.6226.2.diff), [json](./browser_apis/chrome-unstable_122.0.6182.0_to_122.0.6226.2.json), [full list](./browser_apis/chrome-unstable_122.0.6226.2.json))
  ```diff
@@ -1742,9 +1800,5 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5803.2
      "TaskSignal.prototype.onabort",
      "TaskSignal.prototype.onprioritychange",
 ```
-
-  
-#### 116.0.5803.2 (`2023-6-1`) 
-No browser API changes.
 
   <!-- browserapis:end -->

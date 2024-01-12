@@ -1,0 +1,10 @@
+--- ./cdp/chrome-unstable_122.0.6226.2.protocol.json	2024-01-12 00:58:19.216227540 +0000
++++ ./cdp/chrome-unstable_122.0.6238.2.protocol.json	2024-01-12 00:58:46.588315719 +0000
+@@ -17334,6 +17334,7 @@
+             "WebSocketSticky",
+             "SmartCard",
+             "LiveMediaStreamTrack",
++            "UnloadHandler",
+             "ContentSecurityHandler",
+             "ContentWebAuthenticationAPI",
+             "ContentFileChooser",

@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "122.0.6226.2",
+    "to": "122.0.6238.2"
+  },
+  "browserApis": {
+    "added": [
+      "Iterator",
+      "Iterator.from",
+      "Iterator.prototype",
+      "Iterator.prototype.constructor",
+      "Iterator.prototype.drop",
+      "Iterator.prototype.every",
+      "Iterator.prototype.filter",
+      "Iterator.prototype.find",
+      "Iterator.prototype.flatMap",
+      "Iterator.prototype.forEach",
+      "Iterator.prototype.map",
+      "Iterator.prototype.reduce",
+      "Iterator.prototype.some",
+      "Iterator.prototype.take",
+      "Iterator.prototype.toArray",
+      "WebGL2RenderingContext.prototype.drawingBufferFormat",
+      "WebGL2RenderingContext.prototype.drawingBufferStorage",
+      "WebGLRenderingContext.prototype.drawingBufferFormat",
+      "WebGLRenderingContext.prototype.drawingBufferStorage"
+    ],
+    "removed": []
+  }
+}
