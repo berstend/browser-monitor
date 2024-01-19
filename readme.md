@@ -709,6 +709,79 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 122.0.6253.3 (`2024-1-18`) ⚡
+Added 24 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_122.0.6238.2_to_122.0.6253.3.diff), [json](./browser_apis/chrome-unstable_122.0.6238.2_to_122.0.6253.3.json), [full list](./browser_apis/chrome-unstable_122.0.6253.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_122.0.6238.2.json	2024-01-19 00:58:10.232446419 +0000
++++ ./browser_apis/chrome-unstable_122.0.6253.3.json	2024-01-19 00:58:29.752635096 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8182,
++  "browserApiCount": 8205,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2432,7 +2432,6 @@
+     "HTMLTemplateElement",
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
+-    "HTMLTemplateElement.prototype.shadowRoot",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+@@ -3558,6 +3557,7 @@
+     "Navigator.prototype.serviceWorker",
+     "Navigator.prototype.setAppBadge",
+     "Navigator.prototype.storage",
++    "Navigator.prototype.storageBuckets",
+     "Navigator.prototype.unregisterProtocolHandler",
+     "Navigator.prototype.usb",
+     "Navigator.prototype.userActivation",
+@@ -5828,10 +5828,17 @@
+     "Set.prototype.add",
+     "Set.prototype.clear",
+     "Set.prototype.delete",
++    "Set.prototype.difference",
+     "Set.prototype.entries",
+     "Set.prototype.forEach",
+     "Set.prototype.has",
++    "Set.prototype.intersection",
++    "Set.prototype.isDisjointFrom",
++    "Set.prototype.isSubsetOf",
++    "Set.prototype.isSupersetOf",
+     "Set.prototype.size",
++    "Set.prototype.symmetricDifference",
++    "Set.prototype.union",
+     "Set.prototype.values",
+     "ShadowRoot",
+     "ShadowRoot.prototype",
+@@ -5950,6 +5957,22 @@
+     "Storage.prototype.length",
+     "Storage.prototype.removeItem",
+     "Storage.prototype.setItem",
++    "StorageBucket",
++    "StorageBucket.prototype",
++    "StorageBucket.prototype.caches",
++    "StorageBucket.prototype.estimate",
++    "StorageBucket.prototype.expires",
++    "StorageBucket.prototype.getDirectory",
++    "StorageBucket.prototype.indexedDB",
++    "StorageBucket.prototype.name",
++    "StorageBucket.prototype.persist",
++    "StorageBucket.prototype.persisted",
++    "StorageBucket.prototype.setExpires",
++    "StorageBucketManager",
++    "StorageBucketManager.prototype",
++    "StorageBucketManager.prototype.delete",
++    "StorageBucketManager.prototype.keys",
++    "StorageBucketManager.prototype.open",
+     "StorageEvent",
+     "StorageEvent.prototype",
+     "StorageEvent.prototype.initStorageEvent",
+```
+
+  
 #### 122.0.6238.2 (`2024-1-11`) ⚡
 Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6226.2_to_122.0.6238.2.diff), [json](./browser_apis/chrome-unstable_122.0.6226.2_to_122.0.6238.2.json), [full list](./browser_apis/chrome-unstable_122.0.6238.2.json))
  ```diff
@@ -1770,35 +1843,6 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5817.0
      "PerformanceNavigationTiming.prototype.domComplete",
      "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
      "PerformanceNavigationTiming.prototype.domContentLoadedEventStart",
-```
-
-  
-#### 116.0.5817.0 (`2023-6-8`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5803.2_to_116.0.5817.0.diff), [json](./browser_apis/chrome-unstable_116.0.5803.2_to_116.0.5817.0.json), [full list](./browser_apis/chrome-unstable_116.0.5817.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_116.0.5803.2.json	2023-06-09 01:13:41.063492501 +0000
-+++ ./browser_apis/chrome-unstable_116.0.5817.0.json	2023-06-09 01:14:27.484683856 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8035,
-+  "browserApiCount": 8037,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -5984,10 +5984,12 @@
-     "TaskPriorityChangeEvent.prototype",
-     "TaskPriorityChangeEvent.prototype.previousPriority",
-     "TaskSignal",
-+    "TaskSignal.any",
-     "TaskSignal.prototype",
-     "TaskSignal.prototype.aborted",
-     "TaskSignal.prototype.constructor",
-     "TaskSignal.prototype.constructor.abort",
-+    "TaskSignal.prototype.constructor.any",
-     "TaskSignal.prototype.constructor.timeout",
-     "TaskSignal.prototype.onabort",
-     "TaskSignal.prototype.onprioritychange",
 ```
 
   <!-- browserapis:end -->

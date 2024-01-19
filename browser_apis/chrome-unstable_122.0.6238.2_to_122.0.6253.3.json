@@ -1,0 +1,38 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "122.0.6238.2",
+    "to": "122.0.6253.3"
+  },
+  "browserApis": {
+    "added": [
+      "Navigator.prototype.storageBuckets",
+      "Set.prototype.difference",
+      "Set.prototype.intersection",
+      "Set.prototype.isDisjointFrom",
+      "Set.prototype.isSubsetOf",
+      "Set.prototype.isSupersetOf",
+      "Set.prototype.symmetricDifference",
+      "Set.prototype.union",
+      "StorageBucket",
+      "StorageBucket.prototype",
+      "StorageBucket.prototype.caches",
+      "StorageBucket.prototype.estimate",
+      "StorageBucket.prototype.expires",
+      "StorageBucket.prototype.getDirectory",
+      "StorageBucket.prototype.indexedDB",
+      "StorageBucket.prototype.name",
+      "StorageBucket.prototype.persist",
+      "StorageBucket.prototype.persisted",
+      "StorageBucket.prototype.setExpires",
+      "StorageBucketManager",
+      "StorageBucketManager.prototype",
+      "StorageBucketManager.prototype.delete",
+      "StorageBucketManager.prototype.keys",
+      "StorageBucketManager.prototype.open"
+    ],
+    "removed": [
+      "HTMLTemplateElement.prototype.shadowRoot"
+    ]
+  }
+}
