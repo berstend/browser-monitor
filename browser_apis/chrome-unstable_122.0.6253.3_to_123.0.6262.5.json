@@ -1,0 +1,31 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "122.0.6253.3",
+    "to": "123.0.6262.5"
+  },
+  "browserApis": {
+    "added": [
+      "IdentityCredential.disconnect",
+      "MessagePort.prototype.onclose",
+      "PaymentRequestUpdateEvent",
+      "PaymentRequestUpdateEvent.prototype",
+      "PaymentRequestUpdateEvent.prototype.updateWith",
+      "VisibilityStateEntry.prototype.constructor",
+      "VisibilityStateEntry.prototype.duration",
+      "VisibilityStateEntry.prototype.entryType",
+      "VisibilityStateEntry.prototype.name",
+      "VisibilityStateEntry.prototype.startTime",
+      "VisibilityStateEntry.prototype.toJSON"
+    ],
+    "removed": [
+      "PaymentMethodChangeEvent.prototype.constructor",
+      "PaymentMethodChangeEvent.prototype.updateWith",
+      "TaskAttributionTiming.prototype.constructor",
+      "TaskAttributionTiming.prototype.duration",
+      "TaskAttributionTiming.prototype.entryType",
+      "TaskAttributionTiming.prototype.name",
+      "TaskAttributionTiming.prototype.startTime"
+    ]
+  }
+}

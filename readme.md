@@ -969,6 +969,88 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 123.0.6262.5 (`2024-1-25`) ⚡
+Added 11 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_122.0.6253.3_to_123.0.6262.5.diff), [json](./browser_apis/chrome-unstable_122.0.6253.3_to_123.0.6262.5.json), [full list](./browser_apis/chrome-unstable_123.0.6262.5.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_122.0.6253.3.json	2024-01-26 00:54:23.253209518 +0000
++++ ./browser_apis/chrome-unstable_123.0.6262.5.json	2024-01-26 00:55:04.009237920 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8205,
++  "browserApiCount": 8209,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2675,6 +2675,7 @@
+     "IIRFilterNode.prototype",
+     "IIRFilterNode.prototype.getFrequencyResponse",
+     "IdentityCredential",
++    "IdentityCredential.disconnect",
+     "IdentityCredential.prototype",
+     "IdentityCredential.prototype.isAutoSelected",
+     "IdentityCredential.prototype.token",
+@@ -3399,6 +3400,7 @@
+     "MessagePort",
+     "MessagePort.prototype",
+     "MessagePort.prototype.close",
++    "MessagePort.prototype.onclose",
+     "MessagePort.prototype.onmessage",
+     "MessagePort.prototype.onmessageerror",
+     "MessagePort.prototype.postMessage",
+@@ -4194,10 +4196,8 @@
+     "PaymentManager.prototype.userHint",
+     "PaymentMethodChangeEvent",
+     "PaymentMethodChangeEvent.prototype",
+-    "PaymentMethodChangeEvent.prototype.constructor",
+     "PaymentMethodChangeEvent.prototype.methodDetails",
+     "PaymentMethodChangeEvent.prototype.methodName",
+-    "PaymentMethodChangeEvent.prototype.updateWith",
+     "PaymentRequest",
+     "PaymentRequest.prototype",
+     "PaymentRequest.prototype.abort",
+@@ -4211,6 +4211,9 @@
+     "PaymentRequest.prototype.shippingOption",
+     "PaymentRequest.prototype.shippingType",
+     "PaymentRequest.prototype.show",
++    "PaymentRequestUpdateEvent",
++    "PaymentRequestUpdateEvent.prototype",
++    "PaymentRequestUpdateEvent.prototype.updateWith",
+     "PaymentResponse",
+     "PaymentResponse.prototype",
+     "PaymentResponse.prototype.complete",
+@@ -6101,15 +6104,10 @@
+     "SyntaxError.prototype",
+     "TaskAttributionTiming",
+     "TaskAttributionTiming.prototype",
+-    "TaskAttributionTiming.prototype.constructor",
+     "TaskAttributionTiming.prototype.containerId",
+     "TaskAttributionTiming.prototype.containerName",
+     "TaskAttributionTiming.prototype.containerSrc",
+     "TaskAttributionTiming.prototype.containerType",
+-    "TaskAttributionTiming.prototype.duration",
+-    "TaskAttributionTiming.prototype.entryType",
+-    "TaskAttributionTiming.prototype.name",
+-    "TaskAttributionTiming.prototype.startTime",
+     "TaskAttributionTiming.prototype.toJSON",
+     "TaskController",
+     "TaskController.prototype",
+@@ -6603,6 +6601,12 @@
+     "VirtualKeyboardGeometryChangeEvent.prototype",
+     "VisibilityStateEntry",
+     "VisibilityStateEntry.prototype",
++    "VisibilityStateEntry.prototype.constructor",
++    "VisibilityStateEntry.prototype.duration",
++    "VisibilityStateEntry.prototype.entryType",
++    "VisibilityStateEntry.prototype.name",
++    "VisibilityStateEntry.prototype.startTime",
++    "VisibilityStateEntry.prototype.toJSON",
+     "VisualViewport",
+     "VisualViewport.prototype",
+     "VisualViewport.prototype.height",
+```
+
+  
 #### 122.0.6253.3 (`2024-1-18`) ⚡
 Added 24 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_122.0.6238.2_to_122.0.6253.3.diff), [json](./browser_apis/chrome-unstable_122.0.6238.2_to_122.0.6253.3.json), [full list](./browser_apis/chrome-unstable_122.0.6253.3.json))
  ```diff
@@ -2079,30 +2161,6 @@ Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5829.
      "encodeURI",
      "encodeURIComponent",
      "escape",
-```
-
-  
-#### 116.0.5829.0 (`2023-6-15`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5817.0_to_116.0.5829.0.diff), [json](./browser_apis/chrome-unstable_116.0.5817.0_to_116.0.5829.0.json), [full list](./browser_apis/chrome-unstable_116.0.5829.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_116.0.5817.0.json	2023-06-16 01:09:02.431426859 +0000
-+++ ./browser_apis/chrome-unstable_116.0.5829.0.json	2023-06-16 01:09:46.943909338 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8037,
-+  "browserApiCount": 8038,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4191,6 +4191,7 @@
-     "PerformanceNavigationTiming",
-     "PerformanceNavigationTiming.prototype",
-     "PerformanceNavigationTiming.prototype.activationStart",
-+    "PerformanceNavigationTiming.prototype.criticalCHRestart",
-     "PerformanceNavigationTiming.prototype.domComplete",
-     "PerformanceNavigationTiming.prototype.domContentLoadedEventEnd",
-     "PerformanceNavigationTiming.prototype.domContentLoadedEventStart",
 ```
 
   <!-- browserapis:end -->

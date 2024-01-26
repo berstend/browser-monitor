@@ -1,0 +1,377 @@
+--- ./cdp/chrome-unstable_122.0.6253.3.protocol.json	2024-01-26 00:54:23.377209529 +0000
++++ ./cdp/chrome-unstable_123.0.6262.5.protocol.json	2024-01-26 00:55:04.017237927 +0000
+@@ -1100,6 +1100,7 @@
+             "Frame",
+             "Image",
+             "Import",
++            "JSON",
+             "Manifest",
+             "Ping",
+             "PluginData",
+@@ -2685,7 +2686,6 @@
+         {
+           "name": "resetPermissions",
+           "description": "Reset all permission management for all origins.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "browserContextId",
+@@ -5854,7 +5854,6 @@
+         {
+           "name": "scrollIntoViewIfNeeded",
+           "description": "Scrolls the specified rect of the given node into view if not already visible.\nNote: exactly one between nodeId, backendNodeId and objectId should be passed\nto identify the node.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "nodeId",
+@@ -8888,7 +8887,6 @@
+         {
+           "name": "setCPUThrottlingRate",
+           "description": "Enables CPU throttling to emulate slow CPUs.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "rate",
+@@ -9071,7 +9069,6 @@
+         {
+           "name": "setEmulatedVisionDeficiency",
+           "description": "Emulates the given vision deficiency.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "type",
+@@ -9167,7 +9164,6 @@
+         {
+           "name": "setIdleOverride",
+           "description": "Overrides the Idle state.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "isUserActive",
+@@ -9183,8 +9179,7 @@
+         },
+         {
+           "name": "clearIdleOverride",
+-          "description": "Clears Idle state overrides.",
+-          "experimental": true
++          "description": "Clears Idle state overrides."
+         },
+         {
+           "name": "setNavigatorOverrides",
+@@ -9291,7 +9286,6 @@
+         {
+           "name": "setTimezoneOverride",
+           "description": "Overrides default host system timezone with the specified one.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "timezoneId",
+@@ -13940,7 +13934,6 @@
+         {
+           "name": "setBypassServiceWorker",
+           "description": "Toggles ignoring of service worker for each request.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "bypass",
+@@ -18216,7 +18209,6 @@
+         {
+           "name": "setBypassCSP",
+           "description": "Enable page Content Security Policy by-passing.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "enabled",
+@@ -18468,7 +18460,6 @@
+         {
+           "name": "setLifecycleEventsEnabled",
+           "description": "Controls whether page will emit lifecycle events.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "enabled",
+@@ -18553,8 +18544,7 @@
+         },
+         {
+           "name": "close",
+-          "description": "Tries to close page, running its beforeunload hooks, if any.",
+-          "experimental": true
++          "description": "Tries to close page, running its beforeunload hooks, if any."
+         },
+         {
+           "name": "setWebLifecycleState",
+@@ -18660,7 +18650,6 @@
+         {
+           "name": "setInterceptFileChooserDialog",
+           "description": "Intercept file chooser requests and transfer control to protocol clients.\nWhen file chooser interception is enabled, native file chooser dialog is not shown.\nInstead, a protocol event `Page.fileChooserOpened` is emitted.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "enabled",
+@@ -19731,7 +19720,6 @@
+         {
+           "name": "setIgnoreCertificateErrors",
+           "description": "Enable/disable whether all certificate errors should be ignored.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "ignore",
+@@ -20220,6 +20208,11 @@
+           ]
+         },
+         {
++          "id": "InterestGroupAuctionId",
++          "description": "Protected audience interest group auction identifier.",
++          "type": "string"
++        },
++        {
+           "id": "InterestGroupAccessType",
+           "description": "Enum of interest group access types.",
+           "type": "string",
+@@ -20232,10 +20225,21 @@
+             "win",
+             "additionalBid",
+             "additionalBidWin",
++            "topLevelBid",
++            "topLevelAdditionalBid",
+             "clear"
+           ]
+         },
+         {
++          "id": "InterestGroupAuctionEventType",
++          "description": "Enum of auction events.",
++          "type": "string",
++          "enum": [
++            "started",
++            "configResolved"
++          ]
++        },
++        {
+           "id": "InterestGroupAd",
+           "description": "Ad advertising element inside an interest group.",
+           "type": "object",
+@@ -21269,6 +21273,17 @@
+           ]
+         },
+         {
++          "name": "setInterestGroupAuctionTracking",
++          "description": "Enables/Disables issuing of interestGroupAuctionEvent events.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "enable",
++              "type": "boolean"
++            }
++          ]
++        },
++        {
+           "name": "getSharedStorageMetadata",
+           "description": "Gets metadata for an origin's shared storage.",
+           "experimental": true,
+@@ -21544,7 +21559,7 @@
+         },
+         {
+           "name": "interestGroupAccessed",
+-          "description": "One of the interest groups was accessed by the associated page.",
++          "description": "One of the interest groups was accessed. Note that these events are global\nto all targets sharing an interest group store.",
+           "parameters": [
+             {
+               "name": "accessTime",
+@@ -21561,6 +21576,59 @@
+             {
+               "name": "name",
+               "type": "string"
++            },
++            {
++              "name": "componentSellerOrigin",
++              "description": "For topLevelBid/topLevelAdditionalBid, and when appropriate,\nwin and additionalBidWin",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "bid",
++              "description": "For bid or somethingBid event, if done locally and not on a server.",
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "bidCurrency",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "uniqueAuctionId",
++              "description": "For non-global events --- links to interestGroupAuctionEvent",
++              "optional": true,
++              "$ref": "InterestGroupAuctionId"
++            }
++          ]
++        },
++        {
++          "name": "interestGroupAuctionEventOccurred",
++          "description": "An auction involving interest groups is taking place. These events are\ntarget-specific.",
++          "parameters": [
++            {
++              "name": "eventTime",
++              "$ref": "Network.TimeSinceEpoch"
++            },
++            {
++              "name": "type",
++              "$ref": "InterestGroupAuctionEventType"
++            },
++            {
++              "name": "uniqueAuctionId",
++              "$ref": "InterestGroupAuctionId"
++            },
++            {
++              "name": "parentAuctionId",
++              "description": "Set for child auctions.",
++              "optional": true,
++              "$ref": "InterestGroupAuctionId"
++            },
++            {
++              "name": "auctionConfig",
++              "description": "Set for started and configResolved",
++              "optional": true,
++              "type": "object"
+             }
+           ]
+         },
+@@ -22158,29 +22226,32 @@
+         {
+           "name": "createBrowserContext",
+           "description": "Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than\none.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "disposeOnDetach",
+               "description": "If specified, disposes this context when debugging session disconnects.",
++              "experimental": true,
+               "optional": true,
+               "type": "boolean"
+             },
+             {
+               "name": "proxyServer",
+               "description": "Proxy server, similar to the one passed to --proxy-server",
++              "experimental": true,
+               "optional": true,
+               "type": "string"
+             },
+             {
+               "name": "proxyBypassList",
+               "description": "Proxy bypass list, similar to the one passed to --proxy-bypass-list",
++              "experimental": true,
+               "optional": true,
+               "type": "string"
+             },
+             {
+               "name": "originsWithUniversalNetworkAccess",
+               "description": "An optional list of origins to grant unlimited cross-origin access to.\nParts of the URL other than those constituting origin are ignored.",
++              "experimental": true,
+               "optional": true,
+               "type": "array",
+               "items": {
+@@ -22199,7 +22270,6 @@
+         {
+           "name": "getBrowserContexts",
+           "description": "Returns all browser contexts created with `Target.createBrowserContext` method.",
+-          "experimental": true,
+           "returns": [
+             {
+               "name": "browserContextIds",
+@@ -22296,7 +22366,6 @@
+         {
+           "name": "disposeBrowserContext",
+           "description": "Deletes a BrowserContext. All the belonging pages will be closed without calling their\nbeforeunload hooks.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "browserContextId",
+@@ -22372,7 +22441,6 @@
+         {
+           "name": "setAutoAttach",
+           "description": "Controls whether to automatically attach to new targets which are considered to be related to\nthis one. When turned on, attaches to all existing related targets as well. When turned off,\nautomatically detaches from all currently attached targets.\nThis also clears all targets added by `autoAttachRelated` from the list of targets to watch\nfor creation of related targets.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "autoAttach",
+@@ -22387,6 +22455,7 @@
+             {
+               "name": "flatten",
+               "description": "Enables \"flat\" access to the session via specifying sessionId attribute in the commands.\nWe plan to make this the default, deprecate non-flattened mode,\nand eventually retire it. See crbug.com/991325.",
++              "experimental": true,
+               "optional": true,
+               "type": "boolean"
+             },
+@@ -24967,6 +25036,15 @@
+           ]
+         },
+         {
++          "id": "AccountUrlType",
++          "description": "The URLs that each account has",
++          "type": "string",
++          "enum": [
++            "TermsOfService",
++            "PrivacyPolicy"
++          ]
++        },
++        {
+           "id": "Account",
+           "description": "Corresponds to IdentityRequestAccount",
+           "type": "object",
+@@ -25101,6 +25179,23 @@
+           ]
+         },
+         {
++          "name": "openUrl",
++          "parameters": [
++            {
++              "name": "dialogId",
++              "type": "string"
++            },
++            {
++              "name": "accountIndex",
++              "type": "integer"
++            },
++            {
++              "name": "accountUrlType",
++              "$ref": "AccountUrlType"
++            }
++          ]
++        },
++        {
+           "name": "dismissDialog",
+           "parameters": [
+             {
+@@ -28582,7 +28677,6 @@
+         {
+           "name": "addBinding",
+           "description": "If executionContextId is empty, adds binding with the given name on the\nglobal objects of all inspected contexts, including those created later,\nbindings survive reloads.\nBinding function takes exactly one argument, this argument should be string,\nin case of any other input, function throws an exception.\nEach binding function call produces Runtime.bindingCalled notification.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "name",
+@@ -28591,6 +28685,7 @@
+             {
+               "name": "executionContextId",
+               "description": "If specified, the binding would only be exposed to the specified\nexecution context. If omitted and `executionContextName` is not set,\nthe binding is exposed to all execution contexts of the target.\nThis parameter is mutually exclusive with `executionContextName`.\nDeprecated in favor of `executionContextName` due to an unclear use case\nand bugs in implementation (crbug.com/1169639). `executionContextId` will be\nremoved in the future.",
++              "experimental": true,
+               "deprecated": true,
+               "optional": true,
+               "$ref": "ExecutionContextId"
+@@ -28598,7 +28693,6 @@
+             {
+               "name": "executionContextName",
+               "description": "If specified, the binding is exposed to the executionContext with\nmatching name, even for contexts created after the binding is added.\nSee also `ExecutionContext.name` and `worldName` parameter to\n`Page.addScriptToEvaluateOnNewDocument`.\nThis parameter is mutually exclusive with `executionContextId`.",
+-              "experimental": true,
+               "optional": true,
+               "type": "string"
+             }
+@@ -28607,7 +28701,6 @@
+         {
+           "name": "removeBinding",
+           "description": "This method does not remove binding function from global object but\nunsubscribes current runtime agent from Runtime.bindingCalled notifications.",
+-          "experimental": true,
+           "parameters": [
+             {
+               "name": "name",
