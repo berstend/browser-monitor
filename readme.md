@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 121.0.6167.139 (`2024-1-30`) 
+No browser API changes.
+
+  
 #### 121.0.6167.85 (`2024-1-23`) ⚡
 Added 90 APIs, removed 38 (see: [diff](./browser_apis/chrome-stable_120.0.6099.224_to_121.0.6167.85.diff), [json](./browser_apis/chrome-stable_120.0.6099.224_to_121.0.6167.85.json), [full list](./browser_apis/chrome-stable_121.0.6167.85.json))
  ```diff
@@ -961,10 +965,6 @@ Added 25 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_114.0.5735.19
      "WebAssembly.LinkError.prototype",
      "WebAssembly.Memory",
 ```
-
-  
-#### 114.0.5735.198 (`2023-6-26`) 
-No browser API changes.
 
   
 ### chrome-unstable
