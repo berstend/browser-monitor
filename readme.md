@@ -969,6 +969,109 @@ Added 25 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_114.0.5735.19
   
 ### chrome-unstable
   
+#### 123.0.6272.2 (`2024-2-1`) ⚡
+Added 37 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_123.0.6262.5_to_123.0.6272.2.diff), [json](./browser_apis/chrome-unstable_123.0.6262.5_to_123.0.6272.2.json), [full list](./browser_apis/chrome-unstable_123.0.6272.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_123.0.6262.5.json	2024-02-02 00:53:58.101240378 +0000
++++ ./browser_apis/chrome-unstable_123.0.6272.2.json	2024-02-02 00:54:25.625101609 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8209,
++  "browserApiCount": 8228,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4267,6 +4267,14 @@
+     "PerformanceEventTiming.prototype.processingStart",
+     "PerformanceEventTiming.prototype.target",
+     "PerformanceEventTiming.prototype.toJSON",
++    "PerformanceLongAnimationFrameTiming",
++    "PerformanceLongAnimationFrameTiming.prototype",
++    "PerformanceLongAnimationFrameTiming.prototype.blockingDuration",
++    "PerformanceLongAnimationFrameTiming.prototype.firstUIEventTimestamp",
++    "PerformanceLongAnimationFrameTiming.prototype.renderStart",
++    "PerformanceLongAnimationFrameTiming.prototype.scripts",
++    "PerformanceLongAnimationFrameTiming.prototype.styleAndLayoutStart",
++    "PerformanceLongAnimationFrameTiming.prototype.toJSON",
+     "PerformanceLongTaskTiming",
+     "PerformanceLongTaskTiming.prototype",
+     "PerformanceLongTaskTiming.prototype.attribution",
+@@ -4335,6 +4343,17 @@
+     "PerformanceResourceTiming.prototype.toJSON",
+     "PerformanceResourceTiming.prototype.transferSize",
+     "PerformanceResourceTiming.prototype.workerStart",
++    "PerformanceScriptTiming",
++    "PerformanceScriptTiming.prototype",
++    "PerformanceScriptTiming.prototype.executionStart",
++    "PerformanceScriptTiming.prototype.forcedStyleAndLayoutDuration",
++    "PerformanceScriptTiming.prototype.invoker",
++    "PerformanceScriptTiming.prototype.invokerType",
++    "PerformanceScriptTiming.prototype.pauseDuration",
++    "PerformanceScriptTiming.prototype.sourceLocation",
++    "PerformanceScriptTiming.prototype.toJSON",
++    "PerformanceScriptTiming.prototype.window",
++    "PerformanceScriptTiming.prototype.windowAttribution",
+     "PerformanceServerTiming",
+     "PerformanceServerTiming.prototype",
+     "PerformanceServerTiming.prototype.description",
+@@ -7238,27 +7257,9 @@
+     "WheelEvent.prototype.clientY",
+     "WheelEvent.prototype.constructor",
+     "WheelEvent.prototype.constructor.prototype",
+-    "WheelEvent.prototype.constructor.prototype.bubbles",
+-    "WheelEvent.prototype.constructor.prototype.cancelBubble",
+-    "WheelEvent.prototype.constructor.prototype.cancelable",
+-    "WheelEvent.prototype.constructor.prototype.composed",
+-    "WheelEvent.prototype.constructor.prototype.composedPath",
+-    "WheelEvent.prototype.constructor.prototype.constructor",
+-    "WheelEvent.prototype.constructor.prototype.currentTarget",
+-    "WheelEvent.prototype.constructor.prototype.defaultPrevented",
+     "WheelEvent.prototype.constructor.prototype.detail",
+-    "WheelEvent.prototype.constructor.prototype.eventPhase",
+-    "WheelEvent.prototype.constructor.prototype.initEvent",
+     "WheelEvent.prototype.constructor.prototype.initUIEvent",
+-    "WheelEvent.prototype.constructor.prototype.preventDefault",
+-    "WheelEvent.prototype.constructor.prototype.returnValue",
+     "WheelEvent.prototype.constructor.prototype.sourceCapabilities",
+-    "WheelEvent.prototype.constructor.prototype.srcElement",
+-    "WheelEvent.prototype.constructor.prototype.stopImmediatePropagation",
+-    "WheelEvent.prototype.constructor.prototype.stopPropagation",
+-    "WheelEvent.prototype.constructor.prototype.target",
+-    "WheelEvent.prototype.constructor.prototype.timeStamp",
+-    "WheelEvent.prototype.constructor.prototype.type",
+     "WheelEvent.prototype.constructor.prototype.view",
+     "WheelEvent.prototype.constructor.prototype.which",
+     "WheelEvent.prototype.ctrlKey",
+@@ -7297,7 +7298,25 @@
+     "WindowControlsOverlay.prototype.visible",
+     "WindowControlsOverlayGeometryChangeEvent",
+     "WindowControlsOverlayGeometryChangeEvent.prototype",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.bubbles",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelBubble",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.cancelable",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.composed",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.composedPath",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.constructor",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.currentTarget",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.defaultPrevented",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.eventPhase",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.initEvent",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.preventDefault",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.returnValue",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.srcElement",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.stopImmediatePropagation",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.stopPropagation",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.target",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.timeStamp",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.titlebarAreaRect",
++    "WindowControlsOverlayGeometryChangeEvent.prototype.type",
+     "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
+     "Worker",
+     "Worker.prototype",
+```
+
+  
 #### 123.0.6262.5 (`2024-1-25`) ⚡
 Added 11 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_122.0.6253.3_to_123.0.6262.5.diff), [json](./browser_apis/chrome-unstable_122.0.6253.3_to_123.0.6262.5.json), [full list](./browser_apis/chrome-unstable_123.0.6262.5.json))
  ```diff
@@ -2113,54 +2216,5 @@ No browser API changes.
   
 #### 116.0.5845.14 (`2023-6-30`) 
 No browser API changes.
-
-  
-#### 116.0.5845.4 (`2023-6-23`) ⚡
-Added 12 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5829.0_to_116.0.5845.4.diff), [json](./browser_apis/chrome-unstable_116.0.5829.0_to_116.0.5845.4.json), [full list](./browser_apis/chrome-unstable_116.0.5845.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_116.0.5829.0.json	2023-06-24 01:17:22.324924025 +0000
-+++ ./browser_apis/chrome-unstable_116.0.5845.4.json	2023-06-24 01:18:02.145126518 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8038,
-+  "browserApiCount": 8050,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1131,6 +1131,14 @@
-     "DeviceOrientationEvent.prototype.alpha",
-     "DeviceOrientationEvent.prototype.beta",
-     "DeviceOrientationEvent.prototype.gamma",
-+    "DocumentPictureInPicture",
-+    "DocumentPictureInPicture.prototype",
-+    "DocumentPictureInPicture.prototype.onenter",
-+    "DocumentPictureInPicture.prototype.requestWindow",
-+    "DocumentPictureInPicture.prototype.window",
-+    "DocumentPictureInPictureEvent",
-+    "DocumentPictureInPictureEvent.prototype",
-+    "DocumentPictureInPictureEvent.prototype.window",
-     "DocumentTimeline",
-     "DocumentTimeline.prototype",
-     "DocumentType",
-@@ -2626,6 +2634,9 @@
-     "IdentityCredential",
-     "IdentityCredential.prototype",
-     "IdentityCredential.prototype.token",
-+    "IdentityProvider",
-+    "IdentityProvider.getUserInfo",
-+    "IdentityProvider.prototype",
-     "IdleDeadline",
-     "IdleDeadline.prototype",
-     "IdleDeadline.prototype.didTimeout",
-@@ -7711,6 +7722,7 @@
-     "decodeURIComponent",
-     "devicePixelRatio",
-     "document",
-+    "documentPictureInPicture",
-     "encodeURI",
-     "encodeURIComponent",
-     "escape",
-```
 
   <!-- browserapis:end -->
