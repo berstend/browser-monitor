@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 121.0.6167.160 (`2024-2-6`) 
+No browser API changes.
+
+  
 #### 121.0.6167.139 (`2024-1-30`) 
 No browser API changes.
 
@@ -861,110 +865,6 @@ No browser API changes.
   
 #### 115.0.5790.102 (`2023-7-21`) 
 No browser API changes.
-
-  
-#### 115.0.5790.98 (`2023-7-18`) ⚡
-Added 25 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_114.0.5735.198_to_115.0.5790.98.diff), [json](./browser_apis/chrome-stable_114.0.5735.198_to_115.0.5790.98.json), [full list](./browser_apis/chrome-stable_115.0.5790.98.json))
- ```diff
---- ./browser_apis/chrome-stable_114.0.5735.198.json	2023-07-19 02:22:09.235439352 +0000
-+++ ./browser_apis/chrome-stable_115.0.5790.98.json	2023-07-19 02:22:41.076008353 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 8010,
-+  "browserApiCount": 8035,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -52,6 +52,8 @@
-     "Animation.prototype.play",
-     "Animation.prototype.playState",
-     "Animation.prototype.playbackRate",
-+    "Animation.prototype.rangeEnd",
-+    "Animation.prototype.rangeStart",
-     "Animation.prototype.ready",
-     "Animation.prototype.replaceState",
-     "Animation.prototype.reverse",
-@@ -70,6 +72,7 @@
-     "AnimationTimeline",
-     "AnimationTimeline.prototype",
-     "AnimationTimeline.prototype.currentTime",
-+    "AnimationTimeline.prototype.duration",
-     "Array",
-     "Array.from",
-     "Array.isArray",
-@@ -1387,6 +1390,7 @@
-     "GPU.prototype",
-     "GPU.prototype.getPreferredCanvasFormat",
-     "GPU.prototype.requestAdapter",
-+    "GPU.prototype.wgslLanguageFeatures",
-     "GPUAdapter",
-     "GPUAdapter.prototype",
-     "GPUAdapter.prototype.features",
-@@ -4220,6 +4224,7 @@
-     "PerformanceResourceTiming.prototype.domainLookupStart",
-     "PerformanceResourceTiming.prototype.encodedBodySize",
-     "PerformanceResourceTiming.prototype.fetchStart",
-+    "PerformanceResourceTiming.prototype.firstInterimResponseStart",
-     "PerformanceResourceTiming.prototype.initiatorType",
-     "PerformanceResourceTiming.prototype.nextHopProtocol",
-     "PerformanceResourceTiming.prototype.redirectEnd",
-@@ -5617,6 +5622,10 @@
-     "ScriptProcessorNode.prototype",
-     "ScriptProcessorNode.prototype.bufferSize",
-     "ScriptProcessorNode.prototype.onaudioprocess",
-+    "ScrollTimeline",
-+    "ScrollTimeline.prototype",
-+    "ScrollTimeline.prototype.axis",
-+    "ScrollTimeline.prototype.source",
-     "SecurityPolicyViolationEvent",
-     "SecurityPolicyViolationEvent.prototype",
-     "SecurityPolicyViolationEvent.prototype.blockedURI",
-@@ -6413,6 +6422,11 @@
-     "VideoPlaybackQuality.prototype.creationTime",
-     "VideoPlaybackQuality.prototype.droppedVideoFrames",
-     "VideoPlaybackQuality.prototype.totalVideoFrames",
-+    "ViewTimeline",
-+    "ViewTimeline.prototype",
-+    "ViewTimeline.prototype.endOffset",
-+    "ViewTimeline.prototype.startOffset",
-+    "ViewTimeline.prototype.subject",
-     "ViewTransition",
-     "ViewTransition.prototype",
-     "ViewTransition.prototype.finished",
-@@ -6428,6 +6442,8 @@
-     "VirtualKeyboard.prototype.show",
-     "VirtualKeyboardGeometryChangeEvent",
-     "VirtualKeyboardGeometryChangeEvent.prototype",
-+    "VisibilityStateEntry",
-+    "VisibilityStateEntry.prototype",
-     "VisualViewport",
-     "VisualViewport.prototype",
-     "VisualViewport.prototype.height",
-@@ -6439,6 +6455,14 @@
-     "VisualViewport.prototype.pageTop",
-     "VisualViewport.prototype.scale",
-     "VisualViewport.prototype.width",
-+    "WGSLLanguageFeatures",
-+    "WGSLLanguageFeatures.prototype",
-+    "WGSLLanguageFeatures.prototype.entries",
-+    "WGSLLanguageFeatures.prototype.forEach",
-+    "WGSLLanguageFeatures.prototype.has",
-+    "WGSLLanguageFeatures.prototype.keys",
-+    "WGSLLanguageFeatures.prototype.size",
-+    "WGSLLanguageFeatures.prototype.values",
-     "WakeLock",
-     "WakeLock.prototype",
-     "WakeLock.prototype.request",
-@@ -6489,6 +6513,7 @@
-     "WebAssembly.Instance",
-     "WebAssembly.Instance.prototype",
-     "WebAssembly.Instance.prototype.exports",
-+    "WebAssembly.JSTag",
-     "WebAssembly.LinkError",
-     "WebAssembly.LinkError.prototype",
-     "WebAssembly.Memory",
-```
 
   
 ### chrome-unstable
