@@ -869,6 +869,70 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 123.0.6286.0 (`2024-2-8`) ⚡
+Added 12 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_123.0.6272.2_to_123.0.6286.0.diff), [json](./browser_apis/chrome-unstable_123.0.6272.2_to_123.0.6286.0.json), [full list](./browser_apis/chrome-unstable_123.0.6286.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_123.0.6272.2.json	2024-02-09 00:53:04.063233369 +0000
++++ ./browser_apis/chrome-unstable_123.0.6286.0.json	2024-02-09 00:53:46.279274975 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8228,
++  "browserApiCount": 8239,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3462,6 +3462,7 @@
+     "NavigateEvent.prototype.userInitiated",
+     "Navigation",
+     "Navigation.prototype",
++    "Navigation.prototype.activation",
+     "Navigation.prototype.back",
+     "Navigation.prototype.canGoBack",
+     "Navigation.prototype.canGoForward",
+@@ -3477,6 +3478,11 @@
+     "Navigation.prototype.transition",
+     "Navigation.prototype.traverseTo",
+     "Navigation.prototype.updateCurrentEntry",
++    "NavigationActivation",
++    "NavigationActivation.prototype",
++    "NavigationActivation.prototype.entry",
++    "NavigationActivation.prototype.from",
++    "NavigationActivation.prototype.navigationType",
+     "NavigationCurrentEntryChangeEvent",
+     "NavigationCurrentEntryChangeEvent.prototype",
+     "NavigationCurrentEntryChangeEvent.prototype.from",
+@@ -4138,6 +4144,8 @@
+     "OverconstrainedError",
+     "OverconstrainedError.prototype",
+     "OverconstrainedError.prototype.constraint",
++    "PageRevealEvent",
++    "PageRevealEvent.prototype",
+     "PageTransitionEvent",
+     "PageTransitionEvent.prototype",
+     "PageTransitionEvent.prototype.persisted",
+@@ -4350,7 +4358,9 @@
+     "PerformanceScriptTiming.prototype.invoker",
+     "PerformanceScriptTiming.prototype.invokerType",
+     "PerformanceScriptTiming.prototype.pauseDuration",
+-    "PerformanceScriptTiming.prototype.sourceLocation",
++    "PerformanceScriptTiming.prototype.sourceCharPosition",
++    "PerformanceScriptTiming.prototype.sourceFunctionName",
++    "PerformanceScriptTiming.prototype.sourceURL",
+     "PerformanceScriptTiming.prototype.toJSON",
+     "PerformanceScriptTiming.prototype.window",
+     "PerformanceScriptTiming.prototype.windowAttribution",
+@@ -8004,6 +8014,7 @@
+     "onoffline",
+     "ononline",
+     "onpagehide",
++    "onpagereveal",
+     "onpageshow",
+     "onpause",
+     "onplay",
+```
+
+  
 #### 123.0.6272.2 (`2024-2-1`) ⚡
 Added 37 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_123.0.6262.5_to_123.0.6272.2.diff), [json](./browser_apis/chrome-unstable_123.0.6262.5_to_123.0.6272.2.json), [full list](./browser_apis/chrome-unstable_123.0.6272.2.json))
  ```diff
@@ -2111,10 +2175,6 @@ No browser API changes.
 
   
 #### 116.0.5845.32 (`2023-7-13`) 
-No browser API changes.
-
-  
-#### 116.0.5845.14 (`2023-6-30`) 
 No browser API changes.
 
   <!-- browserapis:end -->

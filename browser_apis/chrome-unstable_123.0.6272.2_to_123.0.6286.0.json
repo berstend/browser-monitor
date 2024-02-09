@@ -1,0 +1,26 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "123.0.6272.2",
+    "to": "123.0.6286.0"
+  },
+  "browserApis": {
+    "added": [
+      "Navigation.prototype.activation",
+      "NavigationActivation",
+      "NavigationActivation.prototype",
+      "NavigationActivation.prototype.entry",
+      "NavigationActivation.prototype.from",
+      "NavigationActivation.prototype.navigationType",
+      "PageRevealEvent",
+      "PageRevealEvent.prototype",
+      "PerformanceScriptTiming.prototype.sourceCharPosition",
+      "PerformanceScriptTiming.prototype.sourceFunctionName",
+      "PerformanceScriptTiming.prototype.sourceURL",
+      "onpagereveal"
+    ],
+    "removed": [
+      "PerformanceScriptTiming.prototype.sourceLocation"
+    ]
+  }
+}
