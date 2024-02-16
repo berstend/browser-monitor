@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "123.0.6286.0",
+    "to": "123.0.6300.3"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "MessagePort.prototype.onclose"
+    ]
+  }
+}

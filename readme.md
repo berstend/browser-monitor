@@ -869,6 +869,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 123.0.6300.3 (`2024-2-15`) ⚡
+Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_123.0.6286.0_to_123.0.6300.3.diff), [json](./browser_apis/chrome-unstable_123.0.6286.0_to_123.0.6300.3.json), [full list](./browser_apis/chrome-unstable_123.0.6300.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_123.0.6286.0.json	2024-02-16 00:53:12.142636865 +0000
++++ ./browser_apis/chrome-unstable_123.0.6300.3.json	2024-02-16 00:53:57.522219321 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8239,
++  "browserApiCount": 8238,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3400,7 +3400,6 @@
+     "MessagePort",
+     "MessagePort.prototype",
+     "MessagePort.prototype.close",
+-    "MessagePort.prototype.onclose",
+     "MessagePort.prototype.onmessage",
+     "MessagePort.prototype.onmessageerror",
+     "MessagePort.prototype.postMessage",
+```
+
+  
 #### 123.0.6286.0 (`2024-2-8`) ⚡
 Added 12 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_123.0.6272.2_to_123.0.6286.0.diff), [json](./browser_apis/chrome-unstable_123.0.6272.2_to_123.0.6286.0.json), [full list](./browser_apis/chrome-unstable_123.0.6286.0.json))
  ```diff
@@ -2171,10 +2195,6 @@ Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5845.4
 
   
 #### 116.0.5845.42 (`2023-7-19`) 
-No browser API changes.
-
-  
-#### 116.0.5845.32 (`2023-7-13`) 
 No browser API changes.
 
   <!-- browserapis:end -->
