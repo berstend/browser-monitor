@@ -5,6 +5,195 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 122.0.6261.57 (`2024-2-20`) ⚡
+Added 55 APIs, removed 8 (see: [diff](./browser_apis/chrome-stable_121.0.6167.184_to_122.0.6261.57.diff), [json](./browser_apis/chrome-stable_121.0.6167.184_to_122.0.6261.57.json), [full list](./browser_apis/chrome-stable_122.0.6261.57.json))
+ ```diff
+--- ./browser_apis/chrome-stable_121.0.6167.184.json	2024-02-21 00:54:01.693221434 +0000
++++ ./browser_apis/chrome-stable_122.0.6261.57.json	2024-02-21 00:54:31.545434011 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8161,
++  "browserApiCount": 8208,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2039,6 +2039,7 @@
+     "HTMLHtmlElement.prototype.version",
+     "HTMLIFrameElement",
+     "HTMLIFrameElement.prototype",
++    "HTMLIFrameElement.prototype.adAuctionHeaders",
+     "HTMLIFrameElement.prototype.align",
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
+@@ -2431,7 +2432,6 @@
+     "HTMLTemplateElement",
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
+-    "HTMLTemplateElement.prototype.shadowRoot",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+@@ -2675,6 +2675,7 @@
+     "IIRFilterNode.prototype",
+     "IIRFilterNode.prototype.getFrequencyResponse",
+     "IdentityCredential",
++    "IdentityCredential.disconnect",
+     "IdentityCredential.prototype",
+     "IdentityCredential.prototype.isAutoSelected",
+     "IdentityCredential.prototype.token",
+@@ -2904,6 +2905,21 @@
+     "Intl.v8BreakIterator.prototype.next",
+     "Intl.v8BreakIterator.prototype.resolvedOptions",
+     "Intl.v8BreakIterator.supportedLocalesOf",
++    "Iterator",
++    "Iterator.from",
++    "Iterator.prototype",
++    "Iterator.prototype.constructor",
++    "Iterator.prototype.drop",
++    "Iterator.prototype.every",
++    "Iterator.prototype.filter",
++    "Iterator.prototype.find",
++    "Iterator.prototype.flatMap",
++    "Iterator.prototype.forEach",
++    "Iterator.prototype.map",
++    "Iterator.prototype.reduce",
++    "Iterator.prototype.some",
++    "Iterator.prototype.take",
++    "Iterator.prototype.toArray",
+     "JSON",
+     "JSON.isRawJSON",
+     "JSON.parse",
+@@ -3542,6 +3558,7 @@
+     "Navigator.prototype.serviceWorker",
+     "Navigator.prototype.setAppBadge",
+     "Navigator.prototype.storage",
++    "Navigator.prototype.storageBuckets",
+     "Navigator.prototype.unregisterProtocolHandler",
+     "Navigator.prototype.usb",
+     "Navigator.prototype.userActivation",
+@@ -4178,10 +4195,8 @@
+     "PaymentManager.prototype.userHint",
+     "PaymentMethodChangeEvent",
+     "PaymentMethodChangeEvent.prototype",
+-    "PaymentMethodChangeEvent.prototype.constructor",
+     "PaymentMethodChangeEvent.prototype.methodDetails",
+     "PaymentMethodChangeEvent.prototype.methodName",
+-    "PaymentMethodChangeEvent.prototype.updateWith",
+     "PaymentRequest",
+     "PaymentRequest.prototype",
+     "PaymentRequest.prototype.abort",
+@@ -4195,6 +4210,9 @@
+     "PaymentRequest.prototype.shippingOption",
+     "PaymentRequest.prototype.shippingType",
+     "PaymentRequest.prototype.show",
++    "PaymentRequestUpdateEvent",
++    "PaymentRequestUpdateEvent.prototype",
++    "PaymentRequestUpdateEvent.prototype.updateWith",
+     "PaymentResponse",
+     "PaymentResponse.prototype",
+     "PaymentResponse.prototype.complete",
+@@ -5812,10 +5830,17 @@
+     "Set.prototype.add",
+     "Set.prototype.clear",
+     "Set.prototype.delete",
++    "Set.prototype.difference",
+     "Set.prototype.entries",
+     "Set.prototype.forEach",
+     "Set.prototype.has",
++    "Set.prototype.intersection",
++    "Set.prototype.isDisjointFrom",
++    "Set.prototype.isSubsetOf",
++    "Set.prototype.isSupersetOf",
+     "Set.prototype.size",
++    "Set.prototype.symmetricDifference",
++    "Set.prototype.union",
+     "Set.prototype.values",
+     "ShadowRoot",
+     "ShadowRoot.prototype",
+@@ -5934,6 +5959,22 @@
+     "Storage.prototype.length",
+     "Storage.prototype.removeItem",
+     "Storage.prototype.setItem",
++    "StorageBucket",
++    "StorageBucket.prototype",
++    "StorageBucket.prototype.caches",
++    "StorageBucket.prototype.estimate",
++    "StorageBucket.prototype.expires",
++    "StorageBucket.prototype.getDirectory",
++    "StorageBucket.prototype.indexedDB",
++    "StorageBucket.prototype.name",
++    "StorageBucket.prototype.persist",
++    "StorageBucket.prototype.persisted",
++    "StorageBucket.prototype.setExpires",
++    "StorageBucketManager",
++    "StorageBucketManager.prototype",
++    "StorageBucketManager.prototype.delete",
++    "StorageBucketManager.prototype.keys",
++    "StorageBucketManager.prototype.open",
+     "StorageEvent",
+     "StorageEvent.prototype",
+     "StorageEvent.prototype.initStorageEvent",
+@@ -6062,15 +6103,10 @@
+     "SyntaxError.prototype",
+     "TaskAttributionTiming",
+     "TaskAttributionTiming.prototype",
+-    "TaskAttributionTiming.prototype.constructor",
+     "TaskAttributionTiming.prototype.containerId",
+     "TaskAttributionTiming.prototype.containerName",
+     "TaskAttributionTiming.prototype.containerSrc",
+     "TaskAttributionTiming.prototype.containerType",
+-    "TaskAttributionTiming.prototype.duration",
+-    "TaskAttributionTiming.prototype.entryType",
+-    "TaskAttributionTiming.prototype.name",
+-    "TaskAttributionTiming.prototype.startTime",
+     "TaskAttributionTiming.prototype.toJSON",
+     "TaskController",
+     "TaskController.prototype",
+@@ -6295,6 +6331,7 @@
+     "URLPattern",
+     "URLPattern.prototype",
+     "URLPattern.prototype.exec",
++    "URLPattern.prototype.hasRegExpGroups",
+     "URLPattern.prototype.hash",
+     "URLPattern.prototype.hostname",
+     "URLPattern.prototype.password",
+@@ -6563,6 +6600,12 @@
+     "VirtualKeyboardGeometryChangeEvent.prototype",
+     "VisibilityStateEntry",
+     "VisibilityStateEntry.prototype",
++    "VisibilityStateEntry.prototype.constructor",
++    "VisibilityStateEntry.prototype.duration",
++    "VisibilityStateEntry.prototype.entryType",
++    "VisibilityStateEntry.prototype.name",
++    "VisibilityStateEntry.prototype.startTime",
++    "VisibilityStateEntry.prototype.toJSON",
+     "VisualViewport",
+     "VisualViewport.prototype",
+     "VisualViewport.prototype.height",
+@@ -6739,7 +6782,9 @@
+     "WebGL2RenderingContext.prototype.drawElementsInstanced",
+     "WebGL2RenderingContext.prototype.drawRangeElements",
+     "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
++    "WebGL2RenderingContext.prototype.drawingBufferFormat",
+     "WebGL2RenderingContext.prototype.drawingBufferHeight",
++    "WebGL2RenderingContext.prototype.drawingBufferStorage",
+     "WebGL2RenderingContext.prototype.drawingBufferWidth",
+     "WebGL2RenderingContext.prototype.enable",
+     "WebGL2RenderingContext.prototype.enableVertexAttribArray",
+@@ -6959,7 +7004,9 @@
+     "WebGLRenderingContext.prototype.drawArrays",
+     "WebGLRenderingContext.prototype.drawElements",
+     "WebGLRenderingContext.prototype.drawingBufferColorSpace",
++    "WebGLRenderingContext.prototype.drawingBufferFormat",
+     "WebGLRenderingContext.prototype.drawingBufferHeight",
++    "WebGLRenderingContext.prototype.drawingBufferStorage",
+     "WebGLRenderingContext.prototype.drawingBufferWidth",
+     "WebGLRenderingContext.prototype.enable",
+     "WebGLRenderingContext.prototype.enableVertexAttribArray",
+```
+
+  
 #### 121.0.6167.184 (`2024-2-13`) 
 No browser API changes.
 
@@ -860,10 +1049,6 @@ Added 15 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_115.0.5790.17
 
   
 #### 115.0.5790.170 (`2023-8-2`) 
-No browser API changes.
-
-  
-#### 115.0.5790.110 (`2023-7-25`) 
 No browser API changes.
 
   
