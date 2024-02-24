@@ -1054,6 +1054,54 @@ Added 15 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_115.0.5790.17
   
 ### chrome-unstable
   
+#### 124.0.6315.2 (`2024-2-23`) ⚡
+Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_123.0.6300.3_to_124.0.6315.2.diff), [json](./browser_apis/chrome-unstable_123.0.6300.3_to_124.0.6315.2.json), [full list](./browser_apis/chrome-unstable_124.0.6315.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_123.0.6300.3.json	2024-02-24 00:51:11.537165991 +0000
++++ ./browser_apis/chrome-unstable_124.0.6315.2.json	2024-02-24 00:51:38.648970394 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8238,
++  "browserApiCount": 8242,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -509,6 +509,7 @@
+     "CSSKeyframesRule.prototype.cssRules",
+     "CSSKeyframesRule.prototype.deleteRule",
+     "CSSKeyframesRule.prototype.findRule",
++    "CSSKeyframesRule.prototype.length",
+     "CSSKeyframesRule.prototype.name",
+     "CSSKeywordValue",
+     "CSSKeywordValue.prototype",
+@@ -2432,6 +2433,7 @@
+     "HTMLTemplateElement",
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
++    "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+@@ -4671,6 +4673,7 @@
+     "RTCRtpReceiver.prototype.getParameters",
+     "RTCRtpReceiver.prototype.getStats",
+     "RTCRtpReceiver.prototype.getSynchronizationSources",
++    "RTCRtpReceiver.prototype.jitterBufferTarget",
+     "RTCRtpReceiver.prototype.playoutDelayHint",
+     "RTCRtpReceiver.prototype.rtcpTransport",
+     "RTCRtpReceiver.prototype.track",
+@@ -4891,6 +4894,7 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
++    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
+```
+
+  
 #### 123.0.6300.3 (`2024-2-15`) ⚡
 Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_123.0.6286.0_to_123.0.6300.3.diff), [json](./browser_apis/chrome-unstable_123.0.6286.0_to_123.0.6300.3.json), [full list](./browser_apis/chrome-unstable_123.0.6300.3.json))
  ```diff
@@ -2377,9 +2425,5 @@ Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5845.4
      "RTCRtpTransceiver.prototype.stopped",
      "RTCSctpTransport",
 ```
-
-  
-#### 116.0.5845.42 (`2023-7-19`) 
-No browser API changes.
 
   <!-- browserapis:end -->

@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "123.0.6300.3",
+    "to": "124.0.6315.2"
+  },
+  "browserApis": {
+    "added": [
+      "CSSKeyframesRule.prototype.length",
+      "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+      "RTCRtpReceiver.prototype.jitterBufferTarget",
+      "Request.prototype.targetAddressSpace"
+    ],
+    "removed": []
+  }
+}
