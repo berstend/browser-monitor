@@ -988,6 +988,76 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 124.0.6329.0 (`2024-3-4`) ⚡
+Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6315.2_to_124.0.6329.0.diff), [json](./browser_apis/chrome-unstable_124.0.6315.2_to_124.0.6329.0.json), [full list](./browser_apis/chrome-unstable_124.0.6329.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_124.0.6315.2.json	2024-03-05 00:53:14.497113588 +0000
++++ ./browser_apis/chrome-unstable_124.0.6329.0.json	2024-03-05 00:53:48.257216749 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8242,
++  "browserApiCount": 8249,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2433,6 +2433,7 @@
+     "HTMLTemplateElement",
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
++    "HTMLTemplateElement.prototype.shadowRootClonable",
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTextAreaElement",
+@@ -4108,6 +4109,7 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
++    "Option.prototype.constructor.prototype.setHTMLUnsafe",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+     "Option.prototype.constructor.prototype.showPopover",
+@@ -4635,11 +4637,13 @@
+     "RTCIceCandidate.prototype.protocol",
+     "RTCIceCandidate.prototype.relatedAddress",
+     "RTCIceCandidate.prototype.relatedPort",
++    "RTCIceCandidate.prototype.relayProtocol",
+     "RTCIceCandidate.prototype.sdpMLineIndex",
+     "RTCIceCandidate.prototype.sdpMid",
+     "RTCIceCandidate.prototype.tcpType",
+     "RTCIceCandidate.prototype.toJSON",
+     "RTCIceCandidate.prototype.type",
++    "RTCIceCandidate.prototype.url",
+     "RTCIceCandidate.prototype.usernameFragment",
+     "RTCIceTransport",
+     "RTCIceTransport.prototype",
+@@ -5882,6 +5886,7 @@
+     "ShadowRoot.prototype.append",
+     "ShadowRoot.prototype.childElementCount",
+     "ShadowRoot.prototype.children",
++    "ShadowRoot.prototype.clonable",
+     "ShadowRoot.prototype.constructor",
+     "ShadowRoot.prototype.delegatesFocus",
+     "ShadowRoot.prototype.elementFromPoint",
+@@ -5903,6 +5908,7 @@
+     "ShadowRoot.prototype.querySelector",
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
++    "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+     "SharedWorker",
+@@ -7379,6 +7385,7 @@
+     "XMLDocument.prototype.close",
+     "XMLDocument.prototype.compatMode",
+     "XMLDocument.prototype.constructor",
++    "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+     "XMLDocument.prototype.contentType",
+     "XMLDocument.prototype.cookie",
+     "XMLDocument.prototype.createAttribute",
+```
+
+  
 #### 124.0.6315.2 (`2024-2-23`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_123.0.6300.3_to_124.0.6315.2.diff), [json](./browser_apis/chrome-unstable_123.0.6300.3_to_124.0.6315.2.json), [full list](./browser_apis/chrome-unstable_124.0.6315.2.json))
  ```diff
@@ -2295,69 +2365,6 @@ Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_117.0.5897.
      "XMLHttpRequest.prototype.setRequestHeader",
      "XMLHttpRequest.prototype.status",
      "XMLHttpRequest.prototype.statusText",
-```
-
-  
-#### 117.0.5897.3 (`2023-7-21`) ⚡
-Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_116.0.5845.42_to_117.0.5897.3.diff), [json](./browser_apis/chrome-unstable_116.0.5845.42_to_117.0.5897.3.json), [full list](./browser_apis/chrome-unstable_117.0.5897.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_116.0.5845.42.json	2023-07-22 01:06:52.650740792 +0000
-+++ ./browser_apis/chrome-unstable_117.0.5897.3.json	2023-07-22 01:07:51.500154810 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8050,
-+  "browserApiCount": 8058,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -619,6 +619,8 @@
-     "CSSSkewY",
-     "CSSSkewY.prototype",
-     "CSSSkewY.prototype.ay",
-+    "CSSStartingStyleRule",
-+    "CSSStartingStyleRule.prototype",
-     "CSSStyleDeclaration",
-     "CSSStyleDeclaration.prototype",
-     "CSSStyleDeclaration.prototype.cssFloat",
-@@ -2988,6 +2990,7 @@
-     "MIDIOutputMap.prototype.size",
-     "MIDIOutputMap.prototype.values",
-     "Map",
-+    "Map.groupBy",
-     "Map.prototype",
-     "Map.prototype.clear",
-     "Map.prototype.delete",
-@@ -3582,6 +3585,7 @@
-     "Object.getOwnPropertyNames",
-     "Object.getOwnPropertySymbols",
-     "Object.getPrototypeOf",
-+    "Object.groupBy",
-     "Object.hasOwn",
-     "Object.is",
-     "Object.isExtensible",
-@@ -4232,6 +4236,7 @@
-     "PerformanceResourceTiming.prototype.connectEnd",
-     "PerformanceResourceTiming.prototype.connectStart",
-     "PerformanceResourceTiming.prototype.decodedBodySize",
-+    "PerformanceResourceTiming.prototype.deliveryType",
-     "PerformanceResourceTiming.prototype.domainLookupEnd",
-     "PerformanceResourceTiming.prototype.domainLookupStart",
-     "PerformanceResourceTiming.prototype.encodedBodySize",
-@@ -4578,10 +4583,13 @@
-     "RTCRtpTransceiver.prototype",
-     "RTCRtpTransceiver.prototype.currentDirection",
-     "RTCRtpTransceiver.prototype.direction",
-+    "RTCRtpTransceiver.prototype.getHeaderExtensionsToNegotiate",
-+    "RTCRtpTransceiver.prototype.getNegotiatedHeaderExtensions",
-     "RTCRtpTransceiver.prototype.mid",
-     "RTCRtpTransceiver.prototype.receiver",
-     "RTCRtpTransceiver.prototype.sender",
-     "RTCRtpTransceiver.prototype.setCodecPreferences",
-+    "RTCRtpTransceiver.prototype.setHeaderExtensionsToNegotiate",
-     "RTCRtpTransceiver.prototype.stop",
-     "RTCRtpTransceiver.prototype.stopped",
-     "RTCSctpTransport",
 ```
 
   <!-- browserapis:end -->

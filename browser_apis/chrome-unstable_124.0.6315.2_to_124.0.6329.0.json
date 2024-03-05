@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "124.0.6315.2",
+    "to": "124.0.6329.0"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLTemplateElement.prototype.shadowRootClonable",
+      "Option.prototype.constructor.prototype.setHTMLUnsafe",
+      "RTCIceCandidate.prototype.relayProtocol",
+      "RTCIceCandidate.prototype.url",
+      "ShadowRoot.prototype.clonable",
+      "ShadowRoot.prototype.setHTMLUnsafe",
+      "XMLDocument.prototype.constructor.parseHTMLUnsafe"
+    ],
+    "removed": []
+  }
+}

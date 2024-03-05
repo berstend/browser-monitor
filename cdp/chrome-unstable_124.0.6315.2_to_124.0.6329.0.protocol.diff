@@ -1,0 +1,24 @@
+--- ./cdp/chrome-unstable_124.0.6315.2.protocol.json	2024-03-05 00:53:14.633113866 +0000
++++ ./cdp/chrome-unstable_124.0.6329.0.protocol.json	2024-03-05 00:53:48.265216776 +0000
+@@ -1468,7 +1468,12 @@
+             "InvalidRegisterOsTriggerHeader",
+             "WebAndOsHeaders",
+             "NoWebOrOsSupport",
+-            "NavigationRegistrationWithoutTransientUserActivation"
++            "NavigationRegistrationWithoutTransientUserActivation",
++            "InvalidInfoHeader",
++            "NoRegisterSourceHeader",
++            "NoRegisterTriggerHeader",
++            "NoRegisterOsSourceHeader",
++            "NoRegisterOsTriggerHeader"
+           ]
+         },
+         {
+@@ -17462,6 +17467,7 @@
+             "SmartCard",
+             "LiveMediaStreamTrack",
+             "UnloadHandler",
++            "ParserAborted",
+             "ContentSecurityHandler",
+             "ContentWebAuthenticationAPI",
+             "ContentFileChooser",
