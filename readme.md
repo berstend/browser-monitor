@@ -988,6 +988,46 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 124.0.6342.3 (`2024-3-8`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6329.0_to_124.0.6342.3.diff), [json](./browser_apis/chrome-unstable_124.0.6329.0_to_124.0.6342.3.json), [full list](./browser_apis/chrome-unstable_124.0.6342.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_124.0.6329.0.json	2024-03-09 00:51:35.591963008 +0000
++++ ./browser_apis/chrome-unstable_124.0.6342.3.json	2024-03-09 00:52:06.492211365 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8249,
++  "browserApiCount": 8252,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2062,6 +2062,7 @@
+     "HTMLIFrameElement.prototype.referrerPolicy",
+     "HTMLIFrameElement.prototype.sandbox",
+     "HTMLIFrameElement.prototype.scrolling",
++    "HTMLIFrameElement.prototype.sharedStorageWritable",
+     "HTMLIFrameElement.prototype.src",
+     "HTMLIFrameElement.prototype.srcdoc",
+     "HTMLIFrameElement.prototype.width",
+@@ -2723,6 +2724,7 @@
+     "Image.prototype.naturalHeight",
+     "Image.prototype.naturalWidth",
+     "Image.prototype.referrerPolicy",
++    "Image.prototype.sharedStorageWritable",
+     "Image.prototype.sizes",
+     "Image.prototype.src",
+     "Image.prototype.srcset",
+@@ -4786,6 +4788,7 @@
+     "ReadableStream.prototype.pipeThrough",
+     "ReadableStream.prototype.pipeTo",
+     "ReadableStream.prototype.tee",
++    "ReadableStream.prototype.values",
+     "ReadableStreamBYOBReader",
+     "ReadableStreamBYOBReader.prototype",
+     "ReadableStreamBYOBReader.prototype.cancel",
+```
+
+  
 #### 124.0.6329.0 (`2024-3-4`) ⚡
 Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6315.2_to_124.0.6329.0.diff), [json](./browser_apis/chrome-unstable_124.0.6315.2_to_124.0.6329.0.json), [full list](./browser_apis/chrome-unstable_124.0.6329.0.json))
  ```diff
@@ -2296,75 +2336,5 @@ No browser API changes.
   
 #### 117.0.5927.0 (`2023-8-4`) 
 No browser API changes.
-
-  
-#### 117.0.5911.2 (`2023-7-27`) ⚡
-Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_117.0.5897.3_to_117.0.5911.2.diff), [json](./browser_apis/chrome-unstable_117.0.5897.3_to_117.0.5911.2.json), [full list](./browser_apis/chrome-unstable_117.0.5911.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_117.0.5897.3.json	2023-07-28 01:00:41.696068248 +0000
-+++ ./browser_apis/chrome-unstable_117.0.5911.2.json	2023-07-28 01:01:09.304627642 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8058,
-+  "browserApiCount": 8077,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -901,6 +901,7 @@
-     "CustomElementRegistry.prototype",
-     "CustomElementRegistry.prototype.define",
-     "CustomElementRegistry.prototype.get",
-+    "CustomElementRegistry.prototype.getName",
-     "CustomElementRegistry.prototype.upgrade",
-     "CustomElementRegistry.prototype.whenDefined",
-     "CustomEvent",
-@@ -2017,6 +2018,7 @@
-     "HTMLIFrameElement.prototype.marginHeight",
-     "HTMLIFrameElement.prototype.marginWidth",
-     "HTMLIFrameElement.prototype.name",
-+    "HTMLIFrameElement.prototype.privateToken",
-     "HTMLIFrameElement.prototype.referrerPolicy",
-     "HTMLIFrameElement.prototype.sandbox",
-     "HTMLIFrameElement.prototype.scrolling",
-@@ -2856,6 +2858,20 @@
-     "Intl.v8BreakIterator.prototype.next",
-     "Intl.v8BreakIterator.prototype.resolvedOptions",
-     "Intl.v8BreakIterator.supportedLocalesOf",
-+    "Iterator",
-+    "Iterator.from",
-+    "Iterator.prototype",
-+    "Iterator.prototype.drop",
-+    "Iterator.prototype.every",
-+    "Iterator.prototype.filter",
-+    "Iterator.prototype.find",
-+    "Iterator.prototype.flatMap",
-+    "Iterator.prototype.forEach",
-+    "Iterator.prototype.map",
-+    "Iterator.prototype.reduce",
-+    "Iterator.prototype.some",
-+    "Iterator.prototype.take",
-+    "Iterator.prototype.toArray",
-     "JSON",
-     "JSON.isRawJSON",
-     "JSON.parse",
-@@ -7252,6 +7268,8 @@
-     "XMLDocument.prototype.getElementsByTagNameNS",
-     "XMLDocument.prototype.getSelection",
-     "XMLDocument.prototype.hasFocus",
-+    "XMLDocument.prototype.hasPrivateToken",
-+    "XMLDocument.prototype.hasRedemptionRecord",
-     "XMLDocument.prototype.head",
-     "XMLDocument.prototype.hidden",
-     "XMLDocument.prototype.images",
-@@ -7431,6 +7449,7 @@
-     "XMLHttpRequest.prototype.responseURL",
-     "XMLHttpRequest.prototype.responseXML",
-     "XMLHttpRequest.prototype.send",
-+    "XMLHttpRequest.prototype.setPrivateToken",
-     "XMLHttpRequest.prototype.setRequestHeader",
-     "XMLHttpRequest.prototype.status",
-     "XMLHttpRequest.prototype.statusText",
-```
 
   <!-- browserapis:end -->

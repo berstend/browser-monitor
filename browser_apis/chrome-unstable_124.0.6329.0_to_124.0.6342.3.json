@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "124.0.6329.0",
+    "to": "124.0.6342.3"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLIFrameElement.prototype.sharedStorageWritable",
+      "Image.prototype.sharedStorageWritable",
+      "ReadableStream.prototype.values"
+    ],
+    "removed": []
+  }
+}
