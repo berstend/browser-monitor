@@ -988,6 +988,39 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 124.0.6356.2 (`2024-3-14`) ⚡
+Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6342.3_to_124.0.6356.2.diff), [json](./browser_apis/chrome-unstable_124.0.6342.3_to_124.0.6356.2.json), [full list](./browser_apis/chrome-unstable_124.0.6356.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_124.0.6342.3.json	2024-03-15 00:54:08.148994999 +0000
++++ ./browser_apis/chrome-unstable_124.0.6356.2.json	2024-03-15 00:54:43.724747284 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8252,
++  "browserApiCount": 8262,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -7243,6 +7243,16 @@
+     "WebSocket.prototype.readyState",
+     "WebSocket.prototype.send",
+     "WebSocket.prototype.url",
++    "WebSocketError",
++    "WebSocketError.prototype",
++    "WebSocketError.prototype.closeCode",
++    "WebSocketError.prototype.reason",
++    "WebSocketStream",
++    "WebSocketStream.prototype",
++    "WebSocketStream.prototype.close",
++    "WebSocketStream.prototype.closed",
++    "WebSocketStream.prototype.opened",
++    "WebSocketStream.prototype.url",
+     "WebTransport",
+     "WebTransport.prototype",
+     "WebTransport.prototype.close",
+```
+
+  
 #### 124.0.6342.3 (`2024-3-8`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6329.0_to_124.0.6342.3.diff), [json](./browser_apis/chrome-unstable_124.0.6329.0_to_124.0.6342.3.json), [full list](./browser_apis/chrome-unstable_124.0.6342.3.json))
  ```diff
@@ -2331,10 +2364,6 @@ No browser API changes.
 
   
 #### 117.0.5938.0 (`2023-8-10`) 
-No browser API changes.
-
-  
-#### 117.0.5927.0 (`2023-8-4`) 
 No browser API changes.
 
   <!-- browserapis:end -->

@@ -1,0 +1,185 @@
+--- ./cdp/chrome-unstable_124.0.6342.3.protocol.json	2024-03-15 00:54:08.284994295 +0000
++++ ./cdp/chrome-unstable_124.0.6356.2.protocol.json	2024-03-15 00:54:43.732747231 +0000
+@@ -13818,6 +13818,27 @@
+               "description": "Connection type if known.",
+               "optional": true,
+               "$ref": "ConnectionType"
++            },
++            {
++              "name": "packetLoss",
++              "description": "WebRTC packet loss (percent, 0-100). 0 disables packet loss emulation, 100 drops all the packets.",
++              "experimental": true,
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "packetQueueLength",
++              "description": "WebRTC packet queue length (packet). 0 removes any queue length limitations.",
++              "experimental": true,
++              "optional": true,
++              "type": "integer"
++            },
++            {
++              "name": "packetReordering",
++              "description": "WebRTC packetReordering feature.",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -16472,7 +16493,7 @@
+             "ch-ua-platform",
+             "ch-ua-model",
+             "ch-ua-mobile",
+-            "ch-ua-form-factor",
++            "ch-ua-form-factors",
+             "ch-ua-full-version",
+             "ch-ua-full-version-list",
+             "ch-ua-platform-version",
+@@ -17418,6 +17439,7 @@
+             "CookieDisabled",
+             "HTTPAuthRequired",
+             "CookieFlushed",
++            "BroadcastChannelOnMessage",
+             "WebSocket",
+             "WebTransport",
+             "WebRTC",
+@@ -20387,91 +20409,6 @@
+           ]
+         },
+         {
+-          "id": "InterestGroupAd",
+-          "description": "Ad advertising element inside an interest group.",
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "renderURL",
+-              "type": "string"
+-            },
+-            {
+-              "name": "metadata",
+-              "optional": true,
+-              "type": "string"
+-            }
+-          ]
+-        },
+-        {
+-          "id": "InterestGroupDetails",
+-          "description": "The full details of an interest group.",
+-          "type": "object",
+-          "properties": [
+-            {
+-              "name": "ownerOrigin",
+-              "type": "string"
+-            },
+-            {
+-              "name": "name",
+-              "type": "string"
+-            },
+-            {
+-              "name": "expirationTime",
+-              "$ref": "Network.TimeSinceEpoch"
+-            },
+-            {
+-              "name": "joiningOrigin",
+-              "type": "string"
+-            },
+-            {
+-              "name": "biddingLogicURL",
+-              "optional": true,
+-              "type": "string"
+-            },
+-            {
+-              "name": "biddingWasmHelperURL",
+-              "optional": true,
+-              "type": "string"
+-            },
+-            {
+-              "name": "updateURL",
+-              "optional": true,
+-              "type": "string"
+-            },
+-            {
+-              "name": "trustedBiddingSignalsURL",
+-              "optional": true,
+-              "type": "string"
+-            },
+-            {
+-              "name": "trustedBiddingSignalsKeys",
+-              "type": "array",
+-              "items": {
+-                "type": "string"
+-              }
+-            },
+-            {
+-              "name": "userBiddingSignals",
+-              "optional": true,
+-              "type": "string"
+-            },
+-            {
+-              "name": "ads",
+-              "type": "array",
+-              "items": {
+-                "$ref": "InterestGroupAd"
+-              }
+-            },
+-            {
+-              "name": "adComponents",
+-              "type": "array",
+-              "items": {
+-                "$ref": "InterestGroupAd"
+-              }
+-            }
+-          ]
+-        },
+-        {
+           "id": "SharedStorageAccessType",
+           "description": "Enum of shared storage access types.",
+           "type": "string",
+@@ -20491,7 +20428,11 @@
+             "workletKeys",
+             "workletEntries",
+             "workletLength",
+-            "workletRemainingBudget"
++            "workletRemainingBudget",
++            "headerSet",
++            "headerAppend",
++            "headerDelete",
++            "headerClear"
+           ]
+         },
+         {
+@@ -20605,19 +20546,19 @@
+             },
+             {
+               "name": "key",
+-              "description": "Key for a specific entry in an origin's shared storage.\nPresent only for SharedStorageAccessType.documentSet,\nSharedStorageAccessType.documentAppend,\nSharedStorageAccessType.documentDelete,\nSharedStorageAccessType.workletSet,\nSharedStorageAccessType.workletAppend,\nSharedStorageAccessType.workletDelete, and\nSharedStorageAccessType.workletGet.",
++              "description": "Key for a specific entry in an origin's shared storage.\nPresent only for SharedStorageAccessType.documentSet,\nSharedStorageAccessType.documentAppend,\nSharedStorageAccessType.documentDelete,\nSharedStorageAccessType.workletSet,\nSharedStorageAccessType.workletAppend,\nSharedStorageAccessType.workletDelete,\nSharedStorageAccessType.workletGet,\nSharedStorageAccessType.headerSet,\nSharedStorageAccessType.headerAppend, and\nSharedStorageAccessType.headerDelete.",
+               "optional": true,
+               "type": "string"
+             },
+             {
+               "name": "value",
+-              "description": "Value for a specific entry in an origin's shared storage.\nPresent only for SharedStorageAccessType.documentSet,\nSharedStorageAccessType.documentAppend,\nSharedStorageAccessType.workletSet, and\nSharedStorageAccessType.workletAppend.",
++              "description": "Value for a specific entry in an origin's shared storage.\nPresent only for SharedStorageAccessType.documentSet,\nSharedStorageAccessType.documentAppend,\nSharedStorageAccessType.workletSet,\nSharedStorageAccessType.workletAppend,\nSharedStorageAccessType.headerSet, and\nSharedStorageAccessType.headerAppend.",
+               "optional": true,
+               "type": "string"
+             },
+             {
+               "name": "ignoreIfPresent",
+-              "description": "Whether or not to set an entry for a key if that key is already present.\nPresent only for SharedStorageAccessType.documentSet and\nSharedStorageAccessType.workletSet.",
++              "description": "Whether or not to set an entry for a key if that key is already present.\nPresent only for SharedStorageAccessType.documentSet,\nSharedStorageAccessType.workletSet, and\nSharedStorageAccessType.headerSet.",
+               "optional": true,
+               "type": "boolean"
+             }
+@@ -21430,7 +21371,8 @@
+           "returns": [
+             {
+               "name": "details",
+-              "$ref": "InterestGroupDetails"
++              "description": "This largely corresponds to:\nhttps://wicg.github.io/turtledove/#dictdef-generatebidinterestgroup\nbut has absolute expirationTime instead of relative lifetimeMs and\nalso adds joiningOrigin.",
++              "type": "object"
+             }
+           ]
+         },

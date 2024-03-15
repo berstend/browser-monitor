@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "124.0.6342.3",
+    "to": "124.0.6356.2"
+  },
+  "browserApis": {
+    "added": [
+      "WebSocketError",
+      "WebSocketError.prototype",
+      "WebSocketError.prototype.closeCode",
+      "WebSocketError.prototype.reason",
+      "WebSocketStream",
+      "WebSocketStream.prototype",
+      "WebSocketStream.prototype.close",
+      "WebSocketStream.prototype.closed",
+      "WebSocketStream.prototype.opened",
+      "WebSocketStream.prototype.url"
+    ],
+    "removed": []
+  }
+}
