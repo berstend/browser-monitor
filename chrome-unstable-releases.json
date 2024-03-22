@@ -1,6 +1,50 @@
 [
   {
     "channel": "Dev",
+    "chromium_main_branch_position": 1275351,
+    "hashes": {
+      "angle": "7047d8205cecc2afb94cf2cb5cd32c06f4460b16",
+      "chromium": "29de32c3a773d5be395c2a6d8981d108e970332e",
+      "dawn": "d30457a5d3fec47bafe6f429cdb1c3c3d011de1e",
+      "devtools": "fd3f7672f5ca1cd6ce0cf2d675c6da5efbe588ec",
+      "pdfium": "11b5f3bdb8a271e3581b71e590d6c98e8635749e",
+      "skia": "40729167b5cc487a56e9b8c00303527b941e1023",
+      "v8": "f01abc61cf67db869ab8cebb1e1789ee3b11e6f5",
+      "webrtc": "1a37aa197edbebcc43ac83b4b88d58787b05b3b2"
+    },
+    "milestone": 125,
+    "platform": "Linux",
+    "previous_version": "124.0.6356.2",
+    "time": 1711042800000,
+    "version": "125.0.6368.2",
+    "previousVersion": "124.0.6356.2",
+    "versionMajor": 125,
+    "date": "2024-3-21",
+    "browserApis": {
+      "count": 8267,
+      "added": 5,
+      "removed": 0
+    },
+    "cdp": {
+      "protocolHash": "1fd554a3",
+      "commandsCount": 583,
+      "commandsHash": "8a755284",
+      "eventsCount": 190,
+      "eventsHash": "45ae862c"
+    },
+    "previousHashes": {
+      "angle": "567334691850b246edf977fa1de10c50b457902a",
+      "chromium": "e610f8f11dcc711738e6c3d3f9789b51bf7689b6",
+      "dawn": "b77c1ae00dce6b2f9908a56e471d195869b3d2e1",
+      "devtools": "bfd7db09bac19ccae8e17f90a7ed323081890f1e",
+      "pdfium": "7063716b1f8ab76d0321e459de70a3e8f1e985fb",
+      "skia": "1ad0d0fabe7a2b0b4ee8b4ded0d1d54fd9f078cf",
+      "v8": "f3bfa6e4c8052d8d108b8844282e6589f21fefaf",
+      "webrtc": "2725317b1f5eccee462988777881c76f0b2a5cfa"
+    }
+  },
+  {
+    "channel": "Dev",
     "chromium_main_branch_position": 1272107,
     "hashes": {
       "angle": "567334691850b246edf977fa1de10c50b457902a",
@@ -1259,50 +1303,6 @@
     },
     "cdp": {
       "protocolHash": "a802ba1e",
-      "commandsCount": 568,
-      "commandsHash": "298e24c4",
-      "eventsCount": 186,
-      "eventsHash": "5945f927"
-    },
-    "previousHashes": {
-      "angle": "0581a81c8f3ee9409c5564352246cb4ddf18e0a1",
-      "chromium": "0952582eb629901ac424a6500f2dee3ea7afd34d",
-      "dawn": "807bd98a3f1ab689ef076475c489bf3b126c825c",
-      "devtools": "c80c942e26c32cd9dea0c92b4178c398c7878d0f",
-      "pdfium": "df6fed9f3cbc13b656562b4775ea330c91732c71",
-      "skia": "28bc3deb0eafbb8ece44a0ce2fce9ecde638f17d",
-      "v8": "fe608691065e23ae83720392bf61a59e8166bee6",
-      "webrtc": "82e5f91a2bdf955aa870142008fbdc9ac12f6acd"
-    }
-  },
-  {
-    "channel": "Dev",
-    "chromium_main_branch_position": 1181205,
-    "hashes": {
-      "angle": "0581a81c8f3ee9409c5564352246cb4ddf18e0a1",
-      "chromium": "0952582eb629901ac424a6500f2dee3ea7afd34d",
-      "dawn": "807bd98a3f1ab689ef076475c489bf3b126c825c",
-      "devtools": "c80c942e26c32cd9dea0c92b4178c398c7878d0f",
-      "pdfium": "df6fed9f3cbc13b656562b4775ea330c91732c71",
-      "skia": "28bc3deb0eafbb8ece44a0ce2fce9ecde638f17d",
-      "v8": "fe608691065e23ae83720392bf61a59e8166bee6",
-      "webrtc": "82e5f91a2bdf955aa870142008fbdc9ac12f6acd"
-    },
-    "milestone": 117,
-    "platform": "Linux",
-    "previous_version": "117.0.5927.0",
-    "time": 1691697720000,
-    "version": "117.0.5938.0",
-    "previousVersion": "117.0.5927.0",
-    "versionMajor": 117,
-    "date": "2023-8-10",
-    "browserApis": {
-      "count": 8077,
-      "added": 0,
-      "removed": 0
-    },
-    "cdp": {
-      "protocolHash": "bd88b01b",
       "commandsCount": 568,
       "commandsHash": "298e24c4",
       "eventsCount": 186,

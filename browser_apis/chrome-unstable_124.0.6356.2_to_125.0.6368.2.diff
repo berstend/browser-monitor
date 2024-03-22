@@ -1,0 +1,36 @@
+--- ./browser_apis/chrome-unstable_124.0.6356.2.json	2024-03-22 00:53:41.025251367 +0000
++++ ./browser_apis/chrome-unstable_125.0.6368.2.json	2024-03-22 00:54:17.069251129 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8262,
++  "browserApiCount": 8267,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4128,6 +4128,7 @@
+     "Option.prototype.constructor.prototype.webkitMatchesSelector",
+     "Option.prototype.constructor.prototype.webkitRequestFullScreen",
+     "Option.prototype.constructor.prototype.webkitRequestFullscreen",
++    "Option.prototype.constructor.prototype.writingSuggestions",
+     "Option.prototype.defaultSelected",
+     "Option.prototype.disabled",
+     "Option.prototype.form",
+@@ -4151,6 +4152,9 @@
+     "OverconstrainedError.prototype.constraint",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
++    "PageSwapEvent",
++    "PageSwapEvent.prototype",
++    "PageSwapEvent.prototype.activation",
+     "PageTransitionEvent",
+     "PageTransitionEvent.prototype",
+     "PageTransitionEvent.prototype.persisted",
+@@ -8039,6 +8043,7 @@
+     "onpagehide",
+     "onpagereveal",
+     "onpageshow",
++    "onpageswap",
+     "onpause",
+     "onplay",
+     "onplaying",

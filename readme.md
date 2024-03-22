@@ -1142,6 +1142,48 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 125.0.6368.2 (`2024-3-21`) ⚡
+Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6356.2_to_125.0.6368.2.diff), [json](./browser_apis/chrome-unstable_124.0.6356.2_to_125.0.6368.2.json), [full list](./browser_apis/chrome-unstable_125.0.6368.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_124.0.6356.2.json	2024-03-22 00:53:41.025251367 +0000
++++ ./browser_apis/chrome-unstable_125.0.6368.2.json	2024-03-22 00:54:17.069251129 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8262,
++  "browserApiCount": 8267,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4128,6 +4128,7 @@
+     "Option.prototype.constructor.prototype.webkitMatchesSelector",
+     "Option.prototype.constructor.prototype.webkitRequestFullScreen",
+     "Option.prototype.constructor.prototype.webkitRequestFullscreen",
++    "Option.prototype.constructor.prototype.writingSuggestions",
+     "Option.prototype.defaultSelected",
+     "Option.prototype.disabled",
+     "Option.prototype.form",
+@@ -4151,6 +4152,9 @@
+     "OverconstrainedError.prototype.constraint",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
++    "PageSwapEvent",
++    "PageSwapEvent.prototype",
++    "PageSwapEvent.prototype.activation",
+     "PageTransitionEvent",
+     "PageTransitionEvent.prototype",
+     "PageTransitionEvent.prototype.persisted",
+@@ -8039,6 +8043,7 @@
+     "onpagehide",
+     "onpagereveal",
+     "onpageshow",
++    "onpageswap",
+     "onpause",
+     "onplay",
+     "onplaying",
+```
+
+  
 #### 124.0.6356.2 (`2024-3-14`) ⚡
 Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6342.3_to_124.0.6356.2.diff), [json](./browser_apis/chrome-unstable_124.0.6342.3_to_124.0.6356.2.json), [full list](./browser_apis/chrome-unstable_124.0.6356.2.json))
  ```diff
@@ -2514,10 +2556,6 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5951.0
 
   
 #### 118.0.5951.0 (`2023-8-17`) 
-No browser API changes.
-
-  
-#### 117.0.5938.0 (`2023-8-10`) 
 No browser API changes.
 
   <!-- browserapis:end -->

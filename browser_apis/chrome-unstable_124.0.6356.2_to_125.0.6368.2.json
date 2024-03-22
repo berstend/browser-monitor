@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "124.0.6356.2",
+    "to": "125.0.6368.2"
+  },
+  "browserApis": {
+    "added": [
+      "Option.prototype.constructor.prototype.writingSuggestions",
+      "PageSwapEvent",
+      "PageSwapEvent.prototype",
+      "PageSwapEvent.prototype.activation",
+      "onpageswap"
+    ],
+    "removed": []
+  }
+}
