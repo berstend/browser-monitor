@@ -1,0 +1,25 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "125.0.6368.2",
+    "to": "125.0.6382.3"
+  },
+  "browserApis": {
+    "added": [
+      "PressureObserver",
+      "PressureObserver.prototype",
+      "PressureObserver.prototype.disconnect",
+      "PressureObserver.prototype.observe",
+      "PressureObserver.prototype.takeRecords",
+      "PressureObserver.prototype.unobserve",
+      "PressureObserver.supportedSources",
+      "PressureRecord",
+      "PressureRecord.prototype",
+      "PressureRecord.prototype.source",
+      "PressureRecord.prototype.state",
+      "PressureRecord.prototype.time",
+      "PressureRecord.prototype.toJSON"
+    ],
+    "removed": []
+  }
+}

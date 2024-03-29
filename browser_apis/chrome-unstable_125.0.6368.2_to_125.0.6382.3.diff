@@ -1,0 +1,30 @@
+--- ./browser_apis/chrome-unstable_125.0.6368.2.json	2024-03-29 00:54:27.290156055 +0000
++++ ./browser_apis/chrome-unstable_125.0.6382.3.json	2024-03-29 00:54:45.858534444 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8267,
++  "browserApiCount": 8280,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4501,6 +4501,19 @@
+     "PresentationRequest.prototype.onconnectionavailable",
+     "PresentationRequest.prototype.reconnect",
+     "PresentationRequest.prototype.start",
++    "PressureObserver",
++    "PressureObserver.prototype",
++    "PressureObserver.prototype.disconnect",
++    "PressureObserver.prototype.observe",
++    "PressureObserver.prototype.takeRecords",
++    "PressureObserver.prototype.unobserve",
++    "PressureObserver.supportedSources",
++    "PressureRecord",
++    "PressureRecord.prototype",
++    "PressureRecord.prototype.source",
++    "PressureRecord.prototype.state",
++    "PressureRecord.prototype.time",
++    "PressureRecord.prototype.toJSON",
+     "ProcessingInstruction",
+     "ProcessingInstruction.prototype",
+     "ProcessingInstruction.prototype.sheet",

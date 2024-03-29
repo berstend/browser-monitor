@@ -1142,6 +1142,42 @@ Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_116.0.5845.18
   
 ### chrome-unstable
   
+#### 125.0.6382.3 (`2024-3-28`) ⚡
+Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6368.2_to_125.0.6382.3.diff), [json](./browser_apis/chrome-unstable_125.0.6368.2_to_125.0.6382.3.json), [full list](./browser_apis/chrome-unstable_125.0.6382.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_125.0.6368.2.json	2024-03-29 00:54:27.290156055 +0000
++++ ./browser_apis/chrome-unstable_125.0.6382.3.json	2024-03-29 00:54:45.858534444 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8267,
++  "browserApiCount": 8280,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4501,6 +4501,19 @@
+     "PresentationRequest.prototype.onconnectionavailable",
+     "PresentationRequest.prototype.reconnect",
+     "PresentationRequest.prototype.start",
++    "PressureObserver",
++    "PressureObserver.prototype",
++    "PressureObserver.prototype.disconnect",
++    "PressureObserver.prototype.observe",
++    "PressureObserver.prototype.takeRecords",
++    "PressureObserver.prototype.unobserve",
++    "PressureObserver.supportedSources",
++    "PressureRecord",
++    "PressureRecord.prototype",
++    "PressureRecord.prototype.source",
++    "PressureRecord.prototype.state",
++    "PressureRecord.prototype.time",
++    "PressureRecord.prototype.toJSON",
+     "ProcessingInstruction",
+     "ProcessingInstruction.prototype",
+     "ProcessingInstruction.prototype.sheet",
+```
+
+  
 #### 125.0.6368.2 (`2024-3-21`) ⚡
 Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6356.2_to_125.0.6368.2.diff), [json](./browser_apis/chrome-unstable_124.0.6356.2_to_125.0.6368.2.json), [full list](./browser_apis/chrome-unstable_125.0.6368.2.json))
  ```diff
@@ -2553,9 +2589,5 @@ Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5951.0
      "CSSSkew.prototype",
      "CSSSkew.prototype.ax",
 ```
-
-  
-#### 118.0.5951.0 (`2023-8-17`) 
-No browser API changes.
 
   <!-- browserapis:end -->
