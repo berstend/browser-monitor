@@ -1,0 +1,94 @@
+--- ./cdp/chrome-unstable_125.0.6382.3.protocol.json	2024-04-06 00:53:19.914801794 +0000
++++ ./cdp/chrome-unstable_125.0.6396.3.protocol.json	2024-04-06 00:53:41.190780741 +0000
+@@ -9121,14 +9121,31 @@
+             },
+             {
+               "name": "devicePosture",
+-              "description": "If set, the posture of a foldable device. If not set the posture is set\nto continuous.",
++              "description": "If set, the posture of a foldable device. If not set the posture is set\nto continuous.\nDeprecated, use Emulation.setDevicePostureOverride.",
+               "experimental": true,
++              "deprecated": true,
+               "optional": true,
+               "$ref": "DevicePosture"
+             }
+           ]
+         },
+         {
++          "name": "setDevicePostureOverride",
++          "description": "Start reporting the given posture value to the Device Posture API.\nThis override can also be set in setDeviceMetricsOverride().",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "posture",
++              "$ref": "DevicePosture"
++            }
++          ]
++        },
++        {
++          "name": "clearDevicePostureOverride",
++          "description": "Clears a device posture override set with either setDeviceMetricsOverride()\nor setDevicePostureOverride() and starts using posture information from the\nplatform again.\nDoes nothing if no override is set.",
++          "experimental": true
++        },
++        {
+           "name": "setScrollbarsHidden",
+           "experimental": true,
+           "parameters": [
+@@ -12548,6 +12565,12 @@
+               "type": "boolean"
+             },
+             {
++              "name": "fromEarlyHints",
++              "description": "Specifies that the request was served from the prefetch cache.",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
+               "name": "serviceWorkerRouterInfo",
+               "description": "Information about how Service Worker Static Router was used.",
+               "experimental": true,
+@@ -12968,6 +12991,11 @@
+               "$ref": "CookieExemptionReason"
+             },
+             {
++              "name": "cookieLine",
++              "description": "The string representing this individual cookie as it would appear in the header.",
++              "type": "string"
++            },
++            {
+               "name": "cookie",
+               "description": "The cookie object representing the cookie.",
+               "$ref": "Cookie"
+@@ -15109,6 +15137,23 @@
+           ]
+         },
+         {
++          "name": "responseReceivedEarlyHints",
++          "description": "Fired when 103 Early Hints headers is received in addition to the common response.\nNot every responseReceived event will have an responseReceivedEarlyHints fired.\nOnly one responseReceivedEarlyHints may be fired for eached responseReceived event.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "requestId",
++              "description": "Request identifier. Used to match this information to another responseReceived event.",
++              "$ref": "RequestId"
++            },
++            {
++              "name": "headers",
++              "description": "Raw response headers as they were received over the wire.",
++              "$ref": "Headers"
++            }
++          ]
++        },
++        {
+           "name": "trustTokenOperationDone",
+           "description": "Fired exactly once for each Trust Token operation. Depending on\nthe type of the operation and whether the operation succeeded or\nfailed, the event is fired before the corresponding request was sent\nor after the response was received.",
+           "experimental": true,
+@@ -20924,7 +20969,8 @@
+             "destinationGlobalLimitReached",
+             "destinationBothLimitsReached",
+             "reportingOriginsPerSiteLimitReached",
+-            "exceedsMaxChannelCapacity"
++            "exceedsMaxChannelCapacity",
++            "exceedsMaxTriggerStateCardinality"
+           ]
+         },
+         {

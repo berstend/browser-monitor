@@ -1029,6 +1029,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 125.0.6396.3 (`2024-4-5`) 
+No browser API changes.
+
+  
 #### 125.0.6382.3 (`2024-3-28`) ⚡
 Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6368.2_to_125.0.6382.3.diff), [json](./browser_apis/chrome-unstable_125.0.6368.2_to_125.0.6382.3.json), [full list](./browser_apis/chrome-unstable_125.0.6382.3.json))
  ```diff
@@ -2448,33 +2452,6 @@ Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5966.0
      "TextMetrics.prototype.width",
      "TextTrack",
      "TextTrack.prototype",
-```
-
-  
-#### 118.0.5966.0 (`2023-8-24`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5951.0_to_118.0.5966.0.diff), [json](./browser_apis/chrome-unstable_118.0.5951.0_to_118.0.5966.0.json), [full list](./browser_apis/chrome-unstable_118.0.5966.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_118.0.5951.0.json	2023-08-25 00:52:16.435773570 +0000
-+++ ./browser_apis/chrome-unstable_118.0.5966.0.json	2023-08-25 00:52:47.585614544 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8077,
-+  "browserApiCount": 8081,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -609,6 +609,10 @@
-     "CSSScale.prototype.x",
-     "CSSScale.prototype.y",
-     "CSSScale.prototype.z",
-+    "CSSScopeRule",
-+    "CSSScopeRule.prototype",
-+    "CSSScopeRule.prototype.end",
-+    "CSSScopeRule.prototype.start",
-     "CSSSkew",
-     "CSSSkew.prototype",
-     "CSSSkew.prototype.ax",
 ```
 
   <!-- browserapis:end -->
