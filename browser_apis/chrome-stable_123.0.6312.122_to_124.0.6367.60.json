@@ -1,0 +1,39 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "123.0.6312.122",
+    "to": "124.0.6367.60"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLIFrameElement.prototype.sharedStorageWritable",
+      "HTMLTemplateElement.prototype.shadowRootClonable",
+      "Image.prototype.sharedStorageWritable",
+      "Option.prototype.constructor.prototype.setHTMLUnsafe",
+      "Option.prototype.constructor.prototype.writingSuggestions",
+      "PageSwapEvent",
+      "PageSwapEvent.prototype",
+      "PageSwapEvent.prototype.activation",
+      "RTCIceCandidate.prototype.relayProtocol",
+      "RTCIceCandidate.prototype.url",
+      "RTCRtpReceiver.prototype.jitterBufferTarget",
+      "ReadableStream.prototype.values",
+      "Request.prototype.targetAddressSpace",
+      "ShadowRoot.prototype.clonable",
+      "ShadowRoot.prototype.setHTMLUnsafe",
+      "WebSocketError",
+      "WebSocketError.prototype",
+      "WebSocketError.prototype.closeCode",
+      "WebSocketError.prototype.reason",
+      "WebSocketStream",
+      "WebSocketStream.prototype",
+      "WebSocketStream.prototype.close",
+      "WebSocketStream.prototype.closed",
+      "WebSocketStream.prototype.opened",
+      "WebSocketStream.prototype.url",
+      "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+      "onpageswap"
+    ],
+    "removed": []
+  }
+}

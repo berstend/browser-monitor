@@ -5,6 +5,159 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 124.0.6367.60 (`2024-4-16`) ⚡
+Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_123.0.6312.122_to_124.0.6367.60.diff), [json](./browser_apis/chrome-stable_123.0.6312.122_to_124.0.6367.60.json), [full list](./browser_apis/chrome-stable_124.0.6367.60.json))
+ ```diff
+--- ./browser_apis/chrome-stable_123.0.6312.122.json	2024-04-17 00:55:26.353795626 +0000
++++ ./browser_apis/chrome-stable_124.0.6367.60.json	2024-04-17 00:55:46.953966259 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8240,
++  "browserApiCount": 8267,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2062,6 +2062,7 @@
+     "HTMLIFrameElement.prototype.referrerPolicy",
+     "HTMLIFrameElement.prototype.sandbox",
+     "HTMLIFrameElement.prototype.scrolling",
++    "HTMLIFrameElement.prototype.sharedStorageWritable",
+     "HTMLIFrameElement.prototype.src",
+     "HTMLIFrameElement.prototype.srcdoc",
+     "HTMLIFrameElement.prototype.width",
+@@ -2433,6 +2434,7 @@
+     "HTMLTemplateElement",
+     "HTMLTemplateElement.prototype",
+     "HTMLTemplateElement.prototype.content",
++    "HTMLTemplateElement.prototype.shadowRootClonable",
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
+     "HTMLTextAreaElement",
+@@ -2722,6 +2724,7 @@
+     "Image.prototype.naturalHeight",
+     "Image.prototype.naturalWidth",
+     "Image.prototype.referrerPolicy",
++    "Image.prototype.sharedStorageWritable",
+     "Image.prototype.sizes",
+     "Image.prototype.src",
+     "Image.prototype.srcset",
+@@ -4108,6 +4111,7 @@
+     "Option.prototype.constructor.prototype.setAttributeNS",
+     "Option.prototype.constructor.prototype.setAttributeNode",
+     "Option.prototype.constructor.prototype.setAttributeNodeNS",
++    "Option.prototype.constructor.prototype.setHTMLUnsafe",
+     "Option.prototype.constructor.prototype.setPointerCapture",
+     "Option.prototype.constructor.prototype.shadowRoot",
+     "Option.prototype.constructor.prototype.showPopover",
+@@ -4124,6 +4128,7 @@
+     "Option.prototype.constructor.prototype.webkitMatchesSelector",
+     "Option.prototype.constructor.prototype.webkitRequestFullScreen",
+     "Option.prototype.constructor.prototype.webkitRequestFullscreen",
++    "Option.prototype.constructor.prototype.writingSuggestions",
+     "Option.prototype.defaultSelected",
+     "Option.prototype.disabled",
+     "Option.prototype.form",
+@@ -4147,6 +4152,9 @@
+     "OverconstrainedError.prototype.constraint",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
++    "PageSwapEvent",
++    "PageSwapEvent.prototype",
++    "PageSwapEvent.prototype.activation",
+     "PageTransitionEvent",
+     "PageTransitionEvent.prototype",
+     "PageTransitionEvent.prototype.persisted",
+@@ -4635,11 +4643,13 @@
+     "RTCIceCandidate.prototype.protocol",
+     "RTCIceCandidate.prototype.relatedAddress",
+     "RTCIceCandidate.prototype.relatedPort",
++    "RTCIceCandidate.prototype.relayProtocol",
+     "RTCIceCandidate.prototype.sdpMLineIndex",
+     "RTCIceCandidate.prototype.sdpMid",
+     "RTCIceCandidate.prototype.tcpType",
+     "RTCIceCandidate.prototype.toJSON",
+     "RTCIceCandidate.prototype.type",
++    "RTCIceCandidate.prototype.url",
+     "RTCIceCandidate.prototype.usernameFragment",
+     "RTCIceTransport",
+     "RTCIceTransport.prototype",
+@@ -4673,6 +4683,7 @@
+     "RTCRtpReceiver.prototype.getParameters",
+     "RTCRtpReceiver.prototype.getStats",
+     "RTCRtpReceiver.prototype.getSynchronizationSources",
++    "RTCRtpReceiver.prototype.jitterBufferTarget",
+     "RTCRtpReceiver.prototype.playoutDelayHint",
+     "RTCRtpReceiver.prototype.rtcpTransport",
+     "RTCRtpReceiver.prototype.track",
+@@ -4781,6 +4792,7 @@
+     "ReadableStream.prototype.pipeThrough",
+     "ReadableStream.prototype.pipeTo",
+     "ReadableStream.prototype.tee",
++    "ReadableStream.prototype.values",
+     "ReadableStreamBYOBReader",
+     "ReadableStreamBYOBReader.prototype",
+     "ReadableStreamBYOBReader.prototype.cancel",
+@@ -4893,6 +4905,7 @@
+     "Request.prototype.referrer",
+     "Request.prototype.referrerPolicy",
+     "Request.prototype.signal",
++    "Request.prototype.targetAddressSpace",
+     "Request.prototype.text",
+     "Request.prototype.url",
+     "ResizeObserver",
+@@ -5880,6 +5893,7 @@
+     "ShadowRoot.prototype.append",
+     "ShadowRoot.prototype.childElementCount",
+     "ShadowRoot.prototype.children",
++    "ShadowRoot.prototype.clonable",
+     "ShadowRoot.prototype.constructor",
+     "ShadowRoot.prototype.delegatesFocus",
+     "ShadowRoot.prototype.elementFromPoint",
+@@ -5901,6 +5915,7 @@
+     "ShadowRoot.prototype.querySelector",
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
++    "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+     "SharedWorker",
+@@ -7232,6 +7247,16 @@
+     "WebSocket.prototype.readyState",
+     "WebSocket.prototype.send",
+     "WebSocket.prototype.url",
++    "WebSocketError",
++    "WebSocketError.prototype",
++    "WebSocketError.prototype.closeCode",
++    "WebSocketError.prototype.reason",
++    "WebSocketStream",
++    "WebSocketStream.prototype",
++    "WebSocketStream.prototype.close",
++    "WebSocketStream.prototype.closed",
++    "WebSocketStream.prototype.opened",
++    "WebSocketStream.prototype.url",
+     "WebTransport",
+     "WebTransport.prototype",
+     "WebTransport.prototype.close",
+@@ -7377,6 +7402,7 @@
+     "XMLDocument.prototype.close",
+     "XMLDocument.prototype.compatMode",
+     "XMLDocument.prototype.constructor",
++    "XMLDocument.prototype.constructor.parseHTMLUnsafe",
+     "XMLDocument.prototype.contentType",
+     "XMLDocument.prototype.cookie",
+     "XMLDocument.prototype.createAttribute",
+@@ -8017,6 +8043,7 @@
+     "onpagehide",
+     "onpagereveal",
+     "onpageshow",
++    "onpageswap",
+     "onpause",
+     "onplay",
+     "onplaying",
+```
+
+  
 #### 123.0.6312.122 (`2024-4-10`) 
 No browser API changes.
 
@@ -1023,11 +1176,173 @@ No browser API changes.
 No browser API changes.
 
   
-#### 117.0.5938.92 (`2023-9-21`) 
-No browser API changes.
-
-  
 ### chrome-unstable
+  
+#### 125.0.6420.3 (`2024-4-16`) ⚡
+Added 51 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6396.3_to_125.0.6420.3.diff), [json](./browser_apis/chrome-unstable_125.0.6396.3_to_125.0.6420.3.json), [full list](./browser_apis/chrome-unstable_125.0.6420.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_125.0.6396.3.json	2024-04-17 00:55:26.405796222 +0000
++++ ./browser_apis/chrome-unstable_125.0.6420.3.json	2024-04-17 00:56:02.414092940 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8280,
++  "browserApiCount": 8331,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -566,6 +566,10 @@
+     "CSSPerspective",
+     "CSSPerspective.prototype",
+     "CSSPerspective.prototype.length",
++    "CSSPositionTryRule",
++    "CSSPositionTryRule.prototype",
++    "CSSPositionTryRule.prototype.name",
++    "CSSPositionTryRule.prototype.style",
+     "CSSPositionValue",
+     "CSSPositionValue.prototype",
+     "CSSPositionValue.prototype.x",
+@@ -1790,6 +1794,7 @@
+     "HTMLAllCollection.prototype.namedItem",
+     "HTMLAnchorElement",
+     "HTMLAnchorElement.prototype",
++    "HTMLAnchorElement.prototype.attributionSrc",
+     "HTMLAnchorElement.prototype.charset",
+     "HTMLAnchorElement.prototype.coords",
+     "HTMLAnchorElement.prototype.download",
+@@ -2292,6 +2297,7 @@
+     "HTMLScriptElement",
+     "HTMLScriptElement.prototype",
+     "HTMLScriptElement.prototype.async",
++    "HTMLScriptElement.prototype.attributionSrc",
+     "HTMLScriptElement.prototype.blocking",
+     "HTMLScriptElement.prototype.charset",
+     "HTMLScriptElement.prototype.crossOrigin",
+@@ -2437,6 +2443,7 @@
+     "HTMLTemplateElement.prototype.shadowRootClonable",
+     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
+     "HTMLTemplateElement.prototype.shadowRootMode",
++    "HTMLTemplateElement.prototype.shadowRootSerializable",
+     "HTMLTextAreaElement",
+     "HTMLTextAreaElement.prototype",
+     "HTMLTextAreaElement.prototype.autocomplete",
+@@ -2706,6 +2713,7 @@
+     "Image.prototype",
+     "Image.prototype.align",
+     "Image.prototype.alt",
++    "Image.prototype.attributionSrc",
+     "Image.prototype.border",
+     "Image.prototype.complete",
+     "Image.prototype.constructor",
+@@ -3354,6 +3362,18 @@
+     "MediaStreamEvent",
+     "MediaStreamEvent.prototype",
+     "MediaStreamEvent.prototype.stream",
++    "MediaStreamTrackAudioStats",
++    "MediaStreamTrackAudioStats.prototype",
++    "MediaStreamTrackAudioStats.prototype.averageLatency",
++    "MediaStreamTrackAudioStats.prototype.deliveredFrames",
++    "MediaStreamTrackAudioStats.prototype.deliveredFramesDuration",
++    "MediaStreamTrackAudioStats.prototype.latency",
++    "MediaStreamTrackAudioStats.prototype.maximumLatency",
++    "MediaStreamTrackAudioStats.prototype.minimumLatency",
++    "MediaStreamTrackAudioStats.prototype.resetLatency",
++    "MediaStreamTrackAudioStats.prototype.toJSON",
++    "MediaStreamTrackAudioStats.prototype.totalFrames",
++    "MediaStreamTrackAudioStats.prototype.totalFramesDuration",
+     "MediaStreamTrackEvent",
+     "MediaStreamTrackEvent.prototype",
+     "MediaStreamTrackEvent.prototype.track",
+@@ -3618,6 +3638,19 @@
+     "NodeIterator.prototype.referenceNode",
+     "NodeIterator.prototype.root",
+     "NodeIterator.prototype.whatToShow",
++    "NotRestoredReasonDetails",
++    "NotRestoredReasonDetails.prototype",
++    "NotRestoredReasonDetails.prototype.reason",
++    "NotRestoredReasonDetails.prototype.toJSON",
++    "NotRestoredReasons",
++    "NotRestoredReasons.prototype",
++    "NotRestoredReasons.prototype.children",
++    "NotRestoredReasons.prototype.id",
++    "NotRestoredReasons.prototype.name",
++    "NotRestoredReasons.prototype.reasons",
++    "NotRestoredReasons.prototype.src",
++    "NotRestoredReasons.prototype.toJSON",
++    "NotRestoredReasons.prototype.url",
+     "Notification",
+     "Notification.maxActions",
+     "Notification.permission",
+@@ -3945,6 +3978,7 @@
+     "Option.prototype.constructor.prototype.getElementsByClassName",
+     "Option.prototype.constructor.prototype.getElementsByTagName",
+     "Option.prototype.constructor.prototype.getElementsByTagNameNS",
++    "Option.prototype.constructor.prototype.getHTML",
+     "Option.prototype.constructor.prototype.getInnerHTML",
+     "Option.prototype.constructor.prototype.hasAttribute",
+     "Option.prototype.constructor.prototype.hasAttributeNS",
+@@ -4317,6 +4351,7 @@
+     "PerformanceNavigationTiming.prototype.domInteractive",
+     "PerformanceNavigationTiming.prototype.loadEventEnd",
+     "PerformanceNavigationTiming.prototype.loadEventStart",
++    "PerformanceNavigationTiming.prototype.notRestoredReasons",
+     "PerformanceNavigationTiming.prototype.redirectCount",
+     "PerformanceNavigationTiming.prototype.toJSON",
+     "PerformanceNavigationTiming.prototype.type",
+@@ -5915,6 +5950,7 @@
+     "ShadowRoot.prototype.fullscreenElement",
+     "ShadowRoot.prototype.getAnimations",
+     "ShadowRoot.prototype.getElementById",
++    "ShadowRoot.prototype.getHTML",
+     "ShadowRoot.prototype.getInnerHTML",
+     "ShadowRoot.prototype.getSelection",
+     "ShadowRoot.prototype.host",
+@@ -5928,6 +5964,7 @@
+     "ShadowRoot.prototype.querySelector",
+     "ShadowRoot.prototype.querySelectorAll",
+     "ShadowRoot.prototype.replaceChildren",
++    "ShadowRoot.prototype.serializable",
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
+@@ -6647,7 +6684,19 @@
+     "ViewTransition.prototype.finished",
+     "ViewTransition.prototype.ready",
+     "ViewTransition.prototype.skipTransition",
++    "ViewTransition.prototype.types",
+     "ViewTransition.prototype.updateCallbackDone",
++    "ViewTransitionTypeSet",
++    "ViewTransitionTypeSet.prototype",
++    "ViewTransitionTypeSet.prototype.add",
++    "ViewTransitionTypeSet.prototype.clear",
++    "ViewTransitionTypeSet.prototype.delete",
++    "ViewTransitionTypeSet.prototype.entries",
++    "ViewTransitionTypeSet.prototype.forEach",
++    "ViewTransitionTypeSet.prototype.has",
++    "ViewTransitionTypeSet.prototype.keys",
++    "ViewTransitionTypeSet.prototype.size",
++    "ViewTransitionTypeSet.prototype.values",
+     "VirtualKeyboard",
+     "VirtualKeyboard.prototype",
+     "VirtualKeyboard.prototype.boundingRect",
+@@ -7469,6 +7518,7 @@
+     "XMLDocument.prototype.hasPrivateToken",
+     "XMLDocument.prototype.hasRedemptionRecord",
+     "XMLDocument.prototype.hasStorageAccess",
++    "XMLDocument.prototype.hasUnpartitionedCookieAccess",
+     "XMLDocument.prototype.head",
+     "XMLDocument.prototype.hidden",
+     "XMLDocument.prototype.images",
+@@ -7650,6 +7700,7 @@
+     "XMLHttpRequest.prototype.responseURL",
+     "XMLHttpRequest.prototype.responseXML",
+     "XMLHttpRequest.prototype.send",
++    "XMLHttpRequest.prototype.setAttributionReporting",
+     "XMLHttpRequest.prototype.setPrivateToken",
+     "XMLHttpRequest.prototype.setRequestHeader",
+     "XMLHttpRequest.prototype.status",
+```
+
   
 #### 125.0.6396.3 (`2024-4-5`) 
 No browser API changes.
@@ -2408,50 +2723,6 @@ Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5979.
      "SVGImageElement.prototype.decode",
      "SVGImageElement.prototype.decoding",
      "SVGImageElement.prototype.height",
-```
-
-  
-#### 118.0.5979.0 (`2023-8-31`) ⚡
-Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5966.0_to_118.0.5979.0.diff), [json](./browser_apis/chrome-unstable_118.0.5966.0_to_118.0.5979.0.json), [full list](./browser_apis/chrome-unstable_118.0.5979.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_118.0.5966.0.json	2023-09-01 00:55:51.293611015 +0000
-+++ ./browser_apis/chrome-unstable_118.0.5979.0.json	2023-09-01 00:56:25.665843969 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8081,
-+  "browserApiCount": 8086,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3400,6 +3400,7 @@
-     "NavigateEvent.prototype.destination",
-     "NavigateEvent.prototype.downloadRequest",
-     "NavigateEvent.prototype.formData",
-+    "NavigateEvent.prototype.hasUAVisualTransition",
-     "NavigateEvent.prototype.hashChange",
-     "NavigateEvent.prototype.info",
-     "NavigateEvent.prototype.intercept",
-@@ -4361,6 +4362,7 @@
-     "PointerEvent.prototype.width",
-     "PopStateEvent",
-     "PopStateEvent.prototype",
-+    "PopStateEvent.prototype.hasUAVisualTransition",
-     "PopStateEvent.prototype.state",
-     "Presentation",
-     "Presentation.prototype",
-@@ -6088,8 +6090,11 @@
-     "TextMetrics.prototype.actualBoundingBoxDescent",
-     "TextMetrics.prototype.actualBoundingBoxLeft",
-     "TextMetrics.prototype.actualBoundingBoxRight",
-+    "TextMetrics.prototype.alphabeticBaseline",
-     "TextMetrics.prototype.fontBoundingBoxAscent",
-     "TextMetrics.prototype.fontBoundingBoxDescent",
-+    "TextMetrics.prototype.hangingBaseline",
-+    "TextMetrics.prototype.ideographicBaseline",
-     "TextMetrics.prototype.width",
-     "TextTrack",
-     "TextTrack.prototype",
 ```
 
   <!-- browserapis:end -->
