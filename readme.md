@@ -1178,6 +1178,101 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 126.0.6423.2 (`2024-4-19`) ⚡
+Added 72 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6420.3_to_126.0.6423.2.diff), [json](./browser_apis/chrome-unstable_125.0.6420.3_to_126.0.6423.2.json), [full list](./browser_apis/chrome-unstable_126.0.6423.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_125.0.6420.3.json	2024-04-20 00:55:14.708492039 +0000
++++ ./browser_apis/chrome-unstable_126.0.6423.2.json	2024-04-20 00:55:50.496592891 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8331,
++  "browserApiCount": 8403,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -566,6 +566,78 @@
+     "CSSPerspective",
+     "CSSPerspective.prototype",
+     "CSSPerspective.prototype.length",
++    "CSSPositionTryDescriptors",
++    "CSSPositionTryDescriptors.prototype",
++    "CSSPositionTryDescriptors.prototype.align-self",
++    "CSSPositionTryDescriptors.prototype.alignSelf",
++    "CSSPositionTryDescriptors.prototype.block-size",
++    "CSSPositionTryDescriptors.prototype.blockSize",
++    "CSSPositionTryDescriptors.prototype.bottom",
++    "CSSPositionTryDescriptors.prototype.height",
++    "CSSPositionTryDescriptors.prototype.inline-size",
++    "CSSPositionTryDescriptors.prototype.inlineSize",
++    "CSSPositionTryDescriptors.prototype.inset",
++    "CSSPositionTryDescriptors.prototype.inset-area",
++    "CSSPositionTryDescriptors.prototype.inset-block",
++    "CSSPositionTryDescriptors.prototype.inset-block-end",
++    "CSSPositionTryDescriptors.prototype.inset-block-start",
++    "CSSPositionTryDescriptors.prototype.inset-inline",
++    "CSSPositionTryDescriptors.prototype.inset-inline-end",
++    "CSSPositionTryDescriptors.prototype.inset-inline-start",
++    "CSSPositionTryDescriptors.prototype.insetArea",
++    "CSSPositionTryDescriptors.prototype.insetBlock",
++    "CSSPositionTryDescriptors.prototype.insetBlockEnd",
++    "CSSPositionTryDescriptors.prototype.insetBlockStart",
++    "CSSPositionTryDescriptors.prototype.insetInline",
++    "CSSPositionTryDescriptors.prototype.insetInlineEnd",
++    "CSSPositionTryDescriptors.prototype.insetInlineStart",
++    "CSSPositionTryDescriptors.prototype.justify-self",
++    "CSSPositionTryDescriptors.prototype.justifySelf",
++    "CSSPositionTryDescriptors.prototype.left",
++    "CSSPositionTryDescriptors.prototype.margin",
++    "CSSPositionTryDescriptors.prototype.margin-block",
++    "CSSPositionTryDescriptors.prototype.margin-block-end",
++    "CSSPositionTryDescriptors.prototype.margin-block-start",
++    "CSSPositionTryDescriptors.prototype.margin-bottom",
++    "CSSPositionTryDescriptors.prototype.margin-inline",
++    "CSSPositionTryDescriptors.prototype.margin-inline-end",
++    "CSSPositionTryDescriptors.prototype.margin-inline-start",
++    "CSSPositionTryDescriptors.prototype.margin-left",
++    "CSSPositionTryDescriptors.prototype.margin-right",
++    "CSSPositionTryDescriptors.prototype.margin-top",
++    "CSSPositionTryDescriptors.prototype.marginBlock",
++    "CSSPositionTryDescriptors.prototype.marginBlockEnd",
++    "CSSPositionTryDescriptors.prototype.marginBlockStart",
++    "CSSPositionTryDescriptors.prototype.marginBottom",
++    "CSSPositionTryDescriptors.prototype.marginInline",
++    "CSSPositionTryDescriptors.prototype.marginInlineEnd",
++    "CSSPositionTryDescriptors.prototype.marginInlineStart",
++    "CSSPositionTryDescriptors.prototype.marginLeft",
++    "CSSPositionTryDescriptors.prototype.marginRight",
++    "CSSPositionTryDescriptors.prototype.marginTop",
++    "CSSPositionTryDescriptors.prototype.max-block-size",
++    "CSSPositionTryDescriptors.prototype.max-height",
++    "CSSPositionTryDescriptors.prototype.max-inline-size",
++    "CSSPositionTryDescriptors.prototype.max-width",
++    "CSSPositionTryDescriptors.prototype.maxBlockSize",
++    "CSSPositionTryDescriptors.prototype.maxHeight",
++    "CSSPositionTryDescriptors.prototype.maxInlineSize",
++    "CSSPositionTryDescriptors.prototype.maxWidth",
++    "CSSPositionTryDescriptors.prototype.min-block-size",
++    "CSSPositionTryDescriptors.prototype.min-height",
++    "CSSPositionTryDescriptors.prototype.min-inline-size",
++    "CSSPositionTryDescriptors.prototype.min-width",
++    "CSSPositionTryDescriptors.prototype.minBlockSize",
++    "CSSPositionTryDescriptors.prototype.minHeight",
++    "CSSPositionTryDescriptors.prototype.minInlineSize",
++    "CSSPositionTryDescriptors.prototype.minWidth",
++    "CSSPositionTryDescriptors.prototype.place-self",
++    "CSSPositionTryDescriptors.prototype.placeSelf",
++    "CSSPositionTryDescriptors.prototype.position-anchor",
++    "CSSPositionTryDescriptors.prototype.positionAnchor",
++    "CSSPositionTryDescriptors.prototype.right",
++    "CSSPositionTryDescriptors.prototype.top",
++    "CSSPositionTryDescriptors.prototype.width",
+     "CSSPositionTryRule",
+     "CSSPositionTryRule.prototype",
+     "CSSPositionTryRule.prototype.name",
+```
+
+  
 #### 125.0.6420.3 (`2024-4-16`) ⚡
 Added 51 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6396.3_to_125.0.6420.3.diff), [json](./browser_apis/chrome-unstable_125.0.6396.3_to_125.0.6420.3.json), [full list](./browser_apis/chrome-unstable_125.0.6420.3.json))
  ```diff
@@ -2659,70 +2754,5 @@ Added 5 APIs, removed 15 (see: [diff](./browser_apis/chrome-unstable_118.0.5993.
   
 #### 118.0.5993.11 (`2023-9-13`) 
 No browser API changes.
-
-  
-#### 118.0.5993.3 (`2023-9-7`) ⚡
-Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_118.0.5979.0_to_118.0.5993.3.diff), [json](./browser_apis/chrome-unstable_118.0.5979.0_to_118.0.5993.3.json), [full list](./browser_apis/chrome-unstable_118.0.5993.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_118.0.5979.0.json	2023-09-08 00:52:08.436675387 +0000
-+++ ./browser_apis/chrome-unstable_118.0.5993.3.json	2023-09-08 00:52:44.757025099 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8086,
-+  "browserApiCount": 8096,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -423,6 +423,7 @@
-     "CSS",
-     "CSS.Hz",
-     "CSS.Q",
-+    "CSS.cap",
-     "CSS.ch",
-     "CSS.cm",
-     "CSS.cqb",
-@@ -447,8 +448,10 @@
-     "CSS.fr",
-     "CSS.grad",
-     "CSS.highlights",
-+    "CSS.ic",
-     "CSS.in",
-     "CSS.kHz",
-+    "CSS.lh",
-     "CSS.lvb",
-     "CSS.lvh",
-     "CSS.lvi",
-@@ -464,8 +467,13 @@
-     "CSS.pt",
-     "CSS.px",
-     "CSS.rad",
-+    "CSS.rcap",
-+    "CSS.rch",
-     "CSS.registerProperty",
-     "CSS.rem",
-+    "CSS.rex",
-+    "CSS.ric",
-+    "CSS.rlh",
-     "CSS.s",
-     "CSS.supports",
-     "CSS.svb",
-@@ -481,6 +489,7 @@
-     "CSS.vmax",
-     "CSS.vmin",
-     "CSS.vw",
-+    "CSS.x",
-     "CSSAnimation",
-     "CSSAnimation.prototype",
-     "CSSAnimation.prototype.animationName",
-@@ -5170,6 +5179,7 @@
-     "SVGGElement.prototype",
-     "SVGImageElement",
-     "SVGImageElement.prototype",
-+    "SVGImageElement.prototype.crossOrigin",
-     "SVGImageElement.prototype.decode",
-     "SVGImageElement.prototype.decoding",
-     "SVGImageElement.prototype.height",
-```
 
   <!-- browserapis:end -->
