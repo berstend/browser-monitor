@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 124.0.6367.91 (`2024-4-25`) 
+No browser API changes.
+
+  
 #### 124.0.6367.78 (`2024-4-23`) 
 No browser API changes.
 
@@ -1170,10 +1174,6 @@ Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_117.0.5938.14
      "TextTrack",
      "TextTrack.prototype",
 ```
-
-  
-#### 117.0.5938.149 (`2023-10-4`) 
-No browser API changes.
 
   
 ### chrome-unstable
