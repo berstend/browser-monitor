@@ -1178,6 +1178,65 @@ Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_117.0.5938.14
   
 ### chrome-unstable
   
+#### 126.0.6439.0 (`2024-4-26`) ⚡
+Added 4 APIs, removed 6 (see: [diff](./browser_apis/chrome-unstable_126.0.6423.2_to_126.0.6439.0.diff), [json](./browser_apis/chrome-unstable_126.0.6423.2_to_126.0.6439.0.json), [full list](./browser_apis/chrome-unstable_126.0.6439.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_126.0.6423.2.json	2024-04-27 00:55:06.328040949 +0000
++++ ./browser_apis/chrome-unstable_126.0.6439.0.json	2024-04-27 00:55:41.028215193 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8403,
++  "browserApiCount": 8401,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1799,6 +1799,7 @@
+     "GamepadEvent.prototype.gamepad",
+     "GamepadHapticActuator",
+     "GamepadHapticActuator.prototype",
++    "GamepadHapticActuator.prototype.effects",
+     "GamepadHapticActuator.prototype.playEffect",
+     "GamepadHapticActuator.prototype.reset",
+     "GamepadHapticActuator.prototype.type",
+@@ -1816,10 +1817,12 @@
+     "GeolocationCoordinates.prototype.latitude",
+     "GeolocationCoordinates.prototype.longitude",
+     "GeolocationCoordinates.prototype.speed",
++    "GeolocationCoordinates.prototype.toJSON",
+     "GeolocationPosition",
+     "GeolocationPosition.prototype",
+     "GeolocationPosition.prototype.coords",
+     "GeolocationPosition.prototype.timestamp",
++    "GeolocationPosition.prototype.toJSON",
+     "GeolocationPositionError",
+     "GeolocationPositionError.prototype",
+     "GeolocationPositionError.prototype.code",
+@@ -2584,13 +2587,7 @@
+     "HTMLVideoElement.prototype.videoHeight",
+     "HTMLVideoElement.prototype.videoWidth",
+     "HTMLVideoElement.prototype.webkitDecodedFrameCount",
+-    "HTMLVideoElement.prototype.webkitDisplayingFullscreen",
+     "HTMLVideoElement.prototype.webkitDroppedFrameCount",
+-    "HTMLVideoElement.prototype.webkitEnterFullScreen",
+-    "HTMLVideoElement.prototype.webkitEnterFullscreen",
+-    "HTMLVideoElement.prototype.webkitExitFullScreen",
+-    "HTMLVideoElement.prototype.webkitExitFullscreen",
+-    "HTMLVideoElement.prototype.webkitSupportsFullscreen",
+     "HTMLVideoElement.prototype.width",
+     "HashChangeEvent",
+     "HashChangeEvent.prototype",
+@@ -7299,6 +7296,7 @@
+     "WebGLUniformLocation.prototype",
+     "WebGLVertexArrayObject",
+     "WebGLVertexArrayObject.prototype",
++    "WebGLVertexArrayObject.prototype.constructor",
+     "WebKitCSSMatrix",
+     "WebKitCSSMatrix.fromFloat32Array",
+     "WebKitCSSMatrix.fromFloat64Array",
+```
+
+  
 #### 126.0.6423.2 (`2024-4-19`) ⚡
 Added 72 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6420.3_to_126.0.6423.2.diff), [json](./browser_apis/chrome-unstable_125.0.6420.3_to_126.0.6423.2.json), [full list](./browser_apis/chrome-unstable_126.0.6423.2.json))
  ```diff
@@ -2750,9 +2809,5 @@ Added 5 APIs, removed 15 (see: [diff](./browser_apis/chrome-unstable_118.0.5993.
      "origin",
      "originAgentCluster",
 ```
-
-  
-#### 118.0.5993.11 (`2023-9-13`) 
-No browser API changes.
 
   <!-- browserapis:end -->

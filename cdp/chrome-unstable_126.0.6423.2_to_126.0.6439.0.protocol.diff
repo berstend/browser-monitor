@@ -1,0 +1,166 @@
+--- ./cdp/chrome-unstable_126.0.6423.2.protocol.json	2024-04-27 00:55:06.476041122 +0000
++++ ./cdp/chrome-unstable_126.0.6439.0.protocol.json	2024-04-27 00:55:41.036215221 +0000
+@@ -1488,6 +1488,35 @@
+           ]
+         },
+         {
++          "id": "SharedDictionaryError",
++          "type": "string",
++          "enum": [
++            "UseErrorCrossOriginNoCorsRequest",
++            "UseErrorDictionaryLoadFailure",
++            "UseErrorMatchingDictionaryNotUsed",
++            "UseErrorUnexpectedContentDictionaryHeader",
++            "WriteErrorCossOriginNoCorsRequest",
++            "WriteErrorDisallowedBySettings",
++            "WriteErrorExpiredResponse",
++            "WriteErrorFeatureDisabled",
++            "WriteErrorInsufficientResources",
++            "WriteErrorInvalidMatchField",
++            "WriteErrorInvalidStructuredHeader",
++            "WriteErrorNavigationRequest",
++            "WriteErrorNoMatchField",
++            "WriteErrorNonListMatchDestField",
++            "WriteErrorNonSecureContext",
++            "WriteErrorNonStringIdField",
++            "WriteErrorNonStringInMatchDestList",
++            "WriteErrorNonStringMatchField",
++            "WriteErrorNonTokenTypeField",
++            "WriteErrorRequestAborted",
++            "WriteErrorShuttingDown",
++            "WriteErrorTooLongIdField",
++            "WriteErrorUnsupportedType"
++          ]
++        },
++        {
+           "id": "AttributionReportingIssueDetails",
+           "description": "Details for issues around \"Attribution Reporting API\" usage.\nExplainer: https://github.com/WICG/attribution-reporting-api",
+           "type": "object",
+@@ -1558,6 +1587,20 @@
+           ]
+         },
+         {
++          "id": "SharedDictionaryIssueDetails",
++          "type": "object",
++          "properties": [
++            {
++              "name": "sharedDictionaryError",
++              "$ref": "SharedDictionaryError"
++            },
++            {
++              "name": "request",
++              "$ref": "AffectedRequest"
++            }
++          ]
++        },
++        {
+           "id": "GenericIssueErrorType",
+           "type": "string",
+           "enum": [
+@@ -1871,7 +1914,8 @@
+             "CookieDeprecationMetadataIssue",
+             "StylesheetLoadingIssue",
+             "FederatedAuthUserInfoRequestIssue",
+-            "PropertyRuleIssue"
++            "PropertyRuleIssue",
++            "SharedDictionaryIssue"
+           ]
+         },
+         {
+@@ -1979,6 +2023,11 @@
+               "name": "federatedAuthUserInfoRequestIssueDetails",
+               "optional": true,
+               "$ref": "FederatedAuthUserInfoRequestIssueDetails"
++            },
++            {
++              "name": "sharedDictionaryIssueDetails",
++              "optional": true,
++              "$ref": "SharedDictionaryIssueDetails"
+             }
+           ]
+         },
+@@ -2108,6 +2157,31 @@
+       ]
+     },
+     {
++      "domain": "Extensions",
++      "description": "Defines commands and events for browser extensions. Available if the client\nis connected using the --remote-debugging-pipe flag and\nthe --enable-unsafe-extension-debugging flag is set.",
++      "experimental": true,
++      "commands": [
++        {
++          "name": "loadUnpacked",
++          "description": "Installs an unpacked extension from the filesystem similar to\n--load-extension CLI flags. Returns extension ID once the extension\nhas been installed.",
++          "parameters": [
++            {
++              "name": "path",
++              "description": "Absolute file path.",
++              "type": "string"
++            }
++          ],
++          "returns": [
++            {
++              "name": "id",
++              "description": "Extension id.",
++              "type": "string"
++            }
++          ]
++        }
++      ]
++    },
++    {
+       "domain": "Autofill",
+       "description": "Defines commands and events for Autofill.",
+       "experimental": true,
+@@ -6571,6 +6645,33 @@
+           ]
+         },
+         {
++          "name": "getElementByRelation",
++          "description": "Returns the NodeId of the matched element according to certain relations.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "nodeId",
++              "description": "Id of the node from which to query the relation.",
++              "$ref": "NodeId"
++            },
++            {
++              "name": "relation",
++              "description": "Type of relation to get.",
++              "type": "string",
++              "enum": [
++                "PopoverTarget"
++              ]
++            }
++          ],
++          "returns": [
++            {
++              "name": "nodeId",
++              "description": "NodeId of the element matching the queried relation.",
++              "$ref": "NodeId"
++            }
++          ]
++        },
++        {
+           "name": "redo",
+           "description": "Re-does the last undone action.",
+           "experimental": true
+@@ -18007,7 +18108,8 @@
+             "EmbedderExtensions",
+             "EmbedderExtensionMessaging",
+             "EmbedderExtensionMessagingForOpenPort",
+-            "EmbedderExtensionSentMessageToCachedFrame"
++            "EmbedderExtensionSentMessageToCachedFrame",
++            "RequestedByWebViewClient"
+           ]
+         },
+         {
+@@ -18331,7 +18433,7 @@
+         },
+         {
+           "name": "getAppManifest",
+-          "description": "Gets the processed manifest for this current document.\n  This API always waits for the manifest to be loaded.\n  If manifestId is provided, and it does not match the manifest of the\n    current document, this API errors out.\n  If there isn’t a loaded page, this API errors out immediately.",
++          "description": "Gets the processed manifest for this current document.\n  This API always waits for the manifest to be loaded.\n  If manifestId is provided, and it does not match the manifest of the\n    current document, this API errors out.\n  If there is not a loaded page, this API errors out immediately.",
+           "parameters": [
+             {
+               "name": "manifestId",

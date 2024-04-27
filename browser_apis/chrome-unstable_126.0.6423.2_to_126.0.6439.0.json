@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "126.0.6423.2",
+    "to": "126.0.6439.0"
+  },
+  "browserApis": {
+    "added": [
+      "GamepadHapticActuator.prototype.effects",
+      "GeolocationCoordinates.prototype.toJSON",
+      "GeolocationPosition.prototype.toJSON",
+      "WebGLVertexArrayObject.prototype.constructor"
+    ],
+    "removed": [
+      "HTMLVideoElement.prototype.webkitDisplayingFullscreen",
+      "HTMLVideoElement.prototype.webkitEnterFullScreen",
+      "HTMLVideoElement.prototype.webkitEnterFullscreen",
+      "HTMLVideoElement.prototype.webkitExitFullScreen",
+      "HTMLVideoElement.prototype.webkitExitFullscreen",
+      "HTMLVideoElement.prototype.webkitSupportsFullscreen"
+    ]
+  }
+}
