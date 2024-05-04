@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "126.0.6439.0",
+    "to": "126.0.6452.3"
+  },
+  "browserApis": {
+    "added": [
+      "PressureObserver.knownSources",
+      "VisualViewport.prototype.onscrollend",
+      "webkitURL.parse"
+    ],
+    "removed": [
+      "PressureObserver.supportedSources"
+    ]
+  }
+}

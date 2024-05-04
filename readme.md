@@ -1078,6 +1078,52 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 126.0.6452.3 (`2024-5-3`) ⚡
+Added 3 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_126.0.6439.0_to_126.0.6452.3.diff), [json](./browser_apis/chrome-unstable_126.0.6439.0_to_126.0.6452.3.json), [full list](./browser_apis/chrome-unstable_126.0.6452.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_126.0.6439.0.json	2024-05-04 00:55:53.194510891 +0000
++++ ./browser_apis/chrome-unstable_126.0.6452.3.json	2024-05-04 00:56:23.778423387 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8401,
++  "browserApiCount": 8403,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4606,12 +4606,12 @@
+     "PresentationRequest.prototype.reconnect",
+     "PresentationRequest.prototype.start",
+     "PressureObserver",
++    "PressureObserver.knownSources",
+     "PressureObserver.prototype",
+     "PressureObserver.prototype.disconnect",
+     "PressureObserver.prototype.observe",
+     "PressureObserver.prototype.takeRecords",
+     "PressureObserver.prototype.unobserve",
+-    "PressureObserver.supportedSources",
+     "PressureRecord",
+     "PressureRecord.prototype",
+     "PressureRecord.prototype.source",
+@@ -6790,6 +6790,7 @@
+     "VisualViewport.prototype.offsetTop",
+     "VisualViewport.prototype.onresize",
+     "VisualViewport.prototype.onscroll",
++    "VisualViewport.prototype.onscrollend",
+     "VisualViewport.prototype.pageLeft",
+     "VisualViewport.prototype.pageTop",
+     "VisualViewport.prototype.scale",
+@@ -8386,6 +8387,7 @@
+     "webkitURL",
+     "webkitURL.canParse",
+     "webkitURL.createObjectURL",
++    "webkitURL.parse",
+     "webkitURL.prototype",
+     "webkitURL.prototype.hash",
+     "webkitURL.prototype.host",
+```
+
+  
 #### 126.0.6439.0 (`2024-4-26`) ⚡
 Added 4 APIs, removed 6 (see: [diff](./browser_apis/chrome-unstable_126.0.6423.2_to_126.0.6439.0.diff), [json](./browser_apis/chrome-unstable_126.0.6423.2_to_126.0.6439.0.json), [full list](./browser_apis/chrome-unstable_126.0.6439.0.json))
  ```diff
@@ -2630,84 +2676,6 @@ Added 0 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_119.0.6034.6
      "Scheduler",
      "Scheduler.prototype",
      "Scheduler.prototype.postTask",
-```
-
-  
-#### 119.0.6034.6 (`2023-9-29`) ⚡
-Added 5 APIs, removed 15 (see: [diff](./browser_apis/chrome-unstable_118.0.5993.11_to_119.0.6034.6.diff), [json](./browser_apis/chrome-unstable_118.0.5993.11_to_119.0.6034.6.json), [full list](./browser_apis/chrome-unstable_119.0.6034.6.json))
- ```diff
---- ./browser_apis/chrome-unstable_118.0.5993.11.json	2023-09-30 00:52:18.001052249 +0000
-+++ ./browser_apis/chrome-unstable_119.0.6034.6.json	2023-09-30 00:52:56.305658649 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8096,
-+  "browserApiCount": 8086,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2871,20 +2871,6 @@
-     "Intl.v8BreakIterator.prototype.next",
-     "Intl.v8BreakIterator.prototype.resolvedOptions",
-     "Intl.v8BreakIterator.supportedLocalesOf",
--    "Iterator",
--    "Iterator.from",
--    "Iterator.prototype",
--    "Iterator.prototype.drop",
--    "Iterator.prototype.every",
--    "Iterator.prototype.filter",
--    "Iterator.prototype.find",
--    "Iterator.prototype.flatMap",
--    "Iterator.prototype.forEach",
--    "Iterator.prototype.map",
--    "Iterator.prototype.reduce",
--    "Iterator.prototype.some",
--    "Iterator.prototype.take",
--    "Iterator.prototype.toArray",
-     "JSON",
-     "JSON.isRawJSON",
-     "JSON.parse",
-@@ -4439,6 +4425,7 @@
-     "Promise.race",
-     "Promise.reject",
-     "Promise.resolve",
-+    "Promise.withResolvers",
-     "PromiseRejectionEvent",
-     "PromiseRejectionEvent.prototype",
-     "PromiseRejectionEvent.prototype.promise",
-@@ -4925,6 +4912,7 @@
-     "SVGClipPathElement",
-     "SVGClipPathElement.prototype",
-     "SVGClipPathElement.prototype.clipPathUnits",
-+    "SVGClipPathElement.prototype.transform",
-     "SVGDefsElement",
-     "SVGDefsElement.prototype",
-     "SVGDescElement",
-@@ -7289,6 +7277,7 @@
-     "XMLDocument.prototype.hasFocus",
-     "XMLDocument.prototype.hasPrivateToken",
-     "XMLDocument.prototype.hasRedemptionRecord",
-+    "XMLDocument.prototype.hasStorageAccess",
-     "XMLDocument.prototype.head",
-     "XMLDocument.prototype.hidden",
-     "XMLDocument.prototype.images",
-@@ -7430,6 +7419,8 @@
-     "XMLDocument.prototype.referrer",
-     "XMLDocument.prototype.releaseEvents",
-     "XMLDocument.prototype.replaceChildren",
-+    "XMLDocument.prototype.requestStorageAccess",
-+    "XMLDocument.prototype.requestStorageAccessFor",
-     "XMLDocument.prototype.rootElement",
-     "XMLDocument.prototype.scripts",
-     "XMLDocument.prototype.scrollingElement",
-@@ -7921,7 +7912,6 @@
-     "onwebkittransitionend",
-     "onwheel",
-     "open",
--    "openDatabase",
-     "opener",
-     "origin",
-     "originAgentCluster",
 ```
 
   <!-- browserapis:end -->
