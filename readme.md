@@ -985,6 +985,146 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 126.0.6468.2 (`2024-5-14`) ⚡
+Added 51 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_126.0.6452.3_to_126.0.6468.2.diff), [json](./browser_apis/chrome-unstable_126.0.6452.3_to_126.0.6468.2.json), [full list](./browser_apis/chrome-unstable_126.0.6468.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_126.0.6452.3.json	2024-05-14 12:24:35.581318320 +0000
++++ ./browser_apis/chrome-unstable_126.0.6468.2.json	2024-05-14 12:24:57.933362882 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8403,
++  "browserApiCount": 8454,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -795,6 +795,10 @@
+     "CSSVariableReferenceValue.prototype",
+     "CSSVariableReferenceValue.prototype.fallback",
+     "CSSVariableReferenceValue.prototype.variable",
++    "CSSViewTransitionRule",
++    "CSSViewTransitionRule.prototype",
++    "CSSViewTransitionRule.prototype.navigation",
++    "CSSViewTransitionRule.prototype.types",
+     "Cache",
+     "Cache.prototype",
+     "Cache.prototype.add",
+@@ -925,6 +929,13 @@
+     "CloseEvent.prototype.code",
+     "CloseEvent.prototype.reason",
+     "CloseEvent.prototype.wasClean",
++    "CloseWatcher",
++    "CloseWatcher.prototype",
++    "CloseWatcher.prototype.close",
++    "CloseWatcher.prototype.destroy",
++    "CloseWatcher.prototype.oncancel",
++    "CloseWatcher.prototype.onclose",
++    "CloseWatcher.prototype.requestClose",
+     "Comment",
+     "Comment.prototype",
+     "CompositionEvent",
+@@ -1396,6 +1407,16 @@
+     "FederatedCredential.prototype.name",
+     "FederatedCredential.prototype.protocol",
+     "FederatedCredential.prototype.provider",
++    "Fence",
++    "Fence.prototype",
++    "Fence.prototype.getNestedConfigs",
++    "Fence.prototype.reportEvent",
++    "Fence.prototype.setReportEventDataForAutomaticBeacons",
++    "FencedFrameConfig",
++    "FencedFrameConfig.prototype",
++    "FencedFrameConfig.prototype.height",
++    "FencedFrameConfig.prototype.setSharedStorageContext",
++    "FencedFrameConfig.prototype.width",
+     "File",
+     "File.prototype",
+     "File.prototype.arrayBuffer",
+@@ -2024,6 +2045,14 @@
+     "HTMLEmbedElement.prototype.src",
+     "HTMLEmbedElement.prototype.type",
+     "HTMLEmbedElement.prototype.width",
++    "HTMLFencedFrameElement",
++    "HTMLFencedFrameElement.canLoadOpaqueURL",
++    "HTMLFencedFrameElement.prototype",
++    "HTMLFencedFrameElement.prototype.allow",
++    "HTMLFencedFrameElement.prototype.config",
++    "HTMLFencedFrameElement.prototype.height",
++    "HTMLFencedFrameElement.prototype.sandbox",
++    "HTMLFencedFrameElement.prototype.width",
+     "HTMLFieldSetElement",
+     "HTMLFieldSetElement.prototype",
+     "HTMLFieldSetElement.prototype.checkValidity",
+@@ -2125,6 +2154,7 @@
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
+     "HTMLIFrameElement.prototype.allowPaymentRequest",
++    "HTMLIFrameElement.prototype.browsingTopics",
+     "HTMLIFrameElement.prototype.contentDocument",
+     "HTMLIFrameElement.prototype.contentWindow",
+     "HTMLIFrameElement.prototype.credentialless",
+@@ -4255,9 +4285,11 @@
+     "OverconstrainedError.prototype.constraint",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
++    "PageRevealEvent.prototype.viewTransition",
+     "PageSwapEvent",
+     "PageSwapEvent.prototype",
+     "PageSwapEvent.prototype.activation",
++    "PageSwapEvent.prototype.viewTransition",
+     "PageTransitionEvent",
+     "PageTransitionEvent.prototype",
+     "PageTransitionEvent.prototype.persisted",
+@@ -6037,6 +6069,22 @@
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
++    "SharedStorage",
++    "SharedStorage.prototype",
++    "SharedStorage.prototype.append",
++    "SharedStorage.prototype.clear",
++    "SharedStorage.prototype.createWorklet",
++    "SharedStorage.prototype.delete",
++    "SharedStorage.prototype.get",
++    "SharedStorage.prototype.run",
++    "SharedStorage.prototype.selectURL",
++    "SharedStorage.prototype.set",
++    "SharedStorage.prototype.worklet",
++    "SharedStorageWorklet",
++    "SharedStorageWorklet.prototype",
++    "SharedStorageWorklet.prototype.addModule",
++    "SharedStorageWorklet.prototype.run",
++    "SharedStorageWorklet.prototype.selectURL",
+     "SharedWorker",
+     "SharedWorker.prototype",
+     "SharedWorker.prototype.onerror",
+@@ -7525,6 +7573,7 @@
+     "XMLDocument.prototype.applets",
+     "XMLDocument.prototype.bgColor",
+     "XMLDocument.prototype.body",
++    "XMLDocument.prototype.browsingTopics",
+     "XMLDocument.prototype.captureEvents",
+     "XMLDocument.prototype.caretRangeFromPoint",
+     "XMLDocument.prototype.characterSet",
+@@ -8079,6 +8128,7 @@
+     "eval",
+     "event",
+     "external",
++    "fence",
+     "fetch",
+     "find",
+     "focus",
+@@ -8264,6 +8314,7 @@
+     "sessionStorage",
+     "setInterval",
+     "setTimeout",
++    "sharedStorage",
+     "showDirectoryPicker",
+     "showOpenFilePicker",
+     "showSaveFilePicker",
+```
+
+  
 #### 126.0.6452.3 (`2024-5-3`) ⚡
 Added 3 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_126.0.6439.0_to_126.0.6452.3.diff), [json](./browser_apis/chrome-unstable_126.0.6439.0_to_126.0.6452.3.json), [full list](./browser_apis/chrome-unstable_126.0.6452.3.json))
  ```diff
@@ -2549,40 +2689,5 @@ No browser API changes.
   
 #### 120.0.6051.2 (`2023-10-9`) 
 No browser API changes.
-
-  
-#### 119.0.6045.10 (`2023-10-6`) ⚡
-Added 0 APIs, removed 5 (see: [diff](./browser_apis/chrome-unstable_119.0.6034.6_to_119.0.6045.10.diff), [json](./browser_apis/chrome-unstable_119.0.6034.6_to_119.0.6045.10.json), [full list](./browser_apis/chrome-unstable_119.0.6045.10.json))
- ```diff
---- ./browser_apis/chrome-unstable_119.0.6034.6.json	2023-10-07 00:52:52.662830127 +0000
-+++ ./browser_apis/chrome-unstable_119.0.6045.10.json	2023-10-07 00:53:26.443156798 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8086,
-+  "browserApiCount": 8081,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4038,7 +4038,6 @@
-     "Option.prototype.constructor.prototype.setAttributeNS",
-     "Option.prototype.constructor.prototype.setAttributeNode",
-     "Option.prototype.constructor.prototype.setAttributeNodeNS",
--    "Option.prototype.constructor.prototype.setHTML",
-     "Option.prototype.constructor.prototype.setPointerCapture",
-     "Option.prototype.constructor.prototype.shadowRoot",
-     "Option.prototype.constructor.prototype.showPopover",
-@@ -5614,10 +5613,6 @@
-     "SVGViewElement.prototype.viewBox",
-     "SVGViewElement.prototype.viewportElement",
-     "SVGViewElement.prototype.zoomAndPan",
--    "Sanitizer",
--    "Sanitizer.getDefaultConfiguration",
--    "Sanitizer.prototype",
--    "Sanitizer.prototype.getConfiguration",
-     "Scheduler",
-     "Scheduler.prototype",
-     "Scheduler.prototype.postTask",
-```
 
   <!-- browserapis:end -->
