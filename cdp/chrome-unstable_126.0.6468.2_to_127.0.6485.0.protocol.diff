@@ -1,0 +1,148 @@
+--- ./cdp/chrome-unstable_126.0.6468.2.protocol.json	2024-05-21 00:57:54.552442644 +0000
++++ ./cdp/chrome-unstable_127.0.6485.0.protocol.json	2024-05-21 00:58:19.088895089 +0000
+@@ -1696,6 +1696,14 @@
+               "items": {
+                 "type": "string"
+               }
++            },
++            {
++              "name": "optOutPercentage",
++              "type": "number"
++            },
++            {
++              "name": "isOptOutTopLevel",
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -5546,13 +5554,14 @@
+             "marker",
+             "backdrop",
+             "selection",
++            "search-text",
+             "target-text",
+             "spelling-error",
+             "grammar-error",
+             "highlight",
+             "first-line-inherited",
+             "scroll-marker",
+-            "scroll-markers",
++            "scroll-marker-group",
+             "scrollbar",
+             "scrollbar-thumb",
+             "scrollbar-button",
+@@ -13069,7 +13078,8 @@
+             "EnterprisePolicy",
+             "StorageAccess",
+             "TopLevelStorageAccess",
+-            "CorsOptIn"
++            "CorsOptIn",
++            "Scheme"
+           ]
+         },
+         {
+@@ -18883,6 +18893,13 @@
+               "description": "If set, the script will be injected into all frames of the inspected page after reload.\nArgument will be ignored if reloading dataURL origin.",
+               "optional": true,
+               "type": "string"
++            },
++            {
++              "name": "loaderId",
++              "description": "If set, an error will be thrown if the target page's main frame's\nloader id does not match the provided id. This prevents accidentally\nreloading an unintended target in case there's a racing navigation.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "Network.LoaderId"
+             }
+           ]
+         },
+@@ -25658,7 +25675,8 @@
+             "RedirectedPrerenderingUrlHasEffectiveUrl",
+             "ActivationUrlHasEffectiveUrl",
+             "JavaScriptInterfaceAdded",
+-            "JavaScriptInterfaceRemoved"
++            "JavaScriptInterfaceRemoved",
++            "AllPrerenderingCanceled"
+           ]
+         },
+         {
+@@ -28879,6 +28897,11 @@
+           "type": "integer"
+         },
+         {
++          "id": "ExecutionContextUniqueId",
++          "description": "Id of an execution context that is unique across processes\n(unlike ExecutionContextId).",
++          "type": "string"
++        },
++        {
+           "id": "ExecutionContextDescription",
+           "description": "Description of an isolated world.",
+           "type": "object",
+@@ -28902,7 +28925,7 @@
+               "name": "uniqueId",
+               "description": "A system-unique execution context identifier. Unlike the id, this is unique across\nmultiple processes, so can be reliably used to identify specific context while backend\nperforms a cross-process navigation.",
+               "experimental": true,
+-              "type": "string"
++              "$ref": "ExecutionContextUniqueId"
+             },
+             {
+               "name": "auxData",
+@@ -29676,7 +29699,7 @@
+             },
+             {
+               "name": "executionContextId",
+-              "description": "If specified, the binding would only be exposed to the specified\nexecution context. If omitted and `executionContextName` is not set,\nthe binding is exposed to all execution contexts of the target.\nThis parameter is mutually exclusive with `executionContextName`.\nDeprecated in favor of `executionContextName` due to an unclear use case\nand bugs in implementation (crbug.com/1169639). `executionContextId` will be\nremoved in the future.",
++              "description": "If specified, the binding would only be exposed to the specified\nexecution context. If omitted and `executionContextName` is not set,\nthe binding is exposed to all execution contexts of the target.\nThis parameter is mutually exclusive with `executionContextName`\nand `executionContextUniqueId`.\nDeprecated in favor of `executionContextName` due to an unclear use case\nand bugs in implementation (crbug.com/1169639). `executionContextId` will be\nremoved in the future.",
+               "experimental": true,
+               "deprecated": true,
+               "optional": true,
+@@ -29684,9 +29707,16 @@
+             },
+             {
+               "name": "executionContextName",
+-              "description": "If specified, the binding is exposed to the executionContext with\nmatching name, even for contexts created after the binding is added.\nSee also `ExecutionContext.name` and `worldName` parameter to\n`Page.addScriptToEvaluateOnNewDocument`.\nThis parameter is mutually exclusive with `executionContextId`.",
++              "description": "If specified, the binding is exposed to the executionContext with\nmatching name, even for contexts created after the binding is added.\nSee also `ExecutionContext.name` and `worldName` parameter to\n`Page.addScriptToEvaluateOnNewDocument`.\nThis parameter is mutually exclusive with `executionContextId`\nand `executionContextUniqueId`.",
+               "optional": true,
+               "type": "string"
++            },
++            {
++              "name": "executionContextUniqueId",
++              "description": "This parameter is mutually exclusive with `executionContextId`\nand `executionContextName`.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "ExecutionContextUniqueId"
+             }
+           ]
+         },
+@@ -29738,6 +29768,11 @@
+               "name": "executionContextId",
+               "description": "Identifier of the context where the call was made.",
+               "$ref": "ExecutionContextId"
++            },
++            {
++              "name": "executionContextUniqueId",
++              "experimental": true,
++              "$ref": "ExecutionContextUniqueId"
+             }
+           ]
+         },
+@@ -29784,6 +29819,11 @@
+               "$ref": "ExecutionContextId"
+             },
+             {
++              "name": "executionContextUniqueId",
++              "experimental": true,
++              "$ref": "ExecutionContextUniqueId"
++            },
++            {
+               "name": "timestamp",
+               "description": "Call timestamp.",
+               "$ref": "Timestamp"
+@@ -29859,7 +29899,7 @@
+               "name": "executionContextUniqueId",
+               "description": "Unique Id of the destroyed context",
+               "experimental": true,
+-              "type": "string"
++              "$ref": "ExecutionContextUniqueId"
+             }
+           ]
+         },
