@@ -1129,6 +1129,32 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 127.0.6510.4 (`2024-5-31`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6485.0_to_127.0.6510.4.diff), [json](./browser_apis/chrome-unstable_127.0.6485.0_to_127.0.6510.4.json), [full list](./browser_apis/chrome-unstable_127.0.6510.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_127.0.6485.0.json	2024-06-01 12:23:03.167185305 +0000
++++ ./browser_apis/chrome-unstable_127.0.6510.4.json	2024-06-01 12:23:31.239369681 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8454,
++  "browserApiCount": 8457,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -4680,6 +4680,9 @@
+     "PromiseRejectionEvent.prototype",
+     "PromiseRejectionEvent.prototype.promise",
+     "PromiseRejectionEvent.prototype.reason",
++    "ProtectedAudience",
++    "ProtectedAudience.prototype",
++    "ProtectedAudience.prototype.queryFeatureSupport",
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
+```
+
+  
 #### 127.0.6485.0 (`2024-5-20`) 
 No browser API changes.
 
@@ -2829,9 +2855,5 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6062.2
      "HTMLDialogElement",
      "HTMLDialogElement.prototype",
 ```
-
-  
-#### 120.0.6062.2 (`2023-10-13`) 
-No browser API changes.
 
   <!-- browserapis:end -->

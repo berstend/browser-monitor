@@ -1,0 +1,204 @@
+--- ./cdp/chrome-unstable_127.0.6485.0.protocol.json	2024-06-01 12:23:03.327186183 +0000
++++ ./cdp/chrome-unstable_127.0.6510.4.protocol.json	2024-06-01 12:23:31.251369767 +0000
+@@ -1704,6 +1704,10 @@
+             {
+               "name": "isOptOutTopLevel",
+               "type": "boolean"
++            },
++            {
++              "name": "operation",
++              "$ref": "CookieOperation"
+             }
+           ]
+         },
+@@ -1769,7 +1773,8 @@
+             "ThirdPartyCookiesBlocked",
+             "NotSignedInWithIdp",
+             "MissingTransientUserActivation",
+-            "ReplacedByButtonMode"
++            "ReplacedByButtonMode",
++            "RelyingPartyOriginIsOpaque"
+           ]
+         },
+         {
+@@ -7066,6 +7071,31 @@
+               }
+             }
+           ]
++        },
++        {
++          "name": "getAnchorElement",
++          "description": "Returns the target anchor element of the given anchor query according to\nhttps://www.w3.org/TR/css-anchor-position-1/#target.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "nodeId",
++              "description": "Id of the positioned element from which to find the anchor.",
++              "$ref": "NodeId"
++            },
++            {
++              "name": "anchorSpecifier",
++              "description": "An optional anchor specifier, as defined in\nhttps://www.w3.org/TR/css-anchor-position-1/#anchor-specifier.\nIf not provided, it will return the implicit anchor element for\nthe given positioned element.",
++              "optional": true,
++              "type": "string"
++            }
++          ],
++          "returns": [
++            {
++              "name": "nodeId",
++              "description": "The anchor element of the given anchor query.",
++              "$ref": "NodeId"
++            }
++          ]
+         }
+       ],
+       "events": [
+@@ -12124,6 +12154,20 @@
+               "type": "number"
+             },
+             {
++              "name": "workerRouterEvaluationStart",
++              "description": "Started ServiceWorker static routing source evaluation.",
++              "experimental": true,
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "workerCacheLookupStart",
++              "description": "Started cache lookup when the source was evaluated to `cache`.",
++              "experimental": true,
++              "optional": true,
++              "type": "number"
++            },
++            {
+               "name": "sendStart",
+               "description": "Started sending request.",
+               "type": "number"
+@@ -12595,6 +12639,12 @@
+               "description": "The router source of the matched rule. If there is a matched rule, this\nfield will be set, otherwise no value will be set.",
+               "optional": true,
+               "$ref": "ServiceWorkerRouterSource"
++            },
++            {
++              "name": "actualSourceType",
++              "description": "The actual router source used.",
++              "optional": true,
++              "$ref": "ServiceWorkerRouterSource"
+             }
+           ]
+         },
+@@ -26222,6 +26272,33 @@
+               "$ref": "Target.TargetID"
+             }
+           ]
++        },
++        {
++          "name": "launchFilesInApp",
++          "description": "Opens one or more local files from an installed web app identified by its\nmanifestId. The web app needs to have file handlers registered to process\nthe files. The API returns one or more tabs / web contents' based\nTarget.TargetIDs which can be used to attach to via Target.attachToTarget or\nsimilar APIs.\nIf some files in the parameters cannot be handled by the web app, they will\nbe ignored. If none of the files can be handled, this API returns an error.\nIf no files provided as the parameter, this API also returns an error.\n\nAccording to the definition of the file handlers in the manifest file, one\nTarget.TargetID may represent a tab handling one or more files. The order of\nthe returned Target.TargetIDs is also not guaranteed.\n\nTODO(crbug.com/339454034): Check the existences of the input files.",
++          "parameters": [
++            {
++              "name": "manifestId",
++              "type": "string"
++            },
++            {
++              "name": "files",
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            }
++          ],
++          "returns": [
++            {
++              "name": "targetIds",
++              "description": "IDs of the tab targets created as the result.",
++              "type": "array",
++              "items": {
++                "$ref": "Target.TargetID"
++              }
++            }
++          ]
+         }
+       ]
+     },
+@@ -28897,11 +28974,6 @@
+           "type": "integer"
+         },
+         {
+-          "id": "ExecutionContextUniqueId",
+-          "description": "Id of an execution context that is unique across processes\n(unlike ExecutionContextId).",
+-          "type": "string"
+-        },
+-        {
+           "id": "ExecutionContextDescription",
+           "description": "Description of an isolated world.",
+           "type": "object",
+@@ -28925,7 +28997,7 @@
+               "name": "uniqueId",
+               "description": "A system-unique execution context identifier. Unlike the id, this is unique across\nmultiple processes, so can be reliably used to identify specific context while backend\nperforms a cross-process navigation.",
+               "experimental": true,
+-              "$ref": "ExecutionContextUniqueId"
++              "type": "string"
+             },
+             {
+               "name": "auxData",
+@@ -29699,7 +29771,7 @@
+             },
+             {
+               "name": "executionContextId",
+-              "description": "If specified, the binding would only be exposed to the specified\nexecution context. If omitted and `executionContextName` is not set,\nthe binding is exposed to all execution contexts of the target.\nThis parameter is mutually exclusive with `executionContextName`\nand `executionContextUniqueId`.\nDeprecated in favor of `executionContextName` due to an unclear use case\nand bugs in implementation (crbug.com/1169639). `executionContextId` will be\nremoved in the future.",
++              "description": "If specified, the binding would only be exposed to the specified\nexecution context. If omitted and `executionContextName` is not set,\nthe binding is exposed to all execution contexts of the target.\nThis parameter is mutually exclusive with `executionContextName`.\nDeprecated in favor of `executionContextName` due to an unclear use case\nand bugs in implementation (crbug.com/1169639). `executionContextId` will be\nremoved in the future.",
+               "experimental": true,
+               "deprecated": true,
+               "optional": true,
+@@ -29707,16 +29779,9 @@
+             },
+             {
+               "name": "executionContextName",
+-              "description": "If specified, the binding is exposed to the executionContext with\nmatching name, even for contexts created after the binding is added.\nSee also `ExecutionContext.name` and `worldName` parameter to\n`Page.addScriptToEvaluateOnNewDocument`.\nThis parameter is mutually exclusive with `executionContextId`\nand `executionContextUniqueId`.",
++              "description": "If specified, the binding is exposed to the executionContext with\nmatching name, even for contexts created after the binding is added.\nSee also `ExecutionContext.name` and `worldName` parameter to\n`Page.addScriptToEvaluateOnNewDocument`.\nThis parameter is mutually exclusive with `executionContextId`.",
+               "optional": true,
+               "type": "string"
+-            },
+-            {
+-              "name": "executionContextUniqueId",
+-              "description": "This parameter is mutually exclusive with `executionContextId`\nand `executionContextName`.",
+-              "experimental": true,
+-              "optional": true,
+-              "$ref": "ExecutionContextUniqueId"
+             }
+           ]
+         },
+@@ -29768,11 +29833,6 @@
+               "name": "executionContextId",
+               "description": "Identifier of the context where the call was made.",
+               "$ref": "ExecutionContextId"
+-            },
+-            {
+-              "name": "executionContextUniqueId",
+-              "experimental": true,
+-              "$ref": "ExecutionContextUniqueId"
+             }
+           ]
+         },
+@@ -29819,11 +29879,6 @@
+               "$ref": "ExecutionContextId"
+             },
+             {
+-              "name": "executionContextUniqueId",
+-              "experimental": true,
+-              "$ref": "ExecutionContextUniqueId"
+-            },
+-            {
+               "name": "timestamp",
+               "description": "Call timestamp.",
+               "$ref": "Timestamp"
+@@ -29899,7 +29954,7 @@
+               "name": "executionContextUniqueId",
+               "description": "Unique Id of the destroyed context",
+               "experimental": true,
+-              "$ref": "ExecutionContextUniqueId"
++              "type": "string"
+             }
+           ]
+         },

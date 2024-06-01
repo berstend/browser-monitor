@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "127.0.6485.0",
+    "to": "127.0.6510.4"
+  },
+  "browserApis": {
+    "added": [
+      "ProtectedAudience",
+      "ProtectedAudience.prototype",
+      "ProtectedAudience.prototype.queryFeatureSupport"
+    ],
+    "removed": []
+  }
+}
