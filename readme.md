@@ -1129,6 +1129,50 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 127.0.6523.4 (`2024-6-8`) ⚡
+Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6510.4_to_127.0.6523.4.diff), [json](./browser_apis/chrome-unstable_127.0.6510.4_to_127.0.6523.4.json), [full list](./browser_apis/chrome-unstable_127.0.6523.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_127.0.6510.4.json	2024-06-08 00:59:33.514707854 +0000
++++ ./browser_apis/chrome-unstable_127.0.6523.4.json	2024-06-08 00:59:55.998831146 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8457,
++  "browserApiCount": 8464,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -906,6 +906,11 @@
+     "ChannelMergerNode.prototype",
+     "ChannelSplitterNode",
+     "ChannelSplitterNode.prototype",
++    "ChapterInformation",
++    "ChapterInformation.prototype",
++    "ChapterInformation.prototype.artwork",
++    "ChapterInformation.prototype.startTime",
++    "ChapterInformation.prototype.title",
+     "CharacterBoundsUpdateEvent",
+     "CharacterBoundsUpdateEvent.prototype",
+     "CharacterBoundsUpdateEvent.prototype.rangeEnd",
+@@ -1540,6 +1545,7 @@
+     "GPUAdapter",
+     "GPUAdapter.prototype",
+     "GPUAdapter.prototype.features",
++    "GPUAdapter.prototype.info",
+     "GPUAdapter.prototype.isFallbackAdapter",
+     "GPUAdapter.prototype.limits",
+     "GPUAdapter.prototype.requestAdapterInfo",
+@@ -3394,6 +3400,7 @@
+     "MediaMetadata.prototype.album",
+     "MediaMetadata.prototype.artist",
+     "MediaMetadata.prototype.artwork",
++    "MediaMetadata.prototype.chapterInfo",
+     "MediaMetadata.prototype.title",
+     "MediaQueryList",
+     "MediaQueryList.prototype",
+```
+
+  
 #### 127.0.6510.4 (`2024-5-31`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6485.0_to_127.0.6510.4.diff), [json](./browser_apis/chrome-unstable_127.0.6485.0_to_127.0.6510.4.json), [full list](./browser_apis/chrome-unstable_127.0.6510.4.json))
  ```diff
@@ -2830,30 +2874,6 @@ Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6073.0
      "webkitURL.createObjectURL",
      "webkitURL.prototype",
      "webkitURL.prototype.hash",
-```
-
-  
-#### 120.0.6073.0 (`2023-10-19`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6062.2_to_120.0.6073.0.diff), [json](./browser_apis/chrome-unstable_120.0.6062.2_to_120.0.6073.0.json), [full list](./browser_apis/chrome-unstable_120.0.6073.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_120.0.6062.2.json	2023-10-20 00:53:40.039750838 +0000
-+++ ./browser_apis/chrome-unstable_120.0.6073.0.json	2023-10-20 00:54:13.672163709 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8081,
-+  "browserApiCount": 8082,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1893,6 +1893,7 @@
-     "HTMLDataListElement.prototype.options",
-     "HTMLDetailsElement",
-     "HTMLDetailsElement.prototype",
-+    "HTMLDetailsElement.prototype.name",
-     "HTMLDetailsElement.prototype.open",
-     "HTMLDialogElement",
-     "HTMLDialogElement.prototype",
 ```
 
   <!-- browserapis:end -->
