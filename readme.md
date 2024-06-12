@@ -5,6 +5,205 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 126.0.6478.55 (`2024-6-11`) ⚡
+Added 57 APIs, removed 6 (see: [diff](./browser_apis/chrome-stable_125.0.6422.141_to_126.0.6478.55.diff), [json](./browser_apis/chrome-stable_125.0.6422.141_to_126.0.6478.55.json), [full list](./browser_apis/chrome-stable_126.0.6478.55.json))
+ ```diff
+--- ./browser_apis/chrome-stable_125.0.6422.141.json	2024-06-12 01:00:40.884995370 +0000
++++ ./browser_apis/chrome-stable_126.0.6478.55.json	2024-06-12 01:01:08.341524213 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8403,
++  "browserApiCount": 8454,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -795,6 +795,10 @@
+     "CSSVariableReferenceValue.prototype",
+     "CSSVariableReferenceValue.prototype.fallback",
+     "CSSVariableReferenceValue.prototype.variable",
++    "CSSViewTransitionRule",
++    "CSSViewTransitionRule.prototype",
++    "CSSViewTransitionRule.prototype.navigation",
++    "CSSViewTransitionRule.prototype.types",
+     "Cache",
+     "Cache.prototype",
+     "Cache.prototype.add",
+@@ -925,6 +929,13 @@
+     "CloseEvent.prototype.code",
+     "CloseEvent.prototype.reason",
+     "CloseEvent.prototype.wasClean",
++    "CloseWatcher",
++    "CloseWatcher.prototype",
++    "CloseWatcher.prototype.close",
++    "CloseWatcher.prototype.destroy",
++    "CloseWatcher.prototype.oncancel",
++    "CloseWatcher.prototype.onclose",
++    "CloseWatcher.prototype.requestClose",
+     "Comment",
+     "Comment.prototype",
+     "CompositionEvent",
+@@ -1396,6 +1407,16 @@
+     "FederatedCredential.prototype.name",
+     "FederatedCredential.prototype.protocol",
+     "FederatedCredential.prototype.provider",
++    "Fence",
++    "Fence.prototype",
++    "Fence.prototype.getNestedConfigs",
++    "Fence.prototype.reportEvent",
++    "Fence.prototype.setReportEventDataForAutomaticBeacons",
++    "FencedFrameConfig",
++    "FencedFrameConfig.prototype",
++    "FencedFrameConfig.prototype.height",
++    "FencedFrameConfig.prototype.setSharedStorageContext",
++    "FencedFrameConfig.prototype.width",
+     "File",
+     "File.prototype",
+     "File.prototype.arrayBuffer",
+@@ -1799,6 +1820,7 @@
+     "GamepadEvent.prototype.gamepad",
+     "GamepadHapticActuator",
+     "GamepadHapticActuator.prototype",
++    "GamepadHapticActuator.prototype.effects",
+     "GamepadHapticActuator.prototype.playEffect",
+     "GamepadHapticActuator.prototype.reset",
+     "GamepadHapticActuator.prototype.type",
+@@ -1816,10 +1838,12 @@
+     "GeolocationCoordinates.prototype.latitude",
+     "GeolocationCoordinates.prototype.longitude",
+     "GeolocationCoordinates.prototype.speed",
++    "GeolocationCoordinates.prototype.toJSON",
+     "GeolocationPosition",
+     "GeolocationPosition.prototype",
+     "GeolocationPosition.prototype.coords",
+     "GeolocationPosition.prototype.timestamp",
++    "GeolocationPosition.prototype.toJSON",
+     "GeolocationPositionError",
+     "GeolocationPositionError.prototype",
+     "GeolocationPositionError.prototype.code",
+@@ -2021,6 +2045,14 @@
+     "HTMLEmbedElement.prototype.src",
+     "HTMLEmbedElement.prototype.type",
+     "HTMLEmbedElement.prototype.width",
++    "HTMLFencedFrameElement",
++    "HTMLFencedFrameElement.canLoadOpaqueURL",
++    "HTMLFencedFrameElement.prototype",
++    "HTMLFencedFrameElement.prototype.allow",
++    "HTMLFencedFrameElement.prototype.config",
++    "HTMLFencedFrameElement.prototype.height",
++    "HTMLFencedFrameElement.prototype.sandbox",
++    "HTMLFencedFrameElement.prototype.width",
+     "HTMLFieldSetElement",
+     "HTMLFieldSetElement.prototype",
+     "HTMLFieldSetElement.prototype.checkValidity",
+@@ -2122,6 +2154,7 @@
+     "HTMLIFrameElement.prototype.allow",
+     "HTMLIFrameElement.prototype.allowFullscreen",
+     "HTMLIFrameElement.prototype.allowPaymentRequest",
++    "HTMLIFrameElement.prototype.browsingTopics",
+     "HTMLIFrameElement.prototype.contentDocument",
+     "HTMLIFrameElement.prototype.contentWindow",
+     "HTMLIFrameElement.prototype.credentialless",
+@@ -2584,13 +2617,7 @@
+     "HTMLVideoElement.prototype.videoHeight",
+     "HTMLVideoElement.prototype.videoWidth",
+     "HTMLVideoElement.prototype.webkitDecodedFrameCount",
+-    "HTMLVideoElement.prototype.webkitDisplayingFullscreen",
+     "HTMLVideoElement.prototype.webkitDroppedFrameCount",
+-    "HTMLVideoElement.prototype.webkitEnterFullScreen",
+-    "HTMLVideoElement.prototype.webkitEnterFullscreen",
+-    "HTMLVideoElement.prototype.webkitExitFullScreen",
+-    "HTMLVideoElement.prototype.webkitExitFullscreen",
+-    "HTMLVideoElement.prototype.webkitSupportsFullscreen",
+     "HTMLVideoElement.prototype.width",
+     "HashChangeEvent",
+     "HashChangeEvent.prototype",
+@@ -4258,9 +4285,11 @@
+     "OverconstrainedError.prototype.constraint",
+     "PageRevealEvent",
+     "PageRevealEvent.prototype",
++    "PageRevealEvent.prototype.viewTransition",
+     "PageSwapEvent",
+     "PageSwapEvent.prototype",
+     "PageSwapEvent.prototype.activation",
++    "PageSwapEvent.prototype.viewTransition",
+     "PageTransitionEvent",
+     "PageTransitionEvent.prototype",
+     "PageTransitionEvent.prototype.persisted",
+@@ -6040,6 +6069,22 @@
+     "ShadowRoot.prototype.setHTMLUnsafe",
+     "ShadowRoot.prototype.slotAssignment",
+     "ShadowRoot.prototype.styleSheets",
++    "SharedStorage",
++    "SharedStorage.prototype",
++    "SharedStorage.prototype.append",
++    "SharedStorage.prototype.clear",
++    "SharedStorage.prototype.createWorklet",
++    "SharedStorage.prototype.delete",
++    "SharedStorage.prototype.get",
++    "SharedStorage.prototype.run",
++    "SharedStorage.prototype.selectURL",
++    "SharedStorage.prototype.set",
++    "SharedStorage.prototype.worklet",
++    "SharedStorageWorklet",
++    "SharedStorageWorklet.prototype",
++    "SharedStorageWorklet.prototype.addModule",
++    "SharedStorageWorklet.prototype.run",
++    "SharedStorageWorklet.prototype.selectURL",
+     "SharedWorker",
+     "SharedWorker.prototype",
+     "SharedWorker.prototype.onerror",
+@@ -6793,6 +6838,7 @@
+     "VisualViewport.prototype.offsetTop",
+     "VisualViewport.prototype.onresize",
+     "VisualViewport.prototype.onscroll",
++    "VisualViewport.prototype.onscrollend",
+     "VisualViewport.prototype.pageLeft",
+     "VisualViewport.prototype.pageTop",
+     "VisualViewport.prototype.scale",
+@@ -7299,6 +7345,7 @@
+     "WebGLUniformLocation.prototype",
+     "WebGLVertexArrayObject",
+     "WebGLVertexArrayObject.prototype",
++    "WebGLVertexArrayObject.prototype.constructor",
+     "WebKitCSSMatrix",
+     "WebKitCSSMatrix.fromFloat32Array",
+     "WebKitCSSMatrix.fromFloat64Array",
+@@ -7526,6 +7573,7 @@
+     "XMLDocument.prototype.applets",
+     "XMLDocument.prototype.bgColor",
+     "XMLDocument.prototype.body",
++    "XMLDocument.prototype.browsingTopics",
+     "XMLDocument.prototype.captureEvents",
+     "XMLDocument.prototype.caretRangeFromPoint",
+     "XMLDocument.prototype.characterSet",
+@@ -8080,6 +8128,7 @@
+     "eval",
+     "event",
+     "external",
++    "fence",
+     "fetch",
+     "find",
+     "focus",
+@@ -8265,6 +8314,7 @@
+     "sessionStorage",
+     "setInterval",
+     "setTimeout",
++    "sharedStorage",
+     "showDirectoryPicker",
+     "showOpenFilePicker",
+     "showSaveFilePicker",
+@@ -8388,6 +8438,7 @@
+     "webkitURL",
+     "webkitURL.canParse",
+     "webkitURL.createObjectURL",
++    "webkitURL.parse",
+     "webkitURL.prototype",
+     "webkitURL.prototype.hash",
+     "webkitURL.prototype.host",
+```
+
+  
 #### 125.0.6422.141 (`2024-5-30`) 
 No browser API changes.
 
@@ -1120,10 +1319,6 @@ No browser API changes.
 
   
 #### 120.0.6099.109 (`2023-12-12`) 
-No browser API changes.
-
-  
-#### 120.0.6099.71 (`2023-12-6`) 
 No browser API changes.
 
   
