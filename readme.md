@@ -1324,6 +1324,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 128.0.6535.2 (`2024-6-14`) 
+No browser API changes.
+
+  
 #### 127.0.6523.4 (`2024-6-8`) ⚡
 Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6510.4_to_127.0.6523.4.diff), [json](./browser_apis/chrome-unstable_127.0.6510.4_to_127.0.6523.4.json), [full list](./browser_apis/chrome-unstable_127.0.6523.4.json))
  ```diff
@@ -3018,57 +3022,6 @@ Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6090.
      "NavigatorManagedData",
      "NavigatorManagedData.prototype",
      "NavigatorManagedData.prototype.getManagedConfiguration",
-```
-
-  
-#### 120.0.6090.0 (`2023-10-27`) ⚡
-Added 9 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6073.0_to_120.0.6090.0.diff), [json](./browser_apis/chrome-unstable_120.0.6073.0_to_120.0.6090.0.json), [full list](./browser_apis/chrome-unstable_120.0.6090.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_120.0.6073.0.json	2023-10-28 00:51:51.832888962 +0000
-+++ ./browser_apis/chrome-unstable_120.0.6090.0.json	2023-10-28 00:52:45.533484297 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8082,
-+  "browserApiCount": 8091,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2775,6 +2775,7 @@
-     "IntersectionObserver.prototype.observe",
-     "IntersectionObserver.prototype.root",
-     "IntersectionObserver.prototype.rootMargin",
-+    "IntersectionObserver.prototype.scrollMargin",
-     "IntersectionObserver.prototype.takeRecords",
-     "IntersectionObserver.prototype.thresholds",
-     "IntersectionObserver.prototype.trackVisibility",
-@@ -3324,11 +3325,18 @@
-     "MediaStreamTrackGenerator.prototype.onmute",
-     "MediaStreamTrackGenerator.prototype.onunmute",
-     "MediaStreamTrackGenerator.prototype.readyState",
-+    "MediaStreamTrackGenerator.prototype.stats",
-     "MediaStreamTrackGenerator.prototype.stop",
-     "MediaStreamTrackGenerator.prototype.writable",
-     "MediaStreamTrackProcessor",
-     "MediaStreamTrackProcessor.prototype",
-     "MediaStreamTrackProcessor.prototype.readable",
-+    "MediaStreamTrackVideoStats",
-+    "MediaStreamTrackVideoStats.prototype",
-+    "MediaStreamTrackVideoStats.prototype.deliveredFrames",
-+    "MediaStreamTrackVideoStats.prototype.discardedFrames",
-+    "MediaStreamTrackVideoStats.prototype.toJSON",
-+    "MediaStreamTrackVideoStats.prototype.totalFrames",
-     "MessageChannel",
-     "MessageChannel.prototype",
-     "MessageChannel.prototype.port1",
-@@ -8066,6 +8074,7 @@
-     "webkitSpeechRecognitionEvent.prototype.resultIndex",
-     "webkitSpeechRecognitionEvent.prototype.results",
-     "webkitURL",
-+    "webkitURL.canParse",
-     "webkitURL.createObjectURL",
-     "webkitURL.prototype",
-     "webkitURL.prototype.hash",
 ```
 
   <!-- browserapis:end -->

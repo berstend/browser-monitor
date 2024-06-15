@@ -1,0 +1,33 @@
+--- ./cdp/chrome-unstable_127.0.6523.4.protocol.json	2024-06-15 01:00:08.386826124 +0000
++++ ./cdp/chrome-unstable_128.0.6535.2.protocol.json	2024-06-15 01:00:33.682703441 +0000
+@@ -1776,7 +1776,8 @@
+             "NotSignedInWithIdp",
+             "MissingTransientUserActivation",
+             "ReplacedByButtonMode",
+-            "RelyingPartyOriginIsOpaque"
++            "RelyingPartyOriginIsOpaque",
++            "TypeNotMatching"
+           ]
+         },
+         {
+@@ -14073,7 +14074,7 @@
+             },
+             {
+               "name": "partitionKey",
+-              "description": "If specified, deletes only cookies with the the given name and partitionKey where\nwhere all partition key attributes match the cookie partition key attribute.",
++              "description": "If specified, deletes only cookies with the the given name and partitionKey where\nall partition key attributes match the cookie partition key attribute.",
+               "experimental": true,
+               "optional": true,
+               "$ref": "CookiePartitionKey"
+@@ -18122,6 +18123,11 @@
+             "HTTPAuthRequired",
+             "CookieFlushed",
+             "BroadcastChannelOnMessage",
++            "WebViewSettingsChanged",
++            "WebViewJavaScriptObjectChanged",
++            "WebViewMessageListenerInjected",
++            "WebViewSafeBrowsingAllowlistChanged",
++            "WebViewDocumentStartJavascriptChanged",
+             "WebSocket",
+             "WebTransport",
+             "WebRTC",
