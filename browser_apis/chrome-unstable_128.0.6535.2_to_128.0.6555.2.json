@@ -1,0 +1,30 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "128.0.6535.2",
+    "to": "128.0.6555.2"
+  },
+  "browserApis": {
+    "added": [
+      "CaretPosition",
+      "CaretPosition.prototype",
+      "CaretPosition.prototype.getClientRect",
+      "CaretPosition.prototype.offset",
+      "CaretPosition.prototype.offsetNode",
+      "Navigator.prototype.adAuctionComponents",
+      "Navigator.prototype.canLoadAdAuctionFencedFrame",
+      "Navigator.prototype.clearOriginJoinedAdInterestGroups",
+      "Navigator.prototype.createAuctionNonce",
+      "Navigator.prototype.deprecatedReplaceInURN",
+      "Navigator.prototype.deprecatedRunAdAuctionEnforcesKAnonymity",
+      "Navigator.prototype.deprecatedURNToURL",
+      "Navigator.prototype.joinAdInterestGroup",
+      "Navigator.prototype.leaveAdInterestGroup",
+      "Navigator.prototype.protectedAudience",
+      "Navigator.prototype.runAdAuction",
+      "Navigator.prototype.updateAdInterestGroups",
+      "XMLDocument.prototype.caretPositionFromPoint"
+    ],
+    "removed": []
+  }
+}

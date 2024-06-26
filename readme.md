@@ -1324,6 +1324,96 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 128.0.6555.2 (`2024-6-25`) ⚡
+Added 18 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6535.2_to_128.0.6555.2.diff), [json](./browser_apis/chrome-unstable_128.0.6535.2_to_128.0.6555.2.json), [full list](./browser_apis/chrome-unstable_128.0.6555.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_128.0.6535.2.json	2024-06-26 01:00:35.066576712 +0000
++++ ./browser_apis/chrome-unstable_128.0.6555.2.json	2024-06-26 01:01:00.718881877 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8464,
++  "browserApiCount": 8482,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -902,6 +902,11 @@
+     "CaptureController",
+     "CaptureController.prototype",
+     "CaptureController.prototype.setFocusBehavior",
++    "CaretPosition",
++    "CaretPosition.prototype",
++    "CaretPosition.prototype.getClientRect",
++    "CaretPosition.prototype.offset",
++    "CaretPosition.prototype.offsetNode",
+     "ChannelMergerNode",
+     "ChannelMergerNode.prototype",
+     "ChannelSplitterNode",
+@@ -3647,14 +3652,21 @@
+     "NavigationTransition.prototype.navigationType",
+     "Navigator",
+     "Navigator.prototype",
++    "Navigator.prototype.adAuctionComponents",
+     "Navigator.prototype.appCodeName",
+     "Navigator.prototype.appName",
+     "Navigator.prototype.appVersion",
++    "Navigator.prototype.canLoadAdAuctionFencedFrame",
+     "Navigator.prototype.clearAppBadge",
++    "Navigator.prototype.clearOriginJoinedAdInterestGroups",
+     "Navigator.prototype.clipboard",
+     "Navigator.prototype.connection",
+     "Navigator.prototype.cookieEnabled",
++    "Navigator.prototype.createAuctionNonce",
+     "Navigator.prototype.credentials",
++    "Navigator.prototype.deprecatedReplaceInURN",
++    "Navigator.prototype.deprecatedRunAdAuctionEnforcesKAnonymity",
++    "Navigator.prototype.deprecatedURNToURL",
+     "Navigator.prototype.deviceMemory",
+     "Navigator.prototype.doNotTrack",
+     "Navigator.prototype.geolocation",
+@@ -3667,9 +3679,11 @@
+     "Navigator.prototype.hid",
+     "Navigator.prototype.ink",
+     "Navigator.prototype.javaEnabled",
++    "Navigator.prototype.joinAdInterestGroup",
+     "Navigator.prototype.keyboard",
+     "Navigator.prototype.language",
+     "Navigator.prototype.languages",
++    "Navigator.prototype.leaveAdInterestGroup",
+     "Navigator.prototype.locks",
+     "Navigator.prototype.login",
+     "Navigator.prototype.managed",
+@@ -3686,9 +3700,11 @@
+     "Navigator.prototype.presentation",
+     "Navigator.prototype.product",
+     "Navigator.prototype.productSub",
++    "Navigator.prototype.protectedAudience",
+     "Navigator.prototype.registerProtocolHandler",
+     "Navigator.prototype.requestMIDIAccess",
+     "Navigator.prototype.requestMediaKeySystemAccess",
++    "Navigator.prototype.runAdAuction",
+     "Navigator.prototype.scheduling",
+     "Navigator.prototype.sendBeacon",
+     "Navigator.prototype.serial",
+@@ -3697,6 +3713,7 @@
+     "Navigator.prototype.storage",
+     "Navigator.prototype.storageBuckets",
+     "Navigator.prototype.unregisterProtocolHandler",
++    "Navigator.prototype.updateAdInterestGroups",
+     "Navigator.prototype.usb",
+     "Navigator.prototype.userActivation",
+     "Navigator.prototype.userAgent",
+@@ -7585,6 +7602,7 @@
+     "XMLDocument.prototype.body",
+     "XMLDocument.prototype.browsingTopics",
+     "XMLDocument.prototype.captureEvents",
++    "XMLDocument.prototype.caretPositionFromPoint",
+     "XMLDocument.prototype.caretRangeFromPoint",
+     "XMLDocument.prototype.characterSet",
+     "XMLDocument.prototype.charset",
+```
+
+  
 #### 128.0.6535.2 (`2024-6-14`) 
 No browser API changes.
 
@@ -2945,83 +3035,6 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_121.0.6103.3
      "Array.isArray",
      "Array.of",
      "Array.prototype",
-```
-
-  
-#### 121.0.6103.3 (`2023-11-6`) ⚡
-Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_120.0.6090.0_to_121.0.6103.3.diff), [json](./browser_apis/chrome-unstable_120.0.6090.0_to_121.0.6103.3.json), [full list](./browser_apis/chrome-unstable_121.0.6103.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_120.0.6090.0.json	2023-11-07 00:55:14.420956545 +0000
-+++ ./browser_apis/chrome-unstable_121.0.6103.3.json	2023-11-07 00:55:35.876980694 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8091,
-+  "browserApiCount": 8110,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -841,11 +841,19 @@
-     "ClipboardItem.prototype",
-     "ClipboardItem.prototype.getType",
-     "ClipboardItem.prototype.types",
-+    "ClipboardItem.supports",
-     "CloseEvent",
-     "CloseEvent.prototype",
-     "CloseEvent.prototype.code",
-     "CloseEvent.prototype.reason",
-     "CloseEvent.prototype.wasClean",
-+    "CloseWatcher",
-+    "CloseWatcher.prototype",
-+    "CloseWatcher.prototype.close",
-+    "CloseWatcher.prototype.destroy",
-+    "CloseWatcher.prototype.oncancel",
-+    "CloseWatcher.prototype.onclose",
-+    "CloseWatcher.prototype.requestClose",
-     "Comment",
-     "Comment.prototype",
-     "CompositionEvent",
-@@ -1623,6 +1631,7 @@
-     "GPUSupportedLimits",
-     "GPUSupportedLimits.prototype",
-     "GPUSupportedLimits.prototype.maxBindGroups",
-+    "GPUSupportedLimits.prototype.maxBindGroupsPlusVertexBuffers",
-     "GPUSupportedLimits.prototype.maxBindingsPerBindGroup",
-     "GPUSupportedLimits.prototype.maxBufferSize",
-     "GPUSupportedLimits.prototype.maxColorAttachmentBytesPerSample",
-@@ -2651,8 +2660,14 @@
-     "IIRFilterNode.prototype.getFrequencyResponse",
-     "IdentityCredential",
-     "IdentityCredential.prototype",
-+    "IdentityCredential.prototype.isAutoSelected",
-     "IdentityCredential.prototype.token",
-+    "IdentityCredentialError",
-+    "IdentityCredentialError.prototype",
-+    "IdentityCredentialError.prototype.code",
-+    "IdentityCredentialError.prototype.url",
-     "IdentityProvider",
-+    "IdentityProvider.close",
-     "IdentityProvider.getUserInfo",
-     "IdentityProvider.prototype",
-     "IdleDeadline",
-@@ -3487,6 +3502,7 @@
-     "Navigator.prototype.language",
-     "Navigator.prototype.languages",
-     "Navigator.prototype.locks",
-+    "Navigator.prototype.login",
-     "Navigator.prototype.managed",
-     "Navigator.prototype.maxTouchPoints",
-     "Navigator.prototype.mediaCapabilities",
-@@ -3526,6 +3542,9 @@
-     "Navigator.prototype.webkitTemporaryStorage",
-     "Navigator.prototype.windowControlsOverlay",
-     "Navigator.prototype.xr",
-+    "NavigatorLogin",
-+    "NavigatorLogin.prototype",
-+    "NavigatorLogin.prototype.setStatus",
-     "NavigatorManagedData",
-     "NavigatorManagedData.prototype",
-     "NavigatorManagedData.prototype.getManagedConfiguration",
 ```
 
   <!-- browserapis:end -->

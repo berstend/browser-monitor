@@ -1,0 +1,65 @@
+--- ./cdp/chrome-unstable_128.0.6535.2.protocol.json	2024-06-26 01:00:35.226578505 +0000
++++ ./cdp/chrome-unstable_128.0.6555.2.protocol.json	2024-06-26 01:01:00.726881976 +0000
+@@ -248,7 +248,8 @@
+             "errormessage",
+             "flowto",
+             "labelledby",
+-            "owns"
++            "owns",
++            "url"
+           ]
+         },
+         {
+@@ -1753,7 +1754,9 @@
+             "ClientMetadataNoResponse",
+             "ClientMetadataInvalidResponse",
+             "ClientMetadataInvalidContentType",
++            "IdpNotPotentiallyTrustworthy",
+             "DisabledInSettings",
++            "DisabledInFlags",
+             "ErrorFetchingSignin",
+             "InvalidSigninResponse",
+             "AccountsHttpNotFound",
+@@ -1776,6 +1779,7 @@
+             "NotSignedInWithIdp",
+             "MissingTransientUserActivation",
+             "ReplacedByButtonMode",
++            "InvalidFieldsSpecified",
+             "RelyingPartyOriginIsOpaque",
+             "TypeNotMatching"
+           ]
+@@ -2711,6 +2715,12 @@
+               "type": "boolean"
+             },
+             {
++              "name": "allowWithoutGesture",
++              "description": "For \"fullscreen\" permission, must specify allowWithoutGesture:true.",
++              "optional": true,
++              "type": "boolean"
++            },
++            {
+               "name": "panTiltZoom",
+               "description": "For \"camera\" permission, may specify panTiltZoom.",
+               "optional": true,
+@@ -15411,6 +15421,11 @@
+           ]
+         },
+         {
++          "name": "policyUpdated",
++          "description": "Fired once security policy has been updated.",
++          "experimental": true
++        },
++        {
+           "name": "subresourceWebBundleMetadataReceived",
+           "description": "Fired once when parsing the .wbn file has succeeded.\nThe event contains the information about the web bundle contents.",
+           "experimental": true,
+@@ -21571,7 +21586,8 @@
+             "destinationBothLimitsReached",
+             "reportingOriginsPerSiteLimitReached",
+             "exceedsMaxChannelCapacity",
+-            "exceedsMaxTriggerStateCardinality"
++            "exceedsMaxTriggerStateCardinality",
++            "destinationPerDayReportingLimitReached"
+           ]
+         },
+         {
