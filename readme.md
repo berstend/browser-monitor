@@ -1324,6 +1324,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 128.0.6559.0 (`2024-6-27`) 
+No browser API changes.
+
+  
 #### 128.0.6555.2 (`2024-6-25`) ⚡
 Added 18 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6535.2_to_128.0.6555.2.diff), [json](./browser_apis/chrome-unstable_128.0.6535.2_to_128.0.6555.2.json), [full list](./browser_apis/chrome-unstable_128.0.6555.2.json))
  ```diff
@@ -3011,30 +3015,6 @@ Added 68 APIs, removed 30 (see: [diff](./browser_apis/chrome-unstable_121.0.6115
      "TimeRanges",
      "TimeRanges.prototype",
      "TimeRanges.prototype.end",
-```
-
-  
-#### 121.0.6115.2 (`2023-11-9`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_121.0.6103.3_to_121.0.6115.2.diff), [json](./browser_apis/chrome-unstable_121.0.6103.3_to_121.0.6115.2.json), [full list](./browser_apis/chrome-unstable_121.0.6115.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_121.0.6103.3.json	2023-11-10 00:54:42.868258523 +0000
-+++ ./browser_apis/chrome-unstable_121.0.6115.2.json	2023-11-10 00:55:17.572648892 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8110,
-+  "browserApiCount": 8111,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -75,6 +75,7 @@
-     "AnimationTimeline.prototype.duration",
-     "Array",
-     "Array.from",
-+    "Array.fromAsync",
-     "Array.isArray",
-     "Array.of",
-     "Array.prototype",
 ```
 
   <!-- browserapis:end -->
