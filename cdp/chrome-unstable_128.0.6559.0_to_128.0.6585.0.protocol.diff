@@ -1,0 +1,30 @@
+--- ./cdp/chrome-unstable_128.0.6559.0.protocol.json	2024-07-12 01:01:34.034870809 +0000
++++ ./cdp/chrome-unstable_128.0.6585.0.protocol.json	2024-07-12 01:02:02.298928119 +0000
+@@ -4217,6 +4217,10 @@
+               "name": "style",
+               "description": "Associated style declaration.",
+               "$ref": "CSSStyle"
++            },
++            {
++              "name": "active",
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -4628,7 +4632,7 @@
+             },
+             {
+               "name": "cssPositionTryRules",
+-              "description": "A list of CSS @position-try rules matching this node, based on the position-try-options property.",
++              "description": "A list of CSS @position-try rules matching this node, based on the position-try-fallbacks property.",
+               "optional": true,
+               "type": "array",
+               "items": {
+@@ -16835,6 +16839,7 @@
+             "compute-pressure",
+             "cross-origin-isolated",
+             "deferred-fetch",
++            "digital-credentials-get",
+             "direct-sockets",
+             "display-capture",
+             "document-domain",

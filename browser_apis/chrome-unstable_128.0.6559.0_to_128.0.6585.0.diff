@@ -1,0 +1,50 @@
+--- ./browser_apis/chrome-unstable_128.0.6559.0.json	2024-07-12 01:01:33.710870308 +0000
++++ ./browser_apis/chrome-unstable_128.0.6585.0.json	2024-07-12 01:02:02.286928097 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8482,
++  "browserApiCount": 8487,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1308,6 +1308,7 @@
+     "ElementInternals.prototype.ariaChecked",
+     "ElementInternals.prototype.ariaColCount",
+     "ElementInternals.prototype.ariaColIndex",
++    "ElementInternals.prototype.ariaColIndexText",
+     "ElementInternals.prototype.ariaColSpan",
+     "ElementInternals.prototype.ariaCurrent",
+     "ElementInternals.prototype.ariaDescription",
+@@ -1333,6 +1334,7 @@
+     "ElementInternals.prototype.ariaRoleDescription",
+     "ElementInternals.prototype.ariaRowCount",
+     "ElementInternals.prototype.ariaRowIndex",
++    "ElementInternals.prototype.ariaRowIndexText",
+     "ElementInternals.prototype.ariaRowSpan",
+     "ElementInternals.prototype.ariaSelected",
+     "ElementInternals.prototype.ariaSetSize",
+@@ -3992,6 +3994,7 @@
+     "Option.prototype.constructor.prototype.ariaChecked",
+     "Option.prototype.constructor.prototype.ariaColCount",
+     "Option.prototype.constructor.prototype.ariaColIndex",
++    "Option.prototype.constructor.prototype.ariaColIndexText",
+     "Option.prototype.constructor.prototype.ariaColSpan",
+     "Option.prototype.constructor.prototype.ariaCurrent",
+     "Option.prototype.constructor.prototype.ariaDescription",
+@@ -4017,6 +4020,7 @@
+     "Option.prototype.constructor.prototype.ariaRoleDescription",
+     "Option.prototype.constructor.prototype.ariaRowCount",
+     "Option.prototype.constructor.prototype.ariaRowIndex",
++    "Option.prototype.constructor.prototype.ariaRowIndexText",
+     "Option.prototype.constructor.prototype.ariaRowSpan",
+     "Option.prototype.constructor.prototype.ariaSelected",
+     "Option.prototype.constructor.prototype.ariaSetSize",
+@@ -4608,6 +4612,7 @@
+     "PointerEvent.prototype.getPredictedEvents",
+     "PointerEvent.prototype.height",
+     "PointerEvent.prototype.isPrimary",
++    "PointerEvent.prototype.persistentDeviceId",
+     "PointerEvent.prototype.pointerId",
+     "PointerEvent.prototype.pointerType",
+     "PointerEvent.prototype.pressure",
