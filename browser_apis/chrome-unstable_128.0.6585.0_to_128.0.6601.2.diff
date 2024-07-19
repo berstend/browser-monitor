@@ -1,0 +1,34 @@
+--- ./browser_apis/chrome-unstable_128.0.6585.0.json	2024-07-19 03:20:44.930557253 +0000
++++ ./browser_apis/chrome-unstable_128.0.6601.2.json	2024-07-19 03:21:13.994689931 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8487,
++  "browserApiCount": 8490,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2980,6 +2980,7 @@
+     "Intl.Locale.prototype.caseFirst",
+     "Intl.Locale.prototype.collation",
+     "Intl.Locale.prototype.collations",
++    "Intl.Locale.prototype.firstDayOfWeek",
+     "Intl.Locale.prototype.hourCycle",
+     "Intl.Locale.prototype.hourCycles",
+     "Intl.Locale.prototype.language",
+@@ -4086,6 +4087,7 @@
+     "Option.prototype.constructor.prototype.constructor.prototype.replaceChild",
+     "Option.prototype.constructor.prototype.constructor.prototype.textContent",
+     "Option.prototype.constructor.prototype.contentEditable",
++    "Option.prototype.constructor.prototype.currentCSSZoom",
+     "Option.prototype.constructor.prototype.dataset",
+     "Option.prototype.constructor.prototype.dir",
+     "Option.prototype.constructor.prototype.draggable",
+@@ -4704,6 +4706,7 @@
+     "Promise.race",
+     "Promise.reject",
+     "Promise.resolve",
++    "Promise.try",
+     "Promise.withResolvers",
+     "PromiseRejectionEvent",
+     "PromiseRejectionEvent.prototype",

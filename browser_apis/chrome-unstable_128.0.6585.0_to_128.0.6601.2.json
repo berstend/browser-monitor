@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "128.0.6585.0",
+    "to": "128.0.6601.2"
+  },
+  "browserApis": {
+    "added": [
+      "Intl.Locale.prototype.firstDayOfWeek",
+      "Option.prototype.constructor.prototype.currentCSSZoom",
+      "Promise.try"
+    ],
+    "removed": []
+  }
+}

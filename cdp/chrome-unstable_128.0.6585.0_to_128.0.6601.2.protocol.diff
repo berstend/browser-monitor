@@ -1,0 +1,276 @@
+--- ./cdp/chrome-unstable_128.0.6585.0.protocol.json	2024-07-19 03:20:45.230558562 +0000
++++ ./cdp/chrome-unstable_128.0.6601.2.protocol.json	2024-07-19 03:21:14.002689968 +0000
+@@ -1607,7 +1607,6 @@
+           "id": "GenericIssueErrorType",
+           "type": "string",
+           "enum": [
+-            "CrossOriginPortalPostMessageError",
+             "FormLabelForNameError",
+             "FormDuplicateIdForInputError",
+             "FormInputWithNoLabelError",
+@@ -4640,6 +4639,12 @@
+               }
+             },
+             {
++              "name": "activePositionFallbackIndex",
++              "description": "Index of the active fallback in the applied position-try-fallback property,\nwill not be set if there is no active position-try fallback.",
++              "optional": true,
++              "type": "integer"
++            },
++            {
+               "name": "cssPropertyRules",
+               "description": "A list of CSS at-property rules matching this node.",
+               "optional": true,
+@@ -9883,6 +9888,108 @@
+       ]
+     },
+     {
++      "domain": "FileSystem",
++      "experimental": true,
++      "dependencies": [
++        "Network",
++        "Storage"
++      ],
++      "types": [
++        {
++          "id": "File",
++          "type": "object",
++          "properties": [
++            {
++              "name": "name",
++              "type": "string"
++            },
++            {
++              "name": "lastModified",
++              "description": "Timestamp",
++              "$ref": "Network.TimeSinceEpoch"
++            },
++            {
++              "name": "size",
++              "description": "Size in bytes",
++              "type": "number"
++            },
++            {
++              "name": "type",
++              "type": "string"
++            }
++          ]
++        },
++        {
++          "id": "Directory",
++          "type": "object",
++          "properties": [
++            {
++              "name": "name",
++              "type": "string"
++            },
++            {
++              "name": "nestedDirectories",
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            },
++            {
++              "name": "nestedFiles",
++              "description": "Files that are directly nested under this directory.",
++              "type": "array",
++              "items": {
++                "$ref": "File"
++              }
++            }
++          ]
++        },
++        {
++          "id": "BucketFileSystemLocator",
++          "type": "object",
++          "properties": [
++            {
++              "name": "storageKey",
++              "description": "Storage key",
++              "$ref": "Storage.SerializedStorageKey"
++            },
++            {
++              "name": "bucketName",
++              "description": "Bucket name. Not passing a `bucketName` will retrieve the default Bucket. (https://developer.mozilla.org/en-US/docs/Web/API/Storage_API#storage_buckets)",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "pathComponents",
++              "description": "Path to the directory using each path component as an array item.",
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            }
++          ]
++        }
++      ],
++      "commands": [
++        {
++          "name": "getDirectory",
++          "parameters": [
++            {
++              "name": "bucketFileSystemLocator",
++              "$ref": "BucketFileSystemLocator"
++            }
++          ],
++          "returns": [
++            {
++              "name": "directory",
++              "description": "Returns the directory object at the path.",
++              "$ref": "Directory"
++            }
++          ]
++        }
++      ]
++    },
++    {
+       "domain": "IndexedDB",
+       "experimental": true,
+       "dependencies": [
+@@ -13683,7 +13790,8 @@
+             "RestrictProperties",
+             "UnsafeNone",
+             "SameOriginPlusCoep",
+-            "RestrictPropertiesPlusCoep"
++            "RestrictPropertiesPlusCoep",
++            "NoopenerAllowPopups"
+           ]
+         },
+         {
+@@ -18177,7 +18285,6 @@
+             "Printing",
+             "WebDatabase",
+             "PictureInPicture",
+-            "Portal",
+             "SpeechRecognizer",
+             "IdleManager",
+             "PaymentManager",
+@@ -21497,6 +21604,58 @@
+           ]
+         },
+         {
++          "id": "AttributionReportingAggregatableDebugReportingData",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "keyPiece",
++              "$ref": "UnsignedInt128AsBase16"
++            },
++            {
++              "name": "value",
++              "description": "number instead of integer because not all uint32 can be represented by\nint",
++              "type": "number"
++            },
++            {
++              "name": "types",
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            }
++          ]
++        },
++        {
++          "id": "AttributionReportingAggregatableDebugReportingConfig",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "budget",
++              "description": "number instead of integer because not all uint32 can be represented by\nint, only present for source registrations",
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "keyPiece",
++              "$ref": "UnsignedInt128AsBase16"
++            },
++            {
++              "name": "debugData",
++              "type": "array",
++              "items": {
++                "$ref": "AttributionReportingAggregatableDebugReportingData"
++              }
++            },
++            {
++              "name": "aggregationCoordinatorOrigin",
++              "optional": true,
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "id": "AttributionReportingSourceRegistration",
+           "experimental": true,
+           "type": "object",
+@@ -21571,6 +21730,14 @@
+             {
+               "name": "triggerDataMatching",
+               "$ref": "AttributionReportingTriggerDataMatching"
++            },
++            {
++              "name": "destinationLimitPriority",
++              "$ref": "SignedInt64AsBase10"
++            },
++            {
++              "name": "aggregatableDebugReportingConfig",
++              "$ref": "AttributionReportingAggregatableDebugReportingConfig"
+             }
+           ]
+         },
+@@ -21617,6 +21784,10 @@
+               "name": "value",
+               "description": "number instead of integer because not all uint32 can be represented by\nint",
+               "type": "number"
++            },
++            {
++              "name": "filteringId",
++              "$ref": "UnsignedInt64AsBase10"
+             }
+           ]
+         },
+@@ -21743,6 +21914,10 @@
+               }
+             },
+             {
++              "name": "aggregatableFilteringIdMaxBytes",
++              "type": "integer"
++            },
++            {
+               "name": "debugReporting",
+               "type": "boolean"
+             },
+@@ -21759,6 +21934,10 @@
+               "name": "triggerContextId",
+               "optional": true,
+               "type": "string"
++            },
++            {
++              "name": "aggregatableDebugReportingConfig",
++              "$ref": "AttributionReportingAggregatableDebugReportingConfig"
+             }
+           ]
+         },
+@@ -23019,7 +23198,7 @@
+             },
+             {
+               "name": "subtype",
+-              "description": "Provides additional details for specific target types. For example, for\nthe type of \"page\", this may be set to \"portal\" or \"prerender\".",
++              "description": "Provides additional details for specific target types. For example, for\nthe type of \"page\", this may be set to \"prerender\".",
+               "experimental": true,
+               "optional": true,
+               "type": "string"
+@@ -25777,7 +25956,8 @@
+             "ActivationUrlHasEffectiveUrl",
+             "JavaScriptInterfaceAdded",
+             "JavaScriptInterfaceRemoved",
+-            "AllPrerenderingCanceled"
++            "AllPrerenderingCanceled",
++            "WindowClosed"
+           ]
+         },
+         {

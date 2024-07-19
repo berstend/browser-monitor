@@ -1324,6 +1324,46 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 128.0.6601.2 (`2024-7-18`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6585.0_to_128.0.6601.2.diff), [json](./browser_apis/chrome-unstable_128.0.6585.0_to_128.0.6601.2.json), [full list](./browser_apis/chrome-unstable_128.0.6601.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_128.0.6585.0.json	2024-07-19 03:20:44.930557253 +0000
++++ ./browser_apis/chrome-unstable_128.0.6601.2.json	2024-07-19 03:21:13.994689931 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8487,
++  "browserApiCount": 8490,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2980,6 +2980,7 @@
+     "Intl.Locale.prototype.caseFirst",
+     "Intl.Locale.prototype.collation",
+     "Intl.Locale.prototype.collations",
++    "Intl.Locale.prototype.firstDayOfWeek",
+     "Intl.Locale.prototype.hourCycle",
+     "Intl.Locale.prototype.hourCycles",
+     "Intl.Locale.prototype.language",
+@@ -4086,6 +4087,7 @@
+     "Option.prototype.constructor.prototype.constructor.prototype.replaceChild",
+     "Option.prototype.constructor.prototype.constructor.prototype.textContent",
+     "Option.prototype.constructor.prototype.contentEditable",
++    "Option.prototype.constructor.prototype.currentCSSZoom",
+     "Option.prototype.constructor.prototype.dataset",
+     "Option.prototype.constructor.prototype.dir",
+     "Option.prototype.constructor.prototype.draggable",
+@@ -4704,6 +4706,7 @@
+     "Promise.race",
+     "Promise.reject",
+     "Promise.resolve",
++    "Promise.try",
+     "Promise.withResolvers",
+     "PromiseRejectionEvent",
+     "PromiseRejectionEvent.prototype",
+```
+
+  
 #### 128.0.6585.0 (`2024-7-11`) ⚡
 Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6559.0_to_128.0.6585.0.diff), [json](./browser_apis/chrome-unstable_128.0.6559.0_to_128.0.6585.0.json), [full list](./browser_apis/chrome-unstable_128.0.6585.0.json))
  ```diff
@@ -2830,62 +2870,6 @@ Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_121.0.6156.3
      "GPUCompilationInfo",
      "GPUCompilationInfo.prototype",
      "GPUCompilationInfo.prototype.messages",
-```
-
-  
-#### 121.0.6156.3 (`2023-12-1`) ⚡
-Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_121.0.6129.0_to_121.0.6156.3.diff), [json](./browser_apis/chrome-unstable_121.0.6129.0_to_121.0.6156.3.json), [full list](./browser_apis/chrome-unstable_121.0.6156.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_121.0.6129.0.json	2023-12-02 00:55:15.258713966 +0000
-+++ ./browser_apis/chrome-unstable_121.0.6156.3.json	2023-12-02 00:55:45.386568123 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8149,
-+  "browserApiCount": 8168,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2330,6 +2330,7 @@
-     "HTMLSelectElement.prototype.selectedIndex",
-     "HTMLSelectElement.prototype.selectedOptions",
-     "HTMLSelectElement.prototype.setCustomValidity",
-+    "HTMLSelectElement.prototype.showPicker",
-     "HTMLSelectElement.prototype.size",
-     "HTMLSelectElement.prototype.type",
-     "HTMLSelectElement.prototype.validationMessage",
-@@ -5879,6 +5880,17 @@
-     "SourceBufferList.prototype.length",
-     "SourceBufferList.prototype.onaddsourcebuffer",
-     "SourceBufferList.prototype.onremovesourcebuffer",
-+    "SpeechSynthesis",
-+    "SpeechSynthesis.prototype",
-+    "SpeechSynthesis.prototype.cancel",
-+    "SpeechSynthesis.prototype.getVoices",
-+    "SpeechSynthesis.prototype.onvoiceschanged",
-+    "SpeechSynthesis.prototype.pause",
-+    "SpeechSynthesis.prototype.paused",
-+    "SpeechSynthesis.prototype.pending",
-+    "SpeechSynthesis.prototype.resume",
-+    "SpeechSynthesis.prototype.speak",
-+    "SpeechSynthesis.prototype.speaking",
-     "SpeechSynthesisErrorEvent",
-     "SpeechSynthesisErrorEvent.prototype",
-     "SpeechSynthesisErrorEvent.prototype.charIndex",
-@@ -5903,6 +5915,13 @@
-     "SpeechSynthesisUtterance.prototype.text",
-     "SpeechSynthesisUtterance.prototype.voice",
-     "SpeechSynthesisUtterance.prototype.volume",
-+    "SpeechSynthesisVoice",
-+    "SpeechSynthesisVoice.prototype",
-+    "SpeechSynthesisVoice.prototype.default",
-+    "SpeechSynthesisVoice.prototype.lang",
-+    "SpeechSynthesisVoice.prototype.localService",
-+    "SpeechSynthesisVoice.prototype.name",
-+    "SpeechSynthesisVoice.prototype.voiceURI",
-     "StaticRange",
-     "StaticRange.prototype",
-     "StaticRange.prototype.collapsed",
 ```
 
   <!-- browserapis:end -->
