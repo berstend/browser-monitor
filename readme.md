@@ -5,6 +5,60 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 127.0.6533.72 (`2024-7-23`) ⚡
+Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_126.0.6478.182_to_127.0.6533.72.diff), [json](./browser_apis/chrome-stable_126.0.6478.182_to_127.0.6533.72.json), [full list](./browser_apis/chrome-stable_127.0.6533.72.json))
+ ```diff
+--- ./browser_apis/chrome-stable_126.0.6478.182.json	2024-07-24 01:03:27.735632014 +0000
++++ ./browser_apis/chrome-stable_127.0.6533.72.json	2024-07-24 01:03:59.299346896 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8454,
++  "browserApiCount": 8464,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -906,6 +906,11 @@
+     "ChannelMergerNode.prototype",
+     "ChannelSplitterNode",
+     "ChannelSplitterNode.prototype",
++    "ChapterInformation",
++    "ChapterInformation.prototype",
++    "ChapterInformation.prototype.artwork",
++    "ChapterInformation.prototype.startTime",
++    "ChapterInformation.prototype.title",
+     "CharacterBoundsUpdateEvent",
+     "CharacterBoundsUpdateEvent.prototype",
+     "CharacterBoundsUpdateEvent.prototype.rangeEnd",
+@@ -1540,6 +1545,7 @@
+     "GPUAdapter",
+     "GPUAdapter.prototype",
+     "GPUAdapter.prototype.features",
++    "GPUAdapter.prototype.info",
+     "GPUAdapter.prototype.isFallbackAdapter",
+     "GPUAdapter.prototype.limits",
+     "GPUAdapter.prototype.requestAdapterInfo",
+@@ -3394,6 +3400,7 @@
+     "MediaMetadata.prototype.album",
+     "MediaMetadata.prototype.artist",
+     "MediaMetadata.prototype.artwork",
++    "MediaMetadata.prototype.chapterInfo",
+     "MediaMetadata.prototype.title",
+     "MediaQueryList",
+     "MediaQueryList.prototype",
+@@ -4680,6 +4687,9 @@
+     "PromiseRejectionEvent.prototype",
+     "PromiseRejectionEvent.prototype.promise",
+     "PromiseRejectionEvent.prototype.reason",
++    "ProtectedAudience",
++    "ProtectedAudience.prototype",
++    "ProtectedAudience.prototype.queryFeatureSupport",
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
+```
+
+  
 #### 126.0.6478.182 (`2024-7-16`) 
 No browser API changes.
 
@@ -1316,10 +1370,6 @@ Added 90 APIs, removed 38 (see: [diff](./browser_apis/chrome-stable_120.0.6099.2
      "TimeRanges.prototype",
      "TimeRanges.prototype.end",
 ```
-
-  
-#### 120.0.6099.224 (`2024-1-16`) 
-No browser API changes.
 
   
 ### chrome-unstable

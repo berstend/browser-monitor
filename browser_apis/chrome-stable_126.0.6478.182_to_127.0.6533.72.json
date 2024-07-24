@@ -1,0 +1,22 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "126.0.6478.182",
+    "to": "127.0.6533.72"
+  },
+  "browserApis": {
+    "added": [
+      "ChapterInformation",
+      "ChapterInformation.prototype",
+      "ChapterInformation.prototype.artwork",
+      "ChapterInformation.prototype.startTime",
+      "ChapterInformation.prototype.title",
+      "GPUAdapter.prototype.info",
+      "MediaMetadata.prototype.chapterInfo",
+      "ProtectedAudience",
+      "ProtectedAudience.prototype",
+      "ProtectedAudience.prototype.queryFeatureSupport"
+    ],
+    "removed": []
+  }
+}
