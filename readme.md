@@ -1374,6 +1374,30 @@ Added 90 APIs, removed 38 (see: [diff](./browser_apis/chrome-stable_120.0.6099.2
   
 ### chrome-unstable
   
+#### 128.0.6613.7 (`2024-7-24`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6601.2_to_128.0.6613.7.diff), [json](./browser_apis/chrome-unstable_128.0.6601.2_to_128.0.6613.7.json), [full list](./browser_apis/chrome-unstable_128.0.6613.7.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_128.0.6601.2.json	2024-07-25 01:02:47.278635965 +0000
++++ ./browser_apis/chrome-unstable_128.0.6613.7.json	2024-07-25 01:03:33.719104944 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8490,
++  "browserApiCount": 8491,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -194,6 +194,7 @@
+     "AudioContext.prototype.createMediaStreamDestination",
+     "AudioContext.prototype.createMediaStreamSource",
+     "AudioContext.prototype.getOutputTimestamp",
++    "AudioContext.prototype.onerror",
+     "AudioContext.prototype.onsinkchange",
+     "AudioContext.prototype.outputLatency",
+     "AudioContext.prototype.resume",
+```
+
+  
 #### 128.0.6601.2 (`2024-7-18`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6585.0_to_128.0.6601.2.diff), [json](./browser_apis/chrome-unstable_128.0.6585.0_to_128.0.6601.2.json), [full list](./browser_apis/chrome-unstable_128.0.6601.2.json))
  ```diff
@@ -2897,29 +2921,5 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6170.5
   
 #### 122.0.6170.5 (`2023-12-11`) 
 No browser API changes.
-
-  
-#### 122.0.6170.3 (`2023-12-8`) ⚡
-Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_121.0.6156.3_to_122.0.6170.3.diff), [json](./browser_apis/chrome-unstable_121.0.6156.3_to_122.0.6170.3.json), [full list](./browser_apis/chrome-unstable_122.0.6170.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_121.0.6156.3.json	2023-12-09 00:55:40.766811927 +0000
-+++ ./browser_apis/chrome-unstable_122.0.6170.3.json	2023-12-09 00:55:59.382898134 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8168,
-+  "browserApiCount": 8167,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1500,7 +1500,6 @@
-     "GPUCommandEncoder.prototype.popDebugGroup",
-     "GPUCommandEncoder.prototype.pushDebugGroup",
-     "GPUCommandEncoder.prototype.resolveQuerySet",
--    "GPUCommandEncoder.prototype.writeTimestamp",
-     "GPUCompilationInfo",
-     "GPUCompilationInfo.prototype",
-     "GPUCompilationInfo.prototype.messages",
-```
 
   <!-- browserapis:end -->

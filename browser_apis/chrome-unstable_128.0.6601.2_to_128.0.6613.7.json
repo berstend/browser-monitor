@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "128.0.6601.2",
+    "to": "128.0.6613.7"
+  },
+  "browserApis": {
+    "added": [
+      "AudioContext.prototype.onerror"
+    ],
+    "removed": []
+  }
+}

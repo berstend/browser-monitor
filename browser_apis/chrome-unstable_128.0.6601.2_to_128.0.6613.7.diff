@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_128.0.6601.2.json	2024-07-25 01:02:47.278635965 +0000
++++ ./browser_apis/chrome-unstable_128.0.6613.7.json	2024-07-25 01:03:33.719104944 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8490,
++  "browserApiCount": 8491,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -194,6 +194,7 @@
+     "AudioContext.prototype.createMediaStreamDestination",
+     "AudioContext.prototype.createMediaStreamSource",
+     "AudioContext.prototype.getOutputTimestamp",
++    "AudioContext.prototype.onerror",
+     "AudioContext.prototype.onsinkchange",
+     "AudioContext.prototype.outputLatency",
+     "AudioContext.prototype.resume",
