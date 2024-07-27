@@ -1374,6 +1374,10 @@ Added 90 APIs, removed 38 (see: [diff](./browser_apis/chrome-stable_120.0.6099.2
   
 ### chrome-unstable
   
+#### 129.0.6614.3 (`2024-7-26`) 
+No browser API changes.
+
+  
 #### 128.0.6613.7 (`2024-7-24`) ⚡
 Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6601.2_to_128.0.6613.7.diff), [json](./browser_apis/chrome-unstable_128.0.6601.2_to_128.0.6613.7.json), [full list](./browser_apis/chrome-unstable_128.0.6613.7.json))
  ```diff
@@ -2917,9 +2921,5 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6170.5
      "URLPattern.prototype.hostname",
      "URLPattern.prototype.password",
 ```
-
-  
-#### 122.0.6170.5 (`2023-12-11`) 
-No browser API changes.
 
   <!-- browserapis:end -->
