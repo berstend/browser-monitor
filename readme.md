@@ -1114,6 +1114,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 129.0.6628.3 (`2024-8-1`) 
+No browser API changes.
+
+  
 #### 129.0.6614.3 (`2024-7-26`) 
 No browser API changes.
 
@@ -2628,38 +2632,6 @@ Added 1 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_122.0.6182.0
      "HTMLIFrameElement.prototype.align",
      "HTMLIFrameElement.prototype.allow",
      "HTMLIFrameElement.prototype.allowFullscreen",
-```
-
-  
-#### 122.0.6182.0 (`2023-12-14`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6170.5_to_122.0.6182.0.diff), [json](./browser_apis/chrome-unstable_122.0.6170.5_to_122.0.6182.0.json), [full list](./browser_apis/chrome-unstable_122.0.6182.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_122.0.6170.5.json	2023-12-15 00:57:48.155735726 +0000
-+++ ./browser_apis/chrome-unstable_122.0.6182.0.json	2023-12-15 00:58:07.811719749 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8167,
-+  "browserApiCount": 8169,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1382,6 +1382,7 @@
-     "FileSystemFileHandle.prototype.move",
-     "FileSystemWritableFileStream",
-     "FileSystemWritableFileStream.prototype",
-+    "FileSystemWritableFileStream.prototype.mode",
-     "FileSystemWritableFileStream.prototype.seek",
-     "FileSystemWritableFileStream.prototype.truncate",
-     "FileSystemWritableFileStream.prototype.write",
-@@ -6301,6 +6302,7 @@
-     "URLPattern",
-     "URLPattern.prototype",
-     "URLPattern.prototype.exec",
-+    "URLPattern.prototype.hasRegExpGroups",
-     "URLPattern.prototype.hash",
-     "URLPattern.prototype.hostname",
-     "URLPattern.prototype.password",
 ```
 
   <!-- browserapis:end -->
