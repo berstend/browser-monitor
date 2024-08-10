@@ -1,0 +1,20 @@
+--- ./browser_apis/chrome-unstable_129.0.6628.3.json	2024-08-10 01:04:12.909607618 +0000
++++ ./browser_apis/chrome-unstable_129.0.6643.2.json	2024-08-10 01:04:38.621949347 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8491,
++  "browserApiCount": 8493,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -635,7 +635,9 @@
+     "CSSPositionTryDescriptors.prototype.place-self",
+     "CSSPositionTryDescriptors.prototype.placeSelf",
+     "CSSPositionTryDescriptors.prototype.position-anchor",
++    "CSSPositionTryDescriptors.prototype.position-area",
+     "CSSPositionTryDescriptors.prototype.positionAnchor",
++    "CSSPositionTryDescriptors.prototype.positionArea",
+     "CSSPositionTryDescriptors.prototype.right",
+     "CSSPositionTryDescriptors.prototype.top",
+     "CSSPositionTryDescriptors.prototype.width",

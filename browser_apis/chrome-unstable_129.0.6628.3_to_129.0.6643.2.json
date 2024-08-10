@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "129.0.6628.3",
+    "to": "129.0.6643.2"
+  },
+  "browserApis": {
+    "added": [
+      "CSSPositionTryDescriptors.prototype.position-area",
+      "CSSPositionTryDescriptors.prototype.positionArea"
+    ],
+    "removed": []
+  }
+}
