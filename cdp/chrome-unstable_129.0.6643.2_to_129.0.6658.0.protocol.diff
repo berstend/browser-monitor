@@ -1,0 +1,152 @@
+--- ./cdp/chrome-unstable_129.0.6643.2.protocol.json	2024-08-17 01:01:49.423344366 +0000
++++ ./cdp/chrome-unstable_129.0.6658.0.protocol.json	2024-08-17 01:02:28.845061796 +0000
+@@ -2213,7 +2213,7 @@
+         },
+         {
+           "name": "getStorageItems",
+-          "description": "Gets data from extension storage in the given `area`. If `keys` is\nspecified, these are used to filter the result.",
++          "description": "Gets data from extension storage in the given `storageArea`. If `keys` is\nspecified, these are used to filter the result.",
+           "parameters": [
+             {
+               "name": "id",
+@@ -2241,6 +2241,67 @@
+               "type": "object"
+             }
+           ]
++        },
++        {
++          "name": "removeStorageItems",
++          "description": "Removes `keys` from extension storage in the given `storageArea`.",
++          "parameters": [
++            {
++              "name": "id",
++              "description": "ID of extension.",
++              "type": "string"
++            },
++            {
++              "name": "storageArea",
++              "description": "StorageArea to remove data from.",
++              "$ref": "StorageArea"
++            },
++            {
++              "name": "keys",
++              "description": "Keys to remove.",
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            }
++          ]
++        },
++        {
++          "name": "clearStorageItems",
++          "description": "Clears extension storage in the given `storageArea`.",
++          "parameters": [
++            {
++              "name": "id",
++              "description": "ID of extension.",
++              "type": "string"
++            },
++            {
++              "name": "storageArea",
++              "description": "StorageArea to remove data from.",
++              "$ref": "StorageArea"
++            }
++          ]
++        },
++        {
++          "name": "setStorageItems",
++          "description": "Sets `values` in extension storage in the given `storageArea`. The provided `values`\nwill be merged with existing values in the storage area.",
++          "parameters": [
++            {
++              "name": "id",
++              "description": "ID of extension.",
++              "type": "string"
++            },
++            {
++              "name": "storageArea",
++              "description": "StorageArea to set data in.",
++              "$ref": "StorageArea"
++            },
++            {
++              "name": "values",
++              "description": "Values to set.",
++              "type": "object"
++            }
++          ]
+         }
+       ]
+     },
+@@ -5603,6 +5664,8 @@
+             "first-line-inherited",
+             "scroll-marker",
+             "scroll-marker-group",
++            "scroll-next-button",
++            "scroll-prev-button",
+             "scrollbar",
+             "scrollbar-thumb",
+             "scrollbar-button",
+@@ -5869,6 +5932,24 @@
+           ]
+         },
+         {
++          "id": "DetachedElementInfo",
++          "description": "A structure to hold the top-level node of a detached tree and an array of its retained descendants.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "treeNode",
++              "$ref": "Node"
++            },
++            {
++              "name": "retainedNodeIds",
++              "type": "array",
++              "items": {
++                "$ref": "NodeId"
++              }
++            }
++          ]
++        },
++        {
+           "id": "RGBA",
+           "description": "A structure holding an RGBA color.",
+           "type": "object",
+@@ -6957,6 +7038,21 @@
+           ]
+         },
+         {
++          "name": "getDetachedDomNodes",
++          "description": "Returns list of detached nodes",
++          "experimental": true,
++          "returns": [
++            {
++              "name": "detachedNodes",
++              "description": "The list of detached nodes",
++              "type": "array",
++              "items": {
++                "$ref": "DetachedElementInfo"
++              }
++            }
++          ]
++        },
++        {
+           "name": "setInspectedNode",
+           "description": "Enables console to refer to the node with given id via $x (see Command Line API for more details\n$x functions).",
+           "experimental": true,
+@@ -20144,6 +20240,16 @@
+               "name": "url",
+               "description": "Frame's new url.",
+               "type": "string"
++            },
++            {
++              "name": "navigationType",
++              "description": "Navigation type",
++              "type": "string",
++              "enum": [
++                "fragment",
++                "historyApi",
++                "other"
++              ]
+             }
+           ]
+         },

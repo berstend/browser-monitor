@@ -1114,6 +1114,47 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 129.0.6658.0 (`2024-8-16`) ⚡
+Added 3 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_129.0.6643.2_to_129.0.6658.0.diff), [json](./browser_apis/chrome-unstable_129.0.6643.2_to_129.0.6658.0.json), [full list](./browser_apis/chrome-unstable_129.0.6658.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_129.0.6643.2.json	2024-08-17 01:01:49.123341676 +0000
++++ ./browser_apis/chrome-unstable_129.0.6658.0.json	2024-08-17 01:02:28.837061594 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8493,
++  "browserApiCount": 8494,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1429,9 +1429,7 @@
+     "Fence.prototype.setReportEventDataForAutomaticBeacons",
+     "FencedFrameConfig",
+     "FencedFrameConfig.prototype",
+-    "FencedFrameConfig.prototype.height",
+     "FencedFrameConfig.prototype.setSharedStorageContext",
+-    "FencedFrameConfig.prototype.width",
+     "File",
+     "File.prototype",
+     "File.prototype.arrayBuffer",
+@@ -4723,11 +4721,14 @@
+     "PublicKeyCredential",
+     "PublicKeyCredential.isConditionalMediationAvailable",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
++    "PublicKeyCredential.parseCreationOptionsFromJSON",
++    "PublicKeyCredential.parseRequestOptionsFromJSON",
+     "PublicKeyCredential.prototype",
+     "PublicKeyCredential.prototype.authenticatorAttachment",
+     "PublicKeyCredential.prototype.getClientExtensionResults",
+     "PublicKeyCredential.prototype.rawId",
+     "PublicKeyCredential.prototype.response",
++    "PublicKeyCredential.prototype.toJSON",
+     "PushManager",
+     "PushManager.prototype",
+     "PushManager.prototype.getSubscription",
+```
+
+  
 #### 129.0.6643.2 (`2024-8-9`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_129.0.6628.3_to_129.0.6643.2.diff), [json](./browser_apis/chrome-unstable_129.0.6628.3_to_129.0.6643.2.json), [full list](./browser_apis/chrome-unstable_129.0.6643.2.json))
  ```diff
@@ -2562,64 +2603,6 @@ Added 24 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_122.0.6238.
      "StorageEvent",
      "StorageEvent.prototype",
      "StorageEvent.prototype.initStorageEvent",
-```
-
-  
-#### 122.0.6238.2 (`2024-1-11`) ⚡
-Added 19 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_122.0.6226.2_to_122.0.6238.2.diff), [json](./browser_apis/chrome-unstable_122.0.6226.2_to_122.0.6238.2.json), [full list](./browser_apis/chrome-unstable_122.0.6238.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_122.0.6226.2.json	2024-01-12 00:58:19.096227133 +0000
-+++ ./browser_apis/chrome-unstable_122.0.6238.2.json	2024-01-12 00:58:46.580315693 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8163,
-+  "browserApiCount": 8182,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2905,6 +2905,21 @@
-     "Intl.v8BreakIterator.prototype.next",
-     "Intl.v8BreakIterator.prototype.resolvedOptions",
-     "Intl.v8BreakIterator.supportedLocalesOf",
-+    "Iterator",
-+    "Iterator.from",
-+    "Iterator.prototype",
-+    "Iterator.prototype.constructor",
-+    "Iterator.prototype.drop",
-+    "Iterator.prototype.every",
-+    "Iterator.prototype.filter",
-+    "Iterator.prototype.find",
-+    "Iterator.prototype.flatMap",
-+    "Iterator.prototype.forEach",
-+    "Iterator.prototype.map",
-+    "Iterator.prototype.reduce",
-+    "Iterator.prototype.some",
-+    "Iterator.prototype.take",
-+    "Iterator.prototype.toArray",
-     "JSON",
-     "JSON.isRawJSON",
-     "JSON.parse",
-@@ -6741,7 +6756,9 @@
-     "WebGL2RenderingContext.prototype.drawElementsInstanced",
-     "WebGL2RenderingContext.prototype.drawRangeElements",
-     "WebGL2RenderingContext.prototype.drawingBufferColorSpace",
-+    "WebGL2RenderingContext.prototype.drawingBufferFormat",
-     "WebGL2RenderingContext.prototype.drawingBufferHeight",
-+    "WebGL2RenderingContext.prototype.drawingBufferStorage",
-     "WebGL2RenderingContext.prototype.drawingBufferWidth",
-     "WebGL2RenderingContext.prototype.enable",
-     "WebGL2RenderingContext.prototype.enableVertexAttribArray",
-@@ -6961,7 +6978,9 @@
-     "WebGLRenderingContext.prototype.drawArrays",
-     "WebGLRenderingContext.prototype.drawElements",
-     "WebGLRenderingContext.prototype.drawingBufferColorSpace",
-+    "WebGLRenderingContext.prototype.drawingBufferFormat",
-     "WebGLRenderingContext.prototype.drawingBufferHeight",
-+    "WebGLRenderingContext.prototype.drawingBufferStorage",
-     "WebGLRenderingContext.prototype.drawingBufferWidth",
-     "WebGLRenderingContext.prototype.enable",
-     "WebGLRenderingContext.prototype.enableVertexAttribArray",
 ```
 
   <!-- browserapis:end -->

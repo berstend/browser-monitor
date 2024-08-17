@@ -1,0 +1,35 @@
+--- ./browser_apis/chrome-unstable_129.0.6643.2.json	2024-08-17 01:01:49.123341676 +0000
++++ ./browser_apis/chrome-unstable_129.0.6658.0.json	2024-08-17 01:02:28.837061594 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8493,
++  "browserApiCount": 8494,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1429,9 +1429,7 @@
+     "Fence.prototype.setReportEventDataForAutomaticBeacons",
+     "FencedFrameConfig",
+     "FencedFrameConfig.prototype",
+-    "FencedFrameConfig.prototype.height",
+     "FencedFrameConfig.prototype.setSharedStorageContext",
+-    "FencedFrameConfig.prototype.width",
+     "File",
+     "File.prototype",
+     "File.prototype.arrayBuffer",
+@@ -4723,11 +4721,14 @@
+     "PublicKeyCredential",
+     "PublicKeyCredential.isConditionalMediationAvailable",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
++    "PublicKeyCredential.parseCreationOptionsFromJSON",
++    "PublicKeyCredential.parseRequestOptionsFromJSON",
+     "PublicKeyCredential.prototype",
+     "PublicKeyCredential.prototype.authenticatorAttachment",
+     "PublicKeyCredential.prototype.getClientExtensionResults",
+     "PublicKeyCredential.prototype.rawId",
+     "PublicKeyCredential.prototype.response",
++    "PublicKeyCredential.prototype.toJSON",
+     "PushManager",
+     "PushManager.prototype",
+     "PushManager.prototype.getSubscription",
