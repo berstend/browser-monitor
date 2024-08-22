@@ -5,6 +5,168 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 128.0.6613.84 (`2024-8-21`) ⚡
+Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_127.0.6533.119_to_128.0.6613.84.diff), [json](./browser_apis/chrome-stable_127.0.6533.119_to_128.0.6613.84.json), [full list](./browser_apis/chrome-stable_128.0.6613.84.json))
+ ```diff
+--- ./browser_apis/chrome-stable_127.0.6533.119.json	2024-08-22 01:05:20.173066151 +0000
++++ ./browser_apis/chrome-stable_128.0.6613.84.json	2024-08-22 01:05:40.229126094 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8464,
++  "browserApiCount": 8491,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -194,6 +194,7 @@
+     "AudioContext.prototype.createMediaStreamDestination",
+     "AudioContext.prototype.createMediaStreamSource",
+     "AudioContext.prototype.getOutputTimestamp",
++    "AudioContext.prototype.onerror",
+     "AudioContext.prototype.onsinkchange",
+     "AudioContext.prototype.outputLatency",
+     "AudioContext.prototype.resume",
+@@ -902,6 +903,11 @@
+     "CaptureController",
+     "CaptureController.prototype",
+     "CaptureController.prototype.setFocusBehavior",
++    "CaretPosition",
++    "CaretPosition.prototype",
++    "CaretPosition.prototype.getClientRect",
++    "CaretPosition.prototype.offset",
++    "CaretPosition.prototype.offsetNode",
+     "ChannelMergerNode",
+     "ChannelMergerNode.prototype",
+     "ChannelSplitterNode",
+@@ -1303,6 +1309,7 @@
+     "ElementInternals.prototype.ariaChecked",
+     "ElementInternals.prototype.ariaColCount",
+     "ElementInternals.prototype.ariaColIndex",
++    "ElementInternals.prototype.ariaColIndexText",
+     "ElementInternals.prototype.ariaColSpan",
+     "ElementInternals.prototype.ariaCurrent",
+     "ElementInternals.prototype.ariaDescription",
+@@ -1328,6 +1335,7 @@
+     "ElementInternals.prototype.ariaRoleDescription",
+     "ElementInternals.prototype.ariaRowCount",
+     "ElementInternals.prototype.ariaRowIndex",
++    "ElementInternals.prototype.ariaRowIndexText",
+     "ElementInternals.prototype.ariaRowSpan",
+     "ElementInternals.prototype.ariaSelected",
+     "ElementInternals.prototype.ariaSetSize",
+@@ -2973,6 +2981,7 @@
+     "Intl.Locale.prototype.caseFirst",
+     "Intl.Locale.prototype.collation",
+     "Intl.Locale.prototype.collations",
++    "Intl.Locale.prototype.firstDayOfWeek",
+     "Intl.Locale.prototype.hourCycle",
+     "Intl.Locale.prototype.hourCycles",
+     "Intl.Locale.prototype.language",
+@@ -3647,14 +3656,21 @@
+     "NavigationTransition.prototype.navigationType",
+     "Navigator",
+     "Navigator.prototype",
++    "Navigator.prototype.adAuctionComponents",
+     "Navigator.prototype.appCodeName",
+     "Navigator.prototype.appName",
+     "Navigator.prototype.appVersion",
++    "Navigator.prototype.canLoadAdAuctionFencedFrame",
+     "Navigator.prototype.clearAppBadge",
++    "Navigator.prototype.clearOriginJoinedAdInterestGroups",
+     "Navigator.prototype.clipboard",
+     "Navigator.prototype.connection",
+     "Navigator.prototype.cookieEnabled",
++    "Navigator.prototype.createAuctionNonce",
+     "Navigator.prototype.credentials",
++    "Navigator.prototype.deprecatedReplaceInURN",
++    "Navigator.prototype.deprecatedRunAdAuctionEnforcesKAnonymity",
++    "Navigator.prototype.deprecatedURNToURL",
+     "Navigator.prototype.deviceMemory",
+     "Navigator.prototype.doNotTrack",
+     "Navigator.prototype.geolocation",
+@@ -3667,9 +3683,11 @@
+     "Navigator.prototype.hid",
+     "Navigator.prototype.ink",
+     "Navigator.prototype.javaEnabled",
++    "Navigator.prototype.joinAdInterestGroup",
+     "Navigator.prototype.keyboard",
+     "Navigator.prototype.language",
+     "Navigator.prototype.languages",
++    "Navigator.prototype.leaveAdInterestGroup",
+     "Navigator.prototype.locks",
+     "Navigator.prototype.login",
+     "Navigator.prototype.managed",
+@@ -3686,9 +3704,11 @@
+     "Navigator.prototype.presentation",
+     "Navigator.prototype.product",
+     "Navigator.prototype.productSub",
++    "Navigator.prototype.protectedAudience",
+     "Navigator.prototype.registerProtocolHandler",
+     "Navigator.prototype.requestMIDIAccess",
+     "Navigator.prototype.requestMediaKeySystemAccess",
++    "Navigator.prototype.runAdAuction",
+     "Navigator.prototype.scheduling",
+     "Navigator.prototype.sendBeacon",
+     "Navigator.prototype.serial",
+@@ -3697,6 +3717,7 @@
+     "Navigator.prototype.storage",
+     "Navigator.prototype.storageBuckets",
+     "Navigator.prototype.unregisterProtocolHandler",
++    "Navigator.prototype.updateAdInterestGroups",
+     "Navigator.prototype.usb",
+     "Navigator.prototype.userActivation",
+     "Navigator.prototype.userAgent",
+@@ -3975,6 +3996,7 @@
+     "Option.prototype.constructor.prototype.ariaChecked",
+     "Option.prototype.constructor.prototype.ariaColCount",
+     "Option.prototype.constructor.prototype.ariaColIndex",
++    "Option.prototype.constructor.prototype.ariaColIndexText",
+     "Option.prototype.constructor.prototype.ariaColSpan",
+     "Option.prototype.constructor.prototype.ariaCurrent",
+     "Option.prototype.constructor.prototype.ariaDescription",
+@@ -4000,6 +4022,7 @@
+     "Option.prototype.constructor.prototype.ariaRoleDescription",
+     "Option.prototype.constructor.prototype.ariaRowCount",
+     "Option.prototype.constructor.prototype.ariaRowIndex",
++    "Option.prototype.constructor.prototype.ariaRowIndexText",
+     "Option.prototype.constructor.prototype.ariaRowSpan",
+     "Option.prototype.constructor.prototype.ariaSelected",
+     "Option.prototype.constructor.prototype.ariaSetSize",
+@@ -4065,6 +4088,7 @@
+     "Option.prototype.constructor.prototype.constructor.prototype.replaceChild",
+     "Option.prototype.constructor.prototype.constructor.prototype.textContent",
+     "Option.prototype.constructor.prototype.contentEditable",
++    "Option.prototype.constructor.prototype.currentCSSZoom",
+     "Option.prototype.constructor.prototype.dataset",
+     "Option.prototype.constructor.prototype.dir",
+     "Option.prototype.constructor.prototype.draggable",
+@@ -4591,6 +4615,7 @@
+     "PointerEvent.prototype.getPredictedEvents",
+     "PointerEvent.prototype.height",
+     "PointerEvent.prototype.isPrimary",
++    "PointerEvent.prototype.persistentDeviceId",
+     "PointerEvent.prototype.pointerId",
+     "PointerEvent.prototype.pointerType",
+     "PointerEvent.prototype.pressure",
+@@ -4682,6 +4707,7 @@
+     "Promise.race",
+     "Promise.reject",
+     "Promise.resolve",
++    "Promise.try",
+     "Promise.withResolvers",
+     "PromiseRejectionEvent",
+     "PromiseRejectionEvent.prototype",
+@@ -7585,6 +7611,7 @@
+     "XMLDocument.prototype.body",
+     "XMLDocument.prototype.browsingTopics",
+     "XMLDocument.prototype.captureEvents",
++    "XMLDocument.prototype.caretPositionFromPoint",
+     "XMLDocument.prototype.caretRangeFromPoint",
+     "XMLDocument.prototype.characterSet",
+     "XMLDocument.prototype.charset",
+```
+
+  
 #### 127.0.6533.119 (`2024-8-13`) 
 No browser API changes.
 
@@ -1106,10 +1268,6 @@ Added 55 APIs, removed 8 (see: [diff](./browser_apis/chrome-stable_121.0.6167.18
      "WebGLRenderingContext.prototype.enable",
      "WebGLRenderingContext.prototype.enableVertexAttribArray",
 ```
-
-  
-#### 121.0.6167.184 (`2024-2-13`) 
-No browser API changes.
 
   
 ### chrome-unstable

@@ -1,0 +1,39 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "127.0.6533.119",
+    "to": "128.0.6613.84"
+  },
+  "browserApis": {
+    "added": [
+      "AudioContext.prototype.onerror",
+      "CaretPosition",
+      "CaretPosition.prototype",
+      "CaretPosition.prototype.getClientRect",
+      "CaretPosition.prototype.offset",
+      "CaretPosition.prototype.offsetNode",
+      "ElementInternals.prototype.ariaColIndexText",
+      "ElementInternals.prototype.ariaRowIndexText",
+      "Intl.Locale.prototype.firstDayOfWeek",
+      "Navigator.prototype.adAuctionComponents",
+      "Navigator.prototype.canLoadAdAuctionFencedFrame",
+      "Navigator.prototype.clearOriginJoinedAdInterestGroups",
+      "Navigator.prototype.createAuctionNonce",
+      "Navigator.prototype.deprecatedReplaceInURN",
+      "Navigator.prototype.deprecatedRunAdAuctionEnforcesKAnonymity",
+      "Navigator.prototype.deprecatedURNToURL",
+      "Navigator.prototype.joinAdInterestGroup",
+      "Navigator.prototype.leaveAdInterestGroup",
+      "Navigator.prototype.protectedAudience",
+      "Navigator.prototype.runAdAuction",
+      "Navigator.prototype.updateAdInterestGroups",
+      "Option.prototype.constructor.prototype.ariaColIndexText",
+      "Option.prototype.constructor.prototype.ariaRowIndexText",
+      "Option.prototype.constructor.prototype.currentCSSZoom",
+      "PointerEvent.prototype.persistentDeviceId",
+      "Promise.try",
+      "XMLDocument.prototype.caretPositionFromPoint"
+    ],
+    "removed": []
+  }
+}
