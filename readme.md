@@ -1272,6 +1272,50 @@ Added 55 APIs, removed 8 (see: [diff](./browser_apis/chrome-stable_121.0.6167.18
   
 ### chrome-unstable
   
+#### 130.0.6669.2 (`2024-8-23`) ⚡
+Added 6 APIs, removed 8 (see: [diff](./browser_apis/chrome-unstable_129.0.6658.0_to_130.0.6669.2.diff), [json](./browser_apis/chrome-unstable_129.0.6658.0_to_130.0.6669.2.json), [full list](./browser_apis/chrome-unstable_130.0.6669.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_129.0.6658.0.json	2024-08-24 01:02:51.713963847 +0000
++++ ./browser_apis/chrome-unstable_130.0.6669.2.json	2024-08-24 01:03:15.070095713 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8494,
++  "browserApiCount": 8492,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2967,6 +2967,12 @@
+     "Intl.DisplayNames.prototype.of",
+     "Intl.DisplayNames.prototype.resolvedOptions",
+     "Intl.DisplayNames.supportedLocalesOf",
++    "Intl.DurationFormat",
++    "Intl.DurationFormat.prototype",
++    "Intl.DurationFormat.prototype.format",
++    "Intl.DurationFormat.prototype.formatToParts",
++    "Intl.DurationFormat.prototype.resolvedOptions",
++    "Intl.DurationFormat.supportedLocalesOf",
+     "Intl.ListFormat",
+     "Intl.ListFormat.prototype",
+     "Intl.ListFormat.prototype.format",
+@@ -3555,14 +3561,6 @@
+     "MimeTypeArray.prototype.item",
+     "MimeTypeArray.prototype.length",
+     "MimeTypeArray.prototype.namedItem",
+-    "MutationEvent",
+-    "MutationEvent.prototype",
+-    "MutationEvent.prototype.attrChange",
+-    "MutationEvent.prototype.attrName",
+-    "MutationEvent.prototype.initMutationEvent",
+-    "MutationEvent.prototype.newValue",
+-    "MutationEvent.prototype.prevValue",
+-    "MutationEvent.prototype.relatedNode",
+     "MutationRecord",
+     "MutationRecord.prototype",
+     "MutationRecord.prototype.addedNodes",
+```
+
+  
 #### 129.0.6658.0 (`2024-8-16`) ⚡
 Added 3 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_129.0.6643.2_to_129.0.6658.0.diff), [json](./browser_apis/chrome-unstable_129.0.6643.2_to_129.0.6658.0.json), [full list](./browser_apis/chrome-unstable_129.0.6658.0.json))
  ```diff
@@ -2688,79 +2732,6 @@ Added 11 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_122.0.6253.
      "VisualViewport",
      "VisualViewport.prototype",
      "VisualViewport.prototype.height",
-```
-
-  
-#### 122.0.6253.3 (`2024-1-18`) ⚡
-Added 24 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_122.0.6238.2_to_122.0.6253.3.diff), [json](./browser_apis/chrome-unstable_122.0.6238.2_to_122.0.6253.3.json), [full list](./browser_apis/chrome-unstable_122.0.6253.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_122.0.6238.2.json	2024-01-19 00:58:10.232446419 +0000
-+++ ./browser_apis/chrome-unstable_122.0.6253.3.json	2024-01-19 00:58:29.752635096 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8182,
-+  "browserApiCount": 8205,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2432,7 +2432,6 @@
-     "HTMLTemplateElement",
-     "HTMLTemplateElement.prototype",
-     "HTMLTemplateElement.prototype.content",
--    "HTMLTemplateElement.prototype.shadowRoot",
-     "HTMLTemplateElement.prototype.shadowRootMode",
-     "HTMLTextAreaElement",
-     "HTMLTextAreaElement.prototype",
-@@ -3558,6 +3557,7 @@
-     "Navigator.prototype.serviceWorker",
-     "Navigator.prototype.setAppBadge",
-     "Navigator.prototype.storage",
-+    "Navigator.prototype.storageBuckets",
-     "Navigator.prototype.unregisterProtocolHandler",
-     "Navigator.prototype.usb",
-     "Navigator.prototype.userActivation",
-@@ -5828,10 +5828,17 @@
-     "Set.prototype.add",
-     "Set.prototype.clear",
-     "Set.prototype.delete",
-+    "Set.prototype.difference",
-     "Set.prototype.entries",
-     "Set.prototype.forEach",
-     "Set.prototype.has",
-+    "Set.prototype.intersection",
-+    "Set.prototype.isDisjointFrom",
-+    "Set.prototype.isSubsetOf",
-+    "Set.prototype.isSupersetOf",
-     "Set.prototype.size",
-+    "Set.prototype.symmetricDifference",
-+    "Set.prototype.union",
-     "Set.prototype.values",
-     "ShadowRoot",
-     "ShadowRoot.prototype",
-@@ -5950,6 +5957,22 @@
-     "Storage.prototype.length",
-     "Storage.prototype.removeItem",
-     "Storage.prototype.setItem",
-+    "StorageBucket",
-+    "StorageBucket.prototype",
-+    "StorageBucket.prototype.caches",
-+    "StorageBucket.prototype.estimate",
-+    "StorageBucket.prototype.expires",
-+    "StorageBucket.prototype.getDirectory",
-+    "StorageBucket.prototype.indexedDB",
-+    "StorageBucket.prototype.name",
-+    "StorageBucket.prototype.persist",
-+    "StorageBucket.prototype.persisted",
-+    "StorageBucket.prototype.setExpires",
-+    "StorageBucketManager",
-+    "StorageBucketManager.prototype",
-+    "StorageBucketManager.prototype.delete",
-+    "StorageBucketManager.prototype.keys",
-+    "StorageBucketManager.prototype.open",
-     "StorageEvent",
-     "StorageEvent.prototype",
-     "StorageEvent.prototype.initStorageEvent",
 ```
 
   <!-- browserapis:end -->
