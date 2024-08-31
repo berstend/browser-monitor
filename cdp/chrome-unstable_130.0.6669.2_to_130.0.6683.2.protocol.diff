@@ -1,0 +1,106 @@
+--- ./cdp/chrome-unstable_130.0.6669.2.protocol.json	2024-08-31 01:06:15.691598608 +0000
++++ ./cdp/chrome-unstable_130.0.6683.2.protocol.json	2024-08-31 01:06:44.695760834 +0000
+@@ -1487,7 +1487,8 @@
+             "NoRegisterSourceHeader",
+             "NoRegisterTriggerHeader",
+             "NoRegisterOsSourceHeader",
+-            "NoRegisterOsTriggerHeader"
++            "NoRegisterOsTriggerHeader",
++            "NavigationRegistrationUniqueScopeAlreadySet"
+           ]
+         },
+         {
+@@ -2776,6 +2777,7 @@
+             "videoCapturePanTiltZoom",
+             "wakeLockScreen",
+             "wakeLockSystem",
++            "webAppInstallation",
+             "windowManagement"
+           ]
+         },
+@@ -12143,11 +12145,29 @@
+               "type": "number"
+             }
+           ]
++        },
++        {
++          "id": "DOMCounter",
++          "description": "DOM object counter data.",
++          "type": "object",
++          "properties": [
++            {
++              "name": "name",
++              "description": "Object name. Note: object names should be presumed volatile and clients should not expect\nthe returned names to be consistent across runs.",
++              "type": "string"
++            },
++            {
++              "name": "count",
++              "description": "Object count.",
++              "type": "integer"
++            }
++          ]
+         }
+       ],
+       "commands": [
+         {
+           "name": "getDOMCounters",
++          "description": "Retruns current DOM object counters.",
+           "returns": [
+             {
+               "name": "documents",
+@@ -12164,7 +12184,22 @@
+           ]
+         },
+         {
+-          "name": "prepareForLeakDetection"
++          "name": "getDOMCountersForLeakDetection",
++          "description": "Retruns DOM object counters after preparing renderer for leak detection.",
++          "returns": [
++            {
++              "name": "counters",
++              "description": "DOM object counters.",
++              "type": "array",
++              "items": {
++                "$ref": "DOMCounter"
++              }
++            }
++          ]
++        },
++        {
++          "name": "prepareForLeakDetection",
++          "description": "Prepares for leak detection by terminating workers, stopping spellcheckers,\ndropping non-essential internal caches, running garbage collections, etc."
+         },
+         {
+           "name": "forciblyPurgeJavaScriptMemory",
+@@ -13444,6 +13479,7 @@
+             "UserSetting",
+             "TPCDMetadata",
+             "TPCDDeprecationTrial",
++            "TopLevelTPCDDeprecationTrial",
+             "TPCDHeuristics",
+             "EnterprisePolicy",
+             "StorageAccess",
+@@ -17151,6 +17187,7 @@
+             "otp-credentials",
+             "payment",
+             "picture-in-picture",
++            "popins",
+             "private-aggregation",
+             "private-state-token-issuance",
+             "private-state-token-redemption",
+@@ -17171,6 +17208,7 @@
+             "usb",
+             "usb-unrestricted",
+             "vertical-scroll",
++            "web-app-installation",
+             "web-printing",
+             "web-share",
+             "window-management",
+@@ -18495,6 +18533,7 @@
+             "ContentWebUSB",
+             "ContentMediaSessionService",
+             "ContentScreenReader",
++            "ContentDiscarded",
+             "EmbedderPopupBlockerTabHelper",
+             "EmbedderSafeBrowsingTriggeredPopupBlocker",
+             "EmbedderSafeBrowsingThreatDetails",

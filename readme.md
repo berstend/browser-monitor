@@ -1087,6 +1087,86 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 130.0.6683.2 (`2024-8-30`) ⚡
+Added 15 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_130.0.6669.2_to_130.0.6683.2.diff), [json](./browser_apis/chrome-unstable_130.0.6669.2_to_130.0.6683.2.json), [full list](./browser_apis/chrome-unstable_130.0.6683.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_130.0.6669.2.json	2024-08-31 01:06:15.379596834 +0000
++++ ./browser_apis/chrome-unstable_130.0.6683.2.json	2024-08-31 01:06:44.687760791 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8492,
++  "browserApiCount": 8507,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -3318,6 +3318,8 @@
+     "MathMLElement.prototype.onresize",
+     "MathMLElement.prototype.onscroll",
+     "MathMLElement.prototype.onscrollend",
++    "MathMLElement.prototype.onscrollsnapchange",
++    "MathMLElement.prototype.onscrollsnapchanging",
+     "MathMLElement.prototype.onsecuritypolicyviolation",
+     "MathMLElement.prototype.onseeked",
+     "MathMLElement.prototype.onseeking",
+@@ -4215,6 +4217,8 @@
+     "Option.prototype.constructor.prototype.onresize",
+     "Option.prototype.constructor.prototype.onscroll",
+     "Option.prototype.constructor.prototype.onscrollend",
++    "Option.prototype.constructor.prototype.onscrollsnapchange",
++    "Option.prototype.constructor.prototype.onscrollsnapchanging",
+     "Option.prototype.constructor.prototype.onsearch",
+     "Option.prototype.constructor.prototype.onsecuritypolicyviolation",
+     "Option.prototype.constructor.prototype.onseeked",
+@@ -5876,6 +5880,8 @@
+     "SVGViewElement.prototype.onresize",
+     "SVGViewElement.prototype.onscroll",
+     "SVGViewElement.prototype.onscrollend",
++    "SVGViewElement.prototype.onscrollsnapchange",
++    "SVGViewElement.prototype.onscrollsnapchanging",
+     "SVGViewElement.prototype.onsecuritypolicyviolation",
+     "SVGViewElement.prototype.onseeked",
+     "SVGViewElement.prototype.onseeking",
+@@ -5909,6 +5915,7 @@
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
++    "Scheduler.prototype.yield",
+     "Scheduling",
+     "Scheduling.prototype",
+     "Scheduling.prototype.isInputPending",
+@@ -6126,6 +6133,10 @@
+     "SharedWorker.prototype",
+     "SharedWorker.prototype.onerror",
+     "SharedWorker.prototype.port",
++    "SnapEvent",
++    "SnapEvent.prototype",
++    "SnapEvent.prototype.snapTargetBlock",
++    "SnapEvent.prototype.snapTargetInline",
+     "SourceBuffer",
+     "SourceBuffer.prototype",
+     "SourceBuffer.prototype.abort",
+@@ -7773,6 +7784,8 @@
+     "XMLDocument.prototype.onresume",
+     "XMLDocument.prototype.onscroll",
+     "XMLDocument.prototype.onscrollend",
++    "XMLDocument.prototype.onscrollsnapchange",
++    "XMLDocument.prototype.onscrollsnapchanging",
+     "XMLDocument.prototype.onsearch",
+     "XMLDocument.prototype.onsecuritypolicyviolation",
+     "XMLDocument.prototype.onseeked",
+@@ -8287,6 +8300,8 @@
+     "onresize",
+     "onscroll",
+     "onscrollend",
++    "onscrollsnapchange",
++    "onscrollsnapchanging",
+     "onsearch",
+     "onsecuritypolicyviolation",
+     "onseeked",
+```
+
+  
 #### 130.0.6669.2 (`2024-8-23`) ⚡
 Added 6 APIs, removed 8 (see: [diff](./browser_apis/chrome-unstable_129.0.6658.0_to_130.0.6669.2.diff), [json](./browser_apis/chrome-unstable_129.0.6658.0_to_130.0.6669.2.json), [full list](./browser_apis/chrome-unstable_130.0.6669.2.json))
  ```diff
@@ -2465,88 +2545,6 @@ Added 37 APIs, removed 18 (see: [diff](./browser_apis/chrome-unstable_123.0.6262
      "WindowControlsOverlayGeometryChangeEvent.prototype.visible",
      "Worker",
      "Worker.prototype",
-```
-
-  
-#### 123.0.6262.5 (`2024-1-25`) ⚡
-Added 11 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_122.0.6253.3_to_123.0.6262.5.diff), [json](./browser_apis/chrome-unstable_122.0.6253.3_to_123.0.6262.5.json), [full list](./browser_apis/chrome-unstable_123.0.6262.5.json))
- ```diff
---- ./browser_apis/chrome-unstable_122.0.6253.3.json	2024-01-26 00:54:23.253209518 +0000
-+++ ./browser_apis/chrome-unstable_123.0.6262.5.json	2024-01-26 00:55:04.009237920 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8205,
-+  "browserApiCount": 8209,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2675,6 +2675,7 @@
-     "IIRFilterNode.prototype",
-     "IIRFilterNode.prototype.getFrequencyResponse",
-     "IdentityCredential",
-+    "IdentityCredential.disconnect",
-     "IdentityCredential.prototype",
-     "IdentityCredential.prototype.isAutoSelected",
-     "IdentityCredential.prototype.token",
-@@ -3399,6 +3400,7 @@
-     "MessagePort",
-     "MessagePort.prototype",
-     "MessagePort.prototype.close",
-+    "MessagePort.prototype.onclose",
-     "MessagePort.prototype.onmessage",
-     "MessagePort.prototype.onmessageerror",
-     "MessagePort.prototype.postMessage",
-@@ -4194,10 +4196,8 @@
-     "PaymentManager.prototype.userHint",
-     "PaymentMethodChangeEvent",
-     "PaymentMethodChangeEvent.prototype",
--    "PaymentMethodChangeEvent.prototype.constructor",
-     "PaymentMethodChangeEvent.prototype.methodDetails",
-     "PaymentMethodChangeEvent.prototype.methodName",
--    "PaymentMethodChangeEvent.prototype.updateWith",
-     "PaymentRequest",
-     "PaymentRequest.prototype",
-     "PaymentRequest.prototype.abort",
-@@ -4211,6 +4211,9 @@
-     "PaymentRequest.prototype.shippingOption",
-     "PaymentRequest.prototype.shippingType",
-     "PaymentRequest.prototype.show",
-+    "PaymentRequestUpdateEvent",
-+    "PaymentRequestUpdateEvent.prototype",
-+    "PaymentRequestUpdateEvent.prototype.updateWith",
-     "PaymentResponse",
-     "PaymentResponse.prototype",
-     "PaymentResponse.prototype.complete",
-@@ -6101,15 +6104,10 @@
-     "SyntaxError.prototype",
-     "TaskAttributionTiming",
-     "TaskAttributionTiming.prototype",
--    "TaskAttributionTiming.prototype.constructor",
-     "TaskAttributionTiming.prototype.containerId",
-     "TaskAttributionTiming.prototype.containerName",
-     "TaskAttributionTiming.prototype.containerSrc",
-     "TaskAttributionTiming.prototype.containerType",
--    "TaskAttributionTiming.prototype.duration",
--    "TaskAttributionTiming.prototype.entryType",
--    "TaskAttributionTiming.prototype.name",
--    "TaskAttributionTiming.prototype.startTime",
-     "TaskAttributionTiming.prototype.toJSON",
-     "TaskController",
-     "TaskController.prototype",
-@@ -6603,6 +6601,12 @@
-     "VirtualKeyboardGeometryChangeEvent.prototype",
-     "VisibilityStateEntry",
-     "VisibilityStateEntry.prototype",
-+    "VisibilityStateEntry.prototype.constructor",
-+    "VisibilityStateEntry.prototype.duration",
-+    "VisibilityStateEntry.prototype.entryType",
-+    "VisibilityStateEntry.prototype.name",
-+    "VisibilityStateEntry.prototype.startTime",
-+    "VisibilityStateEntry.prototype.toJSON",
-     "VisualViewport",
-     "VisualViewport.prototype",
-     "VisualViewport.prototype.height",
 ```
 
   <!-- browserapis:end -->

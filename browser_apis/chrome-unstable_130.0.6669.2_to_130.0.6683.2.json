@@ -1,0 +1,27 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "130.0.6669.2",
+    "to": "130.0.6683.2"
+  },
+  "browserApis": {
+    "added": [
+      "MathMLElement.prototype.onscrollsnapchange",
+      "MathMLElement.prototype.onscrollsnapchanging",
+      "Option.prototype.constructor.prototype.onscrollsnapchange",
+      "Option.prototype.constructor.prototype.onscrollsnapchanging",
+      "SVGViewElement.prototype.onscrollsnapchange",
+      "SVGViewElement.prototype.onscrollsnapchanging",
+      "Scheduler.prototype.yield",
+      "SnapEvent",
+      "SnapEvent.prototype",
+      "SnapEvent.prototype.snapTargetBlock",
+      "SnapEvent.prototype.snapTargetInline",
+      "XMLDocument.prototype.onscrollsnapchange",
+      "XMLDocument.prototype.onscrollsnapchanging",
+      "onscrollsnapchange",
+      "onscrollsnapchanging"
+    ],
+    "removed": []
+  }
+}
