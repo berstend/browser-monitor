@@ -1,0 +1,28 @@
+--- ./browser_apis/chrome-unstable_130.0.6683.2.json	2024-09-10 01:07:59.689190310 +0000
++++ ./browser_apis/chrome-unstable_130.0.6699.3.json	2024-09-10 01:08:22.741300125 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8507,
++  "browserApiCount": 8509,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -557,6 +557,9 @@
+     "CSSNamespaceRule.prototype",
+     "CSSNamespaceRule.prototype.namespaceURI",
+     "CSSNamespaceRule.prototype.prefix",
++    "CSSNestedDeclarations",
++    "CSSNestedDeclarations.prototype",
++    "CSSNestedDeclarations.prototype.style",
+     "CSSNumericArray",
+     "CSSNumericArray.prototype",
+     "CSSNumericArray.prototype.length",
+@@ -1225,7 +1228,6 @@
+     "DelayNode.prototype.delayTime",
+     "DelegatedInkTrailPresenter",
+     "DelegatedInkTrailPresenter.prototype",
+-    "DelegatedInkTrailPresenter.prototype.expectedImprovement",
+     "DelegatedInkTrailPresenter.prototype.presentationArea",
+     "DelegatedInkTrailPresenter.prototype.updateInkTrailStartPoint",
+     "DeviceMotionEvent",

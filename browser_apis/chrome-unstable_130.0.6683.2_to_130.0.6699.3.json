@@ -1,0 +1,17 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "130.0.6683.2",
+    "to": "130.0.6699.3"
+  },
+  "browserApis": {
+    "added": [
+      "CSSNestedDeclarations",
+      "CSSNestedDeclarations.prototype",
+      "CSSNestedDeclarations.prototype.style"
+    ],
+    "removed": [
+      "DelegatedInkTrailPresenter.prototype.expectedImprovement"
+    ]
+  }
+}
