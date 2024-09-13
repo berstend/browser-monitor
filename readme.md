@@ -1087,6 +1087,44 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 130.0.6710.0 (`2024-9-12`) ⚡
+Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_130.0.6699.3_to_130.0.6710.0.diff), [json](./browser_apis/chrome-unstable_130.0.6699.3_to_130.0.6710.0.json), [full list](./browser_apis/chrome-unstable_130.0.6710.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_130.0.6699.3.json	2024-09-13 01:07:54.727918184 +0000
++++ ./browser_apis/chrome-unstable_130.0.6710.0.json	2024-09-13 01:08:27.760340277 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8509,
++  "browserApiCount": 8517,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2990,6 +2990,13 @@
+     "Intl.Locale.prototype.collation",
+     "Intl.Locale.prototype.collations",
+     "Intl.Locale.prototype.firstDayOfWeek",
++    "Intl.Locale.prototype.getCalendars",
++    "Intl.Locale.prototype.getCollations",
++    "Intl.Locale.prototype.getHourCycles",
++    "Intl.Locale.prototype.getNumberingSystems",
++    "Intl.Locale.prototype.getTextInfo",
++    "Intl.Locale.prototype.getTimeZones",
++    "Intl.Locale.prototype.getWeekInfo",
+     "Intl.Locale.prototype.hourCycle",
+     "Intl.Locale.prototype.hourCycles",
+     "Intl.Locale.prototype.language",
+@@ -6018,6 +6025,7 @@
+     "SerialPort",
+     "SerialPort.prototype",
+     "SerialPort.prototype.close",
++    "SerialPort.prototype.connected",
+     "SerialPort.prototype.forget",
+     "SerialPort.prototype.getInfo",
+     "SerialPort.prototype.getSignals",
+```
+
+  
 #### 130.0.6699.3 (`2024-9-9`) ⚡
 Added 3 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_130.0.6683.2_to_130.0.6699.3.diff), [json](./browser_apis/chrome-unstable_130.0.6683.2_to_130.0.6699.3.json), [full list](./browser_apis/chrome-unstable_130.0.6699.3.json))
  ```diff
@@ -2412,70 +2450,6 @@ Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_123.0.6286.0
      "MessagePort.prototype.onmessage",
      "MessagePort.prototype.onmessageerror",
      "MessagePort.prototype.postMessage",
-```
-
-  
-#### 123.0.6286.0 (`2024-2-8`) ⚡
-Added 12 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_123.0.6272.2_to_123.0.6286.0.diff), [json](./browser_apis/chrome-unstable_123.0.6272.2_to_123.0.6286.0.json), [full list](./browser_apis/chrome-unstable_123.0.6286.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_123.0.6272.2.json	2024-02-09 00:53:04.063233369 +0000
-+++ ./browser_apis/chrome-unstable_123.0.6286.0.json	2024-02-09 00:53:46.279274975 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8228,
-+  "browserApiCount": 8239,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -3462,6 +3462,7 @@
-     "NavigateEvent.prototype.userInitiated",
-     "Navigation",
-     "Navigation.prototype",
-+    "Navigation.prototype.activation",
-     "Navigation.prototype.back",
-     "Navigation.prototype.canGoBack",
-     "Navigation.prototype.canGoForward",
-@@ -3477,6 +3478,11 @@
-     "Navigation.prototype.transition",
-     "Navigation.prototype.traverseTo",
-     "Navigation.prototype.updateCurrentEntry",
-+    "NavigationActivation",
-+    "NavigationActivation.prototype",
-+    "NavigationActivation.prototype.entry",
-+    "NavigationActivation.prototype.from",
-+    "NavigationActivation.prototype.navigationType",
-     "NavigationCurrentEntryChangeEvent",
-     "NavigationCurrentEntryChangeEvent.prototype",
-     "NavigationCurrentEntryChangeEvent.prototype.from",
-@@ -4138,6 +4144,8 @@
-     "OverconstrainedError",
-     "OverconstrainedError.prototype",
-     "OverconstrainedError.prototype.constraint",
-+    "PageRevealEvent",
-+    "PageRevealEvent.prototype",
-     "PageTransitionEvent",
-     "PageTransitionEvent.prototype",
-     "PageTransitionEvent.prototype.persisted",
-@@ -4350,7 +4358,9 @@
-     "PerformanceScriptTiming.prototype.invoker",
-     "PerformanceScriptTiming.prototype.invokerType",
-     "PerformanceScriptTiming.prototype.pauseDuration",
--    "PerformanceScriptTiming.prototype.sourceLocation",
-+    "PerformanceScriptTiming.prototype.sourceCharPosition",
-+    "PerformanceScriptTiming.prototype.sourceFunctionName",
-+    "PerformanceScriptTiming.prototype.sourceURL",
-     "PerformanceScriptTiming.prototype.toJSON",
-     "PerformanceScriptTiming.prototype.window",
-     "PerformanceScriptTiming.prototype.windowAttribution",
-@@ -8004,6 +8014,7 @@
-     "onoffline",
-     "ononline",
-     "onpagehide",
-+    "onpagereveal",
-     "onpageshow",
-     "onpause",
-     "onplay",
 ```
 
   <!-- browserapis:end -->

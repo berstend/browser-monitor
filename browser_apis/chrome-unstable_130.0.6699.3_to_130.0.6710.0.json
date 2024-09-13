@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "130.0.6699.3",
+    "to": "130.0.6710.0"
+  },
+  "browserApis": {
+    "added": [
+      "Intl.Locale.prototype.getCalendars",
+      "Intl.Locale.prototype.getCollations",
+      "Intl.Locale.prototype.getHourCycles",
+      "Intl.Locale.prototype.getNumberingSystems",
+      "Intl.Locale.prototype.getTextInfo",
+      "Intl.Locale.prototype.getTimeZones",
+      "Intl.Locale.prototype.getWeekInfo",
+      "SerialPort.prototype.connected"
+    ],
+    "removed": []
+  }
+}

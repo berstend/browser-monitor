@@ -1,0 +1,10 @@
+--- ./cdp/chrome-unstable_130.0.6699.3.protocol.json	2024-09-13 01:07:55.071922760 +0000
++++ ./cdp/chrome-unstable_130.0.6710.0.protocol.json	2024-09-13 01:08:27.772340429 +0000
+@@ -13513,7 +13513,6 @@
+             "EnterprisePolicy",
+             "StorageAccess",
+             "TopLevelStorageAccess",
+-            "CorsOptIn",
+             "Scheme"
+           ]
+         },

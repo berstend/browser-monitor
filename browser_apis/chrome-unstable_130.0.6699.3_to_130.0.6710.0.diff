@@ -1,0 +1,32 @@
+--- ./browser_apis/chrome-unstable_130.0.6699.3.json	2024-09-13 01:07:54.727918184 +0000
++++ ./browser_apis/chrome-unstable_130.0.6710.0.json	2024-09-13 01:08:27.760340277 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8509,
++  "browserApiCount": 8517,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -2990,6 +2990,13 @@
+     "Intl.Locale.prototype.collation",
+     "Intl.Locale.prototype.collations",
+     "Intl.Locale.prototype.firstDayOfWeek",
++    "Intl.Locale.prototype.getCalendars",
++    "Intl.Locale.prototype.getCollations",
++    "Intl.Locale.prototype.getHourCycles",
++    "Intl.Locale.prototype.getNumberingSystems",
++    "Intl.Locale.prototype.getTextInfo",
++    "Intl.Locale.prototype.getTimeZones",
++    "Intl.Locale.prototype.getWeekInfo",
+     "Intl.Locale.prototype.hourCycle",
+     "Intl.Locale.prototype.hourCycles",
+     "Intl.Locale.prototype.language",
+@@ -6018,6 +6025,7 @@
+     "SerialPort",
+     "SerialPort.prototype",
+     "SerialPort.prototype.close",
++    "SerialPort.prototype.connected",
+     "SerialPort.prototype.forget",
+     "SerialPort.prototype.getInfo",
+     "SerialPort.prototype.getSignals",
