@@ -1,0 +1,41 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "128.0.6613.137",
+    "to": "129.0.6668.58"
+  },
+  "browserApis": {
+    "added": [
+      "CSSPositionTryDescriptors.prototype.position-area",
+      "CSSPositionTryDescriptors.prototype.positionArea",
+      "Intl.DurationFormat",
+      "Intl.DurationFormat.prototype",
+      "Intl.DurationFormat.prototype.format",
+      "Intl.DurationFormat.prototype.formatToParts",
+      "Intl.DurationFormat.prototype.resolvedOptions",
+      "Intl.DurationFormat.supportedLocalesOf",
+      "MathMLElement.prototype.onscrollsnapchange",
+      "MathMLElement.prototype.onscrollsnapchanging",
+      "Option.prototype.constructor.prototype.onscrollsnapchange",
+      "Option.prototype.constructor.prototype.onscrollsnapchanging",
+      "PublicKeyCredential.parseCreationOptionsFromJSON",
+      "PublicKeyCredential.parseRequestOptionsFromJSON",
+      "PublicKeyCredential.prototype.toJSON",
+      "SVGViewElement.prototype.onscrollsnapchange",
+      "SVGViewElement.prototype.onscrollsnapchanging",
+      "Scheduler.prototype.yield",
+      "SnapEvent",
+      "SnapEvent.prototype",
+      "SnapEvent.prototype.snapTargetBlock",
+      "SnapEvent.prototype.snapTargetInline",
+      "XMLDocument.prototype.onscrollsnapchange",
+      "XMLDocument.prototype.onscrollsnapchanging",
+      "onscrollsnapchange",
+      "onscrollsnapchanging"
+    ],
+    "removed": [
+      "FencedFrameConfig.prototype.height",
+      "FencedFrameConfig.prototype.width"
+    ]
+  }
+}

@@ -5,6 +5,134 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 129.0.6668.58 (`2024-9-17`) ⚡
+Added 26 APIs, removed 2 (see: [diff](./browser_apis/chrome-stable_128.0.6613.137_to_129.0.6668.58.diff), [json](./browser_apis/chrome-stable_128.0.6613.137_to_129.0.6668.58.json), [full list](./browser_apis/chrome-stable_129.0.6668.58.json))
+ ```diff
+--- ./browser_apis/chrome-stable_128.0.6613.137.json	2024-09-18 01:07:56.661347677 +0000
++++ ./browser_apis/chrome-stable_129.0.6668.58.json	2024-09-18 01:08:28.801460624 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8491,
++  "browserApiCount": 8515,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -635,7 +635,9 @@
+     "CSSPositionTryDescriptors.prototype.place-self",
+     "CSSPositionTryDescriptors.prototype.placeSelf",
+     "CSSPositionTryDescriptors.prototype.position-anchor",
++    "CSSPositionTryDescriptors.prototype.position-area",
+     "CSSPositionTryDescriptors.prototype.positionAnchor",
++    "CSSPositionTryDescriptors.prototype.positionArea",
+     "CSSPositionTryDescriptors.prototype.right",
+     "CSSPositionTryDescriptors.prototype.top",
+     "CSSPositionTryDescriptors.prototype.width",
+@@ -1427,9 +1429,7 @@
+     "Fence.prototype.setReportEventDataForAutomaticBeacons",
+     "FencedFrameConfig",
+     "FencedFrameConfig.prototype",
+-    "FencedFrameConfig.prototype.height",
+     "FencedFrameConfig.prototype.setSharedStorageContext",
+-    "FencedFrameConfig.prototype.width",
+     "File",
+     "File.prototype",
+     "File.prototype.arrayBuffer",
+@@ -2967,6 +2967,12 @@
+     "Intl.DisplayNames.prototype.of",
+     "Intl.DisplayNames.prototype.resolvedOptions",
+     "Intl.DisplayNames.supportedLocalesOf",
++    "Intl.DurationFormat",
++    "Intl.DurationFormat.prototype",
++    "Intl.DurationFormat.prototype.format",
++    "Intl.DurationFormat.prototype.formatToParts",
++    "Intl.DurationFormat.prototype.resolvedOptions",
++    "Intl.DurationFormat.supportedLocalesOf",
+     "Intl.ListFormat",
+     "Intl.ListFormat.prototype",
+     "Intl.ListFormat.prototype.format",
+@@ -3312,6 +3318,8 @@
+     "MathMLElement.prototype.onresize",
+     "MathMLElement.prototype.onscroll",
+     "MathMLElement.prototype.onscrollend",
++    "MathMLElement.prototype.onscrollsnapchange",
++    "MathMLElement.prototype.onscrollsnapchanging",
+     "MathMLElement.prototype.onsecuritypolicyviolation",
+     "MathMLElement.prototype.onseeked",
+     "MathMLElement.prototype.onseeking",
+@@ -4217,6 +4225,8 @@
+     "Option.prototype.constructor.prototype.onresize",
+     "Option.prototype.constructor.prototype.onscroll",
+     "Option.prototype.constructor.prototype.onscrollend",
++    "Option.prototype.constructor.prototype.onscrollsnapchange",
++    "Option.prototype.constructor.prototype.onscrollsnapchanging",
+     "Option.prototype.constructor.prototype.onsearch",
+     "Option.prototype.constructor.prototype.onsecuritypolicyviolation",
+     "Option.prototype.constructor.prototype.onseeked",
+@@ -4721,11 +4731,14 @@
+     "PublicKeyCredential",
+     "PublicKeyCredential.isConditionalMediationAvailable",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
++    "PublicKeyCredential.parseCreationOptionsFromJSON",
++    "PublicKeyCredential.parseRequestOptionsFromJSON",
+     "PublicKeyCredential.prototype",
+     "PublicKeyCredential.prototype.authenticatorAttachment",
+     "PublicKeyCredential.prototype.getClientExtensionResults",
+     "PublicKeyCredential.prototype.rawId",
+     "PublicKeyCredential.prototype.response",
++    "PublicKeyCredential.prototype.toJSON",
+     "PushManager",
+     "PushManager.prototype",
+     "PushManager.prototype.getSubscription",
+@@ -5875,6 +5888,8 @@
+     "SVGViewElement.prototype.onresize",
+     "SVGViewElement.prototype.onscroll",
+     "SVGViewElement.prototype.onscrollend",
++    "SVGViewElement.prototype.onscrollsnapchange",
++    "SVGViewElement.prototype.onscrollsnapchanging",
+     "SVGViewElement.prototype.onsecuritypolicyviolation",
+     "SVGViewElement.prototype.onseeked",
+     "SVGViewElement.prototype.onseeking",
+@@ -5908,6 +5923,7 @@
+     "Scheduler",
+     "Scheduler.prototype",
+     "Scheduler.prototype.postTask",
++    "Scheduler.prototype.yield",
+     "Scheduling",
+     "Scheduling.prototype",
+     "Scheduling.prototype.isInputPending",
+@@ -6125,6 +6141,10 @@
+     "SharedWorker.prototype",
+     "SharedWorker.prototype.onerror",
+     "SharedWorker.prototype.port",
++    "SnapEvent",
++    "SnapEvent.prototype",
++    "SnapEvent.prototype.snapTargetBlock",
++    "SnapEvent.prototype.snapTargetInline",
+     "SourceBuffer",
+     "SourceBuffer.prototype",
+     "SourceBuffer.prototype.abort",
+@@ -7772,6 +7792,8 @@
+     "XMLDocument.prototype.onresume",
+     "XMLDocument.prototype.onscroll",
+     "XMLDocument.prototype.onscrollend",
++    "XMLDocument.prototype.onscrollsnapchange",
++    "XMLDocument.prototype.onscrollsnapchanging",
+     "XMLDocument.prototype.onsearch",
+     "XMLDocument.prototype.onsecuritypolicyviolation",
+     "XMLDocument.prototype.onseeked",
+@@ -8286,6 +8308,8 @@
+     "onresize",
+     "onscroll",
+     "onscrollend",
++    "onscrollsnapchange",
++    "onscrollsnapchanging",
+     "onsearch",
+     "onsecuritypolicyviolation",
+     "onseeked",
+```
+
+  
 #### 128.0.6613.137 (`2024-9-10`) 
 No browser API changes.
 
@@ -1078,10 +1206,6 @@ Added 50 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_122.0.6261.1
 
   
 #### 122.0.6261.128 (`2024-3-12`) 
-No browser API changes.
-
-  
-#### 122.0.6261.111 (`2024-3-5`) 
 No browser API changes.
 
   
