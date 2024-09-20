@@ -1,0 +1,29 @@
+--- ./cdp/chrome-unstable_130.0.6710.0.protocol.json	2024-09-20 01:08:56.094626955 +0000
++++ ./cdp/chrome-unstable_131.0.6724.0.protocol.json	2024-09-20 01:09:23.570389192 +0000
+@@ -1066,7 +1066,9 @@
+             "WarnAttributeValueExceedsMaxSize",
+             "WarnDomainNonASCII",
+             "WarnThirdPartyPhaseout",
+-            "WarnCrossSiteRedirectDowngradeChangesInclusion"
++            "WarnCrossSiteRedirectDowngradeChangesInclusion",
++            "WarnDeprecationTrialMetadata",
++            "WarnThirdPartyCookieHeuristic"
+           ]
+         },
+         {
+@@ -5657,6 +5659,7 @@
+             "after",
+             "marker",
+             "backdrop",
++            "column",
+             "selection",
+             "search-text",
+             "target-text",
+@@ -9165,7 +9168,6 @@
+             "gyroscope",
+             "linear-acceleration",
+             "magnetometer",
+-            "proximity",
+             "relative-orientation"
+           ]
+         },
