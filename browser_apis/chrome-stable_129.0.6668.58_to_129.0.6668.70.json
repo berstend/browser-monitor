@@ -1,0 +1,11 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "129.0.6668.58",
+    "to": "129.0.6668.70"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": []
+  }
+}
