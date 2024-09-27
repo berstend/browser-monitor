@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_131.0.6724.0.json	2024-09-27 01:11:18.405484419 +0000
++++ ./browser_apis/chrome-unstable_131.0.6738.0.json	2024-09-27 01:12:09.269957803 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8517,
++  "browserApiCount": 8518,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -5092,6 +5092,7 @@
+     "Request.prototype.clone",
+     "Request.prototype.credentials",
+     "Request.prototype.destination",
++    "Request.prototype.duplex",
+     "Request.prototype.formData",
+     "Request.prototype.headers",
+     "Request.prototype.integrity",

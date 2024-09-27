@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "131.0.6724.0",
+    "to": "131.0.6738.0"
+  },
+  "browserApis": {
+    "added": [
+      "Request.prototype.duplex"
+    ],
+    "removed": []
+  }
+}

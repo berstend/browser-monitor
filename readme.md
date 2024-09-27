@@ -1211,6 +1211,30 @@ Added 50 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_122.0.6261.1
   
 ### chrome-unstable
   
+#### 131.0.6738.0 (`2024-9-26`) ⚡
+Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6724.0_to_131.0.6738.0.diff), [json](./browser_apis/chrome-unstable_131.0.6724.0_to_131.0.6738.0.json), [full list](./browser_apis/chrome-unstable_131.0.6738.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_131.0.6724.0.json	2024-09-27 01:11:18.405484419 +0000
++++ ./browser_apis/chrome-unstable_131.0.6738.0.json	2024-09-27 01:12:09.269957803 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8517,
++  "browserApiCount": 8518,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -5092,6 +5092,7 @@
+     "Request.prototype.clone",
+     "Request.prototype.credentials",
+     "Request.prototype.destination",
++    "Request.prototype.duplex",
+     "Request.prototype.formData",
+     "Request.prototype.headers",
+     "Request.prototype.integrity",
+```
+
+  
 #### 131.0.6724.0 (`2024-9-19`) 
 No browser API changes.
 
@@ -2506,54 +2530,6 @@ Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6315.2
      "XMLDocument.prototype.contentType",
      "XMLDocument.prototype.cookie",
      "XMLDocument.prototype.createAttribute",
-```
-
-  
-#### 124.0.6315.2 (`2024-2-23`) ⚡
-Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_123.0.6300.3_to_124.0.6315.2.diff), [json](./browser_apis/chrome-unstable_123.0.6300.3_to_124.0.6315.2.json), [full list](./browser_apis/chrome-unstable_124.0.6315.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_123.0.6300.3.json	2024-02-24 00:51:11.537165991 +0000
-+++ ./browser_apis/chrome-unstable_124.0.6315.2.json	2024-02-24 00:51:38.648970394 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8238,
-+  "browserApiCount": 8242,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -509,6 +509,7 @@
-     "CSSKeyframesRule.prototype.cssRules",
-     "CSSKeyframesRule.prototype.deleteRule",
-     "CSSKeyframesRule.prototype.findRule",
-+    "CSSKeyframesRule.prototype.length",
-     "CSSKeyframesRule.prototype.name",
-     "CSSKeywordValue",
-     "CSSKeywordValue.prototype",
-@@ -2432,6 +2433,7 @@
-     "HTMLTemplateElement",
-     "HTMLTemplateElement.prototype",
-     "HTMLTemplateElement.prototype.content",
-+    "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
-     "HTMLTemplateElement.prototype.shadowRootMode",
-     "HTMLTextAreaElement",
-     "HTMLTextAreaElement.prototype",
-@@ -4671,6 +4673,7 @@
-     "RTCRtpReceiver.prototype.getParameters",
-     "RTCRtpReceiver.prototype.getStats",
-     "RTCRtpReceiver.prototype.getSynchronizationSources",
-+    "RTCRtpReceiver.prototype.jitterBufferTarget",
-     "RTCRtpReceiver.prototype.playoutDelayHint",
-     "RTCRtpReceiver.prototype.rtcpTransport",
-     "RTCRtpReceiver.prototype.track",
-@@ -4891,6 +4894,7 @@
-     "Request.prototype.referrer",
-     "Request.prototype.referrerPolicy",
-     "Request.prototype.signal",
-+    "Request.prototype.targetAddressSpace",
-     "Request.prototype.text",
-     "Request.prototype.url",
-     "ResizeObserver",
 ```
 
   <!-- browserapis:end -->
