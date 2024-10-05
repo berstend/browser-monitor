@@ -1,0 +1,39 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "131.0.6738.0",
+    "to": "131.0.6753.0"
+  },
+  "browserApis": {
+    "added": [
+      "CSSMarginRule",
+      "CSSMarginRule.prototype",
+      "CSSMarginRule.prototype.name",
+      "CSSMarginRule.prototype.style",
+      "XRFrame.prototype.fillJointRadii",
+      "XRFrame.prototype.fillPoses",
+      "XRFrame.prototype.getJointPose",
+      "XRHand",
+      "XRHand.prototype",
+      "XRHand.prototype.entries",
+      "XRHand.prototype.forEach",
+      "XRHand.prototype.get",
+      "XRHand.prototype.keys",
+      "XRHand.prototype.size",
+      "XRHand.prototype.values",
+      "XRInputSource.prototype.hand",
+      "XRJointPose",
+      "XRJointPose.prototype",
+      "XRJointPose.prototype.radius",
+      "XRJointSpace",
+      "XRJointSpace.prototype",
+      "XRJointSpace.prototype.jointName"
+    ],
+    "removed": [
+      "CSSPositionTryDescriptors.prototype.inset-area",
+      "CSSPositionTryDescriptors.prototype.insetArea",
+      "Option.prototype.constructor.prototype.getInnerHTML",
+      "ShadowRoot.prototype.getInnerHTML"
+    ]
+  }
+}
