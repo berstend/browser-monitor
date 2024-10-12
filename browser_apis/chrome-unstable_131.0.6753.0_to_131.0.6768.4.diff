@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_131.0.6753.0.json	2024-10-12 01:09:06.825782191 +0000
++++ ./browser_apis/chrome-unstable_131.0.6768.4.json	2024-10-12 01:09:35.841720289 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8536,
++  "browserApiCount": 8535,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1560,7 +1560,6 @@
+     "GPUAdapter.prototype.info",
+     "GPUAdapter.prototype.isFallbackAdapter",
+     "GPUAdapter.prototype.limits",
+-    "GPUAdapter.prototype.requestAdapterInfo",
+     "GPUAdapter.prototype.requestDevice",
+     "GPUAdapterInfo",
+     "GPUAdapterInfo.prototype",

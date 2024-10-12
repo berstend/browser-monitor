@@ -1057,6 +1057,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 131.0.6768.4 (`2024-10-11`) ⚡
+Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_131.0.6753.0_to_131.0.6768.4.diff), [json](./browser_apis/chrome-unstable_131.0.6753.0_to_131.0.6768.4.json), [full list](./browser_apis/chrome-unstable_131.0.6768.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_131.0.6753.0.json	2024-10-12 01:09:06.825782191 +0000
++++ ./browser_apis/chrome-unstable_131.0.6768.4.json	2024-10-12 01:09:35.841720289 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8536,
++  "browserApiCount": 8535,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1560,7 +1560,6 @@
+     "GPUAdapter.prototype.info",
+     "GPUAdapter.prototype.isFallbackAdapter",
+     "GPUAdapter.prototype.limits",
+-    "GPUAdapter.prototype.requestAdapterInfo",
+     "GPUAdapter.prototype.requestDevice",
+     "GPUAdapterInfo",
+     "GPUAdapterInfo.prototype",
+```
+
+  
 #### 131.0.6753.0 (`2024-10-4`) ⚡
 Added 22 APIs, removed 4 (see: [diff](./browser_apis/chrome-unstable_131.0.6738.0_to_131.0.6753.0.diff), [json](./browser_apis/chrome-unstable_131.0.6738.0_to_131.0.6753.0.json), [full list](./browser_apis/chrome-unstable_131.0.6753.0.json))
  ```diff
@@ -2371,46 +2395,6 @@ Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6342.
      "WebTransport",
      "WebTransport.prototype",
      "WebTransport.prototype.close",
-```
-
-  
-#### 124.0.6342.3 (`2024-3-8`) ⚡
-Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6329.0_to_124.0.6342.3.diff), [json](./browser_apis/chrome-unstable_124.0.6329.0_to_124.0.6342.3.json), [full list](./browser_apis/chrome-unstable_124.0.6342.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_124.0.6329.0.json	2024-03-09 00:51:35.591963008 +0000
-+++ ./browser_apis/chrome-unstable_124.0.6342.3.json	2024-03-09 00:52:06.492211365 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8249,
-+  "browserApiCount": 8252,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2062,6 +2062,7 @@
-     "HTMLIFrameElement.prototype.referrerPolicy",
-     "HTMLIFrameElement.prototype.sandbox",
-     "HTMLIFrameElement.prototype.scrolling",
-+    "HTMLIFrameElement.prototype.sharedStorageWritable",
-     "HTMLIFrameElement.prototype.src",
-     "HTMLIFrameElement.prototype.srcdoc",
-     "HTMLIFrameElement.prototype.width",
-@@ -2723,6 +2724,7 @@
-     "Image.prototype.naturalHeight",
-     "Image.prototype.naturalWidth",
-     "Image.prototype.referrerPolicy",
-+    "Image.prototype.sharedStorageWritable",
-     "Image.prototype.sizes",
-     "Image.prototype.src",
-     "Image.prototype.srcset",
-@@ -4786,6 +4788,7 @@
-     "ReadableStream.prototype.pipeThrough",
-     "ReadableStream.prototype.pipeTo",
-     "ReadableStream.prototype.tee",
-+    "ReadableStream.prototype.values",
-     "ReadableStreamBYOBReader",
-     "ReadableStreamBYOBReader.prototype",
-     "ReadableStreamBYOBReader.prototype.cancel",
 ```
 
   <!-- browserapis:end -->
