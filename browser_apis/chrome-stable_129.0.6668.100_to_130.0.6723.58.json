@@ -1,0 +1,33 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "129.0.6668.100",
+    "to": "130.0.6723.58"
+  },
+  "browserApis": {
+    "added": [
+      "CSSNestedDeclarations",
+      "CSSNestedDeclarations.prototype",
+      "CSSNestedDeclarations.prototype.style",
+      "Intl.Locale.prototype.getCalendars",
+      "Intl.Locale.prototype.getCollations",
+      "Intl.Locale.prototype.getHourCycles",
+      "Intl.Locale.prototype.getNumberingSystems",
+      "Intl.Locale.prototype.getTextInfo",
+      "Intl.Locale.prototype.getTimeZones",
+      "Intl.Locale.prototype.getWeekInfo",
+      "SerialPort.prototype.connected"
+    ],
+    "removed": [
+      "DelegatedInkTrailPresenter.prototype.expectedImprovement",
+      "MutationEvent",
+      "MutationEvent.prototype",
+      "MutationEvent.prototype.attrChange",
+      "MutationEvent.prototype.attrName",
+      "MutationEvent.prototype.initMutationEvent",
+      "MutationEvent.prototype.newValue",
+      "MutationEvent.prototype.prevValue",
+      "MutationEvent.prototype.relatedNode"
+    ]
+  }
+}
