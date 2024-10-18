@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "131.0.6768.4",
+    "to": "132.0.6779.0"
+  },
+  "browserApis": {
+    "added": [
+      "GPUCanvasContext.prototype.getConfiguration",
+      "Request.prototype.bytes",
+      "Response.prototype.bytes"
+    ],
+    "removed": []
+  }
+}

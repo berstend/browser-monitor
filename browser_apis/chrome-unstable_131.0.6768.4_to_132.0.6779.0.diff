@@ -1,0 +1,34 @@
+--- ./browser_apis/chrome-unstable_131.0.6768.4.json	2024-10-18 01:11:32.976030732 +0000
++++ ./browser_apis/chrome-unstable_132.0.6779.0.json	2024-10-18 01:12:30.664224574 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8535,
++  "browserApiCount": 8538,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1588,6 +1588,7 @@
+     "GPUCanvasContext.prototype",
+     "GPUCanvasContext.prototype.canvas",
+     "GPUCanvasContext.prototype.configure",
++    "GPUCanvasContext.prototype.getConfiguration",
+     "GPUCanvasContext.prototype.getCurrentTexture",
+     "GPUCanvasContext.prototype.unconfigure",
+     "GPUColorWrite",
+@@ -5088,6 +5089,7 @@
+     "Request.prototype.blob",
+     "Request.prototype.body",
+     "Request.prototype.bodyUsed",
++    "Request.prototype.bytes",
+     "Request.prototype.cache",
+     "Request.prototype.clone",
+     "Request.prototype.credentials",
+@@ -5132,6 +5134,7 @@
+     "Response.prototype.blob",
+     "Response.prototype.body",
+     "Response.prototype.bodyUsed",
++    "Response.prototype.bytes",
+     "Response.prototype.clone",
+     "Response.prototype.formData",
+     "Response.prototype.headers",

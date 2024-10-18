@@ -1,0 +1,31 @@
+--- ./cdp/chrome-unstable_131.0.6768.4.protocol.json	2024-10-18 01:11:33.300031223 +0000
++++ ./cdp/chrome-unstable_132.0.6779.0.protocol.json	2024-10-18 01:12:30.676224606 +0000
+@@ -5687,8 +5687,6 @@
+             "placeholder",
+             "file-selector-button",
+             "details-content",
+-            "select-fallback-button",
+-            "select-fallback-button-text",
+             "picker"
+           ]
+         },
+@@ -18582,7 +18580,8 @@
+             "EmbedderExtensionMessaging",
+             "EmbedderExtensionMessagingForOpenPort",
+             "EmbedderExtensionSentMessageToCachedFrame",
+-            "RequestedByWebViewClient"
++            "RequestedByWebViewClient",
++            "PostMessageByWebViewClient"
+           ]
+         },
+         {
+@@ -26311,7 +26310,8 @@
+             "WindowClosed",
+             "SlowNetwork",
+             "OtherPrerenderedPageActivated",
+-            "V8OptimizerDisabled"
++            "V8OptimizerDisabled",
++            "PrerenderFailedDuringPrefetch"
+           ]
+         },
+         {

@@ -1124,6 +1124,46 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 132.0.6779.0 (`2024-10-17`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6768.4_to_132.0.6779.0.diff), [json](./browser_apis/chrome-unstable_131.0.6768.4_to_132.0.6779.0.json), [full list](./browser_apis/chrome-unstable_132.0.6779.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_131.0.6768.4.json	2024-10-18 01:11:32.976030732 +0000
++++ ./browser_apis/chrome-unstable_132.0.6779.0.json	2024-10-18 01:12:30.664224574 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8535,
++  "browserApiCount": 8538,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1588,6 +1588,7 @@
+     "GPUCanvasContext.prototype",
+     "GPUCanvasContext.prototype.canvas",
+     "GPUCanvasContext.prototype.configure",
++    "GPUCanvasContext.prototype.getConfiguration",
+     "GPUCanvasContext.prototype.getCurrentTexture",
+     "GPUCanvasContext.prototype.unconfigure",
+     "GPUColorWrite",
+@@ -5088,6 +5089,7 @@
+     "Request.prototype.blob",
+     "Request.prototype.body",
+     "Request.prototype.bodyUsed",
++    "Request.prototype.bytes",
+     "Request.prototype.cache",
+     "Request.prototype.clone",
+     "Request.prototype.credentials",
+@@ -5132,6 +5134,7 @@
+     "Response.prototype.blob",
+     "Response.prototype.body",
+     "Response.prototype.bodyUsed",
++    "Response.prototype.bytes",
+     "Response.prototype.clone",
+     "Response.prototype.formData",
+     "Response.prototype.headers",
+```
+
+  
 #### 131.0.6768.4 (`2024-10-11`) ⚡
 Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_131.0.6753.0_to_131.0.6768.4.diff), [json](./browser_apis/chrome-unstable_131.0.6753.0_to_131.0.6768.4.json), [full list](./browser_apis/chrome-unstable_131.0.6768.4.json))
  ```diff
@@ -2429,39 +2469,6 @@ Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6356.2
      "onpause",
      "onplay",
      "onplaying",
-```
-
-  
-#### 124.0.6356.2 (`2024-3-14`) ⚡
-Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6342.3_to_124.0.6356.2.diff), [json](./browser_apis/chrome-unstable_124.0.6342.3_to_124.0.6356.2.json), [full list](./browser_apis/chrome-unstable_124.0.6356.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_124.0.6342.3.json	2024-03-15 00:54:08.148994999 +0000
-+++ ./browser_apis/chrome-unstable_124.0.6356.2.json	2024-03-15 00:54:43.724747284 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8252,
-+  "browserApiCount": 8262,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -7243,6 +7243,16 @@
-     "WebSocket.prototype.readyState",
-     "WebSocket.prototype.send",
-     "WebSocket.prototype.url",
-+    "WebSocketError",
-+    "WebSocketError.prototype",
-+    "WebSocketError.prototype.closeCode",
-+    "WebSocketError.prototype.reason",
-+    "WebSocketStream",
-+    "WebSocketStream.prototype",
-+    "WebSocketStream.prototype.close",
-+    "WebSocketStream.prototype.closed",
-+    "WebSocketStream.prototype.opened",
-+    "WebSocketStream.prototype.url",
-     "WebTransport",
-     "WebTransport.prototype",
-     "WebTransport.prototype.close",
 ```
 
   <!-- browserapis:end -->
