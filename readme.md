@@ -1124,6 +1124,51 @@ Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_123.0.6312.12
   
 ### chrome-unstable
   
+#### 132.0.6793.2 (`2024-10-24`) ⚡
+Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6779.0_to_132.0.6793.2.diff), [json](./browser_apis/chrome-unstable_132.0.6779.0_to_132.0.6793.2.json), [full list](./browser_apis/chrome-unstable_132.0.6793.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_132.0.6779.0.json	2024-10-25 01:12:03.840027585 +0000
++++ ./browser_apis/chrome-unstable_132.0.6793.2.json	2024-10-25 01:12:30.495941532 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8538,
++  "browserApiCount": 8546,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1254,6 +1254,10 @@
+     "DeviceOrientationEvent.prototype.alpha",
+     "DeviceOrientationEvent.prototype.beta",
+     "DeviceOrientationEvent.prototype.gamma",
++    "DevicePosture",
++    "DevicePosture.prototype",
++    "DevicePosture.prototype.onchange",
++    "DevicePosture.prototype.type",
+     "DocumentPictureInPicture",
+     "DocumentPictureInPicture.prototype",
+     "DocumentPictureInPicture.prototype.onenter",
+@@ -3683,6 +3687,7 @@
+     "Navigator.prototype.deprecatedRunAdAuctionEnforcesKAnonymity",
+     "Navigator.prototype.deprecatedURNToURL",
+     "Navigator.prototype.deviceMemory",
++    "Navigator.prototype.devicePosture",
+     "Navigator.prototype.doNotTrack",
+     "Navigator.prototype.geolocation",
+     "Navigator.prototype.getBattery",
+@@ -4741,6 +4746,9 @@
+     "PublicKeyCredential.prototype.rawId",
+     "PublicKeyCredential.prototype.response",
+     "PublicKeyCredential.prototype.toJSON",
++    "PublicKeyCredential.signalAllAcceptedCredentials",
++    "PublicKeyCredential.signalCurrentUserDetails",
++    "PublicKeyCredential.signalUnknownCredential",
+     "PushManager",
+     "PushManager.prototype",
+     "PushManager.prototype.getSubscription",
+```
+
+  
 #### 132.0.6779.0 (`2024-10-17`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_131.0.6768.4_to_132.0.6779.0.diff), [json](./browser_apis/chrome-unstable_131.0.6768.4_to_132.0.6779.0.json), [full list](./browser_apis/chrome-unstable_132.0.6779.0.json))
  ```diff
@@ -2427,48 +2472,6 @@ Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6368.
      "ProcessingInstruction",
      "ProcessingInstruction.prototype",
      "ProcessingInstruction.prototype.sheet",
-```
-
-  
-#### 125.0.6368.2 (`2024-3-21`) ⚡
-Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_124.0.6356.2_to_125.0.6368.2.diff), [json](./browser_apis/chrome-unstable_124.0.6356.2_to_125.0.6368.2.json), [full list](./browser_apis/chrome-unstable_125.0.6368.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_124.0.6356.2.json	2024-03-22 00:53:41.025251367 +0000
-+++ ./browser_apis/chrome-unstable_125.0.6368.2.json	2024-03-22 00:54:17.069251129 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8262,
-+  "browserApiCount": 8267,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4128,6 +4128,7 @@
-     "Option.prototype.constructor.prototype.webkitMatchesSelector",
-     "Option.prototype.constructor.prototype.webkitRequestFullScreen",
-     "Option.prototype.constructor.prototype.webkitRequestFullscreen",
-+    "Option.prototype.constructor.prototype.writingSuggestions",
-     "Option.prototype.defaultSelected",
-     "Option.prototype.disabled",
-     "Option.prototype.form",
-@@ -4151,6 +4152,9 @@
-     "OverconstrainedError.prototype.constraint",
-     "PageRevealEvent",
-     "PageRevealEvent.prototype",
-+    "PageSwapEvent",
-+    "PageSwapEvent.prototype",
-+    "PageSwapEvent.prototype.activation",
-     "PageTransitionEvent",
-     "PageTransitionEvent.prototype",
-     "PageTransitionEvent.prototype.persisted",
-@@ -8039,6 +8043,7 @@
-     "onpagehide",
-     "onpagereveal",
-     "onpageshow",
-+    "onpageswap",
-     "onpause",
-     "onplay",
-     "onplaying",
 ```
 
   <!-- browserapis:end -->

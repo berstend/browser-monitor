@@ -1,0 +1,20 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "132.0.6779.0",
+    "to": "132.0.6793.2"
+  },
+  "browserApis": {
+    "added": [
+      "DevicePosture",
+      "DevicePosture.prototype",
+      "DevicePosture.prototype.onchange",
+      "DevicePosture.prototype.type",
+      "Navigator.prototype.devicePosture",
+      "PublicKeyCredential.signalAllAcceptedCredentials",
+      "PublicKeyCredential.signalCurrentUserDetails",
+      "PublicKeyCredential.signalUnknownCredential"
+    ],
+    "removed": []
+  }
+}

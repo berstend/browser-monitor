@@ -1,0 +1,39 @@
+--- ./browser_apis/chrome-unstable_132.0.6779.0.json	2024-10-25 01:12:03.840027585 +0000
++++ ./browser_apis/chrome-unstable_132.0.6793.2.json	2024-10-25 01:12:30.495941532 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8538,
++  "browserApiCount": 8546,
+   "browserApis": [
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+@@ -1254,6 +1254,10 @@
+     "DeviceOrientationEvent.prototype.alpha",
+     "DeviceOrientationEvent.prototype.beta",
+     "DeviceOrientationEvent.prototype.gamma",
++    "DevicePosture",
++    "DevicePosture.prototype",
++    "DevicePosture.prototype.onchange",
++    "DevicePosture.prototype.type",
+     "DocumentPictureInPicture",
+     "DocumentPictureInPicture.prototype",
+     "DocumentPictureInPicture.prototype.onenter",
+@@ -3683,6 +3687,7 @@
+     "Navigator.prototype.deprecatedRunAdAuctionEnforcesKAnonymity",
+     "Navigator.prototype.deprecatedURNToURL",
+     "Navigator.prototype.deviceMemory",
++    "Navigator.prototype.devicePosture",
+     "Navigator.prototype.doNotTrack",
+     "Navigator.prototype.geolocation",
+     "Navigator.prototype.getBattery",
+@@ -4741,6 +4746,9 @@
+     "PublicKeyCredential.prototype.rawId",
+     "PublicKeyCredential.prototype.response",
+     "PublicKeyCredential.prototype.toJSON",
++    "PublicKeyCredential.signalAllAcceptedCredentials",
++    "PublicKeyCredential.signalCurrentUserDetails",
++    "PublicKeyCredential.signalUnknownCredential",
+     "PushManager",
+     "PushManager.prototype",
+     "PushManager.prototype.getSubscription",

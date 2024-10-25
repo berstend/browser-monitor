@@ -1,0 +1,18 @@
+--- ./cdp/chrome-unstable_132.0.6779.0.protocol.json	2024-10-25 01:12:04.176028344 +0000
++++ ./cdp/chrome-unstable_132.0.6793.2.protocol.json	2024-10-25 01:12:30.507941509 +0000
+@@ -5655,6 +5655,7 @@
+           "enum": [
+             "first-line",
+             "first-letter",
++            "check",
+             "before",
+             "after",
+             "marker",
+@@ -17198,6 +17199,7 @@
+             "encrypted-media",
+             "execution-while-out-of-viewport",
+             "execution-while-not-rendered",
++            "fenced-frame-unpartitioned-data",
+             "focus-without-user-activation",
+             "fullscreen",
+             "frobulate",
