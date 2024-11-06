@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 130.0.6723.116 (`2024-11-5`) 
+No browser API changes.
+
+  
 #### 130.0.6723.91 (`2024-10-29`) 
 No browser API changes.
 
@@ -969,11 +973,27 @@ No browser API changes.
 No browser API changes.
 
   
-#### 124.0.6367.78 (`2024-4-23`) 
-No browser API changes.
-
-  
 ### chrome-unstable
+  
+#### 132.0.6811.2 (`2024-11-5`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6793.2_to_132.0.6811.2.diff), [json](./browser_apis/chrome-unstable_132.0.6793.2_to_132.0.6811.2.json), [full list](./browser_apis/chrome-unstable_132.0.6811.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_132.0.6793.2.json	2024-11-06 01:10:05.078421815 +0000
++++ ./browser_apis/chrome-unstable_132.0.6811.2.json	2024-11-06 01:11:23.418485507 +0000
+@@ -1,7 +1,10 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8546,
++  "browserApiCount": 8549,
+   "browserApis": [
++    "AICreateMonitor",
++    "AICreateMonitor.prototype",
++    "AICreateMonitor.prototype.ondownloadprogress",
+     "AbsoluteOrientationSensor",
+     "AbsoluteOrientationSensor.prototype",
+     "AbsoluteOrientationSensor.prototype.constructor",
+```
+
   
 #### 132.0.6793.2 (`2024-10-24`) ⚡
 Added 8 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6779.0_to_132.0.6793.2.diff), [json](./browser_apis/chrome-unstable_132.0.6779.0_to_132.0.6793.2.json), [full list](./browser_apis/chrome-unstable_132.0.6793.2.json))
@@ -2288,41 +2308,5 @@ Added 51 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6396.
   
 #### 125.0.6396.3 (`2024-4-5`) 
 No browser API changes.
-
-  
-#### 125.0.6382.3 (`2024-3-28`) ⚡
-Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6368.2_to_125.0.6382.3.diff), [json](./browser_apis/chrome-unstable_125.0.6368.2_to_125.0.6382.3.json), [full list](./browser_apis/chrome-unstable_125.0.6382.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_125.0.6368.2.json	2024-03-29 00:54:27.290156055 +0000
-+++ ./browser_apis/chrome-unstable_125.0.6382.3.json	2024-03-29 00:54:45.858534444 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8267,
-+  "browserApiCount": 8280,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4501,6 +4501,19 @@
-     "PresentationRequest.prototype.onconnectionavailable",
-     "PresentationRequest.prototype.reconnect",
-     "PresentationRequest.prototype.start",
-+    "PressureObserver",
-+    "PressureObserver.prototype",
-+    "PressureObserver.prototype.disconnect",
-+    "PressureObserver.prototype.observe",
-+    "PressureObserver.prototype.takeRecords",
-+    "PressureObserver.prototype.unobserve",
-+    "PressureObserver.supportedSources",
-+    "PressureRecord",
-+    "PressureRecord.prototype",
-+    "PressureRecord.prototype.source",
-+    "PressureRecord.prototype.state",
-+    "PressureRecord.prototype.time",
-+    "PressureRecord.prototype.toJSON",
-     "ProcessingInstruction",
-     "ProcessingInstruction.prototype",
-     "ProcessingInstruction.prototype.sheet",
-```
 
   <!-- browserapis:end -->

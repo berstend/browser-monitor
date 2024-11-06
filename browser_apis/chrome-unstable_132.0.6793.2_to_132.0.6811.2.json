@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "132.0.6793.2",
+    "to": "132.0.6811.2"
+  },
+  "browserApis": {
+    "added": [
+      "AICreateMonitor",
+      "AICreateMonitor.prototype",
+      "AICreateMonitor.prototype.ondownloadprogress"
+    ],
+    "removed": []
+  }
+}
