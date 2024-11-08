@@ -975,6 +975,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 132.0.6821.2 (`2024-11-7`) 
+No browser API changes.
+
+  
 #### 132.0.6811.2 (`2024-11-5`) ⚡
 Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6793.2_to_132.0.6811.2.diff), [json](./browser_apis/chrome-unstable_132.0.6793.2_to_132.0.6811.2.json), [full list](./browser_apis/chrome-unstable_132.0.6811.2.json))
  ```diff
@@ -2304,9 +2308,5 @@ Added 51 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6396.
      "XMLHttpRequest.prototype.setRequestHeader",
      "XMLHttpRequest.prototype.status",
 ```
-
-  
-#### 125.0.6396.3 (`2024-4-5`) 
-No browser API changes.
 
   <!-- browserapis:end -->
