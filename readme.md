@@ -1100,6 +1100,46 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 133.0.6835.3 (`2024-11-14`) ⚡
+Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_132.0.6821.2_to_133.0.6835.3.diff), [json](./browser_apis/chrome-unstable_132.0.6821.2_to_133.0.6835.3.json), [full list](./browser_apis/chrome-unstable_133.0.6835.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_132.0.6821.2.json	2024-11-15 01:15:29.136658000 +0000
++++ ./browser_apis/chrome-unstable_133.0.6835.3.json	2024-11-15 01:15:50.068761723 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8549,
++  "browserApiCount": 8552,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1646,6 +1646,7 @@
+     "GPUComputePipeline.prototype.label",
+     "GPUDevice",
+     "GPUDevice.prototype",
++    "GPUDevice.prototype.adapterInfo",
+     "GPUDevice.prototype.createBindGroup",
+     "GPUDevice.prototype.createBindGroupLayout",
+     "GPUDevice.prototype.createBuffer",
+@@ -2822,6 +2823,7 @@
+     "IdentityProvider.close",
+     "IdentityProvider.getUserInfo",
+     "IdentityProvider.prototype",
++    "IdentityProvider.resolve",
+     "IdleDeadline",
+     "IdleDeadline.prototype",
+     "IdleDeadline.prototype.didTimeout",
+@@ -3696,6 +3698,7 @@
+     "Navigator.prototype.getBattery",
+     "Navigator.prototype.getGamepads",
+     "Navigator.prototype.getInstalledRelatedApps",
++    "Navigator.prototype.getInterestGroupAdAuctionData",
+     "Navigator.prototype.getUserMedia",
+     "Navigator.prototype.gpu",
+     "Navigator.prototype.hardwareConcurrency",
+```
+
+  
 #### 132.0.6821.2 (`2024-11-7`) 
 No browser API changes.
 
@@ -2266,172 +2306,6 @@ Added 72 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6420.
      "CSSPositionTryRule",
      "CSSPositionTryRule.prototype",
      "CSSPositionTryRule.prototype.name",
-```
-
-  
-#### 125.0.6420.3 (`2024-4-16`) ⚡
-Added 51 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_125.0.6396.3_to_125.0.6420.3.diff), [json](./browser_apis/chrome-unstable_125.0.6396.3_to_125.0.6420.3.json), [full list](./browser_apis/chrome-unstable_125.0.6420.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_125.0.6396.3.json	2024-04-17 00:55:26.405796222 +0000
-+++ ./browser_apis/chrome-unstable_125.0.6420.3.json	2024-04-17 00:56:02.414092940 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8280,
-+  "browserApiCount": 8331,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -566,6 +566,10 @@
-     "CSSPerspective",
-     "CSSPerspective.prototype",
-     "CSSPerspective.prototype.length",
-+    "CSSPositionTryRule",
-+    "CSSPositionTryRule.prototype",
-+    "CSSPositionTryRule.prototype.name",
-+    "CSSPositionTryRule.prototype.style",
-     "CSSPositionValue",
-     "CSSPositionValue.prototype",
-     "CSSPositionValue.prototype.x",
-@@ -1790,6 +1794,7 @@
-     "HTMLAllCollection.prototype.namedItem",
-     "HTMLAnchorElement",
-     "HTMLAnchorElement.prototype",
-+    "HTMLAnchorElement.prototype.attributionSrc",
-     "HTMLAnchorElement.prototype.charset",
-     "HTMLAnchorElement.prototype.coords",
-     "HTMLAnchorElement.prototype.download",
-@@ -2292,6 +2297,7 @@
-     "HTMLScriptElement",
-     "HTMLScriptElement.prototype",
-     "HTMLScriptElement.prototype.async",
-+    "HTMLScriptElement.prototype.attributionSrc",
-     "HTMLScriptElement.prototype.blocking",
-     "HTMLScriptElement.prototype.charset",
-     "HTMLScriptElement.prototype.crossOrigin",
-@@ -2437,6 +2443,7 @@
-     "HTMLTemplateElement.prototype.shadowRootClonable",
-     "HTMLTemplateElement.prototype.shadowRootDelegatesFocus",
-     "HTMLTemplateElement.prototype.shadowRootMode",
-+    "HTMLTemplateElement.prototype.shadowRootSerializable",
-     "HTMLTextAreaElement",
-     "HTMLTextAreaElement.prototype",
-     "HTMLTextAreaElement.prototype.autocomplete",
-@@ -2706,6 +2713,7 @@
-     "Image.prototype",
-     "Image.prototype.align",
-     "Image.prototype.alt",
-+    "Image.prototype.attributionSrc",
-     "Image.prototype.border",
-     "Image.prototype.complete",
-     "Image.prototype.constructor",
-@@ -3354,6 +3362,18 @@
-     "MediaStreamEvent",
-     "MediaStreamEvent.prototype",
-     "MediaStreamEvent.prototype.stream",
-+    "MediaStreamTrackAudioStats",
-+    "MediaStreamTrackAudioStats.prototype",
-+    "MediaStreamTrackAudioStats.prototype.averageLatency",
-+    "MediaStreamTrackAudioStats.prototype.deliveredFrames",
-+    "MediaStreamTrackAudioStats.prototype.deliveredFramesDuration",
-+    "MediaStreamTrackAudioStats.prototype.latency",
-+    "MediaStreamTrackAudioStats.prototype.maximumLatency",
-+    "MediaStreamTrackAudioStats.prototype.minimumLatency",
-+    "MediaStreamTrackAudioStats.prototype.resetLatency",
-+    "MediaStreamTrackAudioStats.prototype.toJSON",
-+    "MediaStreamTrackAudioStats.prototype.totalFrames",
-+    "MediaStreamTrackAudioStats.prototype.totalFramesDuration",
-     "MediaStreamTrackEvent",
-     "MediaStreamTrackEvent.prototype",
-     "MediaStreamTrackEvent.prototype.track",
-@@ -3618,6 +3638,19 @@
-     "NodeIterator.prototype.referenceNode",
-     "NodeIterator.prototype.root",
-     "NodeIterator.prototype.whatToShow",
-+    "NotRestoredReasonDetails",
-+    "NotRestoredReasonDetails.prototype",
-+    "NotRestoredReasonDetails.prototype.reason",
-+    "NotRestoredReasonDetails.prototype.toJSON",
-+    "NotRestoredReasons",
-+    "NotRestoredReasons.prototype",
-+    "NotRestoredReasons.prototype.children",
-+    "NotRestoredReasons.prototype.id",
-+    "NotRestoredReasons.prototype.name",
-+    "NotRestoredReasons.prototype.reasons",
-+    "NotRestoredReasons.prototype.src",
-+    "NotRestoredReasons.prototype.toJSON",
-+    "NotRestoredReasons.prototype.url",
-     "Notification",
-     "Notification.maxActions",
-     "Notification.permission",
-@@ -3945,6 +3978,7 @@
-     "Option.prototype.constructor.prototype.getElementsByClassName",
-     "Option.prototype.constructor.prototype.getElementsByTagName",
-     "Option.prototype.constructor.prototype.getElementsByTagNameNS",
-+    "Option.prototype.constructor.prototype.getHTML",
-     "Option.prototype.constructor.prototype.getInnerHTML",
-     "Option.prototype.constructor.prototype.hasAttribute",
-     "Option.prototype.constructor.prototype.hasAttributeNS",
-@@ -4317,6 +4351,7 @@
-     "PerformanceNavigationTiming.prototype.domInteractive",
-     "PerformanceNavigationTiming.prototype.loadEventEnd",
-     "PerformanceNavigationTiming.prototype.loadEventStart",
-+    "PerformanceNavigationTiming.prototype.notRestoredReasons",
-     "PerformanceNavigationTiming.prototype.redirectCount",
-     "PerformanceNavigationTiming.prototype.toJSON",
-     "PerformanceNavigationTiming.prototype.type",
-@@ -5915,6 +5950,7 @@
-     "ShadowRoot.prototype.fullscreenElement",
-     "ShadowRoot.prototype.getAnimations",
-     "ShadowRoot.prototype.getElementById",
-+    "ShadowRoot.prototype.getHTML",
-     "ShadowRoot.prototype.getInnerHTML",
-     "ShadowRoot.prototype.getSelection",
-     "ShadowRoot.prototype.host",
-@@ -5928,6 +5964,7 @@
-     "ShadowRoot.prototype.querySelector",
-     "ShadowRoot.prototype.querySelectorAll",
-     "ShadowRoot.prototype.replaceChildren",
-+    "ShadowRoot.prototype.serializable",
-     "ShadowRoot.prototype.setHTMLUnsafe",
-     "ShadowRoot.prototype.slotAssignment",
-     "ShadowRoot.prototype.styleSheets",
-@@ -6647,7 +6684,19 @@
-     "ViewTransition.prototype.finished",
-     "ViewTransition.prototype.ready",
-     "ViewTransition.prototype.skipTransition",
-+    "ViewTransition.prototype.types",
-     "ViewTransition.prototype.updateCallbackDone",
-+    "ViewTransitionTypeSet",
-+    "ViewTransitionTypeSet.prototype",
-+    "ViewTransitionTypeSet.prototype.add",
-+    "ViewTransitionTypeSet.prototype.clear",
-+    "ViewTransitionTypeSet.prototype.delete",
-+    "ViewTransitionTypeSet.prototype.entries",
-+    "ViewTransitionTypeSet.prototype.forEach",
-+    "ViewTransitionTypeSet.prototype.has",
-+    "ViewTransitionTypeSet.prototype.keys",
-+    "ViewTransitionTypeSet.prototype.size",
-+    "ViewTransitionTypeSet.prototype.values",
-     "VirtualKeyboard",
-     "VirtualKeyboard.prototype",
-     "VirtualKeyboard.prototype.boundingRect",
-@@ -7469,6 +7518,7 @@
-     "XMLDocument.prototype.hasPrivateToken",
-     "XMLDocument.prototype.hasRedemptionRecord",
-     "XMLDocument.prototype.hasStorageAccess",
-+    "XMLDocument.prototype.hasUnpartitionedCookieAccess",
-     "XMLDocument.prototype.head",
-     "XMLDocument.prototype.hidden",
-     "XMLDocument.prototype.images",
-@@ -7650,6 +7700,7 @@
-     "XMLHttpRequest.prototype.responseURL",
-     "XMLHttpRequest.prototype.responseXML",
-     "XMLHttpRequest.prototype.send",
-+    "XMLHttpRequest.prototype.setAttributionReporting",
-     "XMLHttpRequest.prototype.setPrivateToken",
-     "XMLHttpRequest.prototype.setRequestHeader",
-     "XMLHttpRequest.prototype.status",
 ```
 
   <!-- browserapis:end -->

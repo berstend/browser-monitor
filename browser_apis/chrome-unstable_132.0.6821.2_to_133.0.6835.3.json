@@ -1,0 +1,15 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "132.0.6821.2",
+    "to": "133.0.6835.3"
+  },
+  "browserApis": {
+    "added": [
+      "GPUDevice.prototype.adapterInfo",
+      "IdentityProvider.resolve",
+      "Navigator.prototype.getInterestGroupAdAuctionData"
+    ],
+    "removed": []
+  }
+}

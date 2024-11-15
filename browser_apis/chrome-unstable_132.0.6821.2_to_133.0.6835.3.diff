@@ -1,0 +1,34 @@
+--- ./browser_apis/chrome-unstable_132.0.6821.2.json	2024-11-15 01:15:29.136658000 +0000
++++ ./browser_apis/chrome-unstable_133.0.6835.3.json	2024-11-15 01:15:50.068761723 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8549,
++  "browserApiCount": 8552,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1646,6 +1646,7 @@
+     "GPUComputePipeline.prototype.label",
+     "GPUDevice",
+     "GPUDevice.prototype",
++    "GPUDevice.prototype.adapterInfo",
+     "GPUDevice.prototype.createBindGroup",
+     "GPUDevice.prototype.createBindGroupLayout",
+     "GPUDevice.prototype.createBuffer",
+@@ -2822,6 +2823,7 @@
+     "IdentityProvider.close",
+     "IdentityProvider.getUserInfo",
+     "IdentityProvider.prototype",
++    "IdentityProvider.resolve",
+     "IdleDeadline",
+     "IdleDeadline.prototype",
+     "IdleDeadline.prototype.didTimeout",
+@@ -3696,6 +3698,7 @@
+     "Navigator.prototype.getBattery",
+     "Navigator.prototype.getGamepads",
+     "Navigator.prototype.getInstalledRelatedApps",
++    "Navigator.prototype.getInterestGroupAdAuctionData",
+     "Navigator.prototype.getUserMedia",
+     "Navigator.prototype.gpu",
+     "Navigator.prototype.hardwareConcurrency",
