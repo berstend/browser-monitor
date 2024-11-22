@@ -1,0 +1,28 @@
+--- ./browser_apis/chrome-unstable_133.0.6835.3.json	2024-11-22 01:15:24.339585110 +0000
++++ ./browser_apis/chrome-unstable_133.0.6847.2.json	2024-11-22 01:16:19.780654637 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8552,
++  "browserApiCount": 8556,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -389,6 +389,7 @@
+     "BrowserCaptureMediaStreamTrack",
+     "BrowserCaptureMediaStreamTrack.prototype",
+     "BrowserCaptureMediaStreamTrack.prototype.cropTo",
++    "BrowserCaptureMediaStreamTrack.prototype.restrictTo",
+     "ByteLengthQueuingStrategy",
+     "ByteLengthQueuingStrategy.prototype",
+     "ByteLengthQueuingStrategy.prototype.highWaterMark",
+@@ -5161,6 +5162,9 @@
+     "Response.prototype.type",
+     "Response.prototype.url",
+     "Response.redirect",
++    "RestrictionTarget",
++    "RestrictionTarget.fromElement",
++    "RestrictionTarget.prototype",
+     "SVGAElement",
+     "SVGAElement.prototype",
+     "SVGAElement.prototype.href",

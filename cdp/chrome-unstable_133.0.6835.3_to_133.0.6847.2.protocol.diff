@@ -1,0 +1,10 @@
+--- ./cdp/chrome-unstable_133.0.6835.3.protocol.json	2024-11-22 01:15:24.687592260 +0000
++++ ./cdp/chrome-unstable_133.0.6847.2.protocol.json	2024-11-22 01:16:19.792654868 +0000
+@@ -17262,6 +17262,7 @@
+             "controlled-frame",
+             "cross-origin-isolated",
+             "deferred-fetch",
++            "deferred-fetch-minimal",
+             "digital-credentials-get",
+             "direct-sockets",
+             "direct-sockets-private",

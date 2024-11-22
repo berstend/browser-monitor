@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "133.0.6835.3",
+    "to": "133.0.6847.2"
+  },
+  "browserApis": {
+    "added": [
+      "BrowserCaptureMediaStreamTrack.prototype.restrictTo",
+      "RestrictionTarget",
+      "RestrictionTarget.fromElement",
+      "RestrictionTarget.prototype"
+    ],
+    "removed": []
+  }
+}
