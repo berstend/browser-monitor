@@ -1,0 +1,46 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "133.0.6847.2",
+    "to": "133.0.6876.4"
+  },
+  "browserApis": {
+    "added": [
+      "Atomics.pause",
+      "CSPViolationReportBody",
+      "CSPViolationReportBody.prototype",
+      "CSPViolationReportBody.prototype.blockedURL",
+      "CSPViolationReportBody.prototype.columnNumber",
+      "CSPViolationReportBody.prototype.disposition",
+      "CSPViolationReportBody.prototype.documentURL",
+      "CSPViolationReportBody.prototype.effectiveDirective",
+      "CSPViolationReportBody.prototype.lineNumber",
+      "CSPViolationReportBody.prototype.originalPolicy",
+      "CSPViolationReportBody.prototype.referrer",
+      "CSPViolationReportBody.prototype.sample",
+      "CSPViolationReportBody.prototype.sourceFile",
+      "CSPViolationReportBody.prototype.statusCode",
+      "CSPViolationReportBody.prototype.toJSON",
+      "CSSTransition.prototype.overallProgress",
+      "PerformanceResourceTiming.prototype.finalResponseHeadersStart",
+      "ReportBody",
+      "ReportBody.prototype",
+      "ReportBody.prototype.toJSON",
+      "ViewTimeline.prototype.axis",
+      "ViewTimeline.prototype.constructor",
+      "ViewTimeline.prototype.constructor.prototype",
+      "ViewTimeline.prototype.constructor.prototype.currentTime",
+      "ViewTimeline.prototype.constructor.prototype.duration",
+      "ViewTimeline.prototype.source"
+    ],
+    "removed": [
+      "DocumentTimeline.prototype.constructor",
+      "DocumentTimeline.prototype.currentTime",
+      "DocumentTimeline.prototype.duration",
+      "ScrollTimeline",
+      "ScrollTimeline.prototype",
+      "ScrollTimeline.prototype.axis",
+      "ScrollTimeline.prototype.source"
+    ]
+  }
+}

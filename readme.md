@@ -1100,6 +1100,112 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 133.0.6876.4 (`2024-12-5`) ⚡
+Added 26 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_133.0.6847.2_to_133.0.6876.4.diff), [json](./browser_apis/chrome-unstable_133.0.6847.2_to_133.0.6876.4.json), [full list](./browser_apis/chrome-unstable_133.0.6876.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_133.0.6847.2.json	2024-12-06 01:17:17.174768734 +0000
++++ ./browser_apis/chrome-unstable_133.0.6876.4.json	2024-12-06 01:17:49.166737937 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8556,
++  "browserApiCount": 8575,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -110,6 +110,7 @@
+     "Atomics.load",
+     "Atomics.notify",
+     "Atomics.or",
++    "Atomics.pause",
+     "Atomics.store",
+     "Atomics.sub",
+     "Atomics.wait",
+@@ -396,6 +397,20 @@
+     "ByteLengthQueuingStrategy.prototype.size",
+     "CDATASection",
+     "CDATASection.prototype",
++    "CSPViolationReportBody",
++    "CSPViolationReportBody.prototype",
++    "CSPViolationReportBody.prototype.blockedURL",
++    "CSPViolationReportBody.prototype.columnNumber",
++    "CSPViolationReportBody.prototype.disposition",
++    "CSPViolationReportBody.prototype.documentURL",
++    "CSPViolationReportBody.prototype.effectiveDirective",
++    "CSPViolationReportBody.prototype.lineNumber",
++    "CSPViolationReportBody.prototype.originalPolicy",
++    "CSPViolationReportBody.prototype.referrer",
++    "CSPViolationReportBody.prototype.sample",
++    "CSPViolationReportBody.prototype.sourceFile",
++    "CSPViolationReportBody.prototype.statusCode",
++    "CSPViolationReportBody.prototype.toJSON",
+     "CSS",
+     "CSS.Hz",
+     "CSS.Q",
+@@ -756,6 +771,7 @@
+     "CSSTransition.prototype.oncancel",
+     "CSSTransition.prototype.onfinish",
+     "CSSTransition.prototype.onremove",
++    "CSSTransition.prototype.overallProgress",
+     "CSSTransition.prototype.pause",
+     "CSSTransition.prototype.pending",
+     "CSSTransition.prototype.persist",
+@@ -1272,9 +1288,6 @@
+     "DocumentPictureInPictureEvent.prototype.window",
+     "DocumentTimeline",
+     "DocumentTimeline.prototype",
+-    "DocumentTimeline.prototype.constructor",
+-    "DocumentTimeline.prototype.currentTime",
+-    "DocumentTimeline.prototype.duration",
+     "DocumentType",
+     "DocumentType.prototype",
+     "DocumentType.prototype.after",
+@@ -4536,6 +4549,7 @@
+     "PerformanceResourceTiming.prototype.domainLookupStart",
+     "PerformanceResourceTiming.prototype.encodedBodySize",
+     "PerformanceResourceTiming.prototype.fetchStart",
++    "PerformanceResourceTiming.prototype.finalResponseHeadersStart",
+     "PerformanceResourceTiming.prototype.firstInterimResponseStart",
+     "PerformanceResourceTiming.prototype.initiatorType",
+     "PerformanceResourceTiming.prototype.nextHopProtocol",
+@@ -5093,6 +5107,9 @@
+     "RemotePlayback.prototype.prompt",
+     "RemotePlayback.prototype.state",
+     "RemotePlayback.prototype.watchAvailability",
++    "ReportBody",
++    "ReportBody.prototype",
++    "ReportBody.prototype.toJSON",
+     "ReportingObserver",
+     "ReportingObserver.prototype",
+     "ReportingObserver.prototype.disconnect",
+@@ -5988,10 +6005,6 @@
+     "ScriptProcessorNode.prototype",
+     "ScriptProcessorNode.prototype.bufferSize",
+     "ScriptProcessorNode.prototype.onaudioprocess",
+-    "ScrollTimeline",
+-    "ScrollTimeline.prototype",
+-    "ScrollTimeline.prototype.axis",
+-    "ScrollTimeline.prototype.source",
+     "SecurityPolicyViolationEvent",
+     "SecurityPolicyViolationEvent.prototype",
+     "SecurityPolicyViolationEvent.prototype.blockedURI",
+@@ -6872,7 +6885,13 @@
+     "VideoPlaybackQuality.prototype.totalVideoFrames",
+     "ViewTimeline",
+     "ViewTimeline.prototype",
++    "ViewTimeline.prototype.axis",
++    "ViewTimeline.prototype.constructor",
++    "ViewTimeline.prototype.constructor.prototype",
++    "ViewTimeline.prototype.constructor.prototype.currentTime",
++    "ViewTimeline.prototype.constructor.prototype.duration",
+     "ViewTimeline.prototype.endOffset",
++    "ViewTimeline.prototype.source",
+     "ViewTimeline.prototype.startOffset",
+     "ViewTimeline.prototype.subject",
+     "ViewTransition",
+```
+
+  
 #### 133.0.6847.2 (`2024-11-21`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6835.3_to_133.0.6847.2.diff), [json](./browser_apis/chrome-unstable_133.0.6835.3_to_133.0.6847.2.json), [full list](./browser_apis/chrome-unstable_133.0.6847.2.json))
  ```diff
@@ -2186,65 +2292,6 @@ Added 3 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_126.0.6439.0
      "webkitURL.prototype",
      "webkitURL.prototype.hash",
      "webkitURL.prototype.host",
-```
-
-  
-#### 126.0.6439.0 (`2024-4-26`) ⚡
-Added 4 APIs, removed 6 (see: [diff](./browser_apis/chrome-unstable_126.0.6423.2_to_126.0.6439.0.diff), [json](./browser_apis/chrome-unstable_126.0.6423.2_to_126.0.6439.0.json), [full list](./browser_apis/chrome-unstable_126.0.6439.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_126.0.6423.2.json	2024-04-27 00:55:06.328040949 +0000
-+++ ./browser_apis/chrome-unstable_126.0.6439.0.json	2024-04-27 00:55:41.028215193 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8403,
-+  "browserApiCount": 8401,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1799,6 +1799,7 @@
-     "GamepadEvent.prototype.gamepad",
-     "GamepadHapticActuator",
-     "GamepadHapticActuator.prototype",
-+    "GamepadHapticActuator.prototype.effects",
-     "GamepadHapticActuator.prototype.playEffect",
-     "GamepadHapticActuator.prototype.reset",
-     "GamepadHapticActuator.prototype.type",
-@@ -1816,10 +1817,12 @@
-     "GeolocationCoordinates.prototype.latitude",
-     "GeolocationCoordinates.prototype.longitude",
-     "GeolocationCoordinates.prototype.speed",
-+    "GeolocationCoordinates.prototype.toJSON",
-     "GeolocationPosition",
-     "GeolocationPosition.prototype",
-     "GeolocationPosition.prototype.coords",
-     "GeolocationPosition.prototype.timestamp",
-+    "GeolocationPosition.prototype.toJSON",
-     "GeolocationPositionError",
-     "GeolocationPositionError.prototype",
-     "GeolocationPositionError.prototype.code",
-@@ -2584,13 +2587,7 @@
-     "HTMLVideoElement.prototype.videoHeight",
-     "HTMLVideoElement.prototype.videoWidth",
-     "HTMLVideoElement.prototype.webkitDecodedFrameCount",
--    "HTMLVideoElement.prototype.webkitDisplayingFullscreen",
-     "HTMLVideoElement.prototype.webkitDroppedFrameCount",
--    "HTMLVideoElement.prototype.webkitEnterFullScreen",
--    "HTMLVideoElement.prototype.webkitEnterFullscreen",
--    "HTMLVideoElement.prototype.webkitExitFullScreen",
--    "HTMLVideoElement.prototype.webkitExitFullscreen",
--    "HTMLVideoElement.prototype.webkitSupportsFullscreen",
-     "HTMLVideoElement.prototype.width",
-     "HashChangeEvent",
-     "HashChangeEvent.prototype",
-@@ -7299,6 +7296,7 @@
-     "WebGLUniformLocation.prototype",
-     "WebGLVertexArrayObject",
-     "WebGLVertexArrayObject.prototype",
-+    "WebGLVertexArrayObject.prototype.constructor",
-     "WebKitCSSMatrix",
-     "WebKitCSSMatrix.fromFloat32Array",
-     "WebKitCSSMatrix.fromFloat64Array",
 ```
 
   <!-- browserapis:end -->
