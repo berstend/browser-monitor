@@ -1100,6 +1100,38 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 133.0.6888.2 (`2024-12-12`) ⚡
+Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6876.4_to_133.0.6888.2.diff), [json](./browser_apis/chrome-unstable_133.0.6876.4_to_133.0.6888.2.json), [full list](./browser_apis/chrome-unstable_133.0.6888.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_133.0.6876.4.json	2024-12-13 01:18:52.651775575 +0000
++++ ./browser_apis/chrome-unstable_133.0.6888.2.json	2024-12-13 01:19:47.091860938 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8575,
++  "browserApiCount": 8577,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1960,6 +1960,7 @@
+     "HTMLAreaElement",
+     "HTMLAreaElement.prototype",
+     "HTMLAreaElement.prototype.alt",
++    "HTMLAreaElement.prototype.attributionSrc",
+     "HTMLAreaElement.prototype.coords",
+     "HTMLAreaElement.prototype.download",
+     "HTMLAreaElement.prototype.hash",
+@@ -4757,6 +4758,7 @@
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
++    "PublicKeyCredential.getClientCapabilities",
+     "PublicKeyCredential.isConditionalMediationAvailable",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
+     "PublicKeyCredential.parseCreationOptionsFromJSON",
+```
+
+  
 #### 133.0.6876.4 (`2024-12-5`) ⚡
 Added 26 APIs, removed 7 (see: [diff](./browser_apis/chrome-unstable_133.0.6847.2_to_133.0.6876.4.diff), [json](./browser_apis/chrome-unstable_133.0.6847.2_to_133.0.6876.4.json), [full list](./browser_apis/chrome-unstable_133.0.6876.4.json))
  ```diff
@@ -2246,52 +2278,6 @@ Added 51 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_126.0.6452.
      "showDirectoryPicker",
      "showOpenFilePicker",
      "showSaveFilePicker",
-```
-
-  
-#### 126.0.6452.3 (`2024-5-3`) ⚡
-Added 3 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_126.0.6439.0_to_126.0.6452.3.diff), [json](./browser_apis/chrome-unstable_126.0.6439.0_to_126.0.6452.3.json), [full list](./browser_apis/chrome-unstable_126.0.6452.3.json))
- ```diff
---- ./browser_apis/chrome-unstable_126.0.6439.0.json	2024-05-04 00:55:53.194510891 +0000
-+++ ./browser_apis/chrome-unstable_126.0.6452.3.json	2024-05-04 00:56:23.778423387 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8401,
-+  "browserApiCount": 8403,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4606,12 +4606,12 @@
-     "PresentationRequest.prototype.reconnect",
-     "PresentationRequest.prototype.start",
-     "PressureObserver",
-+    "PressureObserver.knownSources",
-     "PressureObserver.prototype",
-     "PressureObserver.prototype.disconnect",
-     "PressureObserver.prototype.observe",
-     "PressureObserver.prototype.takeRecords",
-     "PressureObserver.prototype.unobserve",
--    "PressureObserver.supportedSources",
-     "PressureRecord",
-     "PressureRecord.prototype",
-     "PressureRecord.prototype.source",
-@@ -6790,6 +6790,7 @@
-     "VisualViewport.prototype.offsetTop",
-     "VisualViewport.prototype.onresize",
-     "VisualViewport.prototype.onscroll",
-+    "VisualViewport.prototype.onscrollend",
-     "VisualViewport.prototype.pageLeft",
-     "VisualViewport.prototype.pageTop",
-     "VisualViewport.prototype.scale",
-@@ -8386,6 +8387,7 @@
-     "webkitURL",
-     "webkitURL.canParse",
-     "webkitURL.createObjectURL",
-+    "webkitURL.parse",
-     "webkitURL.prototype",
-     "webkitURL.prototype.hash",
-     "webkitURL.prototype.host",
 ```
 
   <!-- browserapis:end -->

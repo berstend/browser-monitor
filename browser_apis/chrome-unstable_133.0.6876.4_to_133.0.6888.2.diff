@@ -1,0 +1,26 @@
+--- ./browser_apis/chrome-unstable_133.0.6876.4.json	2024-12-13 01:18:52.651775575 +0000
++++ ./browser_apis/chrome-unstable_133.0.6888.2.json	2024-12-13 01:19:47.091860938 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8575,
++  "browserApiCount": 8577,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1960,6 +1960,7 @@
+     "HTMLAreaElement",
+     "HTMLAreaElement.prototype",
+     "HTMLAreaElement.prototype.alt",
++    "HTMLAreaElement.prototype.attributionSrc",
+     "HTMLAreaElement.prototype.coords",
+     "HTMLAreaElement.prototype.download",
+     "HTMLAreaElement.prototype.hash",
+@@ -4757,6 +4758,7 @@
+     "Proxy",
+     "Proxy.revocable",
+     "PublicKeyCredential",
++    "PublicKeyCredential.getClientCapabilities",
+     "PublicKeyCredential.isConditionalMediationAvailable",
+     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
+     "PublicKeyCredential.parseCreationOptionsFromJSON",
