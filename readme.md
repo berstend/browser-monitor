@@ -846,6 +846,54 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 133.0.6943.6 (`2025-1-9`) ⚡
+Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6905.0_to_133.0.6943.6.diff), [json](./browser_apis/chrome-unstable_133.0.6905.0_to_133.0.6943.6.json), [full list](./browser_apis/chrome-unstable_133.0.6943.6.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_133.0.6905.0.json	2025-01-10 01:13:38.007431384 +0000
++++ ./browser_apis/chrome-unstable_133.0.6943.6.json	2025-01-10 01:14:05.067539804 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8577,
++  "browserApiCount": 8581,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -2856,6 +2856,7 @@
+     "Image.prototype.alt",
+     "Image.prototype.attributionSrc",
+     "Image.prototype.border",
++    "Image.prototype.browsingTopics",
+     "Image.prototype.complete",
+     "Image.prototype.constructor",
+     "Image.prototype.crossOrigin",
+@@ -4165,6 +4166,7 @@
+     "Option.prototype.constructor.prototype.lastElementChild",
+     "Option.prototype.constructor.prototype.localName",
+     "Option.prototype.constructor.prototype.matches",
++    "Option.prototype.constructor.prototype.moveBefore",
+     "Option.prototype.constructor.prototype.namespaceURI",
+     "Option.prototype.constructor.prototype.nextElementSibling",
+     "Option.prototype.constructor.prototype.nonce",
+@@ -6148,6 +6150,7 @@
+     "ShadowRoot.prototype.innerHTML",
+     "ShadowRoot.prototype.lastElementChild",
+     "ShadowRoot.prototype.mode",
++    "ShadowRoot.prototype.moveBefore",
+     "ShadowRoot.prototype.onslotchange",
+     "ShadowRoot.prototype.pictureInPictureElement",
+     "ShadowRoot.prototype.pointerLockElement",
+@@ -7750,6 +7753,7 @@
+     "XMLDocument.prototype.lastModified",
+     "XMLDocument.prototype.linkColor",
+     "XMLDocument.prototype.links",
++    "XMLDocument.prototype.moveBefore",
+     "XMLDocument.prototype.onabort",
+     "XMLDocument.prototype.onanimationend",
+     "XMLDocument.prototype.onanimationiteration",
+```
+
+  
 #### 133.0.6905.0 (`2024-12-20`) 
 No browser API changes.
 
@@ -1885,9 +1933,5 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6485.0
      "Proxy.revocable",
      "PublicKeyCredential",
 ```
-
-  
-#### 127.0.6485.0 (`2024-5-20`) 
-No browser API changes.
 
   <!-- browserapis:end -->
