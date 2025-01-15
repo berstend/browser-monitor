@@ -1,0 +1,32 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "131.0.6778.264",
+    "to": "132.0.6834.83"
+  },
+  "browserApis": {
+    "added": [
+      "AICreateMonitor",
+      "AICreateMonitor.prototype",
+      "AICreateMonitor.prototype.ondownloadprogress",
+      "BrowserCaptureMediaStreamTrack.prototype.restrictTo",
+      "DevicePosture",
+      "DevicePosture.prototype",
+      "DevicePosture.prototype.onchange",
+      "DevicePosture.prototype.type",
+      "GPUDevice.prototype.adapterInfo",
+      "IdentityProvider.resolve",
+      "Navigator.prototype.devicePosture",
+      "Navigator.prototype.getInterestGroupAdAuctionData",
+      "PublicKeyCredential.signalAllAcceptedCredentials",
+      "PublicKeyCredential.signalCurrentUserDetails",
+      "PublicKeyCredential.signalUnknownCredential",
+      "Request.prototype.bytes",
+      "Response.prototype.bytes",
+      "RestrictionTarget",
+      "RestrictionTarget.fromElement",
+      "RestrictionTarget.prototype"
+    ],
+    "removed": []
+  }
+}
