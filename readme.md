@@ -947,6 +947,80 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 134.0.6958.2 (`2025-1-16`) ⚡
+Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6943.6_to_134.0.6958.2.diff), [json](./browser_apis/chrome-unstable_133.0.6943.6_to_134.0.6958.2.json), [full list](./browser_apis/chrome-unstable_134.0.6958.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_133.0.6943.6.json	2025-01-17 01:09:33.253330925 +0000
++++ ./browser_apis/chrome-unstable_134.0.6958.2.json	2025-01-17 01:10:43.062095356 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8581,
++  "browserApiCount": 8604,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -101,6 +101,14 @@
+     "ArrayBuffer.prototype.slice",
+     "ArrayBuffer.prototype.transfer",
+     "ArrayBuffer.prototype.transferToFixedLength",
++    "AsyncDisposableStack",
++    "AsyncDisposableStack.prototype",
++    "AsyncDisposableStack.prototype.adopt",
++    "AsyncDisposableStack.prototype.defer",
++    "AsyncDisposableStack.prototype.disposeAsync",
++    "AsyncDisposableStack.prototype.disposed",
++    "AsyncDisposableStack.prototype.move",
++    "AsyncDisposableStack.prototype.use",
+     "Atomics",
+     "Atomics.add",
+     "Atomics.and",
+@@ -1278,6 +1286,14 @@
+     "DevicePosture.prototype",
+     "DevicePosture.prototype.onchange",
+     "DevicePosture.prototype.type",
++    "DisposableStack",
++    "DisposableStack.prototype",
++    "DisposableStack.prototype.adopt",
++    "DisposableStack.prototype.defer",
++    "DisposableStack.prototype.dispose",
++    "DisposableStack.prototype.disposed",
++    "DisposableStack.prototype.move",
++    "DisposableStack.prototype.use",
+     "DocumentPictureInPicture",
+     "DocumentPictureInPicture.prototype",
+     "DocumentPictureInPicture.prototype.onenter",
+@@ -1399,6 +1415,7 @@
+     "EncodedVideoChunk.prototype.type",
+     "Error",
+     "Error.captureStackTrace",
++    "Error.isError",
+     "Error.prototype",
+     "Error.prototype.toString",
+     "ErrorEvent",
+@@ -1509,6 +1526,10 @@
+     "FileSystemFileHandle.prototype.createWritable",
+     "FileSystemFileHandle.prototype.getFile",
+     "FileSystemFileHandle.prototype.move",
++    "FileSystemObserver",
++    "FileSystemObserver.prototype",
++    "FileSystemObserver.prototype.disconnect",
++    "FileSystemObserver.prototype.observe",
+     "FileSystemWritableFileStream",
+     "FileSystemWritableFileStream.prototype",
+     "FileSystemWritableFileStream.prototype.mode",
+@@ -6398,6 +6419,8 @@
+     "SubtleCrypto.prototype.unwrapKey",
+     "SubtleCrypto.prototype.verify",
+     "SubtleCrypto.prototype.wrapKey",
++    "SuppressedError",
++    "SuppressedError.prototype",
+     "Symbol",
+     "Symbol.for",
+     "Symbol.keyFor",
+```
+
+  
 #### 133.0.6943.6 (`2025-1-9`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6905.0_to_133.0.6943.6.diff), [json](./browser_apis/chrome-unstable_133.0.6905.0_to_133.0.6943.6.json), [full list](./browser_apis/chrome-unstable_133.0.6943.6.json))
  ```diff
@@ -2007,32 +2081,6 @@ Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6510.4
      "MediaMetadata.prototype.title",
      "MediaQueryList",
      "MediaQueryList.prototype",
-```
-
-  
-#### 127.0.6510.4 (`2024-5-31`) ⚡
-Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6485.0_to_127.0.6510.4.diff), [json](./browser_apis/chrome-unstable_127.0.6485.0_to_127.0.6510.4.json), [full list](./browser_apis/chrome-unstable_127.0.6510.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_127.0.6485.0.json	2024-06-01 12:23:03.167185305 +0000
-+++ ./browser_apis/chrome-unstable_127.0.6510.4.json	2024-06-01 12:23:31.239369681 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8454,
-+  "browserApiCount": 8457,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -4680,6 +4680,9 @@
-     "PromiseRejectionEvent.prototype",
-     "PromiseRejectionEvent.prototype.promise",
-     "PromiseRejectionEvent.prototype.reason",
-+    "ProtectedAudience",
-+    "ProtectedAudience.prototype",
-+    "ProtectedAudience.prototype.queryFeatureSupport",
-     "Proxy",
-     "Proxy.revocable",
-     "PublicKeyCredential",
 ```
 
   <!-- browserapis:end -->

@@ -1,0 +1,35 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "133.0.6943.6",
+    "to": "134.0.6958.2"
+  },
+  "browserApis": {
+    "added": [
+      "AsyncDisposableStack",
+      "AsyncDisposableStack.prototype",
+      "AsyncDisposableStack.prototype.adopt",
+      "AsyncDisposableStack.prototype.defer",
+      "AsyncDisposableStack.prototype.disposeAsync",
+      "AsyncDisposableStack.prototype.disposed",
+      "AsyncDisposableStack.prototype.move",
+      "AsyncDisposableStack.prototype.use",
+      "DisposableStack",
+      "DisposableStack.prototype",
+      "DisposableStack.prototype.adopt",
+      "DisposableStack.prototype.defer",
+      "DisposableStack.prototype.dispose",
+      "DisposableStack.prototype.disposed",
+      "DisposableStack.prototype.move",
+      "DisposableStack.prototype.use",
+      "Error.isError",
+      "FileSystemObserver",
+      "FileSystemObserver.prototype",
+      "FileSystemObserver.prototype.disconnect",
+      "FileSystemObserver.prototype.observe",
+      "SuppressedError",
+      "SuppressedError.prototype"
+    ],
+    "removed": []
+  }
+}
