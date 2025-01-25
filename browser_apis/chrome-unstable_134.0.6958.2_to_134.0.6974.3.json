@@ -1,0 +1,23 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "134.0.6958.2",
+    "to": "134.0.6974.3"
+  },
+  "browserApis": {
+    "added": [
+      "CSSFontFeatureValuesRule",
+      "CSSFontFeatureValuesRule.prototype",
+      "CSSFontFeatureValuesRule.prototype.annotation",
+      "CSSFontFeatureValuesRule.prototype.characterVariant",
+      "CSSFontFeatureValuesRule.prototype.fontFamily",
+      "CSSFontFeatureValuesRule.prototype.ornaments",
+      "CSSFontFeatureValuesRule.prototype.styleset",
+      "CSSFontFeatureValuesRule.prototype.stylistic",
+      "CSSFontFeatureValuesRule.prototype.swash",
+      "GPUAdapterInfo.prototype.subgroupMaxSize",
+      "GPUAdapterInfo.prototype.subgroupMinSize"
+    ],
+    "removed": []
+  }
+}

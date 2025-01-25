@@ -1,0 +1,35 @@
+--- ./browser_apis/chrome-unstable_134.0.6958.2.json	2025-01-25 01:06:31.095530173 +0000
++++ ./browser_apis/chrome-unstable_134.0.6974.3.json	2025-01-25 01:07:06.543253723 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8604,
++  "browserApiCount": 8615,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -512,6 +512,15 @@
+     "CSSFontFaceRule",
+     "CSSFontFaceRule.prototype",
+     "CSSFontFaceRule.prototype.style",
++    "CSSFontFeatureValuesRule",
++    "CSSFontFeatureValuesRule.prototype",
++    "CSSFontFeatureValuesRule.prototype.annotation",
++    "CSSFontFeatureValuesRule.prototype.characterVariant",
++    "CSSFontFeatureValuesRule.prototype.fontFamily",
++    "CSSFontFeatureValuesRule.prototype.ornaments",
++    "CSSFontFeatureValuesRule.prototype.styleset",
++    "CSSFontFeatureValuesRule.prototype.stylistic",
++    "CSSFontFeatureValuesRule.prototype.swash",
+     "CSSFontPaletteValuesRule",
+     "CSSFontPaletteValuesRule.prototype",
+     "CSSFontPaletteValuesRule.prototype.basePalette",
+@@ -1608,6 +1617,8 @@
+     "GPUAdapterInfo.prototype.architecture",
+     "GPUAdapterInfo.prototype.description",
+     "GPUAdapterInfo.prototype.device",
++    "GPUAdapterInfo.prototype.subgroupMaxSize",
++    "GPUAdapterInfo.prototype.subgroupMinSize",
+     "GPUAdapterInfo.prototype.vendor",
+     "GPUBindGroup",
+     "GPUBindGroup.prototype",

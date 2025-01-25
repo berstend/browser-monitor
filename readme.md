@@ -947,6 +947,47 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 134.0.6974.3 (`2025-1-24`) ⚡
+Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_134.0.6958.2_to_134.0.6974.3.diff), [json](./browser_apis/chrome-unstable_134.0.6958.2_to_134.0.6974.3.json), [full list](./browser_apis/chrome-unstable_134.0.6974.3.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_134.0.6958.2.json	2025-01-25 01:06:31.095530173 +0000
++++ ./browser_apis/chrome-unstable_134.0.6974.3.json	2025-01-25 01:07:06.543253723 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8604,
++  "browserApiCount": 8615,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -512,6 +512,15 @@
+     "CSSFontFaceRule",
+     "CSSFontFaceRule.prototype",
+     "CSSFontFaceRule.prototype.style",
++    "CSSFontFeatureValuesRule",
++    "CSSFontFeatureValuesRule.prototype",
++    "CSSFontFeatureValuesRule.prototype.annotation",
++    "CSSFontFeatureValuesRule.prototype.characterVariant",
++    "CSSFontFeatureValuesRule.prototype.fontFamily",
++    "CSSFontFeatureValuesRule.prototype.ornaments",
++    "CSSFontFeatureValuesRule.prototype.styleset",
++    "CSSFontFeatureValuesRule.prototype.stylistic",
++    "CSSFontFeatureValuesRule.prototype.swash",
+     "CSSFontPaletteValuesRule",
+     "CSSFontPaletteValuesRule.prototype",
+     "CSSFontPaletteValuesRule.prototype.basePalette",
+@@ -1608,6 +1617,8 @@
+     "GPUAdapterInfo.prototype.architecture",
+     "GPUAdapterInfo.prototype.description",
+     "GPUAdapterInfo.prototype.device",
++    "GPUAdapterInfo.prototype.subgroupMaxSize",
++    "GPUAdapterInfo.prototype.subgroupMinSize",
+     "GPUAdapterInfo.prototype.vendor",
+     "GPUBindGroup",
+     "GPUBindGroup.prototype",
+```
+
+  
 #### 134.0.6958.2 (`2025-1-16`) ⚡
 Added 23 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_133.0.6943.6_to_134.0.6958.2.diff), [json](./browser_apis/chrome-unstable_133.0.6943.6_to_134.0.6958.2.json), [full list](./browser_apis/chrome-unstable_134.0.6958.2.json))
  ```diff
@@ -2038,49 +2079,5 @@ Added 18 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6535.
   
 #### 128.0.6535.2 (`2024-6-14`) 
 No browser API changes.
-
-  
-#### 127.0.6523.4 (`2024-6-8`) ⚡
-Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_127.0.6510.4_to_127.0.6523.4.diff), [json](./browser_apis/chrome-unstable_127.0.6510.4_to_127.0.6523.4.json), [full list](./browser_apis/chrome-unstable_127.0.6523.4.json))
- ```diff
---- ./browser_apis/chrome-unstable_127.0.6510.4.json	2024-06-08 00:59:33.514707854 +0000
-+++ ./browser_apis/chrome-unstable_127.0.6523.4.json	2024-06-08 00:59:55.998831146 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8457,
-+  "browserApiCount": 8464,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -906,6 +906,11 @@
-     "ChannelMergerNode.prototype",
-     "ChannelSplitterNode",
-     "ChannelSplitterNode.prototype",
-+    "ChapterInformation",
-+    "ChapterInformation.prototype",
-+    "ChapterInformation.prototype.artwork",
-+    "ChapterInformation.prototype.startTime",
-+    "ChapterInformation.prototype.title",
-     "CharacterBoundsUpdateEvent",
-     "CharacterBoundsUpdateEvent.prototype",
-     "CharacterBoundsUpdateEvent.prototype.rangeEnd",
-@@ -1540,6 +1545,7 @@
-     "GPUAdapter",
-     "GPUAdapter.prototype",
-     "GPUAdapter.prototype.features",
-+    "GPUAdapter.prototype.info",
-     "GPUAdapter.prototype.isFallbackAdapter",
-     "GPUAdapter.prototype.limits",
-     "GPUAdapter.prototype.requestAdapterInfo",
-@@ -3394,6 +3400,7 @@
-     "MediaMetadata.prototype.album",
-     "MediaMetadata.prototype.artist",
-     "MediaMetadata.prototype.artwork",
-+    "MediaMetadata.prototype.chapterInfo",
-     "MediaMetadata.prototype.title",
-     "MediaQueryList",
-     "MediaQueryList.prototype",
-```
 
   <!-- browserapis:end -->
