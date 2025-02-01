@@ -1,0 +1,52 @@
+--- ./browser_apis/chrome-unstable_134.0.6974.3.json	2025-02-01 01:14:00.170095101 +0000
++++ ./browser_apis/chrome-unstable_134.0.6988.2.json	2025-02-01 01:14:35.730521471 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8615,
++  "browserApiCount": 8628,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -2097,7 +2097,9 @@
+     "HTMLDialogElement",
+     "HTMLDialogElement.prototype",
+     "HTMLDialogElement.prototype.close",
++    "HTMLDialogElement.prototype.closedBy",
+     "HTMLDialogElement.prototype.open",
++    "HTMLDialogElement.prototype.requestClose",
+     "HTMLDialogElement.prototype.returnValue",
+     "HTMLDialogElement.prototype.show",
+     "HTMLDialogElement.prototype.showModal",
+@@ -4005,6 +4007,7 @@
+     "OffscreenCanvasRenderingContext2D.prototype.fontKerning",
+     "OffscreenCanvasRenderingContext2D.prototype.fontStretch",
+     "OffscreenCanvasRenderingContext2D.prototype.fontVariantCaps",
++    "OffscreenCanvasRenderingContext2D.prototype.getContextAttributes",
+     "OffscreenCanvasRenderingContext2D.prototype.getImageData",
+     "OffscreenCanvasRenderingContext2D.prototype.getLineDash",
+     "OffscreenCanvasRenderingContext2D.prototype.getTransform",
+@@ -6197,6 +6200,7 @@
+     "SharedStorage",
+     "SharedStorage.prototype",
+     "SharedStorage.prototype.append",
++    "SharedStorage.prototype.batchUpdate",
+     "SharedStorage.prototype.clear",
+     "SharedStorage.prototype.createWorklet",
+     "SharedStorage.prototype.delete",
+@@ -6205,6 +6209,15 @@
+     "SharedStorage.prototype.selectURL",
+     "SharedStorage.prototype.set",
+     "SharedStorage.prototype.worklet",
++    "SharedStorageAppendMethod",
++    "SharedStorageAppendMethod.prototype",
++    "SharedStorageAppendMethod.prototype.constructor",
++    "SharedStorageClearMethod",
++    "SharedStorageClearMethod.prototype",
++    "SharedStorageDeleteMethod",
++    "SharedStorageDeleteMethod.prototype",
++    "SharedStorageSetMethod",
++    "SharedStorageSetMethod.prototype",
+     "SharedStorageWorklet",
+     "SharedStorageWorklet.prototype",
+     "SharedStorageWorklet.prototype.addModule",

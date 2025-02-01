@@ -1,0 +1,25 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "134.0.6974.3",
+    "to": "134.0.6988.2"
+  },
+  "browserApis": {
+    "added": [
+      "HTMLDialogElement.prototype.closedBy",
+      "HTMLDialogElement.prototype.requestClose",
+      "OffscreenCanvasRenderingContext2D.prototype.getContextAttributes",
+      "SharedStorage.prototype.batchUpdate",
+      "SharedStorageAppendMethod",
+      "SharedStorageAppendMethod.prototype",
+      "SharedStorageAppendMethod.prototype.constructor",
+      "SharedStorageClearMethod",
+      "SharedStorageClearMethod.prototype",
+      "SharedStorageDeleteMethod",
+      "SharedStorageDeleteMethod.prototype",
+      "SharedStorageSetMethod",
+      "SharedStorageSetMethod.prototype"
+    ],
+    "removed": []
+  }
+}

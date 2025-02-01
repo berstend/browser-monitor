@@ -947,6 +947,64 @@ Added 57 APIs, removed 6 (see: [diff](./browser_apis/chrome-stable_125.0.6422.14
   
 ### chrome-unstable
   
+#### 134.0.6988.2 (`2025-1-31`) ⚡
+Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_134.0.6974.3_to_134.0.6988.2.diff), [json](./browser_apis/chrome-unstable_134.0.6974.3_to_134.0.6988.2.json), [full list](./browser_apis/chrome-unstable_134.0.6988.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_134.0.6974.3.json	2025-02-01 01:14:00.170095101 +0000
++++ ./browser_apis/chrome-unstable_134.0.6988.2.json	2025-02-01 01:14:35.730521471 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8615,
++  "browserApiCount": 8628,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -2097,7 +2097,9 @@
+     "HTMLDialogElement",
+     "HTMLDialogElement.prototype",
+     "HTMLDialogElement.prototype.close",
++    "HTMLDialogElement.prototype.closedBy",
+     "HTMLDialogElement.prototype.open",
++    "HTMLDialogElement.prototype.requestClose",
+     "HTMLDialogElement.prototype.returnValue",
+     "HTMLDialogElement.prototype.show",
+     "HTMLDialogElement.prototype.showModal",
+@@ -4005,6 +4007,7 @@
+     "OffscreenCanvasRenderingContext2D.prototype.fontKerning",
+     "OffscreenCanvasRenderingContext2D.prototype.fontStretch",
+     "OffscreenCanvasRenderingContext2D.prototype.fontVariantCaps",
++    "OffscreenCanvasRenderingContext2D.prototype.getContextAttributes",
+     "OffscreenCanvasRenderingContext2D.prototype.getImageData",
+     "OffscreenCanvasRenderingContext2D.prototype.getLineDash",
+     "OffscreenCanvasRenderingContext2D.prototype.getTransform",
+@@ -6197,6 +6200,7 @@
+     "SharedStorage",
+     "SharedStorage.prototype",
+     "SharedStorage.prototype.append",
++    "SharedStorage.prototype.batchUpdate",
+     "SharedStorage.prototype.clear",
+     "SharedStorage.prototype.createWorklet",
+     "SharedStorage.prototype.delete",
+@@ -6205,6 +6209,15 @@
+     "SharedStorage.prototype.selectURL",
+     "SharedStorage.prototype.set",
+     "SharedStorage.prototype.worklet",
++    "SharedStorageAppendMethod",
++    "SharedStorageAppendMethod.prototype",
++    "SharedStorageAppendMethod.prototype.constructor",
++    "SharedStorageClearMethod",
++    "SharedStorageClearMethod.prototype",
++    "SharedStorageDeleteMethod",
++    "SharedStorageDeleteMethod.prototype",
++    "SharedStorageSetMethod",
++    "SharedStorageSetMethod.prototype",
+     "SharedStorageWorklet",
+     "SharedStorageWorklet.prototype",
+     "SharedStorageWorklet.prototype.addModule",
+```
+
+  
 #### 134.0.6974.3 (`2025-1-24`) ⚡
 Added 11 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_134.0.6958.2_to_134.0.6974.3.diff), [json](./browser_apis/chrome-unstable_134.0.6958.2_to_134.0.6974.3.json), [full list](./browser_apis/chrome-unstable_134.0.6974.3.json))
  ```diff
@@ -2075,9 +2133,5 @@ Added 18 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6535.
      "XMLDocument.prototype.characterSet",
      "XMLDocument.prototype.charset",
 ```
-
-  
-#### 128.0.6535.2 (`2024-6-14`) 
-No browser API changes.
 
   <!-- browserapis:end -->
