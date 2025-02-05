@@ -1,0 +1,56 @@
+{
+  "browser": "chrome-stable",
+  "version": {
+    "from": "132.0.6834.159",
+    "to": "133.0.6943.53"
+  },
+  "browserApis": {
+    "added": [
+      "Atomics.pause",
+      "CSPViolationReportBody",
+      "CSPViolationReportBody.prototype",
+      "CSPViolationReportBody.prototype.blockedURL",
+      "CSPViolationReportBody.prototype.columnNumber",
+      "CSPViolationReportBody.prototype.disposition",
+      "CSPViolationReportBody.prototype.documentURL",
+      "CSPViolationReportBody.prototype.effectiveDirective",
+      "CSPViolationReportBody.prototype.lineNumber",
+      "CSPViolationReportBody.prototype.originalPolicy",
+      "CSPViolationReportBody.prototype.referrer",
+      "CSPViolationReportBody.prototype.sample",
+      "CSPViolationReportBody.prototype.sourceFile",
+      "CSPViolationReportBody.prototype.statusCode",
+      "CSPViolationReportBody.prototype.toJSON",
+      "CSSTransition.prototype.overallProgress",
+      "FileSystemObserver",
+      "FileSystemObserver.prototype",
+      "FileSystemObserver.prototype.disconnect",
+      "FileSystemObserver.prototype.observe",
+      "HTMLAreaElement.prototype.attributionSrc",
+      "Image.prototype.browsingTopics",
+      "Option.prototype.constructor.prototype.moveBefore",
+      "PerformanceResourceTiming.prototype.finalResponseHeadersStart",
+      "PublicKeyCredential.getClientCapabilities",
+      "ReportBody",
+      "ReportBody.prototype",
+      "ReportBody.prototype.toJSON",
+      "ShadowRoot.prototype.moveBefore",
+      "ViewTimeline.prototype.axis",
+      "ViewTimeline.prototype.constructor",
+      "ViewTimeline.prototype.constructor.prototype",
+      "ViewTimeline.prototype.constructor.prototype.currentTime",
+      "ViewTimeline.prototype.constructor.prototype.duration",
+      "ViewTimeline.prototype.source",
+      "XMLDocument.prototype.moveBefore"
+    ],
+    "removed": [
+      "DocumentTimeline.prototype.constructor",
+      "DocumentTimeline.prototype.currentTime",
+      "DocumentTimeline.prototype.duration",
+      "ScrollTimeline",
+      "ScrollTimeline.prototype",
+      "ScrollTimeline.prototype.axis",
+      "ScrollTimeline.prototype.source"
+    ]
+  }
+}
