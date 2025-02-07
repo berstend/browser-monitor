@@ -913,6 +913,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 135.0.6999.2 (`2025-2-6`) 
+No browser API changes.
+
+  
 #### 134.0.6988.2 (`2025-1-31`) ⚡
 Added 13 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_134.0.6974.3_to_134.0.6988.2.diff), [json](./browser_apis/chrome-unstable_134.0.6974.3_to_134.0.6988.2.json), [full list](./browser_apis/chrome-unstable_134.0.6988.2.json))
  ```diff
@@ -2009,95 +2013,5 @@ Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6559.0
   
 #### 128.0.6559.0 (`2024-6-27`) 
 No browser API changes.
-
-  
-#### 128.0.6555.2 (`2024-6-25`) ⚡
-Added 18 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6535.2_to_128.0.6555.2.diff), [json](./browser_apis/chrome-unstable_128.0.6535.2_to_128.0.6555.2.json), [full list](./browser_apis/chrome-unstable_128.0.6555.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_128.0.6535.2.json	2024-06-26 01:00:35.066576712 +0000
-+++ ./browser_apis/chrome-unstable_128.0.6555.2.json	2024-06-26 01:01:00.718881877 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8464,
-+  "browserApiCount": 8482,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -902,6 +902,11 @@
-     "CaptureController",
-     "CaptureController.prototype",
-     "CaptureController.prototype.setFocusBehavior",
-+    "CaretPosition",
-+    "CaretPosition.prototype",
-+    "CaretPosition.prototype.getClientRect",
-+    "CaretPosition.prototype.offset",
-+    "CaretPosition.prototype.offsetNode",
-     "ChannelMergerNode",
-     "ChannelMergerNode.prototype",
-     "ChannelSplitterNode",
-@@ -3647,14 +3652,21 @@
-     "NavigationTransition.prototype.navigationType",
-     "Navigator",
-     "Navigator.prototype",
-+    "Navigator.prototype.adAuctionComponents",
-     "Navigator.prototype.appCodeName",
-     "Navigator.prototype.appName",
-     "Navigator.prototype.appVersion",
-+    "Navigator.prototype.canLoadAdAuctionFencedFrame",
-     "Navigator.prototype.clearAppBadge",
-+    "Navigator.prototype.clearOriginJoinedAdInterestGroups",
-     "Navigator.prototype.clipboard",
-     "Navigator.prototype.connection",
-     "Navigator.prototype.cookieEnabled",
-+    "Navigator.prototype.createAuctionNonce",
-     "Navigator.prototype.credentials",
-+    "Navigator.prototype.deprecatedReplaceInURN",
-+    "Navigator.prototype.deprecatedRunAdAuctionEnforcesKAnonymity",
-+    "Navigator.prototype.deprecatedURNToURL",
-     "Navigator.prototype.deviceMemory",
-     "Navigator.prototype.doNotTrack",
-     "Navigator.prototype.geolocation",
-@@ -3667,9 +3679,11 @@
-     "Navigator.prototype.hid",
-     "Navigator.prototype.ink",
-     "Navigator.prototype.javaEnabled",
-+    "Navigator.prototype.joinAdInterestGroup",
-     "Navigator.prototype.keyboard",
-     "Navigator.prototype.language",
-     "Navigator.prototype.languages",
-+    "Navigator.prototype.leaveAdInterestGroup",
-     "Navigator.prototype.locks",
-     "Navigator.prototype.login",
-     "Navigator.prototype.managed",
-@@ -3686,9 +3700,11 @@
-     "Navigator.prototype.presentation",
-     "Navigator.prototype.product",
-     "Navigator.prototype.productSub",
-+    "Navigator.prototype.protectedAudience",
-     "Navigator.prototype.registerProtocolHandler",
-     "Navigator.prototype.requestMIDIAccess",
-     "Navigator.prototype.requestMediaKeySystemAccess",
-+    "Navigator.prototype.runAdAuction",
-     "Navigator.prototype.scheduling",
-     "Navigator.prototype.sendBeacon",
-     "Navigator.prototype.serial",
-@@ -3697,6 +3713,7 @@
-     "Navigator.prototype.storage",
-     "Navigator.prototype.storageBuckets",
-     "Navigator.prototype.unregisterProtocolHandler",
-+    "Navigator.prototype.updateAdInterestGroups",
-     "Navigator.prototype.usb",
-     "Navigator.prototype.userActivation",
-     "Navigator.prototype.userAgent",
-@@ -7585,6 +7602,7 @@
-     "XMLDocument.prototype.body",
-     "XMLDocument.prototype.browsingTopics",
-     "XMLDocument.prototype.captureEvents",
-+    "XMLDocument.prototype.caretPositionFromPoint",
-     "XMLDocument.prototype.caretRangeFromPoint",
-     "XMLDocument.prototype.characterSet",
-     "XMLDocument.prototype.charset",
-```
 
   <!-- browserapis:end -->

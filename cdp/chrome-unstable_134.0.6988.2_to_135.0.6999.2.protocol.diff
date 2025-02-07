@@ -1,0 +1,33 @@
+--- ./cdp/chrome-unstable_134.0.6988.2.protocol.json	2025-02-07 01:11:21.445560590 +0000
++++ ./cdp/chrome-unstable_135.0.6999.2.protocol.json	2025-02-07 01:11:44.733535438 +0000
+@@ -2289,6 +2289,17 @@
+           ]
+         },
+         {
++          "name": "uninstall",
++          "description": "Uninstalls an unpacked extension (others not supported) from the profile.\nAvailable if the client is connected using the --remote-debugging-pipe flag\nand the --enable-unsafe-extension-debugging.",
++          "parameters": [
++            {
++              "name": "id",
++              "description": "Extension id.",
++              "type": "string"
++            }
++          ]
++        },
++        {
+           "name": "getStorageItems",
+           "description": "Gets data from extension storage in the given `storageArea`. If `keys` is\nspecified, these are used to filter the result.",
+           "parameters": [
+@@ -4684,6 +4695,12 @@
+               "name": "frameId",
+               "description": "Identifier of the frame where \"via-inspector\" stylesheet should be created.",
+               "$ref": "Page.FrameId"
++            },
++            {
++              "name": "force",
++              "description": "If true, creates a new stylesheet for every call. If false,\nreturns a stylesheet previously created by a call with force=false\nfor the frame's document if it exists or creates a new stylesheet\n(default: false).",
++              "optional": true,
++              "type": "boolean"
+             }
+           ],
+           "returns": [
