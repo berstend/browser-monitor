@@ -1,0 +1,59 @@
+--- ./cdp/chrome-unstable_135.0.6999.2.protocol.json	2025-02-14 01:11:23.940984042 +0000
++++ ./cdp/chrome-unstable_135.0.7012.4.protocol.json	2025-02-14 01:11:44.544787762 +0000
+@@ -1821,7 +1821,8 @@
+             "InvalidFieldsSpecified",
+             "RelyingPartyOriginIsOpaque",
+             "TypeNotMatching",
+-            "UiDismissedNoEmbargo"
++            "UiDismissedNoEmbargo",
++            "CorsError"
+           ]
+         },
+         {
+@@ -17636,6 +17637,19 @@
+           ]
+         },
+         {
++          "id": "SecurityOriginDetails",
++          "description": "Additional information about the frame document's security origin.",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "isLocalhost",
++              "description": "Indicates whether the frame document's security origin is one\nof the local hostnames (e.g. \"localhost\") or IP addresses (IPv4\n127.0.0.0/8 or IPv6 ::1).",
++              "type": "boolean"
++            }
++          ]
++        },
++        {
+           "id": "Frame",
+           "description": "Information about the Frame on the page.",
+           "type": "object",
+@@ -17686,6 +17700,13 @@
+               "type": "string"
+             },
+             {
++              "name": "securityOriginDetails",
++              "description": "Additional details about the frame document's security origin.",
++              "experimental": true,
++              "optional": true,
++              "$ref": "SecurityOriginDetails"
++            },
++            {
+               "name": "mimeType",
+               "description": "Frame document's mimeType as determined by the browser.",
+               "type": "string"
+@@ -23947,6 +23968,12 @@
+               "description": "Binding name, 'cdp' if not specified.",
+               "optional": true,
+               "type": "string"
++            },
++            {
++              "name": "inheritPermissions",
++              "description": "If true, inherits the current root session's permissions (default: false).",
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },

@@ -913,6 +913,30 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 135.0.7012.4 (`2025-2-13`) ⚡
+Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_135.0.6999.2_to_135.0.7012.4.diff), [json](./browser_apis/chrome-unstable_135.0.6999.2_to_135.0.7012.4.json), [full list](./browser_apis/chrome-unstable_135.0.7012.4.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_135.0.6999.2.json	2025-02-14 01:11:23.576987714 +0000
++++ ./browser_apis/chrome-unstable_135.0.7012.4.json	2025-02-14 01:11:44.536787841 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8628,
++  "browserApiCount": 8627,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1829,7 +1829,6 @@
+     "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
+     "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
+     "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
+-    "GPUSupportedLimits.prototype.maxInterStageShaderComponents",
+     "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
+     "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
+     "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
+```
+
+  
 #### 135.0.6999.2 (`2025-2-6`) 
 No browser API changes.
 
@@ -2009,9 +2033,5 @@ Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6559.0
      "PointerEvent.prototype.pointerType",
      "PointerEvent.prototype.pressure",
 ```
-
-  
-#### 128.0.6559.0 (`2024-6-27`) 
-No browser API changes.
 
   <!-- browserapis:end -->

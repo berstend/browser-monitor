@@ -1,0 +1,13 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "135.0.6999.2",
+    "to": "135.0.7012.4"
+  },
+  "browserApis": {
+    "added": [],
+    "removed": [
+      "GPUSupportedLimits.prototype.maxInterStageShaderComponents"
+    ]
+  }
+}

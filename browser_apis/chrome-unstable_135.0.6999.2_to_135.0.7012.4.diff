@@ -1,0 +1,18 @@
+--- ./browser_apis/chrome-unstable_135.0.6999.2.json	2025-02-14 01:11:23.576987714 +0000
++++ ./browser_apis/chrome-unstable_135.0.7012.4.json	2025-02-14 01:11:44.536787841 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8628,
++  "browserApiCount": 8627,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1829,7 +1829,6 @@
+     "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
+     "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
+     "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
+-    "GPUSupportedLimits.prototype.maxInterStageShaderComponents",
+     "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
+     "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
+     "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
