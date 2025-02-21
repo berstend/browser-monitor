@@ -913,6 +913,99 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 135.0.7023.0 (`2025-2-20`) ⚡
+Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7012.4_to_135.0.7023.0.diff), [json](./browser_apis/chrome-unstable_135.0.7012.4_to_135.0.7023.0.json), [full list](./browser_apis/chrome-unstable_135.0.7023.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_135.0.7012.4.json	2025-02-21 01:12:20.853119031 +0000
++++ ./browser_apis/chrome-unstable_135.0.7023.0.json	2025-02-21 01:13:17.617356547 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8627,
++  "browserApiCount": 8644,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1353,6 +1353,7 @@
+     "EditContext.prototype.updateText",
+     "ElementInternals",
+     "ElementInternals.prototype",
++    "ElementInternals.prototype.ariaActiveDescendantElement",
+     "ElementInternals.prototype.ariaAtomic",
+     "ElementInternals.prototype.ariaAutoComplete",
+     "ElementInternals.prototype.ariaBrailleLabel",
+@@ -1363,15 +1364,21 @@
+     "ElementInternals.prototype.ariaColIndex",
+     "ElementInternals.prototype.ariaColIndexText",
+     "ElementInternals.prototype.ariaColSpan",
++    "ElementInternals.prototype.ariaControlsElements",
+     "ElementInternals.prototype.ariaCurrent",
++    "ElementInternals.prototype.ariaDescribedByElements",
+     "ElementInternals.prototype.ariaDescription",
++    "ElementInternals.prototype.ariaDetailsElements",
+     "ElementInternals.prototype.ariaDisabled",
++    "ElementInternals.prototype.ariaErrorMessageElements",
+     "ElementInternals.prototype.ariaExpanded",
++    "ElementInternals.prototype.ariaFlowToElements",
+     "ElementInternals.prototype.ariaHasPopup",
+     "ElementInternals.prototype.ariaHidden",
+     "ElementInternals.prototype.ariaInvalid",
+     "ElementInternals.prototype.ariaKeyShortcuts",
+     "ElementInternals.prototype.ariaLabel",
++    "ElementInternals.prototype.ariaLabelledByElements",
+     "ElementInternals.prototype.ariaLevel",
+     "ElementInternals.prototype.ariaLive",
+     "ElementInternals.prototype.ariaModal",
+@@ -2518,6 +2525,8 @@
+     "HTMLSelectElement.prototype.validity",
+     "HTMLSelectElement.prototype.value",
+     "HTMLSelectElement.prototype.willValidate",
++    "HTMLSelectedContentElement",
++    "HTMLSelectedContentElement.prototype",
+     "HTMLSlotElement",
+     "HTMLSlotElement.prototype",
+     "HTMLSlotElement.prototype.assign",
+@@ -3667,6 +3676,7 @@
+     "NavigateEvent.prototype.navigationType",
+     "NavigateEvent.prototype.scroll",
+     "NavigateEvent.prototype.signal",
++    "NavigateEvent.prototype.sourceElement",
+     "NavigateEvent.prototype.userInitiated",
+     "Navigation",
+     "Navigation.prototype",
+@@ -4060,6 +4070,7 @@
+     "Option.prototype.constructor.prototype.after",
+     "Option.prototype.constructor.prototype.animate",
+     "Option.prototype.constructor.prototype.append",
++    "Option.prototype.constructor.prototype.ariaActiveDescendantElement",
+     "Option.prototype.constructor.prototype.ariaAtomic",
+     "Option.prototype.constructor.prototype.ariaAutoComplete",
+     "Option.prototype.constructor.prototype.ariaBrailleLabel",
+@@ -4070,15 +4081,21 @@
+     "Option.prototype.constructor.prototype.ariaColIndex",
+     "Option.prototype.constructor.prototype.ariaColIndexText",
+     "Option.prototype.constructor.prototype.ariaColSpan",
++    "Option.prototype.constructor.prototype.ariaControlsElements",
+     "Option.prototype.constructor.prototype.ariaCurrent",
++    "Option.prototype.constructor.prototype.ariaDescribedByElements",
+     "Option.prototype.constructor.prototype.ariaDescription",
++    "Option.prototype.constructor.prototype.ariaDetailsElements",
+     "Option.prototype.constructor.prototype.ariaDisabled",
++    "Option.prototype.constructor.prototype.ariaErrorMessageElements",
+     "Option.prototype.constructor.prototype.ariaExpanded",
++    "Option.prototype.constructor.prototype.ariaFlowToElements",
+     "Option.prototype.constructor.prototype.ariaHasPopup",
+     "Option.prototype.constructor.prototype.ariaHidden",
+     "Option.prototype.constructor.prototype.ariaInvalid",
+     "Option.prototype.constructor.prototype.ariaKeyShortcuts",
+     "Option.prototype.constructor.prototype.ariaLabel",
++    "Option.prototype.constructor.prototype.ariaLabelledByElements",
+     "Option.prototype.constructor.prototype.ariaLevel",
+     "Option.prototype.constructor.prototype.ariaLive",
+     "Option.prototype.constructor.prototype.ariaModal",
+```
+
+  
 #### 135.0.7012.4 (`2025-2-13`) ⚡
 Added 0 APIs, removed 1 (see: [diff](./browser_apis/chrome-unstable_135.0.6999.2_to_135.0.7012.4.diff), [json](./browser_apis/chrome-unstable_135.0.6999.2_to_135.0.7012.4.json), [full list](./browser_apis/chrome-unstable_135.0.7012.4.json))
  ```diff
@@ -1976,62 +2069,6 @@ Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6585.0
      "Promise.withResolvers",
      "PromiseRejectionEvent",
      "PromiseRejectionEvent.prototype",
-```
-
-  
-#### 128.0.6585.0 (`2024-7-11`) ⚡
-Added 5 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6559.0_to_128.0.6585.0.diff), [json](./browser_apis/chrome-unstable_128.0.6559.0_to_128.0.6585.0.json), [full list](./browser_apis/chrome-unstable_128.0.6585.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_128.0.6559.0.json	2024-07-12 01:01:33.710870308 +0000
-+++ ./browser_apis/chrome-unstable_128.0.6585.0.json	2024-07-12 01:02:02.286928097 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8482,
-+  "browserApiCount": 8487,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1308,6 +1308,7 @@
-     "ElementInternals.prototype.ariaChecked",
-     "ElementInternals.prototype.ariaColCount",
-     "ElementInternals.prototype.ariaColIndex",
-+    "ElementInternals.prototype.ariaColIndexText",
-     "ElementInternals.prototype.ariaColSpan",
-     "ElementInternals.prototype.ariaCurrent",
-     "ElementInternals.prototype.ariaDescription",
-@@ -1333,6 +1334,7 @@
-     "ElementInternals.prototype.ariaRoleDescription",
-     "ElementInternals.prototype.ariaRowCount",
-     "ElementInternals.prototype.ariaRowIndex",
-+    "ElementInternals.prototype.ariaRowIndexText",
-     "ElementInternals.prototype.ariaRowSpan",
-     "ElementInternals.prototype.ariaSelected",
-     "ElementInternals.prototype.ariaSetSize",
-@@ -3992,6 +3994,7 @@
-     "Option.prototype.constructor.prototype.ariaChecked",
-     "Option.prototype.constructor.prototype.ariaColCount",
-     "Option.prototype.constructor.prototype.ariaColIndex",
-+    "Option.prototype.constructor.prototype.ariaColIndexText",
-     "Option.prototype.constructor.prototype.ariaColSpan",
-     "Option.prototype.constructor.prototype.ariaCurrent",
-     "Option.prototype.constructor.prototype.ariaDescription",
-@@ -4017,6 +4020,7 @@
-     "Option.prototype.constructor.prototype.ariaRoleDescription",
-     "Option.prototype.constructor.prototype.ariaRowCount",
-     "Option.prototype.constructor.prototype.ariaRowIndex",
-+    "Option.prototype.constructor.prototype.ariaRowIndexText",
-     "Option.prototype.constructor.prototype.ariaRowSpan",
-     "Option.prototype.constructor.prototype.ariaSelected",
-     "Option.prototype.constructor.prototype.ariaSetSize",
-@@ -4608,6 +4612,7 @@
-     "PointerEvent.prototype.getPredictedEvents",
-     "PointerEvent.prototype.height",
-     "PointerEvent.prototype.isPrimary",
-+    "PointerEvent.prototype.persistentDeviceId",
-     "PointerEvent.prototype.pointerId",
-     "PointerEvent.prototype.pointerType",
-     "PointerEvent.prototype.pressure",
 ```
 
   <!-- browserapis:end -->

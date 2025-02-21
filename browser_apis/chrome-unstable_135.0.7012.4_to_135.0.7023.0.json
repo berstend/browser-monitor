@@ -1,0 +1,29 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "135.0.7012.4",
+    "to": "135.0.7023.0"
+  },
+  "browserApis": {
+    "added": [
+      "ElementInternals.prototype.ariaActiveDescendantElement",
+      "ElementInternals.prototype.ariaControlsElements",
+      "ElementInternals.prototype.ariaDescribedByElements",
+      "ElementInternals.prototype.ariaDetailsElements",
+      "ElementInternals.prototype.ariaErrorMessageElements",
+      "ElementInternals.prototype.ariaFlowToElements",
+      "ElementInternals.prototype.ariaLabelledByElements",
+      "HTMLSelectedContentElement",
+      "HTMLSelectedContentElement.prototype",
+      "NavigateEvent.prototype.sourceElement",
+      "Option.prototype.constructor.prototype.ariaActiveDescendantElement",
+      "Option.prototype.constructor.prototype.ariaControlsElements",
+      "Option.prototype.constructor.prototype.ariaDescribedByElements",
+      "Option.prototype.constructor.prototype.ariaDetailsElements",
+      "Option.prototype.constructor.prototype.ariaErrorMessageElements",
+      "Option.prototype.constructor.prototype.ariaFlowToElements",
+      "Option.prototype.constructor.prototype.ariaLabelledByElements"
+    ],
+    "removed": []
+  }
+}

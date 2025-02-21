@@ -1,0 +1,157 @@
+--- ./cdp/chrome-unstable_135.0.7012.4.protocol.json	2025-02-21 01:12:21.225120475 +0000
++++ ./cdp/chrome-unstable_135.0.7023.0.protocol.json	2025-02-21 01:13:17.629356594 +0000
+@@ -1335,6 +1335,7 @@
+             "kInlineViolation",
+             "kEvalViolation",
+             "kURLViolation",
++            "kSRIViolation",
+             "kTrustedTypesSinkViolation",
+             "kTrustedTypesPolicyViolation",
+             "kWasmEvalViolation"
+@@ -1560,6 +1561,32 @@
+           ]
+         },
+         {
++          "id": "SRIMessageSignatureError",
++          "type": "string",
++          "enum": [
++            "MissingSignatureHeader",
++            "MissingSignatureInputHeader",
++            "InvalidSignatureHeader",
++            "InvalidSignatureInputHeader",
++            "SignatureHeaderValueIsNotByteSequence",
++            "SignatureHeaderValueIsParameterized",
++            "SignatureHeaderValueIsIncorrectLength",
++            "SignatureInputHeaderMissingLabel",
++            "SignatureInputHeaderValueNotInnerList",
++            "SignatureInputHeaderValueMissingComponents",
++            "SignatureInputHeaderInvalidComponentType",
++            "SignatureInputHeaderInvalidComponentName",
++            "SignatureInputHeaderInvalidHeaderComponentParameter",
++            "SignatureInputHeaderInvalidDerivedComponentParameter",
++            "SignatureInputHeaderKeyIdLength",
++            "SignatureInputHeaderInvalidParameter",
++            "SignatureInputHeaderMissingRequiredParameters",
++            "ValidationFailedSignatureExpired",
++            "ValidationFailedInvalidLength",
++            "ValidationFailedSignatureMismatch"
++          ]
++        },
++        {
+           "id": "AttributionReportingIssueDetails",
+           "description": "Details for issues around \"Attribution Reporting API\" usage.\nExplainer: https://github.com/WICG/attribution-reporting-api",
+           "type": "object",
+@@ -1644,6 +1671,20 @@
+           ]
+         },
+         {
++          "id": "SRIMessageSignatureIssueDetails",
++          "type": "object",
++          "properties": [
++            {
++              "name": "error",
++              "$ref": "SRIMessageSignatureError"
++            },
++            {
++              "name": "request",
++              "$ref": "AffectedRequest"
++            }
++          ]
++        },
++        {
+           "id": "GenericIssueErrorType",
+           "type": "string",
+           "enum": [
+@@ -1888,6 +1929,30 @@
+           ]
+         },
+         {
++          "id": "PartitioningBlobURLInfo",
++          "type": "string",
++          "enum": [
++            "BlockedCrossPartitionFetching",
++            "EnforceNoopenerForNavigation"
++          ]
++        },
++        {
++          "id": "PartitioningBlobURLIssueDetails",
++          "type": "object",
++          "properties": [
++            {
++              "name": "url",
++              "description": "The BlobURL that failed to load.",
++              "type": "string"
++            },
++            {
++              "name": "partitioningBlobURLInfo",
++              "description": "Additional information about the Partitioning Blob URL issue.",
++              "$ref": "PartitioningBlobURLInfo"
++            }
++          ]
++        },
++        {
+           "id": "SelectElementAccessibilityIssueReason",
+           "type": "string",
+           "enum": [
+@@ -1996,6 +2061,7 @@
+             "CorsIssue",
+             "AttributionReportingIssue",
+             "QuirksModeIssue",
++            "PartitioningBlobURLIssue",
+             "NavigatorUserAgentIssue",
+             "GenericIssue",
+             "DeprecationIssue",
+@@ -2007,7 +2073,8 @@
+             "FederatedAuthUserInfoRequestIssue",
+             "PropertyRuleIssue",
+             "SharedDictionaryIssue",
+-            "SelectElementAccessibilityIssue"
++            "SelectElementAccessibilityIssue",
++            "SRIMessageSignatureIssue"
+           ]
+         },
+         {
+@@ -2066,6 +2133,11 @@
+               "$ref": "QuirksModeIssueDetails"
+             },
+             {
++              "name": "partitioningBlobURLIssueDetails",
++              "optional": true,
++              "$ref": "PartitioningBlobURLIssueDetails"
++            },
++            {
+               "name": "navigatorUserAgentIssueDetails",
+               "deprecated": true,
+               "optional": true,
+@@ -2125,6 +2197,11 @@
+               "name": "selectElementAccessibilityIssueDetails",
+               "optional": true,
+               "$ref": "SelectElementAccessibilityIssueDetails"
++            },
++            {
++              "name": "sriMessageSignatureIssueDetails",
++              "optional": true,
++              "$ref": "SRIMessageSignatureIssueDetails"
+             }
+           ]
+         },
+@@ -7128,7 +7205,8 @@
+               "description": "Type of relation to get.",
+               "type": "string",
+               "enum": [
+-                "PopoverTarget"
++                "PopoverTarget",
++                "InterestTarget"
+               ]
+             }
+           ],
+@@ -26673,7 +26751,8 @@
+             "SlowNetwork",
+             "OtherPrerenderedPageActivated",
+             "V8OptimizerDisabled",
+-            "PrerenderFailedDuringPrefetch"
++            "PrerenderFailedDuringPrefetch",
++            "BrowsingDataRemoved"
+           ]
+         },
+         {
