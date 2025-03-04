@@ -913,6 +913,89 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 135.0.7039.0 (`2025-3-3`) ⚡
+Added 9 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_135.0.7023.0_to_135.0.7039.0.diff), [json](./browser_apis/chrome-unstable_135.0.7023.0_to_135.0.7039.0.json), [full list](./browser_apis/chrome-unstable_135.0.7039.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_135.0.7023.0.json	2025-03-04 01:14:39.743035783 +0000
++++ ./browser_apis/chrome-unstable_135.0.7039.0.json	2025-03-04 01:15:11.055015808 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8644,
++  "browserApiCount": 8651,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1190,6 +1190,7 @@
+     "DataView.prototype.byteOffset",
+     "DataView.prototype.getBigInt64",
+     "DataView.prototype.getBigUint64",
++    "DataView.prototype.getFloat16",
+     "DataView.prototype.getFloat32",
+     "DataView.prototype.getFloat64",
+     "DataView.prototype.getInt16",
+@@ -1200,6 +1201,7 @@
+     "DataView.prototype.getUint8",
+     "DataView.prototype.setBigInt64",
+     "DataView.prototype.setBigUint64",
++    "DataView.prototype.setFloat16",
+     "DataView.prototype.setFloat32",
+     "DataView.prototype.setFloat64",
+     "DataView.prototype.setInt16",
+@@ -1488,6 +1490,9 @@
+     "FencedFrameConfig",
+     "FencedFrameConfig.prototype",
+     "FencedFrameConfig.prototype.setSharedStorageContext",
++    "FetchLaterResult",
++    "FetchLaterResult.prototype",
++    "FetchLaterResult.prototype.activated",
+     "File",
+     "File.prototype",
+     "File.prototype.arrayBuffer",
+@@ -1556,6 +1561,8 @@
+     "FinalizationRegistry.prototype",
+     "FinalizationRegistry.prototype.register",
+     "FinalizationRegistry.prototype.unregister",
++    "Float16Array",
++    "Float16Array.prototype",
+     "Float32Array",
+     "Float32Array.prototype",
+     "Float64Array",
+@@ -3293,6 +3300,7 @@
+     "Math.cosh",
+     "Math.exp",
+     "Math.expm1",
++    "Math.f16round",
+     "Math.floor",
+     "Math.fround",
+     "Math.hypot",
+@@ -3665,7 +3673,6 @@
+     "NavigateEvent",
+     "NavigateEvent.prototype",
+     "NavigateEvent.prototype.canIntercept",
+-    "NavigateEvent.prototype.canTransition",
+     "NavigateEvent.prototype.destination",
+     "NavigateEvent.prototype.downloadRequest",
+     "NavigateEvent.prototype.formData",
+@@ -8194,7 +8201,6 @@
+     "XRSystem.prototype.isSessionSupported",
+     "XRSystem.prototype.ondevicechange",
+     "XRSystem.prototype.requestSession",
+-    "XRSystem.prototype.supportsSession",
+     "XRTransientInputHitTestResult",
+     "XRTransientInputHitTestResult.prototype",
+     "XRTransientInputHitTestResult.prototype.inputSource",
+@@ -8318,6 +8324,7 @@
+     "external",
+     "fence",
+     "fetch",
++    "fetchLater",
+     "find",
+     "focus",
+     "frameElement",
+```
+
+  
 #### 135.0.7023.0 (`2025-2-20`) ⚡
 Added 17 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7012.4_to_135.0.7023.0.diff), [json](./browser_apis/chrome-unstable_135.0.7012.4_to_135.0.7023.0.json), [full list](./browser_apis/chrome-unstable_135.0.7023.0.json))
  ```diff
@@ -2029,46 +2112,6 @@ Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6601.2
      "AudioContext.prototype.onsinkchange",
      "AudioContext.prototype.outputLatency",
      "AudioContext.prototype.resume",
-```
-
-  
-#### 128.0.6601.2 (`2024-7-18`) ⚡
-Added 3 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6585.0_to_128.0.6601.2.diff), [json](./browser_apis/chrome-unstable_128.0.6585.0_to_128.0.6601.2.json), [full list](./browser_apis/chrome-unstable_128.0.6601.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_128.0.6585.0.json	2024-07-19 03:20:44.930557253 +0000
-+++ ./browser_apis/chrome-unstable_128.0.6601.2.json	2024-07-19 03:21:13.994689931 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8487,
-+  "browserApiCount": 8490,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2980,6 +2980,7 @@
-     "Intl.Locale.prototype.caseFirst",
-     "Intl.Locale.prototype.collation",
-     "Intl.Locale.prototype.collations",
-+    "Intl.Locale.prototype.firstDayOfWeek",
-     "Intl.Locale.prototype.hourCycle",
-     "Intl.Locale.prototype.hourCycles",
-     "Intl.Locale.prototype.language",
-@@ -4086,6 +4087,7 @@
-     "Option.prototype.constructor.prototype.constructor.prototype.replaceChild",
-     "Option.prototype.constructor.prototype.constructor.prototype.textContent",
-     "Option.prototype.constructor.prototype.contentEditable",
-+    "Option.prototype.constructor.prototype.currentCSSZoom",
-     "Option.prototype.constructor.prototype.dataset",
-     "Option.prototype.constructor.prototype.dir",
-     "Option.prototype.constructor.prototype.draggable",
-@@ -4704,6 +4706,7 @@
-     "Promise.race",
-     "Promise.reject",
-     "Promise.resolve",
-+    "Promise.try",
-     "Promise.withResolvers",
-     "PromiseRejectionEvent",
-     "PromiseRejectionEvent.prototype",
 ```
 
   <!-- browserapis:end -->
