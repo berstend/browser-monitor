@@ -1039,6 +1039,103 @@ Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_126.0.6478.18
   
 ### chrome-unstable
   
+#### 136.0.7052.2 (`2025-3-7`) ⚡
+Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7039.0_to_136.0.7052.2.diff), [json](./browser_apis/chrome-unstable_135.0.7039.0_to_136.0.7052.2.json), [full list](./browser_apis/chrome-unstable_136.0.7052.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_135.0.7039.0.json	2025-03-08 00:59:45.926877903 +0000
++++ ./browser_apis/chrome-unstable_136.0.7052.2.json	2025-03-08 01:00:31.158651317 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8651,
++  "browserApiCount": 8665,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -991,6 +991,10 @@
+     "CloseWatcher.prototype.oncancel",
+     "CloseWatcher.prototype.onclose",
+     "CloseWatcher.prototype.requestClose",
++    "CommandEvent",
++    "CommandEvent.prototype",
++    "CommandEvent.prototype.command",
++    "CommandEvent.prototype.source",
+     "Comment",
+     "Comment.prototype",
+     "CompositionEvent",
+@@ -2067,6 +2071,8 @@
+     "HTMLButtonElement",
+     "HTMLButtonElement.prototype",
+     "HTMLButtonElement.prototype.checkValidity",
++    "HTMLButtonElement.prototype.command",
++    "HTMLButtonElement.prototype.commandForElement",
+     "HTMLButtonElement.prototype.disabled",
+     "HTMLButtonElement.prototype.form",
+     "HTMLButtonElement.prototype.formAction",
+@@ -3345,6 +3351,7 @@
+     "MathMLElement.prototype.onchange",
+     "MathMLElement.prototype.onclick",
+     "MathMLElement.prototype.onclose",
++    "MathMLElement.prototype.oncommand",
+     "MathMLElement.prototype.oncontentvisibilityautostatechange",
+     "MathMLElement.prototype.oncontextlost",
+     "MathMLElement.prototype.oncontextmenu",
+@@ -4252,6 +4259,7 @@
+     "Option.prototype.constructor.prototype.onchange",
+     "Option.prototype.constructor.prototype.onclick",
+     "Option.prototype.constructor.prototype.onclose",
++    "Option.prototype.constructor.prototype.oncommand",
+     "Option.prototype.constructor.prototype.oncontentvisibilityautostatechange",
+     "Option.prototype.constructor.prototype.oncontextlost",
+     "Option.prototype.constructor.prototype.oncontextmenu",
+@@ -5138,6 +5146,7 @@
+     "RegExp.$9",
+     "RegExp.$_",
+     "RegExp.# WIP
+
+## Browser APIs
+
+",
++    "RegExp.escape",
+     "RegExp.input",
+     "RegExp.lastMatch",
+     "RegExp.lastParen",
+@@ -5247,6 +5256,8 @@
+     "SVGAElement",
+     "SVGAElement.prototype",
+     "SVGAElement.prototype.href",
++    "SVGAElement.prototype.rel",
++    "SVGAElement.prototype.relList",
+     "SVGAElement.prototype.target",
+     "SVGAngle",
+     "SVGAngle.prototype",
+@@ -5931,6 +5942,7 @@
+     "SVGViewElement.prototype.onchange",
+     "SVGViewElement.prototype.onclick",
+     "SVGViewElement.prototype.onclose",
++    "SVGViewElement.prototype.oncommand",
+     "SVGViewElement.prototype.oncontentvisibilityautostatechange",
+     "SVGViewElement.prototype.oncontextlost",
+     "SVGViewElement.prototype.oncontextmenu",
+@@ -7843,6 +7855,7 @@
+     "XMLDocument.prototype.onchange",
+     "XMLDocument.prototype.onclick",
+     "XMLDocument.prototype.onclose",
++    "XMLDocument.prototype.oncommand",
+     "XMLDocument.prototype.oncontentvisibilityautostatechange",
+     "XMLDocument.prototype.oncontextlost",
+     "XMLDocument.prototype.oncontextmenu",
+@@ -8373,6 +8386,7 @@
+     "onchange",
+     "onclick",
+     "onclose",
++    "oncommand",
+     "oncontentvisibilityautostatechange",
+     "oncontextlost",
+     "oncontextmenu",
+```
+
+  
 #### 135.0.7039.0 (`2025-3-3`) ⚡
 Added 9 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_135.0.7023.0_to_135.0.7039.0.diff), [json](./browser_apis/chrome-unstable_135.0.7023.0_to_135.0.7039.0.json), [full list](./browser_apis/chrome-unstable_135.0.7039.0.json))
  ```diff
@@ -2215,29 +2312,5 @@ No browser API changes.
   
 #### 129.0.6614.3 (`2024-7-26`) 
 No browser API changes.
-
-  
-#### 128.0.6613.7 (`2024-7-24`) ⚡
-Added 1 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_128.0.6601.2_to_128.0.6613.7.diff), [json](./browser_apis/chrome-unstable_128.0.6601.2_to_128.0.6613.7.json), [full list](./browser_apis/chrome-unstable_128.0.6613.7.json))
- ```diff
---- ./browser_apis/chrome-unstable_128.0.6601.2.json	2024-07-25 01:02:47.278635965 +0000
-+++ ./browser_apis/chrome-unstable_128.0.6613.7.json	2024-07-25 01:03:33.719104944 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8490,
-+  "browserApiCount": 8491,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -194,6 +194,7 @@
-     "AudioContext.prototype.createMediaStreamDestination",
-     "AudioContext.prototype.createMediaStreamSource",
-     "AudioContext.prototype.getOutputTimestamp",
-+    "AudioContext.prototype.onerror",
-     "AudioContext.prototype.onsinkchange",
-     "AudioContext.prototype.outputLatency",
-     "AudioContext.prototype.resume",
-```
 
   <!-- browserapis:end -->

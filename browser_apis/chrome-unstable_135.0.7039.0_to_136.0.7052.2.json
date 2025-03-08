@@ -1,0 +1,26 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "135.0.7039.0",
+    "to": "136.0.7052.2"
+  },
+  "browserApis": {
+    "added": [
+      "CommandEvent",
+      "CommandEvent.prototype",
+      "CommandEvent.prototype.command",
+      "CommandEvent.prototype.source",
+      "HTMLButtonElement.prototype.command",
+      "HTMLButtonElement.prototype.commandForElement",
+      "MathMLElement.prototype.oncommand",
+      "Option.prototype.constructor.prototype.oncommand",
+      "RegExp.escape",
+      "SVGAElement.prototype.rel",
+      "SVGAElement.prototype.relList",
+      "SVGViewElement.prototype.oncommand",
+      "XMLDocument.prototype.oncommand",
+      "oncommand"
+    ],
+    "removed": []
+  }
+}
