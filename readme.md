@@ -5,6 +5,61 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 134.0.6998.88 (`2025-3-10`) ⚡
+Added 0 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_134.0.6998.35_to_134.0.6998.88.diff), [json](./browser_apis/chrome-stable_134.0.6998.35_to_134.0.6998.88.json), [full list](./browser_apis/chrome-stable_134.0.6998.88.json))
+ ```diff
+--- ./browser_apis/chrome-stable_134.0.6998.35.json	2025-03-11 01:15:15.171036857 +0000
++++ ./browser_apis/chrome-stable_134.0.6998.88.json	2025-03-11 01:15:47.363282852 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-stable",
+-  "browserApiCount": 8628,
++  "browserApiCount": 8610,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -101,14 +101,6 @@
+     "ArrayBuffer.prototype.slice",
+     "ArrayBuffer.prototype.transfer",
+     "ArrayBuffer.prototype.transferToFixedLength",
+-    "AsyncDisposableStack",
+-    "AsyncDisposableStack.prototype",
+-    "AsyncDisposableStack.prototype.adopt",
+-    "AsyncDisposableStack.prototype.defer",
+-    "AsyncDisposableStack.prototype.disposeAsync",
+-    "AsyncDisposableStack.prototype.disposed",
+-    "AsyncDisposableStack.prototype.move",
+-    "AsyncDisposableStack.prototype.use",
+     "Atomics",
+     "Atomics.add",
+     "Atomics.and",
+@@ -1295,14 +1287,6 @@
+     "DevicePosture.prototype",
+     "DevicePosture.prototype.onchange",
+     "DevicePosture.prototype.type",
+-    "DisposableStack",
+-    "DisposableStack.prototype",
+-    "DisposableStack.prototype.adopt",
+-    "DisposableStack.prototype.defer",
+-    "DisposableStack.prototype.dispose",
+-    "DisposableStack.prototype.disposed",
+-    "DisposableStack.prototype.move",
+-    "DisposableStack.prototype.use",
+     "DocumentPictureInPicture",
+     "DocumentPictureInPicture.prototype",
+     "DocumentPictureInPicture.prototype.onenter",
+@@ -6443,8 +6427,6 @@
+     "SubtleCrypto.prototype.unwrapKey",
+     "SubtleCrypto.prototype.verify",
+     "SubtleCrypto.prototype.wrapKey",
+-    "SuppressedError",
+-    "SuppressedError.prototype",
+     "Symbol",
+     "Symbol.for",
+     "Symbol.keyFor",
+```
+
+  
 #### 134.0.6998.35 (`2025-3-4`) ⚡
 Added 43 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_133.0.6943.141_to_134.0.6998.35.diff), [json](./browser_apis/chrome-stable_133.0.6943.141_to_134.0.6998.35.json), [full list](./browser_apis/chrome-stable_134.0.6998.35.json))
  ```diff
@@ -981,60 +1036,6 @@ No browser API changes.
   
 #### 127.0.6533.88 (`2024-7-30`) 
 No browser API changes.
-
-  
-#### 127.0.6533.72 (`2024-7-23`) ⚡
-Added 10 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_126.0.6478.182_to_127.0.6533.72.diff), [json](./browser_apis/chrome-stable_126.0.6478.182_to_127.0.6533.72.json), [full list](./browser_apis/chrome-stable_127.0.6533.72.json))
- ```diff
---- ./browser_apis/chrome-stable_126.0.6478.182.json	2024-07-24 01:03:27.735632014 +0000
-+++ ./browser_apis/chrome-stable_127.0.6533.72.json	2024-07-24 01:03:59.299346896 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-stable",
--  "browserApiCount": 8454,
-+  "browserApiCount": 8464,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -906,6 +906,11 @@
-     "ChannelMergerNode.prototype",
-     "ChannelSplitterNode",
-     "ChannelSplitterNode.prototype",
-+    "ChapterInformation",
-+    "ChapterInformation.prototype",
-+    "ChapterInformation.prototype.artwork",
-+    "ChapterInformation.prototype.startTime",
-+    "ChapterInformation.prototype.title",
-     "CharacterBoundsUpdateEvent",
-     "CharacterBoundsUpdateEvent.prototype",
-     "CharacterBoundsUpdateEvent.prototype.rangeEnd",
-@@ -1540,6 +1545,7 @@
-     "GPUAdapter",
-     "GPUAdapter.prototype",
-     "GPUAdapter.prototype.features",
-+    "GPUAdapter.prototype.info",
-     "GPUAdapter.prototype.isFallbackAdapter",
-     "GPUAdapter.prototype.limits",
-     "GPUAdapter.prototype.requestAdapterInfo",
-@@ -3394,6 +3400,7 @@
-     "MediaMetadata.prototype.album",
-     "MediaMetadata.prototype.artist",
-     "MediaMetadata.prototype.artwork",
-+    "MediaMetadata.prototype.chapterInfo",
-     "MediaMetadata.prototype.title",
-     "MediaQueryList",
-     "MediaQueryList.prototype",
-@@ -4680,6 +4687,9 @@
-     "PromiseRejectionEvent.prototype",
-     "PromiseRejectionEvent.prototype.promise",
-     "PromiseRejectionEvent.prototype.reason",
-+    "ProtectedAudience",
-+    "ProtectedAudience.prototype",
-+    "ProtectedAudience.prototype.queryFeatureSupport",
-     "Proxy",
-     "Proxy.revocable",
-     "PublicKeyCredential",
-```
 
   
 ### chrome-unstable
