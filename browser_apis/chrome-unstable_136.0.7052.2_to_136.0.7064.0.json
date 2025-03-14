@@ -1,0 +1,43 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "136.0.7052.2",
+    "to": "136.0.7064.0"
+  },
+  "browserApis": {
+    "added": [
+      "Observable",
+      "Observable.from",
+      "Observable.prototype",
+      "Observable.prototype.catch",
+      "Observable.prototype.drop",
+      "Observable.prototype.every",
+      "Observable.prototype.filter",
+      "Observable.prototype.finally",
+      "Observable.prototype.find",
+      "Observable.prototype.first",
+      "Observable.prototype.flatMap",
+      "Observable.prototype.forEach",
+      "Observable.prototype.inspect",
+      "Observable.prototype.last",
+      "Observable.prototype.map",
+      "Observable.prototype.reduce",
+      "Observable.prototype.some",
+      "Observable.prototype.subscribe",
+      "Observable.prototype.switchMap",
+      "Observable.prototype.take",
+      "Observable.prototype.takeUntil",
+      "Observable.prototype.toArray",
+      "Option.prototype.constructor.prototype.constructor.prototype.when",
+      "Subscriber",
+      "Subscriber.prototype",
+      "Subscriber.prototype.active",
+      "Subscriber.prototype.addTeardown",
+      "Subscriber.prototype.complete",
+      "Subscriber.prototype.error",
+      "Subscriber.prototype.next",
+      "Subscriber.prototype.signal"
+    ],
+    "removed": []
+  }
+}

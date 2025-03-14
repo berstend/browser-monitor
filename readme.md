@@ -1040,6 +1040,74 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 136.0.7064.0 (`2025-3-13`) ⚡
+Added 31 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7052.2_to_136.0.7064.0.diff), [json](./browser_apis/chrome-unstable_136.0.7052.2_to_136.0.7064.0.json), [full list](./browser_apis/chrome-unstable_136.0.7064.0.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_136.0.7052.2.json	2025-03-14 01:14:27.583868947 +0000
++++ ./browser_apis/chrome-unstable_136.0.7064.0.json	2025-03-14 01:15:03.339882326 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8665,
++  "browserApiCount": 8696,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -3957,6 +3957,28 @@
+     "Object.seal",
+     "Object.setPrototypeOf",
+     "Object.values",
++    "Observable",
++    "Observable.from",
++    "Observable.prototype",
++    "Observable.prototype.catch",
++    "Observable.prototype.drop",
++    "Observable.prototype.every",
++    "Observable.prototype.filter",
++    "Observable.prototype.finally",
++    "Observable.prototype.find",
++    "Observable.prototype.first",
++    "Observable.prototype.flatMap",
++    "Observable.prototype.forEach",
++    "Observable.prototype.inspect",
++    "Observable.prototype.last",
++    "Observable.prototype.map",
++    "Observable.prototype.reduce",
++    "Observable.prototype.some",
++    "Observable.prototype.subscribe",
++    "Observable.prototype.switchMap",
++    "Observable.prototype.take",
++    "Observable.prototype.takeUntil",
++    "Observable.prototype.toArray",
+     "OfflineAudioCompletionEvent",
+     "OfflineAudioCompletionEvent.prototype",
+     "OfflineAudioCompletionEvent.prototype.renderedBuffer",
+@@ -4190,6 +4212,7 @@
+     "Option.prototype.constructor.prototype.constructor.prototype.removeEventListener",
+     "Option.prototype.constructor.prototype.constructor.prototype.replaceChild",
+     "Option.prototype.constructor.prototype.constructor.prototype.textContent",
++    "Option.prototype.constructor.prototype.constructor.prototype.when",
+     "Option.prototype.constructor.prototype.contentEditable",
+     "Option.prototype.constructor.prototype.currentCSSZoom",
+     "Option.prototype.constructor.prototype.dataset",
+@@ -6464,6 +6487,14 @@
+     "SubmitEvent",
+     "SubmitEvent.prototype",
+     "SubmitEvent.prototype.submitter",
++    "Subscriber",
++    "Subscriber.prototype",
++    "Subscriber.prototype.active",
++    "Subscriber.prototype.addTeardown",
++    "Subscriber.prototype.complete",
++    "Subscriber.prototype.error",
++    "Subscriber.prototype.next",
++    "Subscriber.prototype.signal",
+     "SubtleCrypto",
+     "SubtleCrypto.prototype",
+     "SubtleCrypto.prototype.decrypt",
+```
+
+  
 #### 136.0.7052.2 (`2025-3-7`) ⚡
 Added 14 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_135.0.7039.0_to_136.0.7052.2.diff), [json](./browser_apis/chrome-unstable_135.0.7039.0_to_136.0.7052.2.json), [full list](./browser_apis/chrome-unstable_136.0.7052.2.json))
  ```diff
@@ -2308,10 +2376,6 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_129.0.6628.3
 
   
 #### 129.0.6628.3 (`2024-8-1`) 
-No browser API changes.
-
-  
-#### 129.0.6614.3 (`2024-7-26`) 
 No browser API changes.
 
   <!-- browserapis:end -->

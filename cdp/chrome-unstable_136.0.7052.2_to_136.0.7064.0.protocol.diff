@@ -1,0 +1,209 @@
+--- ./cdp/chrome-unstable_136.0.7052.2.protocol.json	2025-03-14 01:14:27.963869032 +0000
++++ ./cdp/chrome-unstable_136.0.7064.0.protocol.json	2025-03-14 01:15:03.351882334 +0000
+@@ -14437,6 +14437,50 @@
+           ]
+         },
+         {
++          "id": "DirectSocketDnsQueryType",
++          "experimental": true,
++          "type": "string",
++          "enum": [
++            "ipv4",
++            "ipv6"
++          ]
++        },
++        {
++          "id": "DirectTCPSocketOptions",
++          "experimental": true,
++          "type": "object",
++          "properties": [
++            {
++              "name": "noDelay",
++              "description": "TCP_NODELAY option",
++              "type": "boolean"
++            },
++            {
++              "name": "keepAliveDelay",
++              "description": "Expected to be unsigned integer.",
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "sendBufferSize",
++              "description": "Expected to be unsigned integer.",
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "receiveBufferSize",
++              "description": "Expected to be unsigned integer.",
++              "optional": true,
++              "type": "number"
++            },
++            {
++              "name": "dnsQueryType",
++              "optional": true,
++              "$ref": "DirectSocketDnsQueryType"
++            }
++          ]
++        },
++        {
+           "id": "PrivateNetworkRequestPolicy",
+           "experimental": true,
+           "type": "string",
+@@ -16091,6 +16135,108 @@
+           ]
+         },
+         {
++          "name": "directTCPSocketCreated",
++          "description": "Fired upon direct_socket.TCPSocket creation.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "identifier",
++              "$ref": "RequestId"
++            },
++            {
++              "name": "remoteAddr",
++              "type": "string"
++            },
++            {
++              "name": "remotePort",
++              "description": "Unsigned int 16.",
++              "type": "integer"
++            },
++            {
++              "name": "options",
++              "$ref": "DirectTCPSocketOptions"
++            },
++            {
++              "name": "timestamp",
++              "$ref": "MonotonicTime"
++            },
++            {
++              "name": "initiator",
++              "optional": true,
++              "$ref": "Initiator"
++            }
++          ]
++        },
++        {
++          "name": "directTCPSocketOpened",
++          "description": "Fired when direct_socket.TCPSocket connection is opened.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "identifier",
++              "$ref": "RequestId"
++            },
++            {
++              "name": "remoteAddr",
++              "type": "string"
++            },
++            {
++              "name": "remotePort",
++              "description": "Expected to be unsigned integer.",
++              "type": "integer"
++            },
++            {
++              "name": "timestamp",
++              "$ref": "MonotonicTime"
++            },
++            {
++              "name": "localAddr",
++              "optional": true,
++              "type": "string"
++            },
++            {
++              "name": "localPort",
++              "description": "Expected to be unsigned integer.",
++              "optional": true,
++              "type": "integer"
++            }
++          ]
++        },
++        {
++          "name": "directTCPSocketAborted",
++          "description": "Fired when direct_socket.TCPSocket is aborted.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "identifier",
++              "$ref": "RequestId"
++            },
++            {
++              "name": "errorMessage",
++              "type": "string"
++            },
++            {
++              "name": "timestamp",
++              "$ref": "MonotonicTime"
++            }
++          ]
++        },
++        {
++          "name": "directTCPSocketClosed",
++          "description": "Fired when direct_socket.TCPSocket is closed.",
++          "experimental": true,
++          "parameters": [
++            {
++              "name": "identifier",
++              "$ref": "RequestId"
++            },
++            {
++              "name": "timestamp",
++              "$ref": "MonotonicTime"
++            }
++          ]
++        },
++        {
+           "name": "requestWillBeSentExtraInfo",
+           "description": "Fired when additional information about a requestWillBeSent event is available from the\nnetwork stack. Not every requestWillBeSent event will have an additional\nrequestWillBeSentExtraInfo fired for it, and there is no guarantee whether requestWillBeSent\nor requestWillBeSentExtraInfo will be fired first for the same request.",
+           "experimental": true,
+@@ -20426,6 +20572,13 @@
+             {
+               "name": "enabled",
+               "type": "boolean"
++            },
++            {
++              "name": "cancel",
++              "description": "If true, cancels the dialog by emitting relevant events (if any)\nin addition to not showing it if the interception is enabled\n(default: false).",
++              "experimental": true,
++              "optional": true,
++              "type": "boolean"
+             }
+           ]
+         },
+@@ -26995,6 +27148,9 @@
+             "PrefetchNotEligibleSchemeIsNotHttps",
+             "PrefetchNotEligibleUserHasCookies",
+             "PrefetchNotEligibleUserHasServiceWorker",
++            "PrefetchNotEligibleUserHasServiceWorkerNoFetchHandler",
++            "PrefetchNotEligibleRedirectFromServiceWorker",
++            "PrefetchNotEligibleRedirectToServiceWorker",
+             "PrefetchNotEligibleBatterySaverEnabled",
+             "PrefetchNotEligiblePreloadingDisabled",
+             "PrefetchNotFinishedInTime",
+@@ -27676,6 +27832,22 @@
+           "parameters": [
+             {
+               "name": "state",
++              "description": "State of the simulated central.",
++              "$ref": "CentralState"
++            },
++            {
++              "name": "leSupported",
++              "description": "If the simulated central supports low-energy.",
++              "type": "boolean"
++            }
++          ]
++        },
++        {
++          "name": "setSimulatedCentralState",
++          "description": "Set the state of the simulated central.",
++          "parameters": [
++            {
++              "name": "state",
+               "description": "State of the simulated central.",
+               "$ref": "CentralState"
+             }
