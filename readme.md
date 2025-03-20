@@ -5,6 +5,10 @@
 <!-- browserapis:start -->
 ### chrome-stable
   
+#### 134.0.6998.117 (`2025-3-19`) 
+No browser API changes.
+
+  
 #### 134.0.6998.88 (`2025-3-10`) ⚡
 Added 0 APIs, removed 18 (see: [diff](./browser_apis/chrome-stable_134.0.6998.35_to_134.0.6998.88.diff), [json](./browser_apis/chrome-stable_134.0.6998.35_to_134.0.6998.88.json), [full list](./browser_apis/chrome-stable_134.0.6998.88.json))
  ```diff
@@ -1031,10 +1035,6 @@ No browser API changes.
 
   
 #### 127.0.6533.99 (`2024-8-6`) 
-No browser API changes.
-
-  
-#### 127.0.6533.88 (`2024-7-30`) 
 No browser API changes.
 
   
