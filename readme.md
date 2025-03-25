@@ -1040,6 +1040,38 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 136.0.7081.2 (`2025-3-24`) ⚡
+Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7064.0_to_136.0.7081.2.diff), [json](./browser_apis/chrome-unstable_136.0.7064.0_to_136.0.7081.2.json), [full list](./browser_apis/chrome-unstable_136.0.7081.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_136.0.7064.0.json	2025-03-25 01:17:09.861916929 +0000
++++ ./browser_apis/chrome-unstable_136.0.7081.2.json	2025-03-25 01:17:52.694034645 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8696,
++  "browserApiCount": 8698,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -909,6 +909,7 @@
+     "CanvasRenderingContext2D.prototype.isContextLost",
+     "CanvasRenderingContext2D.prototype.isPointInPath",
+     "CanvasRenderingContext2D.prototype.isPointInStroke",
++    "CanvasRenderingContext2D.prototype.lang",
+     "CanvasRenderingContext2D.prototype.letterSpacing",
+     "CanvasRenderingContext2D.prototype.lineCap",
+     "CanvasRenderingContext2D.prototype.lineDashOffset",
+@@ -4063,6 +4064,7 @@
+     "OffscreenCanvasRenderingContext2D.prototype.isContextLost",
+     "OffscreenCanvasRenderingContext2D.prototype.isPointInPath",
+     "OffscreenCanvasRenderingContext2D.prototype.isPointInStroke",
++    "OffscreenCanvasRenderingContext2D.prototype.lang",
+     "OffscreenCanvasRenderingContext2D.prototype.letterSpacing",
+     "OffscreenCanvasRenderingContext2D.prototype.lineCap",
+     "OffscreenCanvasRenderingContext2D.prototype.lineDashOffset",
+```
+
+  
 #### 136.0.7064.0 (`2025-3-13`) ⚡
 Added 31 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7052.2_to_136.0.7064.0.diff), [json](./browser_apis/chrome-unstable_136.0.7052.2_to_136.0.7064.0.json), [full list](./browser_apis/chrome-unstable_136.0.7064.0.json))
  ```diff
@@ -2373,9 +2405,5 @@ Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_129.0.6628.3
      "CSSPositionTryDescriptors.prototype.top",
      "CSSPositionTryDescriptors.prototype.width",
 ```
-
-  
-#### 129.0.6628.3 (`2024-8-1`) 
-No browser API changes.
 
   <!-- browserapis:end -->

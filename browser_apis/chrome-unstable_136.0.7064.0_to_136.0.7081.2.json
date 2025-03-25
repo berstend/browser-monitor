@@ -1,0 +1,14 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "136.0.7064.0",
+    "to": "136.0.7081.2"
+  },
+  "browserApis": {
+    "added": [
+      "CanvasRenderingContext2D.prototype.lang",
+      "OffscreenCanvasRenderingContext2D.prototype.lang"
+    ],
+    "removed": []
+  }
+}
