@@ -1,0 +1,19 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "136.0.7081.2",
+    "to": "136.0.7091.2"
+  },
+  "browserApis": {
+    "added": [
+      "CaptureController.prototype.decreaseZoomLevel",
+      "CaptureController.prototype.forwardWheel",
+      "CaptureController.prototype.getSupportedZoomLevels",
+      "CaptureController.prototype.increaseZoomLevel",
+      "CaptureController.prototype.onzoomlevelchange",
+      "CaptureController.prototype.resetZoomLevel",
+      "CaptureController.prototype.zoomLevel"
+    ],
+    "removed": []
+  }
+}

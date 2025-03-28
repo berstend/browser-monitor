@@ -1,0 +1,25 @@
+--- ./browser_apis/chrome-unstable_136.0.7081.2.json	2025-03-28 01:16:20.138958274 +0000
++++ ./browser_apis/chrome-unstable_136.0.7091.2.json	2025-03-28 01:16:54.907836426 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8698,
++  "browserApiCount": 8705,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -947,7 +947,14 @@
+     "CanvasRenderingContext2D.prototype.wordSpacing",
+     "CaptureController",
+     "CaptureController.prototype",
++    "CaptureController.prototype.decreaseZoomLevel",
++    "CaptureController.prototype.forwardWheel",
++    "CaptureController.prototype.getSupportedZoomLevels",
++    "CaptureController.prototype.increaseZoomLevel",
++    "CaptureController.prototype.onzoomlevelchange",
++    "CaptureController.prototype.resetZoomLevel",
+     "CaptureController.prototype.setFocusBehavior",
++    "CaptureController.prototype.zoomLevel",
+     "CaretPosition",
+     "CaretPosition.prototype",
+     "CaretPosition.prototype.getClientRect",

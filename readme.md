@@ -1040,6 +1040,37 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 136.0.7091.2 (`2025-3-27`) ⚡
+Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7081.2_to_136.0.7091.2.diff), [json](./browser_apis/chrome-unstable_136.0.7081.2_to_136.0.7091.2.json), [full list](./browser_apis/chrome-unstable_136.0.7091.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_136.0.7081.2.json	2025-03-28 01:16:20.138958274 +0000
++++ ./browser_apis/chrome-unstable_136.0.7091.2.json	2025-03-28 01:16:54.907836426 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8698,
++  "browserApiCount": 8705,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -947,7 +947,14 @@
+     "CanvasRenderingContext2D.prototype.wordSpacing",
+     "CaptureController",
+     "CaptureController.prototype",
++    "CaptureController.prototype.decreaseZoomLevel",
++    "CaptureController.prototype.forwardWheel",
++    "CaptureController.prototype.getSupportedZoomLevels",
++    "CaptureController.prototype.increaseZoomLevel",
++    "CaptureController.prototype.onzoomlevelchange",
++    "CaptureController.prototype.resetZoomLevel",
+     "CaptureController.prototype.setFocusBehavior",
++    "CaptureController.prototype.zoomLevel",
+     "CaretPosition",
+     "CaretPosition.prototype",
+     "CaretPosition.prototype.getClientRect",
+```
+
+  
 #### 136.0.7081.2 (`2025-3-24`) ⚡
 Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7064.0_to_136.0.7081.2.diff), [json](./browser_apis/chrome-unstable_136.0.7064.0_to_136.0.7081.2.json), [full list](./browser_apis/chrome-unstable_136.0.7081.2.json))
  ```diff
@@ -2378,32 +2409,6 @@ Added 3 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_129.0.6643.2
      "PushManager",
      "PushManager.prototype",
      "PushManager.prototype.getSubscription",
-```
-
-  
-#### 129.0.6643.2 (`2024-8-9`) ⚡
-Added 2 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_129.0.6628.3_to_129.0.6643.2.diff), [json](./browser_apis/chrome-unstable_129.0.6628.3_to_129.0.6643.2.json), [full list](./browser_apis/chrome-unstable_129.0.6643.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_129.0.6628.3.json	2024-08-10 01:04:12.909607618 +0000
-+++ ./browser_apis/chrome-unstable_129.0.6643.2.json	2024-08-10 01:04:38.621949347 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8491,
-+  "browserApiCount": 8493,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -635,7 +635,9 @@
-     "CSSPositionTryDescriptors.prototype.place-self",
-     "CSSPositionTryDescriptors.prototype.placeSelf",
-     "CSSPositionTryDescriptors.prototype.position-anchor",
-+    "CSSPositionTryDescriptors.prototype.position-area",
-     "CSSPositionTryDescriptors.prototype.positionAnchor",
-+    "CSSPositionTryDescriptors.prototype.positionArea",
-     "CSSPositionTryDescriptors.prototype.right",
-     "CSSPositionTryDescriptors.prototype.top",
-     "CSSPositionTryDescriptors.prototype.width",
 ```
 
   <!-- browserapis:end -->
