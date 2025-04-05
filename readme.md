@@ -1355,6 +1355,53 @@ Added 27 APIs, removed 0 (see: [diff](./browser_apis/chrome-stable_127.0.6533.11
   
 ### chrome-unstable
   
+#### 137.0.7106.2 (`2025-4-4`) ⚡
+Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7091.2_to_137.0.7106.2.diff), [json](./browser_apis/chrome-unstable_136.0.7091.2_to_137.0.7106.2.json), [full list](./browser_apis/chrome-unstable_137.0.7106.2.json))
+ ```diff
+--- ./browser_apis/chrome-unstable_136.0.7091.2.json	2025-04-05 01:15:55.763152570 +0000
++++ ./browser_apis/chrome-unstable_137.0.7106.2.json	2025-04-05 01:16:25.651524662 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8705,
++  "browserApiCount": 8709,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1643,6 +1643,7 @@
+     "GPUAdapterInfo.prototype.architecture",
+     "GPUAdapterInfo.prototype.description",
+     "GPUAdapterInfo.prototype.device",
++    "GPUAdapterInfo.prototype.isFallbackAdapter",
+     "GPUAdapterInfo.prototype.subgroupMaxSize",
+     "GPUAdapterInfo.prototype.subgroupMinSize",
+     "GPUAdapterInfo.prototype.vendor",
+@@ -2891,6 +2892,7 @@
+     "IdentityCredential",
+     "IdentityCredential.disconnect",
+     "IdentityCredential.prototype",
++    "IdentityCredential.prototype.configURL",
+     "IdentityCredential.prototype.isAutoSelected",
+     "IdentityCredential.prototype.token",
+     "IdentityCredentialError",
+@@ -6137,12 +6139,14 @@
+     "Selection.prototype.collapseToStart",
+     "Selection.prototype.containsNode",
+     "Selection.prototype.deleteFromDocument",
++    "Selection.prototype.direction",
+     "Selection.prototype.empty",
+     "Selection.prototype.extend",
+     "Selection.prototype.extentNode",
+     "Selection.prototype.extentOffset",
+     "Selection.prototype.focusNode",
+     "Selection.prototype.focusOffset",
++    "Selection.prototype.getComposedRanges",
+     "Selection.prototype.getRangeAt",
+     "Selection.prototype.isCollapsed",
+     "Selection.prototype.modify",
+```
+
+  
 #### 136.0.7091.2 (`2025-3-27`) ⚡
 Added 7 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7081.2_to_136.0.7091.2.diff), [json](./browser_apis/chrome-unstable_136.0.7081.2_to_136.0.7091.2.json), [full list](./browser_apis/chrome-unstable_136.0.7091.2.json))
  ```diff
@@ -2683,47 +2730,6 @@ Added 6 APIs, removed 8 (see: [diff](./browser_apis/chrome-unstable_129.0.6658.0
      "MutationRecord",
      "MutationRecord.prototype",
      "MutationRecord.prototype.addedNodes",
-```
-
-  
-#### 129.0.6658.0 (`2024-8-16`) ⚡
-Added 3 APIs, removed 2 (see: [diff](./browser_apis/chrome-unstable_129.0.6643.2_to_129.0.6658.0.diff), [json](./browser_apis/chrome-unstable_129.0.6643.2_to_129.0.6658.0.json), [full list](./browser_apis/chrome-unstable_129.0.6658.0.json))
- ```diff
---- ./browser_apis/chrome-unstable_129.0.6643.2.json	2024-08-17 01:01:49.123341676 +0000
-+++ ./browser_apis/chrome-unstable_129.0.6658.0.json	2024-08-17 01:02:28.837061594 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8493,
-+  "browserApiCount": 8494,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -1429,9 +1429,7 @@
-     "Fence.prototype.setReportEventDataForAutomaticBeacons",
-     "FencedFrameConfig",
-     "FencedFrameConfig.prototype",
--    "FencedFrameConfig.prototype.height",
-     "FencedFrameConfig.prototype.setSharedStorageContext",
--    "FencedFrameConfig.prototype.width",
-     "File",
-     "File.prototype",
-     "File.prototype.arrayBuffer",
-@@ -4723,11 +4721,14 @@
-     "PublicKeyCredential",
-     "PublicKeyCredential.isConditionalMediationAvailable",
-     "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
-+    "PublicKeyCredential.parseCreationOptionsFromJSON",
-+    "PublicKeyCredential.parseRequestOptionsFromJSON",
-     "PublicKeyCredential.prototype",
-     "PublicKeyCredential.prototype.authenticatorAttachment",
-     "PublicKeyCredential.prototype.getClientExtensionResults",
-     "PublicKeyCredential.prototype.rawId",
-     "PublicKeyCredential.prototype.response",
-+    "PublicKeyCredential.prototype.toJSON",
-     "PushManager",
-     "PushManager.prototype",
-     "PushManager.prototype.getSubscription",
 ```
 
   <!-- browserapis:end -->

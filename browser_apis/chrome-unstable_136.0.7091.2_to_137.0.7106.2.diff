@@ -1,0 +1,41 @@
+--- ./browser_apis/chrome-unstable_136.0.7091.2.json	2025-04-05 01:15:55.763152570 +0000
++++ ./browser_apis/chrome-unstable_137.0.7106.2.json	2025-04-05 01:16:25.651524662 +0000
+@@ -1,6 +1,6 @@
+ {
+   "browser": "chrome-unstable",
+-  "browserApiCount": 8705,
++  "browserApiCount": 8709,
+   "browserApis": [
+     "AICreateMonitor",
+     "AICreateMonitor.prototype",
+@@ -1643,6 +1643,7 @@
+     "GPUAdapterInfo.prototype.architecture",
+     "GPUAdapterInfo.prototype.description",
+     "GPUAdapterInfo.prototype.device",
++    "GPUAdapterInfo.prototype.isFallbackAdapter",
+     "GPUAdapterInfo.prototype.subgroupMaxSize",
+     "GPUAdapterInfo.prototype.subgroupMinSize",
+     "GPUAdapterInfo.prototype.vendor",
+@@ -2891,6 +2892,7 @@
+     "IdentityCredential",
+     "IdentityCredential.disconnect",
+     "IdentityCredential.prototype",
++    "IdentityCredential.prototype.configURL",
+     "IdentityCredential.prototype.isAutoSelected",
+     "IdentityCredential.prototype.token",
+     "IdentityCredentialError",
+@@ -6137,12 +6139,14 @@
+     "Selection.prototype.collapseToStart",
+     "Selection.prototype.containsNode",
+     "Selection.prototype.deleteFromDocument",
++    "Selection.prototype.direction",
+     "Selection.prototype.empty",
+     "Selection.prototype.extend",
+     "Selection.prototype.extentNode",
+     "Selection.prototype.extentOffset",
+     "Selection.prototype.focusNode",
+     "Selection.prototype.focusOffset",
++    "Selection.prototype.getComposedRanges",
+     "Selection.prototype.getRangeAt",
+     "Selection.prototype.isCollapsed",
+     "Selection.prototype.modify",

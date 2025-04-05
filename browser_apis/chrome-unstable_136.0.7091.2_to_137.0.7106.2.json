@@ -1,0 +1,16 @@
+{
+  "browser": "chrome-unstable",
+  "version": {
+    "from": "136.0.7091.2",
+    "to": "137.0.7106.2"
+  },
+  "browserApis": {
+    "added": [
+      "GPUAdapterInfo.prototype.isFallbackAdapter",
+      "IdentityCredential.prototype.configURL",
+      "Selection.prototype.direction",
+      "Selection.prototype.getComposedRanges"
+    ],
+    "removed": []
+  }
+}
