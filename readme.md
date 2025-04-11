@@ -1197,6 +1197,10 @@ No browser API changes.
   
 ### chrome-unstable
   
+#### 137.0.7117.2 (`2025-4-10`) 
+No browser API changes.
+
+  
 #### 137.0.7106.2 (`2025-4-4`) ⚡
 Added 4 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_136.0.7091.2_to_137.0.7106.2.diff), [json](./browser_apis/chrome-unstable_136.0.7091.2_to_137.0.7106.2.json), [full list](./browser_apis/chrome-unstable_137.0.7106.2.json))
  ```diff
@@ -2528,50 +2532,6 @@ Added 15 APIs, removed 0 (see: [diff](./browser_apis/chrome-unstable_130.0.6669.
      "onsearch",
      "onsecuritypolicyviolation",
      "onseeked",
-```
-
-  
-#### 130.0.6669.2 (`2024-8-23`) ⚡
-Added 6 APIs, removed 8 (see: [diff](./browser_apis/chrome-unstable_129.0.6658.0_to_130.0.6669.2.diff), [json](./browser_apis/chrome-unstable_129.0.6658.0_to_130.0.6669.2.json), [full list](./browser_apis/chrome-unstable_130.0.6669.2.json))
- ```diff
---- ./browser_apis/chrome-unstable_129.0.6658.0.json	2024-08-24 01:02:51.713963847 +0000
-+++ ./browser_apis/chrome-unstable_130.0.6669.2.json	2024-08-24 01:03:15.070095713 +0000
-@@ -1,6 +1,6 @@
- {
-   "browser": "chrome-unstable",
--  "browserApiCount": 8494,
-+  "browserApiCount": 8492,
-   "browserApis": [
-     "AbsoluteOrientationSensor",
-     "AbsoluteOrientationSensor.prototype",
-@@ -2967,6 +2967,12 @@
-     "Intl.DisplayNames.prototype.of",
-     "Intl.DisplayNames.prototype.resolvedOptions",
-     "Intl.DisplayNames.supportedLocalesOf",
-+    "Intl.DurationFormat",
-+    "Intl.DurationFormat.prototype",
-+    "Intl.DurationFormat.prototype.format",
-+    "Intl.DurationFormat.prototype.formatToParts",
-+    "Intl.DurationFormat.prototype.resolvedOptions",
-+    "Intl.DurationFormat.supportedLocalesOf",
-     "Intl.ListFormat",
-     "Intl.ListFormat.prototype",
-     "Intl.ListFormat.prototype.format",
-@@ -3555,14 +3561,6 @@
-     "MimeTypeArray.prototype.item",
-     "MimeTypeArray.prototype.length",
-     "MimeTypeArray.prototype.namedItem",
--    "MutationEvent",
--    "MutationEvent.prototype",
--    "MutationEvent.prototype.attrChange",
--    "MutationEvent.prototype.attrName",
--    "MutationEvent.prototype.initMutationEvent",
--    "MutationEvent.prototype.newValue",
--    "MutationEvent.prototype.prevValue",
--    "MutationEvent.prototype.relatedNode",
-     "MutationRecord",
-     "MutationRecord.prototype",
-     "MutationRecord.prototype.addedNodes",
 ```
 
   <!-- browserapis:end -->

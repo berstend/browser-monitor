@@ -1,0 +1,110 @@
+--- ./cdp/chrome-unstable_137.0.7106.2.protocol.json	2025-04-11 01:18:01.862689490 +0000
++++ ./cdp/chrome-unstable_137.0.7117.2.protocol.json	2025-04-11 01:18:24.890686989 +0000
+@@ -17900,6 +17900,7 @@
+             "cross-origin-isolated",
+             "deferred-fetch",
+             "deferred-fetch-minimal",
++            "device-attributes",
+             "digital-credentials-get",
+             "direct-sockets",
+             "direct-sockets-private",
+@@ -24742,7 +24743,7 @@
+         },
+         {
+           "name": "setAutoAttach",
+-          "description": "Controls whether to automatically attach to new targets which are considered to be related to\nthis one. When turned on, attaches to all existing related targets as well. When turned off,\nautomatically detaches from all currently attached targets.\nThis also clears all targets added by `autoAttachRelated` from the list of targets to watch\nfor creation of related targets.",
++          "description": "Controls whether to automatically attach to new targets which are considered\nto be directly related to this one (for example, iframes or workers).\nWhen turned on, attaches to all existing related targets as well. When turned off,\nautomatically detaches from all currently attached targets.\nThis also clears all targets added by `autoAttachRelated` from the list of targets to watch\nfor creation of related targets.\nYou might want to call this recursively for auto-attached targets to attach\nto all available targets.",
+           "parameters": [
+             {
+               "name": "autoAttach",
+@@ -28089,13 +28090,9 @@
+         },
+         {
+           "name": "removeService",
+-          "description": "Removes the service respresented by |serviceId| from the peripheral with\n|address|.",
++          "description": "Removes the service respresented by |serviceId| from the simulated central.",
+           "parameters": [
+             {
+-              "name": "address",
+-              "type": "string"
+-            },
+-            {
+               "name": "serviceId",
+               "type": "string"
+             }
+@@ -28103,13 +28100,9 @@
+         },
+         {
+           "name": "addCharacteristic",
+-          "description": "Adds a characteristic with |characteristicUuid| and |properties| to the\nservice represented by |serviceId| in the peripheral with |address|.",
++          "description": "Adds a characteristic with |characteristicUuid| and |properties| to the\nservice represented by |serviceId|.",
+           "parameters": [
+             {
+-              "name": "address",
+-              "type": "string"
+-            },
+-            {
+               "name": "serviceId",
+               "type": "string"
+             },
+@@ -28132,17 +28125,9 @@
+         },
+         {
+           "name": "removeCharacteristic",
+-          "description": "Removes the characteristic respresented by |characteristicId| from the\nservice respresented by |serviceId| in the peripheral with |address|.",
++          "description": "Removes the characteristic respresented by |characteristicId| from the\nsimulated central.",
+           "parameters": [
+             {
+-              "name": "address",
+-              "type": "string"
+-            },
+-            {
+-              "name": "serviceId",
+-              "type": "string"
+-            },
+-            {
+               "name": "characteristicId",
+               "type": "string"
+             }
+@@ -28150,17 +28135,9 @@
+         },
+         {
+           "name": "addDescriptor",
+-          "description": "Adds a descriptor with |descriptorUuid| to the characteristic respresented\nby |characteristicId| in the service represented by |serviceId| of the\nperipheral with |address|.",
++          "description": "Adds a descriptor with |descriptorUuid| to the characteristic respresented\nby |characteristicId|.",
+           "parameters": [
+             {
+-              "name": "address",
+-              "type": "string"
+-            },
+-            {
+-              "name": "serviceId",
+-              "type": "string"
+-            },
+-            {
+               "name": "characteristicId",
+               "type": "string"
+             },
+@@ -28179,21 +28156,9 @@
+         },
+         {
+           "name": "removeDescriptor",
+-          "description": "Removes the descriptor with |descriptorId| from the characteristic\nrespresented by |characteristicId| in the service represented by |serviceId|\nof the peripheral with |address|.",
++          "description": "Removes the descriptor with |descriptorId| from the simulated central.",
+           "parameters": [
+             {
+-              "name": "address",
+-              "type": "string"
+-            },
+-            {
+-              "name": "serviceId",
+-              "type": "string"
+-            },
+-            {
+-              "name": "characteristicId",
+-              "type": "string"
+-            },
+-            {
+               "name": "descriptorId",
+               "type": "string"
+             }
